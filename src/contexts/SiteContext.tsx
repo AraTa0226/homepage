@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
+import cmsData from '../data/cms.json';
 
 export interface Partner {
   id: string;
@@ -185,13 +186,20 @@ const SiteContext = createContext<SiteContextType | undefined>(undefined);
 export const SiteProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [partners, setPartners] = useState<Partner[]>(() => {
     const saved = localStorage.getItem('ang_partners');
-    return saved ? JSON.parse(saved) : initialPartners;
+    if (saved) return JSON.parse(saved);
+    return (cmsData as any).partners || initialPartners;
   });
 
-  const [brandPartners, setBrandPartners] = useState<BrandPartner[]>(initialBrandPartners);
+  const [brandPartners, setBrandPartners] = useState<BrandPartner[]>(() => {
+    const saved = localStorage.getItem('ang_brand_partners');
+    if (saved) return JSON.parse(saved);
+    return (cmsData as any).brandPartners || initialBrandPartners;
+  });
 
   const [assets, setAssets] = useState<SiteAssets>(() => {
     const saved = localStorage.getItem('ang_assets');
+    const baseAssets = (cmsData as any).assets || initialAssets;
+
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
@@ -199,10 +207,10 @@ export const SiteProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         const migrated = { ...parsed };
         let changed = false;
 
-        Object.keys(initialAssets).forEach((key) => {
+        Object.keys(baseAssets).forEach((key) => {
           const k = key as keyof SiteAssets;
           if (migrated[k]?.includes('picsum.photos') || !migrated[k]) {
-            migrated[k] = initialAssets[k];
+            migrated[k] = baseAssets[k];
             changed = true;
           }
         });
@@ -213,10 +221,10 @@ export const SiteProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         }
         return parsed;
       } catch (e) {
-        return initialAssets;
+        return baseAssets;
       }
     }
-    return initialAssets;
+    return baseAssets;
   });
 
   const [isMounted, setIsMounted] = useState(false);
