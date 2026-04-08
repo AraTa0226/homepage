@@ -1466,8 +1466,25 @@ export const PriceProvider: React.FC<{ children: ReactNode }> = ({ children }) =
         return basePlans.map((initialCat: any) => {
           const savedCat = parsed.find((c: any) => c.id === initialCat.id);
           if (!savedCat) return initialCat;
-          // ... rest of merge logic
-          return { ...initialCat, ...savedCat };
+          return {
+            ...initialCat,
+            ...savedCat,
+            items: initialCat.items.map((initialItem: any) => {
+              const savedItem = savedCat.items?.find((i: any) => i.name === initialItem.name);
+              if (!savedItem) return initialItem;
+
+              const isLegacy = savedItem.image?.includes('picsum.photos') ||
+                savedItem.image?.endsWith('.jpg') ||
+                savedItem.image?.endsWith('.png');
+
+              return {
+                ...initialItem,
+                ...savedItem,
+                image: isLegacy ? initialItem.image : savedItem.image,
+                // Ensure other critical fields from initialItem (new defaults) are preserved if needed
+              };
+            })
+          };
         });
       } catch (e) {
         return basePlans;
@@ -1485,7 +1502,11 @@ export const PriceProvider: React.FC<{ children: ReactNode }> = ({ children }) =
         return baseGuides.map((initialGuide: any) => {
           const savedGuide = parsed.find((g: any) => g.id === initialGuide.id);
           if (!savedGuide) return initialGuide;
-          return { ...initialGuide, ...savedGuide };
+          return {
+            ...savedGuide,
+            image: (savedGuide.image?.includes('picsum.photos') || savedGuide.image?.endsWith('.jpg') || savedGuide.image?.endsWith('.png')) ? initialGuide.image : savedGuide.image,
+            description: initialGuide.description || savedGuide.description,
+          };
         });
       } catch (e) {
         return baseGuides;

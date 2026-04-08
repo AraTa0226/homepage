@@ -209,7 +209,8 @@ export const SiteProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
         Object.keys(baseAssets).forEach((key) => {
           const k = key as keyof SiteAssets;
-          if (migrated[k]?.includes('picsum.photos') || !migrated[k]) {
+          const val = migrated[k];
+          if (val?.includes('picsum.photos') || val?.endsWith('.jpg') || val?.endsWith('.png') || !val) {
             migrated[k] = baseAssets[k];
             changed = true;
           }
