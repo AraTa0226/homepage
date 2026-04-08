@@ -477,7 +477,7 @@ const initialPlans: PlanCategory[] = [
         price: "42000",
         features: ["シート下設置可", "アンプ内蔵タイプ", "取付工賃込"],
         badge: "パワードウーハー",
-        image: "/images/speaker.jpg",
+        image: "/images/Top/speaker.webp",
         description: "お手軽低音増強セット\n建物と同じように、音楽にも基礎となる低域はとても重要です。しっかりとした低音(ウーハー)は音楽に臨場感を与えてくれます。ここでご紹介するウーハーはアンプ内蔵タイプのパワードウーハー（チューンアップウーハー）。シート下に収まるようなコンパクトなウーハーからパワードタイプとは思えない本格的なサウンドのウーハーまで取り付け込みでご提案しています。",
         packageDetails: {
           standardPrice: "55000",
@@ -1006,7 +1006,7 @@ const initialPlans: PlanCategory[] = [
         price: "19800",
         features: ["ロードノイズ低減", "遮音・制振・遮熱", "各部位別パッケージ"],
         badge: "静粛性UP",
-        image: "/images/speaker.jpg",
+        image: "/images/Top/speaker.webp",
         link: "https://www.soundang.com/silent.html",
         showSavings: false,
         gallery: [
@@ -1357,9 +1357,9 @@ const initialPlans: PlanCategory[] = [
     category: "Panthera (パンテーラ)",
     type: 'security',
     items: [
-      { name: "Z706シリーズ", price: "286000", features: ["フルカラータッチパネルリモコン", "3ゾーン衝撃センサー", "デジタル傾斜センサー", "ドラレコ連動対応"], badge: "最高峰モデル", image: "/images/security.jpg" },
-      { name: "Z306シリーズ", price: "242000", features: ["モノクロ液晶リモコン", "2ゾーン衝撃センサー", "イモビライザー", "ボイスアンサーバック"], badge: "スタンダード", image: "/images/security.jpg" },
-      { name: "Z106シリーズ", price: "198000", features: ["1WAYリモコン", "衝撃センサー", "ドアセンサー", "ボンネットセンサー"], badge: "エントリー", image: "/images/security.jpg" }
+      { name: "Z706シリーズ", price: "286000", features: ["フルカラータッチパネルリモコン", "3ゾーン衝撃センサー", "デジタル傾斜センサー", "ドラレコ連動対応"], badge: "最高峰モデル", image: "/images/Top/security.webp" },
+      { name: "Z306シリーズ", price: "242000", features: ["モノクロ液晶リモコン", "2ゾーン衝撃センサー", "イモビライザー", "ボイスアンサーバック"], badge: "スタンダード", image: "/images/Top/security.webp" },
+      { name: "Z106シリーズ", price: "198000", features: ["1WAYリモコン", "衝撃センサー", "ドアセンサー", "ボンネットセンサー"], badge: "エントリー", image: "/images/Top/security.webp" }
     ]
   },
   {
@@ -1406,8 +1406,8 @@ const initialPlans: PlanCategory[] = [
     category: "ドライブレコーダー",
     type: 'others',
     items: [
-      { name: "前後2カメラモデル", price: "44000", features: ["フルHD録画", "夜間補正", "駐車監視対応", "セキュリティ連動可"], badge: "定番人気", image: "/images/dorareko.jpg" },
-      { name: "360度＋リアカメラ", price: "66000", features: ["全方位録画", "死角なし", "煽り運転対策", "セキュリティ連動可"], badge: "死角ゼロ", image: "/images/dorareko.jpg" }
+      { name: "前後2カメラモデル", price: "44000", features: ["フルHD録画", "夜間補正", "駐車監視対応", "セキュリティ連動可"], badge: "定番人気", image: "/images/Top/dorareko.webp" },
+      { name: "360度＋リアカメラ", price: "66000", features: ["全方位録画", "死角なし", "煽り運転対策", "セキュリティ連動可"], badge: "死角ゼロ", image: "/images/Top/dorareko.webp" }
     ]
   },
   {

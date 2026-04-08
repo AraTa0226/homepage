@@ -165,19 +165,19 @@ const initialPartners: Partner[] = [
 ];
 
 const initialAssets: SiteAssets = {
-  heroImage: "/images/Top/tenpo.jpg",
-  logoText: "Sound ANG",
-  audioMenuImage: "/images/Top/speaker.jpg",
-  securityMenuImage: "/images/Top/security.jpg",
-  dashcamMenuImage: "/images/Top/dorareko.jpg",
-  showroomImage: "/images/Top/inner1.jpg",
-  pitImage: "/images/Top/pitroom.jpg",
-  workspaceImage: "/images/Top/workroom.jpg",
-  auditionRoomImage: "/images/Top/demoroom1.jpg",
-  kyushuNo1Image: "/images/Top/tenpo.jpg",
-  spsCertifiedImage: "/images/Top/security.jpg",
-  snaponImage: "/images/Top/tenpo.jpg",
-  batteryChargerImage: "/images/Top/pitroom.jpg"
+  heroImage: "/images/Top/tenpo.webp",
+  logoText: "Sound ANG Security",
+  audioMenuImage: "/images/Top/speaker.webp",
+  securityMenuImage: "/images/Top/security.webp",
+  dashcamMenuImage: "/images/Top/dorareko.webp",
+  showroomImage: "/images/Top/inner1.webp",
+  pitImage: "/images/Top/pitroom.webp",
+  workspaceImage: "/images/Top/workroom.webp",
+  auditionRoomImage: "/images/Top/demoroom1.webp",
+  kyushuNo1Image: "/images/Top/tenpo.webp",
+  spsCertifiedImage: "/images/Top/security.webp",
+  snaponImage: "/images/Top/tenpo.webp",
+  batteryChargerImage: "/images/Top/pitroom.webp"
 };
 
 const SiteContext = createContext<SiteContextType | undefined>(undefined);

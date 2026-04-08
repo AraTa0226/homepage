@@ -1103,7 +1103,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                                   type="text"
                                   value={cat.images?.join(',') || ""}
                                   onChange={(e) => handleCategoryChange(cat.id, 'images', e.target.value.split(','))}
-                                  placeholder="/images/img1.jpg, https://example.com/img2.jpg"
+                                  placeholder="/images/img1.webp, https://example.com/img2.webp"
                                   className="w-full px-3 py-2 bg-white border border-gray-200 rounded-lg font-bold text-xs text-gray-600 focus:border-blue-500 outline-none transition-all"
                                 />
                               </div>
@@ -1255,7 +1255,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                                   type="text"
                                   value={cat.images?.join(',') || ""}
                                   onChange={(e) => handleCategoryChange(cat.id, 'images', e.target.value.split(','))}
-                                  placeholder="/images/img1.jpg, https://example.com/img2.jpg"
+                                  placeholder="/images/img1.webp, https://example.com/img2.webp"
                                   className="w-full px-3 py-2 bg-white border border-gray-200 rounded-lg font-bold text-xs text-gray-600 focus:border-blue-500 outline-none transition-all"
                                 />
                               </div>
