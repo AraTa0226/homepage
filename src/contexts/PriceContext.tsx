@@ -1457,17 +1457,17 @@ const initialOptionals: OptionalService[] = [
 const PriceContext = createContext<PriceContextType | undefined>(undefined);
 
 export const PriceProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  // Normalize a stored image path: fix uppercase, missing /Audio/ prefix, etc.
+  // Normalize a stored image path: only lowercase the FILENAME, preserve folder casing
   const normalizeStoredImagePath = (path: string | undefined): string | undefined => {
     if (!path) return path;
     // Already a fully valid external URL → leave untouched
     if (path.startsWith('http')) return path;
     // Ensure leading slash
-    let p = path.startsWith('/') ? path : '/' + path;
-    // Lowercase the filename part only (preserve folder structure)
+    const p = path.startsWith('/') ? path : '/' + path;
+    // Only lowercase the filename part — folder names stay as-is (Vercel is case-sensitive)
     const lastSlash = p.lastIndexOf('/');
-    const folder = p.substring(0, lastSlash + 1).toLowerCase();
-    const file = p.substring(lastSlash + 1).toLowerCase();
+    const folder = p.substring(0, lastSlash + 1); // preserve original casing for folders
+    const file = p.substring(lastSlash + 1).toLowerCase(); // lowercase filename only
     return folder + file;
   };
 
