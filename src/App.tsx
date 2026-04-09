@@ -564,21 +564,28 @@ function MainView({
         <div className="relative max-w-7xl mx-auto px-4 py-32 md:py-48">
           <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }}>
             <div className="flex flex-col gap-4 mb-8">
-              <div className="inline-flex items-center gap-3 w-fit px-6 py-2 bg-blue-600/10 backdrop-blur-md border border-blue-500/20 rounded-full">
-                <span className="text-blue-400 text-xs md:text-sm font-black uppercase tracking-[0.2em]">
+              <div className="inline-flex flex-col md:flex-row md:items-center gap-1 md:gap-3 w-fit px-5 py-2 md:px-6 md:py-2.5 bg-blue-600/10 backdrop-blur-md border border-blue-500/20 rounded-2xl md:rounded-full">
+                <span className="text-blue-400 text-[10px] md:text-sm font-black uppercase tracking-[0.2em] whitespace-nowrap">
                   福岡のカーオーディオ・セキュリティ専門店
                 </span>
-                <div className="w-px h-4 bg-blue-500/30"></div>
+                <div className="hidden md:block w-px h-4 bg-blue-500/30"></div>
                 <span className="text-white text-xs md:text-sm font-black tracking-[0.1em]">エナジー</span>
               </div>
             </div>
-            <h1 className="text-4xl md:text-7xl font-black text-white mb-8 leading-[1.1] tracking-tighter">
-              感性を揺さぶる至高の音。<br />
-              愛車を護る、確かな技術。
-              <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 mt-4">
-                <span className="text-blue-500 text-xl md:text-3xl font-black opacity-90 uppercase tracking-wider">九州No.1のセキュリティ実績</span>
-                <div className="hidden md:block w-px h-6 bg-blue-500/30"></div>
-                <span className="text-white/60 text-xl md:text-3xl font-black uppercase tracking-wider italic">Acoustic Specialist</span>
+
+            <h1 className="text-3xl md:text-7xl font-black text-white mb-8 leading-[1.2] md:leading-[1.1] tracking-tighter">
+              <span className="block md:inline whitespace-nowrap">感性を揺さぶる至高の音。</span><br className="hidden md:block" />
+              <span className="block md:inline whitespace-nowrap">愛車を護る、確かな技術。</span>
+
+              <div className="flex flex-col gap-2 mt-6">
+                <div className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                  <span className="text-blue-400 text-lg md:text-3xl font-black opacity-90 tracking-tight">九州No.1のセキュリティ実績</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                  <span className="text-white/80 text-lg md:text-3xl font-black tracking-tight">パイオニア最高峰「TS-Z1GR」認定店</span>
+                </div>
               </div>
             </h1>
             <p className="text-base md:text-2xl text-gray-200 mb-8 font-bold leading-relaxed max-w-3xl">
