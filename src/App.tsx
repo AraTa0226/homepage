@@ -439,7 +439,7 @@ function MainView({
                 {emergencyAnnouncement.image && (
                   <SafeImage
                     src={emergencyAnnouncement.image}
-                    alt="Notice"
+                    alt="緊急のお知らせ画像"
                     className="w-32 h-32 object-cover rounded-xl shadow-md"
                   />
                 )}
@@ -549,6 +549,7 @@ function MainView({
         <div className="absolute inset-0 overflow-hidden">
           <SafeImage
             src={assets.heroImage}
+            alt="Sound ANG 店舗正面イメージ"
             className="w-full h-full object-cover"
             loading="eager"
           />
@@ -819,7 +820,7 @@ function MainView({
               <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl border border-white/10">
                 <SafeImage
                   src={assets.heroImage}
-                  alt="Shop Exterior"
+                  alt="Sound ANG 店舗外観"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
@@ -839,7 +840,7 @@ function MainView({
                   >
                     <SafeImage
                       src={facility.image}
-                      alt={facility.title}
+                      alt={facility.title + "の写真"}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60 group-hover:opacity-100"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-4">
@@ -880,6 +881,7 @@ function MainView({
                   allowFullScreen={true}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
+                  title="Sound ANG 所在地マップ"
                 ></iframe>
               </div>
             </div>
@@ -921,8 +923,8 @@ function MainView({
             <h4 className="text-white font-bold mb-6">Social Media</h4>
             <div className="flex gap-4">
               {[
-                { icon: Facebook, url: "https://www.facebook.com/profile.php?id=100063630308258" },
-                { icon: Instagram, url: "https://www.instagram.com/sound_ang_security/" }
+                { name: "Facebook", icon: Facebook, url: "https://www.facebook.com/profile.php?id=100063630308258" },
+                { name: "Instagram", icon: Instagram, url: "https://www.instagram.com/sound_ang_security/" }
               ].map((social, i) => (
                 <a
                   key={i}
@@ -930,8 +932,9 @@ function MainView({
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 bg-white/5 hover:bg-white/10 rounded-full transition-colors"
+                  aria-label={social.name + "でSound ANGをフォロー"}
                 >
-                  <social.icon className="w-5 h-5 text-white" />
+                  <social.icon className="w-5 h-5 text-white" aria-hidden="true" />
                 </a>
               ))}
             </div>

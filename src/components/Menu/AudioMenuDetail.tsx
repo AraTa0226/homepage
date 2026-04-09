@@ -430,7 +430,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                   <SafeImage
                     src={selectedItem.image || "https://picsum.photos/seed/speaker/1200/800"}
                     className="w-full h-full object-cover"
-                    alt={selectedItem.name}
+                    alt={selectedItem.name + "の製品イメージ"}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
                   <div className="absolute bottom-8 left-8 right-8">
@@ -1259,7 +1259,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                                   className="w-full text-left px-4 py-3 rounded-xl text-sm font-black text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-all flex items-center justify-between group"
                                 >
                                   {link.label}
-                                  <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                  <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
                                 </button>
                               ))}
                             </div>
@@ -1277,7 +1277,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
               <SafeImage
                 src={assets.audioMenuImage}
                 className="absolute inset-0 w-full h-full object-cover scale-105"
-                alt="Audio"
+                alt="高品質なカーオーディオシステム施工イメージ"
                 loading="eager"
               />
               <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-gray-50"></div>
@@ -1343,7 +1343,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                       <nav.icon className="w-5 h-5 md:w-6 md:h-6" />
                     </div>
                     <div>
-                      <h3 className={`font-black text-xs md:text-sm mb-0.5 leading-tight group-hover:text-blue-600 transition-colors uppercase tracking-tighter ${nav.color === 'sky' ? 'text-sky-600' : 'text-gray-900'}`}>{nav.title}</h3>
+                      <h2 className={`font-black text-xs md:text-sm mb-0.5 leading-tight group-hover:text-blue-600 transition-colors uppercase tracking-tighter ${nav.color === 'sky' ? 'text-sky-600' : 'text-gray-900'}`}>{nav.title}</h2>
                       <p className="text-[10px] text-gray-500 font-bold leading-tight line-clamp-1">{nav.desc}</p>
                     </div>
                   </motion.button>

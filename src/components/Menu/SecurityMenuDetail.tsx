@@ -343,7 +343,7 @@ export const SecurityMenuDetail: React.FC<SecurityMenuDetailProps> = ({ onBack, 
                   <SafeImage
                     src={selectedItem.image || "https://picsum.photos/seed/security/1200/800"}
                     className="w-full h-full object-cover"
-                    alt={selectedItem.name}
+                    alt={selectedItem.name + "のセキュリティシステム"}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
                   <div className="absolute bottom-8 left-8 right-8">
@@ -737,7 +737,7 @@ export const SecurityMenuDetail: React.FC<SecurityMenuDetailProps> = ({ onBack, 
                               {navLinks.map((link) => (
                                 <button key={link.id} onClick={() => scrollToSection(link.id)} className="w-full text-left px-4 py-3 rounded-xl text-sm font-black text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-all flex items-center justify-between group">
                                   {link.label}
-                                  <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                  <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
                                 </button>
                               ))}
                             </div>
@@ -756,7 +756,7 @@ export const SecurityMenuDetail: React.FC<SecurityMenuDetailProps> = ({ onBack, 
                 <SafeImage
                   src={assets.securityMenuImage}
                   className="w-full h-full object-cover"
-                  alt="Security Hero"
+                  alt="高度なカーセキュリティシステムの施工イメージ"
                   loading="eager"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-transparent to-gray-900"></div>
