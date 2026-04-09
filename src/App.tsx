@@ -24,7 +24,10 @@ import {
   ChevronRight,
   Loader2,
   Lock,
-  Megaphone
+  Megaphone,
+  Trophy,
+  Music2,
+  History
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useState, useEffect } from 'react';
@@ -579,8 +582,8 @@ function MainView({
               </div>
             </h1>
             <p className="text-base md:text-2xl text-gray-200 mb-8 font-bold leading-relaxed max-w-3xl">
+              パイオニア最高峰「TS-Z1GR」認定店。音を極め、愛車を護り続けて30年以上。<br className="hidden md:block" />
               ハイエンド・オーディオの繊細な調音から、鉄壁のセキュリティ施工まで。<br className="hidden md:block" />
-              音を極め、愛車を護り続けて30年以上。<br className="hidden md:block" />
               熟練の技で、あなたのカーライフに究極の感動と安心を。
             </p>
           </motion.div>
@@ -623,42 +626,55 @@ function MainView({
       {/* Trust Signals */}
       <section className="bg-white pt-32 pb-16">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl border border-gray-100">
-              <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-500/20">
-                <Award className="w-6 h-6 text-white" />
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="flex items-start gap-4 p-8 bg-gray-50 rounded-2xl border border-gray-100 transition-all hover:bg-gray-100/50 group">
+              <div className="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-500/10 group-hover:scale-105 transition-transform">
+                <Trophy className="w-7 h-7 text-white" />
               </div>
               <div>
-                <h3 className="font-black text-lg mb-1 tracking-tighter">九州施工実績No.1</h3>
-                <p className="text-xs text-gray-500 font-bold uppercase tracking-widest mb-2">Number One in Kyushu</p>
-                <p className="text-sm text-gray-600 leading-relaxed font-medium">
-                  カーセキュリティの施工台数において、九州トップクラスの実績。培ったノウハウが安心を支えます。
+                <h3 className="font-black text-xl mb-1 tracking-tighter">九州セキュリティ施工実績No.1</h3>
+                <p className="text-xs text-blue-600/60 font-black uppercase tracking-widest mb-3">Security Performance No.1</p>
+                <p className="text-sm text-gray-600 leading-relaxed font-bold">
+                  カーセキュリティの累計施工台数において九州トップクラスの実績。培ったノウハウが確かな安心を支えます。
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl border border-gray-100">
-              <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-500/20">
-                <Lock className="w-6 h-6 text-white" />
+            <div className="flex items-start gap-4 p-8 bg-gray-50 rounded-2xl border border-gray-100 transition-all hover:bg-gray-100/50 group">
+              <div className="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-500/10 group-hover:scale-105 transition-transform">
+                <Music2 className="w-7 h-7 text-white" />
               </div>
               <div>
-                <h3 className="font-black text-lg mb-1 tracking-tighter">最高峰SPS認定店</h3>
-                <p className="text-xs text-gray-500 font-bold uppercase tracking-widest mb-2">Security Professional Shop</p>
-                <p className="text-sm text-gray-600 leading-relaxed font-medium">
-                  Grgo・Pantheraの性能を100%引き出すことができる、全国でも限られたセキュリティ認定販売店です。
+                <h3 className="font-black text-xl mb-1 tracking-tighter">パイオニア TS-Z1GR 認定店</h3>
+                <p className="text-xs text-blue-600/60 font-black uppercase tracking-widest mb-3">Carrozzeria RS Certified Shop</p>
+                <p className="text-sm text-gray-600 leading-relaxed font-bold">
+                  厳しい実技審査をクリア。パイオニア最高峰スピーカーの真価を引き出す、全国でも希少な認定ショップです。
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl border border-gray-100">
-              <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-500/20">
-                <CheckCircle2 className="w-6 h-6 text-white" />
+            <div className="flex items-start gap-4 p-8 bg-gray-50 rounded-2xl border border-gray-100 transition-all hover:bg-gray-100/50 group">
+              <div className="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-500/10 group-hover:scale-105 transition-transform">
+                <ShieldCheck className="w-7 h-7 text-white" />
               </div>
               <div>
-                <h3 className="font-black text-lg mb-1 tracking-tighter">創業30年以上の信頼</h3>
-                <p className="text-xs text-gray-500 font-bold uppercase tracking-widest mb-2">Over 30 Years History</p>
-                <p className="text-sm text-gray-600 leading-relaxed font-medium">
-                  福岡の地に根付いて30年以上。確かな技術と信頼で、数多くのオーナー様に選ばれ続けています。
+                <h3 className="font-black text-xl mb-1 tracking-tighter">最高峰SPS認定店</h3>
+                <p className="text-xs text-blue-600/60 font-black uppercase tracking-widest mb-3">Security Professional Shop</p>
+                <p className="text-sm text-gray-600 leading-relaxed font-bold">
+                  最新の盗難手口を知り尽くした「プロ」の集団。Grgo・Pantheraの性能を100%引き出す施工を約束します。
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4 p-8 bg-gray-50 rounded-2xl border border-gray-100 transition-all hover:bg-gray-100/50 group">
+              <div className="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-500/10 group-hover:scale-105 transition-transform">
+                <History className="w-7 h-7 text-white" />
+              </div>
+              <div>
+                <h3 className="font-black text-xl mb-1 tracking-tighter">創業30年以上の信頼</h3>
+                <p className="text-xs text-blue-600/60 font-black uppercase tracking-widest mb-3">Over 30 Years Experience</p>
+                <p className="text-sm text-gray-600 leading-relaxed font-bold">
+                  福岡で30年以上。熟練の技術者による確かな施工と充実のアフターフォローで、一生涯のパートナーとなります。
                 </p>
               </div>
             </div>
