@@ -1433,8 +1433,8 @@ const initialPlans: PlanCategory[] = [
     category: "置き去り防止安全装置",
     type: 'others',
     items: [
-      { name: "ホーネット車内置き去り防止システム", price: "88000", features: ["降車時確認ブザー", "車内センサー検知", "外部サイレン通知"], badge: "補助金対応", image: "/images/dorareko.jpg" },
-      { name: "バス専用安全装置", price: "110000", features: ["複数センサー連動", "緊急通報機能", "音声ガイダンス"], badge: "高信頼性", image: "/images/dorareko.jpg" }
+      { name: "ホーネット車内置き去り防止システム", price: "88000", features: ["降車時確認ブザー", "車内センサー検知", "外部サイレン通知"], badge: "補助金対応", image: "/images/Top/dorareko.webp" },
+      { name: "バス専用安全装置", price: "110000", features: ["複数センサー連動", "緊急通報機能", "音声ガイダンス"], badge: "高信頼性", image: "/images/Top/dorareko.webp" }
     ]
   },
   {
@@ -1442,16 +1442,16 @@ const initialPlans: PlanCategory[] = [
     category: "Campit (キャンピット)",
     type: 'others',
     items: [
-      { name: "ポータブル電源走行充電システム", price: "132000", features: ["サブバッテリー不要", "急速充電", "専用配線施工"], badge: "車中泊革命", image: "/images/dorareko.jpg" },
-      { name: "車内AC100Vコンセント増設", price: "44000", features: ["純正風仕上げ", "大容量インバーター対応", "安全回路設計"], badge: "快適電装", image: "/images/dorareko.jpg" }
+      { name: "ポータブル電源走行充電システム", price: "132000", features: ["サブバッテリー不要", "急速充電", "専用配線施工"], badge: "車中泊革命", image: "/images/Top/dorareko.webp" },
+      { name: "車内AC100Vコンセント増設", price: "44000", features: ["純正風仕上げ", "大容量インバーター対応", "安全回路設計"], badge: "快適電装", image: "/images/Top/dorareko.webp" }
     ]
   }
 ];
 
 const initialOptionals: OptionalService[] = [
-  { id: 'deadening_opt', name: "標準デッドニング", price: "0", description: "スピーカー交換プランには標準で付属。差額で上位プランへの変更も可能です。", effect: "音の締まり向上", percentage: 40, image: "/images/speaker.jpg" },
-  { id: 'cable_opt', name: "スピーカーケーブル", price: "0", description: "標準ケーブルが付属。差額で高音質OFCケーブル等へアップグレード可能です。", effect: "情報量UP", percentage: 30, image: "/images/speaker.jpg" },
-  { id: 'tuning_opt', name: "サウンドチューニング", price: "0", description: "当店でご購入・施工いただいたお客様には、無料で音響調整を行っております。", effect: "鮮度回復", percentage: 100, image: "/images/speaker.jpg" },
+  { id: 'deadening_opt', name: "標準デッドニング", price: "0", description: "スピーカー交換プランには標準で付属。差額で上位プランへの変更も可能です。", effect: "音の締まり向上", percentage: 40, image: "/images/Top/speaker.webp" },
+  { id: 'cable_opt', name: "スピーカーケーブル", price: "0", description: "標準ケーブルが付属。差額で高音質OFCケーブル等へアップグレード可能です。", effect: "情報量UP", percentage: 30, image: "/images/Top/speaker.webp" },
+  { id: 'tuning_opt', name: "サウンドチューニング", price: "0", description: "当店でご購入・施工いただいたお客様には、無料で音響調整を行っております。", effect: "鮮度回復", percentage: 100, image: "/images/Top/speaker.webp" },
 ];
 
 const PriceContext = createContext<PriceContextType | undefined>(undefined);
