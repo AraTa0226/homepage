@@ -17,7 +17,7 @@
             "バーチ材バッフル"
           ],
           "badge": "お手軽導入",
-          "image": "/images/basic-line-coaxial.webp",
+          "image": "/images/Audio/BASIC LINE Coaxial.webp",
           "description": "音質アップの第一歩はスピーカー交換から！\n\nスピーカー交換パッケージベーシックライン（コアキシャル）ではツィーターがミッドレンジスピーカーの真ん中にビルトインされているコアキシャル（同軸）タイプスピーカーを選んでのスピーカー交換をリーズナブルに取り付けまで行うパッケージです。\nカーオーディオシステムアップが初めての方におすすめのパッケージでツィーターとミッドレンジが一体になっているので手軽に取り付けられるメリットがあります。純正がフルレンジタイプのスピーカーが装着されている車両では、高音専用のツィーターが増えるので、純正スピーカーを交換するだけで音が明るく華やかになります。",
           "packageDetails": {
             "standardPrice": "55000",
@@ -378,7 +378,8 @@
             }
           ]
         }
-      ]
+      ],
+      "images": []
     },
     {
       "id": "bass_enhancement",
@@ -564,7 +565,8 @@
             }
           ]
         }
-      ]
+      ],
+      "images": []
     },
     {
       "id": "dsp_control",
@@ -653,7 +655,8 @@
             }
           ]
         }
-      ]
+      ],
+      "images": []
     },
     {
       "id": "amp_power",
@@ -803,7 +806,8 @@
             }
           ]
         }
-      ]
+      ],
+      "images": []
     },
     {
       "id": "source_headunit",
@@ -889,7 +893,8 @@
           "badge": "ピュアオーディオ",
           "image": "/images/speaker.webp"
         }
-      ]
+      ],
+      "images": []
     },
     {
       "id": "car_specific",
@@ -1169,7 +1174,8 @@
             }
           ]
         }
-      ]
+      ],
+      "images": []
     },
     {
       "id": "environment_tuning",
@@ -1683,7 +1689,7 @@
             {
               "name": "カスタムピラーインストール（3WAY対応）",
               "price": "80000",
-              "description": "フロント3WAYに欠かせないピラー加工。スコーカーとツィーターを美しく配置。左右でおよそ8万円〜。",
+              "description": "フロント3WAYに欠かせないピラー加工。スコーカーとツィーター��美しく配置。左右でおよそ8万円〜。",
               "image": "https://picsum.photos/seed/pillar-3way/400/300"
             },
             {
@@ -1694,13 +1700,14 @@
             }
           ]
         }
-      ]
+      ],
+      "images": []
     },
     {
       "id": "performance_up",
       "category": "性能を更に引き出すアレコレ",
       "type": "audio",
-      "description": "カーオーディオの源となる電源を改善することで、機材の性能を今よりももっと引き出す方法やおすすめのパーツをご���介します。\n\n電源の質は最終的な音��������������������������������������の�������������テ�����オ���������メージに大�����������������������な�����������������������響を与えます。電源系にこだ���ることはS/Nや解像度アップに劇的な効果が現れます。",
+      "description": "カーオーディオの源となる電源を改善することで、機材の性能を今よりももっと引き出す方��������おすすめのパーツをご���介します。\n\n電源の質は最終的な音��������������������������������������の�������������テ�����オ���������メージに大�����������������������な�����������������������響を与えます。電源系にこだ���ることはS/Nや解像度アップに劇的な効果が現れます。",
       "showDescriptionInMenu": true,
       "showDescriptionInList": true,
       "items": [
@@ -1840,7 +1847,8 @@
             ]
           }
         }
-      ]
+      ],
+      "images": []
     },
     {
       "id": "security_panthera",
@@ -1883,7 +1891,8 @@
           "badge": "エントリー",
           "image": "/images/security.webp"
         }
-      ]
+      ],
+      "images": []
     },
     {
       "id": "security_grgo",
@@ -1925,7 +1934,8 @@
           "badge": "スマート施工",
           "image": "/images/security.webp"
         }
-      ]
+      ],
+      "images": []
     },
     {
       "id": "security_viper",
@@ -1965,7 +1975,8 @@
           "badge": "エントリー",
           "image": "/images/security.webp"
         }
-      ]
+      ],
+      "images": []
     },
     {
       "id": "security_clifford",
@@ -1994,7 +2005,8 @@
           "badge": "高性能",
           "image": "/images/security.webp"
         }
-      ]
+      ],
+      "images": []
     },
     {
       "id": "security_car",
@@ -2034,7 +2046,8 @@
           "badge": "お手軽プラン",
           "image": "/images/security.webp"
         }
-      ]
+      ],
+      "images": []
     },
     {
       "id": "dashcam",
@@ -2065,7 +2078,8 @@
           "badge": "死角ゼロ",
           "image": "/images/dorareko.webp"
         }
-      ]
+      ],
+      "images": []
     },
     {
       "id": "digital_mirror",
@@ -2094,7 +2108,8 @@
           "badge": "お手楽導入",
           "image": "/images/dorareko.webp"
         }
-      ]
+      ],
+      "images": []
     },
     {
       "id": "radar",
@@ -2123,7 +2138,8 @@
           "badge": "人気モデル",
           "image": "/images/dorareko.webp"
         }
-      ]
+      ],
+      "images": []
     },
     {
       "id": "safety_device",
@@ -2152,7 +2168,8 @@
           "badge": "高信頼性",
           "image": "/images/dorareko.webp"
         }
-      ]
+      ],
+      "images": []
     },
     {
       "id": "campit",
@@ -2181,7 +2198,8 @@
           "badge": "快適電装",
           "image": "/images/dorareko.webp"
         }
-      ]
+      ],
+      "images": []
     }
   ],
   "guides": [
