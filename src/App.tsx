@@ -560,6 +560,9 @@ function MainView({
 
         <div className="relative max-w-7xl mx-auto px-4 py-32 md:py-48">
           <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }}>
+            <span className="inline-block px-4 py-1.5 bg-blue-600/10 backdrop-blur-md border border-blue-500/20 text-blue-400 text-[10px] md:text-xs font-black rounded-full uppercase tracking-[0.3em] mb-6">
+              福岡のカーオーディオ・セキュリティ専門店
+            </span>
             <h1 className="text-3xl md:text-6xl font-black text-white mb-6 leading-[1.1] tracking-tighter">
               九州No.1の施工実績。<br />
               愛車を護り、音を極めて<br />
