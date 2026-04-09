@@ -570,13 +570,18 @@ function MainView({
               </div>
             </div>
             <h1 className="text-4xl md:text-7xl font-black text-white mb-8 leading-[1.1] tracking-tighter">
-              愛車を護り、音を極めて30年。<br />
-              <span className="text-blue-500 text-2xl md:text-4xl block mt-3 opacity-90">九州No.1のセキュリティ施工実績。</span>
+              感性を揺さぶる至高の音。<br />
+              愛車を護る、確かな技術。
+              <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 mt-4">
+                <span className="text-blue-500 text-xl md:text-3xl font-black opacity-90 uppercase tracking-wider">九州No.1のセキュリティ実績</span>
+                <div className="hidden md:block w-px h-6 bg-blue-500/30"></div>
+                <span className="text-white/60 text-xl md:text-3xl font-black uppercase tracking-wider italic">Acoustic Specialist</span>
+              </div>
             </h1>
-            <p className="text-base md:text-xl text-gray-200 mb-8 font-medium leading-relaxed max-w-2xl">
-              セキュリティプロショップ（SPS）認定店。<br className="hidden md:block" />
-              Grgo・Pantheraを知り尽くした熟練の技術で、<br className="hidden md:block" />
-              あなたの愛車に究極の安心と感動のサウンドを。
+            <p className="text-base md:text-2xl text-gray-200 mb-8 font-bold leading-relaxed max-w-3xl">
+              ハイエンド・オーディオの繊細な調音から、鉄壁のセキュリティ施工まで。<br className="hidden md:block" />
+              音を極め、愛車を護り続けて30年以上。<br className="hidden md:block" />
+              熟練の技で、あなたのカーライフに究極の感動と安心を。
             </p>
           </motion.div>
         </div>
