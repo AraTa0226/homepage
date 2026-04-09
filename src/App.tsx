@@ -564,12 +564,11 @@ function MainView({
               <span className="inline-block w-fit px-4 py-1.5 bg-blue-600/10 backdrop-blur-md border border-blue-500/20 text-blue-400 text-[10px] md:text-xs font-black rounded-full uppercase tracking-[0.3em]">
                 福岡のカーオーディオ・セキュリティ専門店
               </span>
-              <span className="text-white/40 text-sm md:text-xl font-black tracking-[0.2em] italic uppercase">Sound ANG</span>
+              <span className="text-white/40 text-sm md:text-xl font-black tracking-[0.2em] italic uppercase">ENERGY エナジー</span>
             </div>
             <h1 className="text-3xl md:text-6xl font-black text-white mb-6 leading-[1.1] tracking-tighter">
-              九州No.1の<span className="text-blue-500">セキュリティ</span>施工実績。<br />
-              愛車を護り、音を極めて<br />
-              30年以上。
+              愛車を護り、音を極めて30年。<br />
+              <span className="text-blue-500 text-2xl md:text-4xl block mt-2 opacity-80">九州No.1のセキュリティ施工実績。</span>
             </h1>
             <p className="text-base md:text-xl text-gray-200 mb-8 font-medium leading-relaxed max-w-2xl">
               セキュリティプロショップ（SPS）認定店。<br className="hidden md:block" />
