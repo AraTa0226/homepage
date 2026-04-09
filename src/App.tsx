@@ -576,18 +576,18 @@ function MainView({
             <h1 className="text-3xl md:text-7xl font-black text-white mb-8 leading-[1.2] md:leading-[1.1] tracking-tighter">
               <span className="block md:inline whitespace-nowrap">感性を揺さぶる至高の音。</span><br className="hidden md:block" />
               <span className="block md:inline whitespace-nowrap">愛車を護る、確かな技術。</span>
-
-              <div className="flex flex-col gap-3 mt-6">
-                <div className="flex items-center gap-2.5">
-                  <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
-                  <span className="text-blue-500 text-lg md:text-3xl font-black opacity-90 tracking-tight">九州No.1のセキュリティ実績</span>
-                </div>
-                <div className="flex items-center gap-2.5">
-                  <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
-                  <span className="text-blue-500 text-lg md:text-3xl font-black opacity-90 tracking-tight">パイオニア最高峰「TS-Z1GR」認定店</span>
-                </div>
-              </div>
             </h1>
+
+            <div className="flex flex-col gap-3 mb-10">
+              <div className="flex items-center gap-2.5">
+                <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                <span className="text-blue-500 text-lg md:text-3xl font-black opacity-90 tracking-tight leading-none">九州No.1のセキュリティ実績</span>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                <span className="text-blue-500 text-lg md:text-3xl font-black opacity-90 tracking-tight leading-none">パイオニア最高峰「TS-Z1GR」認定店</span>
+              </div>
+            </div>
             <p className="text-base md:text-2xl text-gray-200 mb-8 font-bold leading-relaxed max-w-3xl">
               音を極め、愛車を護り続けて30年以上。<br className="hidden md:block" />
               ハイエンド・オーディオの繊細な調音から、鉄壁のセキュリティ施工まで。<br className="hidden md:block" />
@@ -639,8 +639,8 @@ function MainView({
                 <Trophy className="w-7 h-7 text-white" />
               </div>
               <div>
-                <h3 className="font-black text-xl mb-1 tracking-tighter">九州セキュリティ施工実績No.1</h3>
-                <p className="text-xs text-blue-600/60 font-black uppercase tracking-widest mb-3">Security Performance No.1</p>
+                <h2 className="font-black text-xl mb-1 tracking-tighter">九州セキュリティ施工実績No.1</h2>
+                <p className="text-xs text-blue-600 font-black uppercase tracking-widest mb-3">Security Performance No.1</p>
                 <p className="text-sm text-gray-600 leading-relaxed font-bold">
                   カーセキュリティの累計施工台数において九州トップクラスの実績。培ったノウハウが確かな安心を支えます。
                 </p>
@@ -652,8 +652,8 @@ function MainView({
                 <Music2 className="w-7 h-7 text-white" />
               </div>
               <div>
-                <h3 className="font-black text-xl mb-1 tracking-tighter">パイオニア TS-Z1GR 認定店</h3>
-                <p className="text-xs text-blue-600/60 font-black uppercase tracking-widest mb-3">Carrozzeria RS Certified Shop</p>
+                <h2 className="font-black text-xl mb-1 tracking-tighter">パイオニア TS-Z1GR 認定店</h2>
+                <p className="text-xs text-blue-600 font-black uppercase tracking-widest mb-3">Carrozzeria RS Certified Shop</p>
                 <p className="text-sm text-gray-600 leading-relaxed font-bold">
                   厳しい実技審査をクリア。パイオニア最高峰スピーカーの真価を引き出す、全国でも希少な認定ショップです。
                 </p>
@@ -665,8 +665,8 @@ function MainView({
                 <ShieldCheck className="w-7 h-7 text-white" />
               </div>
               <div>
-                <h3 className="font-black text-xl mb-1 tracking-tighter">最高峰SPS認定店</h3>
-                <p className="text-xs text-blue-600/60 font-black uppercase tracking-widest mb-3">Security Professional Shop</p>
+                <h2 className="font-black text-xl mb-1 tracking-tighter">最高峰SPS認定店</h2>
+                <p className="text-xs text-blue-600 font-bold uppercase tracking-widest mb-3">Security Professional Shop</p>
                 <p className="text-sm text-gray-600 leading-relaxed font-bold">
                   最新の盗難手口を知り尽くした「プロ」の集団。Grgo・Pantheraの性能を100%引き出す施工を約束します。
                 </p>
@@ -678,8 +678,8 @@ function MainView({
                 <History className="w-7 h-7 text-white" />
               </div>
               <div>
-                <h3 className="font-black text-xl mb-1 tracking-tighter">創業30年以上の信頼</h3>
-                <p className="text-xs text-blue-600/60 font-black uppercase tracking-widest mb-3">Over 30 Years Experience</p>
+                <h2 className="font-black text-xl mb-1 tracking-tighter">創業30年以上の信頼</h2>
+                <p className="text-xs text-blue-600 font-black uppercase tracking-widest mb-3">Over 30 Years Experience</p>
                 <p className="text-sm text-gray-600 leading-relaxed font-bold">
                   福岡で30年以上。熟練の技術者による確かな施工と充実のアフターフォローで、一生涯のパートナーとなります。
                 </p>
@@ -893,7 +893,7 @@ function MainView({
             <div className="lg:sticky lg:top-32 space-y-8">
               <div>
                 <span className="text-blue-500 font-black text-xs uppercase tracking-[0.3em] mb-4 block">Shop Access</span>
-                <h3 className="text-3xl font-black text-white mb-6 tracking-tighter">店舗のご案内</h3>
+                <h2 className="text-3xl font-black text-white mb-6 tracking-tighter">店舗のご案内</h2>
                 <p className="text-gray-300 font-bold leading-relaxed mb-8">
                   福岡県大野城市の御笠川沿いに店舗を構えております。
                   こちらの外観を目印にお越しください。駐車場も完備しております。
@@ -929,7 +929,7 @@ function MainView({
 
         <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-12 mb-16">
           <div className="text-left">
-            <h4 className="text-white font-bold mb-6">Contact Us</h4>
+            <h3 className="text-white font-bold mb-6">Contact Us</h3>
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-blue-500 shrink-0" />
@@ -959,7 +959,7 @@ function MainView({
           </div>
 
           <div className="text-left">
-            <h4 className="text-white font-bold mb-6">Social Media</h4>
+            <h3 className="text-white font-bold mb-6">Social Media</h3>
             <div className="flex gap-4">
               {[
                 { name: "Facebook", icon: Facebook, url: "https://www.facebook.com/profile.php?id=100063630308258" },
@@ -980,7 +980,7 @@ function MainView({
           </div>
 
           <div className="text-left">
-            <h4 className="text-white font-bold mb-6">Quick Links</h4>
+            <h3 className="text-white font-bold mb-6">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li><a href="#" className="hover:text-white transition-colors">Home</a></li>
               <li><a href="#services" className="hover:text-white transition-colors">Services</a></li>

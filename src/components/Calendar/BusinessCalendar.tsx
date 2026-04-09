@@ -194,12 +194,14 @@ export const BusinessCalendar = () => {
                 <button
                   onClick={prevMonth}
                   className="p-3 hover:bg-gray-50 rounded-2xl border border-gray-100 transition-colors"
+                  aria-label="前の月"
                 >
                   <ChevronLeft className="w-5 h-5" />
                 </button>
                 <button
                   onClick={nextMonth}
                   className="p-3 hover:bg-gray-50 rounded-2xl border border-gray-100 transition-colors"
+                  aria-label="次の月"
                 >
                   <ChevronRight className="w-5 h-5" />
                 </button>
