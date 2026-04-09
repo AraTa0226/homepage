@@ -560,15 +560,18 @@ function MainView({
 
         <div className="relative max-w-7xl mx-auto px-4 py-32 md:py-48">
           <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }}>
-            <div className="flex flex-col gap-4 mb-6">
-              <span className="inline-block w-fit px-4 py-1.5 bg-blue-600/10 backdrop-blur-md border border-blue-500/20 text-blue-400 text-[10px] md:text-xs font-black rounded-full uppercase tracking-[0.3em]">
-                福岡のカーオーディオ・セキュリティ専門店
-              </span>
-              <span className="text-white/40 text-sm md:text-xl font-black tracking-[0.2em] italic uppercase">ENERGY エナジー</span>
+            <div className="flex flex-col gap-4 mb-8">
+              <div className="inline-flex items-center gap-3 w-fit px-6 py-2 bg-blue-600/10 backdrop-blur-md border border-blue-500/20 rounded-full">
+                <span className="text-blue-400 text-xs md:text-sm font-black uppercase tracking-[0.2em]">
+                  福岡のカーオーディオ・セキュリティ専門店
+                </span>
+                <div className="w-px h-4 bg-blue-500/30"></div>
+                <span className="text-white text-xs md:text-sm font-black tracking-[0.1em]">エナジー</span>
+              </div>
             </div>
-            <h1 className="text-3xl md:text-6xl font-black text-white mb-6 leading-[1.1] tracking-tighter">
+            <h1 className="text-4xl md:text-7xl font-black text-white mb-8 leading-[1.1] tracking-tighter">
               愛車を護り、音を極めて30年。<br />
-              <span className="text-blue-500 text-2xl md:text-4xl block mt-2 opacity-80">九州No.1のセキュリティ施工実績。</span>
+              <span className="text-blue-500 text-2xl md:text-4xl block mt-3 opacity-90">九州No.1のセキュリティ施工実績。</span>
             </h1>
             <p className="text-base md:text-xl text-gray-200 mb-8 font-medium leading-relaxed max-w-2xl">
               セキュリティプロショップ（SPS）認定店。<br className="hidden md:block" />
