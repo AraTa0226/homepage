@@ -46,6 +46,7 @@ interface SiteContextType {
   removeBrandPartner: (id: string) => void;
   updateAssets: (updated: Partial<SiteAssets>) => void;
   saveSiteData: () => void;
+  resetSystem: () => void;
 }
 
 const initialBrandPartners: BrandPartner[] = [
@@ -324,6 +325,25 @@ export const SiteProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     setAssets(prev => ({ ...prev, ...updated }));
   };
 
+  const resetSystem = () => {
+    const keys = [
+      'ang_partners',
+      'ang_brand_partners',
+      'ang_assets',
+      'ang_plans',
+      'ang_guides',
+      'ang_optionals',
+      'ang_security_status',
+      'ang_emergency',
+      'ang_recruitment',
+      'ang_audio_recruitment',
+      'ang_security_recruitment',
+      'sound_ang_holidays'
+    ];
+    keys.forEach(k => localStorage.removeItem(k));
+    window.location.reload();
+  };
+
   const saveSiteData = () => {
     // Explicit save trigger (already handled by useEffects, but kept for compatibility)
     localStorage.setItem('ang_partners', JSON.stringify(partners));
@@ -343,7 +363,8 @@ export const SiteProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       addBrandPartner,
       removeBrandPartner,
       updateAssets,
-      saveSiteData
+      saveSiteData,
+      resetSystem
     }}>
       {children}
     </SiteContext.Provider>

@@ -69,7 +69,8 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
     addBrandPartner,
     removeBrandPartner,
     updateAssets,
-    saveSiteData
+    saveSiteData,
+    resetSystem
   } = useSite();
 
   // Price State
@@ -464,6 +465,20 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
           </div>
 
           <div className="flex items-center gap-4">
+            <button
+              onClick={() => {
+                setConfirmModal({
+                  show: true,
+                  message: "システム全体のキャッシュをリセットして初期状態に戻しますか？（編集中のデータは失われます）",
+                  onConfirm: resetSystem
+                });
+              }}
+              className="px-3 py-1.5 text-[10px] font-black tracking-widest text-red-600 hover:bg-red-50 border border-red-100 rounded-lg transition-colors flex items-center gap-2 uppercase"
+              title="システムリセット"
+            >
+              <RefreshCw className="w-3 h-3" />
+              <span>Reset</span>
+            </button>
             <div className="flex bg-gray-100 p-1 rounded-xl mr-4">
               <button
                 onClick={() => setActiveTab('prices')}
