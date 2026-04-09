@@ -562,7 +562,7 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
                 <div className="flex-1 flex items-center">
                   <button
                     onClick={onBack}
-                    className="w-11 h-11 flex items-center justify-center text-gray-600 hover:text-blue-600 transition-colors font-bold group shrink-0"
+                    className="w-12 h-12 flex items-center justify-center text-gray-600 hover:text-blue-600 transition-colors font-bold group shrink-0"
                     aria-label="トップに戻る"
                   >
                     <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
@@ -577,7 +577,7 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
                     href="https://line.me/R/ti/p/@soundang"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center w-11 h-11 md:w-auto md:px-4 md:py-2 bg-[#06C755] text-white rounded-xl font-black transition-all hover:bg-[#05b34c] shadow-sm shrink-0"
+                    className="flex items-center justify-center w-12 h-12 md:w-auto md:px-5 md:py-2.5 bg-[#06C755] text-white rounded-xl font-black transition-all hover:bg-[#05b34c] shadow-sm shrink-0"
                     aria-label="LINEで相談する"
                   >
                     <MessageSquare className="w-5 h-5 md:mr-2" />
@@ -585,7 +585,7 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
                   </a>
                   <button
                     onClick={() => scrollToSection('cta')}
-                    className="flex items-center justify-center w-11 h-11 md:w-auto md:px-4 md:py-2 bg-blue-600 text-white rounded-xl font-black transition-all hover:bg-blue-700 shadow-sm shrink-0"
+                    className="flex items-center justify-center w-12 h-12 md:w-auto md:px-5 md:py-2.5 bg-blue-600 text-white rounded-xl font-black transition-all hover:bg-blue-700 shadow-sm shrink-0"
                     aria-label="来店予約"
                   >
                     <Calendar className="w-5 h-5 md:mr-2" />
@@ -594,7 +594,7 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
                   <div className="relative shrink-0">
                     <button
                       onClick={() => setIsMenuOpen(!isMenuOpen)}
-                      className="w-11 h-11 flex items-center justify-center hover:bg-gray-100 rounded-xl transition-colors"
+                      className="w-12 h-12 flex items-center justify-center hover:bg-gray-100 rounded-xl transition-colors"
                       aria-label={isMenuOpen ? "メニューを閉じる" : "メニューを開く"}
                     >
                       {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

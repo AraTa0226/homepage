@@ -42,7 +42,7 @@ export const RecruitmentSection: React.FC<RecruitmentSectionProps> = ({ data }) 
                             <div className="space-y-6 bg-gray-50 p-6 md:p-8 rounded-2xl md:rounded-3xl border border-gray-100 mb-8">
                                 {data.showRequirements && (
                                     <div>
-                                        <h3 className="text-sm font-black text-gray-400 tracking-widest uppercase mb-4">募集要項</h3>
+                                        <h3 className="text-sm font-black text-gray-500 tracking-widest uppercase mb-4">募集要項</h3>
                                         <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                                             {data.requirements.filter(req => req.trim() !== "").map((req, idx) => (
                                                 <li key={idx} className="flex items-start gap-2 text-sm md:text-base font-bold text-gray-700">
@@ -56,7 +56,7 @@ export const RecruitmentSection: React.FC<RecruitmentSectionProps> = ({ data }) 
 
                                 {data.showSalary && (
                                     <div className={data.showRequirements ? "pt-4 border-t border-gray-200" : ""}>
-                                        <h3 className="text-sm font-black text-gray-400 tracking-widest uppercase mb-2">給与・待遇</h3>
+                                        <h3 className="text-sm font-black text-gray-500 tracking-widest uppercase mb-2">給与・待遇</h3>
                                         <p className="text-gray-900 font-black text-base md:text-lg">
                                             {data.salary}
                                         </p>
@@ -67,7 +67,7 @@ export const RecruitmentSection: React.FC<RecruitmentSectionProps> = ({ data }) 
 
                         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                             <div className="text-center md:text-left">
-                                <span className="block text-xs font-black text-gray-400 tracking-widest mb-1">お問い合わせ・応募先</span>
+                                <span className="block text-xs font-black text-gray-500 tracking-widest mb-1">お問い合わせ・応募先</span>
                                 <span className="text-blue-600 font-black text-xl md:text-2xl">{data.contactInfo}</span>
                             </div>
 

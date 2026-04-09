@@ -538,7 +538,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                                     {item.description ? (
                                       <div className="text-[10px] font-bold text-gray-500 mt-1 leading-relaxed line-clamp-2">{item.description}</div>
                                     ) : (
-                                      <div className="text-xs font-bold text-gray-400 mt-1 uppercase tracking-widest">Speaker Unit</div>
+                                      <div className="text-xs font-bold text-gray-500 mt-1 uppercase tracking-widest">Speaker Unit</div>
                                     )}
                                   </div>
                                 </div>
@@ -579,7 +579,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                               <div key={idx} className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-6 rounded-3xl bg-gray-900 text-white group hover:bg-blue-900 transition-all">
                                 <div className="flex-grow">
                                   <h4 className="font-black text-lg mb-1 group-hover:text-blue-300 transition-colors">{upgrade.title}</h4>
-                                  <p className="text-xs text-gray-400 font-bold leading-relaxed">{upgrade.description}</p>
+                                  <p className="text-xs text-gray-500 font-bold leading-relaxed">{upgrade.description}</p>
                                 </div>
                                 <div className="shrink-0 text-right">
                                   <div className="text-blue-400 font-black text-lg tracking-tighter">
@@ -596,7 +596,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                       {/* Notes Section */}
                       {selectedItem.packageDetails?.notes && !selectedItem.isGuide && (
                         <div className="mb-10">
-                          <h3 className="text-sm font-black text-gray-400 uppercase tracking-widest mb-6 flex items-center gap-2">
+                          <h3 className="text-sm font-black text-gray-500 uppercase tracking-widest mb-6 flex items-center gap-2">
                             <Info className="w-4 h-4" />
                             Notes & Conditions
                           </h3>
@@ -689,7 +689,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                       <div className="w-full md:w-80 shrink-0">
                         <div className="bg-gray-900 rounded-[2rem] p-8 text-white sticky top-0">
                           <div className="mb-8">
-                            <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">Price (Tax Incl.)</p>
+                            <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-2">Price (Tax Incl.)</p>
                             <div className="text-4xl font-black text-blue-400 tracking-tighter">
                               {formatPrice(selectedItem.price)}
                             </div>
@@ -947,7 +947,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                                     <span className="text-blue-400 font-black text-sm">{upgrade.price}</span>
                                   </div>
                                   <h4 className="text-xl font-black mb-3">{upgrade.title}</h4>
-                                  <p className="text-gray-400 text-sm font-bold leading-relaxed">
+                                  <p className="text-gray-500 text-sm font-bold leading-relaxed">
                                     {upgrade.description}
                                   </p>
                                 </div>
@@ -1106,7 +1106,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                             {categoryExplanations[currentCategory.id]?.upgrades && (
                               <div className="mt-auto pt-6 border-t border-gray-100">
                                 <div className="flex items-center justify-between mb-4">
-                                  <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Upgrade Options</p>
+                                  <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest">Upgrade Options</p>
                                   <span className="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">差額でアップグレード可能</span>
                                 </div>
                                 <div className="grid grid-cols-1 gap-2">
@@ -1170,7 +1170,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                 <div className="flex-1 flex items-center">
                   <button
                     onClick={onBack}
-                    className="w-11 h-11 flex items-center justify-center text-gray-600 hover:text-blue-600 transition-colors font-bold group shrink-0"
+                    className="w-12 h-12 flex items-center justify-center text-gray-600 hover:text-blue-600 transition-colors font-bold group shrink-0"
                     aria-label="トップに戻る"
                   >
                     <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
@@ -1190,7 +1190,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                     href="https://line.me/R/ti/p/@soundang"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center w-11 h-11 md:w-auto md:px-4 md:py-2 bg-[#06C755] text-white rounded-xl font-black transition-all hover:bg-[#05b34c] shadow-sm shrink-0"
+                    className="flex items-center justify-center w-12 h-12 md:w-auto md:px-5 md:py-2.5 bg-[#06C755] text-white rounded-xl font-black transition-all hover:bg-[#05b34c] shadow-sm shrink-0"
                     aria-label="LINEで相談する"
                   >
                     <MessageSquare className="w-5 h-5 md:mr-2" />
@@ -1200,7 +1200,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                   {/* Reservation */}
                   <button
                     onClick={() => scrollToSection('cta')}
-                    className="flex items-center justify-center w-11 h-11 md:w-auto md:px-4 md:py-2 bg-blue-600 text-white rounded-xl font-black transition-all hover:bg-blue-700 shadow-sm shrink-0"
+                    className="flex items-center justify-center w-12 h-12 md:w-auto md:px-5 md:py-2.5 bg-blue-600 text-white rounded-xl font-black transition-all hover:bg-blue-700 shadow-sm shrink-0"
                     aria-label="来店予約"
                   >
                     <Calendar className="w-5 h-5 md:mr-2" />
@@ -1210,7 +1210,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                   <div className="relative shrink-0">
                     <button
                       onClick={() => setIsMenuOpen(!isMenuOpen)}
-                      className="w-11 h-11 flex items-center justify-center hover:bg-gray-100 rounded-xl transition-colors"
+                      className="w-12 h-12 flex items-center justify-center hover:bg-gray-100 rounded-xl transition-colors"
                       aria-label={isMenuOpen ? "メニューを閉じる" : "メニューを開く"}
                     >
                       {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -1447,7 +1447,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                                 animate={{ rotate: expandedSection === section.id ? 180 : 0 }}
                                 transition={{ duration: 0.3 }}
                               >
-                                <ChevronRight className="w-5 h-5 text-gray-400" />
+                                <ChevronRight className="w-5 h-5 text-gray-500" />
                               </motion.div>
                             </div>
                           )}

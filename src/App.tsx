@@ -321,7 +321,7 @@ function MainView({
                   <Lock className="w-8 h-8 text-blue-600" />
                 </div>
                 <h3 className="text-2xl font-black tracking-tighter">STAFF LOGIN</h3>
-                <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mt-1">管理者認証</p>
+                <p className="text-xs text-gray-500 font-bold uppercase tracking-widest mt-1">管理者認証</p>
               </div>
 
               <form onSubmit={handlePasswordSubmit} className="space-y-4">
@@ -394,7 +394,7 @@ function MainView({
               href="https://lin.ee/cdfCnx8"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-11 h-11 md:w-auto md:px-4 md:py-2 bg-[#06C755] text-white rounded-xl font-black transition-all hover:bg-[#05b34c] shadow-sm shrink-0"
+              className="flex items-center justify-center w-12 h-12 md:w-auto md:px-5 md:py-2.5 bg-[#06C755] text-white rounded-xl font-black transition-all hover:bg-[#05b34c] shadow-sm shrink-0"
               aria-label="LINEで相談する"
             >
               <MessageSquare className="w-5 h-5 md:mr-2" />
@@ -404,7 +404,7 @@ function MainView({
             {/* Reservation - Icon only on small screens */}
             <a
               href="#contact"
-              className="flex items-center justify-center w-11 h-11 md:w-auto md:px-4 md:py-2 bg-blue-600 text-white rounded-xl font-black transition-all hover:bg-blue-700 shadow-sm shrink-0"
+              className="flex items-center justify-center w-12 h-12 md:w-auto md:px-5 md:py-2.5 bg-blue-600 text-white rounded-xl font-black transition-all hover:bg-blue-700 shadow-sm shrink-0"
               aria-label="来店予約"
             >
               <CalendarIcon className="w-5 h-5 md:mr-2" />
@@ -413,7 +413,7 @@ function MainView({
 
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden w-11 h-11 flex items-center justify-center hover:bg-gray-100 rounded-xl transition-colors shrink-0"
+              className="lg:hidden w-12 h-12 flex items-center justify-center hover:bg-gray-100 rounded-xl transition-colors shrink-0"
               aria-label={isMobileMenuOpen ? "メニューを閉じる" : "メニューを開く"}
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -423,44 +423,46 @@ function MainView({
       </header>
 
       {/* Emergency Announcement */}
-      {emergencyAnnouncement.active && emergencyAnnouncement.text && (
-        <div className="max-w-7xl mx-auto px-4 pt-24 -mb-16 relative z-30">
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="bg-red-50 rounded-[2rem] p-6 md:p-8 shadow-2xl border-2 border-red-500 flex flex-col md:flex-row items-center gap-6"
-          >
-            <div className="w-16 h-16 rounded-2xl bg-red-100 flex items-center justify-center shrink-0">
-              <Megaphone className="w-8 h-8 text-red-600" />
-            </div>
-            <div className="flex-grow text-center md:text-left">
-              <span className="text-red-600 font-black text-xs uppercase tracking-widest mb-1 block">Emergency Notice</span>
-              <div className="flex flex-col md:flex-row gap-6 items-center">
-                {emergencyAnnouncement.image && (
-                  <SafeImage
-                    src={emergencyAnnouncement.image}
-                    alt="緊急のお知らせ画像"
-                    className="w-32 h-32 object-cover rounded-xl shadow-md"
-                  />
-                )}
-                <p className="text-gray-900 font-black text-lg md:text-xl leading-tight whitespace-pre-wrap flex-grow">
-                  {emergencyAnnouncement.text}
-                </p>
+      {
+        emergencyAnnouncement.active && emergencyAnnouncement.text && (
+          <div className="max-w-7xl mx-auto px-4 pt-24 -mb-16 relative z-30">
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="bg-red-50 rounded-[2rem] p-6 md:p-8 shadow-2xl border-2 border-red-500 flex flex-col md:flex-row items-center gap-6"
+            >
+              <div className="w-16 h-16 rounded-2xl bg-red-100 flex items-center justify-center shrink-0">
+                <Megaphone className="w-8 h-8 text-red-600" />
               </div>
-            </div>
-            {emergencyAnnouncement.link && (
-              <a
-                href={emergencyAnnouncement.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-red-600 text-white px-8 py-4 rounded-xl font-black text-sm tracking-widest hover:bg-red-700 transition-all shadow-lg shadow-red-200 shrink-0"
-              >
-                詳細を見る
-              </a>
-            )}
-          </motion.div>
-        </div>
-      )}
+              <div className="flex-grow text-center md:text-left">
+                <span className="text-red-600 font-black text-xs uppercase tracking-widest mb-1 block">Emergency Notice</span>
+                <div className="flex flex-col md:flex-row gap-6 items-center">
+                  {emergencyAnnouncement.image && (
+                    <SafeImage
+                      src={emergencyAnnouncement.image}
+                      alt="緊急のお知らせ画像"
+                      className="w-32 h-32 object-cover rounded-xl shadow-md"
+                    />
+                  )}
+                  <p className="text-gray-900 font-black text-lg md:text-xl leading-tight whitespace-pre-wrap flex-grow">
+                    {emergencyAnnouncement.text}
+                  </p>
+                </div>
+              </div>
+              {emergencyAnnouncement.link && (
+                <a
+                  href={emergencyAnnouncement.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-red-600 text-white px-8 py-4 rounded-xl font-black text-sm tracking-widest hover:bg-red-700 transition-all shadow-lg shadow-red-200 shrink-0"
+                >
+                  詳細を見る
+                </a>
+              )}
+            </motion.div>
+          </div>
+        )
+      }
 
       {/* Mobile Menu Overlay - Moved outside header to fix stacking context */}
       <AnimatePresence>
@@ -766,6 +768,7 @@ function MainView({
                     href={post.link}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`ブログ記事を読む: ${post.title.replace(/<[^>]*>/g, '')}`}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.1 }}
@@ -776,7 +779,7 @@ function MainView({
 
                     <div className="flex flex-col md:flex-row md:items-center flex-grow gap-4 md:gap-8">
                       <div className="flex items-center gap-4 shrink-0 md:w-32">
-                        <span className="text-gray-400 font-mono text-sm font-bold tracking-wider">{post.date}</span>
+                        <span className="text-gray-500 font-mono text-sm font-bold tracking-wider">{post.date}</span>
                       </div>
 
                       <h3
@@ -787,9 +790,9 @@ function MainView({
                     </div>
 
                     <div className="flex items-center justify-between md:justify-end shrink-0 gap-4">
-                      <span className="md:hidden text-[10px] font-black text-gray-400 uppercase tracking-widest group-hover:text-blue-600 transition-colors">Read More</span>
-                      <div className="w-10 h-10 rounded-2xl bg-gray-50 flex items-center justify-center group-hover:bg-blue-600 transition-all shadow-sm">
-                        <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
+                      <span className="md:hidden text-[10px] font-black text-gray-500 uppercase tracking-widest group-hover:text-blue-600 transition-colors">Read More</span>
+                      <div className="w-12 h-12 rounded-2xl bg-gray-50 flex items-center justify-center group-hover:bg-blue-600 transition-all shadow-sm">
+                        <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-white transition-colors" />
                       </div>
                     </div>
                   </motion.a>
@@ -931,7 +934,7 @@ function MainView({
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-11 h-11 flex items-center justify-center bg-white/5 hover:bg-white/10 rounded-full transition-colors"
+                  className="w-12 h-12 flex items-center justify-center bg-white/5 hover:bg-white/10 rounded-full transition-colors"
                   aria-label={social.name + "でSound ANGをフォロー"}
                 >
                   <social.icon className="w-5 h-5 text-white" aria-hidden="true" />
@@ -958,12 +961,14 @@ function MainView({
             <button
               onClick={() => setShowPasswordModal(true)}
               className="hover:text-white/40 transition-colors cursor-default"
+              aria-hidden="true"
+              tabIndex={-1}
             >
               .
             </button>
           </p>
         </div>
       </footer>
-    </div>
+    </div >
   );
 }

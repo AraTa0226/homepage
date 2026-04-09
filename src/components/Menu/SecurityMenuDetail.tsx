@@ -690,7 +690,7 @@ export const SecurityMenuDetail: React.FC<SecurityMenuDetailProps> = ({ onBack, 
                 <div className="flex-1 flex items-center">
                   <button
                     onClick={onBack}
-                    className="w-11 h-11 flex items-center justify-center text-gray-600 hover:text-blue-600 transition-colors font-bold group shrink-0"
+                    className="w-12 h-12 flex items-center justify-center text-gray-600 hover:text-blue-600 transition-colors font-bold group shrink-0"
                     aria-label="トップに戻る"
                   >
                     <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
@@ -705,7 +705,7 @@ export const SecurityMenuDetail: React.FC<SecurityMenuDetailProps> = ({ onBack, 
                     href="https://line.me/R/ti/p/@soundang"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center w-11 h-11 md:w-auto md:px-4 md:py-2 bg-[#06C755] text-white rounded-xl font-black transition-all hover:bg-[#05b34c] shadow-sm shrink-0"
+                    className="flex items-center justify-center w-12 h-12 md:w-auto md:px-5 md:py-2.5 bg-[#06C755] text-white rounded-xl font-black transition-all hover:bg-[#05b34c] shadow-sm shrink-0"
                     aria-label="LINEで相談する"
                   >
                     <MessageSquare className="w-5 h-5 md:mr-2" />
@@ -713,7 +713,7 @@ export const SecurityMenuDetail: React.FC<SecurityMenuDetailProps> = ({ onBack, 
                   </a>
                   <button
                     onClick={() => scrollToSection('cta')}
-                    className="flex items-center justify-center w-11 h-11 md:w-auto md:px-4 md:py-2 bg-blue-600 text-white rounded-xl font-black transition-all hover:bg-blue-700 shadow-sm shrink-0"
+                    className="flex items-center justify-center w-12 h-12 md:w-auto md:px-5 md:py-2.5 bg-blue-600 text-white rounded-xl font-black transition-all hover:bg-blue-700 shadow-sm shrink-0"
                     aria-label="来店予約"
                   >
                     <Calendar className="w-5 h-5 md:mr-2" />
@@ -722,7 +722,7 @@ export const SecurityMenuDetail: React.FC<SecurityMenuDetailProps> = ({ onBack, 
                   <div className="relative shrink-0">
                     <button
                       onClick={() => setIsMenuOpen(!isMenuOpen)}
-                      className="w-11 h-11 flex items-center justify-center hover:bg-gray-100 rounded-xl transition-colors"
+                      className="w-12 h-12 flex items-center justify-center hover:bg-gray-100 rounded-xl transition-colors"
                       aria-label={isMenuOpen ? "メニューを閉じる" : "メニューを開く"}
                     >
                       {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -831,14 +831,16 @@ export const SecurityMenuDetail: React.FC<SecurityMenuDetailProps> = ({ onBack, 
                 </div>
 
                 {/* Pagination Dots for Mobile */}
-                <div className="flex justify-center gap-2 mt-6 md:hidden">
+                <div className="flex justify-center gap-1 mt-6 md:hidden">
                   {achievements.map((_, i) => (
                     <button
                       key={i}
                       onClick={() => scrollToAchievementIndex(i)}
-                      className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${activeAchievementIndex === i ? 'bg-blue-600 w-4' : 'bg-gray-300'}`}
+                      className="w-12 h-12 flex items-center justify-center group"
                       aria-label={`Go to slide ${i + 1}`}
-                    />
+                    >
+                      <div className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${activeAchievementIndex === i ? 'bg-blue-600 w-4' : 'bg-gray-300'}`} />
+                    </button>
                   ))}
                 </div>
               </div>
@@ -958,7 +960,7 @@ export const SecurityMenuDetail: React.FC<SecurityMenuDetailProps> = ({ onBack, 
                           </div>
                           <div>
                             <h3 className="text-xl md:text-2xl font-black tracking-tight">{category.category}</h3>
-                            <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest mt-1">{category.items.length} MODELS AVAILABLE</p>
+                            <p className="text-[10px] text-gray-500 font-bold uppercase tracking-widest mt-1">{category.items.length} MODELS AVAILABLE</p>
                           </div>
                         </div>
                         <div className="flex items-center gap-4">
@@ -1104,7 +1106,7 @@ export const SecurityMenuDetail: React.FC<SecurityMenuDetailProps> = ({ onBack, 
               <div className="max-w-7xl mx-auto px-4">
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md:text-5xl font-black tracking-tighter mb-4">TRUSTED BRANDS</h2>
-                  <p className="text-gray-400 font-bold uppercase tracking-widest text-xs">取扱いブランド</p>
+                  <p className="text-gray-500 font-bold uppercase tracking-widest text-xs">取扱いブランド</p>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                   {securityBrands.map((brand, i) => (

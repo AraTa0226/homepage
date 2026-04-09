@@ -95,14 +95,16 @@ export const PartnersSection: React.FC<{ onViewAll: () => void }> = ({ onViewAll
         </div>
 
         {/* Pagination Dots for Mobile */}
-        <div className="flex justify-center gap-2 mb-12 md:hidden">
+        <div className="flex justify-center gap-1 mb-12 md:hidden">
           {brandPartners.slice(0, 3).map((_, i) => (
             <button
               key={i}
               onClick={() => scrollToIndex(i)}
-              className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${activeIndex === i ? 'bg-blue-600 w-4' : 'bg-gray-300'}`}
+              className="w-12 h-12 flex items-center justify-center group"
               aria-label={`Go to slide ${i + 1}`}
-            />
+            >
+              <div className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${activeIndex === i ? 'bg-blue-600 w-4' : 'bg-gray-300'}`} />
+            </button>
           ))}
         </div>
 
@@ -142,7 +144,7 @@ export const PartnersSection: React.FC<{ onViewAll: () => void }> = ({ onViewAll
                     href={shop.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-white text-[11px] font-bold transition-all flex items-center justify-between group"
+                    className="px-4 py-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-white text-[11px] font-bold transition-all flex items-center justify-between group min-h-[48px]"
                   >
                     {shop.name}
                     <ExternalLink className="w-3 h-3 opacity-30 group-hover:opacity-100 transition-opacity" />
