@@ -519,18 +519,24 @@ function MainView({
                   href="https://lin.ee/cdfCnx8"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3 w-full py-4 bg-[#06C755] text-white rounded-2xl font-black text-sm shadow-lg shadow-green-500/20"
+                  className="flex flex-col items-center justify-center gap-1 w-full py-4 bg-[#06C755] text-white rounded-2xl shadow-lg shadow-green-500/20"
                 >
-                  <MessageSquare className="w-5 h-5" />
-                  LINEで相談する
+                  <div className="flex items-center gap-3 font-black text-sm text-[#000000] drop-shadow-sm">
+                    <MessageSquare className="w-5 h-5" />
+                    LINEで相談する
+                  </div>
+                  <span className="text-[10px] font-bold opacity-90 text-[#000000] drop-shadow-sm">※車種別適合・見積相談OK</span>
                 </a>
                 <a
                   href="#contact"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="flex items-center justify-center gap-3 w-full py-4 bg-blue-600 text-white rounded-2xl font-black text-sm shadow-lg shadow-blue-500/20"
+                  className="flex flex-col items-center justify-center gap-1 w-full py-4 bg-blue-600 text-white rounded-2xl shadow-lg shadow-blue-500/20"
                 >
-                  <CalendarIcon className="w-5 h-5" />
-                  来店予約・お問い合わせ
+                  <div className="flex items-center gap-3 font-black text-sm">
+                    <CalendarIcon className="w-5 h-5" />
+                    来店予約・お問い合わせ
+                  </div>
+                  <span className="text-[10px] font-bold opacity-80">※初めての方もお気軽にどうぞ</span>
                 </a>
               </div>
             </motion.div>
@@ -551,14 +557,15 @@ function MainView({
 
         <div className="relative max-w-7xl mx-auto px-4 py-32 md:py-48">
           <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }}>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Fukuoka&apos;s<br />
-              Car Audio &amp;<br />
-              Car Security
+            <h1 className="text-3xl md:text-6xl font-black text-white mb-6 leading-[1.1] tracking-tighter">
+              九州No.1の施工実績。<br />
+              愛車を護り、音を極めて<br />
+              <span className="text-blue-500">30年以上。</span>
             </h1>
-            <p className="text-lg text-gray-200 mb-8">
-              カーオーディオ＆カーセキュリティの専門店。<br />
-              確かな技術で最適な施工をご提案します。
+            <p className="text-base md:text-xl text-gray-200 mb-8 font-medium leading-relaxed max-w-2xl">
+              セキュリティプロショップ（SPS）認定店。<br className="hidden md:block" />
+              Grgo・Pantheraを知り尽くした熟練の技術で、<br className="hidden md:block" />
+              あなたの愛車に究極の安心と感動のサウンドを。
             </p>
           </motion.div>
         </div>
@@ -593,6 +600,52 @@ function MainView({
               </div>
               <span className="font-bold text-sm text-gray-600 uppercase tracking-widest group-hover:text-blue-600 transition-colors">Dashcam, Mirror & Others</span>
             </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Signals */}
+      <section className="bg-white pt-32 pb-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl border border-gray-100">
+              <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-500/20">
+                <Award className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h3 className="font-black text-lg mb-1 tracking-tighter">九州施工実績No.1</h3>
+                <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mb-2">Number One in Kyushu</p>
+                <p className="text-sm text-gray-600 leading-relaxed font-medium">
+                  カーセキュリティの施工台数において、九州トップクラスの実績。培ったノウハウが安心を支えます。
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl border border-gray-100">
+              <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-500/20">
+                <Lock className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h3 className="font-black text-lg mb-1 tracking-tighter">最高峰SPS認定店</h3>
+                <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mb-2">Security Professional Shop</p>
+                <p className="text-sm text-gray-600 leading-relaxed font-medium">
+                  Grgo・Pantheraの性能を100%引き出すことができる、全国でも限られたセキュリティ認定販売店です。
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl border border-gray-100">
+              <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-500/20">
+                <CheckCircle2 className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h3 className="font-black text-lg mb-1 tracking-tighter">創業30年以上の信頼</h3>
+                <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mb-2">Over 30 Years History</p>
+                <p className="text-sm text-gray-600 leading-relaxed font-medium">
+                  福岡の地に根付いて30年以上。確かな技術と信頼で、数多くのオーナー様に選ばれ続けています。
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
