@@ -394,29 +394,29 @@ function MainView({
               href="https://lin.ee/cdfCnx8"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-9 h-9 md:w-auto md:px-4 md:py-2 bg-[#06C755] text-white rounded-xl font-black transition-all hover:bg-[#05b34c] shadow-sm shrink-0"
+              className="flex items-center justify-center w-11 h-11 md:w-auto md:px-4 md:py-2 bg-[#06C755] text-white rounded-xl font-black transition-all hover:bg-[#05b34c] shadow-sm shrink-0"
               aria-label="LINEで相談する"
             >
-              <MessageSquare className="w-4 h-4 md:w-5 md:h-5 md:mr-2" />
+              <MessageSquare className="w-5 h-5 md:mr-2" />
               <span className="hidden sm:inline text-[10px] tracking-widest">LINE相談</span>
             </a>
 
             {/* Reservation - Icon only on small screens */}
             <a
               href="#contact"
-              className="flex items-center justify-center w-9 h-9 md:w-auto md:px-4 md:py-2 bg-blue-600 text-white rounded-xl font-black transition-all hover:bg-blue-700 shadow-sm shrink-0"
+              className="flex items-center justify-center w-11 h-11 md:w-auto md:px-4 md:py-2 bg-blue-600 text-white rounded-xl font-black transition-all hover:bg-blue-700 shadow-sm shrink-0"
               aria-label="来店予約"
             >
-              <CalendarIcon className="w-4 h-4 md:w-5 md:h-5 md:mr-2" />
+              <CalendarIcon className="w-5 h-5 md:mr-2" />
               <span className="hidden sm:inline text-[10px] tracking-widest">来店予約</span>
             </a>
 
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-1.5 md:p-2 hover:bg-gray-100 rounded-xl transition-colors shrink-0"
+              className="lg:hidden w-11 h-11 flex items-center justify-center hover:bg-gray-100 rounded-xl transition-colors shrink-0"
               aria-label={isMobileMenuOpen ? "メニューを閉じる" : "メニューを開く"}
             >
-              {isMobileMenuOpen ? <X className="w-5 h-5 md:w-6 md:h-6" /> : <Menu className="w-5 h-5 md:w-6 md:h-6" />}
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
@@ -434,7 +434,7 @@ function MainView({
               <Megaphone className="w-8 h-8 text-red-600" />
             </div>
             <div className="flex-grow text-center md:text-left">
-              <h3 className="text-red-600 font-black text-xs uppercase tracking-widest mb-1">Emergency Notice</h3>
+              <span className="text-red-600 font-black text-xs uppercase tracking-widest mb-1 block">Emergency Notice</span>
               <div className="flex flex-col md:flex-row gap-6 items-center">
                 {emergencyAnnouncement.image && (
                   <SafeImage
@@ -484,7 +484,7 @@ function MainView({
                 <span className="font-black tracking-tighter text-xl">MENU</span>
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="p-2 hover:bg-gray-50 rounded-xl transition-colors"
+                  className="w-12 h-12 flex items-center justify-center hover:bg-gray-50 rounded-xl transition-colors"
                   aria-label="メニューを閉じる"
                 >
                   <X className="w-6 h-6" />
@@ -615,7 +615,7 @@ function MainView({
               </div>
               <div>
                 <h3 className="font-black text-lg mb-1 tracking-tighter">九州施工実績No.1</h3>
-                <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mb-2">Number One in Kyushu</p>
+                <p className="text-xs text-gray-500 font-bold uppercase tracking-widest mb-2">Number One in Kyushu</p>
                 <p className="text-sm text-gray-600 leading-relaxed font-medium">
                   カーセキュリティの施工台数において、九州トップクラスの実績。培ったノウハウが安心を支えます。
                 </p>
@@ -628,7 +628,7 @@ function MainView({
               </div>
               <div>
                 <h3 className="font-black text-lg mb-1 tracking-tighter">最高峰SPS認定店</h3>
-                <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mb-2">Security Professional Shop</p>
+                <p className="text-xs text-gray-500 font-bold uppercase tracking-widest mb-2">Security Professional Shop</p>
                 <p className="text-sm text-gray-600 leading-relaxed font-medium">
                   Grgo・Pantheraの性能を100%引き出すことができる、全国でも限られたセキュリティ認定販売店です。
                 </p>
@@ -641,7 +641,7 @@ function MainView({
               </div>
               <div>
                 <h3 className="font-black text-lg mb-1 tracking-tighter">創業30年以上の信頼</h3>
-                <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mb-2">Over 30 Years History</p>
+                <p className="text-xs text-gray-500 font-bold uppercase tracking-widest mb-2">Over 30 Years History</p>
                 <p className="text-sm text-gray-600 leading-relaxed font-medium">
                   福岡の地に根付いて30年以上。確かな技術と信頼で、数多くのオーナー様に選ばれ続けています。
                 </p>
@@ -931,7 +931,7 @@ function MainView({
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 bg-white/5 hover:bg-white/10 rounded-full transition-colors"
+                  className="w-11 h-11 flex items-center justify-center bg-white/5 hover:bg-white/10 rounded-full transition-colors"
                   aria-label={social.name + "でSound ANGをフォロー"}
                 >
                   <social.icon className="w-5 h-5 text-white" aria-hidden="true" />

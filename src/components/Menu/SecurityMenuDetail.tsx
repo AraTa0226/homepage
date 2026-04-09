@@ -690,11 +690,10 @@ export const SecurityMenuDetail: React.FC<SecurityMenuDetailProps> = ({ onBack, 
                 <div className="flex-1 flex items-center">
                   <button
                     onClick={onBack}
-                    className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors font-bold group shrink-0"
+                    className="w-11 h-11 flex items-center justify-center text-gray-600 hover:text-blue-600 transition-colors font-bold group shrink-0"
                     aria-label="トップに戻る"
                   >
                     <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-                    <span className="text-[10px] font-black tracking-widest hidden sm:inline">BACK</span>
                   </button>
                 </div>
                 <div className="flex items-center gap-1.5 md:gap-2 shrink-0">
@@ -706,27 +705,27 @@ export const SecurityMenuDetail: React.FC<SecurityMenuDetailProps> = ({ onBack, 
                     href="https://line.me/R/ti/p/@soundang"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center w-9 h-9 md:w-auto md:px-4 md:py-2 bg-[#06C755] text-white rounded-xl font-black transition-all hover:bg-[#05b34c] shadow-sm shrink-0"
+                    className="flex items-center justify-center w-11 h-11 md:w-auto md:px-4 md:py-2 bg-[#06C755] text-white rounded-xl font-black transition-all hover:bg-[#05b34c] shadow-sm shrink-0"
                     aria-label="LINEで相談する"
                   >
-                    <MessageSquare className="w-4 h-4 md:w-5 md:h-5 md:mr-2" />
+                    <MessageSquare className="w-5 h-5 md:mr-2" />
                     <span className="hidden md:inline text-[10px]">LINE相談</span>
                   </a>
                   <button
                     onClick={() => scrollToSection('cta')}
-                    className="flex items-center justify-center w-9 h-9 md:w-auto md:px-4 md:py-2 bg-blue-600 text-white rounded-xl font-black transition-all hover:bg-blue-700 shadow-sm shrink-0"
+                    className="flex items-center justify-center w-11 h-11 md:w-auto md:px-4 md:py-2 bg-blue-600 text-white rounded-xl font-black transition-all hover:bg-blue-700 shadow-sm shrink-0"
                     aria-label="来店予約"
                   >
-                    <Calendar className="w-4 h-4 md:w-5 md:h-5 md:mr-2" />
+                    <Calendar className="w-5 h-5 md:mr-2" />
                     <span className="hidden md:inline text-[10px]">来店予約</span>
                   </button>
                   <div className="relative shrink-0">
                     <button
                       onClick={() => setIsMenuOpen(!isMenuOpen)}
-                      className="p-1.5 md:p-2 hover:bg-gray-100 rounded-xl transition-colors"
+                      className="w-11 h-11 flex items-center justify-center hover:bg-gray-100 rounded-xl transition-colors"
                       aria-label={isMenuOpen ? "メニューを閉じる" : "メニューを開く"}
                     >
-                      {isMenuOpen ? <X className="w-5 h-5 md:w-6 md:h-6" /> : <Menu className="w-5 h-5 md:w-6 md:h-6" />}
+                      {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                     </button>
                     <AnimatePresence>
                       {isMenuOpen && (
@@ -850,7 +849,7 @@ export const SecurityMenuDetail: React.FC<SecurityMenuDetailProps> = ({ onBack, 
               <div className="max-w-7xl mx-auto px-4">
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md:text-5xl font-black tracking-tighter mb-4">WHAT IS YOUR PURPOSE?</h2>
-                  <p className="text-gray-400 font-bold uppercase tracking-widest text-xs">目的から探す</p>
+                  <p className="text-gray-500 font-bold uppercase tracking-widest text-xs">目的から探す</p>
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                   {purposeNav.map((item, i) => (
@@ -859,7 +858,7 @@ export const SecurityMenuDetail: React.FC<SecurityMenuDetailProps> = ({ onBack, 
                         <item.icon className="w-6 h-6" />
                       </div>
                       <h3 className="text-lg font-black text-gray-900 mb-2 leading-tight">{item.title}</h3>
-                      <p className="text-xs text-gray-400 font-bold leading-relaxed">{item.desc}</p>
+                      <p className="text-xs text-gray-500 font-bold leading-relaxed">{item.desc}</p>
                     </button>
                   ))}
                 </div>
@@ -872,7 +871,7 @@ export const SecurityMenuDetail: React.FC<SecurityMenuDetailProps> = ({ onBack, 
                 <div className="flex flex-col md:flex-row items-center justify-between mb-16 gap-6">
                   <div className="text-center md:text-left">
                     <h2 className="text-3xl md:text-5xl font-black tracking-tighter mb-4 text-white">RECOMMENDED BY CAR TYPE</h2>
-                    <p className="text-gray-500 font-bold uppercase tracking-widest text-xs">車種別おすすめモデル</p>
+                    <p className="text-gray-600 font-bold uppercase tracking-widest text-xs">車種別おすすめモデル</p>
                   </div>
                   <button
                     onClick={() => { setViewingFullList('security_car'); window.scrollTo(0, 0); }}

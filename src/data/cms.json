@@ -1700,7 +1700,7 @@
       "id": "performance_up",
       "category": "性能を更に引き出すアレコレ",
       "type": "audio",
-      "description": "カーオーディオの源となる電源を改善することで、機材の性能を今よりももっと引き出す方法やおすすめのパーツをご���介します。\n\n電源の質は最終的な音��������の�������������テ�����オ���������メージに大�����������������������な�����������������������響を与えます。電源系にこだ���ることはS/Nや解像度アップに劇的な効果が現れます。",
+      "description": "カーオーディオの源となる電源を改善することで、機材の性能を今よりももっと引き出す方法やおすすめのパーツをご���介します。\n\n電源の質は最終的な音����������������の�������������テ�����オ���������メージに大�����������������������な�����������������������響を与えます。電源系にこだ���ることはS/Nや解像度アップに劇的な効果が現れます。",
       "showDescriptionInMenu": true,
       "showDescriptionInList": true,
       "items": [
@@ -2544,7 +2544,7 @@
       "description": "スピーカー交換プランには標準で付属。差額で上位プランへの変更も可能です。",
       "effect": "音の締まり向上",
       "percentage": 40,
-      "image": "/images/Audio/basic-line-coaxial.webp"
+      "image": "\\images\\Audio\\basic-line-coaxial.png"
     },
     {
       "id": "cable_opt",
@@ -2553,7 +2553,7 @@
       "description": "標準ケーブルが付属。差額で高音質OFCケーブル等へアップグレード可能です。",
       "effect": "情報量UP",
       "percentage": 30,
-      "image": "/images/speaker.webp"
+      "image": "/images/speaker.jpg"
     },
     {
       "id": "tuning_opt",
@@ -2562,7 +2562,7 @@
       "description": "当店でご購入・施工いただいたお客様には、無料で音響調整を行っております。",
       "effect": "鮮度回復",
       "percentage": 100,
-      "image": "/images/speaker.webp"
+      "image": "/images/speaker.jpg"
     }
   ],
   "securityStatus": "",

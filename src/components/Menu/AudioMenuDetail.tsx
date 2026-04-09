@@ -459,7 +459,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                             </span>
                             <span className="text-sm font-bold text-red-400 uppercase tracking-widest">もおトク！</span>
                           </div>
-                          <div className="text-[10px] text-gray-400 font-bold mt-1">
+                          <div className="text-[10px] text-gray-500 font-bold mt-1">
                             通常施工合計: {formatPrice(selectedItem.packageDetails.standardPrice)}
                           </div>
                         </div>
@@ -546,7 +546,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                                   {item.price && parseInt(item.price) > 0 ? (
                                     <span className="font-black text-blue-600">{formatPrice(item.price)}</span>
                                   ) : (
-                                    <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Consultation Required</span>
+                                    <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Consultation Required</span>
                                   )}
                                   {item.youtube && (
                                     <button
@@ -554,7 +554,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                                         const videoId = item.youtube.split('v=')[1]?.split('&')[0];
                                         if (videoId) setActiveYoutubeId(videoId);
                                       }}
-                                      className="flex items-center gap-2 px-4 py-2 bg-red-50 text-red-600 rounded-xl font-black text-[10px] tracking-widest hover:bg-red-600 hover:text-white transition-all"
+                                      className="flex items-center gap-2 px-4 py-3 bg-red-50 text-red-600 rounded-xl font-black text-[10px] tracking-widest hover:bg-red-600 hover:text-white transition-all min-h-[44px]"
                                     >
                                       <Play className="w-3 h-3 fill-current" />
                                       試聴サンプル
@@ -1170,11 +1170,10 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                 <div className="flex-1 flex items-center">
                   <button
                     onClick={onBack}
-                    className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors font-bold group shrink-0"
+                    className="w-11 h-11 flex items-center justify-center text-gray-600 hover:text-blue-600 transition-colors font-bold group shrink-0"
                     aria-label="トップに戻る"
                   >
                     <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-                    <span className="text-[10px] font-black tracking-widest hidden sm:inline">BACK</span>
                   </button>
                 </div>
 
@@ -1191,30 +1190,30 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                     href="https://line.me/R/ti/p/@soundang"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center w-9 h-9 md:w-auto md:px-4 md:py-2 bg-[#06C755] text-white rounded-xl font-black transition-all hover:bg-[#05b34c] shadow-sm shrink-0"
+                    className="flex items-center justify-center w-11 h-11 md:w-auto md:px-4 md:py-2 bg-[#06C755] text-white rounded-xl font-black transition-all hover:bg-[#05b34c] shadow-sm shrink-0"
                     aria-label="LINEで相談する"
                   >
-                    <MessageSquare className="w-4 h-4 md:w-5 md:h-5 md:mr-2" />
+                    <MessageSquare className="w-5 h-5 md:mr-2" />
                     <span className="hidden md:inline text-[10px]">LINE相談</span>
                   </a>
 
                   {/* Reservation */}
                   <button
                     onClick={() => scrollToSection('cta')}
-                    className="flex items-center justify-center w-9 h-9 md:w-auto md:px-4 md:py-2 bg-blue-600 text-white rounded-xl font-black transition-all hover:bg-blue-700 shadow-sm shrink-0"
+                    className="flex items-center justify-center w-11 h-11 md:w-auto md:px-4 md:py-2 bg-blue-600 text-white rounded-xl font-black transition-all hover:bg-blue-700 shadow-sm shrink-0"
                     aria-label="来店予約"
                   >
-                    <Calendar className="w-4 h-4 md:w-5 md:h-5 md:mr-2" />
+                    <Calendar className="w-5 h-5 md:mr-2" />
                     <span className="hidden md:inline text-[10px]">来店予約</span>
                   </button>
 
                   <div className="relative shrink-0">
                     <button
                       onClick={() => setIsMenuOpen(!isMenuOpen)}
-                      className="p-1.5 md:p-2 hover:bg-gray-100 rounded-xl transition-colors"
+                      className="w-11 h-11 flex items-center justify-center hover:bg-gray-100 rounded-xl transition-colors"
                       aria-label={isMenuOpen ? "メニューを閉じる" : "メニューを開く"}
                     >
-                      {isMenuOpen ? <X className="w-5 h-5 md:w-6 md:h-6" /> : <Menu className="w-5 h-5 md:w-6 md:h-6" />}
+                      {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                     </button>
 
                     <AnimatePresence>
@@ -1370,7 +1369,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                         setActiveCategory('all');
                         setExpandedSection(null);
                       }}
-                      className={`px-5 py-2 rounded-full text-[10px] md:text-xs font-black transition-all whitespace-nowrap ${activeCategory === 'all' ? 'bg-gray-900 text-white shadow-lg' : 'bg-white text-gray-400 border border-gray-200 hover:text-gray-600'}`}
+                      className={`px-5 py-3 rounded-full text-[10px] md:text-xs font-black transition-all whitespace-nowrap min-h-[44px] ${activeCategory === 'all' ? 'bg-gray-900 text-white shadow-lg' : 'bg-white text-gray-500 border border-gray-200 hover:text-gray-700'}`}
                     >
                       すべて表示
                     </button>
@@ -1393,7 +1392,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                             });
                           }
                         }}
-                        className={`px-5 py-2 rounded-full text-[10px] md:text-xs font-black transition-all whitespace-nowrap ${activeCategory === nav.id ? 'bg-gray-900 text-white shadow-lg' : 'bg-white text-gray-400 border border-gray-200 hover:text-gray-600'}`}
+                        className={`px-5 py-3 rounded-full text-[10px] md:text-xs font-black transition-all whitespace-nowrap min-h-[44px] ${activeCategory === nav.id ? 'bg-gray-900 text-white shadow-lg' : 'bg-white text-gray-500 border border-gray-200 hover:text-gray-700'}`}
                       >
                         {nav.title}
                       </button>
