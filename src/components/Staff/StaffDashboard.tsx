@@ -124,15 +124,30 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
     item: PlanItem;
   } | null>(null);
 
+  const normalizeImagePath = (path: string) => {
+    if (!path) return path;
+    // Replace backslashes with forward slashes and trim
+    let normalized = path.replace(/\\/g, '/').trim();
+    // Prepend leading slash if it looks like a relative path to images directory
+    if (normalized.startsWith('images/')) {
+      normalized = '/' + normalized;
+    }
+    return normalized;
+  };
+
   // Price Handlers
   const handlePriceChange = (catId: string, itemName: string, field: keyof PlanItem, value: any) => {
     setLocalPlans(prev => prev.map(cat => {
       if (cat.id === catId) {
         return {
           ...cat,
-          items: cat.items.map(item =>
-            item.name === itemName ? { ...item, [field]: value } : item
-          )
+          items: cat.items.map(item => {
+            if (item.name === itemName) {
+              const sanitizedValue = field === 'image' ? normalizeImagePath(value) : value;
+              return { ...item, [field]: sanitizedValue };
+            }
+            return item;
+          })
         };
       }
       return cat;
@@ -140,9 +155,15 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
   };
 
   const handleCategoryChange = (catId: string, field: keyof PlanCategory, value: any) => {
-    setLocalPlans(prev => prev.map(cat =>
-      cat.id === catId ? { ...cat, [field]: value } : cat
-    ));
+    setLocalPlans(prev => prev.map(cat => {
+      if (cat.id === catId) {
+        const sanitizedValue = field === 'images' && Array.isArray(value)
+          ? value.map(path => normalizeImagePath(path))
+          : value;
+        return { ...cat, [field]: sanitizedValue };
+      }
+      return cat;
+    }));
   };
 
   const handleOptionalPriceChange = (id: string, value: string) => {
@@ -153,21 +174,30 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
   };
 
   const handleOptionalImageChange = (id: string, value: string) => {
+    const sanitizedValue = normalizeImagePath(value);
     setLocalOptionals(prev => prev.map(opt =>
-      opt.id === id ? { ...opt, image: value } : opt
+      opt.id === id ? { ...opt, image: sanitizedValue } : opt
     ));
   };
 
   const handleOptionalChange = (id: string, field: keyof OptionalService, value: any) => {
-    setLocalOptionals(prev => prev.map(opt =>
-      opt.id === id ? { ...opt, [field]: value } : opt
-    ));
+    setLocalOptionals(prev => prev.map(opt => {
+      if (opt.id === id) {
+        const sanitizedValue = field === 'image' ? normalizeImagePath(value) : value;
+        return { ...opt, [field]: sanitizedValue };
+      }
+      return opt;
+    }));
   };
 
   const handleGuideChange = (id: string, field: keyof KnowledgeGuide, value: any) => {
-    setLocalGuides(prev => prev.map(g =>
-      g.id === id ? { ...g, [field]: value } : g
-    ));
+    setLocalGuides(prev => prev.map(g => {
+      if (g.id === id) {
+        const sanitizedValue = field === 'image' ? normalizeImagePath(value) : value;
+        return { ...g, [field]: sanitizedValue };
+      }
+      return g;
+    }));
   };
 
   const handleBulkAdjust = () => {
@@ -220,9 +250,13 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
 
   const handleAddItem = () => {
     if (!showAddItem || !newItem.name) return;
+    const sanitizedItem = {
+      ...newItem,
+      image: normalizeImagePath(newItem.image || "")
+    };
     setLocalPlans(prev => prev.map(cat =>
       cat.id === showAddItem.categoryId
-        ? { ...cat, items: [...cat.items, newItem] }
+        ? { ...cat, items: [...cat.items, sanitizedItem] }
         : cat
     ));
     setNewItem({ name: "", price: "0", features: [], badge: "", image: "" });
@@ -241,7 +275,8 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
     if (!newOptional.name) return;
     const opt: OptionalService = {
       ...newOptional,
-      id: `opt-${Date.now()}`
+      id: `opt-${Date.now()}`,
+      image: normalizeImagePath(newOptional.image || "")
     };
     setLocalOptionals(prev => [...prev, opt]);
     setNewOptional({ id: "", name: "", price: "0", description: "", effect: "", percentage: 90, image: "" });
@@ -314,7 +349,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
   const handleSpeakerChange = (brandIndex: number, unitIndex: number, field: string, value: string) => {
     setLocalAuditionSpeakers(prev => {
       const next = [...prev];
-      const sanitizedValue = field === 'image' ? value.replace(/\\/g, '/') : value;
+      const sanitizedValue = field === 'image' ? normalizeImagePath(value) : value;
       next[brandIndex].units[unitIndex] = { ...next[brandIndex].units[unitIndex], [field]: sanitizedValue };
       return next;
     });
@@ -413,7 +448,9 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
   };
 
   const handleAssetChange = (field: keyof SiteAssets, value: string) => {
-    setLocalAssets(prev => ({ ...prev, [field]: value }));
+    const isImagePath = field.toLowerCase().includes('image');
+    const sanitizedValue = isImagePath ? normalizeImagePath(value) : value;
+    setLocalAssets(prev => ({ ...prev, [field]: sanitizedValue }));
   };
 
   // Filtering
@@ -649,7 +686,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                   </button>
                   <input
                     type="text"
-                    placeholder="画像パス または URL"
+                    placeholder="/images/Audio/filename.png"
                     value={newItem.image}
                     onChange={(e) => setNewItem({ ...newItem, image: e.target.value })}
                     className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-bold"
@@ -702,7 +739,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                   </button>
                   <input
                     type="text"
-                    placeholder="画像パス または URL"
+                    placeholder="/images/Audio/filename.png"
                     value={newOptional.image}
                     onChange={(e) => setNewOptional({ ...newOptional, image: e.target.value })}
                     className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-bold"
@@ -1044,9 +1081,10 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                             type="text"
                             value={opt.image || ""}
                             onChange={(e) => handleOptionalChange(opt.id, 'image', e.target.value)}
-                            placeholder="画像パス または URL"
+                            placeholder="/images/Audio/filename.png"
                             className="w-full px-3 py-2 bg-white border border-gray-200 rounded-lg font-bold text-xs text-gray-600 focus:border-blue-500 outline-none transition-all"
                           />
+                          <p className="text-[8px] text-gray-400 mt-1 font-bold">※例: /images/Audio/〜</p>
                         </td>
                         <td className="px-6 py-4 text-center">
                           <button onClick={() => handleRemoveOptional(opt.id)} className="text-gray-300 hover:text-red-500 transition-colors"><Trash2 className="w-4 h-4" /></button>
@@ -1194,9 +1232,10 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                                 type="text"
                                 value={item.image || ""}
                                 onChange={(e) => handlePriceChange(cat.id, item.name, 'image', e.target.value)}
-                                placeholder="画像パス または URL"
+                                placeholder="/images/Audio/filename.png"
                                 className="w-full px-3 py-2 bg-white border border-gray-200 rounded-lg font-bold text-xs text-gray-600 focus:border-blue-500 outline-none transition-all"
                               />
+                              <p className="text-[8px] text-gray-400 mt-1 font-bold">※例: /images/Audio/〜</p>
                             </td>
                             <td className="px-6 py-4 text-center">
                               <button onClick={() => handleRemoveItem(cat.id, item.name)} className="text-gray-300 hover:text-red-500 transition-colors"><Trash2 className="w-4 h-4" /></button>
@@ -1346,7 +1385,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                                 type="text"
                                 value={item.image || ""}
                                 onChange={(e) => handlePriceChange(cat.id, item.name, 'image', e.target.value)}
-                                placeholder="画像パス または URL"
+                                placeholder="/images/Audio/filename.png"
                                 className="w-full px-3 py-2 bg-white border border-gray-200 rounded-lg font-bold text-xs text-gray-600 focus:border-blue-500 outline-none transition-all"
                               />
                             </td>
@@ -1498,7 +1537,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                                 type="text"
                                 value={item.image || ""}
                                 onChange={(e) => handlePriceChange(cat.id, item.name, 'image', e.target.value)}
-                                placeholder="画像パス または URL"
+                                placeholder="/images/Audio/filename.png"
                                 className="w-full px-3 py-2 bg-white border border-gray-200 rounded-lg font-bold text-xs text-gray-600 focus:border-blue-500 outline-none transition-all"
                               />
                             </td>
@@ -2198,7 +2237,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                             type="text"
                             value={guide.image || ""}
                             onChange={(e) => handleGuideChange(guide.id, 'image', e.target.value)}
-                            placeholder="画像パス または URL"
+                            placeholder="/images/Audio/filename.png"
                             className="w-full px-3 py-2 bg-white border border-gray-200 rounded-lg font-bold text-xs text-gray-600 focus:border-blue-500 outline-none transition-all"
                           />
                         </td>
