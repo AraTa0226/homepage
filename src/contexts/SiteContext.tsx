@@ -216,6 +216,12 @@ export const SiteProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
           }
         });
 
+        // Force update logo text if it's the old version
+        if (migrated.logoText === "Sound ANG") {
+          migrated.logoText = baseAssets.logoText;
+          changed = true;
+        }
+
         if (changed) {
           localStorage.setItem('ang_assets', JSON.stringify(migrated));
           return migrated;
