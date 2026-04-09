@@ -1457,6 +1457,20 @@ const initialOptionals: OptionalService[] = [
 const PriceContext = createContext<PriceContextType | undefined>(undefined);
 
 export const PriceProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  // Normalize a stored image path: fix uppercase, missing /Audio/ prefix, etc.
+  const normalizeStoredImagePath = (path: string | undefined): string | undefined => {
+    if (!path) return path;
+    // Already a fully valid external URL → leave untouched
+    if (path.startsWith('http')) return path;
+    // Ensure leading slash
+    let p = path.startsWith('/') ? path : '/' + path;
+    // Lowercase the filename part only (preserve folder structure)
+    const lastSlash = p.lastIndexOf('/');
+    const folder = p.substring(0, lastSlash + 1).toLowerCase();
+    const file = p.substring(lastSlash + 1).toLowerCase();
+    return folder + file;
+  };
+
   const [plans, setPlans] = useState<PlanCategory[]>(() => {
     const saved = localStorage.getItem('ang_plans');
     const basePlans = (cmsData as any).plans || initialPlans;
@@ -1473,10 +1487,13 @@ export const PriceProvider: React.FC<{ children: ReactNode }> = ({ children }) =
               const savedItem = savedCat.items?.find((i: any) => i.name === initialItem.name);
               if (!savedItem) return initialItem;
 
+              // Normalize the saved image path to fix stale uppercase/wrong paths
+              const normalizedSavedImage = normalizeStoredImagePath(savedItem.image);
               return {
                 ...initialItem,
                 ...savedItem,
-                image: initialItem.image || savedItem.image,
+                // Dashboard (savedItem) wins, but path is normalized; fall back to cms.json
+                image: normalizedSavedImage || initialItem.image,
               };
             })
           };
