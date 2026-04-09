@@ -1476,7 +1476,7 @@ export const PriceProvider: React.FC<{ children: ReactNode }> = ({ children }) =
               return {
                 ...initialItem,
                 ...savedItem,
-                image: savedItem.image || initialItem.image,
+                image: initialItem.image || savedItem.image,
               };
             })
           };
