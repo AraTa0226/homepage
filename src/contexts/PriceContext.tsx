@@ -6,7 +6,7 @@ import cmsData from '../data/cms.json';
 // 画像パスや構造を変更した際はここをインクリメントしてください。
 // デプロイ後、全ユーザーの古いキャッシュが自動削除されます。
 // ────────────────────────────────────────────────────────
-const CMS_DATA_VERSION = '2';
+const CMS_DATA_VERSION = '3';
 const LS_VERSION_KEY = 'ang_cms_version';
 const LS_MANAGED_KEYS = [
   'ang_plans', 'ang_guides', 'ang_optionals',
