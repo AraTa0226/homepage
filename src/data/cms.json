@@ -17,7 +17,7 @@
             "バーチ材バッフル"
           ],
           "badge": "お手軽導入",
-          "image": "/images/Audio/basic_line_coaxial.webp",
+          "image": "/images/basic-line-coaxial.png",
           "description": "音質アップの第一歩はスピーカー交換から！\n\nスピーカー交換パッケージベーシックライン（コアキシャル）ではツィーターがミッドレンジスピーカーの真ん中にビルトインされているコアキシャル（同軸）タイプスピーカーを選んでのスピーカー交換をリーズナブルに取り付けまで行うパッケージです。\nカーオーディオシステムアップが初めての方におすすめのパッケージでツィーターとミッドレンジが一体になっているので手軽に取り付けられるメリットがあります。純正がフルレンジタイプのスピーカーが装着されている車両では、高音専用のツィーターが増えるので、純正スピーカーを交換するだけで音が明るく華やかになります。",
           "packageDetails": {
             "standardPrice": "55000",
@@ -107,7 +107,7 @@
             "インラインNW"
           ],
           "badge": "初心者おすすめ",
-          "image": "/images/Audio/basic_line_separate.webp",
+          "image": "/images/basic-line-separates.png",
           "description": "音質アップの第一歩はスピーカー交換から！\n\nセパレートスピーカーを手軽に楽しめるパッケージ\nスピーカー交換パッケージベーシックライン（セパレート）では高域再生用のツィーターと中低域再生用のミッドレンジが別々に分かれたセパレートタイプのスピーカーを選んでリーズナブルに取り付けまで行うパッケージです。\nカーオーディオシステムアップが初めての方におすすめのパッケージでリーズナブルな取り付けを実現するためにネットワーク（高域と中低域に分離するユニット）はインラインタイプなど��中心にラインアップしています。ツィーターは純正位置、もしくはダッシュボード上へ置き型マウントを使っての装着. 音楽の楽しさを今まで以上に楽しんでいただけるパッケージです。",
           "packageDetails": {
             "standardPrice": "75900",
@@ -188,7 +188,7 @@
             "インナーバッフル"
           ],
           "badge": "コスパ最強",
-          "image": "/images/Audio/standard.webp",
+          "image": "/images/standard-line.png",
           "description": "音質アップの第一歩はスピーカー交換から！\nスピーカー交換パッケージスタンダードラインでは１０万円までのスピーカーの中からお気に入りのスピーカーを選んでいただき、ドアチューニング、スピーカーケーブルなどがセットになったこだわった内容です。\n\nこの価格帯は各社とも人気商品がラインアップされていて個性が強いユニットが並んでいます。取り付け優先だったり音優先だったりと入り乱れている価格帯でもありますので、商品選びのときはご希望のインストール方法が可能かどうかの判断も必要です。",
           "packageDetails": {
             "standardPrice": "166400",
@@ -290,7 +290,7 @@
             "ツィーター調整"
           ],
           "badge": "人気No.1",
-          "image": "/images/Audio/premium.webp",
+          "image": "/images/premium-line.png",
           "description": "音質アップの第一歩はスピーカー交換から！\nスピーカー交換パッケージプレミアムラインでは１０万円以上のスピーカーの中からお気に入りのスピーカーを選んでいただ���、ドアチューニング、スピーカーケーブルなどがセットになったこだわった内容です。\n\nこの価格帯は各社とも音楽性の再現に重きを置き、素材選びから構造までそれぞれのブランドのこだわりが凝縮されているところで、音質的には情報量が多く質感やフォーカス、ステレオイメージの再現性などがワンランク上の世界を楽しませてくれます。",
           "packageDetails": {
             "standardPrice": "252200",
@@ -377,17 +377,8 @@
               "image": "https://picsum.photos/seed/blam-sig/200/200"
             }
           ]
-        },
-        {
-          "name": "フロント3way セット",
-          "price": "0",
-          "features": [],
-          "badge": "",
-          "image": "/images/Audio/front_3way.webp",
-          "description": ""
         }
-      ],
-      "images": []
+      ]
     },
     {
       "id": "bass_enhancement",
@@ -406,7 +397,7 @@
             "取付工賃込"
           ],
           "badge": "パワードウーハー",
-          "image": "/images/Audio/easy_bass_package.webp",
+          "image": "/images/Top/speaker.webp",
           "description": "お手軽低音増強セット\n建物と同じように、音楽にも基礎となる低域はとても重要です。しっかりとした低音(ウーハー)は音楽に臨場感を与えてくれます。ここでご紹介するウーハーはアンプ内蔵タイプのパワードウーハー（チューンアップウーハー）。シート下に収まるようなコンパクトなウーハーからパワードタイプとは思えない本格的なサウンドのウーハーまで取り付け込みでご提案しています。",
           "packageDetails": {
             "standardPrice": "55000",
@@ -489,7 +480,7 @@
             "別体アンプ"
           ],
           "badge": "本格低音",
-          "image": "/images/Audio/easy_bass_package_plus.webp",
+          "image": "/images/subwoofer-plus.png",
           "description": "ウーハー＋BOXに別体アンプを組み合わせます\nお手軽低音増強セットはスピーカー交換パッケージと同じく大人気のパッケージです。手軽に追加できるパワードウーハーはシート下などの空きスペースを上手く活用することで音楽表現を一歩グレードアップしてくれます。ここで紹介するお手軽低音増強セット”プラス”では、パワードウーハーではなくアンプとウーハーを別々にセットアップすることでもう一歩本格的な低音体験を実現します。",
           "link": "https://www.soundang.com/amp&swpac.html",
           "packageDetails": {
@@ -573,8 +564,7 @@
             }
           ]
         }
-      ],
-      "images": []
+      ]
     },
     {
       "id": "dsp_control",
@@ -593,7 +583,7 @@
             "高音質アンプ内蔵"
           ],
           "badge": "音像定位",
-          "image": "/images/Audio/amplified_dsp.webp",
+          "image": "https://picsum.photos/seed/amp-dsp/800/600",
           "description": "今のナビはそのままに音質をグレードアップさせることができるのが「アンプ内蔵タイプのDSP」です。\n\n【こんな方におすすめ】\n・今あるナビやヘッ��ユニットを替えずに音質アップしたい！\n・大画面ナビを購入したいけど、そのナビの音質に不満…\n・フロント3WAYシステムを手軽に始めたい！\n・フロントマルチ接続にしたいけどリアスピーカーも使いたい…\n\n特別な操作は必要ありません。今まで通りお使いいただけますが、目の前に臨場感豊かなステージが出現したかのようなサウンドに生まれ変わります。ハイエンドオーディオ機に匹敵するほどの緻密な調整機能を備えています。",
           "link": "https://www.soundang.com/ampDSP.html",
           "showSavings": false,
@@ -662,17 +652,8 @@
               "image": "https://picsum.photos/seed/gdt42/200/200"
             }
           ]
-        },
-        {
-          "name": "アンプレスDSPパッケージ",
-          "price": "0",
-          "features": [],
-          "badge": "",
-          "image": "/images/Audio/standalone_dsp.webp",
-          "description": ""
         }
-      ],
-      "images": []
+      ]
     },
     {
       "id": "amp_power",
@@ -691,7 +672,7 @@
             "取付工賃込パッケージ"
           ],
           "badge": "駆動力UP",
-          "image": "/images/Audio/amplifier_install_basic.webp",
+          "image": "https://picsum.photos/seed/amp/800/600",
           "description": "「スピーカーを変えたけど、もっと良くしたい」「音に力強さが欲しい」そんな方に次にお勧めするのがパワーアンプの追加です。\n\nパワーアンプの役割は、スピーカーをしっかりとコントロールしリニアなサウンドを再生することです。それにより微細な再現力が増加し、情報量がアップします。音像の輪郭や空気感、奥行きや音のハリ、スピード感が劇的に改善されます。\n\n大音量で鳴らすためだけではなく、通常のドライブでいい音楽を楽しむためにアンプを搭載することは、さらなる臨場感の獲得、今まで感じていた目の前の霧が晴れるようなサウンドを得るために非常に有効です。ブランドやモデルによっても音作りの狙いが異なり、様々な変化を楽しめるのも魅力です。",
           "link": "https://www.soundang.com/ampbasic-inst.html",
           "showSavings": false,
@@ -755,7 +736,7 @@
             "取付工賃込パッケージ"
           ],
           "badge": "スマート導入",
-          "image": "/images/Audio/compact_amplifier_package.webp",
+          "image": "https://picsum.photos/seed/miniamp/800/600",
           "description": "最近は小型省エネながら高音質なパワーアンプが数々登場してきました。パワーアンプの取り付けには取り付けスペースと消費電力アップなどの問題が絡んできます。\n\nとくに近年は充電制御された車両が多く、思ったほどバッテリーのリカバリーがスムーズにされない場合もあり、バッテリーあがりを懸念してパワーアンプ導入をためらうユーザーも少なくありません。ここでは省電力でなおかつ小型の高音質パワーアンプを取付込みにてご提案します。",
           "link": "https://www.soundang.com/miniamp.html",
           "showSavings": false,
@@ -822,8 +803,7 @@
             }
           ]
         }
-      ],
-      "images": []
+      ]
     },
     {
       "id": "source_headunit",
@@ -907,10 +887,9 @@
             "デジタル出力"
           ],
           "badge": "ピュアオーディオ",
-          "image": "/images/speaker.webp"
+          "image": "/images/speaker.jpg"
         }
-      ],
-      "images": []
+      ]
     },
     {
       "id": "car_specific",
@@ -930,7 +909,7 @@
           ],
           "badge": "純正交換",
           "image": "https://picsum.photos/seed/bmw-audio/800/600",
-          "description": "BMWの音質にお悩みの方に！BMWは輸入車の中でダントツに改善のご相談が多いブランドです。\n\n多くのグレードでフロントスピーカーが10cm程度と小さく、高音用のツィーターが非装着、シート下のウーハーで低音を補うシステムになっています。このため、音がこもりがちでメリハリが足りないと感じるオーナー様が多いのが現状です。\n\n加工を抑え、安価かつ効果的に音質改善する方法として「トレードインスピーカー」への交換をご提案します。ツィーターの追加やシート下ウーハーの交換により、BMW本来の走りに見合うハリのあるサウンドへと生まれ変わります���",
+          "description": "BMWの音質にお悩みの方に！BMWは輸入車の中でダントツに改善のご相談が多いブランドです。\n\n多くのグレードでフロントスピーカーが10cm程度と小さく、高音用のツィーターが非装着、シート下のウーハーで低音を補うシステムになっています。このため、音がこもりがちでメリハリが足りないと感じるオーナー様が多いのが現状です。\n\n加工を抑え、安価かつ効果的に音質改善する方法として「トレードインスピーカー」への交換をご提案します。ツィーターの追加やシート下ウーハーの交換により、BMW本来の走りに見合うハリのあるサウンドへと生まれ変わります。",
           "showSavings": false,
           "packageDetails": {
             "standardPrice": "77000",
@@ -1190,8 +1169,7 @@
             }
           ]
         }
-      ],
-      "images": []
+      ]
     },
     {
       "id": "environment_tuning",
@@ -1281,7 +1259,7 @@
             "各部位別パッケージ"
           ],
           "badge": "静粛性UP",
-          "image": "/images/speaker.webp",
+          "image": "/images/speaker.jpg",
           "link": "https://www.soundang.com/silent.html",
           "showSavings": false,
           "gallery": [
@@ -1699,31 +1677,30 @@
             {
               "name": "ドアパネル全面施工・エンクロージャー",
               "price": "250000",
-              "description": "パネル丸ごと張り替えやエンクロージャー化。音漏れ軽減や音����激���。およそ25万円〜40万円。",
+              "description": "パネル丸ごと張り替えやエンクロージャー化。音漏れ軽減や音質激変。およそ25万円〜40万円。",
               "image": "https://picsum.photos/seed/door-full/400/300"
             },
             {
               "name": "カスタムピラーインストール（3WAY対応）",
               "price": "80000",
-              "description": "フロント3WAYに欠かせないピラー加工。スコーカーとツィーター����しく配置。左右でおよそ8万円〜。",
+              "description": "フロント3WAYに欠かせないピラー加工。スコーカーとツィーターを美しく配置。左右でおよそ8万円〜。",
               "image": "https://picsum.photos/seed/pillar-3way/400/300"
             },
             {
               "name": "カスタムコンソール・モニター加工",
               "price": "100000",
-              "description": "センターコンソール製作やモニターの埋め込み加工。利便性とデザインを両立。およそ10万�����������〜20万���。",
+              "description": "センターコンソール製作やモニターの埋め込み加工。利便性とデザインを両立。およそ10万�����������〜20万円。",
               "image": "https://picsum.photos/seed/console-monitor/400/300"
             }
           ]
         }
-      ],
-      "images": []
+      ]
     },
     {
       "id": "performance_up",
       "category": "性能を更に引き出すアレコレ",
       "type": "audio",
-      "description": "カーオーディオの源となる電源を改善することで、機材の性能を今よりももっと引き出す方��������おすすめのパーツをご���介します。\n\n電源の質は最終的な音��������������������������������������の�������������テ�����オ���������メージに大�����������������������な�����������������������響を与えます。電源系にこだ���ることはS/Nや解像度アップに劇的な効果が現れます。",
+      "description": "カーオーディオの源となる電源を改善することで、機材の性能を今よりももっと引き出す方法やおすすめのパーツをご���介します。\n\n電源の質は最終的な音��の����������テ�����オ���������メージに大�����������������������な�����������������������響を与えます。電源系にこだ���ることはS/Nや解像度アップに劇的な効果が現れます。",
       "showDescriptionInMenu": true,
       "showDescriptionInList": true,
       "items": [
@@ -1863,8 +1840,7 @@
             ]
           }
         }
-      ],
-      "images": []
+      ]
     },
     {
       "id": "security_panthera",
@@ -1893,7 +1869,7 @@
             "ボイスアンサーバック"
           ],
           "badge": "スタンダード",
-          "image": "/images/security.webp"
+          "image": "/images/security.jpg"
         },
         {
           "name": "Z106シリーズ",
@@ -1905,10 +1881,9 @@
             "ボンネットセンサー"
           ],
           "badge": "エントリー",
-          "image": "/images/security.webp"
+          "image": "/images/security.jpg"
         }
-      ],
-      "images": []
+      ]
     },
     {
       "id": "security_grgo",
@@ -1925,7 +1900,7 @@
             "純正キー連動可"
           ],
           "badge": "人気No.1",
-          "image": "/images/security.webp"
+          "image": "/images/security.jpg"
         },
         {
           "name": "Vシリーズ",
@@ -1937,7 +1912,7 @@
             "ステータスLED"
           ],
           "badge": "コスパ重視",
-          "image": "/images/security.webp"
+          "image": "/images/security.jpg"
         },
         {
           "name": "1/0シリーズ",
@@ -1948,10 +1923,9 @@
             "誤作動防止機能"
           ],
           "badge": "スマート施工",
-          "image": "/images/security.webp"
+          "image": "/images/security.jpg"
         }
-      ],
-      "images": []
+      ]
     },
     {
       "id": "security_viper",
@@ -1967,7 +1941,7 @@
             "純正キーレス連動"
           ],
           "badge": "最新デジタル",
-          "image": "/images/security.webp"
+          "image": "/images/security.jpg"
         },
         {
           "name": "5706V",
@@ -1978,7 +1952,7 @@
             "2段階衝撃センサー"
           ],
           "badge": "定番モデル",
-          "image": "/images/security.webp"
+          "image": "/images/security.jpg"
         },
         {
           "name": "330V",
@@ -1989,10 +1963,9 @@
             "ドアセンサー"
           ],
           "badge": "エントリー",
-          "image": "/images/security.webp"
+          "image": "/images/security.jpg"
         }
-      ],
-      "images": []
+      ]
     },
     {
       "id": "security_clifford",
@@ -2008,7 +1981,7 @@
             "ダブルイモビライザー"
           ],
           "badge": "世界最高峰",
-          "image": "/images/security.webp"
+          "image": "/images/security.jpg"
         },
         {
           "name": "Matrixシリーズ",
@@ -2019,10 +1992,9 @@
             "高精度センサー"
           ],
           "badge": "高性能",
-          "image": "/images/security.webp"
+          "image": "/images/security.jpg"
         }
-      ],
-      "images": []
+      ]
     },
     {
       "id": "security_car",
@@ -2038,7 +2010,7 @@
             "ダブルガード施工"
           ],
           "badge": "最強プラン",
-          "image": "/images/security.webp"
+          "image": "/images/security.jpg"
         },
         {
           "name": "スポーツカー / プレミアムセダン",
@@ -2049,7 +2021,7 @@
             "エンジンスターター"
           ],
           "badge": "快適・安心",
-          "image": "/images/security.webp"
+          "image": "/images/security.jpg"
         },
         {
           "name": "コンパクトカー / 軽自動車",
@@ -2060,10 +2032,9 @@
             "純正キーレス連動"
           ],
           "badge": "お手軽プラン",
-          "image": "/images/security.webp"
+          "image": "/images/security.jpg"
         }
-      ],
-      "images": []
+      ]
     },
     {
       "id": "dashcam",
@@ -2080,7 +2051,7 @@
             "セキュリティ連動可"
           ],
           "badge": "定番人気",
-          "image": "/images/dorareko.webp"
+          "image": "/images/dorareko.jpg"
         },
         {
           "name": "360度＋リアカメラ",
@@ -2092,10 +2063,9 @@
             "セキュリティ連動可"
           ],
           "badge": "死角ゼロ",
-          "image": "/images/dorareko.webp"
+          "image": "/images/dorareko.jpg"
         }
-      ],
-      "images": []
+      ]
     },
     {
       "id": "digital_mirror",
@@ -2111,7 +2081,7 @@
             "タッチパネル操作"
           ],
           "badge": "視界クリア",
-          "image": "/images/dorareko.webp"
+          "image": "/images/dorareko.jpg"
         },
         {
           "name": "アルパイン バンド固定型",
@@ -2122,10 +2092,9 @@
             "駐車���視対応"
           ],
           "badge": "お手楽導入",
-          "image": "/images/dorareko.webp"
+          "image": "/images/dorareko.jpg"
         }
-      ],
-      "images": []
+      ]
     },
     {
       "id": "radar",
@@ -2141,7 +2110,7 @@
             "OBDII対応"
           ],
           "badge": "最強感度",
-          "image": "/images/dorareko.webp"
+          "image": "/images/dorareko.jpg"
         },
         {
           "name": "ワンボディ型レーダー",
@@ -2152,10 +2121,9 @@
             "タッチパネル"
           ],
           "badge": "人気モデル",
-          "image": "/images/dorareko.webp"
+          "image": "/images/dorareko.jpg"
         }
-      ],
-      "images": []
+      ]
     },
     {
       "id": "safety_device",
@@ -2171,7 +2139,7 @@
             "外部サイレン通知"
           ],
           "badge": "補助金対応",
-          "image": "/images/dorareko.webp"
+          "image": "/images/dorareko.jpg"
         },
         {
           "name": "バス専用安全装置",
@@ -2182,10 +2150,9 @@
             "音声ガイダンス"
           ],
           "badge": "高信頼性",
-          "image": "/images/dorareko.webp"
+          "image": "/images/dorareko.jpg"
         }
-      ],
-      "images": []
+      ]
     },
     {
       "id": "campit",
@@ -2201,7 +2168,7 @@
             "専用配線施工"
           ],
           "badge": "車中泊革命",
-          "image": "/images/dorareko.webp"
+          "image": "/images/dorareko.jpg"
         },
         {
           "name": "車内AC100Vコンセント増設",
@@ -2212,10 +2179,9 @@
             "安全回路設計"
           ],
           "badge": "快適電装",
-          "image": "/images/dorareko.webp"
+          "image": "/images/dorareko.jpg"
         }
-      ],
-      "images": []
+      ]
     }
   ],
   "guides": [
@@ -2578,7 +2544,7 @@
       "description": "スピーカー交換プランには標準で付属。差額で上位プランへの変更も可能です。",
       "effect": "音の締まり向上",
       "percentage": 40,
-      "image": "/images/Audio/basic-line-coaxial.png"
+      "image": "\\images\\Audio\\basic-line-coaxial.png"
     },
     {
       "id": "cable_opt",
@@ -2714,7 +2680,7 @@
           "taxExcluded": "115000",
           "status": "Available",
           "youtube": "https://youtu.be/f0Uwc3Zz_Mk",
-          "image": "/images/Demo/D-165S45.jpg"
+          "image": "images/Demo/D-165S45.jpg"
         },
         {
           "model": "165S85",
@@ -2736,7 +2702,7 @@
           "taxExcluded": "125000",
           "status": "Available",
           "youtube": "https://youtu.be/1WssbN3bELQ",
-          "image": "/images/Demo/VX165.webp"
+          "image": "/images/Demo/VX165.jpg"
         }
       ]
     },
@@ -2750,7 +2716,7 @@
           "taxExcluded": "700000",
           "status": "Demo Car",
           "youtube": "",
-          "image": "/images/Demo/D-TS-Z1GR.webp"
+          "image": "/images/Demo/D-TS-Z1GR.jpg"
         },
         {
           "model": "TS-Z900PRS",
@@ -2758,14 +2724,14 @@
           "taxExcluded": "128000",
           "status": "Available",
           "youtube": "https://youtu.be/t28f99h0aM0",
-          "image": "/images/Demo/D-TS-Z900PRS.webp"
+          "image": "/images/Demo/D-TS-Z900PRS.jpg"
         },
         {
           "model": "TS-C1740S",
           "price": "Open",
           "status": "Available",
           "youtube": "https://youtu.be/ToQVJV9jK-g",
-          "image": "/images/Demo/D-TS-C1740S.webp"
+          "image": "/images/Demo/D-TS-C1740S.jpg"
         },
         {
           "model": "TS-V174S",
@@ -2773,7 +2739,7 @@
           "taxExcluded": "72000",
           "status": "Available",
           "youtube": "https://youtu.be/XVG-UxCukkM",
-          "image": "/images/Demo/D-TS-V174S.webp"
+          "image": "/images/Demo/D-TS-V174S.jpg"
         },
         {
           "model": "TS-Z1000RS",
@@ -2781,7 +2747,7 @@
           "taxExcluded": "350000",
           "status": "Available",
           "youtube": "https://youtu.be/SVViqmUHM_4",
-          "image": "/images/Demo/D-TS-Z1000RS.webp"
+          "image": "/images/Demo/D-TS-Z1000RS.jpg"
         }
       ]
     },
@@ -2795,7 +2761,7 @@
           "taxExcluded": "100000",
           "status": "Available",
           "youtube": "https://youtu.be/_1M6N16o9no",
-          "image": "/images/Demo/D-DS-G400.webp"
+          "image": "/images/Demo/D-DS-G400.jpg"
         },
         {
           "model": "DS-SA1000",
@@ -2803,7 +2769,7 @@
           "taxExcluded": "670000",
           "status": "Available",
           "youtube": "https://youtu.be/SOdFw_Cx5Sw",
-          "image": "/images/Demo/D-SA1000.webp"
+          "image": "/images/Demo/D-SA1000.jpg"
         }
       ]
     },
@@ -2817,7 +2783,7 @@
           "taxExcluded": "55000",
           "status": "Available",
           "youtube": "https://youtu.be/W8YVl6QgaTw",
-          "image": "/images/Demo/ESOTAN202.webp"
+          "image": "/images/Demo/ESOTAN202.jpg"
         },
         {
           "model": "ESOTAN232",
@@ -2825,7 +2791,7 @@
           "taxExcluded": "70000",
           "status": "Available",
           "youtube": "https://youtu.be/byYM-uqoy2Q",
-          "image": "/images/Demo/ESOTAN232.webp"
+          "image": "/images/Demo/ESOTAN232.jpg"
         },
         {
           "model": "ESOTEC SYSTEM242",
@@ -2833,7 +2799,7 @@
           "taxExcluded": "200000",
           "status": "Available",
           "youtube": "https://youtu.be/KhNixYLyDKI",
-          "image": "/images/Demo/SYSTEM242.webp"
+          "image": "/images/Demo/SYSTEM242.jpg"
         }
       ]
     },
@@ -2847,7 +2813,7 @@
           "taxExcluded": "70000",
           "status": "Available",
           "youtube": "https://youtu.be/D49aol_HkKo",
-          "image": "/images/Demo/D-PS165FSE.webp"
+          "image": "/images/Demo/D-PS165FSE.jpg"
         },
         {
           "model": "ES165K2S",
@@ -2855,7 +2821,7 @@
           "taxExcluded": "114000",
           "status": "Available",
           "youtube": "https://youtu.be/0Yl4ozb6_Hc",
-          "image": "/images/Demo/D-ES165K2S.webp"
+          "image": "/images/Demo/D-ES165K2S.jpg"
         },
         {
           "model": "UTOPIA M 165W-XP",
@@ -2863,7 +2829,7 @@
           "taxExcluded": "260000",
           "status": "Available",
           "youtube": "https://youtu.be/U_ReOFJ06TI",
-          "image": "/images/Demo/D-165W-XP.webp"
+          "image": "/images/Demo/D-165W-XP.jpg"
         }
       ]
     },
@@ -2890,7 +2856,7 @@
           "taxExcluded": "60000",
           "status": "Available",
           "youtube": "https://youtu.be/S7HEbCUv5ks",
-          "image": "/images/Demo/D-ci3k165.webp"
+          "image": "/images/Demo/D-ci3k165.jpg"
         }
       ]
     },
@@ -2904,7 +2870,7 @@
           "taxExcluded": "37000",
           "status": "Available",
           "youtube": "https://youtu.be/mAA9X8pXv7Q",
-          "image": "/images/Demo/D-CSS674.webp"
+          "image": "/images/Demo/D-CSS674.jpg"
         },
         {
           "model": "KSS6704",
@@ -2912,7 +2878,7 @@
           "taxExcluded": "56000",
           "status": "Available",
           "youtube": "https://youtu.be/rV2gX6VtX3o",
-          "image": "/images/Demo/KSS6704.webp"
+          "image": "/images/Demo/KSS6704.jpg"
         }
       ]
     },
@@ -2926,7 +2892,7 @@
           "taxExcluded": "288000",
           "status": "Available",
           "youtube": "https://youtu.be/K0cQ1HXSaZ0",
-          "image": "/images/Demo/D-7-16i.webp"
+          "image": "/images/Demo/D-7-16i.jpg"
         }
       ]
     },
@@ -2940,14 +2906,14 @@
           "taxExcluded": "73000",
           "status": "Available",
           "youtube": "https://youtu.be/ZJvuipxFFR8",
-          "image": "/images/Demo/D-MAXIMO-U.webp"
+          "image": "/images/Demo/D-MAXIMO-U.jpg"
         },
         {
           "model": "ELATE CARBON PRO62",
           "price": "496100",
           "taxExcluded": "451000",
           "status": "Available",
-          "image": "/images/Demo/D-ELATECARBONPRO62A.webp",
+          "image": "/images/Demo/D-ELATECARBONPRO62A.jpg",
           "youtube": "https://youtu.be/Qc1Ph3d4b0U"
         }
       ]
@@ -2961,7 +2927,7 @@
           "price": "3586000",
           "taxExcluded": "3260000",
           "status": "Available",
-          "image": "/images/Demo/D-ZR.webp"
+          "image": "/images/Demo/D-ZR.jpg"
         }
       ]
     }
@@ -3082,19 +3048,19 @@
     }
   ],
   "assets": {
-    "heroImage": "/images/Top/tenpo.webp",
+    "heroImage": "\\images\\Top\\tenpo.webp",
     "logoText": "Sound ANG Security",
-    "audioMenuImage": "/images/Top/speaker.webp",
-    "securityMenuImage": "/images/Top/security.webp",
-    "dashcamMenuImage": "/images/Top/dorareko.webp",
-    "showroomImage": "/images/Top/inner1.webp",
-    "pitImage": "/images/Top/pitroom.webp",
-    "workspaceImage": "/images/Top/workroom.webp",
-    "auditionRoomImage": "/images/Top/demoroom1.webp",
+    "audioMenuImage": "\\images\\Top\\speaker.webp",
+    "securityMenuImage": "\\images\\Top\\security.webp",
+    "dashcamMenuImage": "\\images\\Top\\dorareko.webp",
+    "showroomImage": "\\images\\Top\\inner1.webp",
+    "pitImage": "\\images\\Top\\pitroom.webp",
+    "workspaceImage": "\\images\\Top\\workroom.webp",
+    "auditionRoomImage": "\\images\\Top\\demoroom1.webp",
     "kyushuNo1Image": "/images/Top/tenpo.webp",
     "spsCertifiedImage": "/images/Top/security.webp",
     "snaponImage": "/images/Top/tenpo.webp",
     "batteryChargerImage": "/images/Top/pitroom.webp"
   },
-  "cacheVersion": "4"
+  "cacheVersion": "2"
 }
