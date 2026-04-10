@@ -1,5 +1,29 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 import cmsData from '../data/cms.json';
+
+// ────────────────────────────────────────────────────────
+// LocalStorage バージョン管理
+// 画像パスや構造を変更した際はここをインクリメントしてください。
+// デプロイ後、全ユーザーの古いキャッシュが自動削除されます。
+// ────────────────────────────────────────────────────────
+const CMS_DATA_VERSION = '2';
+const LS_VERSION_KEY = 'ang_cms_version';
+const LS_MANAGED_KEYS = [
+  'ang_plans', 'ang_guides', 'ang_optionals',
+  'ang_security_status', 'ang_emergency',
+  'ang_partners', 'ang_brand_partners', 'ang_assets',
+];
+
+(function clearStaleLocalStorage() {
+  try {
+    const stored = localStorage.getItem(LS_VERSION_KEY);
+    if (stored !== CMS_DATA_VERSION) {
+      LS_MANAGED_KEYS.forEach(k => localStorage.removeItem(k));
+      localStorage.setItem(LS_VERSION_KEY, CMS_DATA_VERSION);
+    }
+  } catch (_) { /* localStorage unavailable */ }
+})();
+
 export interface LineupItem {
   name: string;
   price?: string;
