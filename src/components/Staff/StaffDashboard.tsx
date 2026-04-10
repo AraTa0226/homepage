@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import cmsData from '../../data/cms.json';
 import { motion, AnimatePresence } from 'motion/react';
 import {
   ArrowLeft,
@@ -37,7 +38,7 @@ interface StaffDashboardProps {
   onBack: () => void;
 }
 
-type Tab = 'prices' | 'calendar' | 'partners' | 'assets' | 'guides' | 'recruitment' | 'demo';
+type Tab = 'prices' | 'calendar' | 'partners' | 'assets' | 'guides' | 'recruitment' | 'demo' | 'system';
 
 export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
   const [activeTab, setActiveTab] = useState<Tab>('prices');
@@ -341,6 +342,9 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
       setSecurityRecruitment(localSecurityRecruitment);
     } else if (activeTab === 'demo') {
       setAuditionSpeakers(localAuditionSpeakers);
+    } else if (activeTab === 'system') {
+      // System tab saves are handled inline (export button)
+      return;
     }
     setShowSuccess(true);
     setTimeout(() => setShowSuccess(false), 3000);
@@ -565,6 +569,13 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
               >
                 <Music className="w-3 h-3" />
                 DEMO
+              </button>
+              <button
+                onClick={() => setActiveTab('system')}
+                className={`px-4 py-2 rounded-lg text-xs font-black tracking-widest transition-all flex items-center gap-2 ${activeTab === 'system' ? 'bg-white text-orange-500 shadow-sm' : 'text-gray-400 hover:text-gray-600'}`}
+              >
+                <RefreshCw className="w-3 h-3" />
+                SYSTEM
               </button>
             </div>
 
@@ -3064,6 +3075,63 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
           </div>
         )}
       </div>
+
+      {/* ── SYSTEM TAB: Cache Management ── */}
+      {activeTab === 'system' && (() => {
+        const currentVersion = String((cmsData as any).cacheVersion || '1');
+        const nextVersion = String(parseInt(currentVersion, 10) + 1);
+
+        const handleExportCmsJson = () => {
+          const updated = { ...(cmsData as any), cacheVersion: nextVersion };
+          const blob = new Blob([JSON.stringify(updated, null, 2)], { type: 'application/json' });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = 'cms.json';
+          a.click();
+          URL.revokeObjectURL(url);
+        };
+
+        return (
+          <div className="max-w-2xl mx-auto px-4 py-12 space-y-6">
+            <div className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
+              <h2 className="text-xl font-black text-gray-800 tracking-wider mb-1">キャッシュ管理</h2>
+              <p className="text-xs text-gray-400 mb-6">ユーザーの古いキャッシュを強制クリアします</p>
+
+              <div className="bg-gray-50 rounded-2xl p-5 mb-6 flex items-center justify-between">
+                <div>
+                  <div className="text-xs text-gray-400 mb-1">現在のバージョン</div>
+                  <div className="text-3xl font-black text-gray-800 font-mono">v{currentVersion}</div>
+                </div>
+                <div className="text-gray-300 text-2xl">→</div>
+                <div>
+                  <div className="text-xs text-orange-400 mb-1">更新後のバージョン</div>
+                  <div className="text-3xl font-black text-orange-500 font-mono">v{nextVersion}</div>
+                </div>
+              </div>
+
+              <div className="bg-orange-50 border border-orange-100 rounded-2xl p-4 mb-6 text-sm text-orange-700 leading-relaxed">
+                <p className="font-bold mb-2">⚠️ 操作の流れ</p>
+                <ol className="list-decimal list-inside space-y-1 text-xs regular">
+                  <li>下の「cms.json をダウンロード」ボタンをクリック</li>
+                  <li>ダウンロードされたファイルで <code className="bg-orange-100 px-1 rounded">src/data/cms.json</code> を上書き</li>
+                  <li>Git に push → Vercel が自動デプロイ</li>
+                  <li>全ユーザーの古いキャッシュが次回アクセス時に自動削除されます</li>
+                </ol>
+              </div>
+
+              <button
+                onClick={handleExportCmsJson}
+                className="w-full bg-orange-500 hover:bg-orange-600 text-white py-4 rounded-2xl font-black tracking-widest transition-all flex items-center justify-center gap-3 shadow-lg shadow-orange-200"
+              >
+                <RefreshCw className="w-5 h-5" />
+                cms.json をダウンロード（v{currentVersion} → v{nextVersion}）
+              </button>
+            </div>
+          </div>
+        );
+      })()}
+
     </div>
   );
 };
