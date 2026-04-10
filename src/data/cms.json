@@ -406,7 +406,7 @@
             "取付工賃込"
           ],
           "badge": "パワードウーハー",
-          "image": "/images/Top/speaker.webp",
+          "image": "/images/Audio/easy_bass_package.webp",
           "description": "お手軽低音増強セット\n建物と同じように、音楽にも基礎となる低域はとても重要です。しっかりとした低音(ウーハー)は音楽に臨場感を与えてくれます。ここでご紹介するウーハーはアンプ内蔵タイプのパワードウーハー（チューンアップウーハー）。シート下に収まるようなコンパクトなウーハーからパワードタイプとは思えない本格的なサウンドのウーハーまで取り付け込みでご提案しています。",
           "packageDetails": {
             "standardPrice": "55000",
@@ -489,7 +489,7 @@
             "別体アンプ"
           ],
           "badge": "本格低音",
-          "image": "/images/Audio/poweredsubpict.jpg",
+          "image": "/images/Audio/easy_bass_package_plus.webp",
           "description": "ウーハー＋BOXに別体アンプを組み合わせます\nお手軽低音増強セットはスピーカー交換パッケージと同じく大人気のパッケージです。手軽に追加できるパワードウーハーはシート下などの空きスペースを上手く活用することで音楽表現を一歩グレードアップしてくれます。ここで紹介するお手軽低音増強セット”プラス”では、パワードウーハーではなくアンプとウーハーを別々にセットアップすることでもう一歩本格的な低音体験を実現します。",
           "link": "https://www.soundang.com/amp&swpac.html",
           "packageDetails": {
@@ -593,7 +593,7 @@
             "高音質アンプ内蔵"
           ],
           "badge": "音像定位",
-          "image": "https://picsum.photos/seed/amp-dsp/800/600",
+          "image": "/images/Audio/amplified_dsp.webp",
           "description": "今のナビはそのままに音質をグレードアップさせることができるのが「アンプ内蔵タイプのDSP」です。\n\n【こんな方におすすめ】\n・今あるナビやヘッ��ユニットを替えずに音質アップしたい！\n・大画面ナビを購入したいけど、そのナビの音質に不満…\n・フロント3WAYシステムを手軽に始めたい！\n・フロントマルチ接続にしたいけどリアスピーカーも使いたい…\n\n特別な操作は必要ありません。今まで通りお使いいただけますが、目の前に臨場感豊かなステージが出現したかのようなサウンドに生まれ変わります。ハイエンドオーディオ機に匹敵するほどの緻密な調整機能を備えています。",
           "link": "https://www.soundang.com/ampDSP.html",
           "showSavings": false,
@@ -662,6 +662,14 @@
               "image": "https://picsum.photos/seed/gdt42/200/200"
             }
           ]
+        },
+        {
+          "name": "アンプレスDSPパッケージ",
+          "price": "0",
+          "features": [],
+          "badge": "",
+          "image": "/images/Audio/standalone_dsp.webp",
+          "description": ""
         }
       ],
       "images": []
