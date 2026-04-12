@@ -230,10 +230,10 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
   ];
 
   const categories = [
-    { id: 'speaker_package', title: "スピーカー・車種別", items: ["BASIC", "STANDARD", "PREMIUM", "BMW/ベンツ"], icon: Speaker },
+    { id: 'speaker_package', title: "スピーカー・車種別", items: ["BASIC line", "STANDARD line", "車種専用プラン"], icon: Speaker },
     { id: 'bass_power', title: "低音・アンプ", items: ["サブウーハー", "外部アンプ"], icon: Zap },
     { id: 'digital_source', title: "デジタル・DSP", items: ["DSP", "プレーヤー", "ナビ"], icon: Settings2 },
-    { id: 'install_tuning', title: "施工・電源", items: ["デッドニング", "電源強化"], icon: Shield },
+    { id: 'install_tuning', title: "施工・電源", items: ["デッドニング", "電源強化", "車内静音"], icon: Shield },
   ];
 
   const colorClasses: Record<string, string> = {
@@ -1323,7 +1323,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
 
               <div className="space-y-4 md:space-y-24">
                 {plans
-                  .filter(p => ['speaker_exchange', 'bass_enhancement', 'dsp_control', 'amp_power', 'source_headunit', 'media_player', 'car_specific', 'environment_tuning', 'performance_up'].includes(p.id))
+                  .filter(p => ['speaker_package', 'bass_power', 'digital_source', 'install_tuning'].includes(p.id))
                   .filter(p => activeCategory === 'all' || p.id === activeCategory)
                   .map((section, idx) => (
                     <motion.div
