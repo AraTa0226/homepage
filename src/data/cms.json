@@ -53,7 +53,7 @@
           "image": "/images/Audio/premium-line.png"
         },
         {
-          "name": "ハイエンド3-WAYプラン",
+          "name": "フロント3WAYプラン",
           "price": "286000",
           "badge": "究極の3way",
           "features": [
@@ -61,7 +61,7 @@
             "Aピラー埋め込み加工込",
             "全力デッドニング施工"
           ],
-          "image": "https://picsum.photos/seed/3way-audio/800/600"
+          "image": "/images/Audio/front_3way.webp"
         },
         {
           "name": "BMWスピーカー交換パッケージ",
