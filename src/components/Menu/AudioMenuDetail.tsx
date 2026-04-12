@@ -44,7 +44,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
   const { assets } = useSite();
   const { plans, optionals, guides, audioRecruitment, auditionSpeakers } = usePrices();
   const { planSlug } = useParams<{ planSlug: string }>();
-  const [activeCategory, setActiveCategory] = useState<'all' | 'speaker_exchange' | 'bass_enhancement' | 'dsp_control' | 'amp_power' | 'source_headunit' | 'car_specific' | 'environment_tuning' | 'performance_up'>('all');
+  const [activeCategory, setActiveCategory] = useState<'all' | 'speaker_exchange' | 'bass_enhancement' | 'dsp_control' | 'amp_power' | 'source_headunit' | 'media_player' | 'car_specific' | 'environment_tuning' | 'performance_up'>('all');
   const [viewingFullList, setViewingFullList] = useState<string | null>(null);
   const [viewingCategoryDetail, setViewingCategoryDetail] = useState<string | null>(null);
   const [selectedItem, setSelectedItem] = useState<any | null>(null);
@@ -158,14 +158,14 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
       ]
     },
     source_headunit: {
-      title: "最新機能を追加したい・ソースを良くしたい方へ",
-      subtitle: "ナビの音質に**限界**を感じる、**ハイレゾ音源**を最高の状態で聴きたい…",
-      description: "**高音質ユニット**への交換で、音源の読み取り精度を向上。\n\n**上質な信号**をシステム全体に送り出します。",
+      title: "最新機能を追加したい・ナビを良くしたい方へ",
+      subtitle: "ナビの音質に**限界**を感じる、**ブルーレイ/DVD**を最高の状態で観たい…",
+      description: "**高音質ナビ**への交換で、音源の読み取り精度を向上。\n\n**上質な信号**をシステム全体に送り出します。",
       sampleDescription: "【施工例】サイバーナビ導入：市販ナビ最高峰のオーディオ回路を搭載。ハイレゾ音源の再生はもちろん、CDや圧縮音源も高音質に補正して再生します。",
       benefits: [
         "音の入口からの純度向上",
-        "ハイレゾ音源のネイティブ再生対応",
-        "最新のメディアプレーヤー機能の追加"
+        "ナビ機能の最新化",
+        "外部機器との連携強化"
       ],
       image: assets.audioMenuImage,
       icon: Music,
@@ -173,6 +173,24 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
       upgrades: [
         { title: "外部DAP接続", price: "¥11,000〜", icon: Music, description: "お持ちのハイレゾプレーヤーをデジタル接続し、最高音質で車内再生。" },
         { title: "高音質USBケーブル", price: "¥5,500〜", icon: Zap, description: "デジタル信号のノイズを低減し、音の鮮度を保ちます。" }
+      ]
+    },
+    media_player: {
+      title: "最先端のデジタル再生を楽しみたい方へ",
+      subtitle: "スマホやDAPではなく、**車載専用**のプレーヤーで究極を求める…",
+      description: "**メディアプレーヤー**の導入で、純正システムを活かしたまま**ハイレゾ本来の音**を再生。\n\nDSPへのデジタル入力により、純正オーディオの制限を完全に排除します。",
+      sampleDescription: "【施工例】GOLDHORN GTS3 導入：最高峰DACチップを搭載したプレーヤーをDSPへデジタル入力。純正ナビの音を通さない「ピュアなデジタル伝送」により、圧倒的な解像度と静寂を実現します。",
+      benefits: [
+        "純正ナビやDAの音質制限を無視できるデジタル接続",
+        "大容量SSDやDSD512等の超ハイレゾ音源に対応",
+        "車載専用設計によるエンジン連動と安定した操作性"
+      ],
+      image: assets.audioMenuImage,
+      icon: Play,
+      color: "indigo",
+      upgrades: [
+        { title: "外部クロック追加", price: "¥440,000〜", icon: Activity, description: "超高精度クロックとの同期により、音の滲みを極限まで排除。より深いリアリティへ。" },
+        { title: "大容量SSD換装", price: "¥22,000〜", icon: Layers, description: "数TBのライブラリーを車載。全てのコレクションを常に携帯可能です。" }
       ]
     },
     car_specific: {
@@ -298,7 +316,8 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
     { id: 'bass_enhancement', title: "低音を強化したい方へ", desc: "音が軽くて物足りない、躍動感をプラス。", icon: Zap, color: "indigo" },
     { id: 'dsp_control', title: "音を整えたい方へ", desc: "音がバラバラ、自分だけの特等席を創る。", icon: Settings2, color: "purple" },
     { id: 'amp_power', title: "パワー・解像度向上", desc: "音に力強さがない、歪みを抑えたい。", icon: Activity, color: "orange" },
-    { id: 'source_headunit', title: "最新機能・ソース追加", desc: "ナビの音質に限界、ハイレゾを聴きたい。", icon: Music, color: "blue" },
+    { id: 'source_headunit', title: "高音質ナビ追加", desc: "ナビの音質に限界、最新機能を使いたい。", icon: Music, color: "blue" },
+    { id: 'media_player', title: "メディアプレーヤー", desc: "スマホやDAPとは違う、車載専用の究極ソース。", icon: Play, color: "indigo" },
     { id: 'car_specific', title: "車種専用プラン", desc: "自分の車に合うものが知りたい。", icon: Car, color: "green" },
     { id: 'environment_tuning', title: "静かにしたい・環境整備", desc: "ロードノイズが気になる、環境を整えたい。", icon: Shield, color: "orange" },
     { id: 'performance_up', title: "性能アップ・電源強化", desc: "電源改善で機材のポテンシャルを解放。", icon: Zap, color: "red" },
@@ -310,7 +329,8 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
     { id: 'bass_enhancement', title: "低音強化", items: ["パワードウーハー", "アンプ別ウーハー"], icon: Zap },
     { id: 'dsp_control', title: "DSP・音質制御", items: ["AMP内蔵DSP", "AMPレスDSP"], icon: Settings2 },
     { id: 'amp_power', title: "アンプ・駆動力", items: ["外部アンプ", "小型パワーアンプ"], icon: Activity },
-    { id: 'source_headunit', title: "ソース・ヘッドユニット", items: ["サイバーナビ", "メディアプレーヤー"], icon: Music },
+    { id: 'source_headunit', title: "高音質ナビ", items: ["サイバーナビ"], icon: Music },
+    { id: 'media_player', title: "メディアプレーヤー", items: ["小型・安価モデル", "アンプ内蔵", "ハイエンド"], icon: Play },
     { id: 'car_specific', title: "車種別プラン", items: ["BMW", "Mercedes", "国産車"], icon: Car },
     { id: 'environment_tuning', title: "施工・デッドニング", items: ["デッドニング", "カスタム施工"], icon: Shield },
     { id: 'performance_up', title: "性能アップ・電源", items: ["バッ直配線", "キャパシタ", "仮想アース"], icon: Zap },
@@ -1403,7 +1423,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
 
               <div className="space-y-4 md:space-y-24">
                 {plans
-                  .filter(p => ['speaker_exchange', 'bass_enhancement', 'dsp_control', 'amp_power', 'source_headunit', 'car_specific', 'environment_tuning', 'performance_up'].includes(p.id))
+                  .filter(p => ['speaker_exchange', 'bass_enhancement', 'dsp_control', 'amp_power', 'source_headunit', 'media_player', 'car_specific', 'environment_tuning', 'performance_up'].includes(p.id))
                   .filter(p => activeCategory === 'all' || p.id === activeCategory)
                   .map((section, idx) => (
                     <motion.div
