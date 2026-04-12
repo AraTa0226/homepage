@@ -1,10 +1,10 @@
 {
   "plans": [
     {
-      "id": "speaker_exchange",
-      "category": "純正の音に不満がある方へ",
+      "id": "speaker_package",
+      "category": "スピーカー交換・車種別プラン",
       "type": "audio",
-      "description": "音がこもる、はっきりしない…\n**スピーカー交換**で驚くほど**クリア**に変わります。\n\n選べる**5つのプラン**をご用意しています。",
+      "description": "音質アップの第一歩はスピーカーから。\n手軽な**パッケージプラン**から、内装を崩さない**車種専用設計**まで幅広くご用意しています。",
       "showDescriptionInMenu": true,
       "showDescriptionInList": true,
       "items": [
@@ -52,49 +52,9 @@
           },
           "lineup": [
             {
-              "name": "DLS (17cm)",
+              "name": "DLS / Rockford / KICKER 等",
               "price": "44000",
-              "image": "https://picsum.photos/seed/dls-c/200/200"
-            },
-            {
-              "name": "Rockford (17cm)",
-              "price": "44000",
-              "image": "https://picsum.photos/seed/rockford-c/200/200"
-            },
-            {
-              "name": "GroundZero (17cm)",
-              "price": "44000",
-              "image": "https://picsum.photos/seed/gz-c/200/200"
-            },
-            {
-              "name": "KICKER (17cm)",
-              "price": "44000",
-              "image": "https://picsum.photos/seed/kicker-c/200/200"
-            },
-            {
-              "name": "AUDISON (17cm)",
-              "price": "44000",
-              "image": "https://picsum.photos/seed/audison-c/200/200"
-            },
-            {
-              "name": "KICKER (10cm)",
-              "price": "44000",
-              "image": "https://picsum.photos/seed/kicker-10/200/200"
-            },
-            {
-              "name": "MOREL (10cm)",
-              "price": "44000",
-              "image": "https://picsum.photos/seed/morel-10/200/200"
-            },
-            {
-              "name": "AUDISON (10cm)",
-              "price": "44000",
-              "image": "https://picsum.photos/seed/audison-10/200/200"
-            },
-            {
-              "name": "BLAM (10cm)",
-              "price": "44000",
-              "image": "https://picsum.photos/seed/blam-10/200/200"
+              "description": "世界的人気ブランドのコアキシャルモデルから選択可能。"
             }
           ]
         },
@@ -108,7 +68,7 @@
           ],
           "badge": "初心者おすすめ",
           "image": "/images/Audio/basic_line_separate.webp",
-          "description": "音質アップの第一歩はスピーカー交換から！\n\nセパレートスピーカーを手軽に楽しめるパッケージ\nスピーカー交換パッケージベーシックライン（セパレート）では高域再生用のツィーターと中低域再生用のミッドレンジが別々に分かれたセパレートタイプのスピーカーを選んでリーズナブルに取り付けまで行うパッケージです。\nカーオーディオシステムアップが初めての方におすすめのパッケージでリーズナブルな取り付けを実現するためにネットワーク（高域と中低域に分離するユニット）はインラインタイプなど��中心にラインアップしています。ツィーターは純正位置、もしくはダッシュボード上へ置き型マウントを使っての装着. 音楽の楽しさを今まで以上に楽しんでいただけるパッケージです。",
+          "description": "音質アップの第一歩はスピーカー交換から！\n\nセパレートスピーカーを手軽に楽しめるパッケージ\nスピーカー交換パッケージベーシックライン（セパレート）では高域再生用のツィーターと中低域再生用のミッドレンジが別々に分かれたセパレートタイプのスピーカーを選んでリーズナブルに取り付けまで行うパッケージです。\nカーオーディオシステムアップが初めての方におすすめのパッケージでリーズナブルな取り付けを実現するためにネットワーク（高域と中低域に分離するユニット）はインラインタイプなどを中心にラインアップしています。ツィーターは純正位置、もしくはダッシュボード上へ置き型マウントを使っての装着。音楽の楽しさを今まで以上に楽しんでいただけるパッケージです。",
           "packageDetails": {
             "standardPrice": "75900",
             "savings": "16500",
@@ -143,39 +103,14 @@
               "バッフル適合が無い車種では別途製作費11,000円が必要です。",
               "ツィーター固定にマウントなどが必要な車種では別途追加が必要になります。",
               "このパッケージは現金でのお支払いとなります。",
-              "作業時間は車種によりますが3〜4時間の予定です. 代車が必要な場合はご予約時にお伝えください。"
+              "作業時間は車種によりますが3〜4時間の予定です。代車が必要な場合はご予約時にお伝えください。"
             ]
           },
           "lineup": [
             {
-              "name": "ROCKFORD",
+              "name": "ROCKFORD / GROUNDZERO / BLAM 等",
               "price": "59400",
-              "image": "https://picsum.photos/seed/rockford-s/200/200"
-            },
-            {
-              "name": "GROUNDZERO",
-              "price": "59400",
-              "image": "https://picsum.photos/seed/gz-s/200/200"
-            },
-            {
-              "name": "BLAM",
-              "price": "59400",
-              "image": "https://picsum.photos/seed/blam-s/200/200"
-            },
-            {
-              "name": "AUDISON 1",
-              "price": "59400",
-              "image": "https://picsum.photos/seed/audison-s1/200/200"
-            },
-            {
-              "name": "AUDISON 2",
-              "price": "59400",
-              "image": "https://picsum.photos/seed/audison-s2/200/200"
-            },
-            {
-              "name": "AUDISON 3",
-              "price": "59400",
-              "image": "https://picsum.photos/seed/audison-s3/200/200"
+              "description": "解像度の高いセパレートモデル。ボーカルの臨場感が向上します。"
             }
           ]
         },
@@ -189,7 +124,7 @@
           ],
           "badge": "コスパ最強",
           "image": "/images/Audio/standard.webp",
-          "description": "音質アップの第一歩はスピーカー交換から！\nスピーカー交換パッケージスタンダードラインでは１０万円までのスピーカーの中からお気に入りのスピーカーを選んでいただき、ドアチューニング、スピーカーケーブルなどがセットになったこだわった内容です。\n\nこの価格帯は各社とも人気商品がラインアップされていて個性が強いユニットが並んでいます。取り付け優先だったり音優先だったりと入り乱れている価格帯でもありますので、商品選びのときはご希望のインストール方法が可能かどうかの判断も必要です。",
+          "description": "音質アップの第一歩はスピーカー交換から！\nスピーカー交換パッケージスタンダードラインでは１０万円までのスピーカーの中からお気に入りのスピーカーを選んでいただき、ドアチューニング、スピーカーケーブルなどがセットになったこだわった内容です。",
           "packageDetails": {
             "standardPrice": "166400",
             "savings": "61900",
@@ -219,173 +154,36 @@
                 "description": "プロによる確実な配線・取付（通常22,000円）",
                 "icon": "Wrench"
               }
-            ],
-            "upgrades": [
-              {
-                "title": "ドアチューニング Bコース",
-                "price": "5500",
-                "description": "制振材増量（通常27,500円）"
-              },
-              {
-                "title": "ドアチューニング Aコース",
-                "price": "11000",
-                "description": "背圧処理にフェリソニDS-1.5WPを使用、制振材増量（通常16,500円）"
-              },
-              {
-                "title": "メタルバッフル化",
-                "price": "定価より20%OFF",
-                "description": "カロッツェリア製メタルバッフル. タイトで張りのある再生が可能に。"
-              },
-              {
-                "title": "ツィーターAピラー埋め込み",
-                "price": "46200〜",
-                "description": "反射を抑えクリアな音像へ. クールなインテリアも実現。"
-              }
-            ],
-            "notes": [
-              "ツィーターは純正位置への取り付け、もしくはダッシュボードへの据え置き取り付けとなります。",
-              "ドアスピーカーはインナー取り付けです。",
-              "作業は1日お預かりしますが無料代車をご用意していますのでご利用ください。"
             ]
           },
           "lineup": [
             {
-              "name": "carrozzeria TS-V173S",
+              "name": "carrozzeria / MOREL / FOCAL 等",
               "price": "104500",
-              "image": "https://picsum.photos/seed/v173s/200/200"
-            },
-            {
-              "name": "MOREL MAXIMO ULTRA 602 Mk2",
-              "price": "108900",
-              "image": "https://picsum.photos/seed/morel602/200/200"
-            },
-            {
-              "name": "FOCAL PS 165 FXE",
-              "price": "110000",
-              "image": "https://picsum.photos/seed/focal-fxe/200/200"
-            },
-            {
-              "name": "DYNAUDIO ESOTAN 232",
-              "price": "110000",
-              "image": "https://picsum.photos/seed/esotan232/200/200"
-            },
-            {
-              "name": "BLAM 165 LSQ",
-              "price": "110000",
-              "image": "https://picsum.photos/seed/blam-lsq/200/200"
-            },
-            {
-              "name": "DIATONE DS-G400",
-              "price": "132000",
-              "image": "https://picsum.photos/seed/ds-g400/200/200"
+              "description": "人気No.1ミドルクラス。各ブランドの個性が光る価格帯。"
             }
           ]
         },
         {
-          "name": "スピーカー交換PREMIUM line（10万円以上）",
-          "price": "184800",
+          "name": "BMW / Mercedes 専用スピーカープラン",
+          "price": "88000",
           "features": [
-            "ハイグレードスピーカー",
-            "フルデッドニング",
-            "ツィーター調整"
+            "加工不要トレードイン",
+            "専用高効率設計",
+            "純正インテリア維持"
           ],
-          "badge": "人気No.1",
-          "image": "/images/Audio/premium.webp",
-          "description": "音質アップの第一歩はスピーカー交換から！\nスピーカー交換パッケージプレミアムラインでは１０万円以上のスピーカーの中からお気に入りのスピーカーを選んでいただ���、ドアチューニング、スピーカーケーブルなどがセットになったこだわった内容です。\n\nこの価格帯は各社とも音楽性の再現に重きを置き、素材選びから構造までそれぞれのブランドのこだわりが凝縮されているところで、音質的には情報量が多く質感やフォーカス、ステレオイメージの再現性などがワンランク上の世界を楽しませてくれます。",
-          "packageDetails": {
-            "standardPrice": "252200",
-            "savings": "67400",
-            "contents": [
-              {
-                "title": "スピーカー",
-                "description": "17cmモデル2WAYスピーカー（10万円以上）",
-                "icon": "Speaker"
-              },
-              {
-                "title": "ドアチューニングBコース",
-                "description": "制振材によるドアの環境整備（通常27,500円）",
-                "icon": "Activity"
-              },
-              {
-                "title": "カスタムインナーバッフル",
-                "description": "車種に合わせた高剛性バッフル（通常11,000円）",
-                "icon": "Layers"
-              },
-              {
-                "title": "スピーカーケーブル",
-                "description": "ANGオリジナル（オーディオテクニカ製相当 10m）",
-                "icon": "Zap"
-              },
-              {
-                "title": "ワイヤリング工賃",
-                "description": "プロによる確実な配線・取付（通常22,000円）",
-                "icon": "Wrench"
-              }
-            ],
-            "upgrades": [
-              {
-                "title": "ドアチューニング Aコース",
-                "price": "11000",
-                "description": "背圧処理にフェリソニDS-1.5WPを使用、制振材増量（通常16,500円）"
-              },
-              {
-                "title": "ドアチューニング A+コース",
-                "price": "22000",
-                "description": "背圧処理にフェリソニC2を使用、制振材増量（通常27,500円）"
-              },
-              {
-                "title": "メタルバッフル化",
-                "price": "定価より20%OFF",
-                "description": "カロッツェリア製メタルバッフル. タイトで張りのある再生が可能に。"
-              },
-              {
-                "title": "ツィーターAピラー埋め込み",
-                "price": "46200〜",
-                "description": "反射を抑えクリアな音像へ. クールなインテリアも実現。"
-              }
-            ],
-            "notes": [
-              "ツィーターは純正位置への取り付け、もしくはダッシュボードへの据え置き取り付けとなります。",
-              "ドアスピーカーはインナー取り付けです。",
-              "作業は1日お預かりしますが無料代車をご用意していますのでご利用ください。"
-            ]
-          },
-          "lineup": [
-            {
-              "name": "carrozzeria TS-Z900PRS",
-              "price": "184800",
-              "image": "https://picsum.photos/seed/z900prs/200/200"
-            },
-            {
-              "name": "MOREL HYBRID 602",
-              "price": "198000",
-              "image": "https://picsum.photos/seed/morel-hybrid/200/200"
-            },
-            {
-              "name": "FOCAL ES 165 K2",
-              "price": "210000",
-              "image": "https://picsum.photos/seed/focal-k2/200/200"
-            },
-            {
-              "name": "DYNAUDIO ESOTEC 242",
-              "price": "220000",
-              "image": "https://picsum.photos/seed/esotec242/200/200"
-            },
-            {
-              "name": "BLAM 165 Signature",
-              "price": "230000",
-              "image": "https://picsum.photos/seed/blam-sig/200/200"
-            }
-          ]
+          "badge": "輸入車専用",
+          "image": "/images/Audio/car_specific.webp",
+          "description": "BMWやメルセデス・ベンツなど、内装の構造が特殊な輸入車に最適な専用プラン。加工を最小限に抑えつつ、劇的な音質向上をお約束します。"
         }
       ],
       "images": []
     },
     {
-      "id": "bass_enhancement",
-      "category": "低音を強化したい方へ",
+      "id": "bass_power",
+      "category": "低音強化・パワーアップ（アンプ）",
       "type": "audio",
-      "description": "低音が物足りない、迫力が欲しい…\n**サブウーファーの追加**で、音楽の土台となる**厚みと迫力**をプラスします。\n\nお好みに合わせたシステムをご提案します。",
+      "description": "音楽に魂を吹き込む。**サブウーファー**による重低音の追加と、**外部アンプ**による解像度の向上をご提案します。",
       "showDescriptionInMenu": true,
       "showDescriptionInList": true,
       "items": [
@@ -399,180 +197,28 @@
           ],
           "badge": "パワードウーハー",
           "image": "/images/Audio/easy_bass_package.webp",
-          "description": "お手軽低音増強セット\n建物と同じように、音楽にも基礎となる低域はとても重要です。しっかりとした低音(ウーハー)は音楽に臨場感を与えてくれます。ここでご紹介するウーハーはアンプ内蔵タイプのパワードウーハー（チューンアップウーハー）。シート下に収まるようなコンパクトなウーハーからパワードタイプとは思えない本格的なサウンドのウーハーまで取り付け込みでご提案しています。",
-          "packageDetails": {
-            "standardPrice": "55000",
-            "savings": "13000",
-            "contents": [
-              {
-                "title": "パワードウーハー",
-                "description": "アンプ内蔵型サブウーファーユニット",
-                "icon": "Speaker"
-              },
-              {
-                "title": "配線一式",
-                "description": "必要な電源ケーブル・信号ケーブル一式",
-                "icon": "Zap"
-              },
-              {
-                "title": "ワイヤリング工賃",
-                "description": "プロによる確実な配線・取付作業",
-                "icon": "Wrench"
-              }
-            ],
-            "notes": [
-              "車種や仕様によりパッケージ価格に追加が必要な場合があります。",
-              "作業は1日お車をお預かりしますが無料代車をご用意していますのでご利用ください。"
-            ]
-          },
-          "lineup": [
-            {
-              "name": "ALPINE SWE-1080",
-              "price": "42000",
-              "image": "https://picsum.photos/seed/swe1080/200/200"
-            },
-            {
-              "name": "PIONEER TS-WH500A",
-              "price": "51000",
-              "image": "https://picsum.photos/seed/wh500a/200/200"
-            },
-            {
-              "name": "PIONEER TS-WX400DA/WX300TA/WX300A/WX1010A",
-              "price": "57000",
-              "image": "https://picsum.photos/seed/wx400da/200/200"
-            },
-            {
-              "name": "carrozzeria TS-WX1210A",
-              "price": "62000",
-              "image": "https://picsum.photos/seed/wx1210a/200/200"
-            },
-            {
-              "name": "PIONEER TS-WH1000A",
-              "price": "76000",
-              "image": "https://picsum.photos/seed/wh1000a/200/200"
-            },
-            {
-              "name": "HELIX U10A",
-              "price": "86000",
-              "image": "https://picsum.photos/seed/u10a/200/200"
-            },
-            {
-              "name": "CERWIN VEGA VPAS10",
-              "price": "91000",
-              "image": "https://picsum.photos/seed/vpas10/200/200"
-            },
-            {
-              "name": "audison (105セット)",
-              "price": "100000",
-              "image": "https://picsum.photos/seed/audison105/200/200"
-            },
-            {
-              "name": "KICKER HYDEAWAY (108セット)",
-              "price": "108000",
-              "image": "https://picsum.photos/seed/hydeaway/200/200"
-            }
-          ]
+          "description": "しっかりとした低音(ウーハー)は音楽に臨場感を与えてくれます。シート下に収まるコンパクトなモデルから本格的なサウンドまで取り扱い可能。"
         },
         {
-          "name": "お手軽低音増強セット”プラス”",
-          "price": "110000",
+          "name": "アンプインスト・パッケージ",
+          "price": "55000",
           "features": [
-            "BOX+ウーハー",
-            "別体アンプ"
+            "4chパワーアンプ",
+            "バッ直配線工賃込",
+            "解像度劇的向上"
           ],
-          "badge": "本格低音",
-          "image": "/images/Audio/easy_bass_package_plus.webp",
-          "description": "ウーハー＋BOXに別体アンプを組み合わせます\nお手軽低音増強セットはスピーカー交換パッケージと同じく大人気のパッケージです。手軽に追加できるパワードウーハーはシート下などの空きスペースを上手く活用することで音楽表現を一歩グレードアップしてくれます。ここで紹介するお手軽低音増強セット”プラス”では、パワードウーハーではなくアンプとウーハーを別々にセットアップすることでもう一歩本格的な低音体験を実現します。",
-          "link": "https://www.soundang.com/amp&swpac.html",
-          "packageDetails": {
-            "standardPrice": "110000",
-            "savings": "22000",
-            "contents": [
-              {
-                "title": "BOX+ウーハーのセットモデル",
-                "description": "専用設計のウーファーボックスとユニットのセット",
-                "icon": "Speaker"
-              },
-              {
-                "title": "ウーハー用パワーアンプ",
-                "description": "ウーファーを強力に駆動する専用外部アンプ",
-                "icon": "Zap"
-              },
-              {
-                "title": "電源ケーブル",
-                "description": "8AWGまたは12AWG高品質電源ケーブル（機種による）",
-                "icon": "Zap"
-              },
-              {
-                "title": "信号入力",
-                "description": "ヘッドユニットに応じた最適な入力配線",
-                "icon": "Layers"
-              },
-              {
-                "title": "ワイヤリング工賃",
-                "description": "プロによる確実な配線・設置作業",
-                "icon": "Wrench"
-              }
-            ],
-            "notes": [
-              "車種や仕様によりパッケージ価格に追加が必要な場合があります。",
-              "電源ケーブルは機種により8AWGまたは12AWGを使用します。",
-              "アンプやBOXの設置にボード製作が必要な場合は別途5,500円〜承ります。",
-              "アンプの性能を出し切るためにボディアース施工を行います。",
-              "作業は１日お車をお預かりしますが無料代車をご用意していますのでご利用ください。"
-            ]
-          },
-          "lineup": [
-            {
-              "name": "GLADEN MOSCONI (88セット)",
-              "price": "88000",
-              "image": "https://picsum.photos/seed/gladen/200/200"
-            },
-            {
-              "name": "carrozzeria (98セット)",
-              "price": "98000",
-              "image": "https://picsum.photos/seed/carrozzeria-plus/200/200"
-            },
-            {
-              "name": "VIBE British Audio (108セット)",
-              "price": "108000",
-              "image": "https://picsum.photos/seed/vibe/200/200"
-            },
-            {
-              "name": "Kicker (128セット)",
-              "price": "128000",
-              "image": "https://picsum.photos/seed/kicker-plus1/200/200"
-            },
-            {
-              "name": "Rockford Fosgate (148セット)",
-              "price": "148000",
-              "image": "https://picsum.photos/seed/rockford-plus1/200/200"
-            },
-            {
-              "name": "AUDISON (168セット)",
-              "price": "168000",
-              "image": "https://picsum.photos/seed/audison-plus/200/200"
-            },
-            {
-              "name": "Kicker (198セット)",
-              "price": "198000",
-              "image": "https://picsum.photos/seed/kicker-plus2/200/200"
-            },
-            {
-              "name": "Rockford Fosgate (240セット)",
-              "price": "240000",
-              "image": "https://picsum.photos/seed/rockford-plus2/200/200"
-            }
-          ]
+          "badge": "駆動力UP",
+          "image": "/images/Audio/amplifier_install_basic.webp",
+          "description": "スピーカーをしっかりとコントロールすることで、微細な空気感や奥行きが劇的に改善されます。通常のドライブを極上の音楽体験へ。"
         }
       ],
       "images": []
     },
     {
-      "id": "dsp_control",
-      "category": "音を整えたい・臨場感を出したい方へ",
+      "id": "digital_source",
+      "category": "DSP・プレーヤー・高音質ナビ",
       "type": "audio",
-      "description": "音がバラバラに聞こえる、定位がはっきりしない…\n**DSP（デジタルプロセッサー）**で音のタイミングを緻密に補正。\n\nダッシュボード上にアーティストが浮かび上がるような**音像**を創ります。",
+      "description": "純正システムを活かしたまま音を整える。**DSP**による精密調整と、**メディアプレーヤー**による高鮮度再生を統合。",
       "showDescriptionInMenu": true,
       "showDescriptionInList": true,
       "items": [
@@ -582,332 +228,70 @@
           "features": [
             "純正ナビ連動",
             "タイムアライメント調整",
-            "高音質アンプ内蔵"
+            "音像定位の改善"
           ],
           "badge": "音像定位",
           "image": "/images/Audio/amplified_dsp.webp",
-          "description": "今のナビはそのままに音質をグレードアップさせることができるのが「アンプ内蔵タイプのDSP」です。\n\n【こんな方におすすめ】\n・今あるナビやヘッ��ユニットを替えずに音質アップしたい！\n・大画面ナビを購入したいけど、そのナビの音質に不満…\n・フロント3WAYシステムを手軽に始めたい！\n・フロントマルチ接続にしたいけどリアスピーカーも使いたい…\n\n特別な操作は必要ありません。今まで通りお使いいただけますが、目の前に臨場感豊かなステージが出現したかのようなサウンドに生まれ変わります。ハイエンドオーディオ機に匹敵するほどの緻密な調整機能を備えています。",
-          "link": "https://www.soundang.com/ampDSP.html",
-          "showSavings": false,
-          "packageDetails": {
-            "standardPrice": "110000",
-            "savings": "0",
-            "contents": [
-              {
-                "title": "電源ケーブル",
-                "description": "バッテリーから直接電源を取り出すワイヤリング（プラス・マイナス）",
-                "icon": "Zap"
-              },
-              {
-                "title": "ヒューズホルダー・ヒューズ",
-                "description": "安全性を確保するための保護回路",
-                "icon": "Activity"
-              },
-              {
-                "title": "入出力信号ケーブル",
-                "description": "入力信号用および出力用スピーカーケーブル一式",
-                "icon": "Layers"
-              },
-              {
-                "title": "インストール・チューニング",
-                "description": "プロによる精密な設置とサウンドチューニング費用込",
-                "icon": "Wrench"
-              }
-            ],
-            "notes": [
-              "商品代金・ワイヤリング工賃・ケーブル代・調整代を含めたパッ���ージ価格です。",
-              "ドア通線などが必要な車両は別途追加が必要な場合があります。",
-              "本体の取り付け位置やバッテリーの位置によって追加費用（約5,500円〜）が発生する場合があります。",
-              "純正マルチシステム等ではチャンネル合成機能（サミング）の確認が必要です。",
-              "作業時間はほとんどの場合1日です。無料代車をご用意しています。"
-            ]
-          },
-          "lineup": [
-            {
-              "name": "MATCH / M-5.4DSP",
-              "price": "110000",
-              "image": "https://picsum.photos/seed/m54dsp/200/200"
-            },
-            {
-              "name": "MATCH / PP-62DSP",
-              "price": "110000",
-              "image": "https://picsum.photos/seed/pp62dsp/200/200"
-            },
-            {
-              "name": "MATCH / UP-7DSP",
-              "price": "165000",
-              "image": "https://picsum.photos/seed/up7dsp/200/200"
-            },
-            {
-              "name": "HELIX / V-EIGHT DSP MK2",
-              "price": "220000",
-              "image": "https://picsum.photos/seed/v8dsp/200/200"
-            },
-            {
-              "name": "PLUG&PLAY / 1080",
-              "price": "121000",
-              "image": "https://picsum.photos/seed/pp1080/200/200"
-            },
-            {
-              "name": "GOLDHORN / GDT42",
-              "price": "88000",
-              "image": "https://picsum.photos/seed/gdt42/200/200",
-              "features": [
-                "高音質DAC",
-                "コンパクト設計"
-              ]
-            }
-          ]
+          "description": "目の前にアーティストが浮かび上がるようなステージを再現。純正ナビの音に不満がある方への決定版です。"
         },
         {
-          "name": "高品位アンプレスDSPパッケージ",
-          "price": "165000",
+          "name": "メディアプレーヤー・ラインナップ",
+          "price": "66000",
           "features": [
-            "超精密サミング機能",
-            "ハイレゾデジタル入力",
-            "外部アンプ連携前提"
+            "DSD/ハイレゾ対応",
+            "USB/SSD大容量再生",
+            "DSPデジタル接続"
           ],
-          "badge": "音質至上",
-          "image": "/images/Audio/standalone_dsp.webp",
-          "description": "アンプを内蔵しないことで、ノイズの影響を極限まで排除した高音質設計。お好みの外部アンプと組み合わせて、究極のシステムを構築します。\n\n**詳細解説**: [DSP・音質制御の重要性](#/knowledge/dsp_guide)"
-        }
-      ],
-      "images": []
-    },
-    {
-      "id": "amp_power",
-      "category": "音のパワー・解像度を上げたい方へ",
-      "type": "audio",
-      "description": "音が痩せている、もっとパワーが欲しい…\n**外部アンプ**を導入し、スピーカーを強力に駆動。\n\n繊細な音からダイナミックな音まで、**余裕を持��て再生**します。",
-      "showDescriptionInMenu": true,
-      "showDescriptionInList": true,
-      "items": [
-        {
-          "name": "アンプインストベーシック",
-          "price": "55000",
-          "features": [
-            "4chパワーアンプ",
-            "高音質配線",
-            "取付工賃込パッケージ"
-          ],
-          "badge": "駆動力UP",
-          "image": "/images/Audio/amplifier_install_basic.webp",
-          "description": "「スピーカーを変えたけど、もっと良くしたい」「音に力強さが欲しい」そんな方に次にお勧めするのがパワーアンプの追加です。\n\nパワーアンプの役割は、スピーカーをしっかりとコントロールしリニアなサウンドを再生することです。それにより微細な再現力が増加し、情報量がアップします。音像の輪郭や空気感、奥行きや音のハリ、スピード感が劇的に改善されます。\n\n大音量で鳴らすためだけではなく、通常のドライブでいい音楽を楽しむためにアンプを搭載することは、さらなる臨場感の獲得、今まで感じていた目の前の霧が晴れるようなサウンドを得るために非常に有効です。ブランドやモデルによっても音作りの狙いが異なり、様々な変化を楽しめるのも魅力です。",
-          "link": "https://www.soundang.com/ampbasic-inst.html",
-          "showSavings": false,
-          "packageDetails": {
-            "standardPrice": "55000",
-            "savings": "0",
-            "contents": [
-              {
-                "title": "パワーアンプ本体",
-                "description": "お好みのブランドから選択可能（差額対応あり）",
-                "icon": "Zap"
-              },
-              {
-                "title": "電源ケーブル一式",
-                "description": "バッテリー直接配線、メインヒューズ、リモート線等",
-                "icon": "Activity"
-              },
-              {
-                "title": "音声入出力ケーブル",
-                "description": "RCAまたはスピーカー入力、スピーカー出力用配線",
-                "icon": "Music"
-              },
-              {
-                "title": "取付・ワイヤリング",
-                "description": "アンプ設置ボード製作、内装脱着、配線引き回し工賃込",
-                "icon": "Wrench"
-              }
-            ],
-            "notes": [
-              "車種により追加費用が必要な場合があります。",
-              "ヘッドユニットにRCA出力がない場合は、ハイレベル入力対応アンプの使用やハイローコンバーターの追加が可能です。",
-              "このパッケージは現金でのお支払いとなります。詳しくはお問い合わせください。",
-              "作業は1〜2日お預かりとなります。無料代車をご用意しています。"
-            ]
-          },
-          "lineup": [
-            {
-              "name": "ZAPCO / HELIX / KICKER 等",
-              "description": "世界的な定番ブランド。力強く正確なドライブが魅力。"
-            },
-            {
-              "name": "ATOMO2 / ETON POWER220.4",
-              "description": "小型ながら高音質。設置場所を選ばない最新モデル。"
-            },
-            {
-              "name": "PRS-D800 / ARCA ATOMO4",
-              "description": "解像度重視の国産・海外ブランド。繊細な表現力。"
-            },
-            {
-              "name": "MOSCONI GLADEN PRO / DLS",
-              "description": "ハイエンドな質感。音楽性を重視する方へ。"
-            }
-          ]
+          "badge": "Next Source",
+          "image": "/images/Audio/media_player_lecture.png",
+          "description": "スマホやCDを超えた、次世代のメインソース。最高鮮度のデジタル信号をシステムへ送り込みます。"
         },
         {
-          "name": "省スペース”小型”パワーアンプパッケージ",
-          "price": "33000",
-          "features": [
-            "コンパクト設置",
-            "省電力設計",
-            "取付工賃込パッケージ"
-          ],
-          "badge": "スマート導入",
-          "image": "/images/Audio/compact_amplifier_package.webp",
-          "description": "最近は小型省エネながら高音質なパワーアンプが数々登場してきました。パワーアンプの取り付けには取り付けスペースと消費電力アップなどの問題が絡んできます。\n\nとくに近年は充電制御された車両が多く、思ったほどバッテリーのリカバリーがスムーズにされない場合もあり、バッテリーあがりを懸念してパワーアンプ導入をためらうユーザーも少なくありません。ここでは省電力でなおかつ小型の高音質パワーアンプを取付込みにてご提案します。",
-          "link": "https://www.soundang.com/miniamp.html",
-          "showSavings": false,
-          "packageDetails": {
-            "standardPrice": "33000",
-            "savings": "0",
-            "contents": [
-              {
-                "title": "パワーアンプ本体",
-                "description": "小型・高効率なDクラスアンプ等から選択",
-                "icon": "Zap"
-              },
-              {
-                "title": "ワイヤリング工賃",
-                "description": "バッテリー直接配線（バッ直）を含む標準取付工賃",
-                "icon": "Wrench"
-              },
-              {
-                "title": "電源アクセサリー",
-                "description": "電源ケーブル、ヒューズホルダー、端子類一式",
-                "icon": "Activity"
-              },
-              {
-                "title": "信号・出力ケーブル",
-                "description": "RCAケーブル、スピーカーケーブル等",
-                "icon": "Music"
-              }
-            ],
-            "notes": [
-              "スピーカーケーブルワイヤリングは純正スピーカーの場合はナビ裏まで、スピーカー交換済みの場合は付属のネットワークまでのワイヤリングとなります。",
-              "ドア通線を伴うワイヤリングが必要な場合は別途11,000円が必要となります。（ドア通線がカプラー方式の場合は別途加工賃が必要となります。）",
-              "車種により追加パーツが必要な場合があります。",
-              "作業時間は半日〜1日程度です。無料代車をご用意しています。"
-            ]
-          },
-          "lineup": [
-            {
-              "name": "VIBE / POWERBOX65.4M-V7",
-              "description": "超小型ながらパワフルな4chアンプ。"
-            },
-            {
-              "name": "Pioneer / GM-D1400-2",
-              "description": "コンソール内に収まるコンパクト設計の定番モデル。"
-            },
-            {
-              "name": "MATCH / M2.1AMP",
-              "description": "ドイツ製。ハイレゾ対応の超小型2chアンプ。"
-            },
-            {
-              "name": "Ground Zero / GZ-MINI",
-              "description": "高音質とパワーを両立したミニシリーズ。"
-            },
-            {
-              "name": "KICKER / KEY200.4",
-              "description": "自動音場補正DSP機能を内蔵した画期的な小型アンプ。"
-            },
-            {
-              "name": "MOSCONI / ATOMO2",
-              "description": "イタリア製。マッチ箱サイズのハイエンドアンプ。"
-            },
-            {
-              "name": "PLUG&PLAY / 1080",
-              "description": "純正オーディオにカプラーオンで接続可能なモデル。"
-            }
-          ]
-        }
-      ],
-      "images": []
-    },
-    {
-      "id": "source_headunit",
-      "category": "最新機能を追加したい・ソースを良くしたい方へ",
-      "type": "audio",
-      "description": "機能が古い、音源の質を上げたい…\n**高音質ユニット**への交換で、音源の読み取り精度を向上。\n\n**上質な信号**をシステム全体に送り出します。",
-      "showDescriptionInMenu": true,
-      "showDescriptionInList": true,
-      "items": [
-        {
-          "name": "ナビゲーションの頂点【サイバーナビ】で楽しむ！",
+          "name": "最高峰ナビ【サイバーナビ】プラン",
           "price": "220000",
           "features": [
-            "最高峰の音質",
-            "ネットワーク機能",
-            "エンタメ進化"
+            "究極の音質",
+            "動画配信/Wi-Fi対応",
+            "調整工賃込"
           ],
-          "badge": "究極のソース",
+          "badge": "究極のナビ",
           "image": "https://picsum.photos/seed/cyber-navi/800/600",
-          "description": "LTE回線による高速インターネットを装備したカーナビ、カロッツェリア「サイバーナビ」シリーズ。いままでになかった新たな領域へカーナビが進化しました。\n\nナビ性能・音質・さらに次世代のエンターテイメント機能を手に入れた唯一無二の存在です。当店では、プロによる確実なインストールと緻密なサウンド調整を含めた「サイバーナビパッケージ」をご用意しました。サイバーナビの持つ真��ポテンシ��ルを最大限に引き出します。",
-          "showSavings": false,
-          "packageDetails": {
-            "standardPrice": "220000",
-            "savings": "0",
-            "contents": [
-              {
-                "title": "サイバーナビ本体",
-                "description": "最新の912Ⅳシリーズ（DCモデルまたは通常モデル）",
-                "icon": "Music"
-              },
-              {
-                "title": "ナビインストール費用",
-                "description": "車両への確実な設置とワイヤリング",
-                "icon": "Wrench"
-              },
-              {
-                "title": "サウンド調整",
-                "description": "サイバーナビの高度な調整機能を活かしたプロのセッティング",
-                "icon": "Activity"
-              },
-              {
-                "title": "ネットワーク設定",
-                "description": "DCモデルの場合の通信設定サポート",
-                "icon": "Zap"
-              }
-            ],
-            "notes": [
-              "別途、車種ごとの取付金具・配線キットが必要です。",
-              "9インチ・8インチモデルは電源ケーブルが同梱されていないため、別途必要です。",
-              "スピーカー接続は「フロント・リア接続」または「フロントマルチ接続」から選択可能です。",
-              "適合不可な車種でも、加工により他サイズを施工できる場合があります。ご相談ください。",
-              "車種により追加工賃が発生する場合があります。"
-            ]
-          },
-          "lineup": [
-            {
-              "name": "サイバーナビDC (ネットワークスティック同梱)",
-              "price": "220000",
-              "description": "エンターテイメントを楽しみ尽くすプラン。912Ⅳ-DCシリーズ。車内がWi-Fiスポットに。",
-              "image": "https://picsum.photos/seed/cyber-dc/400/300"
-            },
-            {
-              "name": "サイバーナビ (ネットワークスティックレス)",
-              "price": "198000",
-              "description": "ネットワークスティックを省いたお手軽プラン。後からスティックを追加することも可能です。",
-              "image": "https://picsum.photos/seed/cyber-std/400/300"
-            },
-            {
-              "name": "対応モデル：CQ912-4DC / CL912-4DC / CW912-4DC / CZ912-4DC",
-              "price": "0",
-              "description": "9インチから7インチまで、お車に最適なサイズをラインナップ。",
-              "image": "https://picsum.photos/seed/cyber-lineup/400/300"
-            }
-          ]
+          "description": "ナビ性能・音質・エンターテイメントを極めた唯一無二の存在。"
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "install_tuning",
+      "category": "デッドニング・施工・電源",
+      "type": "audio",
+      "description": "機材の性能を100%引き出す。**ドアチューニング**による環境整備と、**電源強化**による安定駆動を実現します。",
+      "showDescriptionInMenu": true,
+      "showDescriptionInList": true,
+      "items": [
+        {
+          "name": "ドア・チューニング（デッドニング）",
+          "price": "22000",
+          "features": [
+            "不要振動の抑制",
+            "背圧コントロール",
+            "音質劇変"
+          ],
+          "badge": "必須施工",
+          "image": "/images/dorareko.webp",
+          "description": "ドアを「スピーカーボックス」へと作り替える重要工程。音の締まりと厚みが別次元に変わります。"
         },
         {
-          "name": "ヘッドユニット/プロセッサー",
-          "price": "110000",
+          "name": "電源強化・アップグレードプラン",
+          "price": "33000",
           "features": [
-            "1DIN/2DIN高音質機",
-            "デジタル出力"
+            "バッ直配線",
+            "ロスの低減",
+            "解像度向上"
           ],
-          "badge": "ピュアオーディオ",
-          "image": "/images/speaker.webp"
+          "badge": "基盤強化",
+          "image": "/images/dorareko.webp",
+          "description": "オーディオの源、電気の流れを最適化。ノイズを減らし、アンプやDSPの真価を引き出します。"
         }
       ],
       "images": []
@@ -930,7 +314,7 @@
           ],
           "badge": "純正交換",
           "image": "https://picsum.photos/seed/bmw-audio/800/600",
-          "description": "BMWの音質にお悩みの方に！BMWは輸入車の中でダントツに改善のご相談が多いブランドです。\n\n多くのグレードでフロントスピーカーが10cm程度と小さく、高音用のツィーターが非装着、シート下のウーハーで低音を補うシステムになっています。このため、音がこもりがちでメリハリが足りないと感じるオーナー様が多いのが現状です。\n\n加工を抑え、安価かつ効果的に音質改善する方法として「トレードインスピーカー」への交換をご提案します。ツィーターの追加やシート下ウーハーの交換により、BMW本来の走りに見合うハリのあるサウンドへと生まれ変わります���",
+          "description": "BMWの音質にお悩みの方に！BMWは輸入車の中でダントツに改善のご相談が多いブランドです。\n\n多くのグレードでフロントスピーカーが10cm程度と小さく、高音用のツィーターが非装着、シート下のウーハーで低音を補うシステムになっています。このため、音がこもりがちでメリハリが足りないと感じるオーナー様が多いのが現状です。\n\n加工を抑え、安価かつ効果的に音質改善する方法として「トレードインスピーカー」への交換をご提案します。ツィーターの追加やシート下ウーハーの交換により、BMW本来の走りに見合うハリのあるサウンドへと生まれ変わります。",
           "showSavings": false,
           "packageDetails": {
             "standardPrice": "77000",
@@ -3185,5 +2569,5 @@
     "media_player_guide": "/images/Top/media_player_lecture.png",
     "hires_guide": "/images/Top/hires_guide.png"
   },
-  "cacheVersion": "9"
+  "cacheVersion": "10"
 }

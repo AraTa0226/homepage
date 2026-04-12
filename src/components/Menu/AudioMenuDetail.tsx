@@ -44,7 +44,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
   const { assets } = useSite();
   const { plans, optionals, guides, audioRecruitment, auditionSpeakers } = usePrices();
   const { planSlug } = useParams<{ planSlug: string }>();
-  const [activeCategory, setActiveCategory] = useState<'all' | 'speaker_exchange' | 'bass_enhancement' | 'dsp_control' | 'amp_power' | 'source_headunit' | 'media_player' | 'car_specific' | 'environment_tuning' | 'performance_up'>('all');
+  const [activeCategory, setActiveCategory] = useState<'all' | 'speaker_package' | 'bass_power' | 'digital_source' | 'install_tuning'>('all');
   const [viewingFullList, setViewingFullList] = useState<string | null>(null);
   const [viewingCategoryDetail, setViewingCategoryDetail] = useState<string | null>(null);
   const [selectedItem, setSelectedItem] = useState<any | null>(null);
@@ -85,15 +85,15 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
 
 
   const categoryExplanations: Record<string, any> = {
-    speaker_exchange: {
-      title: "純正の音に不満がある方へ",
-      subtitle: "**音がこもる**、**はっきりしない**…",
-      description: "**スピーカー交換**で驚くほど**クリア**に変わります。\n\n選べる**5つのプラン**をご用意しています。",
-      sampleDescription: "【施工例】FOCAL K2 Power への交換：純正では埋もれていた高域が鮮明になり、ボーカルの息遣いまで感じられるようになります。専用バッフルとデッドニングを組み合わせることで、ドア全体がスピーカーボックスとして機能し、引き締まった低音を実現します。",
+    speaker_package: {
+      title: "スピーカー交換・車種別プラン",
+      subtitle: "**音を良くする第一歩**、愛車に**ピッタリ**の音を…",
+      description: "加工を最小限に抑えつつ、劇的な音質向上を実現する**車種別プラン**と、国内外のスピーカーから選べる**交換パッケージ**を統合。",
+      sampleDescription: "【施工例】BMW専用スピーカー交換：内装の意匠を一切変えることなく、中高域の解像度を大幅に向上。専用設計のため、車両へのダメージも最小限に抑えられます。",
       benefits: [
-        "中高域の透明感と解像度が向上",
-        "ボーカルが目の前で歌っているような臨場感",
-        "純正では聴こえなかった楽器の音が聴こえる"
+        "車両の配線加工が不要な安心のインストール",
+        "内装の雰囲気を一切壊さない純正ルックな仕上がり",
+        "国内外のブランドからお好みの音を選択可能"
       ],
       image: assets.audioMenuImage,
       icon: Speaker,
@@ -103,14 +103,14 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
         { title: "ツィーター埋め込み加工", price: "+¥33,000〜", icon: Settings2, description: "Aピラー等に最適な角度で設置。理想的なステージングを実現します。" }
       ]
     },
-    bass_enhancement: {
-      title: "低音を強化したい方へ",
-      subtitle: "**音が軽くて物足りない**、**躍動感**が欲しい…",
-      description: "**サブウーファーの追加**で、音楽の土台となる**厚みと迫力**をプラスします。\n\nお好みに合わせたシステムをご提案します。",
-      sampleDescription: "【施工例】シート下パワードサブウーファー設置：スペースを犠牲にすることなく、不足していた低音の厚みを補完。ドアスピーカーの負担が減ることで、中高域のクリアさも同時に向上します。",
+    bass_power: {
+      title: "低音強化・パワーアップ",
+      subtitle: "**低音の躍動感**と、音全体の**鮮明さ・パワー**を…",
+      description: "**サブウーファー**による重低音の追加と、**外部アンプ**による強力なスピーカー駆動を統合。音楽の表現力を別次元へ引き上げます。",
+      sampleDescription: "【施工例】パワードサブウーファー＋小型アンプ設置：スペースを犠牲にすることなく、不足していた低音の厚みを補完し、解像度を劇的に向上させます。",
       benefits: [
-        "音楽全体の厚みと迫力の向上",
-        "フロントスピーカーの負担軽減による音質改善",
+        "音楽全体の厚みと躍動感の向上",
+        "アンプによる歪みのないクリアな再生",
         "ライブ会場のような空気感の再現"
       ],
       image: assets.audioMenuImage,
@@ -121,130 +121,40 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
         { title: "トランク埋め込み加工", price: "+¥88,000〜", icon: Settings2, description: "車両の形状に合わせてカスタム製作。荷室を有効活用しながら高音質を両立。" }
       ]
     },
-    dsp_control: {
-      title: "音を整えたい・臨場感を出したい方へ",
-      subtitle: "**音がバラバラ**な位置から聞こえる、自分だけの**特等席**で聴きたい…",
-      description: "**DSP（デジタルプロセッサー）**で音のタイミングを緻密に補正。\n\nダッシュボード上にアーティストが浮かび上がるような**音像**を創ります。",
-      sampleDescription: "【施工例】HELIX V-EIGHT DSP 導入：フロント3ウェイ＋サブウーファーをこれ1台で制御。各スピーカーの音の到達時間を完璧に揃えることで、まるで目の前でバンドが演奏しているかのような定位感を実現します。",
+    digital_source: {
+      title: "デジタル・音質制御",
+      subtitle: "純正システムを活かし、**究極の定位**と**高鮮度再生**を…",
+      description: "**DSP（プロセッサー）**、**高音質ナビ**、**メディアプレーヤー**を統合。純正システムの制限を解除し、アーティストが目の前に浮かび上がる感動を創ります。",
+      sampleDescription: "【施工例】DSP＋メディアプレーヤー導入：純正ナビを活かしたまま、スマホやDAPからのデジタル高鮮度再生を実現。完璧な音像定位と圧倒的な解像度を両立します。",
       benefits: [
         "ダッシュボード中央に定位する正確な音像",
-        "車内環境に合わせた緻密な周波数補正",
-        "純正ナビの音をハイエンドオーディオ級へ昇華"
+        "ハイレゾ音源のポテンシャルを100%引き出すデジタル接続",
+        "純正ナビやDAの音質制限を無視できる高音質ソース"
       ],
       image: assets.audioMenuImage,
       icon: Zap,
       color: "purple",
       upgrades: [
-        { title: "外部アンプ追加", price: "+¥55,000〜", icon: Zap, description: "より強力なドライブ力で、スピーカーのポテンシャルを100%引き出します。" },
-        { title: "ハイレゾ対応入力", price: "+¥22,000〜", icon: Music, description: "DAPやスマホからのハイレゾ音源を劣化なく再生可能にします。" }
+        { title: "高精度外部クロック", price: "¥44,000〜", icon: Activity, description: "音の滲みを極限まで排除し、より深いリアリティを実現。" },
+        { title: "大容量SSD換装", price: "¥22,000〜", icon: Layers, description: "巨大なライブラリーを車載。全コレクションを常に携帯。" }
       ]
     },
-    amp_power: {
-      title: "音のパワー・解像度を上げたい方へ",
-      subtitle: "**音に力強さがない**、ボリュームを上げると**音が歪む**…",
-      description: "**外部アンプ**を導入し、スピーカーを強力に駆動。\n\n繊細な音からダイナミックな音まで、**余裕を持って再生**します。",
-      sampleDescription: "【施工例】小型パワーアンプ設置：純正ナビの裏側やシート下に設置可能なコンパクトサイズながら、純正内蔵アンプとは比較にならない鮮明さとパワーを実現します。",
+    install_tuning: {
+      title: "施工・環境チューニング",
+      subtitle: "機材の性能を**120%**引き出し、**快適な車内空間**を…",
+      description: "**デッドニング**や**電源強化**、物理的な環境改善を統合。ロードノイズを抑え、オーディオ機材の真価を発揮させるための必須施工です。",
+      sampleDescription: "【施工例】フルデッドニング＋バッ直配線：ロードノイズを大幅に低減し、静寂の中に音楽が浮かび上がる環境を構築。電源強化により音の立ち上がりも激変します。",
       benefits: [
-        "スピーカーのポテンシャルをフルに引き出す駆動力",
-        "大音量でも歪みのないクリアな再生",
-        "音の立ち上がりが鋭くなり、躍動感が向上"
-      ],
-      image: assets.audioMenuImage,
-      icon: Volume2,
-      color: "orange",
-      upgrades: [
-        { title: "高品位ケーブル採用", price: "+¥11,000〜", icon: Zap, description: "アンプの性能をロスなくスピーカーへ伝えるための高品質配線。" },
-        { title: "キャパシタ追加", price: "+¥22,000〜", icon: Zap, description: "電源供給を安定させ、低域の瞬発力をさらに高めます。" }
-      ]
-    },
-    source_headunit: {
-      title: "最新機能を追加したい・ナビを良くしたい方へ",
-      subtitle: "ナビの音質に**限界**を感じる、**ブルーレイ/DVD**を最高の状態で観たい…",
-      description: "**高音質ナビ**への交換で、音源の読み取り精度を向上。\n\n**上質な信号**をシステム全体に送り出します。",
-      sampleDescription: "【施工例】サイバーナビ導入：市販ナビ最高峰のオーディオ回路を搭載。ハイレゾ音源の再生はもちろん、CDや圧縮音源も高音質に補正して再生します。",
-      benefits: [
-        "音の入口からの純度向上",
-        "ナビ機能の最新化",
-        "外部機器との連携強化"
-      ],
-      image: assets.audioMenuImage,
-      icon: Music,
-      color: "blue",
-      upgrades: [
-        { title: "外部DAP接続", price: "¥11,000〜", icon: Music, description: "お持ちのハイレゾプレーヤーをデジタル接続し、最高音質で車内再生。" },
-        { title: "高音質USBケーブル", price: "¥5,500〜", icon: Zap, description: "デジタル信号のノイズを低減し、音の鮮度を保ちます。" }
-      ]
-    },
-    media_player: {
-      title: "最先端のデジタル再生を楽しみたい方へ",
-      subtitle: "スマホやDAPではなく、**車載専用**のプレーヤーで究極を求める…",
-      description: "**メディアプレーヤー**の導入で、純正システムを活かしたまま**ハイレゾ本来の音**を再生。\n\nDSPへのデジタル入力により、純正オーディオの制限を完全に排除します。",
-      sampleDescription: "【施工例】GOLDHORN GTS3 導入：最高峰DACチップを搭載したプレーヤーをDSPへデジタル入力。純正ナビの音を通さない「ピュアなデジタル伝送」により、圧倒的な解像度と静寂を実現します。",
-      benefits: [
-        "純正ナビやDAの音質制限を無視できるデジタル接続",
-        "大容量SSDやDSD512等の超ハイレゾ音源に対応",
-        "車載専用設計によるエンジン連動と安定した操作性"
-      ],
-      image: assets.audioMenuImage,
-      icon: Play,
-      color: "indigo",
-      upgrades: [
-        { title: "外部クロック追加", price: "¥440,000〜", icon: Activity, description: "超高精度クロックとの同期により、音の滲みを極限まで排除。より深いリアリティへ。" },
-        { title: "大容量SSD換装", price: "¥22,000〜", icon: Layers, description: "数TBのライブラリーを車載。全てのコレクションを常に携帯可能です。" }
-      ]
-    },
-    car_specific: {
-      title: "自分の車に最適なプランを知りたい方へ",
-      subtitle: "自分の車に**何が合うかわからない**、車を**傷つけずに**音を良くしたい…",
-      description: "**車種専用設計**のパッケージで、加工を最小限に抑えつつ**最大限の効果**を発揮。\n\n安心のインストールをご提案します。",
-      sampleDescription: "【施工例】BMW 3シリーズ専用スピーカー交換：純正の意匠を一切変えることなく、中高域の解像度を大幅に向上。専用設計のため、車両へのダメージも最小限に抑えられます。",
-      benefits: [
-        "車両の配線加工が不要な安心のインストール",
-        "内装の雰囲気を一切壊さない純正ルックな仕上がり",
-        "その車種の音響特性に合わせて専用チューニング済み"
-      ],
-      image: assets.audioMenuImage,
-      icon: Car,
-      color: "green",
-      upgrades: [
-        { title: "専用DSP追加", price: "¥110,000〜", icon: Zap, description: "車種専用スピーカーにDSPをプラス。純正オーディオの限界を超えた音場へ。" },
-        { title: "専用サブウーファー", price: "¥66,000〜", icon: Music, description: "シート下やトランクの純正位置に収まる、車種専用設計の低音強化。" }
-      ]
-    },
-    environment_tuning: {
-      title: "静かにしたい・環境を整えたい方へ",
-      subtitle: "**ロードノイズ**が気になる、環境を整えて**性能を出し切りたい**…",
-      description: "**デッドニング**や**遮音施工**で、物理的な環境を改善。\n\n機材のポテンシャルを**120%引き出し**、快適な車内空間を作ります。",
-      sampleDescription: "【施工例】Aピラー・ツィーター埋め込み加工：純正のピラーを加工し、スエードやレザーで仕上げ。理想的なリスニングポジションへの音響設計により、圧倒的なステージングを実現します。",
-      benefits: [
-        "理想的なリスニングポジションへの音響設計",
-        "音抜けが劇的に改善し、クリアな音場に",
-        "愛車の内装に合わせた、高級感のある仕上がり"
+        "機材のポテンシャルをフルに引き出す音響設計",
+        "ロードノイズ低減による快適性の向上",
+        "電源安定化による圧倒的なS/N感と躍動感"
       ],
       image: assets.audioMenuImage,
       icon: Shield,
       color: "orange",
       upgrades: [
-        { title: "ドアチューニング（デッドニング）", price: "¥33,000〜", icon: Shield, description: "ドアをスピーカーボックスとして最適化。" },
-        { title: "サイレントチューニング", price: "¥55,000〜", icon: Volume2, description: "ロードノイズを低減し、静かな車内環境を構築。" }
-      ]
-    },
-    performance_up: {
-      title: "性能を更に引き出すアレコレ",
-      subtitle: "**電源**を改善して、機材の性能を**120%**引き出したい…",
-      description: "**電源の質**は音質に直結します。バッ直配線やキャパシタ、仮想アースで**S/Nと解像度**を劇的に向上させます。",
-      sampleDescription: "【施工例】ハイグレードバッ直（レグザット）施工：純正の細い電源線から、オーディオ専用の極太・高純度ケーブルへ変更。音の立ち上がりが鋭くなり、今まで聴こえなかった微細な音が浮かび上がります。",
-      benefits: [
-        "機材が安定動作し、ステレオイメージが鮮明に",
-        "ノイズが抑制され、静寂の中から音が立ち上がる",
-        "低域の瞬発力とタイトな再現性が向上"
-      ],
-      image: assets.audioMenuImage,
-      icon: Zap,
-      color: "red",
-      upgrades: [
-        { title: "高音質ヒューズへ変更", price: "+¥5,500〜", icon: Zap, description: "接点ロスを極限まで抑え、鮮度を向上。" },
-        { title: "端子類の金メッキ化", price: "+¥3,300〜", icon: Settings2, description: "経年劣化を防ぎ、安定した通電を維持。" }
+        { title: "ハイグレード配線", price: "+¥11,000〜", icon: Zap, description: "接点ロスや伝送ロスを極限まで抑えるプレミアムケーブル。" },
+        { title: "仮想アース追加", price: "+¥33,000〜", icon: Activity, description: "ノイズを吸収し、音の透明感をさらに向上させます。" }
       ]
     },
     deadening_opt: {
@@ -312,28 +222,18 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
   ];
 
   const purposeNav = [
-    { id: 'speaker_exchange', title: "純正の音に不満がある方へ", desc: "音がこもる、はっきりしない…を解決。", icon: Speaker, color: "blue" },
-    { id: 'bass_enhancement', title: "低音を強化したい方へ", desc: "音が軽くて物足りない、躍動感をプラス。", icon: Zap, color: "indigo" },
-    { id: 'dsp_control', title: "音を整えたい方へ", desc: "音がバラバラ、自分だけの特等席を創る。", icon: Settings2, color: "purple" },
-    { id: 'amp_power', title: "パワー・解像度向上", desc: "音に力強さがない、歪みを抑えたい。", icon: Activity, color: "orange" },
-    { id: 'source_headunit', title: "高音質ナビ追加", desc: "ナビの音質に限界、最新機能を使いたい。", icon: Music, color: "blue" },
-    { id: 'media_player', title: "メディアプレーヤー", desc: "スマホやDAPとは違う、車載専用の究極ソース。", icon: Play, color: "indigo" },
-    { id: 'car_specific', title: "車種専用プラン", desc: "自分の車に合うものが知りたい。", icon: Car, color: "green" },
-    { id: 'environment_tuning', title: "静かにしたい・環境整備", desc: "ロードノイズが気になる、環境を整えたい。", icon: Shield, color: "orange" },
-    { id: 'performance_up', title: "性能アップ・電源強化", desc: "電源改善で機材のポテンシャルを解放。", icon: Zap, color: "red" },
+    { id: 'speaker_package', title: "スピーカー交換・車種別プラン", desc: "純正の不満を解決。愛車にピッタリの音を。", icon: Speaker, color: "blue" },
+    { id: 'bass_power', title: "低音強化・パワーアップ", desc: "迫力の重低音と、鮮明な解像度をプラス。", icon: Zap, color: "indigo" },
+    { id: 'digital_source', title: "デジタル・音質制御", desc: "DSPとメディアプレーヤーで極上の音像を。", icon: Settings2, color: "purple" },
+    { id: 'install_tuning', title: "施工・環境チューニング", desc: "機材の性能を120%引き出す必須施工。", icon: Shield, color: "orange" },
     { id: 'knowledge-guide', title: "お悩み解決コラム", desc: "カーオーディオの知識や事例を読む。", icon: Info, color: "sky" },
   ];
 
   const categories = [
-    { id: 'speaker_exchange', title: "スピーカー交換", items: ["BASIC line", "STANDARD line", "PREMIUM line"], icon: Speaker },
-    { id: 'bass_enhancement', title: "低音強化", items: ["パワードウーハー", "アンプ別ウーハー"], icon: Zap },
-    { id: 'dsp_control', title: "DSP・音質制御", items: ["AMP内蔵DSP", "AMPレスDSP"], icon: Settings2 },
-    { id: 'amp_power', title: "アンプ・駆動力", items: ["外部アンプ", "小型パワーアンプ"], icon: Activity },
-    { id: 'source_headunit', title: "高音質ナビ", items: ["サイバーナビ"], icon: Music },
-    { id: 'media_player', title: "メディアプレーヤー", items: ["小型・安価モデル", "アンプ内蔵", "ハイエンド"], icon: Play },
-    { id: 'car_specific', title: "車種別プラン", items: ["BMW", "Mercedes", "国産車"], icon: Car },
-    { id: 'environment_tuning', title: "施工・デッドニング", items: ["デッドニング", "カスタム施工"], icon: Shield },
-    { id: 'performance_up', title: "性能アップ・電源", items: ["バッ直配線", "キャパシタ", "仮想アース"], icon: Zap },
+    { id: 'speaker_package', title: "スピーカー・車種別", items: ["BASIC", "STANDARD", "PREMIUM", "BMW/ベンツ"], icon: Speaker },
+    { id: 'bass_power', title: "低音・アンプ", items: ["サブウーハー", "外部アンプ"], icon: Zap },
+    { id: 'digital_source', title: "デジタル・DSP", items: ["DSP", "プレーヤー", "ナビ"], icon: Settings2 },
+    { id: 'install_tuning', title: "施工・電源", items: ["デッドニング", "電源強化"], icon: Shield },
   ];
 
   const colorClasses: Record<string, string> = {
