@@ -654,18 +654,6 @@
               "image": "https://picsum.photos/seed/gdt42/200/200"
             }
           ]
-        },
-        {
-          "name": "高品位アンプレスDSPパッケージ",
-          "price": "165000",
-          "features": [
-            "超精密サミング機能",
-            "ハイレゾデジタル入力",
-            "外部アンプ連携前提"
-          ],
-          "badge": "音質至上",
-          "image": "/images/Audio/standalone_dsp.webp",
-          "description": "アンプを内蔵しないことで、ノイズの影響を極限まで排除した高音質設計。お好みの外部アンプと組み合わせて、究極のシステムを構築します。\n\n**詳細解説**: [DSP・音質制御の重要性](#/knowledge/dsp_guide)"
         }
       ],
       "images": []
@@ -1695,19 +1683,19 @@
             {
               "name": "ドアパネル全面施工・エンクロージャー",
               "price": "250000",
-              "description": "パネル丸ごと張り替えやエンクロージャー化。音漏れ軽減や音質劇変。およそ25万円〜40万円。",
+              "description": "パネル丸ごと張り替えやエンクロージャー化。音漏れ軽減や音����激���。およそ25万円〜40万円。",
               "image": "https://picsum.photos/seed/door-full/400/300"
             },
             {
               "name": "カスタムピラーインストール（3WAY対応）",
               "price": "80000",
-              "description": "フロント3WAYに欠かせないピラー加工。スコーカーとツィーターを美しく配置。左右でおよそ8万円〜。",
+              "description": "フロント3WAYに欠かせないピラー加工。スコーカーとツィーター����しく配置。左右でおよそ8万円〜。",
               "image": "https://picsum.photos/seed/pillar-3way/400/300"
             },
             {
               "name": "カスタムコンソール・モニター加工",
               "price": "100000",
-              "description": "センターコンソール製作やモニターの埋め込み加工。利便性とデザインを両立。およそ10万円〜20万円。",
+              "description": "センターコンソール製作やモニターの埋め込み加工。利便性とデザインを両立。およそ10万�����������〜20万���。",
               "image": "https://picsum.photos/seed/console-monitor/400/300"
             }
           ]
@@ -1719,7 +1707,7 @@
       "id": "performance_up",
       "category": "性能を更に引き出すアレコレ",
       "type": "audio",
-      "description": "カーオーディオの源となる電源を改善することで、機材の性能を今よりももっと引き出す方におすすめのパーツをご紹介します。\n\n電源の質は最終的な音のステレオイメージに大きな影響を与えます。電源系にこだわることはS/Nや解像度アップに劇的な効果が現れます。",
+      "description": "カーオーディオの源となる電源を改善することで、機材の性能を今よりももっと引き出す方��������おすすめのパーツをご���介します。\n\n電源の質は最終的な音��������������������������������������の�������������テ�����オ���������メージに大�����������������������な�����������������������響を与えます。電源系にこだ���ることはS/Nや解像度アップに劇的な効果が現れます。",
       "showDescriptionInMenu": true,
       "showDescriptionInList": true,
       "items": [
@@ -1761,7 +1749,7 @@
           }
         },
         {
-          "name": "電源バッ直スタンダードコース",
+          "name": "電源バッ���スタンダードコース",
           "price": "27390",
           "features": [
             "安定供給",
@@ -1807,7 +1795,7 @@
           ],
           "badge": "音質改善",
           "image": "https://picsum.photos/seed/capacitor/800/600",
-          "description": "BAラボ BE-101J's を導入。聴感上のS/N向上、音の輪郭、スリリングでリアルな表現力、瞬発力とタイトな低域の再現性が体験できます。",
+          "description": "BAラボ BE-101J's を導入。聴感上のS/N向上、音の輪郭、スリリ��グでリアルな表現力、瞬発力とタイトな低域の再現性が体験できます。",
           "packageDetails": {
             "standardPrice": "34650",
             "savings": "0",
@@ -2115,7 +2103,7 @@
           "features": [
             "簡単取り付け",
             "広角レンズ",
-            "駐車監視対応"
+            "駐車���視対応"
           ],
           "badge": "お手楽導入",
           "image": "/images/dorareko.webp"
@@ -2212,91 +2200,6 @@
         }
       ],
       "images": []
-    },
-    {
-      "id": "media_player",
-      "category": "純正システムの音を究極に高めたい方へ",
-      "type": "audio",
-      "description": "スマホやDAPとは違う、車載専用の次世代メインソース。\n純正ナビを活かしたまま、究極のデジタルサウンドを手に入れることができます。\n\n詳細解説: [車載メディアプレーヤーの基礎知識](#/knowledge/media_player_guide)",
-      "showDescriptionInMenu": true,
-      "showDescriptionInList": true,
-      "items": [
-        {
-          "name": "小型でリーズナブルなプレーヤー",
-          "price": "66000",
-          "badge": "Entry",
-          "description": "車載メディアプレーヤーの入門として最適な、コンパクトかつ高音質なモデル。",
-          "lineup": [
-            {
-              "name": "ADONN / DSD-Z10",
-              "price": "66000",
-              "description": "DSD再生対応。USB/光/同軸出力。2TBまでのUSBメモリに対応。"
-            },
-            {
-              "name": "audio-technica / AT-HRP5",
-              "price": "104500",
-              "description": "不動の人気機。HDMI出力搭載、AK4452 DAC。1TBまでのHDD/SSD対応。"
-            },
-            {
-              "name": "GOLDHORN / P1",
-              "price": "154000",
-              "description": "3TBの大容量SSD対応。DSD256再生。AK4490 DAC搭載。"
-            }
-          ]
-        },
-        {
-          "name": "高品位アンプ内蔵型プレーヤー",
-          "price": "297000",
-          "badge": "All-in-One",
-          "description": "プレーヤー機能に強力なパワーアンプやDSPを内蔵。システムをスマートに完結させます。",
-          "lineup": [
-            {
-              "name": "GOLDHORN / P2 DSPA PRO",
-              "price": "297000",
-              "description": "8chアンプ(50Wx8)内蔵。3TB対応。映像出力でナビ画面等への表示も可能。"
-            },
-            {
-              "name": "GOLDHORN / P3 DSPA PLUS",
-              "price": "352000",
-              "description": "10ch Class Dアンプ内蔵。20ch制御対応。最新のデジタル処理で圧倒的な解像度を実現。"
-            }
-          ]
-        },
-        {
-          "name": "ハイエンド・メディアプレーヤー",
-          "price": "473000",
-          "badge": "Flagship",
-          "description": "最高峰のDACチップや回路設計を採用。究極の音質を求めるオーナー様へ。",
-          "lineup": [
-            {
-              "name": "GOLDHORN / P2 DSP PRO",
-              "price": "473000",
-              "description": "ESS9038Q2Mを6個搭載。DSD512対応。12ch RCA出力の超ド級仕様。"
-            },
-            {
-              "name": "aune / GTS1PRO",
-              "price": "352000",
-              "description": "ESS9038Q2M。DSD512。高精度外部クロック同期(i2S)に対応する純デジタル機。"
-            },
-            {
-              "name": "GOLDHORN / P3 PLUS",
-              "price": "484000",
-              "description": "ESS9038Q2M x2。最高級アナログ回路GHA1000搭載。暖かく厚みのある音色。"
-            },
-            {
-              "name": "aune / GTS2",
-              "price": "473000",
-              "description": "LDAC Bluetooth、ネットワークオーディオ対応。利便性と音質を極まったレベルで両立。"
-            },
-            {
-              "name": "aune / GTS3",
-              "price": "770000",
-              "description": "シリーズ最高峰。ESS9038PRO搭載。息を呑むようなリアリティを再現します。"
-            }
-          ]
-        }
-      ],
-      "images": []
     }
   ],
   "guides": [
@@ -2309,7 +2212,7 @@
         "多彩な接続プラン",
         "DAP/スマホ連携"
       ],
-      "image": "/images/Audio/hires_guide.png",
+      "image": "https://picsum.photos/seed/hi-res/800/600",
       "description": "ハイレゾはCDを超える高音質スペックを持っている新しい音楽ファイルです。CDの情報量を1とすると、ハイレゾは3倍から6.5倍ほど増加し、アナログテレビから4Kテレビに変わるように、細かい部分まで見通せるリアルな音場を表現できます。\n\nCDでは超えられなかった空気感や実像感が、マスター本来の音を再現するかのごとく忠実に得られるのがハイレゾの一番の魅力です。車の中でも意外と簡単に始めることができます。まずはハイレゾの世界を体験してみませんか？",
       "category": "知識・ガイド",
       "link": "https://www.soundang.com/hires.html",
@@ -2393,27 +2296,32 @@
         "DSP連携",
         "車載専用設計"
       ],
-      "image": "/images/Audio/media_player_lecture.png",
-      "description": "ナビやCDプレーヤーといったヘッドユニット交換が簡単にできたのは過去の話。最近は純正で装着されたナビゲーションは取り外すことができず、音の入口となるヘッドユニットの音質向上は困難になりました。\n\nそこで新しい選択肢となるのが「車載メディアプレーヤー」です。純正のディスプレイオーディオなどをメインソースとしてカーオーディオの拡張を進めてきた方におすすめで、基本的にはDSPとの組み合わせでシステムを構成します。\n\n光や同軸端子を使ってデジタルデータをそのままDSPへ入力することで、純正オーディオの制限を受けない圧倒的な高音質を実現。スマートフォンやDAPとは異なり、車両に設置して運転しながら楽しむことを前提に設計された、車のための新しい音楽ソースです。\n\n製品ラインナップを見る: [メディアプレーヤー製品一覧](#/prices/media_player)",
+      "image": "https://picsum.photos/seed/media-player/800/600",
+      "description": "ナビやCDプレーヤーといったヘッドユニット交換が簡単にできたのは過去の話。最近は純正で装着されたナビゲーションは取り外すことができず、音の入口となるヘッドユニットの音質向上は困難になりました。\n\nそこで新しい選択肢となるのが「車載メディアプレーヤー」です。純正のディスプレイオーディオなどをメインソースとしてカーオーディオの拡張を進めてきた方におすすめで、基本的にはDSPとの組み合わせでシステムを構成します。\n\n光や同軸端子を使ってデジタルデータをそのままDSPへ入力することで、純正オーディオの制限を受けない圧倒的な高音質を実現。スマートフォンやDAPとは異なり、車両に設置して運転しながら楽しむことを前提に設計された、車のための新しい音楽ソースです。",
       "category": "知識・ガイド",
       "packageDetails": {
         "standardPrice": "0",
         "savings": "0",
         "contents": [
           {
-            "title": "メディアプレーヤーとは？",
-            "description": "純正ナビの音質的限界を突破し、デジタル信号をダイレクトにDSPへ届ける専用機です。",
+            "title": "メディアプレーヤー本体",
+            "description": "高音質フォーマット（ハイレゾ/DSD等）対応の再生機",
             "icon": "Music"
           },
           {
-            "title": "スマホ・DAPとの違い",
-            "description": "車載専用設計のため、大容量の外部ストレージ対応や、エンジン連動の利便性が抜群です。",
+            "title": "デジタル配線",
+            "description": "光（オプティカル）や同軸（コアキシャル）でのデジタル伝送",
             "icon": "Zap"
           },
           {
-            "title": "システムアップの要",
-            "description": "DSPを司令塔とし、そこへ「最高鮮度の音」を流し込むための『最強の入口』となります。",
-            "icon": "Layers"
+            "title": "インストール・固定",
+            "description": "車両への確実な設置と電源ワイヤリング",
+            "icon": "Wrench"
+          },
+          {
+            "title": "DSP連携設定",
+            "description": "DSP側の入力切替やサウンドチューニング",
+            "icon": "Activity"
           }
         ],
         "notes": [
@@ -2426,16 +2334,24 @@
       },
       "lineup": [
         {
-          "name": "メリット1：純正システムを活かせる",
-          "description": "最近の車に多い「外せないナビ」をそのままに、音質だけを飛躍的に向上させられます。"
+          "name": "audio-technica / AT-HRP5",
+          "price": "0",
+          "description": "ハイレゾ対応メディアプレーヤー。幅広いフォーマットに対応し、安定した動作が魅力。"
         },
         {
-          "name": "メリット2：圧倒的なライブラリー量",
-          "description": "3TBまでのSSD対応機種もあり、お持ちの全音楽コレクションを車載可能です。"
+          "name": "GOLDHORN / G3シリーズ (GTS1PRO / GTS2 / GTS3)",
+          "price": "0",
+          "description": "圧倒的な高音質を誇るハイエンド・メディアプレーヤー。大容量SSDにも対応。"
         },
         {
-          "name": "メリット3：DSD512等の超ハイレゾ対応",
-          "description": "スマホでは再生が難しい極めて高品位な音源も、余すことなく再生可能です。"
+          "name": "GOLDHORN / Pシリーズ (P1 / P2PRO / P3PLUS)",
+          "price": "0",
+          "description": "コストパフォーマンスに優れたプレーヤー。DSP内蔵モデルもあり、システム構築がスムーズ。"
+        },
+        {
+          "name": "ALPINE / DSD-Z10",
+          "price": "0",
+          "description": "DSD再生に対応したハイレゾプレーヤー。繊細な音のニュアンスを余すことなく再現。"
         }
       ]
     },
@@ -2646,7 +2562,7 @@
       "description": "スピーカー交換プランには標準で付属。差額で上位プランへの変更も可能です。",
       "effect": "音の締まり向上",
       "percentage": 40,
-      "image": "/images/Audio/basic-line-coaxial.png"
+      "image": "\\images\\Audio\\basic-line-coaxial.png"
     },
     {
       "id": "cable_opt",
@@ -3159,12 +3075,10 @@
     "pitImage": "/images/Top/pitroom.webp",
     "workspaceImage": "/images/Top/workroom.webp",
     "auditionRoomImage": "/images/Top/demoroom1.webp",
-    "kyushuNo1Image": "/images/Top/kyushu_no1.webp",
-    "spsCertifiedImage": "/images/Top/sps_certified.webp",
+    "kyushuNo1Image": "/images/Top/tenpo.webp",
+    "spsCertifiedImage": "/images/Top/security.webp",
     "snaponImage": "/images/Top/tenpo.webp",
-    "batteryChargerImage": "/images/Top/pitroom.webp",
-    "media_player_guide": "/images/Top/media_player_lecture.png",
-    "hires_guide": "/images/Top/hires_guide.png"
+    "batteryChargerImage": "/images/Top/pitroom.webp"
   },
   "cacheVersion": "6"
 }
