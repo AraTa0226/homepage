@@ -57,7 +57,30 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
   const [selectedGalleryImage, setSelectedGalleryImage] = useState<string | null>(null);
   const [selectedAuditionImage, setSelectedAuditionImage] = useState<string | null>(null);
   const [showAllGuides, setShowAllGuides] = useState(false);
-  const [speakerSubTab, setSpeakerSubTab] = useState<'level' | 'car'>('level');
+  const [activeSubTab, setActiveSubTab] = useState<string>('level');
+
+  const categorySubTabs: Record<string, { id: string; label: string; en: string; info: string }[]> = {
+    speaker_package: [
+      { id: 'level', label: 'スピーカー交換プラン', en: 'Standard Packages', info: 'ご予算や音質レベルから選べる標準パッケージ' },
+      { id: 'car', label: '車種別プラン', en: 'Car-Specific', info: '軽自動車や欧州車など、特定車種に最適化されたプラン' }
+    ],
+    bass_power: [
+      { id: 'amp', label: 'アンプ・パッケージ', en: 'Amp Package', info: '音の解像度と駆動力を高める外部アンプの導入' },
+      { id: 'subwoofer', label: 'サブウーハー', en: 'Subwoofer', info: '音楽に魂を吹き込む重低音の追加' }
+    ],
+    digital_source: [
+      { id: 'dsp', label: 'DSPプロセッサー', en: 'DSP Processor', info: '純正システムを活かした緻密な音響調整' },
+      { id: 'media', label: 'プレーヤー・ナビ', en: 'Media & Navi', info: '高鮮度な再生を実現するメディアプレーヤーとナビ' }
+    ],
+    install_tuning: [
+      { id: 'tuning', label: 'デッドニング', en: 'Deadening', info: 'スピーカー本来の性能を引き出す環境整備' },
+      { id: 'power', label: '電源・静音化', en: 'Environment', info: 'ノイズ低減と安定した電力供給による音質向上' }
+    ],
+    custom_install: [
+      { id: 'craft', label: 'カスタム造形', en: 'Craftsmanship', info: 'ピラー埋め込みやバッフル製作などの匠の技' },
+      { id: 'oneoff', label: 'ワンオフ製作', en: 'One-off Build', info: 'トランク制作など、世界に一台のカスタム' }
+    ]
+  };
 
   useEffect(() => {
     // Handle planSlug from URL
@@ -1001,28 +1024,23 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                                 {renderHighlightedText(currentCategory.description || "", categoryExplanations[currentCategory.id]?.color || 'blue')}
                               </div>
 
-                              {/* Sub-category Tabs for Speaker Package in Full List */}
-                              {currentCategory.id === 'speaker_package' && (
+                              {/* Dynamic Sub-category Tabs in Full List */}
+                              {categorySubTabs[currentCategory.id] && (
                                 <div className="flex flex-col md:flex-row items-start md:items-center gap-4 py-6 border-t border-blue-600/10">
                                   <div className="flex bg-gray-900/5 p-1 rounded-2xl md:rounded-full backdrop-blur-sm border border-black/5">
-                                    <button
-                                      onClick={() => setSpeakerSubTab('level')}
-                                      className={`px-6 py-2.5 rounded-2xl md:rounded-full text-xs font-black transition-all ${speakerSubTab === 'level' ? 'bg-white text-blue-600 shadow-xl' : 'text-gray-500 hover:text-gray-700'}`}
-                                    >
-                                      スピーカー交換プラン <span className="text-[10px] opacity-70 ml-1">Standard Packages</span>
-                                    </button>
-                                    <button
-                                      onClick={() => setSpeakerSubTab('car')}
-                                      className={`px-6 py-2.5 rounded-2xl md:rounded-full text-xs font-black transition-all ${speakerSubTab === 'car' ? 'bg-white text-blue-600 shadow-xl' : 'text-gray-500 hover:text-gray-700'}`}
-                                    >
-                                      車種別プラン <span className="text-[10px] opacity-70 ml-1">Car-Specific</span>
-                                    </button>
+                                    {categorySubTabs[currentCategory.id].map(tab => (
+                                      <button
+                                        key={tab.id}
+                                        onClick={() => setActiveSubTab(tab.id)}
+                                        className={`px-6 py-2.5 rounded-2xl md:rounded-full text-xs font-black transition-all ${activeSubTab === tab.id ? 'bg-white text-blue-600 shadow-xl' : 'text-gray-500 hover:text-gray-700'}`}
+                                      >
+                                        {tab.label} <span className="text-[10px] opacity-70 ml-1">{tab.en}</span>
+                                      </button>
+                                    ))}
                                   </div>
                                   <p className="text-[11px] font-bold text-blue-600/60 flex items-center gap-2">
                                     <Info className="w-3.5 h-3.5" />
-                                    {speakerSubTab === 'level'
-                                      ? "← ご予算やお好みの音質レベルからお選びいただけます"
-                                      : "← 軽自動車や欧州車など、特定車種に最適化されたプランです"}
+                                    ← {categorySubTabs[currentCategory.id].find(t => t.id === activeSubTab)?.info}
                                   </p>
                                 </div>
                               )}
@@ -1034,7 +1052,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                       {currentCategory?.items
-                        .filter(item => currentCategory.id !== 'speaker_package' || item.subType === speakerSubTab)
+                        .filter(item => currentCategory.id === 'all' || item.subType === activeSubTab)
                         .map((item, i) => (
                           <motion.div
                             key={i}
@@ -1349,6 +1367,10 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                         onClick={() => {
                           setActiveCategory(nav.id as any);
                           setExpandedSection(nav.id);
+                          // Reset sub tab to the first one defined for the category
+                          if (categorySubTabs[nav.id]) {
+                            setActiveSubTab(categorySubTabs[nav.id][0].id);
+                          }
                           const element = document.getElementById(`section-${nav.id}`);
                           if (element) {
                             const offset = 120;
@@ -1468,34 +1490,26 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                                   {renderHighlightedText(section.description || "", categoryExplanations[section.id]?.color || 'blue')}
                                 </div>
 
-                                {/* Sub-category Tabs for Speaker Package */}
-                                {section.id === 'speaker_package' && (
+                                {/* Dynamic Sub-category Tabs */}
+                                {categorySubTabs[section.id] && (
                                   <div className="flex flex-col md:flex-row items-start md:items-center gap-4 py-6 border-t border-blue-600/10">
                                     <div className="flex bg-gray-900/5 p-1 rounded-2xl md:rounded-full backdrop-blur-sm border border-black/5">
-                                      <button
-                                        onClick={(e) => {
-                                          e.stopPropagation();
-                                          setSpeakerSubTab('level');
-                                        }}
-                                        className={`px-6 py-2.5 rounded-2xl md:rounded-full text-xs font-black transition-all ${speakerSubTab === 'level' ? 'bg-white text-blue-600 shadow-xl' : 'text-gray-500 hover:text-gray-700'}`}
-                                      >
-                                        スピーカー交換プラン <span className="text-[10px] opacity-70 ml-1">Standard Packages</span>
-                                      </button>
-                                      <button
-                                        onClick={(e) => {
-                                          e.stopPropagation();
-                                          setSpeakerSubTab('car');
-                                        }}
-                                        className={`px-6 py-2.5 rounded-2xl md:rounded-full text-xs font-black transition-all ${speakerSubTab === 'car' ? 'bg-white text-blue-600 shadow-xl' : 'text-gray-500 hover:text-gray-700'}`}
-                                      >
-                                        車種別プラン <span className="text-[10px] opacity-70 ml-1">Car-Specific</span>
-                                      </button>
+                                      {categorySubTabs[section.id].map(tab => (
+                                        <button
+                                          key={tab.id}
+                                          onClick={(e) => {
+                                            e.stopPropagation();
+                                            setActiveSubTab(tab.id);
+                                          }}
+                                          className={`px-6 py-2.5 rounded-2xl md:rounded-full text-xs font-black transition-all ${activeSubTab === tab.id ? 'bg-white text-blue-600 shadow-xl' : 'text-gray-500 hover:text-gray-700'}`}
+                                        >
+                                          {tab.label} <span className="text-[10px] opacity-70 ml-1">{tab.en}</span>
+                                        </button>
+                                      ))}
                                     </div>
                                     <p className="text-[11px] font-bold text-blue-600/60 flex items-center gap-2">
                                       <Info className="w-3.5 h-3.5" />
-                                      {speakerSubTab === 'level'
-                                        ? "← ご予算やお好みの音質レベルからお選びいただけます"
-                                        : "← 軽自動車や欧州車など、特定車種に最適化されたプランです"}
+                                      ← {categorySubTabs[section.id].find(t => t.id === activeSubTab)?.info}
                                     </p>
                                   </div>
                                 )}
@@ -1516,7 +1530,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                       >
                         <div className="p-4 md:p-0 space-y-4 md:space-y-0 md:grid md:grid-cols-3 md:gap-8">
                           {((isMobile ? section.items : section.items?.slice(0, 3)) || [])
-                            .filter(item => section.id !== 'speaker_package' || item.subType === speakerSubTab)
+                            .filter(item => activeCategory === 'all' || item.subType === activeSubTab)
                             .map((item, i) => (
                               <motion.div
                                 key={i}

@@ -129,6 +129,7 @@
         {
           "name": "お手軽低音増強セット",
           "price": "42000",
+          "subType": "subwoofer",
           "badge": "パワードウーハー",
           "features": [
             "シート下設置可",
@@ -140,6 +141,7 @@
         {
           "name": "アンプインスト・パッケージ",
           "price": "55000",
+          "subType": "amp",
           "badge": "駆動力UP",
           "features": [
             "4chパワーアンプ",
@@ -151,6 +153,7 @@
         {
           "name": "お手軽低音増強セット”プラス”",
           "price": "110000",
+          "subType": "subwoofer",
           "badge": "本格低音",
           "features": [
             "BOX+ウーハー",
@@ -162,6 +165,7 @@
         {
           "name": "本格サブウーハーインストール",
           "price": "ASK",
+          "subType": "subwoofer",
           "badge": "重低音増強",
           "features": [
             "本格的重低音",
@@ -173,6 +177,7 @@
         {
           "name": "省スペース”小型”パワーアンプパッケージ",
           "price": "33000",
+          "subType": "amp",
           "badge": "スマート導入",
           "features": [
             "コンパクト設置",
@@ -194,6 +199,7 @@
         {
           "name": "アンプ内蔵DSPパッケージ",
           "price": "110000",
+          "subType": "dsp",
           "badge": "音像定位",
           "features": [
             "純正ナビ連動",
@@ -205,6 +211,7 @@
         {
           "name": "メディアプレーヤー・ラインナップ",
           "price": "66000",
+          "subType": "media",
           "badge": "Next Source",
           "features": [
             "DSD/ハイレゾ対応",
@@ -216,6 +223,7 @@
         {
           "name": "最高峰ナビ【サイバーナビ】プラン",
           "price": "220000",
+          "subType": "media",
           "badge": "究極のナビ",
           "features": [
             "究極の音質",
@@ -237,6 +245,7 @@
         {
           "name": "ドア・チューニング（デッドニング）",
           "price": "22000",
+          "subType": "tuning",
           "badge": "必須施工",
           "features": [
             "振・吸音・拡散・遮音",
@@ -248,6 +257,7 @@
         {
           "name": "サイレントチューニング(車内静音施工)",
           "price": "19800",
+          "subType": "tuning",
           "badge": "静粛性UP",
           "features": [
             "ロードノイズ低減",
@@ -258,6 +268,7 @@
         {
           "name": "電源バッ直・キャパシター・アース",
           "price": "25300",
+          "subType": "power",
           "badge": "電源環境",
           "features": [
             "ハイグレード配線",
@@ -278,6 +289,7 @@
         {
           "name": "ツィーターピラー埋め込み加工",
           "price": "46200",
+          "subType": "craft",
           "badge": "魅せる設置",
           "features": [
             "ピラー埋め込み加工",
@@ -288,6 +300,7 @@
         {
           "name": "オリジナルアウターバッフル製作",
           "price": "107800",
+          "subType": "craft",
           "badge": "理想の音抜け",
           "features": [
             "音抜け改善",
@@ -298,6 +311,7 @@
         {
           "name": "カスタムインストール・ワンオフ製作",
           "price": "ASK",
+          "subType": "oneoff",
           "badge": "完全オーダー",
           "features": [
             "トランクカスタム",
