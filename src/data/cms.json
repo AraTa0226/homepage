@@ -128,16 +128,81 @@
       "showDescriptionInList": true,
       "items": [
         {
-          "name": "お手軽低音増強セット",
-          "price": "42000",
-          "subType": "subwoofer",
-          "badge": "パワードウーハー",
+          "name": "省スペース”小型”パワーアンプパッケージ",
+          "price": "33000",
+          "subType": "amp",
+          "badge": "スマート導入",
           "features": [
-            "シート下設置可",
-            "アンプ内蔵タイプ",
-            "取付工賃込"
+            "コンパクト設置",
+            "省電力設計",
+            "取付工賃込パッケージ"
           ],
-          "image": "/images/Audio/easy_bass_package.webp"
+          "image": "/images/Audio/compact_amplifier_package.webp",
+          "description": "最近は小型省エネながら高音質なパワーアンプが数々登場してきました。パワーアンプの取り付けには取り付けスペースと消費電力アップなどの問題が絡んできます。\n\nとくに近年は充電制御された車両が多く、思ったほどバッテリーのリカバリーがスムーズにされない場合もあり、バッテリーあがりを懸念してパワーアンプ導入をためらうユーザーも少なくありません。ここでは省電力でなおかつ小型の高音質パワーアンプを取付込みにてご提案します。",
+          "link": "https://www.soundang.com/miniamp.html",
+          "showSavings": false,
+          "packageDetails": {
+            "standardPrice": "33000",
+            "savings": "0",
+            "contents": [
+              {
+                "title": "パワーアンプ本体",
+                "description": "小型・高効率なDクラスアンプ等から選択",
+                "icon": "Zap"
+              },
+              {
+                "title": "ワイヤリング工賃",
+                "description": "バッテリー直接配線（バッ直）を含む標準取付工賃",
+                "icon": "Wrench"
+              },
+              {
+                "title": "電源アクセサリー",
+                "description": "電源ケーブル、ヒューズホルダー、端子類一式",
+                "icon": "Activity"
+              },
+              {
+                "title": "信号・出力ケーブル",
+                "description": "RCAケーブル、スピーカーケーブル等",
+                "icon": "Music"
+              }
+            ],
+            "notes": [
+              "スピーカーケーブルワイヤリングは純正スピーカーの場合はナビ裏まで、スピーカー交換済みの場合は付属のネットワークまでのワイヤリングとなります。",
+              "ドア通線を伴うワイヤリングが必要な場合は別途11,000円が必要となります。（ドア通線がカプラー方式の場合は別途加工賃が必要となります。）",
+              "車種により追加パーツが必要な場合があります。",
+              "作業時間は半日〜1日程度です。無料代車をご用意しています。"
+            ]
+          },
+          "lineup": [
+            {
+              "name": "VIBE / POWERBOX65.4M-V7",
+              "description": "超小型ながらパワフルな4chアンプ。"
+            },
+            {
+              "name": "Pioneer / GM-D1400-2",
+              "description": "コンソール内に収まるコンパクト設計の定番モデル。"
+            },
+            {
+              "name": "MATCH / M2.1AMP",
+              "description": "ドイツ製。ハイレゾ対応の超小型2chアンプ。"
+            },
+            {
+              "name": "Ground Zero / GZ-MINI",
+              "description": "高音質とパワーを両立したミニシリーズ。"
+            },
+            {
+              "name": "KICKER / KEY200.4",
+              "description": "自動音場補正DSP機能を内蔵した画期的な小型アンプ。"
+            },
+            {
+              "name": "MOSCONI / ATOMO2",
+              "description": "イタリア製。マッチ箱サイズのハイエンドアンプ。"
+            },
+            {
+              "name": "PLUG&PLAY / 1080",
+              "description": "純正オーディオにカプラーオンで接続可能なモデル。"
+            }
+          ]
         },
         {
           "name": "アンプインスト・パッケージ",
@@ -149,7 +214,72 @@
             "バッ直配線工賃込",
             "解像度劇的向上"
           ],
-          "image": "/images/Audio/amplifier_install_basic.webp"
+          "image": "/images/Audio/amplifier_install_basic.webp",
+          "description": "「スピーカーを変えたけど、もっと良くしたい」「音に力強さが欲しい」そんな方に次にお勧めするのがパワーアンプの追加です。\n\nパワーアンプの役割は、スピーカーをしっかりとコントロールしリニアなサウンドを再生することです。それにより微細な再現力が増加し、情報量がアップします。音像の輪郭や空気感、奥行きや音のハリ、スピード感が劇的に改善されます。\n\n大音量で鳴らすためだけではなく、通常のドライブでいい音楽を楽しむためにアンプを搭載することは、さらなる臨場感の獲得、今まで感じていた目の前の霧が晴れるようなサウンドを得るために非常に有効です。ブランドやモデルによっても音作りの狙いが異なり、様々な変化を楽しめるのも魅力です。",
+          "link": "https://www.soundang.com/ampbasic-inst.html",
+          "showSavings": false,
+          "packageDetails": {
+            "standardPrice": "55000",
+            "savings": "0",
+            "contents": [
+              {
+                "title": "パワーアンプ本体",
+                "description": "お好みのブランドから選択可能（差額対応あり）",
+                "icon": "Zap"
+              },
+              {
+                "title": "電源ケーブル一式",
+                "description": "バッテリー直接配線、メインヒューズ、リモート線等",
+                "icon": "Activity"
+              },
+              {
+                "title": "音声入出力ケーブル",
+                "description": "RCAまたはスピーカー入力、スピーカー出力用配線",
+                "icon": "Music"
+              },
+              {
+                "title": "取付・ワイヤリング",
+                "description": "アンプ設置ボード製作、内装脱着、配線引き回し工賃込",
+                "icon": "Wrench"
+              }
+            ],
+            "notes": [
+              "車種により追加費用が必要な場合があります。",
+              "ヘッドユニットにRCA出力がない場合は、ハイレベル入力対応アンプの使用やハイローコンバーターの追加が可能です。",
+              "このパッケージは現金でのお支払いとなります。詳しくはお問い合わせください。",
+              "作業は1〜2日お預かりとなります。無料代車をご用意しています。"
+            ]
+          },
+          "lineup": [
+            {
+              "name": "ZAPCO / HELIX / KICKER 等",
+              "description": "世界的な定番ブランド。力強く正確なドライブが魅力。"
+            },
+            {
+              "name": "ATOMO2 / ETON POWER220.4",
+              "description": "小型ながら高音質。設置場所を選ばない最新モデル。"
+            },
+            {
+              "name": "PRS-D800 / ARCA ATOMO4",
+              "description": "解像度重視の国産・海外ブランド。繊細な表現力。"
+            },
+            {
+              "name": "MOSCONI GLADEN PRO / DLS",
+              "description": "ハイエンドな質感。音楽性を重視する方へ。"
+            }
+          ]
+        },
+        {
+          "name": "お手軽低音増強セット",
+          "price": "42000",
+          "subType": "subwoofer",
+          "badge": "パワードウーハー",
+          "features": [
+            "シート下設置可",
+            "アンプ内蔵タイプ",
+            "取付工賃込"
+          ],
+          "image": "/images/Audio/easy_bass_package.webp"
         },
         {
           "name": "お手軽低音増強セット”プラス”",
@@ -174,18 +304,6 @@
             "アンプ組み合わせ"
           ],
           "image": "https://picsum.photos/seed/subwoofer/800/600"
-        },
-        {
-          "name": "省スペース”小型”パワーアンプパッケージ",
-          "price": "33000",
-          "subType": "amp",
-          "badge": "スマート導入",
-          "features": [
-            "コンパクト設置",
-            "省電力設計",
-            "取付工賃込"
-          ],
-          "image": "https://picsum.photos/seed/miniamp/800/600"
         }
       ]
     },
