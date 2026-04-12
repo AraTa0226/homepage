@@ -1009,13 +1009,13 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                                       onClick={() => setSpeakerSubTab('level')}
                                       className={`px-6 py-2.5 rounded-2xl md:rounded-full text-xs font-black transition-all ${speakerSubTab === 'level' ? 'bg-white text-blue-600 shadow-xl' : 'text-gray-500 hover:text-gray-700'}`}
                                     >
-                                      等級別プラン <span className="text-[10px] opacity-70 ml-1">By Level</span>
+                                      スピーカー交換プラン <span className="text-[10px] opacity-70 ml-1">Standard Packages</span>
                                     </button>
                                     <button
                                       onClick={() => setSpeakerSubTab('car')}
                                       className={`px-6 py-2.5 rounded-2xl md:rounded-full text-xs font-black transition-all ${speakerSubTab === 'car' ? 'bg-white text-blue-600 shadow-xl' : 'text-gray-500 hover:text-gray-700'}`}
                                     >
-                                      車種別プラン <span className="text-[10px] opacity-70 ml-1">By Car Type</span>
+                                      車種別プラン <span className="text-[10px] opacity-70 ml-1">Car-Specific</span>
                                     </button>
                                   </div>
                                   <p className="text-[11px] font-bold text-blue-600/60 flex items-center gap-2">
@@ -1479,7 +1479,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                                         }}
                                         className={`px-6 py-2.5 rounded-2xl md:rounded-full text-xs font-black transition-all ${speakerSubTab === 'level' ? 'bg-white text-blue-600 shadow-xl' : 'text-gray-500 hover:text-gray-700'}`}
                                       >
-                                        等級別プラン <span className="text-[10px] opacity-70 ml-1">By Level</span>
+                                        スピーカー交換プラン <span className="text-[10px] opacity-70 ml-1">Standard Packages</span>
                                       </button>
                                       <button
                                         onClick={(e) => {
@@ -1488,7 +1488,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                                         }}
                                         className={`px-6 py-2.5 rounded-2xl md:rounded-full text-xs font-black transition-all ${speakerSubTab === 'car' ? 'bg-white text-blue-600 shadow-xl' : 'text-gray-500 hover:text-gray-700'}`}
                                       >
-                                        車種別プラン <span className="text-[10px] opacity-70 ml-1">By Car Type</span>
+                                        車種別プラン <span className="text-[10px] opacity-70 ml-1">Car-Specific</span>
                                       </button>
                                     </div>
                                     <p className="text-[11px] font-bold text-blue-600/60 flex items-center gap-2">
