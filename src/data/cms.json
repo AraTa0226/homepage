@@ -1,1262 +1,1271 @@
 {
   "plans": [
-  {
-    "id": "speaker_package",
-    "category": "スピーカー交換・車種別プラン",
-    "type": "audio",
-    "description": "音質アップの第一歩はスピーカーから。\n手軽な**パッケージプラン**から、内装を崩さない**車種専用設計**まで幅広くご用意しています。",
-    "showDescriptionInMenu": true,
-    "showDescriptionInList": true,
-    "items": [
-      {
-        "name": "スピーカー交換BASIC line（コアキシャル）",
-        "price": "44000",
-        "badge": "お手軽導入",
-        "features": [
-          "コアキシャルスピーカー交換",
-          "簡易デッドニング",
-          "バーチ材バッフル"
-        ],
-        "image": "/images/Audio/basic_line_coaxial.webp"
-      },
-      {
-        "name": "スピーカー交換BASIC line（セパレート）",
-        "price": "59400",
-        "badge": "初心者おすすめ",
-        "features": [
-          "セパレートスピーカー交換",
-          "簡易デッドニング",
-          "インラインNW"
-        ],
-        "image": "/images/Audio/basic_line_separate.webp"
-      },
-      {
-        "name": "スピーカー交換STANDARD line（10万円まで）",
-        "price": "104500",
-        "badge": "コスパ最強",
-        "features": [
-          "ミドルグレードスピーカー",
-          "本格デッドニング",
-          "インナーバッフル"
-        ],
-        "image": "/images/Audio/standard.webp"
-      },
-      {
-        "name": "スピーカー交換PREMIUM line（10万円以上）",
-        "price": "184800",
-        "badge": "人気No.1",
-        "features": [
-          "ハイグレードスピーカー",
-          "フルデッドニング",
-          "ツィーター調整"
-        ],
-        "image": "/images/Audio/premium-line.png"
-      },
-      {
-        "name": "BMWスピーカー交換パッケージ",
-        "price": "77000",
-        "badge": "車種専用",
-        "features": [
-          "車種専用設計",
-          "純正加工なし",
-          "音質劇的向上"
-        ],
-        "image": "https://picsum.photos/seed/bmw-audio/800/600"
-      },
-      {
-        "name": "Mercedes Benzスピーカー交換パッケージ",
-        "price": "88000",
-        "badge": "車種専用",
-        "features": [
-          "車種専用設計",
-          "純正加工なし",
-          "音質劇的向上"
-        ],
-        "image": "https://picsum.photos/seed/benz-audio/800/600"
-      }
-    ]
-  },
-  {
-    "id": "bass_power",
-    "category": "低音強化・パワーアップ（アンプ）",
-    "type": "audio",
-    "description": "音楽に魂を吹き込む。**サブウーファー**による重低音の追加と、**外部アンプ**による解像度の向上をご提案します。",
-    "showDescriptionInMenu": true,
-    "showDescriptionInList": true,
-    "items": [
-      {
-        "name": "お手軽低音増強セット",
-        "price": "42000",
-        "badge": "パワードウーハー",
-        "features": [
-          "シート下設置可",
-          "アンプ内蔵タイプ",
-          "取付工賃込"
-        ],
-        "image": "/images/Audio/easy_bass_package.webp"
-      },
-      {
-        "name": "アンプインスト・パッケージ",
-        "price": "55000",
-        "badge": "駆動力UP",
-        "features": [
-          "4chパワーアンプ",
-          "バッ直配線工賃込",
-          "解像度劇的向上"
-        ],
-        "image": "/images/Audio/amplifier_install_basic.webp"
-      },
-      {
-        "name": "本格サブウーハーインストール",
-        "price": "ASK",
-        "badge": "重低音増強",
-        "features": [
-          "本格的重低音",
-          "カスタムBOX対応",
-          "アンプ組み合わせ"
-        ],
-        "image": "https://picsum.photos/seed/subwoofer/800/600"
-      }
-    ]
-  },
-  {
-    "id": "digital_source",
-    "category": "DSP・プレーヤー・高音質ナビ",
-    "type": "audio",
-    "description": "純正システムを活かしたまま音を整える。**DSP**による精密調整と、**メディアプレーヤー**による高鮮度再生を統合。",
-    "showDescriptionInMenu": true,
-    "showDescriptionInList": true,
-    "items": [
-      {
-        "name": "アンプ内蔵DSPパッケージ",
-        "price": "110000",
-        "badge": "音像定位",
-        "features": [
-          "純正ナビ連動",
-          "タイムアライメント調整",
-          "音像定位の改善"
-        ],
-        "image": "/images/Audio/amplified_dsp.webp"
-      },
-      {
-        "name": "メディアプレーヤー・ラインナップ",
-        "price": "66000",
-        "badge": "Next Source",
-        "features": [
-          "DSD/ハイレゾ対応",
-          "USB/SSD大容量再生",
-          "DSPデジタル接続"
-        ],
-        "image": "/images/Audio/media_player_lecture.png"
-      },
-      {
-        "name": "最高峰ナビ【サイバーナビ】プラン",
-        "price": "220000",
-        "badge": "究極のナビ",
-        "features": [
-          "究極の音質",
-          "動画配信/Wi-Fi対応",
-          "調整工賃込"
-        ],
-        "image": "https://picsum.photos/seed/cyber-navi/800/600"
-      }
-    ]
-  },
-  {
-    "id": "install_tuning",
-    "category": "デッドニング・施工・電源",
-    "type": "audio",
-    "description": "機材の性能を100%引き出す。**ドアチューニング**による環境整備と、**カスタム加工**、**電源強化**による安定駆動を実現します。",
-    "showDescriptionInMenu": true,
-    "showDescriptionInList": true,
-    "items": [
-      {
-        "name": "ドア・チューニング（デッドニング）",
-        "price": "22000",
-        "badge": "必須施工",
-        "features": [
-          "振・吸音・拡散・遮音",
-          "予算に合わせた4コース",
-          "スピーカーの性能を最大化"
-        ],
-        "image": "/images/Audio/door-turning.webp"
-      },
-      {
-        "name": "サイレントチューニング(車内静音施工)",
-        "price": "19800",
-        "badge": "静粛性UP",
-        "features": [
-          "ロードノイズ低減",
-          "遮音・制振・遮熱",
-          "各部位別パッケージ"
-        ]
-      },
-      {
-        "name": "ツィーターピラー埋め込み加工",
-        "price": "46200",
-        "badge": "魅せる設置",
-        "features": [
-          "ピラー埋め込み加工",
-          "角度・位置の最適化",
-          "レザー仕上げ"
-        ]
-      },
-      {
-        "name": "オリジナルアウターバッフル製作",
-        "price": "107800",
-        "badge": "理想の音抜け",
-        "features": [
-          "音抜け改善",
-          "ワンオフ製作",
-          "スピーカー露出"
-        ]
-      },
-      {
-        "name": "カスタムインストール・ワンオフ製作",
-        "price": "ASK",
-        "badge": "完全オーダー",
-        "features": [
-          "トランクカスタム",
-          "アウターバッフル",
-          "LEDライティング"
-        ]
-      },
-      {
-        "name": "電源バッ直・キャパシター・アース",
-        "price": "25300",
-        "badge": "電源環境",
-        "features": [
-          "ハイグレード配線",
-          "S/N向上",
-          "解像度アップ"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "security_panthera",
-    "category": "Panthera (パンテーラ)",
-    "type": "security",
-    "items": [
-      {
-        "name": "Z706シリーズ",
-        "price": "286000",
-        "badge": "最高峰モデル"
-      },
-      {
-        "name": "Z306シリーズ",
-        "price": "242000",
-        "badge": "スタンダード"
-      },
-      {
-        "name": "Z106シリーズ",
-        "price": "198000",
-        "badge": "エントリー"
-      }
-    ]
-  },
-  {
-    "id": "security_grgo",
-    "category": "Grgo (ゴルゴ)",
-    "type": "security",
-    "items": [
-      {
-        "name": "ZVシリーズ",
-        "price": "165000",
-        "badge": "人気No.1"
-      },
-      {
-        "name": "Vシリーズ",
-        "price": "132000",
-        "badge": "コスパ重視"
-      },
-      {
-        "name": "1/0シリーズ",
-        "price": "99000",
-        "badge": "スマート施工"
-      }
-    ]
-  },
-  {
-    "id": "security_viper",
-    "category": "VIPER (バイパー)",
-    "type": "security",
-    "items": [
-      {
-        "name": "DS4V",
-        "price": "110000",
-        "badge": "最新デジタル"
-      },
-      {
-        "name": "5706V",
-        "price": "132000",
-        "badge": "定番モデル"
-      },
-      {
-        "name": "330V",
-        "price": "77000",
-        "badge": "エントリー"
-      }
-    ]
-  },
-  {
-    "id": "security_clifford",
-    "category": "CLIFFORD (クリフォード)",
-    "type": "security",
-    "items": [
-      {
-        "name": "G6シリーズ",
-        "price": "220000",
-        "badge": "世界最高峰"
-      },
-      {
-        "name": "Matrixシリーズ",
-        "price": "154000",
-        "badge": "高性能"
-      }
-    ]
-  },
-  {
-    "id": "security_car",
-    "category": "車種別おすすめパッケージ",
-    "type": "security",
-    "items": [
-      {
-        "name": "最強プラン",
-        "price": "350000",
-        "badge": "SUV/LC/AL"
-      }
-    ]
-  },
-  {
-    "id": "dashcam",
-    "category": "ドライブレコーダー",
-    "type": "others",
-    "items": [
-      {
-        "name": "前後2カメラモデル",
-        "price": "44000",
-        "badge": "定番人気"
-      }
-    ]
-  },
-  {
-    "id": "digital_mirror",
-    "category": "デジタルインナーミラー",
-    "type": "others",
-    "items": [
-      {
-        "name": "純正交換型",
-        "price": "77000",
-        "badge": "視界クリア"
-      }
-    ]
-  },
-  {
-    "id": "radar",
-    "category": "レーダー探知機 / レーザー受信機",
-    "type": "others",
-    "items": [
-      {
-        "name": "セパレート型レーダー",
-        "price": "49500",
-        "badge": "最強感度"
-      }
-    ]
-  },
-  {
-    "id": "safety_device",
-    "category": "置き去り防止安全装置",
-    "type": "others",
-    "items": [
-      {
-        "name": "安全装置",
-        "price": "88000",
-        "badge": "補助金対応"
-      }
-    ]
-  },
-  {
-    "id": "campit",
-    "category": "Campit (キャンピット)",
-    "type": "others",
-    "items": [
-      {
-        "name": "走行充電システム",
-        "price": "132000",
-        "badge": "車中泊革命"
-      }
-    ]
-  }
-],
+    {
+      "id": "speaker_package",
+      "category": "スピーカー交換・車種別プラン",
+      "type": "audio",
+      "description": "音質アップの第一歩はスピーカーから。\n手軽な**パッケージプラン**から、内装を崩さない**車種専用設計**まで幅広くご用意しています。",
+      "showDescriptionInMenu": true,
+      "showDescriptionInList": true,
+      "items": [
+        {
+          "name": "スピーカー交換BASIC line（コアキシャル）",
+          "price": "44000",
+          "badge": "お手軽導入",
+          "features": [
+            "コアキシャルスピーカー交換",
+            "簡易デッドニング",
+            "バーチ材バッフル"
+          ],
+          "image": "/images/Audio/basic_line_coaxial.webp"
+        },
+        {
+          "name": "スピーカー交換BASIC line（セパレート）",
+          "price": "59400",
+          "badge": "初心者おすすめ",
+          "features": [
+            "セパレートスピーカー交換",
+            "簡易デッドニング",
+            "インラインNW"
+          ],
+          "image": "/images/Audio/basic_line_separate.webp"
+        },
+        {
+          "name": "スピーカー交換STANDARD line（10万円まで）",
+          "price": "104500",
+          "badge": "コスパ最強",
+          "features": [
+            "ミドルグレードスピーカー",
+            "本格デッドニング",
+            "インナーバッフル"
+          ],
+          "image": "/images/Audio/standard.webp"
+        },
+        {
+          "name": "スピーカー交換PREMIUM line（10万円以上）",
+          "price": "184800",
+          "badge": "人気No.1",
+          "features": [
+            "ハイグレードスピーカー",
+            "フルデッドニング",
+            "ツィーター調整"
+          ],
+          "image": "/images/Audio/premium-line.png"
+        },
+        {
+          "name": "BMWスピーカー交換パッケージ",
+          "price": "77000",
+          "badge": "車種専用",
+          "features": [
+            "車種専用設計",
+            "純正加工なし",
+            "音質劇的向上"
+          ],
+          "image": "https://picsum.photos/seed/bmw-audio/800/600"
+        },
+        {
+          "name": "Mercedes Benzスピーカー交換パッケージ",
+          "price": "88000",
+          "badge": "車種専用",
+          "features": [
+            "車種専用設計",
+            "純正加工なし",
+            "音質劇的向上"
+          ],
+          "image": "https://picsum.photos/seed/benz-audio/800/600"
+        }
+      ]
+    },
+    {
+      "id": "bass_power",
+      "category": "低音強化・パワーアップ（アンプ）",
+      "type": "audio",
+      "description": "音楽に魂を吹き込む。**サブウーファー**による重低音の追加と、**外部アンプ**による解像度の向上をご提案します。",
+      "showDescriptionInMenu": true,
+      "showDescriptionInList": true,
+      "items": [
+        {
+          "name": "お手軽低音増強セット",
+          "price": "42000",
+          "badge": "パワードウーハー",
+          "features": [
+            "シート下設置可",
+            "アンプ内蔵タイプ",
+            "取付工賃込"
+          ],
+          "image": "/images/Audio/easy_bass_package.webp"
+        },
+        {
+          "name": "アンプインスト・パッケージ",
+          "price": "55000",
+          "badge": "駆動力UP",
+          "features": [
+            "4chパワーアンプ",
+            "バッ直配線工賃込",
+            "解像度劇的向上"
+          ],
+          "image": "/images/Audio/amplifier_install_basic.webp"
+        },
+        {
+          "name": "本格サブウーハーインストール",
+          "price": "ASK",
+          "badge": "重低音増強",
+          "features": [
+            "本格的重低音",
+            "カスタムBOX対応",
+            "アンプ組み合わせ"
+          ],
+          "image": "https://picsum.photos/seed/subwoofer/800/600"
+        }
+      ]
+    },
+    {
+      "id": "digital_source",
+      "category": "DSP・プレーヤー・高音質ナビ",
+      "type": "audio",
+      "description": "純正システムを活かしたまま音を整える。**DSP**による精密調整と、**メディアプレーヤー**による高鮮度再生を統合。",
+      "showDescriptionInMenu": true,
+      "showDescriptionInList": true,
+      "items": [
+        {
+          "name": "アンプ内蔵DSPパッケージ",
+          "price": "110000",
+          "badge": "音像定位",
+          "features": [
+            "純正ナビ連動",
+            "タイムアライメント調整",
+            "音像定位の改善"
+          ],
+          "image": "/images/Audio/amplified_dsp.webp"
+        },
+        {
+          "name": "メディアプレーヤー・ラインナップ",
+          "price": "66000",
+          "badge": "Next Source",
+          "features": [
+            "DSD/ハイレゾ対応",
+            "USB/SSD大容量再生",
+            "DSPデジタル接続"
+          ],
+          "image": "/images/Audio/media_player_lecture.png"
+        },
+        {
+          "name": "最高峰ナビ【サイバーナビ】プラン",
+          "price": "220000",
+          "badge": "究極のナビ",
+          "features": [
+            "究極の音質",
+            "動画配信/Wi-Fi対応",
+            "調整工賃込"
+          ],
+          "image": "https://picsum.photos/seed/cyber-navi/800/600"
+        }
+      ]
+    },
+    {
+      "id": "install_tuning",
+      "category": "デッドニング・施工・電源",
+      "type": "audio",
+      "description": "機材の性能を100%引き出す。**ドアチューニング**による環境整備と、**電源強化**による安定駆動を実現します。",
+      "showDescriptionInMenu": true,
+      "showDescriptionInList": true,
+      "items": [
+        {
+          "name": "ドア・チューニング（デッドニング）",
+          "price": "22000",
+          "badge": "必須施工",
+          "features": [
+            "振・吸音・拡散・遮音",
+            "予算に合わせた4コース",
+            "スピーカーの性能を最大化"
+          ],
+          "image": "/images/Audio/door-turning.webp"
+        },
+        {
+          "name": "サイレントチューニング(車内静音施工)",
+          "price": "19800",
+          "badge": "静粛性UP",
+          "features": [
+            "ロードノイズ低減",
+            "遮音・制振・遮熱",
+            "各部位別パッケージ"
+          ]
+        },
+        {
+          "name": "電源バッ直・キャパシター・アース",
+          "price": "25300",
+          "badge": "電源環境",
+          "features": [
+            "ハイグレード配線",
+            "S/N向上",
+            "解像度アップ"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "custom_install",
+      "category": "カスタムインストール・造作",
+      "type": "audio",
+      "description": "音を耳で楽しむだけでなく、**匠の技**で視覚的にも美しく。**ピラー加工**や**アウターバッフル**など、世界に一台のカスタムを。",
+      "showDescriptionInMenu": true,
+      "showDescriptionInList": true,
+      "items": [
+        {
+          "name": "ツィーターピラー埋め込み加工",
+          "price": "46200",
+          "badge": "魅せる設置",
+          "features": [
+            "ピラー埋め込み加工",
+            "角度・位置の最適化",
+            "レザー仕上げ"
+          ]
+        },
+        {
+          "name": "オリジナルアウターバッフル製作",
+          "price": "107800",
+          "badge": "理想の音抜け",
+          "features": [
+            "音抜け改善",
+            "ワンオフ製作",
+            "スピーカー露出"
+          ]
+        },
+        {
+          "name": "カスタムインストール・ワンオフ製作",
+          "price": "ASK",
+          "badge": "完全オーダー",
+          "features": [
+            "トランクカスタム",
+            "アウターバッフル",
+            "LEDライティング"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "security_panthera",
+      "category": "Panthera (パンテーラ)",
+      "type": "security",
+      "items": [
+        {
+          "name": "Z706シリーズ",
+          "price": "286000",
+          "badge": "最高峰モデル"
+        },
+        {
+          "name": "Z306シリーズ",
+          "price": "242000",
+          "badge": "スタンダード"
+        },
+        {
+          "name": "Z106シリーズ",
+          "price": "198000",
+          "badge": "エントリー"
+        }
+      ]
+    },
+    {
+      "id": "security_grgo",
+      "category": "Grgo (ゴルゴ)",
+      "type": "security",
+      "items": [
+        {
+          "name": "ZVシリーズ",
+          "price": "165000",
+          "badge": "人気No.1"
+        },
+        {
+          "name": "Vシリーズ",
+          "price": "132000",
+          "badge": "コスパ重視"
+        },
+        {
+          "name": "1/0シリーズ",
+          "price": "99000",
+          "badge": "スマート施工"
+        }
+      ]
+    },
+    {
+      "id": "security_viper",
+      "category": "VIPER (バイパー)",
+      "type": "security",
+      "items": [
+        {
+          "name": "DS4V",
+          "price": "110000",
+          "badge": "最新デジタル"
+        },
+        {
+          "name": "5706V",
+          "price": "132000",
+          "badge": "定番モデル"
+        },
+        {
+          "name": "330V",
+          "price": "77000",
+          "badge": "エントリー"
+        }
+      ]
+    },
+    {
+      "id": "security_clifford",
+      "category": "CLIFFORD (クリフォード)",
+      "type": "security",
+      "items": [
+        {
+          "name": "G6シリーズ",
+          "price": "220000",
+          "badge": "世界最高峰"
+        },
+        {
+          "name": "Matrixシリーズ",
+          "price": "154000",
+          "badge": "高性能"
+        }
+      ]
+    },
+    {
+      "id": "security_car",
+      "category": "車種別おすすめパッケージ",
+      "type": "security",
+      "items": [
+        {
+          "name": "最強プラン",
+          "price": "350000",
+          "badge": "SUV/LC/AL"
+        }
+      ]
+    },
+    {
+      "id": "dashcam",
+      "category": "ドライブレコーダー",
+      "type": "others",
+      "items": [
+        {
+          "name": "前後2カメラモデル",
+          "price": "44000",
+          "badge": "定番人気"
+        }
+      ]
+    },
+    {
+      "id": "digital_mirror",
+      "category": "デジタルインナーミラー",
+      "type": "others",
+      "items": [
+        {
+          "name": "純正交換型",
+          "price": "77000",
+          "badge": "視界クリア"
+        }
+      ]
+    },
+    {
+      "id": "radar",
+      "category": "レーダー探知機 / レーザー受信機",
+      "type": "others",
+      "items": [
+        {
+          "name": "セパレート型レーダー",
+          "price": "49500",
+          "badge": "最強感度"
+        }
+      ]
+    },
+    {
+      "id": "safety_device",
+      "category": "置き去り防止安全装置",
+      "type": "others",
+      "items": [
+        {
+          "name": "安全装置",
+          "price": "88000",
+          "badge": "補助金対応"
+        }
+      ]
+    },
+    {
+      "id": "campit",
+      "category": "Campit (キャンピット)",
+      "type": "others",
+      "items": [
+        {
+          "name": "走行充電システム",
+          "price": "132000",
+          "badge": "車中泊革命"
+        }
+      ]
+    }
+  ],
   "images": [],
-  
-"guides": [
-{
-  "id": "hires_guide",
-  "title": "ハイレゾ導入のススメ",
-  "badge": "高解像度",
-  "features": [
-    "CD超えの情報量",
-    "多彩な接続プラン",
-    "DAP/スマホ連携"
+  "guides": [
+    {
+      "id": "hires_guide",
+      "title": "ハイレゾ導入のススメ",
+      "badge": "高解像度",
+      "features": [
+        "CD超えの情報量",
+        "多彩な接続プラン",
+        "DAP/スマホ連携"
+      ],
+      "image": "/images/Audio/hires_guide.png",
+      "description": "ハイレゾはCDを超える高音質スペックを持っている新しい音楽ファイルです。CDの情報量を1とすると、ハイレゾは3倍から6.5倍ほど増加し、アナログテレビから4Kテレビに変わるように、細かい部分まで見通せるリアルな音場を表現できます。\n\nCDでは超えられなかった空気感や実像感が、マスター本来の音を再現するかのごとく忠実に得られるのがハイレゾの一番の魅力です。車の中でも意外と簡単に始めることができます。まずはハイレゾの世界を体験してみませんか？",
+      "category": "知識・ガイド",
+      "link": "https://www.soundang.com/hires.html",
+      "packageDetails": {
+        "standardPrice": "0",
+        "savings": "0",
+        "contents": [
+          {
+            "title": "ハイレゾ対応ユニット",
+            "description": "デジタル信号をアナログ変換可能な機材の選定",
+            "icon": "Music"
+          },
+          {
+            "title": "高音質ワイヤリング",
+            "description": "デジタル伝送ロスを抑える高品質ケーブル",
+            "icon": "Zap"
+          },
+          {
+            "title": "再生アプリ・設定",
+            "description": "スマホやDAPでの最適な再生環境の構築",
+            "icon": "Activity"
+          },
+          {
+            "title": "サウンドチューニング",
+            "description": "ハイレゾの広帯域を活かす精密な調整",
+            "icon": "Wrench"
+          }
+        ],
+        "notes": [
+          "ハイレゾ再生には対応した機材（ナビ、DSP、DAP等）が必要です。",
+          "従来のCDプレーヤーやナビでは再生できない場合があります。",
+          "FLAC, WAV, DSDなど、機材に合ったフォーマットの選定が重要です。",
+          "スピーカー交換などの再生環境を整えることで、より効果を実感できます。",
+          "当店ディスプレイにて各プランのデモが可能です。お気軽にお試しください。"
+        ]
+      },
+      "lineup": [
+        {
+          "name": "プランA：Bluetooth接続",
+          "price": "0",
+          "description": "スマホやDAPから無線で送信。最も手軽に始められるプラン。対応アプリ（1,000円前後）が必要な場合があります。"
+        },
+        {
+          "name": "プランB：AUX/HDMI外部入力",
+          "price": "0",
+          "description": "既存ナビの外部入力を利用。HDMI入力があれば高音質伝送が可能。接続用ケーブルが別途必要です。"
+        },
+        {
+          "name": "プランC：USBトランスポート追加",
+          "price": "0",
+          "description": "デジタル信号のまま取り出し、高音質なD/Aコンバーターを通して接続。音質が大きく改善されます。"
+        },
+        {
+          "name": "プランD：ハイレゾ対応ナビ導入",
+          "price": "0",
+          "description": "操作性も音質も抜群。SDカードやUSBメモリを差し込むだけでスマートに再生。タッチパネル操作も可能。"
+        },
+        {
+          "name": "プランE：ハイレゾ対応DSP構築",
+          "price": "0",
+          "description": "現在の主流。デジタル信号のままDSPへ入力し、内蔵の高音質DACで変換。ロスの極めて少ないシステム。"
+        },
+        {
+          "name": "プランF：LDACワイヤレス接続",
+          "price": "0",
+          "description": "ワイヤレスながら96k/24bitのハイレゾ伝送を実現。利便性と音質を両立。"
+        },
+        {
+          "name": "プランG：メディアプレーヤー導入",
+          "price": "0",
+          "description": "大容量SSD等に対応した専用機。究極を求めるユーザーに人気. ライブラリーを丸ごと持ち歩けます。"
+        }
+      ]
+    },
+    {
+      "id": "media_player_guide",
+      "title": "いま注目！車載メディアプレーヤー",
+      "badge": "最新トレンド",
+      "features": [
+        "デジタル高音質伝送",
+        "DSP連携",
+        "車載専用設計"
+      ],
+      "image": "/images/Audio/media_player_lecture.png",
+      "description": "ナビやCDプレーヤーといったヘッドユニット交換が簡単にできたのは過去の話。最近は純正で装着されたナビゲーションは取り外すことができず、音の入口となるヘッドユニットの音質向上は困難になりました。\n\nそこで新しい選択肢となるのが「車載メディアプレーヤー」です。純正のディスプレイオーディオなどをメインソースとしてカーオーディオの拡張を進めてきた方におすすめで、基本的にはDSPとの組み合わせでシステムを構成します。\n\n光や同軸端子を使ってデジタルデータをそのままDSPへ入力することで、純正オーディオの制限を受けない圧倒的な高音質を実現。スマートフォンやDAPとは異なり、車両に設置して運転しながら楽しむことを前提に設計された、車のための新しい音楽ソースです。\n\n**製品ラインナップを見る**: [メディアプレーヤー製品一覧](#/prices/media_player)",
+      "category": "知識・ガイド",
+      "packageDetails": {
+        "standardPrice": "0",
+        "savings": "0",
+        "contents": [
+          {
+            "title": "メディアプレーヤーとは？",
+            "description": "純正ナビの音質的限界を突破し、デジタル信号をダイレクトにDSPへ届ける専用機です。",
+            "icon": "Music"
+          },
+          {
+            "title": "スマホ・DAPとの違い",
+            "description": "車載専用設計のため、大容量の外部ストレージ対応や、エンジン連動の利便性が抜群です。",
+            "icon": "Zap"
+          },
+          {
+            "title": "システムアップの要",
+            "description": "DSPを司令塔とし、そこへ「最高鮮度の音」を流し込むための『最強の入口』となります。",
+            "icon": "Layers"
+          }
+        ],
+        "notes": [
+          "基本的にはDSP（デジタルプロセッサー）との組み合わせが必要です。",
+          "純正ナビの音質に不満がある方のステップアップに最適です。",
+          "USBメモリやSSD等に保存した膨大なライブラリーを車内で楽しめます。",
+          "機種により操作方法（リモコン、スマホアプリ等）が異なります。",
+          "取付位置やシステム構成により、別途工賃やケーブル代が発生します。"
+        ]
+      },
+      "lineup": [
+        {
+          "name": "メリット1：純正システムを活かせる",
+          "description": "最近の車に多い「外せないナビ」をそのままに、音質だけを飛躍的に向上させられます。"
+        },
+        {
+          "name": "メリット2：圧倒的なライブラリー量",
+          "description": "3TBまでのSSD対応機種もあり、お持ちの全音楽コレクションを車載可能です。"
+        },
+        {
+          "name": "メリット3：DSD512等の超ハイレゾ対応",
+          "description": "スマホでは再生が難しい極めて高品位な音源も、余すことなく再生可能です。"
+        }
+      ]
+    },
+    {
+      "id": "hi_end_guide",
+      "title": "ハイエンドスピーカーへの誘い",
+      "badge": "至高の音",
+      "features": [
+        "圧倒的な解像度",
+        "正確な音像定位",
+        "芸術的な表現力"
+      ],
+      "image": "https://picsum.photos/seed/hi-end-sp/800/600",
+      "description": "ハイエンドスピーカーをインストールするには・・・\n\n各ブランドの上位モデルでは、そのスペックをしっかりと活かせるインストレーションやケーブル選びが大切になります。ハイエンドスピーカーに施したいインストール、ケーブル選びなどをご紹介します。\n\nハイエンドスピーカーに興味を持ったらぜひご相談ください。オーナー様の理想を形にする最適なシステムをご提案いたします。",
+      "category": "知識・ガイド",
+      "packageDetails": {
+        "standardPrice": "0",
+        "savings": "0",
+        "contents": [
+          {
+            "title": "ツィーター加工取付",
+            "description": "反射を考慮したピラーやドアミラー裏への埋め込み加工",
+            "icon": "Activity"
+          },
+          {
+            "title": "ドアスピーカー取付",
+            "description": "抜けを良くする アウターバッフルや強固なバッフル製作",
+            "icon": "Wrench"
+          },
+          {
+            "title": "高音質ワイヤリング",
+            "description": "レグザット、M&M、アクロリンク等の高級ケーブル選定",
+            "icon": "Zap"
+          },
+          {
+            "title": "システム構成",
+            "description": "DSPを用いたマルチワイヤリング（アクティブ）等の構築",
+            "icon": "Layers"
+          }
+        ],
+        "notes": [
+          "ハイエンドスピーカーはユニットの性能を引き出すための環境作りが不可欠です。",
+          "インナーバッフルでの施工でも、市販品を避けスピーカーをしっかり受け止める製作が重要です。",
+          "試聴室ではスピーカーケーブルの比較も可能です。音の違いを体感して選べます。"
+        ]
+      },
+      "lineup": [
+        {
+          "name": "Aピラーツィーター埋め込み加工",
+          "price": "44000",
+          "description": "反射の影響を考慮した角度決め。左右込 44,000円〜"
+        },
+        {
+          "name": "オリジナルアウターバッフル製作",
+          "price": "107800",
+          "description": "スピーカーの抜けを良くし、情報量を最大限に引き出すインストール。"
+        },
+        {
+          "name": "エンクロージャー仕様アウターバッフル",
+          "price": "0",
+          "description": "スピーカーと車両に合わせて、排圧をコントロールするこだわりのエンクロージャーを製作。"
+        }
+      ]
+    },
+    {
+      "id": "subwoofer_style_guide",
+      "title": "サブウーハーインストール・スタイルガイド",
+      "badge": "低音の極致",
+      "features": [
+        "低音補強",
+        "BOX製作",
+        "ラゲッジ埋め込み"
+      ],
+      "image": "https://picsum.photos/seed/subwoofer/800/600",
+      "description": "とっても重要なサブウーハーの役割！可聴帯域のほんの一部ですが、建物の基礎と同じでここがしっかりしていないと全体のイメージが希薄になってしまいます。\n\n音は倍音で構成されていますので、サブウーハーが中心でないようなボーカルやピアノの音も、サブウーハーのオンオフで様変わりします。HiFiスタイルからパワーサウンド、重低音スタイルまで、自分だけの個室を好きなサウンドにアレンジして楽しみましょう！",
+      "category": "知識・ガイド",
+      "packageDetails": {
+        "standardPrice": "0",
+        "savings": "0",
+        "contents": [
+          {
+            "title": "サブウーハーユニット",
+            "description": "8インチ(20cm)〜18インチ(45cm)まで幅広く対応",
+            "icon": "Music"
+          },
+          {
+            "title": "パワーアンプ",
+            "description": "Dクラスモノアンプや2chブリッジ接続など最適な駆動",
+            "icon": "Zap"
+          },
+          {
+            "title": "エンクロージャー(BOX)",
+            "description": "シールド・バスレフ等、性能を引き出す適正容量の設計",
+            "icon": "Wrench"
+          },
+          {
+            "title": "ワイヤリング・取付",
+            "description": "電源・RCA・SPケーブルの配線と確実な固定・調整",
+            "icon": "Activity"
+          }
+        ],
+        "notes": [
+          "フロントスピーカーとのバランスを考えた10〜12インチがお勧めです。",
+          "BOXの設計（容量や形状）によってウーハーの性能が大きく変わります。",
+          "トランク設置時は、荷物の積載を考慮した脱着しやすい固定方法も可能です。"
+        ]
+      },
+      "lineup": [
+        {
+          "name": "お手軽パワードサブウーハー設置",
+          "price": "0",
+          "description": "アンプ内蔵タイプでコストとスペースを抑制。"
+        },
+        {
+          "name": "スタンダードBOX設置（トランク）",
+          "price": "0",
+          "description": "四角いタイプの箱を製作してトランクに設置。"
+        },
+        {
+          "name": "フロア/スペアタイヤスペース埋め込み",
+          "price": "0",
+          "description": "サブトランクやスペアタイヤスペースを利用してBOXを製作。"
+        },
+        {
+          "name": "カスタム・ショーアップインストール",
+          "price": "0",
+          "description": "LEDライティングやアクリルを組み合わせた魅せるカスタム。"
+        }
+      ]
+    },
+    {
+      "id": "custom_install_guide",
+      "title": "カスタムインストール・ワンオフ製作",
+      "badge": "完全オーダー",
+      "features": [
+        "トランクカスタム",
+        "アウターバッフル",
+        "LEDライティング"
+      ],
+      "image": "https://picsum.photos/seed/custom-inst/800/600",
+      "description": "カーオーディオならでは！いい音を耳で楽しむだけではなく、クールなインストールで目で見て楽しむカスタムオーディオの世界。\n\n代表的な取り付け例をご紹介します。取り付けるユニットや車両、またインストール方法により費用は様々です。まずはお気軽にご相談ください。\n\nオーナー様のイメージするカスタムを具現化するお手伝いをいたします。ワンオフでのカスタムとなり、お車を確認しながらの商談が必要となりますので、ぜひご来店の上ご相談ください。",
+      "category": "知識・ガイド",
+      "packageDetails": {
+        "standardPrice": "0",
+        "savings": "0",
+        "contents": [
+          {
+            "title": "デザイン・設計",
+            "description": "車両形状と機材に合わせたワンオフデザイン",
+            "icon": "Layers"
+          },
+          {
+            "title": "造作・加工",
+            "description": "MDF、アクリル、パテ等を用いた高度な加工技術",
+            "icon": "Wrench"
+          },
+          {
+            "title": "仕上げ・装飾",
+            "description": "レザー、ペイント、LEDライティング等の演出",
+            "icon": "Activity"
+          },
+          {
+            "title": "音響チューニング",
+            "description": "カスタム環境に合わせた最適なサウンド調整",
+            "icon": "Music"
+          }
+        ],
+        "notes": [
+          "記載している価格は一例です。施工内容により大きく変動します。",
+          "ワンオフ製作のため、お車をお預かりしての作業となります。",
+          "まずはご来店いただき、ご要望をお聞かせください。お見積もりを作成いたします。"
+        ]
+      },
+      "lineup": [
+        {
+          "name": "トランク・カーゴスペースインストール",
+          "price": "100000",
+          "description": "フロアへの埋め込みやカバー製作. およそ10万円〜。"
+        },
+        {
+          "name": "セダンタイプトランクインストール",
+          "price": "150000",
+          "description": "背もたれ裏へのウーハー埋め込みやアンプボード製作. およそ15万円〜。"
+        },
+        {
+          "name": "ドアカスタムアウターバッフル製作",
+          "price": "200000",
+          "description": "純正パネルに馴染むカスタムインストール. 左右でおよそ20万円〜。"
+        },
+        {
+          "name": "ドアパネル全面施工・エンクロージャー",
+          "price": "250000",
+          "description": "パネル丸ごと張り替えやエンクロージャー化. およそ25万円〜。"
+        },
+        {
+          "name": "カスタムピラーインストール（3WAY対応）",
+          "price": "80000",
+          "description": "フロント3WAYに欠かせないピラー加工. 左右でおよそ8万円〜。"
+        }
+      ]
+    }
   ],
-  "image": "/images/Audio/hires_guide.png",
-  "description": "ハイレゾはCDを超える高音質スペックを持っている新しい音楽ファイルです。CDの情報量を1とすると、ハイレゾは3倍から6.5倍ほど増加し、アナログテレビから4Kテレビに変わるように、細かい部分まで見通せるリアルな音場を表現できます。\n\nCDでは超えられなかった空気感や実像感が、マスター本来の音を再現するかのごとく忠実に得られるのがハイレゾの一番の魅力です。車の中でも意外と簡単に始めることができます。まずはハイレゾの世界を体験してみませんか？",
-  "category": "知識・ガイド",
-  "link": "https://www.soundang.com/hires.html",
-  "packageDetails": {
-    "standardPrice": "0",
-    "savings": "0",
-    "contents": [
-      {
-        "title": "ハイレゾ対応ユニット",
-        "description": "デジタル信号をアナログ変換可能な機材の選定",
-        "icon": "Music"
-      },
-      {
-        "title": "高音質ワイヤリング",
-        "description": "デジタル伝送ロスを抑える高品質ケーブル",
-        "icon": "Zap"
-      },
-      {
-        "title": "再生アプリ・設定",
-        "description": "スマホやDAPでの最適な再生環境の構築",
-        "icon": "Activity"
-      },
-      {
-        "title": "サウンドチューニング",
-        "description": "ハイレゾの広帯域を活かす精密な調整",
-        "icon": "Wrench"
-      }
-    ],
-    "notes": [
-      "ハイレゾ再生には対応した機材（ナビ、DSP、DAP等）が必要です。",
-      "従来のCDプレーヤーやナビでは再生できない場合があります。",
-      "FLAC, WAV, DSDなど、機材に合ったフォーマットの選定が重要です。",
-      "スピーカー交換などの再生環境を整えることで、より効果を実感できます。",
-      "当店ディスプレイにて各プランのデモが可能です。お気軽にお試しください。"
-    ]
-  },
-  "lineup": [
+  "optionals": [
     {
-      "name": "プランA：Bluetooth接続",
+      "id": "deadening_opt",
+      "name": "標準デッドニング",
       "price": "0",
-      "description": "スマホやDAPから無線で送信。最も手軽に始められるプラン。対応アプリ（1,000円前後）が必要な場合があります。"
+      "description": "スピーカー交換プランには標準で付属。差額で上位プランへの変更も可能です。",
+      "effect": "音の締まり向上",
+      "percentage": 40,
+      "image": "/images/Audio/basic-line-coaxial.png"
     },
     {
-      "name": "プランB：AUX/HDMI外部入力",
+      "id": "cable_opt",
+      "name": "スピーカーケーブル",
       "price": "0",
-      "description": "既存ナビの外部入力を利用。HDMI入力があれば高音質伝送が可能。接続用ケーブルが別途必要です。"
+      "description": "標準ケーブルが付属。差額で高音質OFCケーブル等へアップグレード可能です。",
+      "effect": "情報量UP",
+      "percentage": 30,
+      "image": "/images/speaker.jpg"
     },
     {
-      "name": "プランC：USBトランスポート追加",
+      "id": "tuning_opt",
+      "name": "サウンドチューニング",
       "price": "0",
-      "description": "デジタル信号のまま取り出し、高音質なD/Aコンバーターを通して接続。音質が大きく改善されます。"
-    },
-    {
-      "name": "プランD：ハイレゾ対応ナビ導入",
-      "price": "0",
-      "description": "操作性も音質も抜群。SDカードやUSBメモリを差し込むだけでスマートに再生。タッチパネル操作も可能。"
-    },
-    {
-      "name": "プランE：ハイレゾ対応DSP構築",
-      "price": "0",
-      "description": "現在の主流。デジタル信号のままDSPへ入力し、内蔵の高音質DACで変換。ロスの極めて少ないシステム。"
-    },
-    {
-      "name": "プランF：LDACワイヤレス接続",
-      "price": "0",
-      "description": "ワイヤレスながら96k/24bitのハイレゾ伝送を実現。利便性と音質を両立。"
-    },
-    {
-      "name": "プランG：メディアプレーヤー導入",
-      "price": "0",
-      "description": "大容量SSD等に対応した専用機。究極を求めるユーザーに人気. ライブラリーを丸ごと持ち歩けます。"
+      "description": "当店でご購入・施工いただいたお客様には、無料で音響調整を行っております。",
+      "effect": "鮮度回復",
+      "percentage": 100,
+      "image": "/images/speaker.jpg"
     }
-  ]
-},
-{
-  "id": "media_player_guide",
-  "title": "いま注目！車載メディアプレーヤー",
-  "badge": "最新トレンド",
-  "features": [
-    "デジタル高音質伝送",
-    "DSP連携",
-    "車載専用設計"
   ],
-  "image": "/images/Audio/media_player_lecture.png",
-  "description": "ナビやCDプレーヤーといったヘッドユニット交換が簡単にできたのは過去の話。最近は純正で装着されたナビゲーションは取り外すことができず、音の入口となるヘッドユニットの音質向上は困難になりました。\n\nそこで新しい選択肢となるのが「車載メディアプレーヤー」です。純正のディスプレイオーディオなどをメインソースとしてカーオーディオの拡張を進めてきた方におすすめで、基本的にはDSPとの組み合わせでシステムを構成します。\n\n光や同軸端子を使ってデジタルデータをそのままDSPへ入力することで、純正オーディオの制限を受けない圧倒的な高音質を実現。スマートフォンやDAPとは異なり、車両に設置して運転しながら楽しむことを前提に設計された、車のための新しい音楽ソースです。\n\n**製品ラインナップを見る**: [メディアプレーヤー製品一覧](#/prices/media_player)",
-  "category": "知識・ガイド",
-  "packageDetails": {
-    "standardPrice": "0",
-    "savings": "0",
-    "contents": [
-      {
-        "title": "メディアプレーヤーとは？",
-        "description": "純正ナビの音質的限界を突破し、デジタル信号をダイレクトにDSPへ届ける専用機です。",
-        "icon": "Music"
-      },
-      {
-        "title": "スマホ・DAPとの違い",
-        "description": "車載専用設計のため、大容量の外部ストレージ対応や、エンジン連動の利便性が抜群です。",
-        "icon": "Zap"
-      },
-      {
-        "title": "システムアップの要",
-        "description": "DSPを司令塔とし、そこへ「最高鮮度の音」を流し込むための『最強の入口』となります。",
-        "icon": "Layers"
-      }
-    ],
-    "notes": [
-      "基本的にはDSP（デジタルプロセッサー）との組み合わせが必要です。",
-      "純正ナビの音質に不満がある方のステップアップに最適です。",
-      "USBメモリやSSD等に保存した膨大なライブラリーを車内で楽しめます。",
-      "機種により操作方法（リモコン、スマホアプリ等）が異なります。",
-      "取付位置やシステム構成により、別途工賃やケーブル代が発生します。"
-    ]
+  "securityStatus": "",
+  "emergencyAnnouncement": {
+    "text": "【緊急のお知らせ】現在、施工予約が大変混み合っております。お早めにご相談ください。",
+    "link": "",
+    "image": "",
+    "active": false
   },
-  "lineup": [
+  "calendar": {
+    "2026-4": [],
+    "2026-5": [
+      3,
+      4,
+      6
+    ],
+    "2026-6": [],
+    "2026-7": [],
+    "2026-8": [],
+    "2026-9": [],
+    "2026-10": [],
+    "2026-11": []
+  },
+  "recruitment": {
+    "visible": true,
+    "title": "採用情報",
+    "message": "カーセキュリティー取り付け・販売スタッフ募集中です。詳しくはお電話ください。092-503-5437担当：塚元 or 村上",
+    "requirements": [
+      ""
+    ],
+    "salary": "",
+    "contactInfo": "お電話にてお問い合わせください"
+  },
+  "securityRecruitment": {
+    "visible": true,
+    "title": "スタッフ募集中",
+    "message": "カーセキュリティー取り付け・販売スタッフ募集中です。詳しくはお電話ください。担当：塚元 or 村上",
+    "requirements": [
+      "車が好きな方",
+      "元気で明るい方",
+      "要普通免許"
+    ],
+    "showRequirements": false,
+    "salary": "基本給 応相談（経験・能力を考慮の上決定）",
+    "showSalary": false,
+    "contactInfo": "092-503-5437"
+  },
+  "audioRecruitment": {
+    "visible": false,
+    "title": "採用情報",
+    "message": "一緒にカーオーディオの世界を盛り上げませんか？経験者優遇・未経験歓迎",
+    "requirements": [
+      "車が好きな方",
+      "元気で明るい方",
+      "要普通免許"
+    ],
+    "showRequirements": true,
+    "salary": "基本給 応相談（経験・能力を考慮の上決定）",
+    "showSalary": true,
+    "contactInfo": "お電話にてお問い合わせください"
+  },
+  "auditionSpeakers": [
     {
-      "name": "メリット1：純正システムを活かせる",
-      "description": "最近の車に多い「外せないナビ」をそのままに、音質だけを飛躍的に向上させられます。"
+      "brand": "ALPINE",
+      "origin": "Japan",
+      "units": [
+        {
+          "model": "X-171S",
+          "price": "40700",
+          "taxExcluded": "37000",
+          "status": "Available",
+          "youtube": "https://youtu.be/9ftZzHhT5wM",
+          "image": "/images/Demo/D-X171S.jpg"
+        }
+      ]
     },
     {
-      "name": "メリット2：圧倒的なライブラリー量",
-      "description": "3TBまでのSSD対応機種もあり、お持ちの全音楽コレクションを車載可能です。"
+      "brand": "AUDISON",
+      "origin": "Italy",
+      "units": [
+        {
+          "model": "APK165Ω2",
+          "price": "30800",
+          "taxExcluded": "28000",
+          "status": "Available",
+          "youtube": "https://youtu.be/dES5PZXkKIY",
+          "image": "/images/Demo/D-APK165.jpg"
+        }
+      ]
     },
     {
-      "name": "メリット3：DSD512等の超ハイレゾ対応",
-      "description": "スマホでは再生が難しい極めて高品位な音源も、余すことなく再生可能です。"
+      "brand": "BLAM",
+      "origin": "France",
+      "units": [
+        {
+          "model": "MULTIX / AMT1-MB6P",
+          "price": "440000",
+          "taxExcluded": "400000",
+          "status": "Available",
+          "youtube": "",
+          "image": "/images/Demo/D-MULTIX.jpg"
+        },
+        {
+          "model": "100S24BMW",
+          "price": "107800",
+          "taxExcluded": "98000",
+          "status": "Available",
+          "description": "BMWトレードイン交換タイプ",
+          "youtube": "",
+          "image": "/images/Demo/D-100S24BMW.jpg"
+        },
+        {
+          "model": "165S45",
+          "price": "126500",
+          "taxExcluded": "115000",
+          "status": "Available",
+          "youtube": "https://youtu.be/f0Uwc3Zz_Mk",
+          "image": "/images/Demo/D-165S45.jpg"
+        },
+        {
+          "model": "165S85",
+          "price": "145200",
+          "taxExcluded": "132000",
+          "status": "Available",
+          "youtube": "https://youtu.be/gP5U6fNJ4jEY",
+          "image": "/images/Demo/D-165S85.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "BlueMoonAudio",
+      "origin": "Japan",
+      "units": [
+        {
+          "model": "VX165",
+          "price": "137500",
+          "taxExcluded": "125000",
+          "status": "Available",
+          "youtube": "https://youtu.be/1WssbN3bELQ",
+          "image": "/images/Demo/VX165.webp"
+        }
+      ]
+    },
+    {
+      "brand": "Pioneer (カロッツェリア)",
+      "origin": "Japan",
+      "units": [
+        {
+          "model": "TS-Z1GR",
+          "price": "770000",
+          "taxExcluded": "700000",
+          "status": "Demo Car",
+          "youtube": "",
+          "image": "/images/Demo/D-TS-Z1GR.webp"
+        },
+        {
+          "model": "TS-Z900PRS",
+          "price": "140800",
+          "taxExcluded": "128000",
+          "status": "Available",
+          "youtube": "https://youtu.be/t28f99h0aM0",
+          "image": "/images/Demo/D-TS-Z900PRS.webp"
+        },
+        {
+          "model": "TS-C1740S",
+          "price": "Open",
+          "status": "Available",
+          "youtube": "https://youtu.be/ToQVJV9jK-g",
+          "image": "/images/Demo/D-TS-C1740S.webp"
+        },
+        {
+          "model": "TS-V174S",
+          "price": "79200",
+          "taxExcluded": "72000",
+          "status": "Available",
+          "youtube": "https://youtu.be/XVG-UxCukkM",
+          "image": "/images/Demo/D-TS-V174S.webp"
+        },
+        {
+          "model": "TS-Z1000RS",
+          "price": "385000",
+          "taxExcluded": "350000",
+          "status": "Available",
+          "youtube": "https://youtu.be/SVViqmUHM_4",
+          "image": "/images/Demo/D-TS-Z1000RS.webp"
+        }
+      ]
+    },
+    {
+      "brand": "DIATONE / ダイヤトーン",
+      "origin": "Japan",
+      "units": [
+        {
+          "model": "DS-G400",
+          "price": "110000",
+          "taxExcluded": "100000",
+          "status": "Available",
+          "youtube": "https://youtu.be/_1M6N16o9no",
+          "image": "/images/Demo/D-DS-G400.webp"
+        },
+        {
+          "model": "DS-SA1000",
+          "price": "737000",
+          "taxExcluded": "670000",
+          "status": "Available",
+          "youtube": "https://youtu.be/SOdFw_Cx5Sw",
+          "image": "/images/Demo/D-SA1000.webp"
+        }
+      ]
+    },
+    {
+      "brand": "DYNAUDIO",
+      "origin": "Denmark",
+      "units": [
+        {
+          "model": "ESOTAN202",
+          "price": "60500",
+          "taxExcluded": "55000",
+          "status": "Available",
+          "youtube": "https://youtu.be/W8YVl6QgaTw",
+          "image": "/images/Demo/ESOTAN202.webp"
+        },
+        {
+          "model": "ESOTAN232",
+          "price": "77000",
+          "taxExcluded": "70000",
+          "status": "Available",
+          "youtube": "https://youtu.be/byYM-uqoy2Q",
+          "image": "/images/Demo/ESOTAN232.webp"
+        },
+        {
+          "model": "ESOTEC SYSTEM242",
+          "price": "220000",
+          "taxExcluded": "200000",
+          "status": "Available",
+          "youtube": "https://youtu.be/KhNixYLyDKI",
+          "image": "/images/Demo/SYSTEM242.webp"
+        }
+      ]
+    },
+    {
+      "brand": "FOCAL",
+      "origin": "France",
+      "units": [
+        {
+          "model": "PS165FSE",
+          "price": "77000",
+          "taxExcluded": "70000",
+          "status": "Available",
+          "youtube": "https://youtu.be/D49aol_HkKo",
+          "image": "/images/Demo/D-PS165FSE.webp"
+        },
+        {
+          "model": "ES165K2S",
+          "price": "125400",
+          "taxExcluded": "114000",
+          "status": "Available",
+          "youtube": "https://youtu.be/0Yl4ozb6_Hc",
+          "image": "/images/Demo/D-ES165K2S.webp"
+        },
+        {
+          "model": "UTOPIA M 165W-XP",
+          "price": "286000",
+          "taxExcluded": "260000",
+          "status": "Available",
+          "youtube": "https://youtu.be/U_ReOFJ06TI",
+          "image": "/images/Demo/D-165W-XP.webp"
+        }
+      ]
+    },
+    {
+      "brand": "GROUND ZERO",
+      "origin": "Germany",
+      "units": [
+        {
+          "model": "GZIC650FX",
+          "price": "37400",
+          "taxExcluded": "34000",
+          "status": "Available",
+          "youtube": "https://youtu.be/D_piASeBr2s"
+        }
+      ]
+    },
+    {
+      "brand": "HELIX",
+      "origin": "Germany",
+      "units": [
+        {
+          "model": "Ci3K165.2FM-S3",
+          "price": "66000",
+          "taxExcluded": "60000",
+          "status": "Available",
+          "youtube": "https://youtu.be/S7HEbCUv5ks",
+          "image": "/images/Demo/D-ci3k165.webp"
+        }
+      ]
+    },
+    {
+      "brand": "KICKER",
+      "origin": "USA",
+      "units": [
+        {
+          "model": "CSS674",
+          "price": "40700",
+          "taxExcluded": "37000",
+          "status": "Available",
+          "youtube": "https://youtu.be/mAA9X8pXv7Q",
+          "image": "/images/Demo/D-CSS674.webp"
+        },
+        {
+          "model": "KSS6704",
+          "price": "61600",
+          "taxExcluded": "56000",
+          "status": "Available",
+          "youtube": "https://youtu.be/rV2gX6VtX3o",
+          "image": "/images/Demo/KSS6704.webp"
+        }
+      ]
+    },
+    {
+      "brand": "Micro-Precision",
+      "origin": "Germany",
+      "units": [
+        {
+          "model": "7.16i",
+          "price": "316800",
+          "taxExcluded": "288000",
+          "status": "Available",
+          "youtube": "https://youtu.be/K0cQ1HXSaZ0",
+          "image": "/images/Demo/D-7-16i.webp"
+        }
+      ]
+    },
+    {
+      "brand": "morel モレル",
+      "origin": "Israel",
+      "units": [
+        {
+          "model": "MAXIMO ULTRA 602HE MkⅡ",
+          "price": "80300",
+          "taxExcluded": "73000",
+          "status": "Available",
+          "youtube": "https://youtu.be/ZJvuipxFFR8",
+          "image": "/images/Demo/D-MAXIMO-U.webp"
+        },
+        {
+          "model": "ELATE CARBON PRO62",
+          "price": "496100",
+          "taxExcluded": "451000",
+          "status": "Available",
+          "image": "/images/Demo/D-ELATECARBONPRO62A.webp",
+          "youtube": "https://youtu.be/Qc1Ph3d4b0U"
+        }
+      ]
+    },
+    {
+      "brand": "ZR AUDIO",
+      "origin": "Slovenia",
+      "units": [
+        {
+          "model": "ZR EXTRAVAGANCE LINE(3WAY)",
+          "price": "3586000",
+          "taxExcluded": "3260000",
+          "status": "Available",
+          "image": "/images/Demo/D-ZR.webp"
+        }
+      ]
     }
-  ]
-},
-{
-  "id": "hi_end_guide",
-  "title": "ハイエンドスピーカーへの誘い",
-  "badge": "至高の音",
-  "features": [
-    "圧倒的な解像度",
-    "正確な音像定位",
-    "芸術的な表現力"
   ],
-  "image": "https://picsum.photos/seed/hi-end-sp/800/600",
-  "description": "ハイエンドスピーカーをインストールするには・・・\n\n各ブランドの上位モデルでは、そのスペックをしっかりと活かせるインストレーションやケーブル選びが大切になります。ハイエンドスピーカーに施したいインストール、ケーブル選びなどをご紹介します。\n\nハイエンドスピーカーに興味を持ったらぜひご相談ください。オーナー様の理想を形にする最適なシステムをご提案いたします。",
-  "category": "知識・ガイド",
-  "packageDetails": {
-    "standardPrice": "0",
-    "savings": "0",
-    "contents": [
-      {
-        "title": "ツィーター加工取付",
-        "description": "反射を考慮したピラーやドアミラー裏への埋め込み加工",
-        "icon": "Activity"
-      },
-      {
-        "title": "ドアスピーカー取付",
-        "description": "抜けを良くする アウターバッフルや強固なバッフル製作",
-        "icon": "Wrench"
-      },
-      {
-        "title": "高音質ワイヤリング",
-        "description": "レグザット、M&M、アクロリンク等の高級ケーブル選定",
-        "icon": "Zap"
-      },
-      {
-        "title": "システム構成",
-        "description": "DSPを用いたマルチワイヤリング（アクティブ）等の構築",
-        "icon": "Layers"
-      }
-    ],
-    "notes": [
-      "ハイエンドスピーカーはユニットの性能を引き出すための環境作りが不可欠です。",
-      "インナーバッフルでの施工でも、市販品を避けスピーカーをしっかり受け止める製作が重要です。",
-      "試聴室ではスピーカーケーブルの比較も可能です。音の違いを体感して選べます。"
-    ]
-  },
-  "lineup": [
+  "brandPartners": [
     {
-      "name": "Aピラーツィーター埋め込み加工",
-      "price": "44000",
-      "description": "反射の影響を考慮した角度決め。左右込 44,000円〜"
+      "id": "b1",
+      "name": "Yupiteru",
+      "category": "Security / Dashcam",
+      "description": "Panthera・Grgoの正規販売店として、高度なセキュリティシステムを提供しています。",
+      "iconName": "ShieldCheck",
+      "url": "https://www.yupiteru.co.jp/"
     },
     {
-      "name": "オリジナルアウターバッフル製作",
-      "price": "107800",
-      "description": "スピーカーの抜けを良くし、情報量を最大限に引き出すインストール。"
+      "id": "b2",
+      "name": "Focal",
+      "category": "Car Audio",
+      "description": "フランスの名門ブランド。繊細で表現力豊かなサウンドを車内へ。",
+      "iconName": "Speaker",
+      "url": "https://www.focal-audio.jp/"
     },
     {
-      "name": "エンクロージャー仕様アウターバッフル",
-      "price": "0",
-      "description": "スピーカーと車両に合わせて、排圧をコントロールするこだわりのエンクロージャーを製作。"
+      "id": "b3",
+      "name": "Alpine",
+      "category": "Navigation / Audio",
+      "description": "先進のテクノロジーで、快適なカーライフをサポートする国内トップブランド。",
+      "iconName": "Video",
+      "url": "https://www.alpine.co.jp/"
+    },
+    {
+      "id": "b4",
+      "name": "Bewith",
+      "category": "High-End Audio",
+      "description": "妥協のない音質を追求する、日本発のハイエンドオーディオブランド。",
+      "iconName": "Speaker",
+      "url": "https://www.bewith.jp/"
+    },
+    {
+      "id": "b5",
+      "name": "加藤電機",
+      "category": "Security",
+      "description": "VIPER・HORNETなど、世界基準のセキュリティシステムを展開。",
+      "iconName": "ShieldCheck",
+      "url": "https://www.kato-denki.com/"
+    },
+    {
+      "id": "b6",
+      "name": "Pioneer",
+      "category": "Carrozzeria",
+      "description": "カーナビゲーションからオーディオまで、業界をリードする革新性。",
+      "iconName": "Video",
+      "url": "https://jpn.pioneer/ja/carrozzeria/"
     }
-  ]
-},
-{
-  "id": "subwoofer_style_guide",
-  "title": "サブウーハーインストール・スタイルガイド",
-  "badge": "低音の極致",
-  "features": [
-    "低音補強",
-    "BOX製作",
-    "ラゲッジ埋め込み"
   ],
-  "image": "https://picsum.photos/seed/subwoofer/800/600",
-  "description": "とっても重要なサブウーハーの役割！可聴帯域のほんの一部ですが、建物の基礎と同じでここがしっかりしていないと全体のイメージが希薄になってしまいます。\n\n音は倍音で構成されていますので、サブウーハーが中心でないようなボーカルやピアノの音も、サブウーハーのオンオフで様変わりします。HiFiスタイルからパワーサウンド、重低音スタイルまで、自分だけの個室を好きなサウンドにアレンジして楽しみましょう！",
-  "category": "知識・ガイド",
-  "packageDetails": {
-    "standardPrice": "0",
-    "savings": "0",
-    "contents": [
-      {
-        "title": "サブウーハーユニット",
-        "description": "8インチ(20cm)〜18インチ(45cm)まで幅広く対応",
-        "icon": "Music"
-      },
-      {
-        "title": "パワーアンプ",
-        "description": "Dクラスモノアンプや2chブリッジ接続など最適な駆動",
-        "icon": "Zap"
-      },
-      {
-        "title": "エンクロージャー(BOX)",
-        "description": "シールド・バスレフ等、性能を引き出す適正容量の設計",
-        "icon": "Wrench"
-      },
-      {
-        "title": "ワイヤリング・取付",
-        "description": "電源・RCA・SPケーブルの配線と確実な固定・調整",
-        "icon": "Activity"
-      }
-    ],
-    "notes": [
-      "フロントスピーカーとのバランスを考えた10〜12インチがお勧めです。",
-      "BOXの設計（容量や形状）によってウーハーの性能が大きく変わります。",
-      "トランク設置時は、荷物の積載を考慮した脱着しやすい固定方法も可能です。"
-    ]
-  },
-  "lineup": [
+  "partners": [
     {
-      "name": "お手軽パワードサブウーハー設置",
-      "price": "0",
-      "description": "アンプ内蔵タイプでコストとスペースを抑制。"
+      "id": "p1",
+      "name": "オーディオファイル",
+      "location": "千葉県",
+      "url": "https://audiophile.co.jp/",
+      "description": "ハイエンドオーディオからカスタムまで、確かな技術で理想のサウンドを実現。"
     },
     {
-      "name": "スタンダードBOX設置（トランク）",
-      "price": "0",
-      "description": "四角いタイプの箱を製作してトランクに設置。"
+      "id": "p2",
+      "name": "尾林ファクトリー",
+      "location": "東京都",
+      "url": "http://www.obayashi-f.jp/",
+      "description": "独創的なカスタムオーディオと、妥協のない音質追求で知られる名門ショップ。"
     },
     {
-      "name": "フロア/スペアタイヤスペース埋め込み",
-      "price": "0",
-      "description": "サブトランクやスペアタイヤスペースを利用してBOXを製作。"
+      "id": "p3",
+      "name": "キッズガレージ",
+      "location": "愛知県",
+      "url": "https://www.kidsgarage.jp/",
+      "description": "セキュリティとオーディオの両立。中部エリアを代表するプロショップ。"
     },
     {
-      "name": "カスタム・ショーアップインストール",
-      "price": "0",
-      "description": "LEDライティングやアクリルを組み合わせた魅せるカスタム。"
+      "id": "p4",
+      "name": "ケンテック",
+      "location": "佐賀県",
+      "url": "http://www.03g.xyz/",
+      "description": "九州エリアの技術拠点。きめ細やかな施工 and アフターサポートが魅力。"
+    },
+    {
+      "id": "p5",
+      "name": "サウンドプログレス",
+      "location": "千葉県",
+      "url": "https://sound-progress.jp/",
+      "description": "音のプロフェッショナルが、お客様一人ひとりに最適なシステムを提案。"
+    },
+    {
+      "id": "p6",
+      "name": "シミズファクトリー",
+      "location": "長野県",
+      "url": "http://www.shimizu-factory.com/",
+      "description": "信州のカーオーディオシーンをリード。高い技術力と信頼の実績。"
+    },
+    {
+      "id": "p7",
+      "name": "ジム・インダストリー",
+      "location": "栃木県",
+      "url": "http://www.gymindustry.co.jp/",
+      "description": "北関東エリアをカバー。音質向上からドレスアップまで幅広く対応。"
+    },
+    {
+      "id": "p8",
+      "name": "ビクトリー",
+      "location": "愛知県",
+      "url": "http://www.victory1987.co.jp/",
+      "description": "カーオーディオとセキュリティの専門店。愛車に最高の価値をプラス。"
+    },
+    {
+      "id": "p9",
+      "name": "Sound ANG",
+      "location": "福岡県",
+      "url": "https://www.soundang.com/",
+      "description": "当ショップ。九州屈指の技術力で、お客様の理想を形にします。"
     }
-  ]
-},
-{
-  "id": "custom_install_guide",
-  "title": "カスタムインストール・ワンオフ製作",
-  "badge": "完全オーダー",
-  "features": [
-    "トランクカスタム",
-    "アウターバッフル",
-    "LEDライティング"
   ],
-  "image": "https://picsum.photos/seed/custom-inst/800/600",
-  "description": "カーオーディオならでは！いい音を耳で楽しむだけではなく、クールなインストールで目で見て楽しむカスタムオーディオの世界。\n\n代表的な取り付け例をご紹介します。取り付けるユニットや車両、またインストール方法により費用は様々です。まずはお気軽にご相談ください。\n\nオーナー様のイメージするカスタムを具現化するお手伝いをいたします。ワンオフでのカスタムとなり、お車を確認しながらの商談が必要となりますので、ぜひご来店の上ご相談ください。",
-  "category": "知識・ガイド",
-  "packageDetails": {
-    "standardPrice": "0",
-    "savings": "0",
-    "contents": [
-      {
-        "title": "デザイン・設計",
-        "description": "車両形状と機材に合わせたワンオフデザイン",
-        "icon": "Layers"
-      },
-      {
-        "title": "造作・加工",
-        "description": "MDF、アクリル、パテ等を用いた高度な加工技術",
-        "icon": "Wrench"
-      },
-      {
-        "title": "仕上げ・装飾",
-        "description": "レザー、ペイント、LEDライティング等の演出",
-        "icon": "Activity"
-      },
-      {
-        "title": "音響チューニング",
-        "description": "カスタム環境に合わせた最適なサウンド調整",
-        "icon": "Music"
-      }
-    ],
-    "notes": [
-      "記載している価格は一例です。施工内容により大きく変動します。",
-      "ワンオフ製作のため、お車をお預かりしての作業となります。",
-      "まずはご来店いただき、ご要望をお聞かせください。お見積もりを作成いたします。"
-    ]
+  "assets": {
+    "heroImage": "/images/Top/tenpo.webp",
+    "logoText": "Sound ANG Security",
+    "audioMenuImage": "/images/Top/speaker.webp",
+    "securityMenuImage": "/images/Top/security.webp",
+    "dashcamMenuImage": "/images/Top/dorareko.webp",
+    "showroomImage": "/images/Top/inner1.webp",
+    "pitImage": "/images/Top/pitroom.webp",
+    "workspaceImage": "/images/Top/workroom.webp",
+    "auditionRoomImage": "/images/Top/demoroom1.webp",
+    "kyushuNo1Image": "/images/Top/kyushu_no1.webp",
+    "spsCertifiedImage": "/images/Top/sps_certified.webp",
+    "snaponImage": "/images/Top/tenpo.webp",
+    "batteryChargerImage": "/images/Top/pitroom.webp",
+    "media_player_guide": "/images/Top/media_player_lecture.png",
+    "hires_guide": "/images/Top/hires_guide.png"
   },
-  "lineup": [
-    {
-      "name": "トランク・カーゴスペースインストール",
-      "price": "100000",
-      "description": "フロアへの埋め込みやカバー製作. およそ10万円〜。"
-    },
-    {
-      "name": "セダンタイプトランクインストール",
-      "price": "150000",
-      "description": "背もたれ裏へのウーハー埋め込みやアンプボード製作. およそ15万円〜。"
-    },
-    {
-      "name": "ドアカスタムアウターバッフル製作",
-      "price": "200000",
-      "description": "純正パネルに馴染むカスタムインストール. 左右でおよそ20万円〜。"
-    },
-    {
-      "name": "ドアパネル全面施工・エンクロージャー",
-      "price": "250000",
-      "description": "パネル丸ごと張り替えやエンクロージャー化. およそ25万円〜。"
-    },
-    {
-      "name": "カスタムピラーインストール（3WAY対応）",
-      "price": "80000",
-      "description": "フロント3WAYに欠かせないピラー加工. 左右でおよそ8万円〜。"
-    }
-  ]
-}
-],
-"optionals": [
-{
-  "id": "deadening_opt",
-  "name": "標準デッドニング",
-  "price": "0",
-  "description": "スピーカー交換プランには標準で付属。差額で上位プランへの変更も可能です。",
-  "effect": "音の締まり向上",
-  "percentage": 40,
-  "image": "/images/Audio/basic-line-coaxial.png"
-},
-{
-  "id": "cable_opt",
-  "name": "スピーカーケーブル",
-  "price": "0",
-  "description": "標準ケーブルが付属。差額で高音質OFCケーブル等へアップグレード可能です。",
-  "effect": "情報量UP",
-  "percentage": 30,
-  "image": "/images/speaker.jpg"
-},
-{
-  "id": "tuning_opt",
-  "name": "サウンドチューニング",
-  "price": "0",
-  "description": "当店でご購入・施工いただいたお客様には、無料で音響調整を行っております。",
-  "effect": "鮮度回復",
-  "percentage": 100,
-  "image": "/images/speaker.jpg"
-}
-],
-"securityStatus": "",
-"emergencyAnnouncement": {
-"text": "【緊急のお知らせ】現在、施工予約が大変混み合っております。お早めにご相談ください。",
-"link": "",
-"image": "",
-"active": false
-},
-"calendar": {
-"2026-4": [],
-"2026-5": [
-  3,
-  4,
-  6
-],
-"2026-6": [],
-"2026-7": [],
-"2026-8": [],
-"2026-9": [],
-"2026-10": [],
-"2026-11": []
-},
-"recruitment": {
-"visible": true,
-"title": "採用情報",
-"message": "カーセキュリティー取り付け・販売スタッフ募集中です。詳しくはお電話ください。092-503-5437担当：塚元 or 村上",
-"requirements": [
-  ""
-],
-"salary": "",
-"contactInfo": "お電話にてお問い合わせください"
-},
-"securityRecruitment": {
-"visible": true,
-"title": "スタッフ募集中",
-"message": "カーセキュリティー取り付け・販売スタッフ募集中です。詳しくはお電話ください。担当：塚元 or 村上",
-"requirements": [
-  "車が好きな方",
-  "元気で明るい方",
-  "要普通免許"
-],
-"showRequirements": false,
-"salary": "基本給 応相談（経験・能力を考慮の上決定）",
-"showSalary": false,
-"contactInfo": "092-503-5437"
-},
-"audioRecruitment": {
-"visible": false,
-"title": "採用情報",
-"message": "一緒にカーオーディオの世界を盛り上げませんか？経験者優遇・未経験歓迎",
-"requirements": [
-  "車が好きな方",
-  "元気で明るい方",
-  "要普通免許"
-],
-"showRequirements": true,
-"salary": "基本給 応相談（経験・能力を考慮の上決定）",
-"showSalary": true,
-"contactInfo": "お電話にてお問い合わせください"
-},
-"auditionSpeakers": [
-{
-  "brand": "ALPINE",
-  "origin": "Japan",
-  "units": [
-    {
-      "model": "X-171S",
-      "price": "40700",
-      "taxExcluded": "37000",
-      "status": "Available",
-      "youtube": "https://youtu.be/9ftZzHhT5wM",
-      "image": "/images/Demo/D-X171S.jpg"
-    }
-  ]
-},
-{
-  "brand": "AUDISON",
-  "origin": "Italy",
-  "units": [
-    {
-      "model": "APK165Ω2",
-      "price": "30800",
-      "taxExcluded": "28000",
-      "status": "Available",
-      "youtube": "https://youtu.be/dES5PZXkKIY",
-      "image": "/images/Demo/D-APK165.jpg"
-    }
-  ]
-},
-{
-  "brand": "BLAM",
-  "origin": "France",
-  "units": [
-    {
-      "model": "MULTIX / AMT1-MB6P",
-      "price": "440000",
-      "taxExcluded": "400000",
-      "status": "Available",
-      "youtube": "",
-      "image": "/images/Demo/D-MULTIX.jpg"
-    },
-    {
-      "model": "100S24BMW",
-      "price": "107800",
-      "taxExcluded": "98000",
-      "status": "Available",
-      "description": "BMWトレードイン交換タイプ",
-      "youtube": "",
-      "image": "/images/Demo/D-100S24BMW.jpg"
-    },
-    {
-      "model": "165S45",
-      "price": "126500",
-      "taxExcluded": "115000",
-      "status": "Available",
-      "youtube": "https://youtu.be/f0Uwc3Zz_Mk",
-      "image": "/images/Demo/D-165S45.jpg"
-    },
-    {
-      "model": "165S85",
-      "price": "145200",
-      "taxExcluded": "132000",
-      "status": "Available",
-      "youtube": "https://youtu.be/gP5U6fNJ4jEY",
-      "image": "/images/Demo/D-165S85.jpg"
-    }
-  ]
-},
-{
-  "brand": "BlueMoonAudio",
-  "origin": "Japan",
-  "units": [
-    {
-      "model": "VX165",
-      "price": "137500",
-      "taxExcluded": "125000",
-      "status": "Available",
-      "youtube": "https://youtu.be/1WssbN3bELQ",
-      "image": "/images/Demo/VX165.webp"
-    }
-  ]
-},
-{
-  "brand": "Pioneer (カロッツェリア)",
-  "origin": "Japan",
-  "units": [
-    {
-      "model": "TS-Z1GR",
-      "price": "770000",
-      "taxExcluded": "700000",
-      "status": "Demo Car",
-      "youtube": "",
-      "image": "/images/Demo/D-TS-Z1GR.webp"
-    },
-    {
-      "model": "TS-Z900PRS",
-      "price": "140800",
-      "taxExcluded": "128000",
-      "status": "Available",
-      "youtube": "https://youtu.be/t28f99h0aM0",
-      "image": "/images/Demo/D-TS-Z900PRS.webp"
-    },
-    {
-      "model": "TS-C1740S",
-      "price": "Open",
-      "status": "Available",
-      "youtube": "https://youtu.be/ToQVJV9jK-g",
-      "image": "/images/Demo/D-TS-C1740S.webp"
-    },
-    {
-      "model": "TS-V174S",
-      "price": "79200",
-      "taxExcluded": "72000",
-      "status": "Available",
-      "youtube": "https://youtu.be/XVG-UxCukkM",
-      "image": "/images/Demo/D-TS-V174S.webp"
-    },
-    {
-      "model": "TS-Z1000RS",
-      "price": "385000",
-      "taxExcluded": "350000",
-      "status": "Available",
-      "youtube": "https://youtu.be/SVViqmUHM_4",
-      "image": "/images/Demo/D-TS-Z1000RS.webp"
-    }
-  ]
-},
-{
-  "brand": "DIATONE / ダイヤトーン",
-  "origin": "Japan",
-  "units": [
-    {
-      "model": "DS-G400",
-      "price": "110000",
-      "taxExcluded": "100000",
-      "status": "Available",
-      "youtube": "https://youtu.be/_1M6N16o9no",
-      "image": "/images/Demo/D-DS-G400.webp"
-    },
-    {
-      "model": "DS-SA1000",
-      "price": "737000",
-      "taxExcluded": "670000",
-      "status": "Available",
-      "youtube": "https://youtu.be/SOdFw_Cx5Sw",
-      "image": "/images/Demo/D-SA1000.webp"
-    }
-  ]
-},
-{
-  "brand": "DYNAUDIO",
-  "origin": "Denmark",
-  "units": [
-    {
-      "model": "ESOTAN202",
-      "price": "60500",
-      "taxExcluded": "55000",
-      "status": "Available",
-      "youtube": "https://youtu.be/W8YVl6QgaTw",
-      "image": "/images/Demo/ESOTAN202.webp"
-    },
-    {
-      "model": "ESOTAN232",
-      "price": "77000",
-      "taxExcluded": "70000",
-      "status": "Available",
-      "youtube": "https://youtu.be/byYM-uqoy2Q",
-      "image": "/images/Demo/ESOTAN232.webp"
-    },
-    {
-      "model": "ESOTEC SYSTEM242",
-      "price": "220000",
-      "taxExcluded": "200000",
-      "status": "Available",
-      "youtube": "https://youtu.be/KhNixYLyDKI",
-      "image": "/images/Demo/SYSTEM242.webp"
-    }
-  ]
-},
-{
-  "brand": "FOCAL",
-  "origin": "France",
-  "units": [
-    {
-      "model": "PS165FSE",
-      "price": "77000",
-      "taxExcluded": "70000",
-      "status": "Available",
-      "youtube": "https://youtu.be/D49aol_HkKo",
-      "image": "/images/Demo/D-PS165FSE.webp"
-    },
-    {
-      "model": "ES165K2S",
-      "price": "125400",
-      "taxExcluded": "114000",
-      "status": "Available",
-      "youtube": "https://youtu.be/0Yl4ozb6_Hc",
-      "image": "/images/Demo/D-ES165K2S.webp"
-    },
-    {
-      "model": "UTOPIA M 165W-XP",
-      "price": "286000",
-      "taxExcluded": "260000",
-      "status": "Available",
-      "youtube": "https://youtu.be/U_ReOFJ06TI",
-      "image": "/images/Demo/D-165W-XP.webp"
-    }
-  ]
-},
-{
-  "brand": "GROUND ZERO",
-  "origin": "Germany",
-  "units": [
-    {
-      "model": "GZIC650FX",
-      "price": "37400",
-      "taxExcluded": "34000",
-      "status": "Available",
-      "youtube": "https://youtu.be/D_piASeBr2s"
-    }
-  ]
-},
-{
-  "brand": "HELIX",
-  "origin": "Germany",
-  "units": [
-    {
-      "model": "Ci3K165.2FM-S3",
-      "price": "66000",
-      "taxExcluded": "60000",
-      "status": "Available",
-      "youtube": "https://youtu.be/S7HEbCUv5ks",
-      "image": "/images/Demo/D-ci3k165.webp"
-    }
-  ]
-},
-{
-  "brand": "KICKER",
-  "origin": "USA",
-  "units": [
-    {
-      "model": "CSS674",
-      "price": "40700",
-      "taxExcluded": "37000",
-      "status": "Available",
-      "youtube": "https://youtu.be/mAA9X8pXv7Q",
-      "image": "/images/Demo/D-CSS674.webp"
-    },
-    {
-      "model": "KSS6704",
-      "price": "61600",
-      "taxExcluded": "56000",
-      "status": "Available",
-      "youtube": "https://youtu.be/rV2gX6VtX3o",
-      "image": "/images/Demo/KSS6704.webp"
-    }
-  ]
-},
-{
-  "brand": "Micro-Precision",
-  "origin": "Germany",
-  "units": [
-    {
-      "model": "7.16i",
-      "price": "316800",
-      "taxExcluded": "288000",
-      "status": "Available",
-      "youtube": "https://youtu.be/K0cQ1HXSaZ0",
-      "image": "/images/Demo/D-7-16i.webp"
-    }
-  ]
-},
-{
-  "brand": "morel モレル",
-  "origin": "Israel",
-  "units": [
-    {
-      "model": "MAXIMO ULTRA 602HE MkⅡ",
-      "price": "80300",
-      "taxExcluded": "73000",
-      "status": "Available",
-      "youtube": "https://youtu.be/ZJvuipxFFR8",
-      "image": "/images/Demo/D-MAXIMO-U.webp"
-    },
-    {
-      "model": "ELATE CARBON PRO62",
-      "price": "496100",
-      "taxExcluded": "451000",
-      "status": "Available",
-      "image": "/images/Demo/D-ELATECARBONPRO62A.webp",
-      "youtube": "https://youtu.be/Qc1Ph3d4b0U"
-    }
-  ]
-},
-{
-  "brand": "ZR AUDIO",
-  "origin": "Slovenia",
-  "units": [
-    {
-      "model": "ZR EXTRAVAGANCE LINE(3WAY)",
-      "price": "3586000",
-      "taxExcluded": "3260000",
-      "status": "Available",
-      "image": "/images/Demo/D-ZR.webp"
-    }
-  ]
-}
-],
-"brandPartners": [
-{
-  "id": "b1",
-  "name": "Yupiteru",
-  "category": "Security / Dashcam",
-  "description": "Panthera・Grgoの正規販売店として、高度なセキュリティシステムを提供しています。",
-  "iconName": "ShieldCheck",
-  "url": "https://www.yupiteru.co.jp/"
-},
-{
-  "id": "b2",
-  "name": "Focal",
-  "category": "Car Audio",
-  "description": "フランスの名門ブランド。繊細で表現力豊かなサウンドを車内へ。",
-  "iconName": "Speaker",
-  "url": "https://www.focal-audio.jp/"
-},
-{
-  "id": "b3",
-  "name": "Alpine",
-  "category": "Navigation / Audio",
-  "description": "先進のテクノロジーで、快適なカーライフをサポートする国内トップブランド。",
-  "iconName": "Video",
-  "url": "https://www.alpine.co.jp/"
-},
-{
-  "id": "b4",
-  "name": "Bewith",
-  "category": "High-End Audio",
-  "description": "妥協のない音質を追求する、日本発のハイエンドオーディオブランド。",
-  "iconName": "Speaker",
-  "url": "https://www.bewith.jp/"
-},
-{
-  "id": "b5",
-  "name": "加藤電機",
-  "category": "Security",
-  "description": "VIPER・HORNETなど、世界基準のセキュリティシステムを展開。",
-  "iconName": "ShieldCheck",
-  "url": "https://www.kato-denki.com/"
-},
-{
-  "id": "b6",
-  "name": "Pioneer",
-  "category": "Carrozzeria",
-  "description": "カーナビゲーションからオーディオまで、業界をリードする革新性。",
-  "iconName": "Video",
-  "url": "https://jpn.pioneer/ja/carrozzeria/"
-}
-],
-"partners": [
-{
-  "id": "p1",
-  "name": "オーディオファイル",
-  "location": "千葉県",
-  "url": "https://audiophile.co.jp/",
-  "description": "ハイエンドオーディオからカスタムまで、確かな技術で理想のサウンドを実現。"
-},
-{
-  "id": "p2",
-  "name": "尾林ファクトリー",
-  "location": "東京都",
-  "url": "http://www.obayashi-f.jp/",
-  "description": "独創的なカスタムオーディオと、妥協のない音質追求で知られる名門ショップ。"
-},
-{
-  "id": "p3",
-  "name": "キッズガレージ",
-  "location": "愛知県",
-  "url": "https://www.kidsgarage.jp/",
-  "description": "セキュリティとオーディオの両立。中部エリアを代表するプロショップ。"
-},
-{
-  "id": "p4",
-  "name": "ケンテック",
-  "location": "佐賀県",
-  "url": "http://www.03g.xyz/",
-  "description": "九州エリアの技術拠点。きめ細やかな施工 and アフターサポートが魅力。"
-},
-{
-  "id": "p5",
-  "name": "サウンドプログレス",
-  "location": "千葉県",
-  "url": "https://sound-progress.jp/",
-  "description": "音のプロフェッショナルが、お客様一人ひとりに最適なシステムを提案。"
-},
-{
-  "id": "p6",
-  "name": "シミズファクトリー",
-  "location": "長野県",
-  "url": "http://www.shimizu-factory.com/",
-  "description": "信州のカーオーディオシーンをリード。高い技術力と信頼の実績。"
-},
-{
-  "id": "p7",
-  "name": "ジム・インダストリー",
-  "location": "栃木県",
-  "url": "http://www.gymindustry.co.jp/",
-  "description": "北関東エリアをカバー。音質向上からドレスアップまで幅広く対応。"
-},
-{
-  "id": "p8",
-  "name": "ビクトリー",
-  "location": "愛知県",
-  "url": "http://www.victory1987.co.jp/",
-  "description": "カーオーディオとセキュリティの専門店。愛車に最高の価値をプラス。"
-},
-{
-  "id": "p9",
-  "name": "Sound ANG",
-  "location": "福岡県",
-  "url": "https://www.soundang.com/",
-  "description": "当ショップ。九州屈指の技術力で、お客様の理想を形にします。"
-}
-],
-"assets": {
-"heroImage": "/images/Top/tenpo.webp",
-"logoText": "Sound ANG Security",
-"audioMenuImage": "/images/Top/speaker.webp",
-"securityMenuImage": "/images/Top/security.webp",
-"dashcamMenuImage": "/images/Top/dorareko.webp",
-"showroomImage": "/images/Top/inner1.webp",
-"pitImage": "/images/Top/pitroom.webp",
-"workspaceImage": "/images/Top/workroom.webp",
-"auditionRoomImage": "/images/Top/demoroom1.webp",
-"kyushuNo1Image": "/images/Top/kyushu_no1.webp",
-"spsCertifiedImage": "/images/Top/sps_certified.webp",
-"snaponImage": "/images/Top/tenpo.webp",
-"batteryChargerImage": "/images/Top/pitroom.webp",
-"media_player_guide": "/images/Top/media_player_lecture.png",
-"hires_guide": "/images/Top/hires_guide.png"
-},
-"cacheVersion": "10"
+  "cacheVersion": "10"
 }

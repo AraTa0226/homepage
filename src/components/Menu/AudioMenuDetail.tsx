@@ -44,7 +44,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
   const { assets } = useSite();
   const { plans, optionals, guides, audioRecruitment, auditionSpeakers } = usePrices();
   const { planSlug } = useParams<{ planSlug: string }>();
-  const [activeCategory, setActiveCategory] = useState<'all' | 'speaker_package' | 'bass_power' | 'digital_source' | 'install_tuning'>('all');
+  const [activeCategory, setActiveCategory] = useState<'all' | 'speaker_package' | 'bass_power' | 'digital_source' | 'install_tuning' | 'custom_install'>('all');
   const [viewingFullList, setViewingFullList] = useState<string | null>(null);
   const [viewingCategoryDetail, setViewingCategoryDetail] = useState<string | null>(null);
   const [selectedItem, setSelectedItem] = useState<any | null>(null);
@@ -157,6 +157,24 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
         { title: "仮想アース追加", price: "+¥33,000〜", icon: Activity, description: "ノイズを吸収し、音の透明感をさらに向上させます。" }
       ]
     },
+    custom_install: {
+      title: "カスタムインストール・造作",
+      subtitle: "**匠の技**で、音と美しさが融合する**唯一無二**の空間を…",
+      description: "音響理論に基づいた**ピラー加工**や、ドアの鳴りを極限まで引き出す**アウターバッフル**。機能美を追求した造作により、愛車を特別なリスニングルームへと変貌させます。",
+      sampleDescription: "【施工例】Aピラー3WAY埋め込み＋トランクカスタム：スピーカーの指向性を最適化し、圧倒的なステージングを実現。ライティングを組み合わせることで、夜のドライブも彩ります。",
+      benefits: [
+        "音響特性を最大限に引き出す緻密な角度設計",
+        "純正の内装に馴染む、あるいは凌駕するハイクオリティな仕上がり",
+        "オーナー様のこだわりを具現化するフルオーダーメイド"
+      ],
+      image: assets.audioMenuImage,
+      icon: Settings2,
+      color: "cyan",
+      upgrades: [
+        { title: "エクセーヌ/アルカンターラ仕上げ", price: "+¥11,550〜", icon: Layers, description: "質感を高める高級素材。光の反射を抑え、ダッシュボードの高級感を演出します。" },
+        { title: "LEDライティング演出", price: "+¥22,000〜", icon: Zap, description: "アクリルとLEDを組み合わせ、夜間の車内を幻想的にアップデート。" }
+      ]
+    },
     deadening_opt: {
       title: "標準デッドニング",
       subtitle: "スピーカー交換プランに標準付帯。",
@@ -225,7 +243,8 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
     { id: 'speaker_package', title: "スピーカー交換・車種別プラン", desc: "純正の不満を解決。愛車にピッタリの音を。", icon: Speaker, color: "blue" },
     { id: 'bass_power', title: "低音強化・パワーアップ", desc: "迫力の重低音と、鮮明な解像度をプラス。", icon: Zap, color: "indigo" },
     { id: 'digital_source', title: "デジタル・音質制御", desc: "DSPとメディアプレーヤーで極上の音像を。", icon: Settings2, color: "purple" },
-    { id: 'install_tuning', title: "施工・環境チューニング", desc: "機材の性能を120%引き出す必須施工。", icon: Shield, color: "orange" },
+    { id: 'install_tuning', title: "環境チューニング", desc: "機材の性能を120%引き出す基礎工事。", icon: Shield, color: "orange" },
+    { id: 'custom_install', title: "カスタムインストール", desc: "匠の技で、世界に一台のリスニングルームを。", icon: Settings2, color: "cyan" },
     { id: 'knowledge-guide', title: "お悩み解決コラム", desc: "カーオーディオの知識や事例を読む。", icon: Info, color: "sky" },
   ];
 
@@ -234,6 +253,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
     { id: 'bass_power', title: "低音・アンプ", items: ["サブウーハー", "外部アンプ"], icon: Zap },
     { id: 'digital_source', title: "デジタル・DSP", items: ["DSP", "プレーヤー", "ナビ"], icon: Settings2 },
     { id: 'install_tuning', title: "施工・電源", items: ["デッドニング", "電源強化", "車内静音"], icon: Shield },
+    { id: 'custom_install', title: "造作・カスタム", items: ["ピラー加工", "アウターバッフル", "トランク造作"], icon: Settings2 },
   ];
 
   const colorClasses: Record<string, string> = {
@@ -241,7 +261,8 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
     indigo: "bg-indigo-600 text-indigo-600 border-indigo-600",
     purple: "bg-purple-600 text-purple-600 border-purple-600",
     orange: "bg-orange-600 text-orange-600 border-orange-600",
-    green: "bg-green-600 text-green-600 border-green-600"
+    green: "bg-green-600 text-green-600 border-green-600",
+    cyan: "bg-cyan-600 text-cyan-600 border-cyan-600"
   };
 
   const renderHighlightedText = (text: string, color: string) => {
@@ -1323,7 +1344,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
 
               <div className="space-y-4 md:space-y-24">
                 {plans
-                  .filter(p => ['speaker_package', 'bass_power', 'digital_source', 'install_tuning'].includes(p.id))
+                  .filter(p => ['speaker_package', 'bass_power', 'digital_source', 'install_tuning', 'custom_install'].includes(p.id))
                   .filter(p => activeCategory === 'all' || p.id === activeCategory)
                   .map((section, idx) => (
                     <motion.div
