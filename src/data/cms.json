@@ -11,6 +11,7 @@
         {
           "name": "スピーカー交換BASIC line（コアキシャル）",
           "price": "44000",
+          "subType": "level",
           "badge": "お手軽導入",
           "features": [
             "コアキシャルスピーカー交換",
@@ -22,6 +23,7 @@
         {
           "name": "スピーカー交換BASIC line（セパレート）",
           "price": "59400",
+          "subType": "level",
           "badge": "初心者おすすめ",
           "features": [
             "セパレートスピーカー交換",
@@ -33,6 +35,7 @@
         {
           "name": "スピーカー交換STANDARD line（10万円まで）",
           "price": "104500",
+          "subType": "level",
           "badge": "コスパ最強",
           "features": [
             "ミドルグレードスピーカー",
@@ -44,6 +47,7 @@
         {
           "name": "スピーカー交換PREMIUM line（10万円以上）",
           "price": "184800",
+          "subType": "level",
           "badge": "人気No.1",
           "features": [
             "ハイグレードスピーカー",
@@ -55,6 +59,7 @@
         {
           "name": "フロント3WAYプラン",
           "price": "286000",
+          "subType": "level",
           "badge": "究極の3way",
           "features": [
             "フロント3wayシステム",
@@ -64,8 +69,21 @@
           "image": "/images/Audio/front_3way.webp"
         },
         {
+          "name": "軽自動車専用スピーカーパッケージ",
+          "price": "44000",
+          "subType": "car",
+          "badge": "軽におすすめ",
+          "features": [
+            "軽自動車専用設計",
+            "デッドニング込",
+            "工賃込"
+          ],
+          "image": "https://picsum.photos/seed/kei-car/800/600"
+        },
+        {
           "name": "車種別スピーカー交換プラン",
           "price": "44000",
+          "subType": "car",
           "badge": "安心パック",
           "features": [
             "人気車種別セット",
@@ -77,6 +95,7 @@
         {
           "name": "BMWスピーカー交換パッケージ",
           "price": "77000",
+          "subType": "car",
           "badge": "車種専用",
           "features": [
             "車種専用設計",
@@ -88,6 +107,7 @@
         {
           "name": "Mercedes Benzスピーカー交換パッケージ",
           "price": "88000",
+          "subType": "car",
           "badge": "車種専用",
           "features": [
             "車種専用設計",

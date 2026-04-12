@@ -57,6 +57,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
   const [selectedGalleryImage, setSelectedGalleryImage] = useState<string | null>(null);
   const [selectedAuditionImage, setSelectedAuditionImage] = useState<string | null>(null);
   const [showAllGuides, setShowAllGuides] = useState(false);
+  const [speakerSubTab, setSpeakerSubTab] = useState<'level' | 'car'>('level');
 
   useEffect(() => {
     // Handle planSlug from URL
@@ -996,9 +997,35 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                               <h4 className="text-2xl md:text-4xl font-black mb-6 md:mb-10 tracking-tighter leading-[1.1] text-gray-900">
                                 {currentCategory.category}
                               </h4>
-                              <div className="text-gray-600 font-medium text-base md:text-xl leading-relaxed whitespace-pre-wrap max-w-2xl">
+                              <div className="text-gray-600 font-medium text-base md:text-xl leading-relaxed whitespace-pre-wrap max-w-2xl mb-8">
                                 {renderHighlightedText(currentCategory.description || "", categoryExplanations[currentCategory.id]?.color || 'blue')}
                               </div>
+
+                              {/* Sub-category Tabs for Speaker Package in Full List */}
+                              {currentCategory.id === 'speaker_package' && (
+                                <div className="flex flex-col md:flex-row items-start md:items-center gap-4 py-6 border-t border-blue-600/10">
+                                  <div className="flex bg-gray-900/5 p-1 rounded-2xl md:rounded-full backdrop-blur-sm border border-black/5">
+                                    <button
+                                      onClick={() => setSpeakerSubTab('level')}
+                                      className={`px-6 py-2.5 rounded-2xl md:rounded-full text-xs font-black transition-all ${speakerSubTab === 'level' ? 'bg-white text-blue-600 shadow-xl' : 'text-gray-500 hover:text-gray-700'}`}
+                                    >
+                                      等級別プラン <span className="text-[10px] opacity-70 ml-1">By Level</span>
+                                    </button>
+                                    <button
+                                      onClick={() => setSpeakerSubTab('car')}
+                                      className={`px-6 py-2.5 rounded-2xl md:rounded-full text-xs font-black transition-all ${speakerSubTab === 'car' ? 'bg-white text-blue-600 shadow-xl' : 'text-gray-500 hover:text-gray-700'}`}
+                                    >
+                                      車種別プラン <span className="text-[10px] opacity-70 ml-1">By Car Type</span>
+                                    </button>
+                                  </div>
+                                  <p className="text-[11px] font-bold text-blue-600/60 flex items-center gap-2">
+                                    <Info className="w-3.5 h-3.5" />
+                                    {speakerSubTab === 'level'
+                                      ? "← ご予算やお好みの音質レベルからお選びいただけます"
+                                      : "← 軽自動車や欧州車など、特定車種に最適化されたプランです"}
+                                  </p>
+                                </div>
+                              )}
                             </div>
                           </div>
                         </div>
@@ -1006,89 +1033,91 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                     )}
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                      {currentCategory?.items.map((item, i) => (
-                        <motion.div
-                          key={i}
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: i * 0.05 }}
-                          onClick={() => {
-                            setSelectedItem(item);
-                            setSelectedCategoryColor(categoryExplanations[currentCategory.id]?.color || 'blue');
-                          }}
-                          className="bg-white rounded-[2.5rem] p-8 shadow-xl border border-gray-100 flex flex-col relative group overflow-hidden cursor-pointer hover:shadow-2xl transition-all"
-                        >
-                          <div className="relative h-48 -mx-8 -mt-8 mb-8 overflow-hidden">
-                            <img
-                              src={item.image || "https://picsum.photos/seed/speaker/800/600"}
-                              alt={item.name}
-                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                              referrerPolicy="no-referrer"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
-                            <div className="absolute top-4 right-4">
-                              <span className="bg-blue-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-lg">
-                                {item.badge}
-                              </span>
-                            </div>
-                          </div>
-                          <div className="relative z-10">
-                            <h4 className="text-2xl font-black mb-2 text-gray-900">{item.name}</h4>
-                            <div className="text-3xl font-black text-blue-600 mb-6">{formatPrice(item.price)}</div>
-                            <ul className="space-y-4 mb-8">
-                              {item.features.map((f, j) => (
-                                <li key={j} className="flex items-center gap-3 text-sm font-bold text-gray-600">
-                                  <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" />
-                                  {f}
-                                </li>
-                              ))}
-                            </ul>
-
-                            {categoryExplanations[currentCategory.id]?.upgrades && (
-                              <div className="mt-auto pt-6 border-t border-gray-100">
-                                <div className="flex items-center justify-between mb-4">
-                                  <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest">Upgrade Options</p>
-                                  <span className="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">差額でアップグレード可能</span>
-                                </div>
-                                <div className="grid grid-cols-1 gap-2">
-                                  {categoryExplanations[currentCategory.id].upgrades?.map((upg, k) => (
-                                    <div key={k} className="group/upg relative">
-                                      <div className="flex items-center justify-between bg-gray-50 p-3 rounded-xl border border-gray-100 group-hover/upg:border-blue-200 group-hover/upg:bg-blue-50 transition-all cursor-help">
-                                        <div className="flex items-center gap-2">
-                                          <div className="w-7 h-7 rounded-lg bg-white flex items-center justify-center shadow-sm group-hover/upg:text-blue-600 transition-colors">
-                                            <upg.icon className="w-4 h-4" />
-                                          </div>
-                                          <span className="text-[11px] font-bold text-gray-700">{upg.title}</span>
-                                        </div>
-                                        <span className="text-[11px] font-black text-blue-600">{upg.price}</span>
-                                      </div>
-
-                                      {/* Hover Details */}
-                                      <div className="absolute bottom-full left-0 right-0 mb-2 opacity-0 invisible group-hover/upg:opacity-100 group-hover/upg:visible transition-all z-20">
-                                        <div className="bg-gray-900 text-white p-4 rounded-2xl shadow-2xl text-[11px] leading-relaxed border border-white/10">
-                                          <p className="font-bold mb-1 text-blue-400">{upg.title}</p>
-                                          {upg.description}
-                                          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 rotate-45 w-2 h-2 bg-gray-900"></div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  ))}
-                                </div>
-                              </div>
-                            )}
-                          </div>
-                          <button
-                            onClick={(e) => {
-                              e.stopPropagation();
+                      {currentCategory?.items
+                        .filter(item => currentCategory.id !== 'speaker_package' || item.subType === speakerSubTab)
+                        .map((item, i) => (
+                          <motion.div
+                            key={i}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: i * 0.05 }}
+                            onClick={() => {
                               setSelectedItem(item);
                               setSelectedCategoryColor(categoryExplanations[currentCategory.id]?.color || 'blue');
                             }}
-                            className="mt-8 w-full bg-gray-900 text-white py-4 rounded-2xl font-black text-sm tracking-widest hover:bg-blue-600 transition-all shadow-lg hover:shadow-blue-200"
+                            className="bg-white rounded-[2.5rem] p-8 shadow-xl border border-gray-100 flex flex-col relative group overflow-hidden cursor-pointer hover:shadow-2xl transition-all"
                           >
-                            PLAN DETAILS
-                          </button>
-                        </motion.div>
-                      ))}
+                            <div className="relative h-48 -mx-8 -mt-8 mb-8 overflow-hidden">
+                              <img
+                                src={item.image || "https://picsum.photos/seed/speaker/800/600"}
+                                alt={item.name}
+                                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                referrerPolicy="no-referrer"
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+                              <div className="absolute top-4 right-4">
+                                <span className="bg-blue-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-lg">
+                                  {item.badge}
+                                </span>
+                              </div>
+                            </div>
+                            <div className="relative z-10">
+                              <h4 className="text-2xl font-black mb-2 text-gray-900">{item.name}</h4>
+                              <div className="text-3xl font-black text-blue-600 mb-6">{formatPrice(item.price)}</div>
+                              <ul className="space-y-4 mb-8">
+                                {item.features.map((f, j) => (
+                                  <li key={j} className="flex items-center gap-3 text-sm font-bold text-gray-600">
+                                    <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" />
+                                    {f}
+                                  </li>
+                                ))}
+                              </ul>
+
+                              {categoryExplanations[currentCategory.id]?.upgrades && (
+                                <div className="mt-auto pt-6 border-t border-gray-100">
+                                  <div className="flex items-center justify-between mb-4">
+                                    <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest">Upgrade Options</p>
+                                    <span className="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">差額でアップグレード可能</span>
+                                  </div>
+                                  <div className="grid grid-cols-1 gap-2">
+                                    {categoryExplanations[currentCategory.id].upgrades?.map((upg, k) => (
+                                      <div key={k} className="group/upg relative">
+                                        <div className="flex items-center justify-between bg-gray-50 p-3 rounded-xl border border-gray-100 group-hover/upg:border-blue-200 group-hover/upg:bg-blue-50 transition-all cursor-help">
+                                          <div className="flex items-center gap-2">
+                                            <div className="w-7 h-7 rounded-lg bg-white flex items-center justify-center shadow-sm group-hover/upg:text-blue-600 transition-colors">
+                                              <upg.icon className="w-4 h-4" />
+                                            </div>
+                                            <span className="text-[11px] font-bold text-gray-700">{upg.title}</span>
+                                          </div>
+                                          <span className="text-[11px] font-black text-blue-600">{upg.price}</span>
+                                        </div>
+
+                                        {/* Hover Details */}
+                                        <div className="absolute bottom-full left-0 right-0 mb-2 opacity-0 invisible group-hover/upg:opacity-100 group-hover/upg:visible transition-all z-20">
+                                          <div className="bg-gray-900 text-white p-4 rounded-2xl shadow-2xl text-[11px] leading-relaxed border border-white/10">
+                                            <p className="font-bold mb-1 text-blue-400">{upg.title}</p>
+                                            {upg.description}
+                                            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 rotate-45 w-2 h-2 bg-gray-900"></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    ))}
+                                  </div>
+                                </div>
+                              )}
+                            </div>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setSelectedItem(item);
+                                setSelectedCategoryColor(categoryExplanations[currentCategory.id]?.color || 'blue');
+                              }}
+                              className="mt-8 w-full bg-gray-900 text-white py-4 rounded-2xl font-black text-sm tracking-widest hover:bg-blue-600 transition-all shadow-lg hover:shadow-blue-200"
+                            >
+                              PLAN DETAILS
+                            </button>
+                          </motion.div>
+                        ))}
                     </div>
                   </div>
                 </div>
@@ -1435,9 +1464,41 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                                 <h4 className="text-2xl md:text-4xl font-black mb-6 md:mb-10 tracking-tighter leading-[1.1] text-gray-900">
                                   {section.category}
                                 </h4>
-                                <div className="text-gray-600 font-medium text-base md:text-xl leading-relaxed whitespace-pre-wrap max-w-2xl">
+                                <div className="text-gray-600 font-medium text-base md:text-xl leading-relaxed whitespace-pre-wrap max-w-2xl mb-8">
                                   {renderHighlightedText(section.description || "", categoryExplanations[section.id]?.color || 'blue')}
                                 </div>
+
+                                {/* Sub-category Tabs for Speaker Package */}
+                                {section.id === 'speaker_package' && (
+                                  <div className="flex flex-col md:flex-row items-start md:items-center gap-4 py-6 border-t border-blue-600/10">
+                                    <div className="flex bg-gray-900/5 p-1 rounded-2xl md:rounded-full backdrop-blur-sm border border-black/5">
+                                      <button
+                                        onClick={(e) => {
+                                          e.stopPropagation();
+                                          setSpeakerSubTab('level');
+                                        }}
+                                        className={`px-6 py-2.5 rounded-2xl md:rounded-full text-xs font-black transition-all ${speakerSubTab === 'level' ? 'bg-white text-blue-600 shadow-xl' : 'text-gray-500 hover:text-gray-700'}`}
+                                      >
+                                        等級別プラン <span className="text-[10px] opacity-70 ml-1">By Level</span>
+                                      </button>
+                                      <button
+                                        onClick={(e) => {
+                                          e.stopPropagation();
+                                          setSpeakerSubTab('car');
+                                        }}
+                                        className={`px-6 py-2.5 rounded-2xl md:rounded-full text-xs font-black transition-all ${speakerSubTab === 'car' ? 'bg-white text-blue-600 shadow-xl' : 'text-gray-500 hover:text-gray-700'}`}
+                                      >
+                                        車種別プラン <span className="text-[10px] opacity-70 ml-1">By Car Type</span>
+                                      </button>
+                                    </div>
+                                    <p className="text-[11px] font-bold text-blue-600/60 flex items-center gap-2">
+                                      <Info className="w-3.5 h-3.5" />
+                                      {speakerSubTab === 'level'
+                                        ? "← ご予算やお好みの音質レベルからお選びいただけます"
+                                        : "← 軽自動車や欧州車など、特定車種に最適化されたプランです"}
+                                    </p>
+                                  </div>
+                                )}
                               </div>
                             </div>
                           </div>
@@ -1454,68 +1515,70 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                         className="overflow-hidden"
                       >
                         <div className="p-4 md:p-0 space-y-4 md:space-y-0 md:grid md:grid-cols-3 md:gap-8">
-                          {((isMobile ? section.items : section.items?.slice(0, 3)) || []).map((item, i) => (
-                            <motion.div
-                              key={i}
-                              whileHover={{ y: !isMobile ? -10 : 0 }}
-                              className="bg-white rounded-2xl md:rounded-[2.5rem] shadow-md md:shadow-xl border border-gray-100 flex flex-row md:flex-col relative group overflow-hidden"
-                            >
-                              {/* Mobile List Image / Desktop Card Image */}
-                              <div className="relative w-24 h-24 shrink-0 md:w-full md:h-48 overflow-hidden">
-                                <img
-                                  src={item.image || "https://picsum.photos/seed/speaker/800/600"}
-                                  alt={item.name}
-                                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                                  referrerPolicy="no-referrer"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-transparent"></div>
-                                <div className="absolute top-2 right-2 md:top-4 md:right-4">
-                                  <span className="bg-blue-600 text-white text-[7px] md:text-[10px] font-black px-2 py-0.5 md:px-3 md:py-1 rounded-full uppercase tracking-widest shadow-lg">
-                                    {item.badge}
-                                  </span>
-                                </div>
-                              </div>
-
-                              <div className="p-4 md:p-8 pt-3 md:pt-4 relative z-10 flex flex-col flex-grow min-w-0">
-                                <div className="flex flex-col md:block mb-2 md:mb-0">
-                                  <h4 className="text-sm md:text-2xl font-black text-gray-900 leading-tight truncate md:whitespace-normal mb-0.5 md:mb-1">
-                                    {item.name}
-                                  </h4>
-                                  <div className="text-lg md:text-3xl font-black text-blue-600">
-                                    {formatPrice(item.price)}
+                          {((isMobile ? section.items : section.items?.slice(0, 3)) || [])
+                            .filter(item => section.id !== 'speaker_package' || item.subType === speakerSubTab)
+                            .map((item, i) => (
+                              <motion.div
+                                key={i}
+                                whileHover={{ y: !isMobile ? -10 : 0 }}
+                                className="bg-white rounded-2xl md:rounded-[2.5rem] shadow-md md:shadow-xl border border-gray-100 flex flex-row md:flex-col relative group overflow-hidden"
+                              >
+                                {/* Mobile List Image / Desktop Card Image */}
+                                <div className="relative w-24 h-24 shrink-0 md:w-full md:h-48 overflow-hidden">
+                                  <img
+                                    src={item.image || "https://picsum.photos/seed/speaker/800/600"}
+                                    alt={item.name}
+                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    referrerPolicy="no-referrer"
+                                  />
+                                  <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-transparent"></div>
+                                  <div className="absolute top-2 right-2 md:top-4 md:right-4">
+                                    <span className="bg-blue-600 text-white text-[7px] md:text-[10px] font-black px-2 py-0.5 md:px-3 md:py-1 rounded-full uppercase tracking-widest shadow-lg">
+                                      {item.badge}
+                                    </span>
                                   </div>
                                 </div>
 
-                                <ul className="hidden md:block space-y-2.5 md:space-y-3 mb-6">
-                                  {(item.features || []).slice(0, 3).map((f, j) => (
-                                    <li key={j} className="flex items-start gap-2 text-xs md:text-sm font-bold text-gray-600">
-                                      <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
-                                      <span className="leading-tight">{f}</span>
-                                    </li>
-                                  ))}
-                                </ul>
+                                <div className="p-4 md:p-8 pt-3 md:pt-4 relative z-10 flex flex-col flex-grow min-w-0">
+                                  <div className="flex flex-col md:block mb-2 md:mb-0">
+                                    <h4 className="text-sm md:text-2xl font-black text-gray-900 leading-tight truncate md:whitespace-normal mb-0.5 md:mb-1">
+                                      {item.name}
+                                    </h4>
+                                    <div className="text-lg md:text-3xl font-black text-blue-600">
+                                      {formatPrice(item.price)}
+                                    </div>
+                                  </div>
 
-                                {/* Mobile: Simple feature list */}
-                                <div className="md:hidden flex flex-wrap gap-1.5 mb-3">
-                                  {(item.features || []).slice(0, 2).map((f, j) => (
-                                    <span key={j} className="text-[9px] font-bold text-gray-500 bg-gray-100 px-2 py-0.5 rounded">
-                                      {f}
-                                    </span>
-                                  ))}
+                                  <ul className="hidden md:block space-y-2.5 md:space-y-3 mb-6">
+                                    {(item.features || []).slice(0, 3).map((f, j) => (
+                                      <li key={j} className="flex items-start gap-2 text-xs md:text-sm font-bold text-gray-600">
+                                        <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
+                                        <span className="leading-tight">{f}</span>
+                                      </li>
+                                    ))}
+                                  </ul>
+
+                                  {/* Mobile: Simple feature list */}
+                                  <div className="md:hidden flex flex-wrap gap-1.5 mb-3">
+                                    {(item.features || []).slice(0, 2).map((f, j) => (
+                                      <span key={j} className="text-[9px] font-bold text-gray-500 bg-gray-100 px-2 py-0.5 rounded">
+                                        {f}
+                                      </span>
+                                    ))}
+                                  </div>
+
+                                  <button
+                                    onClick={() => {
+                                      setSelectedItem(item);
+                                      setSelectedCategoryColor(categoryExplanations[section.id]?.color || 'blue');
+                                    }}
+                                    className="mt-auto w-full bg-gray-900 text-white py-2 md:py-3.5 rounded-xl md:rounded-2xl font-black text-[9px] md:text-xs tracking-widest hover:bg-blue-600 transition-all shadow-sm md:shadow-lg"
+                                  >
+                                    PLAN DETAILS
+                                  </button>
                                 </div>
-
-                                <button
-                                  onClick={() => {
-                                    setSelectedItem(item);
-                                    setSelectedCategoryColor(categoryExplanations[section.id]?.color || 'blue');
-                                  }}
-                                  className="mt-auto w-full bg-gray-900 text-white py-2 md:py-3.5 rounded-xl md:rounded-2xl font-black text-[9px] md:text-xs tracking-widest hover:bg-blue-600 transition-all shadow-sm md:shadow-lg"
-                                >
-                                  PLAN DETAILS
-                                </button>
-                              </div>
-                            </motion.div>
-                          ))}
+                              </motion.div>
+                            ))}
                         </div>
 
                         {/* Bottom View All Button */}
