@@ -1024,14 +1024,17 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                                 {renderHighlightedText(currentCategory.description || "", categoryExplanations[currentCategory.id]?.color || 'blue')}
                               </div>
 
-                              {/* Dynamic Sub-category Tabs in Full List - Only show if > 4 items */}
-                              {categorySubTabs[currentCategory.id] && currentCategory.items.length > 4 && (
+                              {/* Dynamic Sub-category Tabs in Full List - Only show if > 3 items */}
+                              {categorySubTabs[currentCategory.id] && currentCategory.items.length > 3 && (
                                 <div className="flex flex-col md:flex-row items-start md:items-center gap-4 py-6 border-t border-blue-600/10">
                                   <div className="flex bg-gray-900/5 p-1 rounded-2xl md:rounded-full backdrop-blur-sm border border-black/5">
                                     {categorySubTabs[currentCategory.id].map(tab => (
                                       <button
                                         key={tab.id}
-                                        onClick={() => setActiveSubTab(tab.id)}
+                                        onClick={() => {
+                                          setActiveSubTab(tab.id);
+                                          // Scroll to start of items if needed
+                                        }}
                                         className={`px-6 py-2.5 rounded-2xl md:rounded-full text-xs font-black transition-all ${activeSubTab === tab.id ? 'bg-white text-blue-600 shadow-xl' : 'text-gray-500 hover:text-gray-700'}`}
                                       >
                                         {tab.label} <span className="text-[10px] opacity-70 ml-1">{tab.en}</span>
@@ -1040,7 +1043,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                                   </div>
                                   <p className="text-[11px] font-bold text-blue-600/60 flex items-center gap-2">
                                     <Info className="w-3.5 h-3.5" />
-                                    ← {categorySubTabs[currentCategory.id].find(t => t.id === activeSubTab)?.info}
+                                    ← {categorySubTabs[currentCategory.id].find(t => t.id === activeSubTab)?.info || "プランを選択してください"}
                                   </p>
                                 </div>
                               )}
@@ -1052,7 +1055,16 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                       {currentCategory?.items
-                        .filter(item => currentCategory.id === 'all' || currentCategory.items.length <= 4 || item.subType === activeSubTab)
+                        .filter(item => {
+                          const hasTabs = currentCategory.items.length > 3;
+                          if (!hasTabs) return true;
+                          // If this category has tabs, only show matches. 
+                          // If current activeSubTab doesn't belong to this category, show first tab by default
+                          const availableTabIds = categorySubTabs[currentCategory.id]?.map(t => t.id) || [];
+                          const isRelevantTab = availableTabIds.includes(activeSubTab);
+                          if (!isRelevantTab) return item.subType === availableTabIds[0];
+                          return item.subType === activeSubTab;
+                        })
                         .map((item, i) => (
                           <motion.div
                             key={i}
@@ -1490,8 +1502,8 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                                   {renderHighlightedText(section.description || "", categoryExplanations[section.id]?.color || 'blue')}
                                 </div>
 
-                                {/* Dynamic Sub-category Tabs - Only show if > 4 items */}
-                                {categorySubTabs[section.id] && section.items.length > 4 && (
+                                {/* Dynamic Sub-category Tabs - Only show if > 3 items */}
+                                {categorySubTabs[section.id] && section.items.length > 3 && (
                                   <div className="flex flex-col md:flex-row items-start md:items-center gap-4 py-6 border-t border-blue-600/10">
                                     <div className="flex bg-gray-900/5 p-1 rounded-2xl md:rounded-full backdrop-blur-sm border border-black/5">
                                       {categorySubTabs[section.id].map(tab => (
@@ -1509,7 +1521,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                                     </div>
                                     <p className="text-[11px] font-bold text-blue-600/60 flex items-center gap-2">
                                       <Info className="w-3.5 h-3.5" />
-                                      ← {categorySubTabs[section.id].find(t => t.id === activeSubTab)?.info}
+                                      ← {categorySubTabs[section.id].find(t => t.id === activeSubTab)?.info || (categorySubTabs[section.id] && categorySubTabs[section.id][0].info)}
                                     </p>
                                   </div>
                                 )}
@@ -1530,7 +1542,14 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                       >
                         <div className="p-4 md:p-0 space-y-4 md:space-y-0 md:grid md:grid-cols-3 md:gap-8">
                           {((isMobile ? section.items : section.items?.slice(0, 3)) || [])
-                            .filter(item => activeCategory === 'all' || section.items.length <= 4 || item.subType === activeSubTab)
+                            .filter(item => {
+                              const hasTabs = section.items.length > 3;
+                              if (!hasTabs) return true;
+                              const availableTabIds = categorySubTabs[section.id]?.map(t => t.id) || [];
+                              const isRelevantTab = availableTabIds.includes(activeSubTab);
+                              if (!isRelevantTab) return item.subType === availableTabIds[0];
+                              return item.subType === activeSubTab;
+                            })
                             .map((item, i) => (
                               <motion.div
                                 key={i}
@@ -1601,6 +1620,10 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                             <button
                               onClick={() => {
                                 setViewingFullList(section.id);
+                                // Reset sub tab to the first one defined for the category
+                                if (categorySubTabs[section.id]) {
+                                  setActiveSubTab(categorySubTabs[section.id][0].id);
+                                }
                                 window.scrollTo(0, 0);
                               }}
                               className="w-full flex items-center justify-center gap-3 bg-white border-2 border-blue-100 text-blue-600 py-4 md:py-6 rounded-2xl md:rounded-[2.5rem] font-black text-xs md:text-lg tracking-widest hover:bg-blue-50 hover:border-blue-200 transition-all shadow-sm group"
