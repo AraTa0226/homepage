@@ -651,7 +651,11 @@
             {
               "name": "GOLDHORN / GDT42",
               "price": "88000",
-              "image": "https://picsum.photos/seed/gdt42/200/200"
+              "image": "https://picsum.photos/seed/gdt42/200/200",
+              "features": [
+                "高音質DAC",
+                "コンパクト設計"
+              ]
             }
           ]
         },
@@ -2226,6 +2230,11 @@
           "price": "66000",
           "badge": "Entry",
           "description": "車載メディアプレーヤーの入門として最適な、コンパクトかつ高音質なモデル。",
+          "features": [
+            "ハイレゾ対応",
+            "USB/デジタル出力",
+            "小型設計"
+          ],
           "lineup": [
             {
               "name": "ADONN / DSD-Z10",
@@ -2249,6 +2258,11 @@
           "price": "297000",
           "badge": "All-in-One",
           "description": "プレーヤー機能に強力なパワーアンプやDSPを内蔵。システムをスマートに完結させます。",
+          "features": [
+            "多チャンネルアンプ",
+            "DSP制御",
+            "映像出力"
+          ],
           "lineup": [
             {
               "name": "GOLDHORN / P2 DSPA PRO",
@@ -2258,7 +2272,7 @@
             {
               "name": "GOLDHORN / P3 DSPA PLUS",
               "price": "352000",
-              "description": "10ch Class Dアンプ内蔵。20ch制御対応。最新のデジタル処理で圧倒的な解像度を実現。"
+              "description": "10ch Class Dアンプ内蔵. 20ch制御対応. 最新のデジタル処理で圧倒的な解像度を実現。"
             }
           ]
         },
@@ -2267,21 +2281,26 @@
           "price": "473000",
           "badge": "Flagship",
           "description": "最高峰のDACチップや回路設計を採用。究極の音質を求めるオーナー様へ。",
+          "features": [
+            "最高級DAC",
+            "DSD512対応",
+            "高精度外部クロック"
+          ],
           "lineup": [
             {
               "name": "GOLDHORN / P2 DSP PRO",
               "price": "473000",
-              "description": "ESS9038Q2Mを6個搭載。DSD512対応。12ch RCA出力の超ド級仕様。"
+              "description": "ESS9038Q2Mを6個搭載. DSD512対応. 12ch RCA出力の超ド級仕様。"
             },
             {
               "name": "aune / GTS1PRO",
               "price": "352000",
-              "description": "ESS9038Q2M。DSD512。高精度外部クロック同期(i2S)に対応する純デジタル機。"
+              "description": "ESS9038Q2M. DSD512. 高精度外部クロック同期(i2S)に対応する純デジタル機。"
             },
             {
               "name": "GOLDHORN / P3 PLUS",
               "price": "484000",
-              "description": "ESS9038Q2M x2。最高級アナログ回路GHA1000搭載。暖かく厚みのある音色。"
+              "description": "ESS9038Q2M x2. 最高級アナログ回路GHA1000搭載. 暖かく厚みのある音色。"
             },
             {
               "name": "aune / GTS2",
@@ -2291,7 +2310,7 @@
             {
               "name": "aune / GTS3",
               "price": "770000",
-              "description": "シリーズ最高峰。ESS9038PRO搭載。息を呑むようなリアリティを再現します。"
+              "description": "シリーズ最高峰. ESS9038PRO搭載. 息を呑むようなリアリティを再現します。"
             }
           ]
         }
@@ -2394,7 +2413,7 @@
         "車載専用設計"
       ],
       "image": "/images/Audio/media_player_lecture.png",
-      "description": "ナビやCDプレーヤーといったヘッドユニット交換が簡単にできたのは過去の話。最近は純正で装着されたナビゲーションは取り外すことができず、音の入口となるヘッドユニットの音質向上は困難になりました。\n\nそこで新しい選択肢となるのが「車載メディアプレーヤー」です。純正のディスプレイオーディオなどをメインソースとしてカーオーディオの拡張を進めてきた方におすすめで、基本的にはDSPとの組み合わせでシステムを構成します。\n\n光や同軸端子を使ってデジタルデータをそのままDSPへ入力することで、純正オーディオの制限を受けない圧倒的な高音質を実現. スマートフォンやDAPとは異なり、車両に設置して運転しながら楽しむことを前提に設計された、車のための新しい音楽ソースです。\n\n**製品ラインナップを見る**: [メディアプレーヤー製品一覧](#/prices/media_player)",
+      "description": "ナビやCDプレーヤーといったヘッドユニット交換が簡単にできたのは過去の話。最近は純正で装着されたナビゲーションは取り外すことができず、音の入口となるヘッドユニットの音質向上は困難になりました。\n\nそこで新しい選択肢となるのが「車載メディアプレーヤー」です。純正のディスプレイオーディオなどをメインソースとしてカーオーディオの拡張を進めてきた方におすすめで、基本的にはDSPとの組み合わせでシステムを構成します。\n\n光や同軸端子を使ってデジタルデータをそのままDSPへ入力することで、純正オーディオの制限を受けない圧倒的な高音質を実現。スマートフォンやDAPとは異なり、車両に設置して運転しながら楽しむことを前提に設計された、車のための新しい音楽ソースです。\n\n**製品ラインナップを見る**: [メディアプレーヤー製品一覧](#/prices/media_player)",
       "category": "知識・ガイド",
       "packageDetails": {
         "standardPrice": "0",
@@ -3166,5 +3185,5 @@
     "media_player_guide": "/images/Top/media_player_lecture.png",
     "hires_guide": "/images/Top/hires_guide.png"
   },
-  "cacheVersion": "8"
+  "cacheVersion": "9"
 }

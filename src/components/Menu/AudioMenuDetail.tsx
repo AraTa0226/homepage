@@ -1533,7 +1533,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                         className="overflow-hidden"
                       >
                         <div className="p-4 md:p-0 space-y-4 md:space-y-0 md:grid md:grid-cols-3 md:gap-8">
-                          {(isMobile ? section.items : section.items.slice(0, 3)).map((item, i) => (
+                          {((isMobile ? section.items : section.items?.slice(0, 3)) || []).map((item, i) => (
                             <motion.div
                               key={i}
                               whileHover={{ y: !isMobile ? -10 : 0 }}
@@ -1566,7 +1566,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                                 </div>
 
                                 <ul className="hidden md:block space-y-2.5 md:space-y-3 mb-6">
-                                  {item.features.slice(0, 3).map((f, j) => (
+                                  {(item.features || []).slice(0, 3).map((f, j) => (
                                     <li key={j} className="flex items-start gap-2 text-xs md:text-sm font-bold text-gray-600">
                                       <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
                                       <span className="leading-tight">{f}</span>
@@ -1576,7 +1576,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
 
                                 {/* Mobile: Simple feature list */}
                                 <div className="md:hidden flex flex-wrap gap-1.5 mb-3">
-                                  {item.features.slice(0, 2).map((f, j) => (
+                                  {(item.features || []).slice(0, 2).map((f, j) => (
                                     <span key={j} className="text-[9px] font-bold text-gray-500 bg-gray-100 px-2 py-0.5 rounded">
                                       {f}
                                     </span>
