@@ -1542,7 +1542,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                         className="overflow-hidden"
                       >
                         <div className="p-4 md:p-0 space-y-4 md:space-y-0 md:grid md:grid-cols-3 md:gap-8">
-                          {((isMobile ? section.items : section.items?.slice(0, 3)) || [])
+                          {(section.items || [])
                             .filter(item => {
                               const hasTabs = section.items.length > 3;
                               if (!hasTabs) return true;
@@ -1551,6 +1551,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                               if (!isRelevantTab) return item.subType === availableTabIds[0];
                               return item.subType === activeSubTab;
                             })
+                            .slice(0, isMobile ? undefined : 3)
                             .map((item, i) => (
                               <motion.div
                                 key={i}
