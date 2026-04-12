@@ -249,7 +249,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
   ];
 
   const categories = [
-    { id: 'speaker_package', title: "スピーカー・車種別", items: ["BASIC line", "STANDARD line", "車種専用プラン"], icon: Speaker },
+    { id: 'speaker_package', title: "スピーカー・車種別", items: ["BASIC line", "STANDARD line", "3-WAY line", "車種専用プラン"], icon: Speaker },
     { id: 'bass_power', title: "低音・アンプ", items: ["サブウーハー", "外部アンプ"], icon: Zap },
     { id: 'digital_source', title: "デジタル・DSP", items: ["DSP", "プレーヤー", "ナビ"], icon: Settings2 },
     { id: 'install_tuning', title: "施工・電源", items: ["デッドニング", "電源強化", "車内静音"], icon: Shield },
