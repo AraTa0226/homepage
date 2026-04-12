@@ -64,6 +64,17 @@
           "image": "/images/Audio/front_3way.webp"
         },
         {
+          "name": "車種別スピーカー交換プラン",
+          "price": "44000",
+          "badge": "安心パック",
+          "features": [
+            "人気車種別セット",
+            "工賃込",
+            "純正復帰可能"
+          ],
+          "image": "https://picsum.photos/seed/car-specific-audio/800/600"
+        },
+        {
           "name": "BMWスピーカー交換パッケージ",
           "price": "77000",
           "badge": "車種専用",
@@ -118,6 +129,17 @@
           "image": "/images/Audio/amplifier_install_basic.webp"
         },
         {
+          "name": "お手軽低音増強セット”プラス”",
+          "price": "110000",
+          "badge": "本格低音",
+          "features": [
+            "BOX+ウーハー",
+            "別体アンプ",
+            "取付工賃込"
+          ],
+          "image": "/images/Audio/poweredsubpict.jpg"
+        },
+        {
           "name": "本格サブウーハーインストール",
           "price": "ASK",
           "badge": "重低音増強",
@@ -127,6 +149,17 @@
             "アンプ組み合わせ"
           ],
           "image": "https://picsum.photos/seed/subwoofer/800/600"
+        },
+        {
+          "name": "省スペース”小型”パワーアンプパッケージ",
+          "price": "33000",
+          "badge": "スマート導入",
+          "features": [
+            "コンパクト設置",
+            "省電力設計",
+            "取付工賃込"
+          ],
+          "image": "https://picsum.photos/seed/miniamp/800/600"
         }
       ]
     },
