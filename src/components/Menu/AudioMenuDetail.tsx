@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+// Sync Marker: 2026-04-13-0755
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useParams } from 'react-router-dom';
 import { usePrices, formatPrice } from '../../contexts/PriceContext';
