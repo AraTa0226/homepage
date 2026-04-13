@@ -79,7 +79,7 @@
             "デッドニング込",
             "工賃込"
           ],
-          "image": "https://picsum.photos/seed/kei-car/800/600"
+          "image": "/images/Audio/k-car.webp"
         },
         {
           "name": "車種別スピーカー交換プラン",
@@ -91,7 +91,7 @@
             "工賃込",
             "純正復帰可能"
           ],
-          "image": "https://picsum.photos/seed/car-specific-audio/800/600"
+          "image": "/images/Audio/standard-car.webp"
         },
         {
           "name": "BMWスピーカー交換パッケージ",
@@ -103,7 +103,7 @@
             "純正加工なし",
             "音質劇的向上"
           ],
-          "image": "https://picsum.photos/seed/bmw-audio/800/600"
+          "image": "/images/Audio/bmw_sound_upgrade.webp"
         },
         {
           "name": "Mercedes Benzスピーカー交換パッケージ",
@@ -115,7 +115,7 @@
             "純正加工なし",
             "音質劇的向上"
           ],
-          "image": "https://picsum.photos/seed/benz-audio/800/600"
+          "image": "/images/Audio/mercedes-benz_sound_upgrade.webp"
         }
       ],
       "images": []
