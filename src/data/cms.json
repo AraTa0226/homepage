@@ -330,6 +330,59 @@
           "image": "/images/Audio/amplified_dsp.webp"
         },
         {
+          "name": "アンプレスDSPパッケージ",
+          "price": "180000",
+          "subType": "dsp",
+          "badge": "ハイエンド",
+          "features": [
+            "純粋プロセッサー",
+            "外部アンプ必須",
+            "最高峰の音響調整"
+          ],
+          "image": "/images/Audio/standalone_dsp.webp",
+          "description": "アンプを内蔵しないことで、ノイズの干渉を極限まで抑え、純粋な信号処理に特化した「スタンドアロンDSP」です。\n\n外部アンプと組み合わせることで、圧倒的な解像度と鮮度誇るサウンドシステムを構築できます。スピーカーの能力を100%引き出し、スタジオマスターに迫る臨場感を目指すオーナー様へお勧めします。",
+          "packageDetails": {
+            "standardPrice": "180000",
+            "savings": "0",
+            "contents": [
+              {
+                "title": "DSP本体",
+                "description": "ハイエンドなスタンドアロンDSPユニットを選定",
+                "icon": "Settings"
+              },
+              {
+                "title": "高音質ワイヤリング",
+                "description": "電源・信号ラインの徹底したノイズ対策施工",
+                "icon": "Activity"
+              },
+              {
+                "title": "精密音響チューニング",
+                "description": "測定器を用いた、車室内に最適化したサウンド設定",
+                "icon": "Mic"
+              }
+            ],
+            "notes": [
+              "外部アンプが別途必要です（すでにお持ちのアンプを活用することも可能です）。",
+              "車種やシステム構成により、RCAケーブル等の追加パーツが必要な場合があります。",
+              "施工時間は1〜2日程度です。無料代車をご用意しております。"
+            ]
+          },
+          "lineup": [
+            {
+              "name": "HELIX / DSP.3S",
+              "description": "世界標準の精度を誇るスタンドアロンDSPの超定番。"
+            },
+            {
+              "name": "HELIX / DSP ULTRA",
+              "description": "最高峰の処理能力を持つ12chハイエンドプロセッサー。"
+            },
+            {
+              "name": "GOLDHORN / G2",
+              "description": "プレーヤー機能も内蔵した高音質DSP。"
+            }
+          ]
+        },
+        {
           "name": "メディアプレーヤー・ラインナップ",
           "price": "66000",
           "subType": "media",
