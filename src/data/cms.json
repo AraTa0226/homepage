@@ -392,7 +392,7 @@
             "USB/SSD大容量再生",
             "DSPデジタル接続"
           ],
-          "image": "/images/Audio/media_player_lecture.png"
+          "image": "/images/Audio/media_player.webp"
         },
         {
           "name": "最高峰ナビ【サイバーナビ】プラン",
@@ -404,7 +404,7 @@
             "動画配信/Wi-Fi対応",
             "調整工賃込"
           ],
-          "image": "https://picsum.photos/seed/cyber-navi/800/600"
+          "image": "/images/Audio/cybernavi.webp"
         }
       ],
       "images": []
@@ -427,7 +427,7 @@
             "予算に合わせた4コース",
             "スピーカーの性能を最大化"
           ],
-          "image": "/images/Audio/door-turning.webp"
+          "image": "/images/Audio/door_tuning.webp"
         },
         {
           "name": "サイレントチューニング(車内静音施工)",
@@ -438,7 +438,8 @@
             "ロードノイズ低減",
             "遮音・制振・遮熱",
             "各部位別パッケージ"
-          ]
+          ],
+          "image": "/images/Audio/silent.webp"
         },
         {
           "name": "電源バッ直・キャパシター・アース",
