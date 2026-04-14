@@ -473,7 +473,8 @@
             "ピラー埋め込み加工",
             "角度・位置の最適化",
             "レザー仕上げ"
-          ]
+          ],
+          "image": "/images/Audio/custom_tweeter_installation.webp"
         },
         {
           "name": "オリジナルアウターバッフル製作",
@@ -484,7 +485,8 @@
             "音抜け改善",
             "ワンオフ製作",
             "スピーカー露出"
-          ]
+          ],
+          "image": "/images/Audio/custom_outer_baffle.webp"
         },
         {
           "name": "カスタムインストール・ワンオフ製作",
@@ -495,7 +497,8 @@
             "トランクカスタム",
             "アウターバッフル",
             "LEDライティング"
-          ]
+          ],
+          "image": "/images/Audio/custom_installation.webp"
         }
       ],
       "images": []
