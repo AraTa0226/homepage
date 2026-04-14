@@ -1513,6 +1513,9 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                                           onClick={(e) => {
                                             e.stopPropagation();
                                             setActiveSubTab(tab.id);
+                                            if (isMobile) {
+                                              setExpandedSection(section.id);
+                                            }
                                           }}
                                           className={`px-6 py-2.5 rounded-2xl md:rounded-full text-xs font-black transition-all ${activeSubTab === tab.id ? 'bg-white text-blue-600 shadow-xl' : 'text-gray-500 hover:text-gray-700'}`}
                                         >
