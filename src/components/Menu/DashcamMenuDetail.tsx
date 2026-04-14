@@ -250,7 +250,7 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
                           Included Features
                         </h3>
                         <div className="grid sm:grid-cols-2 gap-4">
-                          {selectedItem.features.map((f: string, idx: number) => (
+                          {(selectedItem.features || []).map((f: string, idx: number) => (
                             <div key={idx} className="flex items-center gap-3 bg-gray-50 p-4 rounded-2xl border border-gray-100">
                               <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" />
                               <span className="text-sm font-bold text-gray-700">{f}</span>
@@ -522,7 +522,7 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
                             <h4 className="text-2xl font-black mb-2 text-gray-900">{item.name}</h4>
                             <div className="text-3xl font-black text-blue-600 mb-6">{formatPrice(item.price)}</div>
                             <ul className="space-y-4 mb-8">
-                              {item.features.map((f, j) => (
+                              {(item.features || []).map((f, j) => (
                                 <li key={j} className="flex items-center gap-3 text-sm font-bold text-gray-600">
                                   <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" />
                                   {f}
@@ -842,7 +842,7 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
                                       <h4 className="text-lg font-black mb-1 text-gray-900">{item.name}</h4>
                                       <div className="text-xl font-black text-blue-600 mb-4">{formatPrice(item.price)}</div>
                                       <ul className="space-y-2 mb-6 flex-grow">
-                                        {item.features.map((f, j) => (
+                                        {(item.features || []).map((f, j) => (
                                           <li key={j} className="flex items-center gap-2 text-[11px] font-bold text-gray-500">
                                             <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" />
                                             {f}
