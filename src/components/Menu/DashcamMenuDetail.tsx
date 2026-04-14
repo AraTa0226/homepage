@@ -822,7 +822,7 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
                                 >
                                   {isMobile ? (
                                     <>
-                                      <div className="w-20 h-20 rounded-2xl overflow-hidden shrink-0 border border-gray-200">
+                                      <div className="w-32 h-20 rounded-2xl overflow-hidden shrink-0 border border-gray-200">
                                         <SafeImage src={item.image} className="w-full h-full object-cover" alt={item.name} />
                                       </div>
                                       <div className="flex-grow">

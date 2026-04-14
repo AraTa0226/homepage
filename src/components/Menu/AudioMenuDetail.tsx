@@ -1559,7 +1559,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                                 className="bg-white rounded-2xl md:rounded-[2.5rem] shadow-md md:shadow-xl border border-gray-100 flex flex-row md:flex-col relative group overflow-hidden"
                               >
                                 {/* Mobile List Image / Desktop Card Image */}
-                                <div className="relative w-24 h-24 shrink-0 md:w-full md:h-48 overflow-hidden">
+                                <div className="relative w-32 h-20 md:h-48 shrink-0 md:w-full overflow-hidden">
                                   <img
                                     src={item.image || "https://picsum.photos/seed/speaker/800/600"}
                                     alt={item.name}
