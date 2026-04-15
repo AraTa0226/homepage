@@ -378,6 +378,8 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
     });
   };
 
+  const isHtmlGuide = selectedItem?.isGuide && isHtmlString(selectedItem.description || "");
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -400,35 +402,37 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
               initial={{ scale: 0.9, opacity: 0, y: 20 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.9, opacity: 0, y: 20 }}
-              className="bg-white w-full max-w-4xl max-h-[90vh] rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden shadow-2xl flex flex-col relative"
+              className={`w-full max-w-4xl max-h-[90vh] rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden shadow-2xl flex flex-col relative ${isHtmlGuide ? 'bg-transparent shadow-none' : 'bg-white'}`}
             >
               <button
                 onClick={() => setSelectedItem(null)}
-                className="absolute top-6 right-6 w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-900 transition-all z-20"
+                className={`absolute top-6 right-6 w-12 h-12 rounded-full flex items-center justify-center transition-all z-20 ${isHtmlGuide ? 'bg-gray-900/60 backdrop-blur-md text-white hover:bg-gray-800' : 'bg-gray-100 hover:bg-gray-200 text-gray-900'}`}
                 aria-label="詳細を閉じる"
               >
                 <X className="w-6 h-6" />
               </button>
 
-              <div className="flex-grow overflow-y-auto">
-                <div className="relative h-64 md:h-96">
-                  <SafeImage
-                    src={selectedItem.image || "https://picsum.photos/seed/speaker/1200/800"}
-                    className="w-full h-full object-cover"
-                    alt={selectedItem.name + "の製品イメージ"}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
-                  <div className="absolute bottom-8 left-8 right-8">
-                    <span className="bg-blue-600 text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-[0.2em] shadow-lg mb-4 inline-block">
-                      {selectedItem.badge || "Premium Plan"}
-                    </span>
-                    <h2 className="text-3xl md:text-5xl font-black text-gray-900 tracking-tighter leading-none">
-                      {selectedItem.name}
-                    </h2>
+              <div className="flex-grow overflow-y-auto w-full">
+                {!isHtmlGuide && (
+                  <div className="relative h-64 md:h-96">
+                    <SafeImage
+                      src={selectedItem.image || "https://picsum.photos/seed/speaker/1200/800"}
+                      className="w-full h-full object-cover"
+                      alt={selectedItem.name + "の製品イメージ"}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+                    <div className="absolute bottom-8 left-8 right-8">
+                      <span className="bg-blue-600 text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-[0.2em] shadow-lg mb-4 inline-block">
+                        {selectedItem.badge || "Premium Plan"}
+                      </span>
+                      <h2 className="text-3xl md:text-5xl font-black text-gray-900 tracking-tighter leading-none">
+                        {selectedItem.name}
+                      </h2>
+                    </div>
                   </div>
-                </div>
+                )}
 
-                <div className="p-8 md:p-12">
+                <div className={isHtmlGuide ? "w-full" : "p-8 md:p-12"}>
                   {/* Savings Badge for Packages */}
                   {selectedItem.packageDetails && !selectedItem.isGuide && selectedItem.showSavings !== false && (
                     <div className="mb-10 flex flex-wrap items-center gap-4">
