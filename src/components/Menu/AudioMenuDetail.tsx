@@ -37,6 +37,25 @@ import {
   Thermometer
 } from 'lucide-react';
 
+const isHtmlString = (str: string) => /<[a-z][\s\S]*>/i.test(str);
+const isFullHtmlDocument = (str: string) => /<!DOCTYPE html>|<html/i.test(str);
+
+const stripHtml = (html: string) => {
+  if (!html) return "";
+  try {
+    const doc = new DOMParser().parseFromString(html, 'text/html');
+    const nodes = doc.querySelectorAll('script, style');
+    nodes.forEach(n => n.remove());
+    return doc.body.textContent?.trim() || "";
+  } catch (e) {
+    return html
+      .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
+      .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
+      .replace(/<[^>]*>?/gm, '')
+      .trim();
+  }
+};
+
 interface AudioMenuDetailProps {
   onBack: () => void;
 }
@@ -443,7 +462,18 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                           </h3>
                         )}
                         <div className="text-gray-600 text-lg font-bold leading-relaxed whitespace-pre-wrap">
-                          {renderDescriptionWithImages(selectedItem.description || "詳細な説明は現在準備中です。施工内容や適合車種については、お気軽にお問い合わせください。", selectedCategoryColor)}
+                          {isFullHtmlDocument(selectedItem.description || "") ? (
+                            <iframe
+                              srcDoc={selectedItem.description}
+                              className="w-full border-none rounded-2xl bg-white"
+                              style={{ minHeight: '600px', height: '75vh' }}
+                              title="HTML Content"
+                            />
+                          ) : isHtmlString(selectedItem.description || "") ? (
+                            <div className="html-content" dangerouslySetInnerHTML={{ __html: selectedItem.description }} />
+                          ) : (
+                            renderDescriptionWithImages(selectedItem.description || "詳細な説明は現在準備中です。施工内容や適合車種については、お気軽にお問い合わせください。", selectedCategoryColor)
+                          )}
                         </div>
                       </div>
 
@@ -1695,7 +1725,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                           ))}
                         </div>
                         <p className="text-gray-500 text-xs md:text-sm font-medium line-clamp-2 md:line-clamp-3 mb-6 md:mb-8 flex-1 leading-relaxed whitespace-pre-line">
-                          {guide.description.split('\n')[0]}
+                          {isHtmlString(guide.description || "") ? stripHtml(guide.description).split('\n')[0] : guide.description.split('\n')[0]}
                         </p>
                         <button className="flex items-center justify-center gap-3 w-full bg-gray-50 group-hover:bg-blue-50 text-gray-600 group-hover:text-blue-600 py-3 md:py-4 rounded-xl font-bold text-xs md:text-sm transition-colors mt-auto">
                           <span>続きを読む</span>
