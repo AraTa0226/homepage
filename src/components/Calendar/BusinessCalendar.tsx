@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
   Calendar as CalendarIcon,
@@ -24,9 +24,7 @@ const LineIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// 定休日の初期設定（火曜・金曜）
-const DEFAULT_WEEKLY_HOLIDAYS = [2, 5]; // 0:日, 1:月, 2:火, 3:水, 4:木, 5:金, 6:土
-
+// 螳壻ｼ第律縺ｮ蛻晄悄險ｭ螳夲ｼ育↓譖懊・驥第屆・・const DEFAULT_WEEKLY_HOLIDAYS = [2, 5]; // 0:譌･, 1:譛・ 2:轣ｫ, 3:豌ｴ, 4:譛ｨ, 5:驥・ 6:蝨・
 export const BusinessCalendar = () => {
   const [viewDate, setViewDate] = useState(new Date());
   const { holidays } = useCalendar();
@@ -60,12 +58,10 @@ export const BusinessCalendar = () => {
                 </span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-                営業日のご案内
+                蝟ｶ讌ｭ譌･縺ｮ縺疲｡亥・
               </h2>
               <p className="text-gray-600 text-lg mb-10 leading-relaxed">
-                Sound ANGは、お客様一人ひとりと向き合う時間を大切にするため、予約優先制となっております。
-                カレンダーより定休日をご確認の上、お気軽にお問い合わせください。
-              </p>
+                Sound ANG縺ｯ縲√♀螳｢讒倅ｸ莠ｺ縺ｲ縺ｨ繧翫→蜷代″蜷医≧譎る俣繧貞､ｧ蛻・↓縺吶ｋ縺溘ａ縲∽ｺ育ｴ・━蜈亥宛縺ｨ縺ｪ縺｣縺ｦ縺翫ｊ縺ｾ縺吶・                繧ｫ繝ｬ繝ｳ繝繝ｼ繧医ｊ螳壻ｼ第律繧偵＃遒ｺ隱阪・荳翫√♀豌苓ｻｽ縺ｫ縺雁撫縺・粋繧上○縺上□縺輔＞縲・              </p>
 
               <div className="grid sm:grid-cols-2 gap-6 mb-8">
                 {/* Audio Card */}
@@ -79,7 +75,7 @@ export const BusinessCalendar = () => {
                   <div className="space-y-3 text-sm flex-grow">
                     <div className="flex items-start gap-3">
                       <MapPin className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
-                      <p className="text-gray-600 leading-tight">〒816-0912<br />福岡県大野城市御笠川5-4-14</p>
+                      <p className="text-gray-600 leading-tight">縲・16-0912<br />遖丞ｲ｡逵悟､ｧ驥主沁蟶ょｾ｡隨蟾・-4-14</p>
                     </div>
                     <div className="flex items-start gap-3">
                       <Phone className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
@@ -103,13 +99,13 @@ export const BusinessCalendar = () => {
                     </div>
                     <div>
                       <h3 className="font-black text-xl tracking-tighter leading-none">SECURITY</h3>
-                      <p className="text-[10px] text-gray-400 font-bold mt-1">オートセキュリティーエナジー</p>
+                      <p className="text-[10px] text-gray-400 font-bold mt-1">繧ｪ繝ｼ繝医そ繧ｭ繝･繝ｪ繝・ぅ繝ｼ繧ｨ繝翫ず繝ｼ</p>
                     </div>
                   </div>
                   <div className="space-y-3 text-sm flex-grow">
                     <div className="flex items-start gap-3">
                       <MapPin className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
-                      <p className="text-gray-600 leading-tight">〒816-0912<br />福岡県大野城市御笠川5-4-14</p>
+                      <p className="text-gray-600 leading-tight">縲・16-0912<br />遖丞ｲ｡逵悟､ｧ驥主沁蟶ょｾ｡隨蟾・-4-14</p>
                     </div>
                     <div className="flex items-start gap-3">
                       <Phone className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
@@ -131,18 +127,18 @@ export const BusinessCalendar = () => {
                   <div className="flex items-start gap-3">
                     <Clock className="w-5 h-5 text-blue-500 shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-bold text-sm mb-1">営業時間</h4>
+                      <h4 className="font-bold text-sm mb-1">蝟ｶ讌ｭ譎る俣</h4>
                       <div className="text-xs text-gray-600 space-y-1">
-                        <p>月・水・木・土：9:30 〜 18:30</p>
-                        <p>日・祝日：9:30 〜 17:00</p>
+                        <p>譛医・豌ｴ繝ｻ譛ｨ繝ｻ蝨滂ｼ・:30 縲・18:30</p>
+                        <p>譌･繝ｻ逾晄律・・:30 縲・17:00</p>
                       </div>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <CalendarIcon className="w-5 h-5 text-red-500 shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-bold text-sm mb-1">定休日</h4>
-                      <p className="text-red-500 font-bold text-xs">毎週火曜日 / 金曜日</p>
+                      <h4 className="font-bold text-sm mb-1">螳壻ｼ第律</h4>
+                      <p className="text-red-500 font-bold text-xs">豈朱ｱ轣ｫ譖懈律 / 驥第屆譌･</p>
                     </div>
                   </div>
                 </div>
@@ -154,7 +150,7 @@ export const BusinessCalendar = () => {
               </div>
 
               <motion.a
-                href="https://line.me/R/ti/p/@soundang"
+                href="https://page.line.me/312qjhsq?openQrModal=true"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02, y: -2 }}
@@ -170,12 +166,12 @@ export const BusinessCalendar = () => {
                     <span className="bg-green-500 text-white text-[9px] font-black px-2 py-0.5 rounded-full uppercase tracking-tighter">Official LINE</span>
                     <span className="text-green-600 animate-pulse flex items-center gap-1 text-[9px] font-bold">
                       <span className="w-1 h-1 bg-green-500 rounded-full"></span>
-                      受付中
+                      蜿嶺ｻ倅ｸｭ
                     </span>
                   </div>
-                  <h4 className="text-xl font-black mb-0.5 text-gray-900">友達追加</h4>
+                  <h4 className="text-xl font-black mb-0.5 text-gray-900">蜿矩＃霑ｽ蜉</h4>
                   <p className="text-gray-500 text-xs font-medium">
-                    ラインからでも来店予約・お問い合わせ可能
+                    繝ｩ繧､繝ｳ縺九ｉ縺ｧ繧よ擂蠎嶺ｺ育ｴ・・縺雁撫縺・粋繧上○蜿ｯ閭ｽ
                   </p>
                 </div>
               </motion.a>
@@ -194,14 +190,14 @@ export const BusinessCalendar = () => {
                 <button
                   onClick={prevMonth}
                   className="p-3 hover:bg-gray-50 rounded-2xl border border-gray-100 transition-colors"
-                  aria-label="前の月"
+                  aria-label="蜑阪・譛・
                 >
                   <ChevronLeft className="w-5 h-5" />
                 </button>
                 <button
                   onClick={nextMonth}
                   className="p-3 hover:bg-gray-50 rounded-2xl border border-gray-100 transition-colors"
-                  aria-label="次の月"
+                  aria-label="谺｡縺ｮ譛・
                 >
                   <ChevronRight className="w-5 h-5" />
                 </button>
@@ -225,14 +221,11 @@ export const BusinessCalendar = () => {
                 const day = i + 1;
                 const dayOfWeek = new Date(year, month, day).getDay();
 
-                // 毎週の定休日判定
-                const isWeeklyHoliday = DEFAULT_WEEKLY_HOLIDAYS.includes(dayOfWeek);
+                // 豈朱ｱ縺ｮ螳壻ｼ第律蛻､螳・                const isWeeklyHoliday = DEFAULT_WEEKLY_HOLIDAYS.includes(dayOfWeek);
 
-                // 個別設定の休日判定
-                const isManualHoliday = holidays[monthKey]?.includes(day) || false;
+                // 蛟句挨險ｭ螳壹・莨第律蛻､螳・                const isManualHoliday = holidays[monthKey]?.includes(day) || false;
 
-                // 最終的な休日判定（毎週の休み XOR 個別設定）
-                const isClosed = isWeeklyHoliday !== isManualHoliday;
+                // 譛邨ら噪縺ｪ莨第律蛻､螳夲ｼ域ｯ朱ｱ縺ｮ莨代∩ XOR 蛟句挨險ｭ螳夲ｼ・                const isClosed = isWeeklyHoliday !== isManualHoliday;
 
                 const isToday = new Date().getFullYear() === year &&
                   new Date().getMonth() === month &&
@@ -259,11 +252,11 @@ export const BusinessCalendar = () => {
               <div className="flex gap-4">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-red-500"></span>
-                  <span>定休日</span>
+                  <span>螳壻ｼ第律</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-blue-500"></span>
-                  <span>本日</span>
+                  <span>譛ｬ譌･</span>
                 </div>
               </div>
               <span className="italic opacity-50">Sound ANG Official</span>
@@ -274,7 +267,7 @@ export const BusinessCalendar = () => {
                 href="#contact"
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-2xl font-bold shadow-lg shadow-blue-500/20 transition-all flex items-center justify-center gap-2"
               >
-                <span className="text-lg">来店予約</span>
+                <span className="text-lg">譚･蠎嶺ｺ育ｴ・/span>
               </a>
             </div>
           </motion.div>

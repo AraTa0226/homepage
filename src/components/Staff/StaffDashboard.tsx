@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import cmsData from '../../data/cms.json';
 import { motion, AnimatePresence } from 'motion/react';
 import {
@@ -241,7 +241,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
   const handleRemoveCategory = (id: string) => {
     setConfirmModal({
       show: true,
-      message: "このカテゴリーを削除してもよろしいですか？",
+      message: "縺薙・繧ｫ繝・ざ繝ｪ繝ｼ繧貞炎髯､縺励※繧ゅｈ繧阪＠縺・〒縺吶°・・,
       onConfirm: () => {
         setLocalPlans(prev => prev.filter(cat => cat.id !== id));
         setConfirmModal(prev => ({ ...prev, show: false }));
@@ -287,7 +287,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
   const handleRemoveOptional = (id: string) => {
     setConfirmModal({
       show: true,
-      message: "このオプションを削除してもよろしいですか？",
+      message: "縺薙・繧ｪ繝励す繝ｧ繝ｳ繧貞炎髯､縺励※繧ゅｈ繧阪＠縺・〒縺吶°・・,
       onConfirm: () => {
         setLocalOptionals(prev => prev.filter(opt => opt.id !== id));
         setConfirmModal(prev => ({ ...prev, show: false }));
@@ -393,7 +393,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
   const handleRemoveSpeakerBrand = (brandIndex: number) => {
     setConfirmModal({
       show: true,
-      message: `${localAuditionSpeakers[brandIndex].brand} を削除してもよろしいですか？`,
+      message: `${localAuditionSpeakers[brandIndex].brand} 繧貞炎髯､縺励※繧ゅｈ繧阪＠縺・〒縺吶°・歔,
       onConfirm: () => {
         setLocalAuditionSpeakers(prev => prev.filter((_, i) => i !== brandIndex));
         setConfirmModal(prev => ({ ...prev, show: false }));
@@ -417,7 +417,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
   const handleRemovePartner = (id: string) => {
     setConfirmModal({
       show: true,
-      message: "このパートナーを削除してもよろしいですか？",
+      message: "縺薙・繝代・繝医リ繝ｼ繧貞炎髯､縺励※繧ゅｈ繧阪＠縺・〒縺吶°・・,
       onConfirm: () => {
         setLocalPartners(prev => prev.filter(p => p.id !== id));
         removePartner(id);
@@ -442,7 +442,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
   const handleRemoveBrandPartner = (id: string) => {
     setConfirmModal({
       show: true,
-      message: "このメーカーを削除してもよろしいですか？",
+      message: "縺薙・繝｡繝ｼ繧ｫ繝ｼ繧貞炎髯､縺励※繧ゅｈ繧阪＠縺・〒縺吶°・・,
       onConfirm: () => {
         setLocalBrandPartners(prev => prev.filter(p => p.id !== id));
         removeBrandPartner(id);
@@ -495,13 +495,13 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
             <button
               onClick={onBack}
               className="p-2 hover:bg-gray-100 rounded-xl transition-colors"
-              aria-label="ダッシュボードを閉じる"
+              aria-label="繝繝・す繝･繝懊・繝峨ｒ髢峨§繧・
             >
               <ArrowLeft className="w-6 h-6 text-gray-600" />
             </button>
             <div>
               <h1 className="text-xl font-black tracking-tighter uppercase">Staff Dashboard</h1>
-              <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">管理システム</p>
+              <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">邂｡逅・す繧ｹ繝・Β</p>
             </div>
           </div>
 
@@ -510,12 +510,12 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
               onClick={() => {
                 setConfirmModal({
                   show: true,
-                  message: "システム全体のキャッシュをリセットして初期状態に戻しますか？（編集中のデータは失われます）",
+                  message: "繧ｷ繧ｹ繝・Β蜈ｨ菴薙・繧ｭ繝｣繝・す繝･繧偵Μ繧ｻ繝・ヨ縺励※蛻晄悄迥ｶ諷九↓謌ｻ縺励∪縺吶°・滂ｼ育ｷｨ髮・ｸｭ縺ｮ繝・・繧ｿ縺ｯ螟ｱ繧上ｌ縺ｾ縺呻ｼ・,
                   onConfirm: resetSystem
                 });
               }}
               className="px-3 py-1.5 text-[10px] font-black tracking-widest text-red-600 hover:bg-red-50 border border-red-100 rounded-lg transition-colors flex items-center gap-2 uppercase"
-              title="システムリセット"
+              title="繧ｷ繧ｹ繝・Β繝ｪ繧ｻ繝・ヨ"
             >
               <RefreshCw className="w-3 h-3" />
               <span>Reset</span>
@@ -584,8 +584,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
               className="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl font-black text-sm tracking-widest hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20"
             >
               <Save className="w-4 h-4" />
-              保存
-            </button>
+              菫晏ｭ・            </button>
           </div>
         </div>
       </div>
@@ -601,8 +600,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
               className="fixed top-24 left-1/2 -translate-x-1/2 bg-green-500 text-white px-8 py-4 rounded-2xl font-black shadow-2xl z-[100] flex items-center gap-3"
             >
               <CheckCircle2 className="w-6 h-6" />
-              更新が完了しました！
-            </motion.div>
+              譖ｴ譁ｰ縺悟ｮ御ｺ・＠縺ｾ縺励◆・・            </motion.div>
           )}
         </AnimatePresence>
 
@@ -612,34 +610,34 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
             <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
               <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="bg-white rounded-3xl p-8 w-full max-w-md shadow-2xl">
                 <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-xl font-black">新規カテゴリー追加</h3>
+                  <h3 className="text-xl font-black">譁ｰ隕上き繝・ざ繝ｪ繝ｼ霑ｽ蜉</h3>
                   <button onClick={() => setShowAddCategory(false)}><X className="w-6 h-6" /></button>
                 </div>
                 <div className="space-y-4 mb-6">
                   <div>
-                    <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1 block">カテゴリー名</label>
+                    <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1 block">繧ｫ繝・ざ繝ｪ繝ｼ蜷・/label>
                     <input
                       type="text"
-                      placeholder="カテゴリー名 (例: 新パッケージ)"
+                      placeholder="繧ｫ繝・ざ繝ｪ繝ｼ蜷・(萓・ 譁ｰ繝代ャ繧ｱ繝ｼ繧ｸ)"
                       value={newCategoryName}
                       onChange={(e) => setNewCategoryName(e.target.value)}
                       className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-bold"
                     />
                   </div>
                   <div>
-                    <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1 block">タイプ</label>
+                    <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1 block">繧ｿ繧､繝・/label>
                     <select
                       value={newCategoryType}
                       onChange={(e) => setNewCategoryType(e.target.value as any)}
                       className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-bold"
                     >
-                      <option value="audio">オーディオ</option>
-                      <option value="security">セキュリティー</option>
-                      <option value="others">その他</option>
+                      <option value="audio">繧ｪ繝ｼ繝・ぅ繧ｪ</option>
+                      <option value="security">繧ｻ繧ｭ繝･繝ｪ繝・ぅ繝ｼ</option>
+                      <option value="others">縺昴・莉・/option>
                     </select>
                   </div>
                 </div>
-                <button onClick={handleAddCategory} className="w-full bg-blue-600 text-white py-4 rounded-xl font-black tracking-widest">追加する</button>
+                <button onClick={handleAddCategory} className="w-full bg-blue-600 text-white py-4 rounded-xl font-black tracking-widest">霑ｽ蜉縺吶ｋ</button>
               </motion.div>
             </div>
           )}
@@ -648,53 +646,51 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
             <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
               <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="bg-white rounded-3xl p-8 w-full max-w-md shadow-2xl">
                 <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-xl font-black">新規プラン追加</h3>
+                  <h3 className="text-xl font-black">譁ｰ隕上・繝ｩ繝ｳ霑ｽ蜉</h3>
                   <button onClick={() => setShowAddItem(null)}><X className="w-6 h-6" /></button>
                 </div>
                 <div className="space-y-4 mb-6">
                   <input
                     type="text"
-                    placeholder="プラン名"
+                    placeholder="繝励Λ繝ｳ蜷・
                     value={newItem.name}
                     onChange={(e) => setNewItem({ ...newItem, name: e.target.value })}
                     className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-bold"
                   />
                   <input
                     type="text"
-                    placeholder="価格 (数字のみ)"
+                    placeholder="萓｡譬ｼ (謨ｰ蟄励・縺ｿ)"
                     value={newItem.price}
                     onChange={(e) => setNewItem({ ...newItem, price: e.target.value.replace(/[^0-9]/g, '') })}
                     className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-bold"
                   />
                   <input
                     type="text"
-                    placeholder="バッジ (例: おすすめ)"
+                    placeholder="繝舌ャ繧ｸ (萓・ 縺翫☆縺吶ａ)"
                     value={newItem.badge}
                     onChange={(e) => setNewItem({ ...newItem, badge: e.target.value })}
                     className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-bold"
                   />
                   <button
                     onClick={() => setEditingText({
-                      title: "プランの特徴を編集",
+                      title: "繝励Λ繝ｳ縺ｮ迚ｹ蠕ｴ繧堤ｷｨ髮・,
                       value: newItem.features.join('\n'),
                       onSave: (val) => setNewItem({ ...newItem, features: val.split('\n') })
                     })}
                     className="w-full px-4 py-3 bg-blue-50 border-2 border-blue-100 rounded-xl font-bold text-blue-600 hover:bg-blue-100 transition-all flex items-center justify-center gap-2"
                   >
                     <Edit3 className="w-5 h-5" />
-                    特徴を広く編集する
-                  </button>
+                    迚ｹ蠕ｴ繧貞ｺ・￥邱ｨ髮・☆繧・                  </button>
                   <button
                     onClick={() => setEditingText({
-                      title: "プランの解説文を編集",
+                      title: "繝励Λ繝ｳ縺ｮ隗｣隱ｬ譁・ｒ邱ｨ髮・,
                       value: newItem.description || "",
                       onSave: (val) => setNewItem({ ...newItem, description: val })
                     })}
                     className="w-full px-4 py-3 bg-indigo-50 border-2 border-indigo-100 rounded-xl font-bold text-indigo-600 hover:bg-indigo-100 transition-all flex items-center justify-center gap-2"
                   >
                     <Info className="w-5 h-5" />
-                    解説文を広く編集する
-                  </button>
+                    隗｣隱ｬ譁・ｒ蠎・￥邱ｨ髮・☆繧・                  </button>
                   <input
                     type="text"
                     placeholder="/images/Audio/filename.png"
@@ -703,7 +699,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                     className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-bold"
                   />
                 </div>
-                <button onClick={handleAddItem} className="w-full bg-blue-600 text-white py-4 rounded-xl font-black tracking-widest">追加する</button>
+                <button onClick={handleAddItem} className="w-full bg-blue-600 text-white py-4 rounded-xl font-black tracking-widest">霑ｽ蜉縺吶ｋ</button>
               </motion.div>
             </div>
           )}
@@ -712,42 +708,41 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
             <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
               <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="bg-white rounded-3xl p-8 w-full max-w-md shadow-2xl">
                 <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-xl font-black">新規オプション追加</h3>
+                  <h3 className="text-xl font-black">譁ｰ隕上が繝励す繝ｧ繝ｳ霑ｽ蜉</h3>
                   <button onClick={() => setShowAddOptional(false)}><X className="w-6 h-6" /></button>
                 </div>
                 <div className="space-y-4 mb-6">
                   <input
                     type="text"
-                    placeholder="オプション名"
+                    placeholder="繧ｪ繝励す繝ｧ繝ｳ蜷・
                     value={newOptional.name}
                     onChange={(e) => setNewOptional({ ...newOptional, name: e.target.value })}
                     className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-bold"
                   />
                   <input
                     type="text"
-                    placeholder="価格 (数字のみ)"
+                    placeholder="萓｡譬ｼ (謨ｰ蟄励・縺ｿ)"
                     value={newOptional.price}
                     onChange={(e) => setNewOptional({ ...newOptional, price: e.target.value.replace(/[^0-9]/g, '') })}
                     className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-bold"
                   />
                   <input
                     type="text"
-                    placeholder="効果 (例: 音質向上)"
+                    placeholder="蜉ｹ譫・(萓・ 髻ｳ雉ｪ蜷台ｸ・"
                     value={newOptional.effect}
                     onChange={(e) => setNewOptional({ ...newOptional, effect: e.target.value })}
                     className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-bold"
                   />
                   <button
                     onClick={() => setEditingText({
-                      title: "オプションの説明文を編集",
+                      title: "繧ｪ繝励す繝ｧ繝ｳ縺ｮ隱ｬ譏取枚繧堤ｷｨ髮・,
                       value: newOptional.description,
                       onSave: (val) => setNewOptional({ ...newOptional, description: val })
                     })}
                     className="w-full px-4 py-3 bg-blue-50 border-2 border-blue-100 rounded-xl font-bold text-blue-600 hover:bg-blue-100 transition-all flex items-center justify-center gap-2"
                   >
                     <Edit3 className="w-5 h-5" />
-                    詳細（説明文）を広く編集する
-                  </button>
+                    隧ｳ邏ｰ・郁ｪｬ譏取枚・峨ｒ蠎・￥邱ｨ髮・☆繧・                  </button>
                   <input
                     type="text"
                     placeholder="/images/Audio/filename.png"
@@ -756,7 +751,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                     className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-bold"
                   />
                 </div>
-                <button onClick={handleAddOptional} className="w-full bg-blue-600 text-white py-4 rounded-xl font-black tracking-widest">追加する</button>
+                <button onClick={handleAddOptional} className="w-full bg-blue-600 text-white py-4 rounded-xl font-black tracking-widest">霑ｽ蜉縺吶ｋ</button>
               </motion.div>
             </div>
           )}
@@ -765,20 +760,20 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
             <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
               <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="bg-white rounded-3xl p-8 w-full max-w-md shadow-2xl">
                 <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-xl font-black">新規パートナー追加</h3>
+                  <h3 className="text-xl font-black">譁ｰ隕上ヱ繝ｼ繝医リ繝ｼ霑ｽ蜉</h3>
                   <button onClick={() => setShowAddPartner(false)}><X className="w-6 h-6" /></button>
                 </div>
                 <div className="space-y-4 mb-6">
                   <input
                     type="text"
-                    placeholder="ショップ名"
+                    placeholder="繧ｷ繝ｧ繝・・蜷・
                     value={newPartner.name}
                     onChange={(e) => setNewPartner({ ...newPartner, name: e.target.value })}
                     className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-bold"
                   />
                   <input
                     type="text"
-                    placeholder="所在地 (例: 福岡県)"
+                    placeholder="謇蝨ｨ蝨ｰ (萓・ 遖丞ｲ｡逵・"
                     value={newPartner.location}
                     onChange={(e) => setNewPartner({ ...newPartner, location: e.target.value })}
                     className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-bold"
@@ -792,17 +787,16 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                   />
                   <button
                     onClick={() => setEditingText({
-                      title: "パートナーの説明文を編集",
+                      title: "繝代・繝医リ繝ｼ縺ｮ隱ｬ譏取枚繧堤ｷｨ髮・,
                       value: newPartner.description,
                       onSave: (val) => setNewPartner({ ...newPartner, description: val })
                     })}
                     className="w-full px-4 py-3 bg-blue-50 border-2 border-blue-100 rounded-xl font-bold text-blue-600 hover:bg-blue-100 transition-all flex items-center justify-center gap-2"
                   >
                     <Edit3 className="w-5 h-5" />
-                    詳細（説明文）を広く編集する
-                  </button>
+                    隧ｳ邏ｰ・郁ｪｬ譏取枚・峨ｒ蠎・￥邱ｨ髮・☆繧・                  </button>
                 </div>
-                <button onClick={handleAddPartner} className="w-full bg-blue-600 text-white py-4 rounded-xl font-black tracking-widest">追加する</button>
+                <button onClick={handleAddPartner} className="w-full bg-blue-600 text-white py-4 rounded-xl font-black tracking-widest">霑ｽ蜉縺吶ｋ</button>
               </motion.div>
             </div>
           )}
@@ -811,20 +805,20 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
             <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
               <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="bg-white rounded-3xl p-8 w-full max-w-md shadow-2xl">
                 <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-xl font-black">新規メーカー追加</h3>
+                  <h3 className="text-xl font-black">譁ｰ隕上Γ繝ｼ繧ｫ繝ｼ霑ｽ蜉</h3>
                   <button onClick={() => setShowAddBrandPartner(false)}><X className="w-6 h-6" /></button>
                 </div>
                 <div className="space-y-4 mb-6">
                   <input
                     type="text"
-                    placeholder="メーカー名"
+                    placeholder="繝｡繝ｼ繧ｫ繝ｼ蜷・
                     value={newBrandPartner.name}
                     onChange={(e) => setNewBrandPartner({ ...newBrandPartner, name: e.target.value })}
                     className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-bold"
                   />
                   <input
                     type="text"
-                    placeholder="カテゴリー (例: Security)"
+                    placeholder="繧ｫ繝・ざ繝ｪ繝ｼ (萓・ Security)"
                     value={newBrandPartner.category}
                     onChange={(e) => setNewBrandPartner({ ...newBrandPartner, category: e.target.value })}
                     className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-bold"
@@ -847,17 +841,16 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                   />
                   <button
                     onClick={() => setEditingText({
-                      title: "メーカーの説明文を編集",
+                      title: "繝｡繝ｼ繧ｫ繝ｼ縺ｮ隱ｬ譏取枚繧堤ｷｨ髮・,
                       value: newBrandPartner.description,
                       onSave: (val) => setNewBrandPartner({ ...newBrandPartner, description: val })
                     })}
                     className="w-full px-4 py-3 bg-blue-50 border-2 border-blue-100 rounded-xl font-bold text-blue-600 hover:bg-blue-100 transition-all flex items-center justify-center gap-2"
                   >
                     <Edit3 className="w-5 h-5" />
-                    詳細（説明文）を広く編集する
-                  </button>
+                    隧ｳ邏ｰ・郁ｪｬ譏取枚・峨ｒ蠎・￥邱ｨ髮・☆繧・                  </button>
                 </div>
-                <button onClick={handleAddBrandPartner} className="w-full bg-blue-600 text-white py-4 rounded-xl font-black tracking-widest">追加する</button>
+                <button onClick={handleAddBrandPartner} className="w-full bg-blue-600 text-white py-4 rounded-xl font-black tracking-widest">霑ｽ蜉縺吶ｋ</button>
               </motion.div>
             </div>
           )}
@@ -868,20 +861,20 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                 <div className="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <AlertCircle className="w-8 h-8 text-red-500" />
                 </div>
-                <h3 className="text-xl font-black mb-4">確認</h3>
+                <h3 className="text-xl font-black mb-4">遒ｺ隱・/h3>
                 <p className="text-gray-500 font-bold mb-8">{confirmModal.message}</p>
                 <div className="grid grid-cols-2 gap-4">
                   <button
                     onClick={() => setConfirmModal(prev => ({ ...prev, show: false }))}
                     className="bg-gray-100 text-gray-600 py-4 rounded-xl font-black tracking-widest"
                   >
-                    キャンセル
+                    繧ｭ繝｣繝ｳ繧ｻ繝ｫ
                   </button>
                   <button
                     onClick={confirmModal.onConfirm}
                     className="bg-red-500 text-white py-4 rounded-xl font-black tracking-widest"
                   >
-                    削除する
+                    蜑企勁縺吶ｋ
                   </button>
                 </div>
               </motion.div>
@@ -899,11 +892,10 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                   <div>
                     <div className="flex items-center gap-3 mb-2">
                       <TrendingUp className="w-6 h-6 text-blue-400" />
-                      <h2 className="text-xl font-black tracking-tight">一括価格調整ツール</h2>
+                      <h2 className="text-xl font-black tracking-tight">荳諡ｬ萓｡譬ｼ隱ｿ謨ｴ繝・・繝ｫ</h2>
                     </div>
                     <p className="text-xs text-gray-400 font-bold max-w-xs">
-                      ※入力したパーセンテージ分、全てのプラン価格を増減させます。
-                    </p>
+                      窶ｻ蜈･蜉帙＠縺溘ヱ繝ｼ繧ｻ繝ｳ繝・・繧ｸ蛻・∝・縺ｦ縺ｮ繝励Λ繝ｳ萓｡譬ｼ繧貞｢玲ｸ帙＆縺帙∪縺吶・                    </p>
                   </div>
                   <div className="flex items-center gap-4">
                     <div className="flex items-center gap-3 bg-white/10 p-2 rounded-xl border border-white/10">
@@ -919,7 +911,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                       onClick={handleBulkAdjust}
                       className="bg-blue-600 text-white px-8 py-4 rounded-xl font-black text-sm tracking-widest hover:bg-blue-500 transition-all shadow-lg shadow-blue-600/20"
                     >
-                      一括適用
+                      荳諡ｬ驕ｩ逕ｨ
                     </button>
                   </div>
                 </div>
@@ -930,27 +922,25 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                   <div>
                     <div className="flex items-center gap-3 mb-4">
                       <AlertCircle className="w-5 h-5 text-blue-400" />
-                      <h3 className="text-sm font-black uppercase tracking-widest">セキュリティー施工状況メッセージ</h3>
+                      <h3 className="text-sm font-black uppercase tracking-widest">繧ｻ繧ｭ繝･繝ｪ繝・ぅ繝ｼ譁ｽ蟾･迥ｶ豕√Γ繝・そ繝ｼ繧ｸ</h3>
                     </div>
                     <button
                       onClick={() => setEditingText({
-                        title: "セキュリティー施工状況メッセージを編集",
+                        title: "繧ｻ繧ｭ繝･繝ｪ繝・ぅ繝ｼ譁ｽ蟾･迥ｶ豕√Γ繝・そ繝ｼ繧ｸ繧堤ｷｨ髮・,
                         value: localSecurityStatus,
                         onSave: (val) => setLocalSecurityStatus(val)
                       })}
                       className="w-full px-4 py-4 bg-white/5 border border-white/10 rounded-2xl font-bold text-sm text-blue-400 hover:bg-white/10 transition-all flex items-center justify-center gap-3"
                     >
                       <Edit3 className="w-5 h-5" />
-                      メッセージを広く編集する
-                    </button>
+                      繝｡繝・そ繝ｼ繧ｸ繧貞ｺ・￥邱ｨ髮・☆繧・                    </button>
                     <p className="text-[10px] text-gray-500 mt-2 font-bold">
-                      ※セキュリティー詳細ページの上部に表示されます。空にすると非表示になります。
-                    </p>
+                      窶ｻ繧ｻ繧ｭ繝･繝ｪ繝・ぅ繝ｼ隧ｳ邏ｰ繝壹・繧ｸ縺ｮ荳企Κ縺ｫ陦ｨ遉ｺ縺輔ｌ縺ｾ縺吶らｩｺ縺ｫ縺吶ｋ縺ｨ髱櫁｡ｨ遉ｺ縺ｫ縺ｪ繧翫∪縺吶・                    </p>
                   </div>
                   <div>
                     <div className="flex items-center gap-3 mb-4">
                       <Megaphone className="w-5 h-5 text-red-400" />
-                      <h3 className="text-sm font-black uppercase tracking-widest text-red-400">緊急のお知らせ（トップページ）</h3>
+                      <h3 className="text-sm font-black uppercase tracking-widest text-red-400">邱頑･縺ｮ縺顔衍繧峨○・医ヨ繝・・繝壹・繧ｸ・・/h3>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-center gap-3">
@@ -961,31 +951,30 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                             onChange={(e) => setLocalEmergencyAnnouncement({ ...localEmergencyAnnouncement, active: e.target.checked })}
                             className="w-5 h-5 rounded border-white/10 bg-white/5 text-blue-600 focus:ring-0"
                           />
-                          <span className="text-xs font-bold">表示する</span>
+                          <span className="text-xs font-bold">陦ｨ遉ｺ縺吶ｋ</span>
                         </label>
                       </div>
                       <button
                         onClick={() => setEditingText({
-                          title: "緊急のお知らせ内容を編集",
+                          title: "邱頑･縺ｮ縺顔衍繧峨○蜀・ｮｹ繧堤ｷｨ髮・,
                           value: localEmergencyAnnouncement.text,
                           onSave: (val) => setLocalEmergencyAnnouncement({ ...localEmergencyAnnouncement, text: val })
                         })}
                         className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl font-bold text-xs text-gray-300 hover:bg-white/10 transition-all flex items-center justify-center gap-2"
                       >
                         <Edit3 className="w-4 h-4" />
-                        テキスト内容を編集
-                      </button>
+                        繝・く繧ｹ繝亥・螳ｹ繧堤ｷｨ髮・                      </button>
                       <div className="grid grid-cols-2 gap-3">
                         <input
                           type="text"
-                          placeholder="リンクURL (任意)"
+                          placeholder="繝ｪ繝ｳ繧ｯURL (莉ｻ諢・"
                           value={localEmergencyAnnouncement.link || ""}
                           onChange={(e) => setLocalEmergencyAnnouncement({ ...localEmergencyAnnouncement, link: e.target.value })}
                           className="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-xl text-[10px] font-bold focus:ring-1 focus:ring-blue-500 outline-none"
                         />
                         <input
                           type="text"
-                          placeholder="画像パス または URL (任意)"
+                          placeholder="逕ｻ蜒上ヱ繧ｹ 縺ｾ縺溘・ URL (莉ｻ諢・"
                           value={localEmergencyAnnouncement.image || ""}
                           onChange={(e) => setLocalEmergencyAnnouncement({ ...localEmergencyAnnouncement, image: e.target.value })}
                           className="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-xl text-[10px] font-bold focus:ring-1 focus:ring-blue-500 outline-none"
@@ -1002,7 +991,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                     <RefreshCw className="w-5 h-5 text-gray-500" />
                     <input
                       type="text"
-                      placeholder="プラン名やカテゴリーで検索..."
+                      placeholder="繝励Λ繝ｳ蜷阪ｄ繧ｫ繝・ざ繝ｪ繝ｼ縺ｧ讀懃ｴ｢..."
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                       className="bg-transparent border-none text-lg font-bold w-full focus:ring-0 placeholder:text-gray-600"
@@ -1013,7 +1002,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                     className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-2xl font-black text-sm tracking-widest transition-all"
                   >
                     <Plus className="w-4 h-4" />
-                    カテゴリー追加
+                    繧ｫ繝・ざ繝ｪ繝ｼ霑ｽ蜉
                   </button>
                 </div>
               </div>
@@ -1037,7 +1026,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                     {/* Optional Services Section */}
                     <tr className="bg-blue-50/50">
                       <td colSpan={6} className="px-6 py-3 text-xs font-black text-blue-600 uppercase tracking-widest border-b border-gray-200">
-                        オプションメニュー
+                        繧ｪ繝励す繝ｧ繝ｳ繝｡繝九Η繝ｼ
                       </td>
                       <td className="bg-blue-50/50 border-b border-gray-200 px-6">
                         <button onClick={() => setShowAddOptional(true)} className="p-1 hover:text-blue-600 transition-colors"><Plus className="w-4 h-4" /></button>
@@ -1060,12 +1049,12 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                             value={opt.effect}
                             onChange={(e) => handleOptionalChange(opt.id, 'effect', e.target.value)}
                             className="w-full px-3 py-1 bg-white border border-gray-200 rounded-lg font-bold text-[10px] text-gray-400 focus:border-blue-500 outline-none transition-all mt-1"
-                            placeholder="効果"
+                            placeholder="蜉ｹ譫・
                           />
                         </td>
                         <td className="px-6 py-4 border-r border-gray-100">
                           <div className="relative flex items-center">
-                            <span className="absolute left-3 font-black text-gray-400 text-sm">¥</span>
+                            <span className="absolute left-3 font-black text-gray-400 text-sm">ﾂ･</span>
                             <input
                               type="text"
                               value={opt.price}
@@ -1077,15 +1066,14 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                         <td className="px-6 py-4 border-r border-gray-100">
                           <button
                             onClick={() => setEditingText({
-                              title: `${opt.name} の説明文編集`,
+                              title: `${opt.name} 縺ｮ隱ｬ譏取枚邱ｨ髮・,
                               value: opt.description,
                               onSave: (val) => handleOptionalChange(opt.id, 'description', val)
                             })}
                             className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-bold text-sm text-blue-600 hover:bg-blue-50 transition-all flex items-center justify-center gap-2"
                           >
                             <Edit3 className="w-4 h-4" />
-                            詳細を編集
-                          </button>
+                            隧ｳ邏ｰ繧堤ｷｨ髮・                          </button>
                         </td>
                         <td className="px-6 py-4 border-r border-gray-100">
                           <input
@@ -1095,7 +1083,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                             placeholder="/images/Audio/filename.png"
                             className="w-full px-3 py-2 bg-white border border-gray-200 rounded-lg font-bold text-xs text-gray-600 focus:border-blue-500 outline-none transition-all"
                           />
-                          <p className="text-[8px] text-gray-400 mt-1 font-bold">※例: /images/Audio/〜</p>
+                          <p className="text-[8px] text-gray-400 mt-1 font-bold">窶ｻ萓・ /images/Audio/縲・/p>
                         </td>
                         <td className="px-6 py-4 text-center">
                           <button onClick={() => handleRemoveOptional(opt.id)} className="text-gray-300 hover:text-red-500 transition-colors"><Trash2 className="w-4 h-4" /></button>
@@ -1107,7 +1095,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                     {audioPlans.length > 0 && (
                       <tr className="bg-blue-50/30">
                         <td colSpan={6} className="px-6 py-3 text-[10px] font-black text-blue-600 uppercase tracking-widest border-b border-gray-200">
-                          オーディオ関連
+                          繧ｪ繝ｼ繝・ぅ繧ｪ髢｢騾｣
                         </td>
                       </tr>
                     )}
@@ -1138,7 +1126,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                                     onChange={(e) => handleCategoryChange(cat.id, 'showDescriptionInMenu', e.target.checked)}
                                     className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                                   />
-                                  <span className="text-xs font-bold text-gray-600">メニュー全体で表示</span>
+                                  <span className="text-xs font-bold text-gray-600">繝｡繝九Η繝ｼ蜈ｨ菴薙〒陦ｨ遉ｺ</span>
                                 </label>
                                 <label className="flex items-center gap-2 cursor-pointer">
                                   <input
@@ -1147,22 +1135,21 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                                     onChange={(e) => handleCategoryChange(cat.id, 'showDescriptionInList', e.target.checked)}
                                     className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                                   />
-                                  <span className="text-xs font-bold text-gray-600">個別一覧ページで表示</span>
+                                  <span className="text-xs font-bold text-gray-600">蛟句挨荳隕ｧ繝壹・繧ｸ縺ｧ陦ｨ遉ｺ</span>
                                 </label>
                                 <button
                                   onClick={() => setEditingText({
-                                    title: `${cat.category} の説明文編集`,
+                                    title: `${cat.category} 縺ｮ隱ｬ譏取枚邱ｨ髮・,
                                     value: cat.description || "",
                                     onSave: (val) => handleCategoryChange(cat.id, 'description', val)
                                   })}
                                   className="px-3 py-1 bg-white border border-gray-200 rounded-lg font-bold text-[10px] text-blue-600 hover:bg-blue-50 transition-all flex items-center gap-1"
                                 >
                                   <Edit3 className="w-3 h-3" />
-                                  説明文を編集
-                                </button>
+                                  隱ｬ譏取枚繧堤ｷｨ髮・                                </button>
                               </div>
                               <div className="flex flex-col gap-1">
-                                <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">カテゴリー画像 (カンマ区切りで複数可)</span>
+                                <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">繧ｫ繝・ざ繝ｪ繝ｼ逕ｻ蜒・(繧ｫ繝ｳ繝槫玄蛻・ｊ縺ｧ隍・焚蜿ｯ)</span>
                                 <input
                                   type="text"
                                   value={cat.images?.join(',') || ""}
@@ -1190,13 +1177,13 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                                 type="text"
                                 value={item.badge || ""}
                                 onChange={(e) => handlePriceChange(cat.id, item.name, 'badge', e.target.value)}
-                                placeholder="バッジ (例: おすすめ)"
+                                placeholder="繝舌ャ繧ｸ (萓・ 縺翫☆縺吶ａ)"
                                 className="w-full px-3 py-1 mt-1 bg-gray-50 border border-transparent rounded text-[10px] text-gray-500 font-bold focus:border-blue-300 focus:bg-white outline-none transition-all"
                               />
                             </td>
                             <td className="px-6 py-4 border-r border-gray-100">
                               <div className="relative flex items-center">
-                                <span className="absolute left-3 font-black text-gray-400 text-sm">¥</span>
+                                <span className="absolute left-3 font-black text-gray-400 text-sm">ﾂ･</span>
                                 <input
                                   type="text"
                                   value={item.price}
@@ -1209,33 +1196,30 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                               <div className="flex flex-col gap-2">
                                 <button
                                   onClick={() => setEditingText({
-                                    title: `${item.name} の特徴編集`,
+                                    title: `${item.name} 縺ｮ迚ｹ蠕ｴ邱ｨ髮・,
                                     value: item.features.join('\n'),
                                     onSave: (val) => handlePriceChange(cat.id, item.name, 'features', val.split('\n'))
                                   })}
                                   className="w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded-xl font-bold text-[10px] text-blue-600 hover:bg-blue-50 transition-all flex items-center justify-center gap-2"
                                 >
                                   <Edit3 className="w-3 h-3" />
-                                  特徴を編集
-                                </button>
+                                  迚ｹ蠕ｴ繧堤ｷｨ髮・                                </button>
                                 <button
                                   onClick={() => setEditingText({
-                                    title: `${item.name} の解説文編集`,
+                                    title: `${item.name} 縺ｮ隗｣隱ｬ譁・ｷｨ髮・,
                                     value: item.description || "",
                                     onSave: (val) => handlePriceChange(cat.id, item.name, 'description', val)
                                   })}
                                   className="w-full px-4 py-2 bg-blue-50 border border-blue-100 rounded-xl font-bold text-[10px] text-blue-700 hover:bg-blue-100 transition-all flex items-center justify-center gap-2"
                                 >
                                   <Info className="w-3 h-3" />
-                                  解説を編集
-                                </button>
+                                  隗｣隱ｬ繧堤ｷｨ髮・                                </button>
                                 <button
                                   onClick={() => setEditingPackage({ catId: cat.id, item: JSON.parse(JSON.stringify(item)) })}
                                   className="w-full px-4 py-2 bg-gray-900 border border-gray-800 rounded-xl font-bold text-[10px] text-white hover:bg-gray-800 transition-all flex items-center justify-center gap-3"
                                 >
                                   <LayoutGrid className="w-3 h-3" />
-                                  詳細設定
-                                </button>
+                                  隧ｳ邏ｰ險ｭ螳・                                </button>
                               </div>
                             </td>
                             <td className="px-6 py-4 border-r border-gray-100">
@@ -1246,7 +1230,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                                 placeholder="/images/Audio/filename.png"
                                 className="w-full px-3 py-2 bg-white border border-gray-200 rounded-lg font-bold text-xs text-gray-600 focus:border-blue-500 outline-none transition-all"
                               />
-                              <p className="text-[8px] text-gray-400 mt-1 font-bold">※例: /images/Audio/〜</p>
+                              <p className="text-[8px] text-gray-400 mt-1 font-bold">窶ｻ萓・ /images/Audio/縲・/p>
                             </td>
                             <td className="px-6 py-4 text-center">
                               <button onClick={() => handleRemoveItem(cat.id, item.name)} className="text-gray-300 hover:text-red-500 transition-colors"><Trash2 className="w-4 h-4" /></button>
@@ -1260,7 +1244,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                     {securityPlans.length > 0 && (
                       <tr className="bg-red-50/30">
                         <td colSpan={6} className="px-6 py-3 text-[10px] font-black text-red-600 uppercase tracking-widest border-b border-gray-200">
-                          セキュリティー関連
+                          繧ｻ繧ｭ繝･繝ｪ繝・ぅ繝ｼ髢｢騾｣
                         </td>
                       </tr>
                     )}
@@ -1291,7 +1275,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                                     onChange={(e) => handleCategoryChange(cat.id, 'showDescriptionInMenu', e.target.checked)}
                                     className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                                   />
-                                  <span className="text-xs font-bold text-gray-600">メニュー全体で表示</span>
+                                  <span className="text-xs font-bold text-gray-600">繝｡繝九Η繝ｼ蜈ｨ菴薙〒陦ｨ遉ｺ</span>
                                 </label>
                                 <label className="flex items-center gap-2 cursor-pointer">
                                   <input
@@ -1300,22 +1284,21 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                                     onChange={(e) => handleCategoryChange(cat.id, 'showDescriptionInList', e.target.checked)}
                                     className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                                   />
-                                  <span className="text-xs font-bold text-gray-600">個別一覧ページで表示</span>
+                                  <span className="text-xs font-bold text-gray-600">蛟句挨荳隕ｧ繝壹・繧ｸ縺ｧ陦ｨ遉ｺ</span>
                                 </label>
                                 <button
                                   onClick={() => setEditingText({
-                                    title: `${cat.category} の説明文編集`,
+                                    title: `${cat.category} 縺ｮ隱ｬ譏取枚邱ｨ髮・,
                                     value: cat.description || "",
                                     onSave: (val) => handleCategoryChange(cat.id, 'description', val)
                                   })}
                                   className="px-3 py-1 bg-white border border-gray-200 rounded-lg font-bold text-[10px] text-blue-600 hover:bg-blue-50 transition-all flex items-center gap-1"
                                 >
                                   <Edit3 className="w-3 h-3" />
-                                  説明文を編集
-                                </button>
+                                  隱ｬ譏取枚繧堤ｷｨ髮・                                </button>
                               </div>
                               <div className="flex flex-col gap-1">
-                                <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">カテゴリー画像 (カンマ区切りで複数可)</span>
+                                <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">繧ｫ繝・ざ繝ｪ繝ｼ逕ｻ蜒・(繧ｫ繝ｳ繝槫玄蛻・ｊ縺ｧ隍・焚蜿ｯ)</span>
                                 <input
                                   type="text"
                                   value={cat.images?.join(',') || ""}
@@ -1343,13 +1326,13 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                                 type="text"
                                 value={item.badge || ""}
                                 onChange={(e) => handlePriceChange(cat.id, item.name, 'badge', e.target.value)}
-                                placeholder="バッジ (例: おすすめ)"
+                                placeholder="繝舌ャ繧ｸ (萓・ 縺翫☆縺吶ａ)"
                                 className="w-full px-3 py-1 mt-1 bg-gray-50 border border-transparent rounded text-[10px] text-gray-500 font-bold focus:border-blue-300 focus:bg-white outline-none transition-all"
                               />
                             </td>
                             <td className="px-6 py-4 border-r border-gray-100">
                               <div className="relative flex items-center">
-                                <span className="absolute left-3 font-black text-gray-400 text-sm">¥</span>
+                                <span className="absolute left-3 font-black text-gray-400 text-sm">ﾂ･</span>
                                 <input
                                   type="text"
                                   value={item.price}
@@ -1362,33 +1345,30 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                               <div className="flex flex-col gap-2">
                                 <button
                                   onClick={() => setEditingText({
-                                    title: `${item.name} の特徴編集`,
+                                    title: `${item.name} 縺ｮ迚ｹ蠕ｴ邱ｨ髮・,
                                     value: item.features.join('\n'),
                                     onSave: (val) => handlePriceChange(cat.id, item.name, 'features', val.split('\n'))
                                   })}
                                   className="w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded-xl font-bold text-[10px] text-blue-600 hover:bg-blue-50 transition-all flex items-center justify-center gap-2"
                                 >
                                   <Edit3 className="w-3 h-3" />
-                                  特徴を編集
-                                </button>
+                                  迚ｹ蠕ｴ繧堤ｷｨ髮・                                </button>
                                 <button
                                   onClick={() => setEditingText({
-                                    title: `${item.name} の解説文編集`,
+                                    title: `${item.name} 縺ｮ隗｣隱ｬ譁・ｷｨ髮・,
                                     value: item.description || "",
                                     onSave: (val) => handlePriceChange(cat.id, item.name, 'description', val)
                                   })}
                                   className="w-full px-4 py-2 bg-blue-50 border border-blue-100 rounded-xl font-bold text-[10px] text-blue-700 hover:bg-blue-100 transition-all flex items-center justify-center gap-2"
                                 >
                                   <Info className="w-3 h-3" />
-                                  解説を編集
-                                </button>
+                                  隗｣隱ｬ繧堤ｷｨ髮・                                </button>
                                 <button
                                   onClick={() => setEditingPackage({ catId: cat.id, item: JSON.parse(JSON.stringify(item)) })}
                                   className="w-full px-4 py-2 bg-gray-900 border border-gray-800 rounded-xl font-bold text-[10px] text-white hover:bg-gray-800 transition-all flex items-center justify-center gap-3"
                                 >
                                   <LayoutGrid className="w-3 h-3" />
-                                  詳細設定
-                                </button>
+                                  隧ｳ邏ｰ險ｭ螳・                                </button>
                               </div>
                             </td>
                             <td className="px-6 py-4 border-r border-gray-100">
@@ -1412,8 +1392,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                     {otherPlans.length > 0 && (
                       <tr className="bg-gray-50">
                         <td colSpan={6} className="px-6 py-3 text-[10px] font-black text-gray-600 uppercase tracking-widest border-b border-gray-200">
-                          その他
-                        </td>
+                          縺昴・莉・                        </td>
                       </tr>
                     )}
                     {otherPlans.map((cat) => (
@@ -1443,7 +1422,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                                     onChange={(e) => handleCategoryChange(cat.id, 'showDescriptionInMenu', e.target.checked)}
                                     className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                                   />
-                                  <span className="text-xs font-bold text-gray-600">メニュー全体で表示</span>
+                                  <span className="text-xs font-bold text-gray-600">繝｡繝九Η繝ｼ蜈ｨ菴薙〒陦ｨ遉ｺ</span>
                                 </label>
                                 <label className="flex items-center gap-2 cursor-pointer">
                                   <input
@@ -1452,22 +1431,21 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                                     onChange={(e) => handleCategoryChange(cat.id, 'showDescriptionInList', e.target.checked)}
                                     className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                                   />
-                                  <span className="text-xs font-bold text-gray-600">個別一覧ページで表示</span>
+                                  <span className="text-xs font-bold text-gray-600">蛟句挨荳隕ｧ繝壹・繧ｸ縺ｧ陦ｨ遉ｺ</span>
                                 </label>
                                 <button
                                   onClick={() => setEditingText({
-                                    title: `${cat.category} の説明文編集`,
+                                    title: `${cat.category} 縺ｮ隱ｬ譏取枚邱ｨ髮・,
                                     value: cat.description || "",
                                     onSave: (val) => handleCategoryChange(cat.id, 'description', val)
                                   })}
                                   className="px-3 py-1 bg-white border border-gray-200 rounded-lg font-bold text-[10px] text-blue-600 hover:bg-blue-50 transition-all flex items-center gap-1"
                                 >
                                   <Edit3 className="w-3 h-3" />
-                                  説明文を編集
-                                </button>
+                                  隱ｬ譏取枚繧堤ｷｨ髮・                                </button>
                               </div>
                               <div className="flex flex-col gap-1">
-                                <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">カテゴリー画像 (カンマ区切りで複数可)</span>
+                                <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">繧ｫ繝・ざ繝ｪ繝ｼ逕ｻ蜒・(繧ｫ繝ｳ繝槫玄蛻・ｊ縺ｧ隍・焚蜿ｯ)</span>
                                 <input
                                   type="text"
                                   value={cat.images?.join(',') || ""}
@@ -1495,13 +1473,13 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                                 type="text"
                                 value={item.badge || ""}
                                 onChange={(e) => handlePriceChange(cat.id, item.name, 'badge', e.target.value)}
-                                placeholder="バッジ (例: おすすめ)"
+                                placeholder="繝舌ャ繧ｸ (萓・ 縺翫☆縺吶ａ)"
                                 className="w-full px-3 py-1 mt-1 bg-gray-50 border border-transparent rounded text-[10px] text-gray-500 font-bold focus:border-blue-300 focus:bg-white outline-none transition-all"
                               />
                             </td>
                             <td className="px-6 py-4 border-r border-gray-100">
                               <div className="relative flex items-center">
-                                <span className="absolute left-3 font-black text-gray-400 text-sm">¥</span>
+                                <span className="absolute left-3 font-black text-gray-400 text-sm">ﾂ･</span>
                                 <input
                                   type="text"
                                   value={item.price}
@@ -1514,33 +1492,30 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                               <div className="flex flex-col gap-2">
                                 <button
                                   onClick={() => setEditingText({
-                                    title: `${item.name} の特徴編集`,
+                                    title: `${item.name} 縺ｮ迚ｹ蠕ｴ邱ｨ髮・,
                                     value: item.features.join('\n'),
                                     onSave: (val) => handlePriceChange(cat.id, item.name, 'features', val.split('\n'))
                                   })}
                                   className="w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded-xl font-bold text-[10px] text-blue-600 hover:bg-blue-50 transition-all flex items-center justify-center gap-2"
                                 >
                                   <Edit3 className="w-3 h-3" />
-                                  特徴を編集
-                                </button>
+                                  迚ｹ蠕ｴ繧堤ｷｨ髮・                                </button>
                                 <button
                                   onClick={() => setEditingText({
-                                    title: `${item.name} の解説文編集`,
+                                    title: `${item.name} 縺ｮ隗｣隱ｬ譁・ｷｨ髮・,
                                     value: item.description || "",
                                     onSave: (val) => handlePriceChange(cat.id, item.name, 'description', val)
                                   })}
                                   className="w-full px-4 py-2 bg-blue-50 border border-blue-100 rounded-xl font-bold text-[10px] text-blue-700 hover:bg-blue-100 transition-all flex items-center justify-center gap-2"
                                 >
                                   <Info className="w-3 h-3" />
-                                  解説を編集
-                                </button>
+                                  隗｣隱ｬ繧堤ｷｨ髮・                                </button>
                                 <button
                                   onClick={() => setEditingPackage({ catId: cat.id, item: JSON.parse(JSON.stringify(item)) })}
                                   className="w-full px-4 py-2 bg-gray-900 border border-gray-800 rounded-xl font-bold text-[10px] text-white hover:bg-gray-800 transition-all flex items-center justify-center gap-3"
                                 >
                                   <LayoutGrid className="w-3 h-3" />
-                                  詳細設定
-                                </button>
+                                  隧ｳ邏ｰ險ｭ螳・                                </button>
                               </div>
                             </td>
                             <td className="px-6 py-4 border-r border-gray-100">
@@ -1569,21 +1544,21 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
             <div className="bg-white rounded-[2.5rem] shadow-2xl p-12 border border-gray-100 max-w-2xl mx-auto">
               <div className="flex items-center justify-between mb-12">
                 <div>
-                  <h3 className="text-3xl font-black tracking-tighter">{year}年 {month + 1}月</h3>
-                  <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mt-1">営業カレンダー設定</p>
+                  <h3 className="text-3xl font-black tracking-tighter">{year}蟷ｴ {month + 1}譛・/h3>
+                  <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mt-1">蝟ｶ讌ｭ繧ｫ繝ｬ繝ｳ繝繝ｼ險ｭ螳・/p>
                 </div>
                 <div className="flex gap-3">
                   <button
                     onClick={prevMonth}
                     className="p-4 hover:bg-gray-50 rounded-2xl border border-gray-100 transition-colors"
-                    aria-label="前月"
+                    aria-label="蜑肴怦"
                   >
                     <ChevronLeft className="w-6 h-6" />
                   </button>
                   <button
                     onClick={nextMonth}
                     className="p-4 hover:bg-gray-50 rounded-2xl border border-gray-100 transition-colors"
-                    aria-label="次月"
+                    aria-label="谺｡譛・
                   >
                     <ChevronRight className="w-6 h-6" />
                   </button>
@@ -1591,7 +1566,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
               </div>
 
               <div className="grid grid-cols-7 gap-2 mb-8">
-                {['日', '月', '火', '水', '木', '金', '土'].map((day, i) => (
+                {['譌･', '譛・, '轣ｫ', '豌ｴ', '譛ｨ', '驥・, '蝨・].map((day, i) => (
                   <div key={day} className={`text-center text-xs font-black mb-4 ${i === 0 ? 'text-red-400' : i === 6 ? 'text-blue-400' : 'text-gray-300'}`}>
                     {day}
                   </div>
@@ -1629,11 +1604,11 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
               <div className="bg-gray-50 rounded-2xl p-6 space-y-4">
                 <div className="flex items-center gap-3 text-sm">
                   <div className="w-4 h-4 rounded bg-red-500"></div>
-                  <span className="font-bold text-gray-600">赤色の日付が定休日として表示されます</span>
+                  <span className="font-bold text-gray-600">襍､濶ｲ縺ｮ譌･莉倥′螳壻ｼ第律縺ｨ縺励※陦ｨ遉ｺ縺輔ｌ縺ｾ縺・/span>
                 </div>
                 <div className="flex items-start gap-3 text-xs text-gray-400 leading-relaxed">
                   <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
-                  <p>日付をクリックすることで「営業日」と「休日」を切り替えることができます。毎週の定休日（火・金）も個別に営業日に変更可能です。</p>
+                  <p>譌･莉倥ｒ繧ｯ繝ｪ繝・け縺吶ｋ縺薙→縺ｧ縲悟霧讌ｭ譌･縲阪→縲御ｼ第律縲阪ｒ蛻・ｊ譖ｿ縺医ｋ縺薙→縺後〒縺阪∪縺吶よｯ朱ｱ縺ｮ螳壻ｼ第律・育↓繝ｻ驥托ｼ峨ｂ蛟句挨縺ｫ蝟ｶ讌ｭ譌･縺ｫ螟画峩蜿ｯ閭ｽ縺ｧ縺吶・/p>
                 </div>
               </div>
             </div>
@@ -1644,15 +1619,15 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
             <div className="bg-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden">
               <div className="p-8 border-b border-gray-100 flex items-center justify-between bg-blue-50/30">
                 <div>
-                  <h3 className="text-xl font-black">メーカー管理（信頼のパートナー）</h3>
-                  <p className="text-xs text-gray-400 font-bold mt-1">トップページ下部のメーカー一覧を編集します。</p>
+                  <h3 className="text-xl font-black">繝｡繝ｼ繧ｫ繝ｼ邂｡逅・ｼ井ｿ｡鬆ｼ縺ｮ繝代・繝医リ繝ｼ・・/h3>
+                  <p className="text-xs text-gray-400 font-bold mt-1">繝医ャ繝励・繝ｼ繧ｸ荳矩Κ縺ｮ繝｡繝ｼ繧ｫ繝ｼ荳隕ｧ繧堤ｷｨ髮・＠縺ｾ縺吶・/p>
                 </div>
                 <button
                   onClick={() => setShowAddBrandPartner(true)}
                   className="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl font-black text-sm tracking-widest hover:bg-blue-700 transition-all shadow-lg shadow-blue-200"
                 >
                   <Plus className="w-4 h-4" />
-                  メーカー追加
+                  繝｡繝ｼ繧ｫ繝ｼ霑ｽ蜉
                 </button>
               </div>
               <div className="overflow-x-auto">
@@ -1709,15 +1684,14 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                         <td className="px-6 py-4 border-r border-gray-100">
                           <button
                             onClick={() => setEditingText({
-                              title: `${p.name} の説明文編集`,
+                              title: `${p.name} 縺ｮ隱ｬ譏取枚邱ｨ髮・,
                               value: p.description,
                               onSave: (val) => handleBrandPartnerChange(p.id, 'description', val)
                             })}
                             className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-bold text-sm text-blue-600 hover:bg-blue-50 transition-all flex items-center justify-center gap-2"
                           >
                             <Edit3 className="w-4 h-4" />
-                            詳細を編集
-                          </button>
+                            隧ｳ邏ｰ繧堤ｷｨ髮・                          </button>
                         </td>
                         <td className="px-6 py-4 text-center">
                           <button onClick={() => handleRemoveBrandPartner(p.id)} className="text-gray-300 hover:text-red-500 transition-colors"><Trash2 className="w-4 h-4" /></button>
@@ -1733,15 +1707,15 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
             <div className="bg-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden">
               <div className="p-8 border-b border-gray-100 flex items-center justify-between">
                 <div>
-                  <h3 className="text-xl font-black">パートナーショップ管理（加盟店一覧）</h3>
-                  <p className="text-xs text-gray-400 font-bold mt-1">カーオーディオセンター・グループの店舗一覧を編集します。</p>
+                  <h3 className="text-xl font-black">繝代・繝医リ繝ｼ繧ｷ繝ｧ繝・・邂｡逅・ｼ亥刈逶溷ｺ嶺ｸ隕ｧ・・/h3>
+                  <p className="text-xs text-gray-400 font-bold mt-1">繧ｫ繝ｼ繧ｪ繝ｼ繝・ぅ繧ｪ繧ｻ繝ｳ繧ｿ繝ｼ繝ｻ繧ｰ繝ｫ繝ｼ繝励・蠎苓・荳隕ｧ繧堤ｷｨ髮・＠縺ｾ縺吶・/p>
                 </div>
                 <button
                   onClick={() => setShowAddPartner(true)}
                   className="flex items-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-xl font-black text-sm tracking-widest hover:bg-blue-600 transition-all"
                 >
                   <Plus className="w-4 h-4" />
-                  パートナー追加
+                  繝代・繝医リ繝ｼ霑ｽ蜉
                 </button>
               </div>
               <div className="overflow-x-auto">
@@ -1785,15 +1759,14 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                         <td className="px-6 py-4 border-r border-gray-100">
                           <button
                             onClick={() => setEditingText({
-                              title: `${p.name} の説明文編集`,
+                              title: `${p.name} 縺ｮ隱ｬ譏取枚邱ｨ髮・,
                               value: p.description,
                               onSave: (val) => handlePartnerChange(p.id, 'description', val)
                             })}
                             className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-bold text-sm text-blue-600 hover:bg-blue-50 transition-all flex items-center justify-center gap-2"
                           >
                             <Edit3 className="w-4 h-4" />
-                            詳細を編集
-                          </button>
+                            隧ｳ邏ｰ繧堤ｷｨ髮・                          </button>
                         </td>
                         <td className="px-6 py-4 text-center">
                           <button onClick={() => handleRemovePartner(p.id)} className="text-gray-300 hover:text-red-500 transition-colors"><Trash2 className="w-4 h-4" /></button>
@@ -1813,21 +1786,20 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                 <div className="flex items-center justify-between mb-8">
                   <h3 className="text-xl font-black flex items-center gap-3">
                     <Speaker className="w-6 h-6 text-blue-600" />
-                    オーディオ採用設定
-                  </h3>
+                    繧ｪ繝ｼ繝・ぅ繧ｪ謗｡逕ｨ險ｭ螳・                  </h3>
                   <button
                     onClick={() => {
                       setLocalAudioRecruitment({ ...localAudioRecruitment, visible: !localAudioRecruitment.visible });
                     }}
                     className={`px-4 py-2 rounded-xl font-black text-xs transition-all ${localAudioRecruitment.visible ? 'bg-green-500 text-white shadow-lg shadow-green-200' : 'bg-gray-100 text-gray-400'}`}
                   >
-                    {localAudioRecruitment.visible ? '表示中' : '非表示'}
+                    {localAudioRecruitment.visible ? '陦ｨ遉ｺ荳ｭ' : '髱櫁｡ｨ遉ｺ'}
                   </button>
                 </div>
 
                 <div className="space-y-6">
                   <div>
-                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">求人タイトル</label>
+                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">豎ゆｺｺ繧ｿ繧､繝医Ν</label>
                     <input
                       type="text"
                       value={localAudioRecruitment.title}
@@ -1836,7 +1808,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                     />
                   </div>
                   <div>
-                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">募集メッセージ</label>
+                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">蜍滄寔繝｡繝・そ繝ｼ繧ｸ</label>
                     <textarea
                       value={localAudioRecruitment.message}
                       onChange={(e) => setLocalAudioRecruitment({ ...localAudioRecruitment, message: e.target.value })}
@@ -1846,7 +1818,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
 
                   <div className="p-4 bg-gray-50 rounded-2xl border border-gray-100 space-y-4">
                     <div className="flex items-center justify-between">
-                      <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest">募集要項</label>
+                      <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest">蜍滄寔隕・・/label>
                       <label className="flex items-center gap-2 cursor-pointer">
                         <input
                           type="checkbox"
@@ -1854,7 +1826,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                           onChange={(e) => setLocalAudioRecruitment({ ...localAudioRecruitment, showRequirements: e.target.checked })}
                           className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                         />
-                        <span className="text-[10px] font-black text-gray-600 uppercase tracking-widest">表示する</span>
+                        <span className="text-[10px] font-black text-gray-600 uppercase tracking-widest">陦ｨ遉ｺ縺吶ｋ</span>
                       </label>
                     </div>
                     <textarea
@@ -1862,13 +1834,13 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                       onChange={(e) => setLocalAudioRecruitment({ ...localAudioRecruitment, requirements: e.target.value.split('\n') })}
                       disabled={!localAudioRecruitment.showRequirements}
                       className={`w-full px-4 py-3 bg-white border border-gray-200 rounded-xl font-bold text-gray-600 focus:border-blue-500 outline-none transition-all h-24 resize-none ${!localAudioRecruitment.showRequirements ? 'opacity-50 grayscale' : ''}`}
-                      placeholder="例：車が好きな方&#10;経験者優遇"
+                      placeholder="萓具ｼ夊ｻ翫′螂ｽ縺阪↑譁ｹ&#10;邨碁ｨ楢・━驕・
                     />
                   </div>
 
                   <div className="p-4 bg-gray-50 rounded-2xl border border-gray-100 space-y-4">
                     <div className="flex items-center justify-between">
-                      <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest">給与・待遇</label>
+                      <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest">邨ｦ荳弱・蠕・∞</label>
                       <label className="flex items-center gap-2 cursor-pointer">
                         <input
                           type="checkbox"
@@ -1876,7 +1848,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                           onChange={(e) => setLocalAudioRecruitment({ ...localAudioRecruitment, showSalary: e.target.checked })}
                           className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                         />
-                        <span className="text-[10px] font-black text-gray-600 uppercase tracking-widest">表示する</span>
+                        <span className="text-[10px] font-black text-gray-600 uppercase tracking-widest">陦ｨ遉ｺ縺吶ｋ</span>
                       </label>
                     </div>
                     <input
@@ -1889,7 +1861,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">応募先（電話番号など）</label>
+                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">蠢懷供蜈茨ｼ磯崕隧ｱ逡ｪ蜿ｷ縺ｪ縺ｩ・・/label>
                     <input
                       type="text"
                       value={localAudioRecruitment.contactInfo}
@@ -1903,8 +1875,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                     className="w-full bg-blue-600 text-white py-4 rounded-xl font-black tracking-widest shadow-xl shadow-blue-100 hover:bg-blue-700 transition-all flex items-center justify-center gap-2"
                   >
                     <Save className="w-5 h-5" />
-                    オーディオ採用設定を保存
-                  </button>
+                    繧ｪ繝ｼ繝・ぅ繧ｪ謗｡逕ｨ險ｭ螳壹ｒ菫晏ｭ・                  </button>
                 </div>
               </div>
 
@@ -1913,21 +1884,20 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                 <div className="flex items-center justify-between mb-8">
                   <h3 className="text-xl font-black flex items-center gap-3">
                     <Wrench className="w-6 h-6 text-purple-600" />
-                    セキュリティー採用設定
-                  </h3>
+                    繧ｻ繧ｭ繝･繝ｪ繝・ぅ繝ｼ謗｡逕ｨ險ｭ螳・                  </h3>
                   <button
                     onClick={() => {
                       setLocalSecurityRecruitment({ ...localSecurityRecruitment, visible: !localSecurityRecruitment.visible });
                     }}
                     className={`px-4 py-2 rounded-xl font-black text-xs transition-all ${localSecurityRecruitment.visible ? 'bg-green-500 text-white shadow-lg shadow-green-200' : 'bg-gray-100 text-gray-400'}`}
                   >
-                    {localSecurityRecruitment.visible ? '表示中' : '非表示'}
+                    {localSecurityRecruitment.visible ? '陦ｨ遉ｺ荳ｭ' : '髱櫁｡ｨ遉ｺ'}
                   </button>
                 </div>
 
                 <div className="space-y-6">
                   <div>
-                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">求人タイトル</label>
+                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">豎ゆｺｺ繧ｿ繧､繝医Ν</label>
                     <input
                       type="text"
                       value={localSecurityRecruitment.title}
@@ -1936,7 +1906,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                     />
                   </div>
                   <div>
-                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">募集メッセージ</label>
+                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">蜍滄寔繝｡繝・そ繝ｼ繧ｸ</label>
                     <textarea
                       value={localSecurityRecruitment.message}
                       onChange={(e) => setLocalSecurityRecruitment({ ...localSecurityRecruitment, message: e.target.value })}
@@ -1946,7 +1916,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
 
                   <div className="p-4 bg-gray-50 rounded-2xl border border-gray-100 space-y-4">
                     <div className="flex items-center justify-between">
-                      <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest">募集要項</label>
+                      <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest">蜍滄寔隕・・/label>
                       <label className="flex items-center gap-2 cursor-pointer">
                         <input
                           type="checkbox"
@@ -1954,7 +1924,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                           onChange={(e) => setLocalSecurityRecruitment({ ...localSecurityRecruitment, showRequirements: e.target.checked })}
                           className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                         />
-                        <span className="text-[10px] font-black text-gray-600 uppercase tracking-widest">表示する</span>
+                        <span className="text-[10px] font-black text-gray-600 uppercase tracking-widest">陦ｨ遉ｺ縺吶ｋ</span>
                       </label>
                     </div>
                     <textarea
@@ -1962,13 +1932,13 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                       onChange={(e) => setLocalSecurityRecruitment({ ...localSecurityRecruitment, requirements: e.target.value.split('\n') })}
                       disabled={!localSecurityRecruitment.showRequirements}
                       className={`w-full px-4 py-3 bg-white border border-gray-200 rounded-xl font-bold text-gray-600 focus:border-blue-500 outline-none transition-all h-24 resize-none ${!localSecurityRecruitment.showRequirements ? 'opacity-50 grayscale' : ''}`}
-                      placeholder="例：車が好きな方&#10;経験者優優遇"
+                      placeholder="萓具ｼ夊ｻ翫′螂ｽ縺阪↑譁ｹ&#10;邨碁ｨ楢・━蜆ｪ驕・
                     />
                   </div>
 
                   <div className="p-4 bg-gray-50 rounded-2xl border border-gray-100 space-y-4">
                     <div className="flex items-center justify-between">
-                      <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest">給与・待遇</label>
+                      <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest">邨ｦ荳弱・蠕・∞</label>
                       <label className="flex items-center gap-2 cursor-pointer">
                         <input
                           type="checkbox"
@@ -1976,7 +1946,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                           onChange={(e) => setLocalSecurityRecruitment({ ...localSecurityRecruitment, showSalary: e.target.checked })}
                           className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                         />
-                        <span className="text-[10px] font-black text-gray-600 uppercase tracking-widest">表示する</span>
+                        <span className="text-[10px] font-black text-gray-600 uppercase tracking-widest">陦ｨ遉ｺ縺吶ｋ</span>
                       </label>
                     </div>
                     <input
@@ -1989,7 +1959,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">応募先（電話番号など）</label>
+                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">蠢懷供蜈茨ｼ磯崕隧ｱ逡ｪ蜿ｷ縺ｪ縺ｩ・・/label>
                     <input
                       type="text"
                       value={localSecurityRecruitment.contactInfo}
@@ -2003,8 +1973,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                     className="w-full bg-purple-600 text-white py-4 rounded-xl font-black tracking-widest shadow-xl shadow-purple-100 hover:bg-purple-700 transition-all flex items-center justify-center gap-2"
                   >
                     <Save className="w-5 h-5" />
-                    セキュリティー採用設定を保存
-                  </button>
+                    繧ｻ繧ｭ繝･繝ｪ繝・ぅ繝ｼ謗｡逕ｨ險ｭ螳壹ｒ菫晏ｭ・                  </button>
                 </div>
               </div>
             </div>
@@ -2012,11 +1981,11 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
         ) : activeTab === 'assets' ? (
           <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }}>
             <div className="bg-white rounded-3xl shadow-2xl border border-gray-200 p-8 max-w-3xl mx-auto">
-              <h3 className="text-xl font-black mb-8">サイトアセット管理</h3>
+              <h3 className="text-xl font-black mb-8">繧ｵ繧､繝医い繧ｻ繝・ヨ邂｡逅・/h3>
               <div className="space-y-8">
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
-                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">ロゴテキスト</label>
+                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">繝ｭ繧ｴ繝・く繧ｹ繝・/label>
                     <input
                       type="text"
                       value={localAssets.logoText}
@@ -2025,7 +1994,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                     />
                   </div>
                   <div>
-                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">ヒーロー画像（パス または URL）</label>
+                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">繝偵・繝ｭ繝ｼ逕ｻ蜒擾ｼ医ヱ繧ｹ 縺ｾ縺溘・ URL・・/label>
                     <input
                       type="text"
                       value={localAssets.heroImage}
@@ -2039,7 +2008,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
 
                 <div className="grid md:grid-cols-3 gap-6">
                   <div>
-                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">オーディオ画像</label>
+                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">繧ｪ繝ｼ繝・ぅ繧ｪ逕ｻ蜒・/label>
                     <input
                       type="text"
                       value={localAssets.audioMenuImage}
@@ -2048,7 +2017,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                     />
                   </div>
                   <div>
-                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">セキュリティー画像</label>
+                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">繧ｻ繧ｭ繝･繝ｪ繝・ぅ繝ｼ逕ｻ蜒・/label>
                     <input
                       type="text"
                       value={localAssets.securityMenuImage}
@@ -2057,7 +2026,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                     />
                   </div>
                   <div>
-                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">ドラレコ画像</label>
+                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">繝峨Λ繝ｬ繧ｳ逕ｻ蜒・/label>
                     <input
                       type="text"
                       value={localAssets.dashcamMenuImage}
@@ -2071,7 +2040,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">ショールーム画像</label>
+                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">繧ｷ繝ｧ繝ｼ繝ｫ繝ｼ繝逕ｻ蜒・/label>
                     <input
                       type="text"
                       value={localAssets.showroomImage}
@@ -2080,7 +2049,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                     />
                   </div>
                   <div>
-                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">ピット画像</label>
+                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">繝斐ャ繝育判蜒・/label>
                     <input
                       type="text"
                       value={localAssets.pitImage}
@@ -2089,7 +2058,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                     />
                   </div>
                   <div>
-                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">ワークスペース画像</label>
+                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">繝ｯ繝ｼ繧ｯ繧ｹ繝壹・繧ｹ逕ｻ蜒・/label>
                     <input
                       type="text"
                       value={localAssets.workspaceImage}
@@ -2098,7 +2067,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                     />
                   </div>
                   <div>
-                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">視聴室画像</label>
+                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">隕冶・螳､逕ｻ蜒・/label>
                     <input
                       type="text"
                       value={localAssets.auditionRoomImage}
@@ -2112,7 +2081,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">九州No.1画像</label>
+                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">荵晏ｷ朦o.1逕ｻ蜒・/label>
                     <input
                       type="text"
                       value={localAssets.kyushuNo1Image}
@@ -2121,7 +2090,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                     />
                   </div>
                   <div>
-                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">SPS認定店画像</label>
+                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">SPS隱榊ｮ壼ｺ礼判蜒・/label>
                     <input
                       type="text"
                       value={localAssets.spsCertifiedImage}
@@ -2130,7 +2099,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                     />
                   </div>
                   <div>
-                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">Snap-on画像</label>
+                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">Snap-on逕ｻ蜒・/label>
                     <input
                       type="text"
                       value={localAssets.snaponImage}
@@ -2139,7 +2108,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                     />
                   </div>
                   <div>
-                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">バッテリー充電器画像</label>
+                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">繝舌ャ繝・Μ繝ｼ蜈・崕蝎ｨ逕ｻ蜒・/label>
                     <input
                       type="text"
                       value={localAssets.batteryChargerImage}
@@ -2152,11 +2121,9 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                 <div className="bg-blue-50 rounded-2xl p-6 flex items-start gap-4">
                   <AlertCircle className="w-6 h-6 text-blue-600 shrink-0" />
                   <div>
-                    <h4 className="text-sm font-black text-blue-900 mb-1">プレビューについて</h4>
+                    <h4 className="text-sm font-black text-blue-900 mb-1">繝励Ξ繝薙Η繝ｼ縺ｫ縺､縺・※</h4>
                     <p className="text-xs text-blue-700 font-bold leading-relaxed">
-                      画像パスまたはURLを変更すると、保存後にサイト全体の画像が更新されます。
-                      外部サイトの画像（https://...）または、サイト内の画像（/images/...）を入力してください。
-                    </p>
+                      逕ｻ蜒上ヱ繧ｹ縺ｾ縺溘・URL繧貞､画峩縺吶ｋ縺ｨ縲∽ｿ晏ｭ伜ｾ後↓繧ｵ繧､繝亥・菴薙・逕ｻ蜒上′譖ｴ譁ｰ縺輔ｌ縺ｾ縺吶・                      螟夜Κ繧ｵ繧､繝医・逕ｻ蜒擾ｼ・ttps://...・峨∪縺溘・縲√し繧､繝亥・縺ｮ逕ｻ蜒擾ｼ・images/...・峨ｒ蜈･蜉帙＠縺ｦ縺上□縺輔＞縲・                    </p>
                   </div>
                 </div>
               </div>
@@ -2169,7 +2136,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
               <RefreshCw className="w-5 h-5 text-gray-500" />
               <input
                 type="text"
-                placeholder="コラム記事のタイトルで検索..."
+                placeholder="繧ｳ繝ｩ繝險倅ｺ九・繧ｿ繧､繝医Ν縺ｧ讀懃ｴ｢..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="bg-transparent border-none text-lg font-bold w-full focus:ring-0 placeholder:text-gray-600"
@@ -2190,7 +2157,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                   <tbody>
                     <tr className="bg-blue-50/50">
                       <td colSpan={4} className="px-6 py-3 text-xs font-black text-blue-600 uppercase tracking-widest border-b border-gray-200">
-                        知識ガイド・コラム一覧
+                        遏･隴倥ぎ繧､繝峨・繧ｳ繝ｩ繝荳隕ｧ
                       </td>
                     </tr>
                     {filteredGuides.map((guide) => (
@@ -2200,20 +2167,19 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                             type="text"
                             value={guide.badge || ""}
                             onChange={(e) => handleGuideChange(guide.id, 'badge', e.target.value)}
-                            placeholder="バッジ名"
+                            placeholder="繝舌ャ繧ｸ蜷・
                             className="w-full mb-3 px-3 py-1 bg-white border border-gray-200 rounded-lg text-[10px] text-gray-500 font-bold focus:border-blue-300 outline-none transition-all"
                           />
                           <button
                             onClick={() => setEditingText({
-                              title: `${guide.title} の説明文編集`,
+                              title: `${guide.title} 縺ｮ隱ｬ譏取枚邱ｨ髮・,
                               value: guide.description,
                               onSave: (val) => handleGuideChange(guide.id, 'description', val)
                             })}
                             className="w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded-xl font-bold text-[10px] text-blue-600 hover:bg-blue-50 transition-all flex items-center justify-center gap-2"
                           >
                             <Edit3 className="w-3 h-3" />
-                            テキストを編集
-                          </button>
+                            繝・く繧ｹ繝医ｒ邱ｨ髮・                          </button>
                         </td>
                         <td className="px-6 py-4 border-r border-gray-100 min-w-[300px]">
                           <input
@@ -2224,14 +2190,14 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                           />
                           <button
                             onClick={() => setEditingText({
-                              title: `${guide.title} の特徴リスト`,
+                              title: `${guide.title} 縺ｮ迚ｹ蠕ｴ繝ｪ繧ｹ繝・,
                               value: (guide.features || []).join('\n'),
                               onSave: (val) => handleGuideChange(guide.id, 'features', val.split('\n'))
                             })}
                             className="w-full px-4 py-2 bg-blue-50 border border-blue-100 rounded-xl font-bold text-[10px] text-blue-700 hover:bg-blue-100 transition-all flex items-center justify-center gap-2"
                           >
                             <LayoutGrid className="w-3 h-3" />
-                            特徴タグを編集 (改行)
+                            迚ｹ蠕ｴ繧ｿ繧ｰ繧堤ｷｨ髮・(謾ｹ陦・
                           </button>
                         </td>
                         <td className="px-6 py-4 border-r border-gray-100">
@@ -2239,7 +2205,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                             type="text"
                             value={guide.link || ""}
                             onChange={(e) => handleGuideChange(guide.id, 'link', e.target.value)}
-                            placeholder="外部リンク URL"
+                            placeholder="螟夜Κ繝ｪ繝ｳ繧ｯ URL"
                             className="w-full px-3 py-2 bg-white border border-gray-200 rounded-lg font-bold text-xs text-blue-600 focus:border-blue-500 outline-none transition-all"
                           />
                         </td>
@@ -2264,15 +2230,15 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
             <div className="bg-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden">
               <div className="p-8 border-b border-gray-100 flex items-center justify-between bg-blue-50/10">
                 <div>
-                  <h3 className="text-xl font-black">試聴可能スピーカー管理</h3>
-                  <p className="text-xs text-gray-400 font-bold mt-1">店内で試聴可能なスピーカーリストを編集します。</p>
+                  <h3 className="text-xl font-black">隧ｦ閨ｴ蜿ｯ閭ｽ繧ｹ繝斐・繧ｫ繝ｼ邂｡逅・/h3>
+                  <p className="text-xs text-gray-400 font-bold mt-1">蠎怜・縺ｧ隧ｦ閨ｴ蜿ｯ閭ｽ縺ｪ繧ｹ繝斐・繧ｫ繝ｼ繝ｪ繧ｹ繝医ｒ邱ｨ髮・＠縺ｾ縺吶・/p>
                 </div>
                 <button
                   onClick={handleAddSpeakerBrand}
                   className="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl font-black text-sm tracking-widest hover:bg-blue-700 transition-all shadow-lg shadow-blue-200"
                 >
                   <Plus className="w-4 h-4" />
-                  ブランド追加
+                  繝悶Λ繝ｳ繝芽ｿｽ蜉
                 </button>
               </div>
               <div className="p-8 space-y-12">
@@ -2287,7 +2253,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
 
                     <div className="grid md:grid-cols-2 gap-8 mb-8">
                       <div>
-                        <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">ブランド名</label>
+                        <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">繝悶Λ繝ｳ繝牙錐</label>
                         <input
                           type="text"
                           value={brand.brand}
@@ -2296,7 +2262,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                         />
                       </div>
                       <div>
-                        <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">国名</label>
+                        <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">蝗ｽ蜷・/label>
                         <input
                           type="text"
                           value={brand.origin}
@@ -2308,12 +2274,12 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
 
                     <div className="space-y-4">
                       <div className="flex items-center justify-between mb-2">
-                        <h4 className="text-sm font-black text-gray-400 uppercase tracking-widest">モデル・価格リスト</h4>
+                        <h4 className="text-sm font-black text-gray-400 uppercase tracking-widest">繝｢繝・Ν繝ｻ萓｡譬ｼ繝ｪ繧ｹ繝・/h4>
                         <button
                           onClick={() => handleAddSpeakerUnit(bIdx)}
                           className="text-[10px] font-black text-blue-600 hover:text-blue-700 flex items-center gap-1"
                         >
-                          <Plus className="w-3 h-3" /> モデル追加
+                          <Plus className="w-3 h-3" /> 繝｢繝・Ν霑ｽ蜉
                         </button>
                       </div>
 
@@ -2323,7 +2289,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                             <div className="flex-grow min-w-[200px]">
                               <input
                                 type="text"
-                                placeholder="モデル名"
+                                placeholder="繝｢繝・Ν蜷・
                                 value={unit.model}
                                 onChange={(e) => handleSpeakerChange(bIdx, uIdx, 'model', e.target.value)}
                                 className="w-full px-3 py-1 font-black text-sm text-gray-900 border-b border-transparent focus:border-blue-500 outline-none"
@@ -2332,7 +2298,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                             <div className="w-48">
                               <input
                                 type="text"
-                                placeholder="価格"
+                                placeholder="萓｡譬ｼ"
                                 value={unit.price || ""}
                                 onChange={(e) => handleSpeakerChange(bIdx, uIdx, 'price', e.target.value)}
                                 className="w-full px-3 py-1 font-black text-sm text-blue-600 border-b border-transparent focus:border-blue-500 outline-none"
@@ -2350,7 +2316,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                             <div className="w-48">
                               <input
                                 type="text"
-                                placeholder="画像URL"
+                                placeholder="逕ｻ蜒酋RL"
                                 value={unit.image || ""}
                                 onChange={(e) => handleSpeakerChange(bIdx, uIdx, 'image', e.target.value)}
                                 className="w-full px-3 py-1 font-bold text-xs text-blue-500 border-b border-transparent focus:border-blue-500 outline-none"
@@ -2369,10 +2335,10 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                                 onChange={(e) => handleSpeakerChange(bIdx, uIdx, 'status', e.target.value)}
                                 className="w-full px-2 py-1 font-bold text-xs text-gray-500 border-b border-transparent focus:border-blue-500 outline-none"
                               >
-                                <option value="Available">試聴可能</option>
-                                <option value="Demo Car">デモカー装着</option>
-                                <option value="Coming Soon">近日登場</option>
-                                <option value="Ordered">注文中</option>
+                                <option value="Available">隧ｦ閨ｴ蜿ｯ閭ｽ</option>
+                                <option value="Demo Car">繝・Δ繧ｫ繝ｼ陬・捩</option>
+                                <option value="Coming Soon">霑第律逋ｻ蝣ｴ</option>
+                                <option value="Ordered">豕ｨ譁・ｸｭ</option>
                               </select>
                             </div>
                             <button
@@ -2394,11 +2360,9 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
               <div className="flex items-start gap-4">
                 <Youtube className="w-8 h-8 text-red-500 shrink-0" />
                 <div>
-                  <h4 className="text-lg font-black mb-2">音源サンプルについて</h4>
+                  <h4 className="text-lg font-black mb-2">髻ｳ貅舌し繝ｳ繝励Ν縺ｫ縺､縺・※</h4>
                   <p className="text-xs text-gray-400 font-bold leading-relaxed">
-                    YouTube URLを入力すると、ユーザーが試聴リストから直接動画を確認できるようになります。
-                    URLは `https://www.youtube.com/watch?v=...` 形式で入力してください。
-                  </p>
+                    YouTube URL繧貞・蜉帙☆繧九→縲√Θ繝ｼ繧ｶ繝ｼ縺瑚ｩｦ閨ｴ繝ｪ繧ｹ繝医°繧臥峩謗･蜍慕判繧堤｢ｺ隱阪〒縺阪ｋ繧医≧縺ｫ縺ｪ繧翫∪縺吶・                    URL縺ｯ `https://www.youtube.com/watch?v=...` 蠖｢蠑上〒蜈･蜉帙＠縺ｦ縺上□縺輔＞縲・                  </p>
                 </div>
               </div>
             </div>
@@ -2414,8 +2378,8 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
             >
               <div className="flex items-center justify-between mb-8 shrink-0">
                 <div>
-                  <h3 className="text-2xl font-black tracking-tighter">{editingPackage.item.name} のパッケージ詳細設定</h3>
-                  <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mt-1">おトク情報やラインナップを編集してください</p>
+                  <h3 className="text-2xl font-black tracking-tighter">{editingPackage.item.name} 縺ｮ繝代ャ繧ｱ繝ｼ繧ｸ隧ｳ邏ｰ險ｭ螳・/h3>
+                  <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mt-1">縺翫ヨ繧ｯ諠・ｱ繧・Λ繧､繝ｳ繝翫ャ繝励ｒ邱ｨ髮・＠縺ｦ縺上□縺輔＞</p>
                 </div>
                 <button
                   onClick={() => setEditingPackage(null)}
@@ -2431,11 +2395,11 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                     <section>
                       <h4 className="text-sm font-black text-blue-600 uppercase tracking-widest mb-6 flex items-center gap-2">
                         <DollarSign className="w-4 h-4" />
-                        価格・おトク情報
+                        萓｡譬ｼ繝ｻ縺翫ヨ繧ｯ諠・ｱ
                       </h4>
                       <div className="grid grid-cols-2 gap-4 mb-6">
                         <div className="space-y-2">
-                          <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest">通常施工合計 (円)</label>
+                          <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest">騾壼ｸｸ譁ｽ蟾･蜷郁ｨ・(蜀・</label>
                           <input
                             type="text"
                             value={editingPackage.item.packageDetails?.standardPrice || ""}
@@ -2450,11 +2414,11 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                               }
                             })}
                             className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-black text-gray-900 focus:border-blue-500 outline-none transition-all"
-                            placeholder="例: 117700"
+                            placeholder="萓・ 117700"
                           />
                         </div>
                         <div className="space-y-2">
-                          <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest">おトク額 (円)</label>
+                          <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest">縺翫ヨ繧ｯ鬘・(蜀・</label>
                           <input
                             type="text"
                             value={editingPackage.item.packageDetails?.savings || ""}
@@ -2469,7 +2433,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                               }
                             })}
                             className="w-full px-4 py-3 bg-red-50 border border-red-100 rounded-xl font-black text-red-600 focus:border-red-500 outline-none transition-all"
-                            placeholder="例: 38950"
+                            placeholder="萓・ 38950"
                           />
                         </div>
                       </div>
@@ -2489,7 +2453,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                           className="w-5 h-5 rounded border-blue-200 text-blue-600 focus:ring-blue-500"
                         />
                         <label htmlFor="showSavings" className="text-sm font-black text-blue-900 cursor-pointer">
-                          「おトク！」バッジを表示する
+                          縲後♀繝医け・√阪ヰ繝・ず繧定｡ｨ遉ｺ縺吶ｋ
                         </label>
                       </div>
                     </section>
@@ -2498,7 +2462,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                       <div className="flex items-center justify-between mb-6">
                         <h4 className="text-sm font-black text-blue-600 uppercase tracking-widest flex items-center gap-2">
                           <LayoutGrid className="w-4 h-4" />
-                          パッケージ内容
+                          繝代ャ繧ｱ繝ｼ繧ｸ蜀・ｮｹ
                         </h4>
                         <button
                           onClick={() => {
@@ -2516,7 +2480,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                           }}
                           className="text-[10px] font-black text-blue-600 hover:text-blue-700 flex items-center gap-1"
                         >
-                          <Plus className="w-3 h-3" /> 内容を追加
+                          <Plus className="w-3 h-3" /> 蜀・ｮｹ繧定ｿｽ蜉
                         </button>
                       </div>
                       <div className="space-y-3">
@@ -2538,7 +2502,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                                   });
                                 }}
                                 className="w-full px-3 py-1 bg-white border border-gray-200 rounded-lg font-black text-xs text-gray-900 outline-none"
-                                placeholder="タイトル (例: スピーカー)"
+                                placeholder="繧ｿ繧､繝医Ν (萓・ 繧ｹ繝斐・繧ｫ繝ｼ)"
                               />
                               <input
                                 type="text"
@@ -2555,7 +2519,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                                   });
                                 }}
                                 className="w-full px-3 py-1 bg-white border border-gray-200 rounded-lg font-bold text-[10px] text-gray-500 outline-none"
-                                placeholder="説明 (例: 10万円までのユニット)"
+                                placeholder="隱ｬ譏・(萓・ 10荳・・縺ｾ縺ｧ縺ｮ繝ｦ繝九ャ繝・"
                               />
                               <select
                                 value={content.icon}
@@ -2603,7 +2567,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                       <div className="flex items-center justify-between mb-6">
                         <h4 className="text-sm font-black text-blue-600 uppercase tracking-widest flex items-center gap-2">
                           <TrendingUp className="w-4 h-4" />
-                          アップグレードオプション
+                          繧｢繝・・繧ｰ繝ｬ繝ｼ繝峨が繝励す繝ｧ繝ｳ
                         </h4>
                         <button
                           onClick={() => {
@@ -2621,7 +2585,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                           }}
                           className="text-[10px] font-black text-blue-600 hover:text-blue-700 flex items-center gap-1"
                         >
-                          <Plus className="w-3 h-3" /> オプションを追加
+                          <Plus className="w-3 h-3" /> 繧ｪ繝励す繝ｧ繝ｳ繧定ｿｽ蜉
                         </button>
                       </div>
                       <div className="space-y-3">
@@ -2644,7 +2608,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                                     });
                                   }}
                                   className="flex-[2] px-3 py-1 bg-gray-800 border border-gray-700 rounded-lg font-black text-xs text-white outline-none"
-                                  placeholder="オプション名"
+                                  placeholder="繧ｪ繝励す繝ｧ繝ｳ蜷・
                                 />
                                 <input
                                   type="text"
@@ -2661,7 +2625,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                                     });
                                   }}
                                   className="flex-1 px-3 py-1 bg-gray-800 border border-gray-700 rounded-lg font-black text-xs text-blue-400 outline-none"
-                                  placeholder="価格 (例: 11000)"
+                                  placeholder="萓｡譬ｼ (萓・ 11000)"
                                 />
                               </div>
                               <input
@@ -2679,7 +2643,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                                   });
                                 }}
                                 className="w-full px-3 py-1 bg-gray-800 border border-gray-700 rounded-lg font-bold text-[10px] text-gray-400 outline-none"
-                                placeholder="説明文"
+                                placeholder="隱ｬ譏取枚"
                               />
                             </div>
                             <button
@@ -2708,7 +2672,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                       <div className="flex items-center justify-between mb-6">
                         <h4 className="text-sm font-black text-blue-600 uppercase tracking-widest flex items-center gap-2">
                           <Play className="w-4 h-4" />
-                          ラインナップ & 試聴動画
+                          繝ｩ繧､繝ｳ繝翫ャ繝・& 隧ｦ閨ｴ蜍慕判
                         </h4>
                         <button
                           onClick={() => {
@@ -2720,7 +2684,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                           }}
                           className="text-[10px] font-black text-blue-600 hover:text-blue-700 flex items-center gap-1"
                         >
-                          <Plus className="w-3 h-3" /> ユニットを追加
+                          <Plus className="w-3 h-3" /> 繝ｦ繝九ャ繝医ｒ霑ｽ蜉
                         </button>
                       </div>
                       <div className="space-y-4">
@@ -2740,7 +2704,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                                     });
                                   }}
                                   className="flex-[2] px-3 py-2 bg-white border border-gray-200 rounded-xl font-black text-xs text-gray-900 outline-none"
-                                  placeholder="ブランド/モデル名"
+                                  placeholder="繝悶Λ繝ｳ繝・繝｢繝・Ν蜷・
                                 />
                                 <input
                                   type="text"
@@ -2754,7 +2718,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                                     });
                                   }}
                                   className="flex-1 px-3 py-2 bg-white border border-gray-200 rounded-xl font-black text-xs text-blue-600 outline-none"
-                                  placeholder="価格"
+                                  placeholder="萓｡譬ｼ"
                                 />
                               </div>
                               <div className="grid grid-cols-2 gap-2">
@@ -2770,7 +2734,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                                     });
                                   }}
                                   className="px-3 py-2 bg-white border border-gray-200 rounded-xl font-bold text-[10px] text-gray-500 outline-none"
-                                  placeholder="画像パス/URL"
+                                  placeholder="逕ｻ蜒上ヱ繧ｹ/URL"
                                 />
                                 <input
                                   type="text"
@@ -2798,7 +2762,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                                   });
                                 }}
                                 className="w-full px-3 py-2 bg-white border border-gray-200 rounded-xl font-bold text-[10px] text-gray-500 outline-none resize-none h-16"
-                                placeholder="ユニットの説明文を入力..."
+                                placeholder="繝ｦ繝九ャ繝医・隱ｬ譏取枚繧貞・蜉・.."
                               />
                             </div>
                             <button
@@ -2822,7 +2786,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                       <div className="flex items-center justify-between mb-6">
                         <h4 className="text-sm font-black text-blue-600 uppercase tracking-widest flex items-center gap-2">
                           <ImageIcon className="w-4 h-4" />
-                          施工ギャラリー
+                          譁ｽ蟾･繧ｮ繝｣繝ｩ繝ｪ繝ｼ
                         </h4>
                         <button
                           onClick={() => {
@@ -2834,7 +2798,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                           }}
                           className="text-[10px] font-black text-blue-600 hover:text-blue-700 flex items-center gap-1"
                         >
-                          <Plus className="w-3 h-3" /> ギャラリー項目を追加
+                          <Plus className="w-3 h-3" /> 繧ｮ繝｣繝ｩ繝ｪ繝ｼ鬆・岼繧定ｿｽ蜉
                         </button>
                       </div>
                       <div className="space-y-6">
@@ -2853,7 +2817,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                                   });
                                 }}
                                 className="flex-grow px-4 py-2 bg-white border border-gray-200 rounded-xl font-black text-xs text-gray-900 outline-none"
-                                placeholder="ギャラリータイトル (例: フォレスター：ルーフ施工)"
+                                placeholder="繧ｮ繝｣繝ｩ繝ｪ繝ｼ繧ｿ繧､繝医Ν (萓・ 繝輔か繝ｬ繧ｹ繧ｿ繝ｼ・壹Ν繝ｼ繝墓命蟾･)"
                               />
                               <button
                                 onClick={() => {
@@ -2871,7 +2835,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
 
                             <div className="space-y-2">
                               <div className="flex items-center justify-between">
-                                <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest">画像URLリスト</label>
+                                <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest">逕ｻ蜒酋RL繝ｪ繧ｹ繝・/label>
                                 <button
                                   onClick={() => {
                                     const newGallery = [...(editingPackage.item.gallery || [])];
@@ -2883,7 +2847,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                                   }}
                                   className="text-[10px] font-black text-blue-600 hover:text-blue-700 flex items-center gap-1"
                                 >
-                                  <Plus className="w-3 h-3" /> 画像を追加
+                                  <Plus className="w-3 h-3" /> 逕ｻ蜒上ｒ霑ｽ蜉
                                 </button>
                               </div>
                               <div className="grid grid-cols-1 gap-2">
@@ -2903,7 +2867,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                                         });
                                       }}
                                       className="flex-grow px-3 py-2 bg-white border border-gray-200 rounded-xl font-bold text-[10px] text-gray-500 outline-none"
-                                      placeholder="画像パス/URL"
+                                      placeholder="逕ｻ蜒上ヱ繧ｹ/URL"
                                     />
                                     <button
                                       onClick={() => {
@@ -2932,7 +2896,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                       <div className="flex items-center justify-between mb-6">
                         <h4 className="text-sm font-black text-gray-400 uppercase tracking-widest flex items-center gap-2">
                           <Info className="w-4 h-4" />
-                          注意事項・条件
+                          豕ｨ諢丈ｺ矩・・譚｡莉ｶ
                         </h4>
                         <button
                           onClick={() => {
@@ -2950,7 +2914,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                           }}
                           className="text-[10px] font-black text-gray-400 hover:text-gray-600 flex items-center gap-1"
                         >
-                          <Plus className="w-3 h-3" /> 注意事項を追加
+                          <Plus className="w-3 h-3" /> 豕ｨ諢丈ｺ矩・ｒ霑ｽ蜉
                         </button>
                       </div>
                       <div className="space-y-2">
@@ -2971,7 +2935,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                                 });
                               }}
                               className="flex-grow px-4 py-2 bg-gray-50 border border-gray-200 rounded-xl font-bold text-xs text-gray-600 outline-none"
-                              placeholder="注意事項を入力..."
+                              placeholder="豕ｨ諢丈ｺ矩・ｒ蜈･蜉・.."
                             />
                             <button
                               onClick={() => {
@@ -3001,7 +2965,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                   onClick={() => setEditingPackage(null)}
                   className="flex-1 py-5 rounded-2xl font-black text-gray-400 hover:bg-gray-50 transition-all tracking-widest"
                 >
-                  キャンセル
+                  繧ｭ繝｣繝ｳ繧ｻ繝ｫ
                 </button>
                 <button
                   onClick={() => {
@@ -3014,8 +2978,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                   className="flex-[2] bg-blue-600 text-white py-5 rounded-2xl font-black tracking-widest shadow-xl shadow-blue-200 hover:bg-blue-700 transition-all flex items-center justify-center gap-3"
                 >
                   <Save className="w-5 h-5" />
-                  パッケージ設定を保存
-                </button>
+                  繝代ャ繧ｱ繝ｼ繧ｸ險ｭ螳壹ｒ菫晏ｭ・                </button>
               </div>
             </motion.div>
           </div>
@@ -3033,7 +2996,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
               <div className="flex items-center justify-between mb-8">
                 <div>
                   <h3 className="text-2xl font-black tracking-tighter">{editingText.title}</h3>
-                  <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mt-1">詳細情報を編集してください</p>
+                  <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mt-1">隧ｳ邏ｰ諠・ｱ繧堤ｷｨ髮・＠縺ｦ縺上□縺輔＞</p>
                 </div>
                 <button
                   onClick={() => setEditingText(null)}
@@ -3049,7 +3012,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                   value={editingText.value}
                   onChange={(e) => setEditingText({ ...editingText, value: e.target.value })}
                   className="w-full h-full min-h-[400px] p-8 bg-gray-50 border-2 border-gray-100 rounded-3xl font-bold text-xl text-gray-700 focus:border-blue-500 focus:bg-white outline-none transition-all resize-none leading-relaxed"
-                  placeholder="ここに詳細を入力してください..."
+                  placeholder="縺薙％縺ｫ隧ｳ邏ｰ繧貞・蜉帙＠縺ｦ縺上□縺輔＞..."
                 />
               </div>
 
@@ -3058,7 +3021,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                   onClick={() => setEditingText(null)}
                   className="flex-1 py-5 rounded-2xl font-black text-gray-400 hover:bg-gray-50 transition-all tracking-widest"
                 >
-                  キャンセル
+                  繧ｭ繝｣繝ｳ繧ｻ繝ｫ
                 </button>
                 <button
                   onClick={() => {
@@ -3068,15 +3031,14 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                   className="flex-[2] bg-blue-600 text-white py-5 rounded-2xl font-black tracking-widest shadow-xl shadow-blue-200 hover:bg-blue-700 transition-all flex items-center justify-center gap-3"
                 >
                   <Save className="w-5 h-5" />
-                  内容を保存する
-                </button>
+                  蜀・ｮｹ繧剃ｿ晏ｭ倥☆繧・                </button>
               </div>
             </motion.div>
           </div>
         )}
       </div>
 
-      {/* ── SYSTEM TAB: Cache Management ── */}
+      {/* 笏笏 SYSTEM TAB: Cache Management 笏笏 */}
       {activeTab === 'system' && (() => {
         const currentVersion = String((cmsData as any).cacheVersion || '1');
         const nextVersion = String(parseInt(currentVersion, 10) + 1);
@@ -3095,28 +3057,28 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
         return (
           <div className="max-w-2xl mx-auto px-4 py-12 space-y-6">
             <div className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
-              <h2 className="text-xl font-black text-gray-800 tracking-wider mb-1">キャッシュ管理</h2>
-              <p className="text-xs text-gray-400 mb-6">ユーザーの古いキャッシュを強制クリアします</p>
+              <h2 className="text-xl font-black text-gray-800 tracking-wider mb-1">繧ｭ繝｣繝・す繝･邂｡逅・/h2>
+              <p className="text-xs text-gray-400 mb-6">繝ｦ繝ｼ繧ｶ繝ｼ縺ｮ蜿､縺・く繝｣繝・す繝･繧貞ｼｷ蛻ｶ繧ｯ繝ｪ繧｢縺励∪縺・/p>
 
               <div className="bg-gray-50 rounded-2xl p-5 mb-6 flex items-center justify-between">
                 <div>
-                  <div className="text-xs text-gray-400 mb-1">現在のバージョン</div>
+                  <div className="text-xs text-gray-400 mb-1">迴ｾ蝨ｨ縺ｮ繝舌・繧ｸ繝ｧ繝ｳ</div>
                   <div className="text-3xl font-black text-gray-800 font-mono">v{currentVersion}</div>
                 </div>
-                <div className="text-gray-300 text-2xl">→</div>
+                <div className="text-gray-300 text-2xl">竊・/div>
                 <div>
-                  <div className="text-xs text-orange-400 mb-1">更新後のバージョン</div>
+                  <div className="text-xs text-orange-400 mb-1">譖ｴ譁ｰ蠕後・繝舌・繧ｸ繝ｧ繝ｳ</div>
                   <div className="text-3xl font-black text-orange-500 font-mono">v{nextVersion}</div>
                 </div>
               </div>
 
               <div className="bg-orange-50 border border-orange-100 rounded-2xl p-4 mb-6 text-sm text-orange-700 leading-relaxed">
-                <p className="font-bold mb-2">⚠️ 操作の流れ</p>
+                <p className="font-bold mb-2">笞・・謫堺ｽ懊・豬√ｌ</p>
                 <ol className="list-decimal list-inside space-y-1 text-xs regular">
-                  <li>下の「cms.json をダウンロード」ボタンをクリック</li>
-                  <li>ダウンロードされたファイルで <code className="bg-orange-100 px-1 rounded">src/data/cms.json</code> を上書き</li>
-                  <li>Git に push → Vercel が自動デプロイ</li>
-                  <li>全ユーザーの古いキャッシュが次回アクセス時に自動削除されます</li>
+                  <li>荳九・縲慶ms.json 繧偵ム繧ｦ繝ｳ繝ｭ繝ｼ繝峨阪・繧ｿ繝ｳ繧偵け繝ｪ繝・け</li>
+                  <li>繝繧ｦ繝ｳ繝ｭ繝ｼ繝峨＆繧後◆繝輔ぃ繧､繝ｫ縺ｧ <code className="bg-orange-100 px-1 rounded">src/data/cms.json</code> 繧剃ｸ頑嶌縺・/li>
+                  <li>Git 縺ｫ push 竊・Vercel 縺瑚・蜍輔ョ繝励Ο繧､</li>
+                  <li>蜈ｨ繝ｦ繝ｼ繧ｶ繝ｼ縺ｮ蜿､縺・く繝｣繝・す繝･縺梧ｬ｡蝗槭い繧ｯ繧ｻ繧ｹ譎ゅ↓閾ｪ蜍募炎髯､縺輔ｌ縺ｾ縺・/li>
                 </ol>
               </div>
 
@@ -3125,8 +3087,7 @@ export const StaffDashboard: React.FC<StaffDashboardProps> = ({ onBack }) => {
                 className="w-full bg-orange-500 hover:bg-orange-600 text-white py-4 rounded-2xl font-black tracking-widest transition-all flex items-center justify-center gap-3 shadow-lg shadow-orange-200"
               >
                 <RefreshCw className="w-5 h-5" />
-                cms.json をダウンロード（v{currentVersion} → v{nextVersion}）
-              </button>
+                cms.json 繧偵ム繧ｦ繝ｳ繝ｭ繝ｼ繝会ｼ・{currentVersion} 竊・v{nextVersion}・・              </button>
             </div>
           </div>
         );

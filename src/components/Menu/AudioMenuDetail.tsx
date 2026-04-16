@@ -1,4 +1,4 @@
-// Sync Marker: 2026-04-13-0755
+﻿// Sync Marker: 2026-04-13-0755
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useParams } from 'react-router-dom';
@@ -81,24 +81,24 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
 
   const categorySubTabs: Record<string, { id: string; label: string; en: string; info: string }[]> = {
     speaker_package: [
-      { id: 'level', label: 'スピーカー交換プラン', en: 'Standard Packages', info: 'ご予算や音質レベルから選べる標準パッケージ' },
-      { id: 'car', label: '車種別プラン', en: 'Car-Specific', info: '軽自動車や欧州車など、特定車種に最適化されたプラン' }
+      { id: 'level', label: '繧ｹ繝斐・繧ｫ繝ｼ莠､謠帙・繝ｩ繝ｳ', en: 'Standard Packages', info: '縺比ｺ育ｮ励ｄ髻ｳ雉ｪ繝ｬ繝吶Ν縺九ｉ驕ｸ縺ｹ繧区ｨ呎ｺ悶ヱ繝・こ繝ｼ繧ｸ' },
+      { id: 'car', label: '霆顔ｨｮ蛻･繝励Λ繝ｳ', en: 'Car-Specific', info: '霆ｽ閾ｪ蜍戊ｻ翫ｄ谺ｧ蟾櫁ｻ翫↑縺ｩ縲∫音螳夊ｻ顔ｨｮ縺ｫ譛驕ｩ蛹悶＆繧後◆繝励Λ繝ｳ' }
     ],
     bass_power: [
-      { id: 'amp', label: 'アンプ・パッケージ', en: 'Amp Package', info: '音の解像度と駆動力を高める外部アンプの導入' },
-      { id: 'subwoofer', label: 'サブウーハー', en: 'Subwoofer', info: '音楽に魂を吹き込む重低音の追加' }
+      { id: 'amp', label: '繧｢繝ｳ繝励・繝代ャ繧ｱ繝ｼ繧ｸ', en: 'Amp Package', info: '髻ｳ縺ｮ隗｣蜒丞ｺｦ縺ｨ鬧・虚蜉帙ｒ鬮倥ａ繧句､夜Κ繧｢繝ｳ繝励・蟆主・' },
+      { id: 'subwoofer', label: '繧ｵ繝悶え繝ｼ繝上・', en: 'Subwoofer', info: '髻ｳ讌ｽ縺ｫ鬲ゅｒ蜷ｹ縺崎ｾｼ繧驥堺ｽ朱浹縺ｮ霑ｽ蜉' }
     ],
     digital_source: [
-      { id: 'dsp', label: 'DSPプロセッサー', en: 'DSP Processor', info: '純正システムを活かした緻密な音響調整' },
-      { id: 'media', label: 'プレーヤー・ナビ', en: 'Media & Navi', info: '高鮮度な再生を実現するメディアプレーヤーとナビ' }
+      { id: 'dsp', label: 'DSP繝励Ο繧ｻ繝・し繝ｼ', en: 'DSP Processor', info: '邏疲ｭ｣繧ｷ繧ｹ繝・Β繧呈ｴｻ縺九＠縺溽ｷｻ蟇・↑髻ｳ髻ｿ隱ｿ謨ｴ' },
+      { id: 'media', label: '繝励Ξ繝ｼ繝､繝ｼ繝ｻ繝翫ン', en: 'Media & Navi', info: '鬮倬ｮｮ蠎ｦ縺ｪ蜀咲函繧貞ｮ溽樟縺吶ｋ繝｡繝・ぅ繧｢繝励Ξ繝ｼ繝､繝ｼ縺ｨ繝翫ン' }
     ],
     install_tuning: [
-      { id: 'tuning', label: 'デッドニング', en: 'Deadening', info: 'スピーカー本来の性能を引き出す環境整備' },
-      { id: 'power', label: '電源・静音化', en: 'Environment', info: 'ノイズ低減と安定した電力供給による音質向上' }
+      { id: 'tuning', label: '繝・ャ繝峨ル繝ｳ繧ｰ', en: 'Deadening', info: '繧ｹ繝斐・繧ｫ繝ｼ譛ｬ譚･縺ｮ諤ｧ閭ｽ繧貞ｼ輔″蜃ｺ縺咏腸蠅・紛蛯・ },
+      { id: 'power', label: '髮ｻ貅舌・髱咎浹蛹・, en: 'Environment', info: '繝弱う繧ｺ菴取ｸ帙→螳牙ｮ壹＠縺滄崕蜉帑ｾ帷ｵｦ縺ｫ繧医ｋ髻ｳ雉ｪ蜷台ｸ・ }
     ],
     custom_install: [
-      { id: 'craft', label: 'カスタム造形', en: 'Craftsmanship', info: 'ピラー埋め込みやバッフル製作などの匠の技' },
-      { id: 'oneoff', label: 'ワンオフ製作', en: 'One-off Build', info: 'トランク制作など、世界に一台のカスタム' }
+      { id: 'craft', label: '繧ｫ繧ｹ繧ｿ繝騾蠖｢', en: 'Craftsmanship', info: '繝斐Λ繝ｼ蝓九ａ霎ｼ縺ｿ繧・ヰ繝・ヵ繝ｫ陬ｽ菴懊↑縺ｩ縺ｮ蛹縺ｮ謚' },
+      { id: 'oneoff', label: '繝ｯ繝ｳ繧ｪ繝戊｣ｽ菴・, en: 'One-off Build', info: '繝医Λ繝ｳ繧ｯ蛻ｶ菴懊↑縺ｩ縲∽ｸ也阜縺ｫ荳蜿ｰ縺ｮ繧ｫ繧ｹ繧ｿ繝' }
     ]
   };
 
@@ -130,130 +130,130 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
 
   const categoryExplanations: Record<string, any> = {
     speaker_package: {
-      title: "スピーカー交換・車種別プラン",
-      subtitle: "**音を良くする第一歩**、愛車に**ピッタリ**の音を…",
-      description: "加工を最小限に抑えつつ、劇的な音質向上を実現する**車種別プラン**と、国内外のスピーカーから選べる**交換パッケージ**を統合。",
-      sampleDescription: "【施工例】BMW専用スピーカー交換：内装の意匠を一切変えることなく、中高域の解像度を大幅に向上。専用設計のため、車両へのダメージも最小限に抑えられます。",
+      title: "繧ｹ繝斐・繧ｫ繝ｼ莠､謠帙・霆顔ｨｮ蛻･繝励Λ繝ｳ",
+      subtitle: "**髻ｳ繧定憶縺上☆繧狗ｬｬ荳豁ｩ**縲∵・霆翫↓**繝斐ャ繧ｿ繝ｪ**縺ｮ髻ｳ繧停ｦ",
+      description: "蜉蟾･繧呈怙蟆城剞縺ｫ謚代∴縺､縺､縲∝括逧・↑髻ｳ雉ｪ蜷台ｸ翫ｒ螳溽樟縺吶ｋ**霆顔ｨｮ蛻･繝励Λ繝ｳ**縺ｨ縲∝嵜蜀・､悶・繧ｹ繝斐・繧ｫ繝ｼ縺九ｉ驕ｸ縺ｹ繧・*莠､謠帙ヱ繝・こ繝ｼ繧ｸ**繧堤ｵｱ蜷医・,
+      sampleDescription: "縲先命蟾･萓九腺MW蟆ら畑繧ｹ繝斐・繧ｫ繝ｼ莠､謠幢ｼ壼・陬・・諢丞権繧剃ｸ蛻・､峨∴繧九％縺ｨ縺ｪ縺上∽ｸｭ鬮伜沺縺ｮ隗｣蜒丞ｺｦ繧貞､ｧ蟷・↓蜷台ｸ翫ょｰら畑險ｭ險医・縺溘ａ縲∬ｻ贋ｸ｡縺ｸ縺ｮ繝繝｡繝ｼ繧ｸ繧よ怙蟆城剞縺ｫ謚代∴繧峨ｌ縺ｾ縺吶・,
       benefits: [
-        "車両の配線加工が不要な安心のインストール",
-        "内装の雰囲気を一切壊さない純正ルックな仕上がり",
-        "国内外のブランドからお好みの音を選択可能"
+        "霆贋ｸ｡縺ｮ驟咲ｷ壼刈蟾･縺御ｸ崎ｦ√↑螳牙ｿ・・繧､繝ｳ繧ｹ繝医・繝ｫ",
+        "蜀・｣・・髮ｰ蝗ｲ豌励ｒ荳蛻・｣翫＆縺ｪ縺・ｴ疲ｭ｣繝ｫ繝・け縺ｪ莉穂ｸ翫′繧・,
+        "蝗ｽ蜀・､悶・繝悶Λ繝ｳ繝峨°繧峨♀螂ｽ縺ｿ縺ｮ髻ｳ繧帝∈謚槫庄閭ｽ"
       ],
       image: assets.audioMenuImage,
       icon: Speaker,
       color: "blue",
       upgrades: [
-        { title: "高剛性バッフルへ変更", price: "+¥11,000〜", icon: Shield, description: "スピーカーの土台を強化し、不要な共振を排除。低音のレスポンスが向上します。" },
-        { title: "ツィーター埋め込み加工", price: "+¥33,000〜", icon: Settings2, description: "Aピラー等に最適な角度で設置。理想的なステージングを実現します。" }
+        { title: "鬮伜央諤ｧ繝舌ャ繝輔Ν縺ｸ螟画峩", price: "+ﾂ･11,000縲・, icon: Shield, description: "繧ｹ繝斐・繧ｫ繝ｼ縺ｮ蝨溷床繧貞ｼｷ蛹悶＠縲∽ｸ崎ｦ√↑蜈ｱ謖ｯ繧呈賜髯､縲ゆｽ朱浹縺ｮ繝ｬ繧ｹ繝昴Φ繧ｹ縺悟髄荳翫＠縺ｾ縺吶・ },
+        { title: "繝・ぅ繝ｼ繧ｿ繝ｼ蝓九ａ霎ｼ縺ｿ蜉蟾･", price: "+ﾂ･33,000縲・, icon: Settings2, description: "A繝斐Λ繝ｼ遲峨↓譛驕ｩ縺ｪ隗貞ｺｦ縺ｧ險ｭ鄂ｮ縲ら炊諠ｳ逧・↑繧ｹ繝・・繧ｸ繝ｳ繧ｰ繧貞ｮ溽樟縺励∪縺吶・ }
       ]
     },
     bass_power: {
-      title: "低音強化・パワーアップ",
-      subtitle: "**低音の躍動感**と、音全体の**鮮明さ・パワー**を…",
-      description: "**サブウーファー**による重低音の追加と、**外部アンプ**による強力なスピーカー駆動を統合。音楽の表現力を別次元へ引き上げます。",
-      sampleDescription: "【施工例】パワードサブウーファー＋小型アンプ設置：スペースを犠牲にすることなく、不足していた低音の厚みを補完し、解像度を劇的に向上させます。",
+      title: "菴朱浹蠑ｷ蛹悶・繝代Ρ繝ｼ繧｢繝・・",
+      subtitle: "**菴朱浹縺ｮ霄榊虚諢・*縺ｨ縲・浹蜈ｨ菴薙・**魄ｮ譏弱＆繝ｻ繝代Ρ繝ｼ**繧停ｦ",
+      description: "**繧ｵ繝悶え繝ｼ繝輔ぃ繝ｼ**縺ｫ繧医ｋ驥堺ｽ朱浹縺ｮ霑ｽ蜉縺ｨ縲・*螟夜Κ繧｢繝ｳ繝・*縺ｫ繧医ｋ蠑ｷ蜉帙↑繧ｹ繝斐・繧ｫ繝ｼ鬧・虚繧堤ｵｱ蜷医る浹讌ｽ縺ｮ陦ｨ迴ｾ蜉帙ｒ蛻･谺｡蜈・∈蠑輔″荳翫￡縺ｾ縺吶・,
+      sampleDescription: "縲先命蟾･萓九代ヱ繝ｯ繝ｼ繝峨し繝悶え繝ｼ繝輔ぃ繝ｼ・句ｰ丞梛繧｢繝ｳ繝苓ｨｭ鄂ｮ・壹せ繝壹・繧ｹ繧堤刈迚ｲ縺ｫ縺吶ｋ縺薙→縺ｪ縺上∽ｸ崎ｶｳ縺励※縺・◆菴朱浹縺ｮ蜴壹∩繧定｣懷ｮ後＠縲∬ｧ｣蜒丞ｺｦ繧貞括逧・↓蜷台ｸ翫＆縺帙∪縺吶・,
       benefits: [
-        "音楽全体の厚みと躍動感の向上",
-        "アンプによる歪みのないクリアな再生",
-        "ライブ会場のような空気感の再現"
+        "髻ｳ讌ｽ蜈ｨ菴薙・蜴壹∩縺ｨ霄榊虚諢溘・蜷台ｸ・,
+        "繧｢繝ｳ繝励↓繧医ｋ豁ｪ縺ｿ縺ｮ縺ｪ縺・け繝ｪ繧｢縺ｪ蜀咲函",
+        "繝ｩ繧､繝紋ｼ壼ｴ縺ｮ繧医≧縺ｪ遨ｺ豌玲─縺ｮ蜀咲樟"
       ],
       image: assets.audioMenuImage,
       icon: Music,
       color: "indigo",
       upgrades: [
-        { title: "ボックスタイプへ変更", price: "+¥44,000〜", icon: Music, description: "より大口径のユニットと容量の大きなボックスで、圧倒的な重低音を実現。" },
-        { title: "トランク埋め込み加工", price: "+¥88,000〜", icon: Settings2, description: "車両の形状に合わせてカスタム製作。荷室を有効活用しながら高音質を両立。" }
+        { title: "繝懊ャ繧ｯ繧ｹ繧ｿ繧､繝励∈螟画峩", price: "+ﾂ･44,000縲・, icon: Music, description: "繧医ｊ螟ｧ蜿｣蠕・・繝ｦ繝九ャ繝医→螳ｹ驥上・螟ｧ縺阪↑繝懊ャ繧ｯ繧ｹ縺ｧ縲∝悸蛟堤噪縺ｪ驥堺ｽ朱浹繧貞ｮ溽樟縲・ },
+        { title: "繝医Λ繝ｳ繧ｯ蝓九ａ霎ｼ縺ｿ蜉蟾･", price: "+ﾂ･88,000縲・, icon: Settings2, description: "霆贋ｸ｡縺ｮ蠖｢迥ｶ縺ｫ蜷医ｏ縺帙※繧ｫ繧ｹ繧ｿ繝陬ｽ菴懊り差螳､繧呈怏蜉ｹ豢ｻ逕ｨ縺励↑縺後ｉ鬮倬浹雉ｪ繧剃ｸ｡遶九・ }
       ]
     },
     digital_source: {
-      title: "デジタル・音質制御",
-      subtitle: "純正システムを活かし、**究極の定位**と**高鮮度再生**を…",
-      description: "**DSP（プロセッサー）**、**高音質ナビ**、**メディアプレーヤー**を統合。純正システムの制限を解除し、アーティストが目の前に浮かび上がる感動を創ります。",
-      sampleDescription: "【施工例】DSP＋メディアプレーヤー導入：純正ナビを活かしたまま、スマホやDAPからのデジタル高鮮度再生を実現。完璧な音像定位と圧倒的な解像度を両立します。",
+      title: "繝・ず繧ｿ繝ｫ繝ｻ髻ｳ雉ｪ蛻ｶ蠕｡",
+      subtitle: "邏疲ｭ｣繧ｷ繧ｹ繝・Β繧呈ｴｻ縺九＠縲・*遨ｶ讌ｵ縺ｮ螳壻ｽ・*縺ｨ**鬮倬ｮｮ蠎ｦ蜀咲函**繧停ｦ",
+      description: "**DSP・医・繝ｭ繧ｻ繝・し繝ｼ・・*縲・*鬮倬浹雉ｪ繝翫ン**縲・*繝｡繝・ぅ繧｢繝励Ξ繝ｼ繝､繝ｼ**繧堤ｵｱ蜷医らｴ疲ｭ｣繧ｷ繧ｹ繝・Β縺ｮ蛻ｶ髯舌ｒ隗｣髯､縺励√い繝ｼ繝・ぅ繧ｹ繝医′逶ｮ縺ｮ蜑阪↓豬ｮ縺九・荳翫′繧区─蜍輔ｒ蜑ｵ繧翫∪縺吶・,
+      sampleDescription: "縲先命蟾･萓九船SP・九Γ繝・ぅ繧｢繝励Ξ繝ｼ繝､繝ｼ蟆主・・夂ｴ疲ｭ｣繝翫ン繧呈ｴｻ縺九＠縺溘∪縺ｾ縲√せ繝槭・繧ДAP縺九ｉ縺ｮ繝・ず繧ｿ繝ｫ鬮倬ｮｮ蠎ｦ蜀咲函繧貞ｮ溽樟縲ょｮ檎挑縺ｪ髻ｳ蜒丞ｮ壻ｽ阪→蝨ｧ蛟堤噪縺ｪ隗｣蜒丞ｺｦ繧剃ｸ｡遶九＠縺ｾ縺吶・,
       benefits: [
-        "ダッシュボード中央に定位する正確な音像",
-        "ハイレゾ音源のポテンシャルを100%引き出すデジタル接続",
-        "純正ナビやDAの音質制限を無視できる高音質ソース"
+        "繝繝・す繝･繝懊・繝我ｸｭ螟ｮ縺ｫ螳壻ｽ阪☆繧区ｭ｣遒ｺ縺ｪ髻ｳ蜒・,
+        "繝上う繝ｬ繧ｾ髻ｳ貅舌・繝昴ユ繝ｳ繧ｷ繝｣繝ｫ繧・00%蠑輔″蜃ｺ縺吶ョ繧ｸ繧ｿ繝ｫ謗･邯・,
+        "邏疲ｭ｣繝翫ン繧ДA縺ｮ髻ｳ雉ｪ蛻ｶ髯舌ｒ辟｡隕悶〒縺阪ｋ鬮倬浹雉ｪ繧ｽ繝ｼ繧ｹ"
       ],
       image: assets.audioMenuImage,
       icon: Zap,
       color: "purple",
       upgrades: [
-        { title: "高精度外部クロック", price: "¥44,000〜", icon: Activity, description: "音の滲みを極限まで排除し、より深いリアリティを実現。" },
-        { title: "大容量SSD換装", price: "¥22,000〜", icon: Layers, description: "巨大なライブラリーを車載。全コレクションを常に携帯。" }
+        { title: "鬮倡ｲｾ蠎ｦ螟夜Κ繧ｯ繝ｭ繝・け", price: "ﾂ･44,000縲・, icon: Activity, description: "髻ｳ縺ｮ貊ｲ縺ｿ繧呈･ｵ髯舌∪縺ｧ謗帝勁縺励√ｈ繧頑ｷｱ縺・Μ繧｢繝ｪ繝・ぅ繧貞ｮ溽樟縲・ },
+        { title: "螟ｧ螳ｹ驥輯SD謠幄｣・, price: "ﾂ･22,000縲・, icon: Layers, description: "蟾ｨ螟ｧ縺ｪ繝ｩ繧､繝悶Λ繝ｪ繝ｼ繧定ｻ願ｼ峨ょ・繧ｳ繝ｬ繧ｯ繧ｷ繝ｧ繝ｳ繧貞ｸｸ縺ｫ謳ｺ蟶ｯ縲・ }
       ]
     },
     install_tuning: {
-      title: "施工・環境チューニング",
-      subtitle: "機材の性能を**120%**引き出し、**快適な車内空間**を…",
-      description: "**デッドニング**や**電源強化**、物理的な環境改善を統合。ロードノイズを抑え、オーディオ機材の真価を発揮させるための必須施工です。",
-      sampleDescription: "【施工例】フルデッドニング＋バッ直配線：ロードノイズを大幅に低減し、静寂の中に音楽が浮かび上がる環境を構築。電源強化により音の立ち上がりも激変します。",
+      title: "譁ｽ蟾･繝ｻ迺ｰ蠅・メ繝･繝ｼ繝九Φ繧ｰ",
+      subtitle: "讖滓攝縺ｮ諤ｧ閭ｽ繧・*120%**蠑輔″蜃ｺ縺励・*蠢ｫ驕ｩ縺ｪ霆雁・遨ｺ髢・*繧停ｦ",
+      description: "**繝・ャ繝峨ル繝ｳ繧ｰ**繧・*髮ｻ貅仙ｼｷ蛹・*縲∫黄逅・噪縺ｪ迺ｰ蠅・隼蝟・ｒ邨ｱ蜷医ゅΟ繝ｼ繝峨ヮ繧､繧ｺ繧呈椛縺医√が繝ｼ繝・ぅ繧ｪ讖滓攝縺ｮ逵滉ｾ｡繧堤匱謠ｮ縺輔○繧九◆繧√・蠢・域命蟾･縺ｧ縺吶・,
+      sampleDescription: "縲先命蟾･萓九代ヵ繝ｫ繝・ャ繝峨ル繝ｳ繧ｰ・九ヰ繝・峩驟咲ｷ夲ｼ壹Ο繝ｼ繝峨ヮ繧､繧ｺ繧貞､ｧ蟷・↓菴取ｸ帙＠縲・撕蟇ゅ・荳ｭ縺ｫ髻ｳ讌ｽ縺梧ｵｮ縺九・荳翫′繧狗腸蠅・ｒ讒狗ｯ峨る崕貅仙ｼｷ蛹悶↓繧医ｊ髻ｳ縺ｮ遶九■荳翫′繧翫ｂ豼螟峨＠縺ｾ縺吶・,
       benefits: [
-        "機材のポテンシャルをフルに引き出す音響設計",
-        "ロードノイズ低減による快適性の向上",
-        "電源安定化による圧倒的なS/N感と躍動感"
+        "讖滓攝縺ｮ繝昴ユ繝ｳ繧ｷ繝｣繝ｫ繧偵ヵ繝ｫ縺ｫ蠑輔″蜃ｺ縺咎浹髻ｿ險ｭ險・,
+        "繝ｭ繝ｼ繝峨ヮ繧､繧ｺ菴取ｸ帙↓繧医ｋ蠢ｫ驕ｩ諤ｧ縺ｮ蜷台ｸ・,
+        "髮ｻ貅仙ｮ牙ｮ壼喧縺ｫ繧医ｋ蝨ｧ蛟堤噪縺ｪS/N諢溘→霄榊虚諢・
       ],
       image: assets.audioMenuImage,
       icon: Shield,
       color: "orange",
       upgrades: [
-        { title: "ハイグレード配線", price: "+¥11,000〜", icon: Zap, description: "接点ロスや伝送ロスを極限まで抑えるプレミアムケーブル。" },
-        { title: "仮想アース追加", price: "+¥33,000〜", icon: Activity, description: "ノイズを吸収し、音の透明感をさらに向上させます。" }
+        { title: "繝上う繧ｰ繝ｬ繝ｼ繝蛾・邱・, price: "+ﾂ･11,000縲・, icon: Zap, description: "謗･轤ｹ繝ｭ繧ｹ繧・ｼ晞√Ο繧ｹ繧呈･ｵ髯舌∪縺ｧ謚代∴繧九・繝ｬ繝溘い繝繧ｱ繝ｼ繝悶Ν縲・ },
+        { title: "莉ｮ諠ｳ繧｢繝ｼ繧ｹ霑ｽ蜉", price: "+ﾂ･33,000縲・, icon: Activity, description: "繝弱う繧ｺ繧貞精蜿弱＠縲・浹縺ｮ騾乗・諢溘ｒ縺輔ｉ縺ｫ蜷台ｸ翫＆縺帙∪縺吶・ }
       ]
     },
     custom_install: {
-      title: "カスタムインストール・造作",
-      subtitle: "**匠の技**で、音と美しさが融合する**唯一無二**の空間を…",
-      description: "音響理論に基づいた**ピラー加工**や、ドアの鳴りを極限まで引き出す**アウターバッフル**。機能美を追求した造作により、愛車を特別なリスニングルームへと変貌させます。",
-      sampleDescription: "【施工例】Aピラー3WAY埋め込み＋トランクカスタム：スピーカーの指向性を最適化し、圧倒的なステージングを実現。ライティングを組み合わせることで、夜のドライブも彩ります。",
+      title: "繧ｫ繧ｹ繧ｿ繝繧､繝ｳ繧ｹ繝医・繝ｫ繝ｻ騾菴・,
+      subtitle: "**蛹縺ｮ謚**縺ｧ縲・浹縺ｨ鄒弱＠縺輔′陞榊粋縺吶ｋ**蜚ｯ荳辟｡莠・*縺ｮ遨ｺ髢薙ｒ窶ｦ",
+      description: "髻ｳ髻ｿ逅・ｫ悶↓蝓ｺ縺･縺・◆**繝斐Λ繝ｼ蜉蟾･**繧・√ラ繧｢縺ｮ魑ｴ繧翫ｒ讌ｵ髯舌∪縺ｧ蠑輔″蜃ｺ縺・*繧｢繧ｦ繧ｿ繝ｼ繝舌ャ繝輔Ν**縲よｩ溯・鄒弱ｒ霑ｽ豎ゅ＠縺滄菴懊↓繧医ｊ縲∵・霆翫ｒ迚ｹ蛻･縺ｪ繝ｪ繧ｹ繝九Φ繧ｰ繝ｫ繝ｼ繝縺ｸ縺ｨ螟芽ｲ後＆縺帙∪縺吶・,
+      sampleDescription: "縲先命蟾･萓九羨繝斐Λ繝ｼ3WAY蝓九ａ霎ｼ縺ｿ・九ヨ繝ｩ繝ｳ繧ｯ繧ｫ繧ｹ繧ｿ繝・壹せ繝斐・繧ｫ繝ｼ縺ｮ謖・髄諤ｧ繧呈怙驕ｩ蛹悶＠縲∝悸蛟堤噪縺ｪ繧ｹ繝・・繧ｸ繝ｳ繧ｰ繧貞ｮ溽樟縲ゅΛ繧､繝・ぅ繝ｳ繧ｰ繧堤ｵ・∩蜷医ｏ縺帙ｋ縺薙→縺ｧ縲∝､懊・繝峨Λ繧､繝悶ｂ蠖ｩ繧翫∪縺吶・,
       benefits: [
-        "音響特性を最大限に引き出す緻密な角度設計",
-        "純正の内装に馴染む、あるいは凌駕するハイクオリティな仕上がり",
-        "オーナー様のこだわりを具現化するフルオーダーメイド"
+        "髻ｳ髻ｿ迚ｹ諤ｧ繧呈怙螟ｧ髯舌↓蠑輔″蜃ｺ縺咏ｷｻ蟇・↑隗貞ｺｦ險ｭ險・,
+        "邏疲ｭ｣縺ｮ蜀・｣・↓鬥ｴ譟薙・縲√≠繧九＞縺ｯ蜃碁ｧ輔☆繧九ワ繧､繧ｯ繧ｪ繝ｪ繝・ぅ縺ｪ莉穂ｸ翫′繧・,
+        "繧ｪ繝ｼ繝翫・讒倥・縺薙□繧上ｊ繧貞・迴ｾ蛹悶☆繧九ヵ繝ｫ繧ｪ繝ｼ繝繝ｼ繝｡繧､繝・
       ],
       image: assets.audioMenuImage,
       icon: Settings2,
       color: "cyan",
       upgrades: [
-        { title: "エクセーヌ/アルカンターラ仕上げ", price: "+¥11,550〜", icon: Layers, description: "質感を高める高級素材。光の反射を抑え、ダッシュボードの高級感を演出します。" },
-        { title: "LEDライティング演出", price: "+¥22,000〜", icon: Zap, description: "アクリルとLEDを組み合わせ、夜間の車内を幻想的にアップデート。" }
+        { title: "繧ｨ繧ｯ繧ｻ繝ｼ繝・繧｢繝ｫ繧ｫ繝ｳ繧ｿ繝ｼ繝ｩ莉穂ｸ翫￡", price: "+ﾂ･11,550縲・, icon: Layers, description: "雉ｪ諢溘ｒ鬮倥ａ繧矩ｫ倡ｴ夂ｴ譚舌ょ・縺ｮ蜿榊ｰ・ｒ謚代∴縲√ム繝・す繝･繝懊・繝峨・鬮倡ｴ壽─繧呈ｼ泌・縺励∪縺吶・ },
+        { title: "LED繝ｩ繧､繝・ぅ繝ｳ繧ｰ貍泌・", price: "+ﾂ･22,000縲・, icon: Zap, description: "繧｢繧ｯ繝ｪ繝ｫ縺ｨLED繧堤ｵ・∩蜷医ｏ縺帙∝､憺俣縺ｮ霆雁・繧貞ｹｻ諠ｳ逧・↓繧｢繝・・繝・・繝医・ }
       ]
     },
     deadening_opt: {
-      title: "標準デッドニング",
-      subtitle: "スピーカー交換プランに標準付帯。",
-      description: "当店のスピーカー交換プランには、スピーカーの性能を最低限引き出すための「簡易デッドニング」が最初から含まれています。さらに音質を追求したい場合は、差額分のみで上位のデッドニングプランへアップグレードすることも可能です。",
+      title: "讓呎ｺ悶ョ繝・ラ繝九Φ繧ｰ",
+      subtitle: "繧ｹ繝斐・繧ｫ繝ｼ莠､謠帙・繝ｩ繝ｳ縺ｫ讓呎ｺ紋ｻ伜ｸｯ縲・,
+      description: "蠖灘ｺ励・繧ｹ繝斐・繧ｫ繝ｼ莠､謠帙・繝ｩ繝ｳ縺ｫ縺ｯ縲√せ繝斐・繧ｫ繝ｼ縺ｮ諤ｧ閭ｽ繧呈怙菴朱剞蠑輔″蜃ｺ縺吶◆繧√・縲檎ｰ｡譏薙ョ繝・ラ繝九Φ繧ｰ縲阪′譛蛻昴°繧牙性縺ｾ繧後※縺・∪縺吶ゅ＆繧峨↓髻ｳ雉ｪ繧定ｿｽ豎ゅ＠縺溘＞蝣ｴ蜷医・縲∝ｷｮ鬘榊・縺ｮ縺ｿ縺ｧ荳贋ｽ阪・繝・ャ繝峨ル繝ｳ繧ｰ繝励Λ繝ｳ縺ｸ繧｢繝・・繧ｰ繝ｬ繝ｼ繝峨☆繧九％縺ｨ繧ょ庄閭ｽ縺ｧ縺吶・,
       benefits: [
-        "スピーカー交換プランに無料で付属",
-        "差額のみで本格デッドニングへ変更可能",
-        "施工の基本として全ての車に実施"
+        "繧ｹ繝斐・繧ｫ繝ｼ莠､謠帙・繝ｩ繝ｳ縺ｫ辟｡譁吶〒莉伜ｱ・,
+        "蟾ｮ鬘阪・縺ｿ縺ｧ譛ｬ譬ｼ繝・ャ繝峨ル繝ｳ繧ｰ縺ｸ螟画峩蜿ｯ閭ｽ",
+        "譁ｽ蟾･縺ｮ蝓ｺ譛ｬ縺ｨ縺励※蜈ｨ縺ｦ縺ｮ霆翫↓螳滓命"
       ],
       image: assets.audioMenuImage,
       icon: Shield,
       color: "green"
     },
     cable_opt: {
-      title: "スピーカーケーブル",
-      subtitle: "標準ケーブル付属。アップグレードも可能。",
-      description: "取り付けに必要なスピーカーケーブルは標準で含まれています。より解像度を高めたい、音の情報量を増やしたいという方には、差額をいただくことで高音質なOFCケーブルやハイエンドケーブルへの変更も承っております。",
+      title: "繧ｹ繝斐・繧ｫ繝ｼ繧ｱ繝ｼ繝悶Ν",
+      subtitle: "讓呎ｺ悶こ繝ｼ繝悶Ν莉伜ｱ槭ゅい繝・・繧ｰ繝ｬ繝ｼ繝峨ｂ蜿ｯ閭ｽ縲・,
+      description: "蜿悶ｊ莉倥￠縺ｫ蠢・ｦ√↑繧ｹ繝斐・繧ｫ繝ｼ繧ｱ繝ｼ繝悶Ν縺ｯ讓呎ｺ悶〒蜷ｫ縺ｾ繧後※縺・∪縺吶ゅｈ繧願ｧ｣蜒丞ｺｦ繧帝ｫ倥ａ縺溘＞縲・浹縺ｮ諠・ｱ驥上ｒ蠅励ｄ縺励◆縺・→縺・≧譁ｹ縺ｫ縺ｯ縲∝ｷｮ鬘阪ｒ縺・◆縺縺上％縺ｨ縺ｧ鬮倬浹雉ｪ縺ｪOFC繧ｱ繝ｼ繝悶Ν繧・ワ繧､繧ｨ繝ｳ繝峨こ繝ｼ繝悶Ν縺ｸ縺ｮ螟画峩繧よ価縺｣縺ｦ縺翫ｊ縺ｾ縺吶・,
       benefits: [
-        "標準的な配線はプラン料金に込み",
-        "差額で高音質ケーブルへ変更可能",
-        "システム構成に合わせた最適な提案"
+        "讓呎ｺ也噪縺ｪ驟咲ｷ壹・繝励Λ繝ｳ譁咎≡縺ｫ霎ｼ縺ｿ",
+        "蟾ｮ鬘阪〒鬮倬浹雉ｪ繧ｱ繝ｼ繝悶Ν縺ｸ螟画峩蜿ｯ閭ｽ",
+        "繧ｷ繧ｹ繝・Β讒区・縺ｫ蜷医ｏ縺帙◆譛驕ｩ縺ｪ謠先｡・
       ],
       image: assets.audioMenuImage,
       icon: Zap,
       color: "purple"
     },
     tuning_opt: {
-      title: "サウンドチューニング",
-      subtitle: "当店ご購入者様は「永年無料」で調整。",
-      description: "カーオーディオは取り付け後の「調整」で音が決まります。当店でユニットをご購入・施工いただいたお客様には、納車時のセッティングはもちろん、エージング後の再調整も無料で実施しております。プロの技術で常に最高の状態を維持します。",
-      sampleDescription: "【施工例】DSP導入後の定期セッティング：エージングが進んだ3ヶ月後に再調整。スピーカーの動きがスムーズになった分、より緻密なEQ補正を行うことで、さらに深みのある音へと進化させます。",
+      title: "繧ｵ繧ｦ繝ｳ繝峨メ繝･繝ｼ繝九Φ繧ｰ",
+      subtitle: "蠖灘ｺ励＃雉ｼ蜈･閠・ｧ倥・縲梧ｰｸ蟷ｴ辟｡譁吶阪〒隱ｿ謨ｴ縲・,
+      description: "繧ｫ繝ｼ繧ｪ繝ｼ繝・ぅ繧ｪ縺ｯ蜿悶ｊ莉倥￠蠕後・縲瑚ｪｿ謨ｴ縲阪〒髻ｳ縺梧ｱｺ縺ｾ繧翫∪縺吶ょｽ灘ｺ励〒繝ｦ繝九ャ繝医ｒ縺碑ｳｼ蜈･繝ｻ譁ｽ蟾･縺・◆縺縺・◆縺雁ｮ｢讒倥↓縺ｯ縲∫ｴ崎ｻ頑凾縺ｮ繧ｻ繝・ユ繧｣繝ｳ繧ｰ縺ｯ繧ゅ■繧阪ｓ縲√お繝ｼ繧ｸ繝ｳ繧ｰ蠕後・蜀崎ｪｿ謨ｴ繧ら┌譁吶〒螳滓命縺励※縺翫ｊ縺ｾ縺吶ゅ・繝ｭ縺ｮ謚陦薙〒蟶ｸ縺ｫ譛鬮倥・迥ｶ諷九ｒ邯ｭ謖√＠縺ｾ縺吶・,
+      sampleDescription: "縲先命蟾･萓九船SP蟆主・蠕後・螳壽悄繧ｻ繝・ユ繧｣繝ｳ繧ｰ・壹お繝ｼ繧ｸ繝ｳ繧ｰ縺碁ｲ繧薙□3繝ｶ譛亥ｾ後↓蜀崎ｪｿ謨ｴ縲ゅせ繝斐・繧ｫ繝ｼ縺ｮ蜍輔″縺後せ繝繝ｼ繧ｺ縺ｫ縺ｪ縺｣縺溷・縲√ｈ繧顔ｷｻ蟇・↑EQ陬懈ｭ｣繧定｡後≧縺薙→縺ｧ縲√＆繧峨↓豺ｱ縺ｿ縺ｮ縺ゅｋ髻ｳ縺ｸ縺ｨ騾ｲ蛹悶＆縺帙∪縺吶・,
       benefits: [
-        "当店施工車はいつでも調整無料",
-        "測定器と耳を使ったプロの追い込み",
-        "エージング後の変化にも無償対応"
+        "蠖灘ｺ玲命蟾･霆翫・縺・▽縺ｧ繧りｪｿ謨ｴ辟｡譁・,
+        "貂ｬ螳壼勣縺ｨ閠ｳ繧剃ｽｿ縺｣縺溘・繝ｭ縺ｮ霑ｽ縺・ｾｼ縺ｿ",
+        "繧ｨ繝ｼ繧ｸ繝ｳ繧ｰ蠕後・螟牙喧縺ｫ繧ら┌蜆溷ｯｾ蠢・
       ],
       image: assets.audioMenuImage,
       icon: Settings2,
@@ -277,27 +277,27 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
   };
 
   const navLinks = [
-    { id: 'purpose-nav', label: '目的別ナビ' },
-    { id: 'plan-list', label: 'プラン一覧' },
-    { id: 'knowledge-guide', label: 'コラム・知識ガイド' },
-    { id: 'cta', label: 'お問い合わせ' },
+    { id: 'purpose-nav', label: '逶ｮ逧・挨繝翫ン' },
+    { id: 'plan-list', label: '繝励Λ繝ｳ荳隕ｧ' },
+    { id: 'knowledge-guide', label: '繧ｳ繝ｩ繝繝ｻ遏･隴倥ぎ繧､繝・ },
+    { id: 'cta', label: '縺雁撫縺・粋繧上○' },
   ];
 
   const purposeNav = [
-    { id: 'speaker_package', title: "スピーカー交換・車種別プラン", desc: "純正の不満を解決。愛車にピッタリの音を。", icon: Speaker, color: "blue" },
-    { id: 'bass_power', title: "低音強化・パワーアップ", desc: "迫力の重低音と、鮮明な解像度をプラス。", icon: Zap, color: "indigo" },
-    { id: 'digital_source', title: "デジタル・音質制御", desc: "DSPとメディアプレーヤーで極上の音像を。", icon: Settings2, color: "purple" },
-    { id: 'install_tuning', title: "環境チューニング", desc: "機材の性能を120%引き出す基礎工事。", icon: Shield, color: "orange" },
-    { id: 'custom_install', title: "カスタムインストール", desc: "匠の技で、世界に一台のリスニングルームを。", icon: Settings2, color: "cyan" },
-    { id: 'knowledge-guide', title: "お悩み解決コラム", desc: "カーオーディオの知識や事例を読む。", icon: Info, color: "sky" },
+    { id: 'speaker_package', title: "繧ｹ繝斐・繧ｫ繝ｼ莠､謠帙・霆顔ｨｮ蛻･繝励Λ繝ｳ", desc: "邏疲ｭ｣縺ｮ荳肴ｺ繧定ｧ｣豎ｺ縲よ・霆翫↓繝斐ャ繧ｿ繝ｪ縺ｮ髻ｳ繧偵・, icon: Speaker, color: "blue" },
+    { id: 'bass_power', title: "菴朱浹蠑ｷ蛹悶・繝代Ρ繝ｼ繧｢繝・・", desc: "霑ｫ蜉帙・驥堺ｽ朱浹縺ｨ縲・ｮｮ譏弱↑隗｣蜒丞ｺｦ繧偵・繝ｩ繧ｹ縲・, icon: Zap, color: "indigo" },
+    { id: 'digital_source', title: "繝・ず繧ｿ繝ｫ繝ｻ髻ｳ雉ｪ蛻ｶ蠕｡", desc: "DSP縺ｨ繝｡繝・ぅ繧｢繝励Ξ繝ｼ繝､繝ｼ縺ｧ讌ｵ荳翫・髻ｳ蜒上ｒ縲・, icon: Settings2, color: "purple" },
+    { id: 'install_tuning', title: "迺ｰ蠅・メ繝･繝ｼ繝九Φ繧ｰ", desc: "讖滓攝縺ｮ諤ｧ閭ｽ繧・20%蠑輔″蜃ｺ縺吝渕遉主ｷ･莠九・, icon: Shield, color: "orange" },
+    { id: 'custom_install', title: "繧ｫ繧ｹ繧ｿ繝繧､繝ｳ繧ｹ繝医・繝ｫ", desc: "蛹縺ｮ謚縺ｧ縲∽ｸ也阜縺ｫ荳蜿ｰ縺ｮ繝ｪ繧ｹ繝九Φ繧ｰ繝ｫ繝ｼ繝繧偵・, icon: Settings2, color: "cyan" },
+    { id: 'knowledge-guide', title: "縺頑か縺ｿ隗｣豎ｺ繧ｳ繝ｩ繝", desc: "繧ｫ繝ｼ繧ｪ繝ｼ繝・ぅ繧ｪ縺ｮ遏･隴倥ｄ莠倶ｾ九ｒ隱ｭ繧縲・, icon: Info, color: "sky" },
   ];
 
   const categories = [
-    { id: 'speaker_package', title: "スピーカー・車種別", items: ["BASIC line", "STANDARD line", "3-WAY line", "車種専用プラン"], icon: Speaker },
-    { id: 'bass_power', title: "低音・アンプ", items: ["サブウーハー", "外部アンプ"], icon: Zap },
-    { id: 'digital_source', title: "デジタル・DSP", items: ["DSP", "プレーヤー", "ナビ"], icon: Settings2 },
-    { id: 'install_tuning', title: "施工・電源", items: ["デッドニング", "電源強化", "車内静音"], icon: Shield },
-    { id: 'custom_install', title: "造作・カスタム", items: ["ピラー加工", "アウターバッフル", "トランク造作"], icon: Settings2 },
+    { id: 'speaker_package', title: "繧ｹ繝斐・繧ｫ繝ｼ繝ｻ霆顔ｨｮ蛻･", items: ["BASIC line", "STANDARD line", "3-WAY line", "霆顔ｨｮ蟆ら畑繝励Λ繝ｳ"], icon: Speaker },
+    { id: 'bass_power', title: "菴朱浹繝ｻ繧｢繝ｳ繝・, items: ["繧ｵ繝悶え繝ｼ繝上・", "螟夜Κ繧｢繝ｳ繝・], icon: Zap },
+    { id: 'digital_source', title: "繝・ず繧ｿ繝ｫ繝ｻDSP", items: ["DSP", "繝励Ξ繝ｼ繝､繝ｼ", "繝翫ン"], icon: Settings2 },
+    { id: 'install_tuning', title: "譁ｽ蟾･繝ｻ髮ｻ貅・, items: ["繝・ャ繝峨ル繝ｳ繧ｰ", "髮ｻ貅仙ｼｷ蛹・, "霆雁・髱咎浹"], icon: Shield },
+    { id: 'custom_install', title: "騾菴懊・繧ｫ繧ｹ繧ｿ繝", items: ["繝斐Λ繝ｼ蜉蟾･", "繧｢繧ｦ繧ｿ繝ｼ繝舌ャ繝輔Ν", "繝医Λ繝ｳ繧ｯ騾菴・], icon: Settings2 },
   ];
 
   const colorClasses: Record<string, string> = {
@@ -407,7 +407,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
               <button
                 onClick={() => setSelectedItem(null)}
                 className={`absolute top-6 right-6 w-12 h-12 rounded-full flex items-center justify-center transition-all z-20 ${isHtmlGuide ? 'bg-gray-900/60 backdrop-blur-md text-white hover:bg-gray-800' : 'bg-gray-100 hover:bg-gray-200 text-gray-900'}`}
-                aria-label="詳細を閉じる"
+                aria-label="隧ｳ邏ｰ繧帝哩縺倥ｋ"
               >
                 <X className="w-6 h-6" />
               </button>
@@ -418,7 +418,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                     <SafeImage
                       src={selectedItem.image || "https://picsum.photos/seed/speaker/1200/800"}
                       className="w-full h-full object-cover"
-                      alt={selectedItem.name + "の製品イメージ"}
+                      alt={selectedItem.name + "縺ｮ陬ｽ蜩√う繝｡繝ｼ繧ｸ"}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
                     <div className="absolute bottom-8 left-8 right-8">
@@ -446,10 +446,10 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                             <span className="text-3xl font-black text-red-600 tracking-tighter">
                               {formatPrice(selectedItem.packageDetails.savings)}
                             </span>
-                            <span className="text-sm font-bold text-red-400 uppercase tracking-widest">もおトク！</span>
+                            <span className="text-sm font-bold text-red-400 uppercase tracking-widest">繧ゅ♀繝医け・・/span>
                           </div>
                           <div className="text-[10px] text-gray-500 font-bold mt-1">
-                            通常施工合計: {formatPrice(selectedItem.packageDetails.standardPrice)}
+                            騾壼ｸｸ譁ｽ蟾･蜷郁ｨ・ {formatPrice(selectedItem.packageDetails.standardPrice)}
                           </div>
                         </div>
                       </div>
@@ -476,7 +476,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                           ) : isHtmlString(selectedItem.description || "") ? (
                             <div className="html-content" dangerouslySetInnerHTML={{ __html: selectedItem.description }} />
                           ) : (
-                            renderDescriptionWithImages(selectedItem.description || "詳細な説明は現在準備中です。施工内容や適合車種については、お気軽にお問い合わせください。", selectedCategoryColor)
+                            renderDescriptionWithImages(selectedItem.description || "隧ｳ邏ｰ縺ｪ隱ｬ譏弱・迴ｾ蝨ｨ貅門ｙ荳ｭ縺ｧ縺吶よ命蟾･蜀・ｮｹ繧・←蜷郁ｻ顔ｨｮ縺ｫ縺､縺・※縺ｯ縲√♀豌苓ｻｽ縺ｫ縺雁撫縺・粋繧上○縺上□縺輔＞縲・, selectedCategoryColor)
                           )}
                         </div>
                       </div>
@@ -557,7 +557,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                                       className="flex items-center gap-2 px-4 py-3 bg-red-50 text-red-600 rounded-xl font-black text-[10px] tracking-widest hover:bg-red-600 hover:text-white transition-all min-h-[44px]"
                                     >
                                       <Play className="w-3 h-3 fill-current" />
-                                      試聴サンプル
+                                      隧ｦ閨ｴ繧ｵ繝ｳ繝励Ν
                                     </button>
                                   )}
                                 </div>
@@ -679,7 +679,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                             className="inline-flex items-center gap-2 bg-gray-900 hover:bg-blue-600 text-white px-8 py-4 rounded-[1.5rem] font-bold text-sm md:text-base tracking-widest transition-all shadow-lg"
                           >
                             <ExternalLink className="w-5 h-5" />
-                            公式サイトで詳細を読む
+                            蜈ｬ蠑上し繧､繝医〒隧ｳ邏ｰ繧定ｪｭ繧
                           </a>
                         </div>
                       )}
@@ -693,7 +693,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                             <div className="text-4xl font-black text-blue-400 tracking-tighter">
                               {formatPrice(selectedItem.price)}
                             </div>
-                            <p className="text-[10px] text-gray-500 mt-2">※取付工賃・ショートパーツ込み</p>
+                            <p className="text-[10px] text-gray-500 mt-2">窶ｻ蜿紋ｻ伜ｷ･雉・・繧ｷ繝ｧ繝ｼ繝医ヱ繝ｼ繝・ｾｼ縺ｿ</p>
                           </div>
 
                           {selectedItem.link && (
@@ -705,21 +705,20 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                                 className="flex items-center justify-center gap-2 w-full bg-white/5 hover:bg-white/10 text-white py-3 rounded-xl font-bold text-xs tracking-widest transition-all border border-white/10"
                               >
                                 <ExternalLink className="w-4 h-4" />
-                                公式サイトで詳細を見る
+                                蜈ｬ蠑上し繧､繝医〒隧ｳ邏ｰ繧定ｦ九ｋ
                               </a>
                             </div>
                           )}
 
                           <div className="space-y-4">
                             <a
-                              href="https://line.me/R/ti/p/@soundang"
+                              href="https://page.line.me/312qjhsq?openQrModal=true"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="flex items-center justify-center gap-3 w-full bg-[#06C755] text-white py-4 rounded-xl font-black text-sm tracking-widest hover:scale-105 transition-all"
                             >
                               <MessageSquare className="w-5 h-5" />
-                              LINEで相談
-                            </a>
+                              LINE縺ｧ逶ｸ隲・                            </a>
                             <button
                               onClick={() => {
                                 setSelectedItem(null);
@@ -728,8 +727,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                               className="flex items-center justify-center gap-3 w-full bg-blue-600 text-white py-4 rounded-xl font-black text-sm tracking-widest hover:scale-105 transition-all"
                             >
                               <Calendar className="w-5 h-5" />
-                              来店予約
-                            </button>
+                              譚･蠎嶺ｺ育ｴ・                            </button>
                           </div>
                         </div>
                       </div>
@@ -760,7 +758,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
               <button
                 onClick={() => setActiveYoutubeId(null)}
                 className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all z-10"
-                aria-label="動画を閉じる"
+                aria-label="蜍慕判繧帝哩縺倥ｋ"
               >
                 <X className="w-6 h-6" />
               </button>
@@ -795,7 +793,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
               <button
                 onClick={() => setSelectedGalleryImage(null)}
                 className="absolute -top-12 right-0 text-white hover:text-blue-400 transition-colors flex items-center gap-2 font-black text-sm tracking-widest uppercase"
-                aria-label="画像を閉じる"
+                aria-label="逕ｻ蜒上ｒ髢峨§繧・
               >
                 CLOSE <X className="w-6 h-6" />
               </button>
@@ -867,12 +865,12 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                       <button
                         onClick={() => setViewingCategoryDetail(null)}
                         className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors font-bold group"
-                        aria-label="メニューに戻る"
+                        aria-label="繝｡繝九Η繝ｼ縺ｫ謌ｻ繧・
                       >
                         <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
                         <span className="text-sm">BACK TO MENU</span>
                       </button>
-                      <h2 className="font-black text-xl tracking-tighter">カテゴリー解説</h2>
+                      <h2 className="font-black text-xl tracking-tighter">繧ｫ繝・ざ繝ｪ繝ｼ隗｣隱ｬ</h2>
                       <div className="w-24"></div>
                     </div>
                   </div>
@@ -896,7 +894,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                       <div className="mb-16">
                         <h3 className="text-2xl font-black mb-6 text-gray-900 flex items-center gap-3">
                           <div className={`w-2 h-8 rounded-full ${colorClasses[detail.color].split(' ')[0]}`}></div>
-                          解説
+                          隗｣隱ｬ
                         </h3>
                         <p className="text-gray-600 text-lg font-medium leading-relaxed mb-12 whitespace-pre-wrap">
                           {renderHighlightedText(detail.description, detail.color)}
@@ -915,7 +913,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                       <div>
                         <h3 className="text-2xl font-black mb-8 text-gray-900 flex items-center gap-3">
                           <div className={`w-2 h-8 rounded-full ${colorClasses[detail.color].split(' ')[0]}`}></div>
-                          施工のメリット
+                          譁ｽ蟾･縺ｮ繝｡繝ｪ繝・ヨ
                         </h3>
                         <div className="grid gap-6">
                           {detail.benefits.map((benefit, i) => (
@@ -933,8 +931,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                         <div className="mt-20 pt-20 border-t border-gray-100">
                           <h3 className="text-2xl font-black mb-8 text-gray-900 flex items-center gap-3">
                             <div className={`w-2 h-8 rounded-full ${colorClasses[detail.color].split(' ')[0]}`}></div>
-                            さらに極めるためのアップグレード
-                          </h3>
+                            縺輔ｉ縺ｫ讌ｵ繧√ｋ縺溘ａ縺ｮ繧｢繝・・繧ｰ繝ｬ繝ｼ繝・                          </h3>
                           <div className="grid md:grid-cols-2 gap-6">
                             {detail.upgrades.map((upgrade, i) => (
                               <div key={i} className="bg-gray-900 rounded-[2.5rem] p-8 text-white relative overflow-hidden group">
@@ -973,14 +970,13 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                         }}
                         className="flex-grow bg-gray-900 text-white py-6 rounded-[2rem] font-black text-lg tracking-widest hover:bg-blue-600 transition-all shadow-xl shadow-blue-200"
                       >
-                        {optionals.some(o => o.id === viewingCategoryDetail) ? '付帯サービス一覧を見る' : 'プラン一覧を見る'}
+                        {optionals.some(o => o.id === viewingCategoryDetail) ? '莉伜ｸｯ繧ｵ繝ｼ繝薙せ荳隕ｧ繧定ｦ九ｋ' : '繝励Λ繝ｳ荳隕ｧ繧定ｦ九ｋ'}
                       </button>
                       <button
                         onClick={() => setViewingCategoryDetail(null)}
                         className="flex-grow bg-white text-gray-900 py-6 rounded-[2rem] font-black text-lg tracking-widest border border-gray-200 hover:bg-gray-50 transition-all"
                       >
-                        メニューに戻る
-                      </button>
+                        繝｡繝九Η繝ｼ縺ｫ謌ｻ繧・                      </button>
                     </div>
                   </div>
                 </div>
@@ -1007,12 +1003,12 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                           window.scrollTo(0, 0);
                         }}
                         className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors font-bold group"
-                        aria-label="メニューに戻る"
+                        aria-label="繝｡繝九Η繝ｼ縺ｫ謌ｻ繧・
                       >
                         <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
                         <span className="text-sm">BACK TO MENU</span>
                       </button>
-                      <h2 className="font-black text-xl tracking-tighter">{currentCategory?.category} 一覧</h2>
+                      <h2 className="font-black text-xl tracking-tighter">{currentCategory?.category} 荳隕ｧ</h2>
                       <div className="w-24"></div>
                     </div>
                   </div>
@@ -1078,7 +1074,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                                   </div>
                                   <p className="text-[11px] font-bold text-blue-600/60 flex items-center gap-2">
                                     <Info className="w-3.5 h-3.5" />
-                                    ← {categorySubTabs[currentCategory.id].find(t => t.id === activeSubTab)?.info || "プランを選択してください"}
+                                    竊・{categorySubTabs[currentCategory.id].find(t => t.id === activeSubTab)?.info || "繝励Λ繝ｳ繧帝∈謚槭＠縺ｦ縺上□縺輔＞"}
                                   </p>
                                 </div>
                               )}
@@ -1142,7 +1138,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                                 <div className="mt-auto pt-6 border-t border-gray-100">
                                   <div className="flex items-center justify-between mb-4">
                                     <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest">Upgrade Options</p>
-                                    <span className="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">差額でアップグレード可能</span>
+                                    <span className="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">蟾ｮ鬘阪〒繧｢繝・・繧ｰ繝ｬ繝ｼ繝牙庄閭ｽ</span>
                                   </div>
                                   <div className="grid grid-cols-1 gap-2">
                                     {categoryExplanations[currentCategory.id].upgrades?.map((upg, k) => (
@@ -1206,7 +1202,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                   <button
                     onClick={onBack}
                     className="w-12 h-12 flex items-center justify-center text-gray-600 hover:text-blue-600 transition-colors font-bold group shrink-0"
-                    aria-label="トップに戻る"
+                    aria-label="繝医ャ繝励↓謌ｻ繧・
                   >
                     <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
                   </button>
@@ -1222,31 +1218,31 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                 <div className="flex-1 flex items-center justify-end gap-1.5 md:gap-3">
                   {/* LINE Inquiry */}
                   <a
-                    href="https://line.me/R/ti/p/@soundang"
+                    href="https://page.line.me/312qjhsq?openQrModal=true"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center w-12 h-12 md:w-auto md:px-5 md:py-2.5 bg-[#06C755] text-white rounded-xl font-black transition-all hover:bg-[#05b34c] shadow-sm shrink-0"
-                    aria-label="LINEで相談する"
+                    aria-label="LINE縺ｧ逶ｸ隲・☆繧・
                   >
                     <MessageSquare className="w-5 h-5 md:mr-2" />
-                    <span className="hidden md:inline text-[10px]">LINE相談</span>
+                    <span className="hidden md:inline text-[10px]">LINE逶ｸ隲・/span>
                   </a>
 
                   {/* Reservation */}
                   <button
                     onClick={() => scrollToSection('cta')}
                     className="flex items-center justify-center w-12 h-12 md:w-auto md:px-5 md:py-2.5 bg-blue-600 text-white rounded-xl font-black transition-all hover:bg-blue-700 shadow-sm shrink-0"
-                    aria-label="来店予約"
+                    aria-label="譚･蠎嶺ｺ育ｴ・
                   >
                     <Calendar className="w-5 h-5 md:mr-2" />
-                    <span className="hidden md:inline text-[10px]">来店予約</span>
+                    <span className="hidden md:inline text-[10px]">譚･蠎嶺ｺ育ｴ・/span>
                   </button>
 
                   <div className="relative shrink-0">
                     <button
                       onClick={() => setIsMenuOpen(!isMenuOpen)}
                       className="w-12 h-12 flex items-center justify-center hover:bg-gray-100 rounded-xl transition-colors"
-                      aria-label={isMenuOpen ? "メニューを閉じる" : "メニューを開く"}
+                      aria-label={isMenuOpen ? "繝｡繝九Η繝ｼ繧帝哩縺倥ｋ" : "繝｡繝九Η繝ｼ繧帝幕縺・}
                     >
                       {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                     </button>
@@ -1269,20 +1265,19 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                           >
                             <div className="space-y-3 mb-4 pb-4 border-b border-gray-100 md:hidden">
                               <a
-                                href="https://line.me/R/ti/p/@soundang"
+                                href="https://page.line.me/312qjhsq?openQrModal=true"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-3 w-full px-4 py-3 bg-[#06C755] text-white rounded-xl font-black text-xs shadow-sm"
                               >
                                 <MessageSquare className="w-5 h-5" />
-                                LINEで相談する
-                              </a>
+                                LINE縺ｧ逶ｸ隲・☆繧・                              </a>
                               <button
                                 onClick={() => scrollToSection('cta')}
                                 className="flex items-center gap-3 w-full px-4 py-3 bg-blue-600 text-white rounded-xl font-black text-xs shadow-sm"
                               >
                                 <Calendar className="w-5 h-5" />
-                                来店予約・お問い合わせ
+                                譚･蠎嶺ｺ育ｴ・・縺雁撫縺・粋繧上○
                               </button>
                             </div>
                             <div className="space-y-1">
@@ -1311,7 +1306,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
               <SafeImage
                 src={assets.audioMenuImage}
                 className="absolute inset-0 w-full h-full object-cover scale-105"
-                alt="高品質なカーオーディオシステム施工イメージ"
+                alt="鬮伜刀雉ｪ縺ｪ繧ｫ繝ｼ繧ｪ繝ｼ繝・ぅ繧ｪ繧ｷ繧ｹ繝・Β譁ｽ蟾･繧､繝｡繝ｼ繧ｸ"
                 loading="eager"
               />
               <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-gray-50"></div>
@@ -1326,9 +1321,8 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                     SOUND<br />EXPERIENCE
                   </h1>
                   <p className="text-gray-200 max-w-2xl mx-auto text-lg font-medium leading-relaxed">
-                    「全部見せる」ではなく「選ばせてから全部見せる」。<br />
-                    あなたの目的に合わせた、最適なオーディオプランをご提案します。
-                  </p>
+                    縲悟・驛ｨ隕九○繧九阪〒縺ｯ縺ｪ縺上碁∈縺ｰ縺帙※縺九ｉ蜈ｨ驛ｨ隕九○繧九阪・br />
+                    縺ゅ↑縺溘・逶ｮ逧・↓蜷医ｏ縺帙◆縲∵怙驕ｩ縺ｪ繧ｪ繝ｼ繝・ぅ繧ｪ繝励Λ繝ｳ繧偵＃謠先｡医＠縺ｾ縺吶・                  </p>
                 </motion.div>
               </div>
             </section>
@@ -1393,7 +1387,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                     <div className="w-6 md:w-8 h-1 bg-blue-600"></div>
                     <span className="text-blue-600 font-black tracking-widest uppercase text-[10px] md:text-xs">Plan Packages</span>
                   </div>
-                  <h2 className="text-2xl md:text-4xl font-black tracking-tighter">プラン・パッケージ一覧</h2>
+                  <h2 className="text-2xl md:text-4xl font-black tracking-tighter">繝励Λ繝ｳ繝ｻ繝代ャ繧ｱ繝ｼ繧ｸ荳隕ｧ</h2>
                 </div>
 
                 {/* Tab Bar / Accordion Controller */}
@@ -1406,7 +1400,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                       }}
                       className={`px-5 py-3 rounded-full text-[10px] md:text-xs font-black transition-all whitespace-nowrap min-h-[44px] ${activeCategory === 'all' ? 'bg-gray-900 text-white shadow-lg' : 'bg-white text-gray-500 border border-gray-200 hover:text-gray-700'}`}
                     >
-                      すべて表示
+                      縺吶∋縺ｦ陦ｨ遉ｺ
                     </button>
                     {purposeNav.map(nav => (
                       <button
@@ -1477,7 +1471,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                             }}
                             className="hidden md:flex items-center gap-1.5 text-[10px] md:text-xs font-black text-blue-600 hover:text-blue-700 transition-colors group shrink-0"
                           >
-                            すべて見る
+                            縺吶∋縺ｦ隕九ｋ
                             <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                           </button>
                           {isMobile && (
@@ -1559,7 +1553,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                                     </div>
                                     <p className="text-[11px] font-bold text-blue-600/60 flex items-center gap-2">
                                       <Info className="w-3.5 h-3.5" />
-                                      ← {categorySubTabs[section.id].find(t => t.id === activeSubTab)?.info || (categorySubTabs[section.id] && categorySubTabs[section.id][0].info)}
+                                      竊・{categorySubTabs[section.id].find(t => t.id === activeSubTab)?.info || (categorySubTabs[section.id] && categorySubTabs[section.id][0].info)}
                                     </p>
                                   </div>
                                 )}
@@ -1667,8 +1661,8 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                               }}
                               className="w-full flex items-center justify-center gap-3 bg-white border-2 border-blue-100 text-blue-600 py-4 md:py-6 rounded-2xl md:rounded-[2.5rem] font-black text-xs md:text-lg tracking-widest hover:bg-blue-50 hover:border-blue-200 transition-all shadow-sm group"
                             >
-                              <span className="hidden md:inline">{section.category}の全プランをチェックする</span>
-                              <span className="md:hidden">{section.category}の全プランを見る</span>
+                              <span className="hidden md:inline">{section.category}縺ｮ蜈ｨ繝励Λ繝ｳ繧偵メ繧ｧ繝・け縺吶ｋ</span>
+                              <span className="md:hidden">{section.category}縺ｮ蜈ｨ繝励Λ繝ｳ繧定ｦ九ｋ</span>
                               <ChevronRight className="w-4 h-4 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" />
                             </button>
                           </div>
@@ -1685,11 +1679,10 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                 <div className="text-center mb-12 md:mb-20">
                   <span className="text-blue-600 font-black tracking-[0.4em] mb-4 md:mb-6 block text-[10px] md:text-sm">Audio Upgrade Guide</span>
                   <h2 className="text-3xl md:text-6xl font-black text-gray-900 tracking-tighter mb-6 md:mb-8">
-                    理想の音を見つける<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">アイデア集</span>
+                    逅・Φ縺ｮ髻ｳ繧定ｦ九▽縺代ｋ<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">繧｢繧､繝・い髮・/span>
                   </h2>
                   <p className="text-gray-500 font-bold text-sm md:text-lg max-w-2xl mx-auto mb-10 md:mb-16">
-                    カーオーディオの奥深い世界へようこそ。初めての方への導入ヒントから、最新トレンドの徹底解説まで、あなたの車をワンランク上の空間に変える情報をお届けします。
-                  </p>
+                    繧ｫ繝ｼ繧ｪ繝ｼ繝・ぅ繧ｪ縺ｮ螂･豺ｱ縺・ｸ也阜縺ｸ繧医≧縺薙◎縲ょ・繧√※縺ｮ譁ｹ縺ｸ縺ｮ蟆主・繝偵Φ繝医°繧峨∵怙譁ｰ繝医Ξ繝ｳ繝峨・蠕ｹ蠎戊ｧ｣隱ｬ縺ｾ縺ｧ縲√≠縺ｪ縺溘・霆翫ｒ繝ｯ繝ｳ繝ｩ繝ｳ繧ｯ荳翫・遨ｺ髢薙↓螟峨∴繧区ュ蝣ｱ繧偵♀螻翫￠縺励∪縺吶・                  </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -1732,7 +1725,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                           {isHtmlString(guide.description || "") ? stripHtml(guide.description).split('\n')[0] : guide.description.split('\n')[0]}
                         </p>
                         <button className="flex items-center justify-center gap-3 w-full bg-gray-50 group-hover:bg-blue-50 text-gray-600 group-hover:text-blue-600 py-3 md:py-4 rounded-xl font-bold text-xs md:text-sm transition-colors mt-auto">
-                          <span>続きを読む</span>
+                          <span>邯壹″繧定ｪｭ繧</span>
                           <ChevronRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
                         </button>
                       </div>
@@ -1747,8 +1740,8 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                       onClick={() => setShowAllGuides(true)}
                       className="w-full max-w-3xl flex items-center justify-center gap-3 bg-white border-2 border-blue-100 text-blue-600 py-3 md:py-5 rounded-2xl md:rounded-[2.5rem] font-black text-xs md:text-lg tracking-widest hover:bg-blue-50 hover:border-blue-200 transition-all shadow-sm group"
                     >
-                      <span className="hidden md:inline">すべてのコラムをチェックする</span>
-                      <span className="md:hidden">すべての記事を見る</span>
+                      <span className="hidden md:inline">縺吶∋縺ｦ縺ｮ繧ｳ繝ｩ繝繧偵メ繧ｧ繝・け縺吶ｋ</span>
+                      <span className="md:hidden">縺吶∋縺ｦ縺ｮ險倅ｺ九ｒ隕九ｋ</span>
                       <ChevronRight className="w-4 h-4 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" />
                     </button>
                   </div>
@@ -1767,11 +1760,10 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                 <div className="text-center mb-12 md:mb-20">
                   <span className="text-blue-400 font-black tracking-[0.4em] uppercase text-[10px] md:text-sm mb-4 md:mb-6 block">Audition Units</span>
                   <h2 className="text-3xl md:text-8xl font-black text-white tracking-tighter mb-6 md:mb-8 leading-none">
-                    常時試聴可能な<br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">スピーカーのご紹介</span>
+                    蟶ｸ譎りｩｦ閨ｴ蜿ｯ閭ｽ縺ｪ<br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">繧ｹ繝斐・繧ｫ繝ｼ縺ｮ縺皮ｴｹ莉・/span>
                   </h2>
                   <p className="text-gray-400 font-bold text-sm md:text-xl max-w-3xl mx-auto mb-10 md:mb-16 leading-relaxed">
-                    百聞は一見（一聴）に如かず。ANGでは、国内外の厳選されたスピーカーを実際に聴き比べ、納得のいく音を見つけていただける環境を整えています。
-                  </p>
+                    逋ｾ閨槭・荳隕具ｼ井ｸ閨ｴ・峨↓螯ゅ°縺壹・NG縺ｧ縺ｯ縲∝嵜蜀・､悶・蜴ｳ驕ｸ縺輔ｌ縺溘せ繝斐・繧ｫ繝ｼ繧貞ｮ滄圀縺ｫ閨ｴ縺肴ｯ斐∋縲∫ｴ榊ｾ励・縺・￥髻ｳ繧定ｦ九▽縺代※縺・◆縺縺代ｋ迺ｰ蠅・ｒ謨ｴ縺医※縺・∪縺吶・                  </p>
                 </div>
 
                 {/* Dynamic Grid for Speakers */}
@@ -1837,7 +1829,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                           </h3>
 
                           <p className="text-gray-400 font-bold text-[10px] md:text-lg leading-relaxed line-clamp-2">
-                            {sp.description || "試聴室にて実際の音調をご確認いただけます。豊かな音楽体験をANGで。"}
+                            {sp.description || "隧ｦ閨ｴ螳､縺ｫ縺ｦ螳滄圀縺ｮ髻ｳ隱ｿ繧偵＃遒ｺ隱阪＞縺溘□縺代∪縺吶りｱ翫°縺ｪ髻ｳ讌ｽ菴馴ｨ薙ｒANG縺ｧ縲・}
                           </p>
                         </div>
                       </motion.div>
@@ -1853,7 +1845,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                         }`}
                     >
                       <Speaker className={`w-5 h-5 md:w-8 md:h-8 ${showFullAuditionList ? 'animate-pulse' : ''}`} />
-                      {showFullAuditionList ? '試聴スピーカー一覧を閉じる' : `試聴スピーカー一覧を見る (${auditionSpeakers.length}ブランド)`}
+                      {showFullAuditionList ? '隧ｦ閨ｴ繧ｹ繝斐・繧ｫ繝ｼ荳隕ｧ繧帝哩縺倥ｋ' : `隧ｦ閨ｴ繧ｹ繝斐・繧ｫ繝ｼ荳隕ｧ繧定ｦ九ｋ (${auditionSpeakers.length}繝悶Λ繝ｳ繝・`}
                       <ChevronRight className={`w-4 h-4 md:w-6 md:h-6 transition-transform ${showFullAuditionList ? 'rotate-90' : ''}`} />
                     </button>
                   </div>
@@ -1868,8 +1860,8 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                       >
                         {auditionSpeakers.length === 0 ? (
                           <div className="text-center py-20 bg-white/5 rounded-3xl border border-white/10">
-                            <p className="text-gray-500 font-bold mb-4">データが読み込めませんでした。</p>
-                            <button onClick={() => window.location.reload()} className="text-blue-400 underline">ページを再読み込みする</button>
+                            <p className="text-gray-500 font-bold mb-4">繝・・繧ｿ縺瑚ｪｭ縺ｿ霎ｼ繧√∪縺帙ｓ縺ｧ縺励◆縲・/p>
+                            <button onClick={() => window.location.reload()} className="text-blue-400 underline">繝壹・繧ｸ繧貞・隱ｭ縺ｿ霎ｼ縺ｿ縺吶ｋ</button>
                           </div>
                         ) : (
                           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-2 md:px-4 pb-24">
@@ -1905,8 +1897,8 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                                         </div>
                                         <div className="flex items-center justify-between mt-1">
                                           <div className="text-[10px] md:text-xs font-black text-blue-500">
-                                            {unit.price === 'Open' ? 'OPEN' : `${parseInt(unit.price || "0").toLocaleString()}円`}
-                                            {unit.taxExcluded && <span className="text-gray-600 text-[8px] ml-1 font-bold">({parseInt(unit.taxExcluded).toLocaleString()}円税抜)</span>}
+                                            {unit.price === 'Open' ? 'OPEN' : `${parseInt(unit.price || "0").toLocaleString()}蜀・}
+                                            {unit.taxExcluded && <span className="text-gray-600 text-[8px] ml-1 font-bold">({parseInt(unit.taxExcluded).toLocaleString()}蜀・ｨ取栢)</span>}
                                           </div>
                                           {unit.youtube && (
                                             <a
@@ -1942,7 +1934,7 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
             {/* Layer 3: Category Details */}
             <section id="category-details" className="py-20 md:py-32 max-w-7xl mx-auto px-4">
               <div className="flex items-center gap-4 mb-10 md:mb-16">
-                <h2 className="text-2xl md:text-4xl font-black tracking-tighter">カテゴリー詳細</h2>
+                <h2 className="text-2xl md:text-4xl font-black tracking-tighter">繧ｫ繝・ざ繝ｪ繝ｼ隧ｳ邏ｰ</h2>
                 <div className="flex-grow h-px bg-gray-200"></div>
               </div>
 
@@ -1976,26 +1968,23 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
 
                 <div className="relative z-10">
                   <h2 className="text-4xl md:text-5xl font-black text-white mb-8 tracking-tighter">
-                    理想の音響空間を、<br />共に創り上げましょう。
-                  </h2>
+                    逅・Φ縺ｮ髻ｳ髻ｿ遨ｺ髢薙ｒ縲・br />蜈ｱ縺ｫ蜑ｵ繧贋ｸ翫￡縺ｾ縺励ｇ縺・・                  </h2>
                   <p className="text-gray-400 mb-12 max-w-xl mx-auto font-bold leading-relaxed">
-                    車種やご予算、好みの音楽ジャンルに合わせて、最適なプランをシミュレーションいたします。
-                  </p>
+                    霆顔ｨｮ繧・＃莠育ｮ励∝･ｽ縺ｿ縺ｮ髻ｳ讌ｽ繧ｸ繝｣繝ｳ繝ｫ縺ｫ蜷医ｏ縺帙※縲∵怙驕ｩ縺ｪ繝励Λ繝ｳ繧偵す繝溘Η繝ｬ繝ｼ繧ｷ繝ｧ繝ｳ縺・◆縺励∪縺吶・                  </p>
                   <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                     <a
-                      href="https://line.me/R/ti/p/@soundang"
+                      href="https://page.line.me/312qjhsq?openQrModal=true"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full sm:w-auto bg-[#06C755] text-white px-12 py-5 rounded-[2rem] font-black shadow-xl shadow-green-500/20 hover:bg-[#05b34c] transition-all flex items-center justify-center gap-3 text-lg tracking-widest"
                     >
                       <MessageCircle className="w-6 h-6" />
-                      LINEで相談する
-                    </a>
+                      LINE縺ｧ逶ｸ隲・☆繧・                    </a>
                     <button
                       onClick={onBack}
                       className="w-full sm:w-auto bg-white text-gray-900 px-12 py-5 rounded-[2rem] font-black hover:bg-gray-100 transition-all text-lg tracking-widest"
                     >
-                      お問い合わせ
+                      縺雁撫縺・粋繧上○
                     </button>
                   </div>
                 </div>

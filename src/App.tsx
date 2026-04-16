@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -90,10 +90,10 @@ function AppContent() {
   const [showFacilityGallery, setShowFacilityGallery] = useState(false);
 
   const facilities = [
-    { title: "ショールーム", image: assets.showroomImage, description: "最新のデモ機を多数展示。ゆったりとご相談いただけます。" },
-    { title: "ピット", image: assets.pitImage, description: "最新設備を完備したクリーンな作業環境。愛車を大切にお預かりします。" },
-    { title: "ワークスペース", image: assets.workspaceImage, description: "熟練の職人が一つひとつ丁寧に加工を行う、こだわりの作業場。" },
-    { title: "試聴室", image: assets.auditionRoomImage, description: "ホームオーディオのような環境で、各スピーカーの個性をじっくり比較。" }
+    { title: "繧ｷ繝ｧ繝ｼ繝ｫ繝ｼ繝", image: assets.showroomImage, description: "譛譁ｰ縺ｮ繝・Δ讖溘ｒ螟壽焚螻慕､ｺ縲ゅｆ縺｣縺溘ｊ縺ｨ縺皮嶌隲・＞縺溘□縺代∪縺吶・ },
+    { title: "繝斐ャ繝・, image: assets.pitImage, description: "譛譁ｰ險ｭ蛯吶ｒ螳悟ｙ縺励◆繧ｯ繝ｪ繝ｼ繝ｳ縺ｪ菴懈･ｭ迺ｰ蠅・よ・霆翫ｒ螟ｧ蛻・↓縺企舌°繧翫＠縺ｾ縺吶・ },
+    { title: "繝ｯ繝ｼ繧ｯ繧ｹ繝壹・繧ｹ", image: assets.workspaceImage, description: "辭溽ｷｴ縺ｮ閨ｷ莠ｺ縺御ｸ縺､縺ｲ縺ｨ縺､荳∝ｯｧ縺ｫ蜉蟾･繧定｡後≧縲√％縺繧上ｊ縺ｮ菴懈･ｭ蝣ｴ縲・ },
+    { title: "隧ｦ閨ｴ螳､", image: assets.auditionRoomImage, description: "繝帙・繝繧ｪ繝ｼ繝・ぅ繧ｪ縺ｮ繧医≧縺ｪ迺ｰ蠅・〒縲∝推繧ｹ繝斐・繧ｫ繝ｼ縺ｮ蛟区ｧ繧偵§縺｣縺上ｊ豈碑ｼ・・ }
   ];
 
   useEffect(() => {
@@ -149,7 +149,7 @@ function AppContent() {
           return {
             date: `${date.getFullYear()}.${String(date.getMonth() + 1).padStart(2, '0')}.${String(date.getDate()).padStart(2, '0')}`,
             category: category,
-            title: post.title.rendered.replace(/&nbsp;/g, ' ').replace(/&#8211;/g, '–').replace(/&#8212;/g, '—').replace(/&#8220;/g, '“').replace(/&#8221;/g, '”').replace(/&#8216;/g, '‘').replace(/&#8217;/g, '’'),
+            title: post.title.rendered.replace(/&nbsp;/g, ' ').replace(/&#8211;/g, '窶・).replace(/&#8212;/g, '窶・).replace(/&#8220;/g, '窶・).replace(/&#8221;/g, '窶・).replace(/&#8216;/g, '窶・).replace(/&#8217;/g, '窶・),
             link: post.link,
             image: image
           };
@@ -163,19 +163,19 @@ function AppContent() {
           {
             date: "2026.03.30",
             category: "Audio",
-            title: "【ウェブサイトのスピーカー交換パッケージのご紹介】",
+            title: "縲舌え繧ｧ繝悶し繧､繝医・繧ｹ繝斐・繧ｫ繝ｼ莠､謠帙ヱ繝・こ繝ｼ繧ｸ縺ｮ縺皮ｴｹ莉九・,
             link: "https://www.soundang.com/webbrog/2026/03/30/%e3%80%90%e3%82%a6%e3%82%a7%e3%83%96%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e3%82%b9%e3%83%94%e3%83%bc%e3%82%ab%e3%83%bc%e4%ba%a4%e6%8f%9b%e3%83%91%e3%83%83%e3%82%b1%e3%83%bc%e3%82%b8%e3%81%ae%e3%81%94/"
           },
           {
             date: "2026.03.29",
             category: "Audio",
-            title: "【カローラクロスのスピーカー交換】",
+            title: "縲舌き繝ｭ繝ｼ繝ｩ繧ｯ繝ｭ繧ｹ縺ｮ繧ｹ繝斐・繧ｫ繝ｼ莠､謠帙・,
             link: "https://www.soundang.com/webbrog/2026/03/29/%e3%80%90%e3%82%ab%e3%83%ad%e3%83%bc%e3%83%a9%e3%82%af%e3%83%ad%e3%82%b9%e3%81%ae%e3%82%b9%e3%83%94%e3%83%bc%e3%82%ab%e3%83%bc%e4%ba%a4%e6%8f%9b%e3%80%91/"
           },
           {
             date: "2026.03.28",
             category: "Info",
-            title: "【4月に集中】",
+            title: "縲・譛医↓髮・ｸｭ縲・,
             link: "https://www.soundang.com/webbrog/2026/03/28/%e3%80%904%e6%9c%88%e3%81%ab%e9%9b%86%e4%b8%ad%e3%80%91/"
           }
         ]);
@@ -254,7 +254,7 @@ function AppContent() {
               onClick={() => setShowPasswordModal(true)}
               className="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold"
             >
-              管理者ログインが必要です。クリックして認証
+              邂｡逅・・Ο繧ｰ繧､繝ｳ縺悟ｿ・ｦ√〒縺吶ゅけ繝ｪ繝・け縺励※隱崎ｨｼ
             </button>
           </div>
         )
@@ -324,7 +324,7 @@ function MainView({
                   <Lock className="w-8 h-8 text-blue-600" />
                 </div>
                 <h3 className="text-2xl font-black tracking-tighter">STAFF LOGIN</h3>
-                <p className="text-xs text-gray-500 font-bold uppercase tracking-widest mt-1">管理者認証</p>
+                <p className="text-xs text-gray-500 font-bold uppercase tracking-widest mt-1">邂｡逅・・ｪ崎ｨｼ</p>
               </div>
 
               <form onSubmit={handlePasswordSubmit} className="space-y-4">
@@ -333,19 +333,19 @@ function MainView({
                     type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    placeholder="パスワードを入力"
+                    placeholder="繝代せ繝ｯ繝ｼ繝峨ｒ蜈･蜉・
                     className={`w-full px-6 py-4 bg-gray-50 border-2 rounded-2xl font-bold focus:outline-none transition-all ${passwordError ? 'border-red-500 bg-red-50' : 'border-transparent focus:border-blue-500'}`}
                     autoFocus
                   />
                   {passwordError && (
-                    <p className="text-red-500 text-[10px] font-bold mt-2 ml-2 uppercase tracking-widest">認証に失敗しました</p>
+                    <p className="text-red-500 text-[10px] font-bold mt-2 ml-2 uppercase tracking-widest">隱崎ｨｼ縺ｫ螟ｱ謨励＠縺ｾ縺励◆</p>
                   )}
                 </div>
                 <button
                   type="submit"
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-2xl font-black tracking-widest shadow-lg shadow-blue-500/20 transition-all"
                 >
-                  認証する
+                  隱崎ｨｼ縺吶ｋ
                 </button>
                 <button
                   type="button"
@@ -356,7 +356,7 @@ function MainView({
                   }}
                   className="w-full text-gray-400 hover:text-gray-600 text-xs font-bold uppercase tracking-widest py-2"
                 >
-                  キャンセル
+                  繧ｭ繝｣繝ｳ繧ｻ繝ｫ
                 </button>
               </form>
             </motion.div>
@@ -394,30 +394,30 @@ function MainView({
           <div className="flex-1 flex items-center justify-end gap-1.5 md:gap-3">
             {/* LINE Inquiry - Icon only on small screens */}
             <a
-              href="https://lin.ee/cdfCnx8"
+              href="https://page.line.me/312qjhsq?openQrModal=true"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-12 h-12 md:w-auto md:px-5 md:py-2.5 bg-[#06C755] text-white rounded-xl font-black transition-all hover:bg-[#05b34c] shadow-sm shrink-0"
-              aria-label="LINEで相談する"
+              aria-label="LINE縺ｧ逶ｸ隲・☆繧・
             >
               <MessageSquare className="w-5 h-5 md:mr-2" />
-              <span className="hidden sm:inline text-[10px] tracking-widest">LINE相談</span>
+              <span className="hidden sm:inline text-[10px] tracking-widest">LINE逶ｸ隲・/span>
             </a>
 
             {/* Reservation - Icon only on small screens */}
             <a
               href="#contact"
               className="flex items-center justify-center w-12 h-12 md:w-auto md:px-5 md:py-2.5 bg-blue-600 text-white rounded-xl font-black transition-all hover:bg-blue-700 shadow-sm shrink-0"
-              aria-label="来店予約"
+              aria-label="譚･蠎嶺ｺ育ｴ・
             >
               <CalendarIcon className="w-5 h-5 md:mr-2" />
-              <span className="hidden sm:inline text-[10px] tracking-widest">来店予約</span>
+              <span className="hidden sm:inline text-[10px] tracking-widest">譚･蠎嶺ｺ育ｴ・/span>
             </a>
 
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="lg:hidden w-12 h-12 flex items-center justify-center hover:bg-gray-100 rounded-xl transition-colors shrink-0"
-              aria-label={isMobileMenuOpen ? "メニューを閉じる" : "メニューを開く"}
+              aria-label={isMobileMenuOpen ? "繝｡繝九Η繝ｼ繧帝哩縺倥ｋ" : "繝｡繝九Η繝ｼ繧帝幕縺・}
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -443,7 +443,7 @@ function MainView({
                   {emergencyAnnouncement.image && (
                     <SafeImage
                       src={emergencyAnnouncement.image}
-                      alt="緊急のお知らせ画像"
+                      alt="邱頑･縺ｮ縺顔衍繧峨○逕ｻ蜒・
                       className="w-32 h-32 object-cover rounded-xl shadow-md"
                     />
                   )}
@@ -459,7 +459,7 @@ function MainView({
                   rel="noopener noreferrer"
                   className="bg-red-600 text-white px-8 py-4 rounded-xl font-black text-sm tracking-widest hover:bg-red-700 transition-all shadow-lg shadow-red-200 shrink-0"
                 >
-                  詳細を見る
+                  隧ｳ邏ｰ繧定ｦ九ｋ
                 </a>
               )}
             </motion.div>
@@ -490,7 +490,7 @@ function MainView({
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="w-12 h-12 flex items-center justify-center hover:bg-gray-50 rounded-xl transition-colors"
-                  aria-label="メニューを閉じる"
+                  aria-label="繝｡繝九Η繝ｼ繧帝哩縺倥ｋ"
                 >
                   <X className="w-6 h-6" />
                 </button>
@@ -521,16 +521,15 @@ function MainView({
 
               <div className="p-6 border-t border-gray-50 space-y-3">
                 <a
-                  href="https://lin.ee/cdfCnx8"
+                  href="https://page.line.me/312qjhsq?openQrModal=true"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex flex-col items-center justify-center gap-1 w-full py-4 bg-[#06C755] text-white rounded-2xl shadow-lg shadow-green-500/20"
                 >
                   <div className="flex items-center gap-3 font-black text-sm text-[#000000] drop-shadow-sm">
                     <MessageSquare className="w-5 h-5" />
-                    LINEで相談する
-                  </div>
-                  <span className="text-[10px] font-bold opacity-90 text-[#000000] drop-shadow-sm">※車種別適合・見積相談OK</span>
+                    LINE縺ｧ逶ｸ隲・☆繧・                  </div>
+                  <span className="text-[10px] font-bold opacity-90 text-[#000000] drop-shadow-sm">窶ｻ霆顔ｨｮ蛻･驕ｩ蜷医・隕狗ｩ咲嶌隲⑯K</span>
                 </a>
                 <a
                   href="#contact"
@@ -539,9 +538,9 @@ function MainView({
                 >
                   <div className="flex items-center gap-3 font-black text-sm">
                     <CalendarIcon className="w-5 h-5" />
-                    来店予約・お問い合わせ
+                    譚･蠎嶺ｺ育ｴ・・縺雁撫縺・粋繧上○
                   </div>
-                  <span className="text-[10px] font-bold opacity-80">※初めての方もお気軽にどうぞ</span>
+                  <span className="text-[10px] font-bold opacity-80">窶ｻ蛻昴ａ縺ｦ縺ｮ譁ｹ繧ゅ♀豌苓ｻｽ縺ｫ縺ｩ縺・◇</span>
                 </a>
               </div>
             </motion.div>
@@ -554,7 +553,7 @@ function MainView({
         <div className="absolute inset-0 overflow-hidden">
           <SafeImage
             src={assets.heroImage}
-            alt="Sound ANG 店舗正面イメージ"
+            alt="Sound ANG 蠎苓・豁｣髱｢繧､繝｡繝ｼ繧ｸ"
             className="w-full h-full object-cover"
             loading="eager"
           />
@@ -566,33 +565,31 @@ function MainView({
             <div className="flex flex-col gap-4 mb-8">
               <div className="inline-flex items-center gap-2 md:gap-3 w-fit px-4 py-2 md:px-6 md:py-2.5 bg-blue-600/10 backdrop-blur-md border border-blue-500/20 rounded-full">
                 <span className="text-blue-400 text-[9px] md:text-sm font-black uppercase tracking-[0.15em] whitespace-nowrap">
-                  福岡のカーオーディオ・セキュリティ専門店
-                </span>
+                  遖丞ｲ｡縺ｮ繧ｫ繝ｼ繧ｪ繝ｼ繝・ぅ繧ｪ繝ｻ繧ｻ繧ｭ繝･繝ｪ繝・ぅ蟆る摩蠎・                </span>
                 <div className="w-px h-3 md:h-4 bg-blue-500/30"></div>
-                <span className="text-white text-[10px] md:text-sm font-black tracking-[0.1em] whitespace-nowrap">エナジー</span>
+                <span className="text-white text-[10px] md:text-sm font-black tracking-[0.1em] whitespace-nowrap">繧ｨ繝翫ず繝ｼ</span>
               </div>
             </div>
 
             <h1 className="text-3xl md:text-7xl font-black text-white mb-8 leading-[1.2] md:leading-[1.1] tracking-tighter">
-              <span className="block md:inline whitespace-nowrap">感性を揺さぶる至高の音。</span><br className="hidden md:block" />
-              <span className="block md:inline whitespace-nowrap">愛車を護る、確かな技術。</span>
+              <span className="block md:inline whitespace-nowrap">諢滓ｧ繧呈昭縺輔・繧玖・鬮倥・髻ｳ縲・/span><br className="hidden md:block" />
+              <span className="block md:inline whitespace-nowrap">諢幄ｻ翫ｒ隴ｷ繧九∫｢ｺ縺九↑謚陦薙・/span>
             </h1>
 
             <div className="flex flex-col gap-3 mb-10">
               <div className="flex items-center gap-2.5">
                 <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
-                <span className="text-blue-500 text-lg md:text-3xl font-black opacity-90 tracking-tight leading-none">九州No.1のセキュリティ実績</span>
+                <span className="text-blue-500 text-lg md:text-3xl font-black opacity-90 tracking-tight leading-none">荵晏ｷ朦o.1縺ｮ繧ｻ繧ｭ繝･繝ｪ繝・ぅ螳溽ｸｾ</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
-                <span className="text-blue-500 text-lg md:text-3xl font-black opacity-90 tracking-tight leading-none">パイオニア最高峰「TS-Z1GR」認定店</span>
+                <span className="text-blue-500 text-lg md:text-3xl font-black opacity-90 tracking-tight leading-none">繝代う繧ｪ繝九い譛鬮伜ｳｰ縲卦S-Z1GR縲崎ｪ榊ｮ壼ｺ・/span>
               </div>
             </div>
             <p className="text-base md:text-2xl text-gray-200 mb-8 font-bold leading-relaxed max-w-3xl">
-              音を極め、愛車を護り続けて30年以上。<br className="hidden md:block" />
-              ハイエンド・オーディオの繊細な調音から、鉄壁のセキュリティ施工まで。<br className="hidden md:block" />
-              熟練の技で、あなたのカーライフに究極の感動と安心を。
-            </p>
+              髻ｳ繧呈･ｵ繧√∵・霆翫ｒ隴ｷ繧顔ｶ壹￠縺ｦ30蟷ｴ莉･荳翫・br className="hidden md:block" />
+              繝上う繧ｨ繝ｳ繝峨・繧ｪ繝ｼ繝・ぅ繧ｪ縺ｮ郢顔ｴｰ縺ｪ隱ｿ髻ｳ縺九ｉ縲・延螢√・繧ｻ繧ｭ繝･繝ｪ繝・ぅ譁ｽ蟾･縺ｾ縺ｧ縲・br className="hidden md:block" />
+              辭溽ｷｴ縺ｮ謚縺ｧ縲√≠縺ｪ縺溘・繧ｫ繝ｼ繝ｩ繧､繝輔↓遨ｶ讌ｵ縺ｮ諢溷虚縺ｨ螳牙ｿ・ｒ縲・            </p>
           </motion.div>
         </div>
 
@@ -639,11 +636,10 @@ function MainView({
                 <Trophy className="w-7 h-7 text-white" />
               </div>
               <div>
-                <h2 className="font-black text-xl mb-1 tracking-tighter">九州セキュリティ施工実績No.1</h2>
+                <h2 className="font-black text-xl mb-1 tracking-tighter">荵晏ｷ槭そ繧ｭ繝･繝ｪ繝・ぅ譁ｽ蟾･螳溽ｸｾNo.1</h2>
                 <p className="text-xs text-blue-600 font-black uppercase tracking-widest mb-3">Security Performance No.1</p>
                 <p className="text-sm text-gray-600 leading-relaxed font-bold">
-                  カーセキュリティの累計施工台数において九州トップクラスの実績。培ったノウハウが確かな安心を支えます。
-                </p>
+                  繧ｫ繝ｼ繧ｻ繧ｭ繝･繝ｪ繝・ぅ縺ｮ邏ｯ險域命蟾･蜿ｰ謨ｰ縺ｫ縺翫＞縺ｦ荵晏ｷ槭ヨ繝・・繧ｯ繝ｩ繧ｹ縺ｮ螳溽ｸｾ縲ょ淹縺｣縺溘ヮ繧ｦ繝上え縺檎｢ｺ縺九↑螳牙ｿ・ｒ謾ｯ縺医∪縺吶・                </p>
               </div>
             </div>
 
@@ -652,11 +648,10 @@ function MainView({
                 <Music2 className="w-7 h-7 text-white" />
               </div>
               <div>
-                <h2 className="font-black text-xl mb-1 tracking-tighter">パイオニア TS-Z1GR 認定店</h2>
+                <h2 className="font-black text-xl mb-1 tracking-tighter">繝代う繧ｪ繝九い TS-Z1GR 隱榊ｮ壼ｺ・/h2>
                 <p className="text-xs text-blue-600 font-black uppercase tracking-widest mb-3">Carrozzeria RS Certified Shop</p>
                 <p className="text-sm text-gray-600 leading-relaxed font-bold">
-                  厳しい実技審査をクリア。パイオニア最高峰スピーカーの真価を引き出す、全国でも希少な認定ショップです。
-                </p>
+                  蜴ｳ縺励＞螳滓橿蟇ｩ譟ｻ繧偵け繝ｪ繧｢縲ゅヱ繧､繧ｪ繝九い譛鬮伜ｳｰ繧ｹ繝斐・繧ｫ繝ｼ縺ｮ逵滉ｾ｡繧貞ｼ輔″蜃ｺ縺吶∝・蝗ｽ縺ｧ繧ょｸ悟ｰ代↑隱榊ｮ壹す繝ｧ繝・・縺ｧ縺吶・                </p>
               </div>
             </div>
 
@@ -665,11 +660,10 @@ function MainView({
                 <ShieldCheck className="w-7 h-7 text-white" />
               </div>
               <div>
-                <h2 className="font-black text-xl mb-1 tracking-tighter">最高峰SPS認定店</h2>
+                <h2 className="font-black text-xl mb-1 tracking-tighter">譛鬮伜ｳｰSPS隱榊ｮ壼ｺ・/h2>
                 <p className="text-xs text-blue-600 font-bold uppercase tracking-widest mb-3">Security Professional Shop</p>
                 <p className="text-sm text-gray-600 leading-relaxed font-bold">
-                  最新の盗難手口を知り尽くした「プロ」の集団。Grgo・Pantheraの性能を100%引き出す施工を約束します。
-                </p>
+                  譛譁ｰ縺ｮ逶鈴屮謇句哨繧堤衍繧雁ｰｽ縺上＠縺溘後・繝ｭ縲阪・髮・屮縲・rgo繝ｻPanthera縺ｮ諤ｧ閭ｽ繧・00%蠑輔″蜃ｺ縺呎命蟾･繧堤ｴ・據縺励∪縺吶・                </p>
               </div>
             </div>
 
@@ -678,11 +672,10 @@ function MainView({
                 <History className="w-7 h-7 text-white" />
               </div>
               <div>
-                <h2 className="font-black text-xl mb-1 tracking-tighter">創業30年以上の信頼</h2>
+                <h2 className="font-black text-xl mb-1 tracking-tighter">蜑ｵ讌ｭ30蟷ｴ莉･荳翫・菫｡鬆ｼ</h2>
                 <p className="text-xs text-blue-600 font-black uppercase tracking-widest mb-3">Over 30 Years Experience</p>
                 <p className="text-sm text-gray-600 leading-relaxed font-bold">
-                  福岡で30年以上。熟練の技術者による確かな施工と充実のアフターフォローで、一生涯のパートナーとなります。
-                </p>
+                  遖丞ｲ｡縺ｧ30蟷ｴ莉･荳翫ら・邱ｴ縺ｮ謚陦楢・↓繧医ｋ遒ｺ縺九↑譁ｽ蟾･縺ｨ蜈・ｮ溘・繧｢繝輔ち繝ｼ繝輔か繝ｭ繝ｼ縺ｧ縲∽ｸ逕滓ｶｯ縺ｮ繝代・繝医リ繝ｼ縺ｨ縺ｪ繧翫∪縺吶・                </p>
               </div>
             </div>
           </div>
@@ -694,32 +687,31 @@ function MainView({
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <span className="text-blue-500 font-bold tracking-widest uppercase text-sm mb-4 block">Service Menu</span>
-            <h2 className="text-4xl font-bold leading-tight">施工メニュー</h2>
+            <h2 className="text-4xl font-bold leading-tight">譁ｽ蟾･繝｡繝九Η繝ｼ</h2>
             <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
-              ANGが提供する専門サービス。各カテゴリーのメニューより詳細をご覧いただけます。
-            </p>
+              ANG縺梧署萓帙☆繧句ｰる摩繧ｵ繝ｼ繝薙せ縲ょ推繧ｫ繝・ざ繝ｪ繝ｼ縺ｮ繝｡繝九Η繝ｼ繧医ｊ隧ｳ邏ｰ繧偵＃隕ｧ縺・◆縺縺代∪縺吶・            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: "オーディオメニュー",
-                subtitle: "スピーカー交換・音質向上",
-                description: "純正スピーカーからの交換で劇的な変化を。デッドニング（防振）込みのパッケージもご用意。",
+                title: "繧ｪ繝ｼ繝・ぅ繧ｪ繝｡繝九Η繝ｼ",
+                subtitle: "繧ｹ繝斐・繧ｫ繝ｼ莠､謠帙・髻ｳ雉ｪ蜷台ｸ・,
+                description: "邏疲ｭ｣繧ｹ繝斐・繧ｫ繝ｼ縺九ｉ縺ｮ莠､謠帙〒蜉・噪縺ｪ螟牙喧繧偵ゅョ繝・ラ繝九Φ繧ｰ・磯亟謖ｯ・芽ｾｼ縺ｿ縺ｮ繝代ャ繧ｱ繝ｼ繧ｸ繧ゅ＃逕ｨ諢上・,
                 image: assets.audioMenuImage,
                 onClick: () => navigate('/audio')
               },
               {
-                title: "セキュリティーメニュー",
-                subtitle: "愛車を守る最新システム",
-                description: "最新の盗難手口（リレーアタック等）から愛車をガード。車種別の最適プランをご提案。",
+                title: "繧ｻ繧ｭ繝･繝ｪ繝・ぅ繝ｼ繝｡繝九Η繝ｼ",
+                subtitle: "諢幄ｻ翫ｒ螳医ｋ譛譁ｰ繧ｷ繧ｹ繝・Β",
+                description: "譛譁ｰ縺ｮ逶鈴屮謇句哨・医Μ繝ｬ繝ｼ繧｢繧ｿ繝・け遲会ｼ峨°繧画・霆翫ｒ繧ｬ繝ｼ繝峨りｻ顔ｨｮ蛻･縺ｮ譛驕ｩ繝励Λ繝ｳ繧偵＃謠先｡医・,
                 image: assets.securityMenuImage,
                 onClick: () => navigate('/security')
               },
               {
-                title: "ドラレコ・デジタルミラー・他",
-                subtitle: "安心・安全のドライブをサポート",
-                description: "前後ドラレコ、アルパイン製デジタルミラー、レーダー探知機等、配線を隠して美しく取り付け。",
+                title: "繝峨Λ繝ｬ繧ｳ繝ｻ繝・ず繧ｿ繝ｫ繝溘Λ繝ｼ繝ｻ莉・,
+                subtitle: "螳牙ｿ・・螳牙・縺ｮ繝峨Λ繧､繝悶ｒ繧ｵ繝昴・繝・,
+                description: "蜑榊ｾ後ラ繝ｩ繝ｬ繧ｳ縲√い繝ｫ繝代う繝ｳ陬ｽ繝・ず繧ｿ繝ｫ繝溘Λ繝ｼ縲√Ξ繝ｼ繝繝ｼ謗｢遏･讖溽ｭ峨・・邱壹ｒ髫縺励※鄒弱＠縺丞叙繧贋ｻ倥￠縲・,
                 image: assets.dashcamMenuImage,
                 onClick: () => navigate('/dashcam')
               }
@@ -739,13 +731,13 @@ function MainView({
                   <p className="text-gray-500 text-sm mb-4 flex-grow">{pkg.description}</p>
                   <button
                     onClick={() => {
-                      if (pkg.title === "オーディオメニュー") navigate('/audio');
-                      if (pkg.title === "セキュリティーメニュー") navigate('/security');
-                      if (pkg.title === "ドラレコ・デジタルミラー・他") navigate('/dashcam');
+                      if (pkg.title === "繧ｪ繝ｼ繝・ぅ繧ｪ繝｡繝九Η繝ｼ") navigate('/audio');
+                      if (pkg.title === "繧ｻ繧ｭ繝･繝ｪ繝・ぅ繝ｼ繝｡繝九Η繝ｼ") navigate('/security');
+                      if (pkg.title === "繝峨Λ繝ｬ繧ｳ繝ｻ繝・ず繧ｿ繝ｫ繝溘Λ繝ｼ繝ｻ莉・) navigate('/dashcam');
                     }}
                     className="w-full bg-gray-900 text-white py-3 rounded-full font-bold hover:bg-gray-700 transition-colors"
                   >
-                    詳細を見る
+                    隧ｳ邏ｰ繧定ｦ九ｋ
                   </button>
                 </div>
               </motion.div>
@@ -764,10 +756,9 @@ function MainView({
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div className="max-w-2xl">
               <span className="text-blue-600 font-black tracking-[0.3em] uppercase text-xs mb-4 block">Journal & Case Studies</span>
-              <h2 className="text-4xl md:text-5xl font-black leading-tight tracking-tighter">施工事例・ブログ</h2>
+              <h2 className="text-4xl md:text-5xl font-black leading-tight tracking-tighter">譁ｽ蟾･莠倶ｾ九・繝悶Ο繧ｰ</h2>
               <p className="text-gray-500 mt-4 font-bold leading-relaxed">
-                最新の施工事例や、カーオーディオ・セキュリティに関する役立つ情報を発信しています。
-              </p>
+                譛譁ｰ縺ｮ譁ｽ蟾･莠倶ｾ九ｄ縲√き繝ｼ繧ｪ繝ｼ繝・ぅ繧ｪ繝ｻ繧ｻ繧ｭ繝･繝ｪ繝・ぅ縺ｫ髢｢縺吶ｋ蠖ｹ遶九▽諠・ｱ繧堤匱菫｡縺励※縺・∪縺吶・              </p>
             </div>
             <a
               href="https://soundang.com/webbrog/"
@@ -775,7 +766,7 @@ function MainView({
               rel="noopener noreferrer"
               className="group flex items-center gap-3 bg-white px-8 py-4 rounded-2xl shadow-xl shadow-blue-500/5 border border-gray-100 text-sm font-black hover:bg-blue-600 hover:text-white transition-all"
             >
-              ブログ一覧を見る
+              繝悶Ο繧ｰ荳隕ｧ繧定ｦ九ｋ
               <div className="w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center group-hover:bg-white/20 transition-colors">
                 <ChevronRight className="w-4 h-4" />
               </div>
@@ -804,7 +795,7 @@ function MainView({
                     href={post.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`ブログ記事を読む: ${post.title.replace(/<[^>]*>/g, '')}`}
+                    aria-label={`繝悶Ο繧ｰ險倅ｺ九ｒ隱ｭ繧: ${post.title.replace(/<[^>]*>/g, '')}`}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.1 }}
@@ -837,7 +828,7 @@ function MainView({
             </div>
           ) : (
             <div className="py-20 text-center bg-gray-50 rounded-[3rem] border-2 border-dashed border-gray-200">
-              <p className="text-gray-400 font-bold uppercase tracking-widest">記事が見つかりませんでした。</p>
+              <p className="text-gray-400 font-bold uppercase tracking-widest">險倅ｺ九′隕九▽縺九ｊ縺ｾ縺帙ｓ縺ｧ縺励◆縲・/p>
             </div>
           )}
         </div>
@@ -859,7 +850,7 @@ function MainView({
               <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl border border-white/10">
                 <SafeImage
                   src={assets.heroImage}
-                  alt="Sound ANG 店舗外観"
+                  alt="Sound ANG 蠎苓・螟冶ｦｳ"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
@@ -879,7 +870,7 @@ function MainView({
                   >
                     <SafeImage
                       src={facility.image}
-                      alt={facility.title + "の写真"}
+                      alt={facility.title + "縺ｮ蜀咏悄"}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60 group-hover:opacity-100"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-4">
@@ -893,19 +884,17 @@ function MainView({
             <div className="lg:sticky lg:top-32 space-y-8">
               <div>
                 <span className="text-blue-500 font-black text-xs uppercase tracking-[0.3em] mb-4 block">Shop Access</span>
-                <h2 className="text-3xl font-black text-white mb-6 tracking-tighter">店舗のご案内</h2>
+                <h2 className="text-3xl font-black text-white mb-6 tracking-tighter">蠎苓・縺ｮ縺疲｡亥・</h2>
                 <p className="text-gray-300 font-bold leading-relaxed mb-8">
-                  福岡県大野城市の御笠川沿いに店舗を構えております。
-                  こちらの外観を目印にお越しください。駐車場も完備しております。
-                </p>
+                  遖丞ｲ｡逵悟､ｧ驥主沁蟶ゅ・蠕｡隨蟾晄ｲｿ縺・↓蠎苓・繧呈ｧ九∴縺ｦ縺翫ｊ縺ｾ縺吶・                  縺薙■繧峨・螟冶ｦｳ繧堤岼蜊ｰ縺ｫ縺願ｶ翫＠縺上□縺輔＞縲るｧ占ｻ雁ｴ繧ょｮ悟ｙ縺励※縺翫ｊ縺ｾ縺吶・                </p>
                 <div className="space-y-4">
                   <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/10">
                     <div className="w-10 h-10 rounded-xl bg-blue-600/20 flex items-center justify-center shrink-0">
                       <MapPin className="w-5 h-5 text-blue-500" />
                     </div>
                     <div>
-                      <p className="text-white font-bold text-sm">所在地</p>
-                      <p className="text-sm text-gray-400">〒816-0912 福岡県大野城市御笠川5-4-14</p>
+                      <p className="text-white font-bold text-sm">謇蝨ｨ蝨ｰ</p>
+                      <p className="text-sm text-gray-400">縲・16-0912 遖丞ｲ｡逵悟､ｧ驥主沁蟶ょｾ｡隨蟾・-4-14</p>
                     </div>
                   </div>
                 </div>
@@ -920,7 +909,7 @@ function MainView({
                   allowFullScreen={true}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Sound ANG 所在地マップ"
+                  title="Sound ANG 謇蝨ｨ蝨ｰ繝槭ャ繝・
                 ></iframe>
               </div>
             </div>
@@ -933,7 +922,7 @@ function MainView({
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-blue-500 shrink-0" />
-                <span>〒816-0912 福岡県大野城市御笠川5-4-14</span>
+                <span>縲・16-0912 遖丞ｲ｡逵悟､ｧ驥主沁蟶ょｾ｡隨蟾・-4-14</span>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-blue-500 shrink-0" />
@@ -971,7 +960,7 @@ function MainView({
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 flex items-center justify-center bg-white/5 hover:bg-white/10 rounded-full transition-colors"
-                  aria-label={social.name + "でSound ANGをフォロー"}
+                  aria-label={social.name + "縺ｧSound ANG繧偵ヵ繧ｩ繝ｭ繝ｼ"}
                 >
                   <social.icon className="w-5 h-5 text-white" aria-hidden="true" />
                 </a>

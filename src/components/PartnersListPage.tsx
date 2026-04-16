@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowLeft, ExternalLink, ShieldCheck, Speaker, Video, Globe, MapPin, Phone } from 'lucide-react';
 
@@ -43,8 +43,8 @@ export const PartnersListPage: React.FC<{ onBack: () => void }> = ({ onBack }) =
         <section className="mb-24">
           <div className="mb-12">
             <span className="text-blue-600 font-black tracking-[0.3em] uppercase text-xs mb-4 block">Group Network</span>
-            <h2 className="text-4xl font-black tracking-tighter text-gray-900">カーオーディオセンター・グループ</h2>
-            <p className="text-gray-500 font-bold mt-4">全国に展開する、国内最大級のプロショップネットワークです。</p>
+            <h2 className="text-4xl font-black tracking-tighter text-gray-900">繧ｫ繝ｼ繧ｪ繝ｼ繝・ぅ繧ｪ繧ｻ繝ｳ繧ｿ繝ｼ繝ｻ繧ｰ繝ｫ繝ｼ繝・/h2>
+            <p className="text-gray-500 font-bold mt-4">蜈ｨ蝗ｽ縺ｫ螻暮幕縺吶ｋ縲∝嵜蜀・怙螟ｧ邏壹・繝励Ο繧ｷ繝ｧ繝・・繝阪ャ繝医Ρ繝ｼ繧ｯ縺ｧ縺吶・/p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -81,8 +81,8 @@ export const PartnersListPage: React.FC<{ onBack: () => void }> = ({ onBack }) =
         <section>
           <div className="mb-12">
             <span className="text-blue-600 font-black tracking-[0.3em] uppercase text-xs mb-4 block">Brand List</span>
-            <h2 className="text-4xl font-black tracking-tighter text-gray-900">取り扱いメーカー一覧</h2>
-            <p className="text-gray-500 font-bold mt-4">国内外の主要ブランドからハイエンドブランドまで、幅広く対応しております。</p>
+            <h2 className="text-4xl font-black tracking-tighter text-gray-900">蜿悶ｊ謇ｱ縺・Γ繝ｼ繧ｫ繝ｼ荳隕ｧ</h2>
+            <p className="text-gray-500 font-bold mt-4">蝗ｽ蜀・､悶・荳ｻ隕√ヶ繝ｩ繝ｳ繝峨°繧峨ワ繧､繧ｨ繝ｳ繝峨ヶ繝ｩ繝ｳ繝峨∪縺ｧ縲∝ｹ・ｺ・￥蟇ｾ蠢懊＠縺ｦ縺翫ｊ縺ｾ縺吶・/p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -112,14 +112,12 @@ export const PartnersListPage: React.FC<{ onBack: () => void }> = ({ onBack }) =
 
         <div className="mt-24 pt-12 border-t border-gray-100 text-center">
           <p className="text-gray-400 text-sm font-bold mb-8">
-            こちらに掲載のないメーカーについても、お気軽にお問い合わせください。
-          </p>
+            縺薙■繧峨↓謗ｲ霈峨・縺ｪ縺・Γ繝ｼ繧ｫ繝ｼ縺ｫ縺､縺・※繧ゅ√♀豌苓ｻｽ縺ｫ縺雁撫縺・粋繧上○縺上□縺輔＞縲・          </p>
           <button
             onClick={onBack}
             className="bg-gray-900 text-white px-12 py-5 rounded-[2rem] font-black hover:bg-blue-600 transition-all shadow-xl shadow-blue-100"
           >
-            トップページへ戻る
-          </button>
+            繝医ャ繝励・繝ｼ繧ｸ縺ｸ謌ｻ繧・          </button>
         </div>
       </div>
     </motion.div>
