@@ -50,6 +50,7 @@ import { SiteProvider, useSite } from './contexts/SiteContext';
 import { StaffDashboard } from './components/Staff/StaffDashboard';
 import { PartnersSection } from './components/PartnersSection';
 import { PartnersListPage } from './components/PartnersListPage';
+import { ReservationFormPage } from './components/Form/ReservationFormPage';
 import { SafeImage } from './components/ui/SafeImage';
 
 interface BlogPost {
@@ -88,6 +89,7 @@ function AppContent() {
   const [password, setPassword] = useState("");
   const [passwordError, setPasswordError] = useState(false);
   const [showFacilityGallery, setShowFacilityGallery] = useState(false);
+  const [showMegaMenu, setShowMegaMenu] = useState(false);
 
   const facilities = [
     { title: "ショールーム", image: assets.showroomImage, description: "最新のデモ機を多数展示。ゆったりとご相談いただけます。" },
@@ -205,6 +207,7 @@ function AppContent() {
       } />
       <Route path="/dashcam" element={<DashcamMenuDetail onBack={() => navigate('/')} />} />
       <Route path="/partners" element={<PartnersListPage onBack={() => navigate('/')} />} />
+      <Route path="/reservation" element={<ReservationFormPage onBack={() => navigate('/')} />} />
 
       {/* Legacy Redirects (soundang.com & sec-ang.com) */}
       <Route path="/index.html" element={<Navigate to="/" replace />} />
@@ -277,6 +280,8 @@ function AppContent() {
           setIsMobileMenuOpen={setIsMobileMenuOpen}
           handleLogoClick={handleLogoClick}
           navigate={navigate}
+          showMegaMenu={showMegaMenu}
+          setShowMegaMenu={setShowMegaMenu}
         />
       } />
     </Routes>
@@ -299,7 +304,9 @@ function MainView({
   isMobileMenuOpen,
   setIsMobileMenuOpen,
   handleLogoClick,
-  navigate
+  navigate,
+  showMegaMenu,
+  setShowMegaMenu
 }: any) {
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-orange-500 selection:text-white">
@@ -383,7 +390,71 @@ function MainView({
           {/* Center: Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-8 text-sm font-bold uppercase tracking-widest shrink-0">
             <a href="#" className="hover:text-blue-500 transition-colors">Home</a>
-            <a href="#services" className="hover:text-blue-500 transition-colors">Services</a>
+            <div
+              className="relative py-8 group/nav"
+              onMouseEnter={() => setShowMegaMenu(true)}
+              onMouseLeave={() => setShowMegaMenu(false)}
+            >
+              <button
+                className={`hover:text-blue-500 transition-colors flex items-center gap-1 group-hover/nav:text-blue-500 ${showMegaMenu ? 'text-blue-500 font-black' : ''}`}
+                onClick={() => navigate('/audio')}
+              >
+                Services <ChevronRight className={`w-4 h-4 transition-transform ${showMegaMenu ? 'rotate-90' : ''}`} />
+              </button>
+
+              {/* Mega Menu Overlay */}
+              <AnimatePresence>
+                {showMegaMenu && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    className="absolute top-full left-1/2 -translate-x-1/2 w-[800px] bg-white rounded-[2rem] shadow-2xl border border-gray-100 overflow-hidden mt-2"
+                  >
+                    <div className="grid grid-cols-2 h-[400px]">
+                      {/* Left: Speakers (Visual Focus) */}
+                      <div className="relative group/cat overflow-hidden cursor-pointer" onClick={() => navigate('/audio')}>
+                        <SafeImage src={assets.audioMenuImage} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover/cat:scale-110" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                        <div className="absolute inset-0 p-8 flex flex-col justify-end text-white">
+                          <span className="text-[10px] font-black tracking-[0.3em] uppercase opacity-70 mb-2">Sound Upgrade</span>
+                          <h4 className="text-3xl font-black tracking-tighter mb-4">Car Audio</h4>
+                          <ul className="space-y-2">
+                            {['スピーカーパッケージ', 'サブウーファー', 'DSP/アンプ', 'デッドニング'].map(item => (
+                              <li key={item} className="flex items-center gap-2 text-xs font-bold opacity-0 group-hover/cat:opacity-100 transition-opacity translate-y-2 group-hover/cat:translate-y-0 duration-300">
+                                <CheckCircle2 className="w-3 h-3 text-blue-400" /> {item}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+
+                      {/* Right: Security & Others */}
+                      <div className="grid grid-rows-2">
+                        <div className="relative group/cat overflow-hidden cursor-pointer border-l border-white/10" onClick={() => navigate('/security')}>
+                          <SafeImage src={assets.securityMenuImage} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover/cat:scale-110" />
+                          <div className="absolute inset-0 bg-blue-900/40 backdrop-blur-[2px] group-hover/cat:backdrop-blur-none transition-all" />
+                          <div className="absolute inset-0 p-6 flex flex-col justify-center text-white text-center">
+                            <ShieldCheck className="w-8 h-8 mx-auto mb-2 text-blue-300" />
+                            <h4 className="text-xl font-black tracking-tighter">Security</h4>
+                            <p className="text-[10px] font-bold opacity-70 mt-1">愛車を護る、確かな技術</p>
+                          </div>
+                        </div>
+                        <div className="relative group/cat overflow-hidden cursor-pointer border-t border-l border-white/10" onClick={() => navigate('/dashcam')}>
+                          <SafeImage src={assets.dashcamMenuImage} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover/cat:scale-110" />
+                          <div className="absolute inset-0 bg-gray-900/40 backdrop-blur-[2px] group-hover/cat:backdrop-blur-none transition-all" />
+                          <div className="absolute inset-0 p-6 flex flex-col justify-center text-white text-center">
+                            <Package className="w-8 h-8 mx-auto mb-2 text-orange-300" />
+                            <h4 className="text-xl font-black tracking-tighter">Gadgets</h4>
+                            <p className="text-[10px] font-bold opacity-70 mt-1">ドラレコ・ミラー・他</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
             <a href="#partners" className="hover:text-blue-500 transition-colors">Partners</a>
             <a href="#blog" className="hover:text-blue-500 transition-colors">Blog</a>
             <a href="#info" className="hover:text-blue-500 transition-colors">Info</a>
@@ -405,14 +476,14 @@ function MainView({
             </a>
 
             {/* Reservation - Icon only on small screens */}
-            <a
-              href="#contact"
+            <button
+              onClick={() => navigate('/reservation')}
               className="flex items-center justify-center w-12 h-12 md:w-auto md:px-5 md:py-2.5 bg-blue-600 text-white rounded-xl font-black transition-all hover:bg-blue-700 shadow-sm shrink-0"
               aria-label="来店予約"
             >
               <CalendarIcon className="w-5 h-5 md:mr-2" />
               <span className="hidden sm:inline text-[10px] tracking-widest">来店予約</span>
-            </a>
+            </button>
 
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -424,6 +495,7 @@ function MainView({
           </div>
         </div>
       </header>
+
 
       {/* Emergency Announcement */}
       {
@@ -467,7 +539,7 @@ function MainView({
         )
       }
 
-      {/* Mobile Menu Overlay - Moved outside header to fix stacking context */}
+      {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <>
@@ -496,12 +568,52 @@ function MainView({
                 </button>
               </div>
 
-              <div className="flex-grow overflow-y-auto p-6">
-                <nav className="flex flex-col gap-1">
+              <div className="flex-grow overflow-y-auto p-4">
+                <div className="grid grid-cols-2 gap-3 mb-6">
+                  <button
+                    onClick={() => { setIsMobileMenuOpen(false); navigate('/audio'); }}
+                    className="relative aspect-square rounded-2xl overflow-hidden group/m"
+                  >
+                    <SafeImage src={assets.audioMenuImage} className="absolute inset-0 w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white p-2">
+                      <Speaker className="w-6 h-6 mb-1" />
+                      <span className="text-[10px] font-black uppercase text-center">Audio</span>
+                    </div>
+                  </button>
+                  <button
+                    onClick={() => { setIsMobileMenuOpen(false); navigate('/security'); }}
+                    className="relative aspect-square rounded-2xl overflow-hidden"
+                  >
+                    <SafeImage src={assets.securityMenuImage} className="absolute inset-0 w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-blue-900/40 flex flex-col items-center justify-center text-white p-2">
+                      <ShieldCheck className="w-6 h-6 mb-1" />
+                      <span className="text-[10px] font-black uppercase text-center">Security</span>
+                    </div>
+                  </button>
+                  <button
+                    onClick={() => { setIsMobileMenuOpen(false); navigate('/dashcam'); }}
+                    className="relative aspect-square rounded-2xl overflow-hidden"
+                  >
+                    <SafeImage src={assets.dashcamMenuImage} className="absolute inset-0 w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-gray-900/40 flex flex-col items-center justify-center text-white p-2">
+                      <Package className="w-6 h-6 mb-1" />
+                      <span className="text-[10px] font-black uppercase text-center">Gadgets</span>
+                    </div>
+                  </button>
+                  <button
+                    onClick={() => { setIsMobileMenuOpen(false); navigate('/partners'); }}
+                    className="relative aspect-square rounded-2xl overflow-hidden border border-gray-100"
+                  >
+                    <div className="absolute inset-0 bg-gray-50 flex flex-col items-center justify-center text-gray-900 p-2">
+                      <LayoutGrid className="w-6 h-6 mb-1 text-blue-500" />
+                      <span className="text-[10px] font-black uppercase text-center">Partners</span>
+                    </div>
+                  </button>
+                </div>
+
+                <nav className="flex flex-col gap-1 border-t border-gray-50 pt-4">
                   {[
                     { href: "#", label: "Home" },
-                    { href: "#services", label: "Services" },
-                    { href: "#partners", label: "Partners" },
                     { href: "#blog", label: "Blog" },
                     { href: "#info", label: "Info" },
                     { href: "#contact", label: "Contact" },
@@ -510,7 +622,7 @@ function MainView({
                       key={i}
                       href={link.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="px-4 py-4 rounded-2xl text-sm font-black text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all flex items-center justify-between group"
+                      className="px-4 py-3 rounded-xl text-xs font-black text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all flex items-center justify-between group"
                     >
                       {link.label}
                       <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -532,9 +644,11 @@ function MainView({
                   </div>
                   <span className="text-[10px] font-bold opacity-90 text-[#000000] drop-shadow-sm">※車種別適合・見積相談OK</span>
                 </a>
-                <a
-                  href="#contact"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                <button
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    navigate('/reservation');
+                  }}
                   className="flex flex-col items-center justify-center gap-1 w-full py-4 bg-blue-600 text-white rounded-2xl shadow-lg shadow-blue-500/20"
                 >
                   <div className="flex items-center gap-3 font-black text-sm">
@@ -542,15 +656,16 @@ function MainView({
                     来店予約・お問い合わせ
                   </div>
                   <span className="text-[10px] font-bold opacity-80">※初めての方もお気軽にどうぞ</span>
-                </a>
+                </button>
               </div>
             </motion.div>
           </>
         )}
       </AnimatePresence>
 
+
       {/* Hero */}
-      <section className="relative pt-20">
+      < section className="relative pt-20" >
         <div className="absolute inset-0 overflow-hidden">
           <SafeImage
             src={assets.heroImage}
@@ -628,10 +743,10 @@ function MainView({
             </button>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Trust Signals */}
-      <section className="bg-white pt-32 pb-16">
+      < section className="bg-white pt-32 pb-16" >
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-6">
             <div className="flex items-start gap-4 p-8 bg-gray-50 rounded-2xl border border-gray-100 transition-all hover:bg-gray-100/50 group">
@@ -687,10 +802,10 @@ function MainView({
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Packages */}
-      <section id="services" className="pt-32 pb-24 bg-gray-50">
+      < section id="services" className="pt-32 pb-24 bg-gray-50" >
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <span className="text-blue-500 font-bold tracking-widest uppercase text-sm mb-4 block">Service Menu</span>
@@ -752,12 +867,12 @@ function MainView({
             ))}
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Latest Blog / Journal Style List */}
-      <section id="blog" className="py-32 bg-gray-50 relative overflow-hidden">
+      < section id="blog" className="py-32 bg-gray-50 relative overflow-hidden" >
         {/* Decorative background elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-50 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl opacity-50"></div>
+        < div className="absolute top-0 right-0 w-96 h-96 bg-blue-50 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl opacity-50" ></div >
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-50 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl opacity-50"></div>
 
         <div className="max-w-7xl mx-auto px-4 relative z-10">
@@ -807,8 +922,8 @@ function MainView({
                     aria-label={`ブログ記事を読む: ${post.title.replace(/<[^>]*>/g, '')}`}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: i * 0.1 }}
-                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: i * 0.1 }}
+                    viewport={{ once: true, margin: "-50px" }}
                     className="group flex flex-col md:flex-row md:items-center bg-white rounded-3xl overflow-hidden shadow-lg shadow-gray-200/50 border border-gray-100 hover:shadow-2xl hover:shadow-blue-500/10 transition-all hover:-translate-y-1 p-6 md:p-8 gap-6"
                   >
                     <div className={`w-2 h-12 md:h-16 rounded-full ${color.icon} shrink-0`}></div>
@@ -844,12 +959,12 @@ function MainView({
       </section >
 
       {/* Business Calendar */}
-      <div id="info">
+      < div id="info" >
         <BusinessCalendar />
-      </div>
+      </div >
 
       {/* Partners & Brands */}
-      <PartnersSection onViewAll={() => navigate('/partners')} />
+      < PartnersSection onViewAll={() => navigate('/partners')} />
 
       {/* Footer */}
       <footer id="contact" className="bg-gray-900 text-gray-400 pt-20 pb-10">

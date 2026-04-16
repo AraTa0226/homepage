@@ -12,6 +12,7 @@ import {
   Mail
 } from 'lucide-react';
 import { useCalendar } from '../../contexts/CalendarContext';
+import { useNavigate } from 'react-router-dom';
 
 const LineIcon = ({ className }: { className?: string }) => (
   <svg
@@ -28,6 +29,7 @@ const LineIcon = ({ className }: { className?: string }) => (
 const DEFAULT_WEEKLY_HOLIDAYS = [2, 5]; // 0:日, 1:月, 2:火, 3:水, 4:木, 5:金, 6:土
 
 export const BusinessCalendar = () => {
+  const navigate = useNavigate();
   const [viewDate, setViewDate] = useState(new Date());
   const { holidays } = useCalendar();
 
@@ -270,12 +272,13 @@ export const BusinessCalendar = () => {
             </div>
 
             <div className="mt-10">
-              <a
-                href="#contact"
+              <button
+                onClick={() => navigate('/reservation')}
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-2xl font-bold shadow-lg shadow-blue-500/20 transition-all flex items-center justify-center gap-2"
               >
-                <span className="text-lg">来店予約</span>
-              </a>
+                <Mail className="w-5 h-5 mr-1" />
+                <span className="text-lg">専用フォームで予約する</span>
+              </button>
             </div>
           </motion.div>
         </div>

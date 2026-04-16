@@ -27,7 +27,8 @@ import {
   Megaphone,
   Trophy,
   Music2,
-  History
+  History,
+  Sparkles
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useState, useEffect } from 'react';
@@ -270,6 +271,9 @@ function MainView({
   navigate,
   plans
 }: any) {
+  const [activeCategory, setActiveCategory] = useState(0);
+  const audioPlans = plans?.filter((p: any) => p.type === 'audio') || [];
+
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-orange-500 selection:text-white">
 
@@ -649,88 +653,158 @@ function MainView({
         </div>
       </section>
 
-      {/* Premium Editorial Text-Based List for Audio */}
-      <section id="services" className="pt-32 pb-32 bg-white selection:bg-blue-100">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-gray-900 pb-12">
-            <div>
-              <span className="text-blue-600 font-extrabold tracking-[0.3em] uppercase text-xs mb-6 block">Service Menu</span>
-              <h2 className="text-4xl md:text-5xl font-black tracking-tight text-gray-900">
-                オーディオ施工メニュー
-              </h2>
-            </div>
-            <p className="text-gray-500 font-bold text-sm md:text-base leading-relaxed max-w-md">
-              ANGが誇る卓越したオーディオインストール。純正の音質改善からハイエンドDSP構築まで、お客様の求める理想の音響空間を創り上げます。
+      {/* MISSION CONTROL DASHBOARD SECTION */}
+      <section id="services" className="relative pt-32 pb-32 bg-white overflow-hidden">
+        {/* Decorative Background */}
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-50/30 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gray-50 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/3 pointer-events-none"></div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+          <div className="mb-12 text-center">
+            <span className="inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 font-extrabold tracking-[0.2em] uppercase text-[10px] sm:text-xs mb-6 shadow-sm border border-blue-100">
+              <Sparkles className="w-3.5 h-3.5" />
+              Interactive Dashboard
+            </span>
+            <h2 className="text-3xl md:text-5xl font-black tracking-tighter text-gray-900 mb-4 leading-tight">
+              インストール・パッケージ
+            </h2>
+            <p className="text-gray-500 font-bold text-xs md:text-sm tracking-widest uppercase">
+              クリックしてカテゴリーを瞬時に切り替え
             </p>
           </div>
 
-          <div className="flex flex-col">
-            {plans?.filter(p => p.type === 'audio').map((category, i) => (
-              <div
-                key={i}
-                className="grid md:grid-cols-12 gap-8 md:gap-16 py-12 border-b border-gray-100 group hover:bg-gray-50/50 transition-colors duration-500"
-              >
-                {/* Left Column: Category Info */}
-                <div className="md:col-span-5 flex flex-col justify-start">
-                  <div className="flex items-center gap-4 mb-4">
-                    <span className="text-gray-300 font-black text-2xl tracking-tighter w-8">{(i + 1).toString().padStart(2, '0')}</span>
-                    <h3 className="text-xl md:text-2xl font-black text-gray-900 tracking-tight">
-                      {category.category}
-                    </h3>
-                  </div>
-                  {category.description && (
-                    <p className="text-sm text-gray-500 font-bold leading-loose pl-12">
-                      {category.description.split('\n')[0]} {/* Show only a brief excerpt */}
-                    </p>
-                  )}
-                </div>
+          {/* DASHBOARD CONTAINER */}
+          <div className="flex flex-col lg:flex-row gap-8">
 
-                {/* Right Column: Menu Items */}
-                <div className="md:col-span-7 flex flex-col justify-center">
-                  <div className="flex flex-col gap-1">
-                    {category.items.map((item, j) => (
-                      <div
+            {/* LEFT SIDEBAR (MOBILE: HORIZONTAL TABS) */}
+            <div className="lg:w-80 shrink-0">
+              {/* Mobile: Horizontal scroll tabs */}
+              <div className="lg:hidden flex overflow-x-auto gap-2 pb-4 no-scrollbar">
+                {audioPlans.map((cat: any, i: number) => (
+                  <button
+                    key={i}
+                    onClick={() => setActiveCategory(i)}
+                    className={`whitespace-nowrap px-6 py-4 rounded-2xl font-black text-sm tracking-wider transition-all border-2 
+                        ${activeCategory === i
+                        ? 'bg-blue-600 border-blue-600 text-white shadow-lg shadow-blue-500/30'
+                        : 'bg-white border-gray-100 text-gray-400'}`}
+                  >
+                    {cat.category}
+                  </button>
+                ))}
+              </div>
+
+              {/* Desktop: Vertical sticky sidebar */}
+              <div className="hidden lg:flex flex-col gap-3 sticky top-32">
+                {audioPlans.map((cat: any, i: number) => (
+                  <button
+                    key={i}
+                    onClick={() => setActiveCategory(i)}
+                    className={`group flex items-center justify-between p-6 rounded-[2rem] font-black text-lg tracking-tighter transition-all text-left border-2
+                        ${activeCategory === i
+                        ? 'bg-blue-600 border-blue-600 text-white shadow-2xl shadow-blue-500/20 translate-x-4'
+                        : 'bg-white border-gray-50 text-gray-400 hover:border-blue-100 hover:text-blue-600 hover:translate-x-2'}`}
+                  >
+                    <div className="flex items-center gap-4">
+                      <span className={`text-xs font-mono opacity-50 ${activeCategory === i ? 'text-white' : 'text-gray-300'}`}>
+                        0{i + 1}
+                      </span>
+                      {cat.category}
+                    </div>
+                    <ChevronRight className={`w-5 h-5 transition-transform ${activeCategory === i ? 'translate-x-0' : '-translate-x-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-0'}`} />
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* MAIN CONTENT AREA */}
+            <div className="flex-grow">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeCategory}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
+                  className="bg-white/40 backdrop-blur-md rounded-[3rem] p-8 md:p-12 border border-white/60 shadow-xl shadow-gray-200/20"
+                >
+                  <div className="mb-10">
+                    <h3 className="text-2xl md:text-3xl font-black text-gray-900 mb-4 tracking-tight">
+                      {audioPlans[activeCategory]?.category}
+                    </h3>
+                    <p className="text-gray-500 font-medium text-sm md:text-base leading-relaxed max-w-2xl">
+                      {audioPlans[activeCategory]?.description?.replace(/\*\*/g, '') || "このカテゴリーの全パッケージを比較いただけます。"}
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {audioPlans[activeCategory]?.items.map((item: any, j: number) => (
+                      <Link
+                        to={`/audio/${item.slug || ''}`}
                         key={j}
-                        onClick={() => navigate('/audio')}
-                        className="group/item flex flex-col sm:flex-row sm:items-center justify-between py-4 px-4 -mx-4 rounded-xl hover:bg-white hover:shadow-xl hover:shadow-gray-200/50 transition-all duration-300 cursor-pointer border border-transparent hover:border-gray-100"
+                        className="group flex flex-col sm:flex-row items-center bg-white/80 rounded-3xl p-4 gap-6 border border-white shadow-sm hover:shadow-2xl hover:shadow-blue-900/5 hover:bg-white transition-all duration-500 transform-gpu hover:-translate-y-1"
                       >
-                        <div className="flex items-center flex-wrap gap-x-3 gap-y-2 mb-2 sm:mb-0">
-                          <span className="font-bold text-gray-900 group-hover/item:text-blue-600 transition-colors">
-                            {item.name}
-                          </span>
-                          {item.badge && (
-                            <span className="text-[10px] bg-gray-100 text-gray-600 px-2.5 py-1 rounded-sm font-black tracking-widest uppercase">
-                              {item.badge}
-                            </span>
+                        {/* Mini Thumbnail */}
+                        <div className="w-full sm:w-32 aspect-video sm:aspect-square rounded-2xl overflow-hidden shrink-0 relative bg-gray-50">
+                          {item.image ? (
+                            <SafeImage
+                              src={item.image}
+                              alt={item.name}
+                              className="w-full h-full object-cover transform-gpu group-hover:scale-110 transition-transform duration-1000"
+                            />
+                          ) : (
+                            <div className="w-full h-full flex items-center justify-center text-gray-200">
+                              <Music2 className="w-10 h-10" />
+                            </div>
                           )}
                         </div>
 
-                        <div className="flex items-center sm:justify-end gap-6 w-full sm:w-auto">
-                          <div className="h-px bg-gray-200 flex-grow sm:hidden"></div>
-                          <div className="text-right whitespace-nowrap">
-                            <span className="font-extrabold text-lg text-gray-900">
-                              {item.price === 'ASK' ? 'ASK' : formatPrice(item.price)}
+                        {/* Text */}
+                        <div className="flex-grow py-2 text-center sm:text-left">
+                          {item.badge && (
+                            <span className="text-[9px] text-blue-600 font-black tracking-widest uppercase mb-1.5 block">
+                              {item.badge}
                             </span>
-                            {item.price !== 'ASK' && <span className="text-xs text-gray-400 font-bold ml-1">〜</span>}
-                          </div>
-                          <ChevronRight className="w-5 h-5 text-gray-300 group-hover/item:text-blue-500 group-hover/item:translate-x-1 transition-all" />
+                          )}
+                          <h4 className="text-lg font-black text-gray-900 leading-tight mb-3 group-hover:text-blue-600 transition-colors">
+                            {item.name}
+                          </h4>
+                          {item.features && item.features.length > 0 && (
+                            <div className="flex flex-wrap justify-center sm:justify-start gap-1.5">
+                              {item.features.slice(0, 3).map((f: string, idx: number) => (
+                                <span key={idx} className="bg-blue-50 text-blue-500 px-2 py-0.5 text-[9px] font-bold rounded-md whitespace-nowrap">
+                                  {f}
+                                </span>
+                              ))}
+                            </div>
+                          )}
                         </div>
-                      </div>
+
+                        {/* Arrow */}
+                        <div className="hidden sm:flex shrink-0 w-10 h-10 rounded-full bg-gray-50 items-center justify-center group-hover:bg-blue-600 transition-all">
+                          <ChevronRight className="w-5 h-5 text-gray-300 group-hover:text-white" />
+                        </div>
+                      </Link>
                     ))}
                   </div>
-                </div>
-              </div>
-            ))}
+                </motion.div>
+              </AnimatePresence>
+            </div>
           </div>
 
-          <div className="mt-20 text-center">
-            <button
-              onClick={() => navigate('/audio')}
-              className="inline-flex items-center gap-4 bg-gray-900 text-white px-10 py-5 rounded-full font-black text-sm tracking-widest hover:bg-blue-600 hover:scale-105 transition-all duration-300 shadow-2xl shadow-gray-900/20"
-            >
-              詳細をオーディオ専門ページで見る
-              <ChevronRight className="w-4 h-4" />
-            </button>
+          {/* DEDICATED FORM BUTTON */}
+          <div className="mt-20 flex flex-col items-center gap-8">
+            <div className="w-16 h-1 bg-gray-100 rounded-full"></div>
+            <div className="text-center">
+              <h4 className="text-xl font-black mb-6">ANG専用予約フォームで相談する</h4>
+              <Link
+                to="/reservation"
+                className="inline-flex items-center justify-center gap-4 bg-gray-900 text-white px-12 py-5 rounded-full font-black text-sm tracking-widest hover:bg-blue-600 transition-all duration-300 shadow-2xl shadow-gray-900/20 transform-gpu hover:-translate-y-1"
+              >
+                専用フォームで来店予約
+                <ChevronRight className="w-5 h-5" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
