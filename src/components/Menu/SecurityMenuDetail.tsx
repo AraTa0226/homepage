@@ -23,6 +23,7 @@ import {
   Car,
   Settings2,
   LayoutGrid,
+  Video,
   List,
   Menu,
   X,
@@ -301,10 +302,10 @@ export const SecurityMenuDetail: React.FC<SecurityMenuDetailProps> = ({ onBack, 
   ];
 
   const purposeNav = [
-    { id: 'security_panthera', title: "最高峰で守りたい", desc: "Panthera Zシリーズ", icon: ShieldCheck, color: "purple" },
-    { id: 'security_grgo', title: "バランス良く守りたい", desc: "Grgo Vシリーズ", icon: Shield, color: "blue" },
-    { id: 'security_viper', title: "利便性も重視したい", desc: "VIPER DS4 / 5706V", icon: Smartphone, color: "blue" },
-    { id: 'security_clifford', title: "鉄壁の守りが欲しい", desc: "CLIFFORD G6 / Matrix", icon: Lock, color: "indigo" },
+    { id: 'security_car', title: "車種から選ぶ", desc: "お車に最適化された専用プラン", icon: ShieldCheck, color: "blue" },
+    { id: 'security_panthera', title: "最高峰で守りたい", desc: "Panthera Zシリーズ", icon: Star, color: "purple" },
+    { id: 'dashcam', title: "証拠を残したい", desc: "ドライブレコーダー", icon: Video, color: "blue" },
+    { id: 'radar', title: "安全運転サポート", desc: "レーダー・レーザー探知機", icon: Zap, color: "indigo" },
   ];
 
   const colorClasses: Record<string, string> = {
@@ -884,57 +885,29 @@ export const SecurityMenuDetail: React.FC<SecurityMenuDetailProps> = ({ onBack, 
                   </button>
                 </div>
                 <div className="space-y-4 md:grid md:grid-cols-3 md:gap-8 md:space-y-0">
-                  {carTypeRecommendations.map((item, i) => {
+                  {plans.find(p => p.id === 'security_car')?.items.map((item, i) => {
                     const itemId = `car-type-${i}`;
                     return (
-                      <div key={i} className="bg-white/5 rounded-[2rem] md:rounded-[3rem] overflow-hidden border border-white/10 group hover:bg-white/10 transition-all">
-                        <div
-                          onClick={() => isMobile && setExpandedSection(expandedSection === itemId ? null : itemId)}
-                          className={`flex items-center justify-between p-6 md:p-0 md:block ${isMobile ? 'cursor-pointer' : ''}`}
-                        >
-                          <div className="flex items-center gap-4 md:block">
-                            <div className="w-16 h-16 md:w-full md:h-48 rounded-xl md:rounded-none overflow-hidden shrink-0">
-                              <SafeImage src={item.image} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt={item.type} />
-                            </div>
-                            <div className="md:p-8 md:pb-0">
-                              <h3 className="text-blue-400 text-[10px] md:text-xs font-black tracking-widest uppercase mb-1 md:mb-2">{item.type}</h3>
-                              <h4 className="text-lg md:text-xl font-black text-white md:mb-4">{item.recommend}</h4>
-                            </div>
+                      <div key={i} className="bg-white/5 rounded-[2rem] md:rounded-[3rem] overflow-hidden border border-white/10 group hover:bg-white/10 transition-all flex flex-col cursor-pointer" onClick={() => setSelectedItem(item)}>
+                        <div className="flex items-center gap-4 md:block flex-grow p-6 md:p-8">
+                          <div className="md:mb-6">
+                            <h3 className="text-blue-400 text-[10px] md:text-xs font-black tracking-widest uppercase mb-1 md:mb-2">{item.badge}</h3>
+                            <h4 className="text-lg md:text-xl font-black text-white">{item.name}</h4>
                           </div>
-                          {isMobile && (
-                            <div className={`w-8 h-8 rounded-full bg-white/10 flex items-center justify-center transition-transform ${expandedSection === itemId ? 'rotate-180' : ''}`}>
-                              <ChevronRight className="w-4 h-4 text-white rotate-90" />
-                            </div>
-                          )}
+                          <div className="hidden md:block">
+                            <ul className="space-y-2 mb-6">
+                              {(item.features || []).map((f, j) => (
+                                <li key={j} className="flex items-center gap-2 text-[11px] font-bold text-gray-400">
+                                  <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" />
+                                  {f}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
                         </div>
-
-                        <AnimatePresence>
-                          {(!isMobile || expandedSection === itemId) && (
-                            <motion.div
-                              initial={isMobile ? { height: 0, opacity: 0 } : {}}
-                              animate={isMobile ? { height: 'auto', opacity: 1 } : {}}
-                              exit={isMobile ? { height: 0, opacity: 0 } : {}}
-                            >
-                              <div className="px-6 pb-6 md:px-8 md:pb-8">
-                                <p className="text-sm text-gray-400 font-bold leading-relaxed">{item.desc}</p>
-                              </div>
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
                       </div>
                     );
                   })}
-                </div>
-
-                {/* Bottom View All Button for Car Type Recommendations */}
-                <div className="mt-12 flex justify-center">
-                  <button
-                    onClick={() => { setViewingFullList('security_car'); window.scrollTo(0, 0); }}
-                    className="w-full md:w-auto flex items-center justify-center gap-3 bg-white/5 border border-white/10 text-white py-4 px-12 rounded-2xl font-black text-xs md:text-lg tracking-widest hover:bg-white/10 transition-all shadow-sm group"
-                  >
-                    車種別おすすめモデルをすべて見る
-                    <ChevronRight className="w-4 h-4 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" />
-                  </button>
                 </div>
               </div>
             </section>
@@ -944,7 +917,7 @@ export const SecurityMenuDetail: React.FC<SecurityMenuDetailProps> = ({ onBack, 
               <div className="max-w-7xl mx-auto px-4">
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md:text-5xl font-black tracking-tighter mb-4">SECURITY PACKAGES</h2>
-                  <p className="text-gray-400 font-bold uppercase tracking-widest text-xs">プラン一覧</p>
+                  <p className="text-gray-400 font-bold uppercase tracking-widest text-xs">ブランド別プラン一覧</p>
                 </div>
 
                 <div className="space-y-4 md:space-y-8">

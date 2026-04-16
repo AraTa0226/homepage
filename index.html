@@ -4,20 +4,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="福岡県大野城市のカーオーディオ＆カーセキュリティ専門店 Sound ANG。専門店ならではの技術で、あなたの愛車をより安全で快適な空間へと導きます。PantheraやGrgo、最新のオーディオ機器の施工はお任せください。" />
+  <meta name="description" content="%VITE_SITE_DESCRIPTION%" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.soundang.com/" />
-  <meta property="og:title" content="Sound ANG | 福岡の大野城市のカーオーディオ＆カーセキュリティ専門店" />
-  <meta property="og:description"
-    content="福岡県大野城市のカーオーディオ＆カーセキュリティ専門店 Sound ANG。専門店ならではの技術で、あなたの愛車をより安全で快適な空間へと導きます。" />
-  <meta property="og:image" content="https://www.soundang.com/images/Top/security.jpg" />
+  <meta property="og:url" content="%VITE_SITE_URL%/" />
+  <meta property="og:title" content="%VITE_SITE_NAME%" />
+  <meta property="og:description" content="%VITE_SITE_DESCRIPTION%" />
+  <meta property="og:image" content="%VITE_SITE_URL%/images/Top/security.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <title>Sound ANG | 福岡の大野城市のカーオーディオ＆カーセキュリティ専門店</title>
+  <title>%VITE_SITE_NAME%</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 </head>
 
 <body>

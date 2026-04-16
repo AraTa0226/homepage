@@ -5,7 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
+    "dev:audio": "vite --mode audio --port=3000 --host=0.0.0.0",
+    "dev:security": "vite --mode security --port=3000 --host=0.0.0.0",
     "build": "vite build",
+    "build:audio": "vite build --mode audio",
+    "build:security": "vite build --mode security",
     "preview": "vite preview",
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit"

@@ -1611,42 +1611,33 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
                                   </div>
                                 </div>
 
-                                <div className="p-4 md:p-8 pt-3 md:pt-4 relative z-10 flex flex-col flex-grow min-w-0">
-                                  <div className="flex flex-col md:block mb-2 md:mb-0">
-                                    <h4 className="text-sm md:text-2xl font-black text-gray-900 leading-tight truncate md:whitespace-normal mb-0.5 md:mb-1">
+                                <div className="p-4 md:p-5 relative z-10 flex flex-col flex-grow min-w-0 justify-between">
+                                  <div className="mb-3 md:mb-4">
+                                    <h4 className="text-sm md:text-lg font-black text-gray-900 leading-tight truncate md:whitespace-normal mb-1 md:mb-2">
                                       {item.name}
                                     </h4>
-                                    <div className="text-lg md:text-3xl font-black text-blue-600">
-                                      {formatPrice(item.price)}
-                                    </div>
+                                    <p className="hidden md:block text-xs font-bold text-gray-500 line-clamp-2 leading-relaxed">
+                                      {item.features?.join(' / ')}
+                                    </p>
                                   </div>
 
-                                  <ul className="hidden md:block space-y-2.5 md:space-y-3 mb-6">
-                                    {(item.features || []).slice(0, 3).map((f, j) => (
-                                      <li key={j} className="flex items-start gap-2 text-xs md:text-sm font-bold text-gray-600">
-                                        <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
-                                        <span className="leading-tight">{f}</span>
-                                      </li>
-                                    ))}
-                                  </ul>
-
-                                  {/* Mobile: Simple feature list */}
-                                  <div className="md:hidden flex flex-wrap gap-1.5 mb-3">
-                                    {(item.features || []).slice(0, 2).map((f, j) => (
-                                      <span key={j} className="text-[9px] font-bold text-gray-500 bg-gray-100 px-2 py-0.5 rounded">
-                                        {f}
-                                      </span>
-                                    ))}
+                                  {/* Mobile: Simple feature text */}
+                                  <div className="md:hidden mb-3">
+                                    <p className="text-[10px] font-bold text-gray-400 line-clamp-1">
+                                      {item.features?.[0]}
+                                    </p>
                                   </div>
 
                                   <button
-                                    onClick={() => {
+                                    onClick={(e) => {
+                                      e.stopPropagation();
                                       setSelectedItem(item);
                                       setSelectedCategoryColor(categoryExplanations[section.id]?.color || 'blue');
                                     }}
-                                    className="mt-auto w-full bg-gray-900 text-white py-2 md:py-3.5 rounded-xl md:rounded-2xl font-black text-[9px] md:text-xs tracking-widest hover:bg-blue-600 transition-all shadow-sm md:shadow-lg"
+                                    className="mt-auto w-full flex items-center justify-between border-t border-gray-100 pt-3 md:pt-4 text-blue-600 font-black text-[10px] md:text-sm tracking-widest group-hover:text-blue-700 transition-colors"
                                   >
-                                    PLAN DETAILS
+                                    <span>詳細を見る</span>
+                                    <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                   </button>
                                 </div>
                               </motion.div>
