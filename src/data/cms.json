@@ -1,119 +1,119 @@
-﻿{
+{
   "lastUpdated": "2026-04-12T21:45:00Z",
   "plans": [
     {
       "id": "speaker_package",
-      "category": "繧ｹ繝斐・繧ｫ繝ｼ莠､謠帙・霆顔ｨｮ蛻･繝励Λ繝ｳ",
+      "category": "スピーカー交換・車種別プラン",
       "type": "audio",
-      "description": "髻ｳ雉ｪ繧｢繝・・縺ｮ隨ｬ荳豁ｩ縺ｯ繧ｹ繝斐・繧ｫ繝ｼ縺九ｉ縲・n謇玖ｻｽ縺ｪ**繝代ャ繧ｱ繝ｼ繧ｸ繝励Λ繝ｳ**縺九ｉ縲∝・陬・ｒ蟠ｩ縺輔↑縺・*霆顔ｨｮ蟆ら畑險ｭ險・*縺ｾ縺ｧ蟷・ｺ・￥縺皮畑諢上＠縺ｦ縺・∪縺吶・,
+      "description": "音質アップの第一歩はスピーカーから。\n手軽な**パッケージプラン**から、内装を崩さない**車種専用設計**まで幅広くご用意しています。",
       "showDescriptionInMenu": true,
       "showDescriptionInList": true,
       "items": [
         {
-          "name": "繧ｹ繝斐・繧ｫ繝ｼ莠､謠妝ASIC line・医さ繧｢繧ｭ繧ｷ繝｣繝ｫ・・,
+          "name": "スピーカー交換BASIC line（コアキシャル）",
           "price": "44000",
           "subType": "level",
-          "badge": "縺頑焔霆ｽ蟆主・",
+          "badge": "お手軽導入",
           "features": [
-            "繧ｳ繧｢繧ｭ繧ｷ繝｣繝ｫ繧ｹ繝斐・繧ｫ繝ｼ莠､謠・,
-            "邁｡譏薙ョ繝・ラ繝九Φ繧ｰ",
-            "繝舌・繝∵攝繝舌ャ繝輔Ν"
+            "コアキシャルスピーカー交換",
+            "簡易デッドニング",
+            "バーチ材バッフル"
           ],
           "image": "/images/Audio/basic_line_coaxial.webp"
         },
         {
-          "name": "繧ｹ繝斐・繧ｫ繝ｼ莠､謠妝ASIC line・医そ繝代Ξ繝ｼ繝茨ｼ・,
+          "name": "スピーカー交換BASIC line（セパレート）",
           "price": "59400",
           "subType": "level",
-          "badge": "蛻晏ｿ・・♀縺吶☆繧・,
+          "badge": "初心者おすすめ",
           "features": [
-            "繧ｻ繝代Ξ繝ｼ繝医せ繝斐・繧ｫ繝ｼ莠､謠・,
-            "邁｡譏薙ョ繝・ラ繝九Φ繧ｰ",
-            "繧､繝ｳ繝ｩ繧､繝ｳNW"
+            "セパレートスピーカー交換",
+            "簡易デッドニング",
+            "インラインNW"
           ],
           "image": "/images/Audio/basic_line_separate.webp"
         },
         {
-          "name": "繧ｹ繝斐・繧ｫ繝ｼ莠､謠婀TANDARD line・・0荳・・縺ｾ縺ｧ・・,
+          "name": "スピーカー交換STANDARD line（10万円まで）",
           "price": "104500",
           "subType": "level",
-          "badge": "繧ｳ繧ｹ繝第怙蠑ｷ",
+          "badge": "コスパ最強",
           "features": [
-            "繝溘ラ繝ｫ繧ｰ繝ｬ繝ｼ繝峨せ繝斐・繧ｫ繝ｼ",
-            "譛ｬ譬ｼ繝・ャ繝峨ル繝ｳ繧ｰ",
-            "繧､繝ｳ繝翫・繝舌ャ繝輔Ν"
+            "ミドルグレードスピーカー",
+            "本格デッドニング",
+            "インナーバッフル"
           ],
           "image": "/images/Audio/standard.webp"
         },
         {
-          "name": "繧ｹ繝斐・繧ｫ繝ｼ莠､謠娜REMIUM line・・0荳・・莉･荳奇ｼ・,
+          "name": "スピーカー交換PREMIUM line（10万円以上）",
           "price": "184800",
           "subType": "level",
-          "badge": "莠ｺ豌湧o.1",
+          "badge": "人気No.1",
           "features": [
-            "繝上う繧ｰ繝ｬ繝ｼ繝峨せ繝斐・繧ｫ繝ｼ",
-            "繝輔Ν繝・ャ繝峨ル繝ｳ繧ｰ",
-            "繝・ぅ繝ｼ繧ｿ繝ｼ隱ｿ謨ｴ"
+            "ハイグレードスピーカー",
+            "フルデッドニング",
+            "ツィーター調整"
           ],
           "image": "/images/Audio/premium.webp"
         },
         {
-          "name": "繝輔Ο繝ｳ繝・WAY繝励Λ繝ｳ",
+          "name": "フロント3WAYプラン",
           "price": "286000",
           "subType": "level",
-          "badge": "遨ｶ讌ｵ縺ｮ3way",
+          "badge": "究極の3way",
           "features": [
-            "繝輔Ο繝ｳ繝・way繧ｷ繧ｹ繝・Β",
-            "A繝斐Λ繝ｼ蝓九ａ霎ｼ縺ｿ蜉蟾･霎ｼ",
-            "蜈ｨ蜉帙ョ繝・ラ繝九Φ繧ｰ譁ｽ蟾･"
+            "フロント3wayシステム",
+            "Aピラー埋め込み加工込",
+            "全力デッドニング施工"
           ],
           "image": "/images/Audio/front_3way.webp"
         },
         {
-          "name": "霆ｽ閾ｪ蜍戊ｻ雁ｰら畑繧ｹ繝斐・繧ｫ繝ｼ繝代ャ繧ｱ繝ｼ繧ｸ",
+          "name": "軽自動車専用スピーカーパッケージ",
           "price": "44000",
           "subType": "car",
-          "badge": "霆ｽ縺ｫ縺翫☆縺吶ａ",
+          "badge": "軽におすすめ",
           "features": [
-            "霆ｽ閾ｪ蜍戊ｻ雁ｰら畑險ｭ險・,
-            "繝・ャ繝峨ル繝ｳ繧ｰ霎ｼ",
-            "蟾･雉・ｾｼ"
+            "軽自動車専用設計",
+            "デッドニング込",
+            "工賃込"
           ],
           "image": "/images/Audio/k-car.webp"
         },
         {
-          "name": "霆顔ｨｮ蛻･繧ｹ繝斐・繧ｫ繝ｼ莠､謠帙・繝ｩ繝ｳ",
+          "name": "車種別スピーカー交換プラン",
           "price": "44000",
           "subType": "car",
-          "badge": "螳牙ｿ・ヱ繝・け",
+          "badge": "安心パック",
           "features": [
-            "莠ｺ豌苓ｻ顔ｨｮ蛻･繧ｻ繝・ヨ",
-            "蟾･雉・ｾｼ",
-            "邏疲ｭ｣蠕ｩ蟶ｰ蜿ｯ閭ｽ"
+            "人気車種別セット",
+            "工賃込",
+            "純正復帰可能"
           ],
           "image": "/images/Audio/standard-car.webp"
         },
         {
-          "name": "BMW繧ｹ繝斐・繧ｫ繝ｼ莠､謠帙ヱ繝・こ繝ｼ繧ｸ",
+          "name": "BMWスピーカー交換パッケージ",
           "price": "77000",
           "subType": "car",
-          "badge": "霆顔ｨｮ蟆ら畑",
+          "badge": "車種専用",
           "features": [
-            "霆顔ｨｮ蟆ら畑險ｭ險・,
-            "邏疲ｭ｣蜉蟾･縺ｪ縺・,
-            "髻ｳ雉ｪ蜉・噪蜷台ｸ・
+            "車種専用設計",
+            "純正加工なし",
+            "音質劇的向上"
           ],
           "image": "/images/Audio/bmw_sound_upgrade.webp"
         },
         {
-          "name": "Mercedes Benz繧ｹ繝斐・繧ｫ繝ｼ莠､謠帙ヱ繝・こ繝ｼ繧ｸ",
+          "name": "Mercedes Benzスピーカー交換パッケージ",
           "price": "88000",
           "subType": "car",
-          "badge": "霆顔ｨｮ蟆ら畑",
+          "badge": "車種専用",
           "features": [
-            "霆顔ｨｮ蟆ら畑險ｭ險・,
-            "邏疲ｭ｣蜉蟾･縺ｪ縺・,
-            "髻ｳ雉ｪ蜉・噪蜷台ｸ・
+            "車種専用設計",
+            "純正加工なし",
+            "音質劇的向上"
           ],
           "image": "/images/Audio/mercedes-benz_sound_upgrade.webp"
         }
@@ -122,24 +122,24 @@
     },
     {
       "id": "bass_power",
-      "category": "菴朱浹蠑ｷ蛹悶・繝代Ρ繝ｼ繧｢繝・・・医い繝ｳ繝暦ｼ・,
+      "category": "低音強化・パワーアップ（アンプ）",
       "type": "audio",
-      "description": "髻ｳ讌ｽ縺ｫ鬲ゅｒ蜷ｹ縺崎ｾｼ繧縲・*繧ｵ繝悶え繝ｼ繝輔ぃ繝ｼ**縺ｫ繧医ｋ驥堺ｽ朱浹縺ｮ霑ｽ蜉縺ｨ縲・*螟夜Κ繧｢繝ｳ繝・*縺ｫ繧医ｋ隗｣蜒丞ｺｦ縺ｮ蜷台ｸ翫ｒ縺疲署譯医＠縺ｾ縺吶・,
+      "description": "音楽に魂を吹き込む。**サブウーファー**による重低音の追加と、**外部アンプ**による解像度の向上をご提案します。",
       "showDescriptionInMenu": true,
       "showDescriptionInList": true,
       "items": [
         {
-          "name": "逵√せ繝壹・繧ｹ窶晏ｰ丞梛窶昴ヱ繝ｯ繝ｼ繧｢繝ｳ繝励ヱ繝・こ繝ｼ繧ｸ",
+          "name": "省スペース”小型”パワーアンプパッケージ",
           "price": "33000",
           "subType": "amp",
-          "badge": "繧ｹ繝槭・繝亥ｰ主・",
+          "badge": "スマート導入",
           "features": [
-            "繧ｳ繝ｳ繝代け繝郁ｨｭ鄂ｮ",
-            "逵・崕蜉幄ｨｭ險・,
-            "蜿紋ｻ伜ｷ･雉・ｾｼ繝代ャ繧ｱ繝ｼ繧ｸ"
+            "コンパクト設置",
+            "省電力設計",
+            "取付工賃込パッケージ"
           ],
           "image": "/images/Audio/compact_amplifier_package.webp",
-          "description": "譛霑代・蟆丞梛逵√お繝阪↑縺後ｉ鬮倬浹雉ｪ縺ｪ繝代Ρ繝ｼ繧｢繝ｳ繝励′謨ｰ縲・匳蝣ｴ縺励※縺阪∪縺励◆縲ゅヱ繝ｯ繝ｼ繧｢繝ｳ繝励・蜿悶ｊ莉倥￠縺ｫ縺ｯ蜿悶ｊ莉倥￠繧ｹ繝壹・繧ｹ縺ｨ豸郁ｲｻ髮ｻ蜉帙い繝・・縺ｪ縺ｩ縺ｮ蝠城｡後′邨｡繧薙〒縺阪∪縺吶・n\n縺ｨ縺上↓霑大ｹｴ縺ｯ蜈・崕蛻ｶ蠕｡縺輔ｌ縺溯ｻ贋ｸ｡縺悟､壹￥縲∵昴▲縺溘⊇縺ｩ繝舌ャ繝・Μ繝ｼ縺ｮ繝ｪ繧ｫ繝舌Μ繝ｼ縺後せ繝繝ｼ繧ｺ縺ｫ縺輔ｌ縺ｪ縺・ｴ蜷医ｂ縺ゅｊ縲√ヰ繝・ユ繝ｪ繝ｼ縺ゅ′繧翫ｒ諛ｸ蠢ｵ縺励※繝代Ρ繝ｼ繧｢繝ｳ繝怜ｰ主・繧偵◆繧√ｉ縺・Θ繝ｼ繧ｶ繝ｼ繧ょｰ代↑縺上≠繧翫∪縺帙ｓ縲ゅ％縺薙〒縺ｯ逵・崕蜉帙〒縺ｪ縺翫°縺､蟆丞梛縺ｮ鬮倬浹雉ｪ繝代Ρ繝ｼ繧｢繝ｳ繝励ｒ蜿紋ｻ倩ｾｼ縺ｿ縺ｫ縺ｦ縺疲署譯医＠縺ｾ縺吶・,
+          "description": "最近は小型省エネながら高音質なパワーアンプが数々登場してきました。パワーアンプの取り付けには取り付けスペースと消費電力アップなどの問題が絡んできます。\n\nとくに近年は充電制御された車両が多く、思ったほどバッテリーのリカバリーがスムーズにされない場合もあり、バッテリーあがりを懸念してパワーアンプ導入をためらうユーザーも少なくありません。ここでは省電力でなおかつ小型の高音質パワーアンプを取付込みにてご提案します。",
           "link": "https://www.soundang.com/miniamp.html",
           "showSavings": false,
           "packageDetails": {
@@ -147,76 +147,76 @@
             "savings": "0",
             "contents": [
               {
-                "title": "繝代Ρ繝ｼ繧｢繝ｳ繝玲悽菴・,
-                "description": "蟆丞梛繝ｻ鬮伜柑邇・↑D繧ｯ繝ｩ繧ｹ繧｢繝ｳ繝礼ｭ峨°繧蛾∈謚・,
+                "title": "パワーアンプ本体",
+                "description": "小型・高効率なDクラスアンプ等から選択",
                 "icon": "Zap"
               },
               {
-                "title": "繝ｯ繧､繝､繝ｪ繝ｳ繧ｰ蟾･雉・,
-                "description": "繝舌ャ繝・Μ繝ｼ逶ｴ謗･驟咲ｷ夲ｼ医ヰ繝・峩・峨ｒ蜷ｫ繧讓呎ｺ門叙莉伜ｷ･雉・,
+                "title": "ワイヤリング工賃",
+                "description": "バッテリー直接配線（バッ直）を含む標準取付工賃",
                 "icon": "Wrench"
               },
               {
-                "title": "髮ｻ貅舌い繧ｯ繧ｻ繧ｵ繝ｪ繝ｼ",
-                "description": "髮ｻ貅舌こ繝ｼ繝悶Ν縲√ヲ繝･繝ｼ繧ｺ繝帙Ν繝繝ｼ縲∫ｫｯ蟄宣｡樔ｸ蠑・,
+                "title": "電源アクセサリー",
+                "description": "電源ケーブル、ヒューズホルダー、端子類一式",
                 "icon": "Activity"
               },
               {
-                "title": "菫｡蜿ｷ繝ｻ蜃ｺ蜉帙こ繝ｼ繝悶Ν",
-                "description": "RCA繧ｱ繝ｼ繝悶Ν縲√せ繝斐・繧ｫ繝ｼ繧ｱ繝ｼ繝悶Ν遲・,
+                "title": "信号・出力ケーブル",
+                "description": "RCAケーブル、スピーカーケーブル等",
                 "icon": "Music"
               }
             ],
             "notes": [
-              "繧ｹ繝斐・繧ｫ繝ｼ繧ｱ繝ｼ繝悶Ν繝ｯ繧､繝､繝ｪ繝ｳ繧ｰ縺ｯ邏疲ｭ｣繧ｹ繝斐・繧ｫ繝ｼ縺ｮ蝣ｴ蜷医・繝翫ン陬上∪縺ｧ縲√せ繝斐・繧ｫ繝ｼ莠､謠帶ｸ医∩縺ｮ蝣ｴ蜷医・莉伜ｱ槭・繝阪ャ繝医Ρ繝ｼ繧ｯ縺ｾ縺ｧ縺ｮ繝ｯ繧､繝､繝ｪ繝ｳ繧ｰ縺ｨ縺ｪ繧翫∪縺吶・,
-              "繝峨い騾夂ｷ壹ｒ莨ｴ縺・Ρ繧､繝､繝ｪ繝ｳ繧ｰ縺悟ｿ・ｦ√↑蝣ｴ蜷医・蛻･騾・1,000蜀・′蠢・ｦ√→縺ｪ繧翫∪縺吶ゑｼ医ラ繧｢騾夂ｷ壹′繧ｫ繝励Λ繝ｼ譁ｹ蠑上・蝣ｴ蜷医・蛻･騾泌刈蟾･雉・′蠢・ｦ√→縺ｪ繧翫∪縺吶ゑｼ・,
-              "霆顔ｨｮ縺ｫ繧医ｊ霑ｽ蜉繝代・繝・′蠢・ｦ√↑蝣ｴ蜷医′縺ゅｊ縺ｾ縺吶・,
-              "菴懈･ｭ譎る俣縺ｯ蜊頑律縲・譌･遞句ｺｦ縺ｧ縺吶ら┌譁吩ｻ｣霆翫ｒ縺皮畑諢上＠縺ｦ縺・∪縺吶・
+              "スピーカーケーブルワイヤリングは純正スピーカーの場合はナビ裏まで、スピーカー交換済みの場合は付属のネットワークまでのワイヤリングとなります。",
+              "ドア通線を伴うワイヤリングが必要な場合は別途11,000円が必要となります。（ドア通線がカプラー方式の場合は別途加工賃が必要となります。）",
+              "車種により追加パーツが必要な場合があります。",
+              "作業時間は半日〜1日程度です。無料代車をご用意しています。"
             ]
           },
           "lineup": [
             {
               "name": "VIBE / POWERBOX65.4M-V7",
-              "description": "雜・ｰ丞梛縺ｪ縺後ｉ繝代Ρ繝輔Ν縺ｪ4ch繧｢繝ｳ繝励・
+              "description": "超小型ながらパワフルな4chアンプ。"
             },
             {
               "name": "Pioneer / GM-D1400-2",
-              "description": "繧ｳ繝ｳ繧ｽ繝ｼ繝ｫ蜀・↓蜿弱∪繧九さ繝ｳ繝代け繝郁ｨｭ險医・螳夂分繝｢繝・Ν縲・
+              "description": "コンソール内に収まるコンパクト設計の定番モデル。"
             },
             {
               "name": "MATCH / M2.1AMP",
-              "description": "繝峨う繝・｣ｽ縲ゅワ繧､繝ｬ繧ｾ蟇ｾ蠢懊・雜・ｰ丞梛2ch繧｢繝ｳ繝励・
+              "description": "ドイツ製。ハイレゾ対応の超小型2chアンプ。"
             },
             {
               "name": "Ground Zero / GZ-MINI",
-              "description": "鬮倬浹雉ｪ縺ｨ繝代Ρ繝ｼ繧剃ｸ｡遶九＠縺溘Α繝九す繝ｪ繝ｼ繧ｺ縲・
+              "description": "高音質とパワーを両立したミニシリーズ。"
             },
             {
               "name": "KICKER / KEY200.4",
-              "description": "閾ｪ蜍暮浹蝣ｴ陬懈ｭ｣DSP讖溯・繧貞・阡ｵ縺励◆逕ｻ譛溽噪縺ｪ蟆丞梛繧｢繝ｳ繝励・
+              "description": "自動音場補正DSP機能を内蔵した画期的な小型アンプ。"
             },
             {
               "name": "MOSCONI / ATOMO2",
-              "description": "繧､繧ｿ繝ｪ繧｢陬ｽ縲ゅ・繝・メ邂ｱ繧ｵ繧､繧ｺ縺ｮ繝上う繧ｨ繝ｳ繝峨い繝ｳ繝励・
+              "description": "イタリア製。マッチ箱サイズのハイエンドアンプ。"
             },
             {
               "name": "PLUG&PLAY / 1080",
-              "description": "邏疲ｭ｣繧ｪ繝ｼ繝・ぅ繧ｪ縺ｫ繧ｫ繝励Λ繝ｼ繧ｪ繝ｳ縺ｧ謗･邯壼庄閭ｽ縺ｪ繝｢繝・Ν縲・
+              "description": "純正オーディオにカプラーオンで接続可能なモデル。"
             }
           ]
         },
         {
-          "name": "繧｢繝ｳ繝励う繝ｳ繧ｹ繝医・繝代ャ繧ｱ繝ｼ繧ｸ",
+          "name": "アンプインスト・パッケージ",
           "price": "55000",
           "subType": "amp",
-          "badge": "鬧・虚蜉婉P",
+          "badge": "駆動力UP",
           "features": [
-            "4ch繝代Ρ繝ｼ繧｢繝ｳ繝・,
-            "繝舌ャ逶ｴ驟咲ｷ壼ｷ･雉・ｾｼ",
-            "隗｣蜒丞ｺｦ蜉・噪蜷台ｸ・
+            "4chパワーアンプ",
+            "バッ直配線工賃込",
+            "解像度劇的向上"
           ],
           "image": "/images/Audio/amplifier_install_basic.webp",
-          "description": "縲後せ繝斐・繧ｫ繝ｼ繧貞､峨∴縺溘￠縺ｩ縲√ｂ縺｣縺ｨ濶ｯ縺上＠縺溘＞縲阪碁浹縺ｫ蜉帛ｼｷ縺輔′谺ｲ縺励＞縲阪◎繧薙↑譁ｹ縺ｫ谺｡縺ｫ縺雁匡繧√☆繧九・縺後ヱ繝ｯ繝ｼ繧｢繝ｳ繝励・霑ｽ蜉縺ｧ縺吶・n\n繝代Ρ繝ｼ繧｢繝ｳ繝励・蠖ｹ蜑ｲ縺ｯ縲√せ繝斐・繧ｫ繝ｼ繧偵＠縺｣縺九ｊ縺ｨ繧ｳ繝ｳ繝医Ο繝ｼ繝ｫ縺励Μ繝九い縺ｪ繧ｵ繧ｦ繝ｳ繝峨ｒ蜀咲函縺吶ｋ縺薙→縺ｧ縺吶ゅ◎繧後↓繧医ｊ蠕ｮ邏ｰ縺ｪ蜀咲樟蜉帙′蠅怜刈縺励∵ュ蝣ｱ驥上′繧｢繝・・縺励∪縺吶る浹蜒上・霈ｪ驛ｭ繧・ｩｺ豌玲─縲∝･･陦後″繧・浹縺ｮ繝上Μ縲√せ繝斐・繝画─縺悟括逧・↓謾ｹ蝟・＆繧後∪縺吶・n\n螟ｧ髻ｳ驥上〒魑ｴ繧峨☆縺溘ａ縺縺代〒縺ｯ縺ｪ縺上・壼ｸｸ縺ｮ繝峨Λ繧､繝悶〒縺・＞髻ｳ讌ｽ繧呈･ｽ縺励・縺溘ａ縺ｫ繧｢繝ｳ繝励ｒ謳ｭ霈峨☆繧九％縺ｨ縺ｯ縲√＆繧峨↑繧玖・蝣ｴ諢溘・迯ｲ蠕励∽ｻ翫∪縺ｧ諢溘§縺ｦ縺・◆逶ｮ縺ｮ蜑阪・髴ｧ縺梧匐繧後ｋ繧医≧縺ｪ繧ｵ繧ｦ繝ｳ繝峨ｒ蠕励ｋ縺溘ａ縺ｫ髱槫ｸｸ縺ｫ譛牙柑縺ｧ縺吶ゅヶ繝ｩ繝ｳ繝峨ｄ繝｢繝・Ν縺ｫ繧医▲縺ｦ繧る浹菴懊ｊ縺ｮ迢吶＞縺檎焚縺ｪ繧翫∵ｧ倥・↑螟牙喧繧呈･ｽ縺励ａ繧九・繧るｭ・鴨縺ｧ縺吶・,
+          "description": "「スピーカーを変えたけど、もっと良くしたい」「音に力強さが欲しい」そんな方に次にお勧めするのがパワーアンプの追加です。\n\nパワーアンプの役割は、スピーカーをしっかりとコントロールしリニアなサウンドを再生することです。それにより微細な再現力が増加し、情報量がアップします。音像の輪郭や空気感、奥行きや音のハリ、スピード感が劇的に改善されます。\n\n大音量で鳴らすためだけではなく、通常のドライブでいい音楽を楽しむためにアンプを搭載することは、さらなる臨場感の獲得、今まで感じていた目の前の霧が晴れるようなサウンドを得るために非常に有効です。ブランドやモデルによっても音作りの狙いが異なり、様々な変化を楽しめるのも魅力です。",
           "link": "https://www.soundang.com/ampbasic-inst.html",
           "showSavings": false,
           "packageDetails": {
@@ -224,85 +224,85 @@
             "savings": "0",
             "contents": [
               {
-                "title": "繝代Ρ繝ｼ繧｢繝ｳ繝玲悽菴・,
-                "description": "縺雁･ｽ縺ｿ縺ｮ繝悶Λ繝ｳ繝峨°繧蛾∈謚槫庄閭ｽ・亥ｷｮ鬘榊ｯｾ蠢懊≠繧奇ｼ・,
+                "title": "パワーアンプ本体",
+                "description": "お好みのブランドから選択可能（差額対応あり）",
                 "icon": "Zap"
               },
               {
-                "title": "髮ｻ貅舌こ繝ｼ繝悶Ν荳蠑・,
-                "description": "繝舌ャ繝・Μ繝ｼ逶ｴ謗･驟咲ｷ壹√Γ繧､繝ｳ繝偵Η繝ｼ繧ｺ縲√Μ繝｢繝ｼ繝育ｷ夂ｭ・,
+                "title": "電源ケーブル一式",
+                "description": "バッテリー直接配線、メインヒューズ、リモート線等",
                 "icon": "Activity"
               },
               {
-                "title": "髻ｳ螢ｰ蜈･蜃ｺ蜉帙こ繝ｼ繝悶Ν",
-                "description": "RCA縺ｾ縺溘・繧ｹ繝斐・繧ｫ繝ｼ蜈･蜉帙√せ繝斐・繧ｫ繝ｼ蜃ｺ蜉帷畑驟咲ｷ・,
+                "title": "音声入出力ケーブル",
+                "description": "RCAまたはスピーカー入力、スピーカー出力用配線",
                 "icon": "Music"
               },
               {
-                "title": "蜿紋ｻ倥・繝ｯ繧､繝､繝ｪ繝ｳ繧ｰ",
-                "description": "繧｢繝ｳ繝苓ｨｭ鄂ｮ繝懊・繝芽｣ｽ菴懊∝・陬・┳逹縲・・邱壼ｼ輔″蝗槭＠蟾･雉・ｾｼ",
+                "title": "取付・ワイヤリング",
+                "description": "アンプ設置ボード製作、内装脱着、配線引き回し工賃込",
                 "icon": "Wrench"
               }
             ],
             "notes": [
-              "霆顔ｨｮ縺ｫ繧医ｊ霑ｽ蜉雋ｻ逕ｨ縺悟ｿ・ｦ√↑蝣ｴ蜷医′縺ゅｊ縺ｾ縺吶・,
-              "繝倥ャ繝峨Θ繝九ャ繝医↓RCA蜃ｺ蜉帙′縺ｪ縺・ｴ蜷医・縲√ワ繧､繝ｬ繝吶Ν蜈･蜉帛ｯｾ蠢懊い繝ｳ繝励・菴ｿ逕ｨ繧・ワ繧､繝ｭ繝ｼ繧ｳ繝ｳ繝舌・繧ｿ繝ｼ縺ｮ霑ｽ蜉縺悟庄閭ｽ縺ｧ縺吶・,
-              "縺薙・繝代ャ繧ｱ繝ｼ繧ｸ縺ｯ迴ｾ驥代〒縺ｮ縺頑髪謇輔＞縺ｨ縺ｪ繧翫∪縺吶りｩｳ縺励￥縺ｯ縺雁撫縺・粋繧上○縺上□縺輔＞縲・,
-              "菴懈･ｭ縺ｯ1縲・譌･縺企舌°繧翫→縺ｪ繧翫∪縺吶ら┌譁吩ｻ｣霆翫ｒ縺皮畑諢上＠縺ｦ縺・∪縺吶・
+              "車種により追加費用が必要な場合があります。",
+              "ヘッドユニットにRCA出力がない場合は、ハイレベル入力対応アンプの使用やハイローコンバーターの追加が可能です。",
+              "このパッケージは現金でのお支払いとなります。詳しくはお問い合わせください。",
+              "作業は1〜2日お預かりとなります。無料代車をご用意しています。"
             ]
           },
           "lineup": [
             {
-              "name": "ZAPCO / HELIX / KICKER 遲・,
-              "description": "荳也阜逧・↑螳夂分繝悶Λ繝ｳ繝峨ょ鴨蠑ｷ縺乗ｭ｣遒ｺ縺ｪ繝峨Λ繧､繝悶′鬲・鴨縲・
+              "name": "ZAPCO / HELIX / KICKER 等",
+              "description": "世界的な定番ブランド。力強く正確なドライブが魅力。"
             },
             {
               "name": "ATOMO2 / ETON POWER220.4",
-              "description": "蟆丞梛縺ｪ縺後ｉ鬮倬浹雉ｪ縲りｨｭ鄂ｮ蝣ｴ謇繧帝∈縺ｰ縺ｪ縺・怙譁ｰ繝｢繝・Ν縲・
+              "description": "小型ながら高音質。設置場所を選ばない最新モデル。"
             },
             {
               "name": "PRS-D800 / ARCA ATOMO4",
-              "description": "隗｣蜒丞ｺｦ驥崎ｦ悶・蝗ｽ逕｣繝ｻ豬ｷ螟悶ヶ繝ｩ繝ｳ繝峨らｹ顔ｴｰ縺ｪ陦ｨ迴ｾ蜉帙・
+              "description": "解像度重視の国産・海外ブランド。繊細な表現力。"
             },
             {
               "name": "MOSCONI GLADEN PRO / DLS",
-              "description": "繝上う繧ｨ繝ｳ繝峨↑雉ｪ諢溘る浹讌ｽ諤ｧ繧帝㍾隕悶☆繧区婿縺ｸ縲・
+              "description": "ハイエンドな質感。音楽性を重視する方へ。"
             }
           ]
         },
         {
-          "name": "縺頑焔霆ｽ菴朱浹蠅怜ｼｷ繧ｻ繝・ヨ",
+          "name": "お手軽低音増強セット",
           "price": "42000",
           "subType": "subwoofer",
-          "badge": "繝代Ρ繝ｼ繝峨え繝ｼ繝上・",
+          "badge": "パワードウーハー",
           "features": [
-            "繧ｷ繝ｼ繝井ｸ玖ｨｭ鄂ｮ蜿ｯ",
-            "繧｢繝ｳ繝怜・阡ｵ繧ｿ繧､繝・,
-            "蜿紋ｻ伜ｷ･雉・ｾｼ"
+            "シート下設置可",
+            "アンプ内蔵タイプ",
+            "取付工賃込"
           ],
           "image": "/images/Audio/easy_bass_package.webp"
         },
         {
-          "name": "縺頑焔霆ｽ菴朱浹蠅怜ｼｷ繧ｻ繝・ヨ窶昴・繝ｩ繧ｹ窶・,
+          "name": "お手軽低音増強セット”プラス”",
           "price": "110000",
           "subType": "subwoofer",
-          "badge": "譛ｬ譬ｼ菴朱浹",
+          "badge": "本格低音",
           "features": [
-            "BOX+繧ｦ繝ｼ繝上・",
-            "蛻･菴薙い繝ｳ繝・,
-            "蜿紋ｻ伜ｷ･雉・ｾｼ"
+            "BOX+ウーハー",
+            "別体アンプ",
+            "取付工賃込"
           ],
           "image": "/images/Audio/easy_bass_package_plus.webp"
         },
         {
-          "name": "譛ｬ譬ｼ繧ｵ繝悶え繝ｼ繝上・繧､繝ｳ繧ｹ繝医・繝ｫ",
+          "name": "本格サブウーハーインストール",
           "price": "ASK",
           "subType": "subwoofer",
-          "badge": "驥堺ｽ朱浹蠅怜ｼｷ",
+          "badge": "重低音増強",
           "features": [
-            "譛ｬ譬ｼ逧・㍾菴朱浹",
-            "繧ｫ繧ｹ繧ｿ繝BOX蟇ｾ蠢・,
-            "繧｢繝ｳ繝礼ｵ・∩蜷医ｏ縺・
+            "本格的重低音",
+            "カスタムBOX対応",
+            "アンプ組み合わせ"
           ],
           "image": "https://picsum.photos/seed/subwoofer/800/600"
         }
@@ -311,98 +311,98 @@
     },
     {
       "id": "digital_source",
-      "category": "DSP繝ｻ繝励Ξ繝ｼ繝､繝ｼ繝ｻ鬮倬浹雉ｪ繝翫ン",
+      "category": "DSP・プレーヤー・高音質ナビ",
       "type": "audio",
-      "description": "邏疲ｭ｣繧ｷ繧ｹ繝・Β繧呈ｴｻ縺九＠縺溘∪縺ｾ髻ｳ繧呈紛縺医ｋ縲・*DSP**縺ｫ繧医ｋ邊ｾ蟇・ｪｿ謨ｴ縺ｨ縲・*繝｡繝・ぅ繧｢繝励Ξ繝ｼ繝､繝ｼ**縺ｫ繧医ｋ鬮倬ｮｮ蠎ｦ蜀咲函繧堤ｵｱ蜷医・,
+      "description": "純正システムを活かしたまま音を整える。**DSP**による精密調整と、**メディアプレーヤー**による高鮮度再生を統合。",
       "showDescriptionInMenu": true,
       "showDescriptionInList": true,
       "items": [
         {
-          "name": "繧｢繝ｳ繝怜・阡ｵDSP繝代ャ繧ｱ繝ｼ繧ｸ",
+          "name": "アンプ内蔵DSPパッケージ",
           "price": "110000",
           "subType": "dsp",
-          "badge": "髻ｳ蜒丞ｮ壻ｽ・,
+          "badge": "音像定位",
           "features": [
-            "邏疲ｭ｣繝翫ン騾｣蜍・,
-            "繧ｿ繧､繝繧｢繝ｩ繧､繝｡繝ｳ繝郁ｪｿ謨ｴ",
-            "髻ｳ蜒丞ｮ壻ｽ阪・謾ｹ蝟・
+            "純正ナビ連動",
+            "タイムアライメント調整",
+            "音像定位の改善"
           ],
           "image": "/images/Audio/amplified_dsp.webp"
         },
         {
-          "name": "繧｢繝ｳ繝励Ξ繧ｹDSP繝代ャ繧ｱ繝ｼ繧ｸ",
+          "name": "アンプレスDSPパッケージ",
           "price": "180000",
           "subType": "dsp",
-          "badge": "繝上う繧ｨ繝ｳ繝・,
+          "badge": "ハイエンド",
           "features": [
-            "邏皮ｲ九・繝ｭ繧ｻ繝・し繝ｼ",
-            "螟夜Κ繧｢繝ｳ繝怜ｿ・・,
-            "譛鬮伜ｳｰ縺ｮ髻ｳ髻ｿ隱ｿ謨ｴ"
+            "純粋プロセッサー",
+            "外部アンプ必須",
+            "最高峰の音響調整"
           ],
           "image": "/images/Audio/standalone_dsp.webp",
-          "description": "繧｢繝ｳ繝励ｒ蜀・鳩縺励↑縺・％縺ｨ縺ｧ縲√ヮ繧､繧ｺ縺ｮ蟷ｲ貂峨ｒ讌ｵ髯舌∪縺ｧ謚代∴縲∫ｴ皮ｲ九↑菫｡蜿ｷ蜃ｦ逅・↓迚ｹ蛹悶＠縺溘後せ繧ｿ繝ｳ繝峨い繝ｭ繝ｳDSP縲阪〒縺吶・n\n螟夜Κ繧｢繝ｳ繝励→邨・∩蜷医ｏ縺帙ｋ縺薙→縺ｧ縲∝悸蛟堤噪縺ｪ隗｣蜒丞ｺｦ縺ｨ魄ｮ蠎ｦ隱・ｋ繧ｵ繧ｦ繝ｳ繝峨す繧ｹ繝・Β繧呈ｧ狗ｯ峨〒縺阪∪縺吶ゅせ繝斐・繧ｫ繝ｼ縺ｮ閭ｽ蜉帙ｒ100%蠑輔″蜃ｺ縺励√せ繧ｿ繧ｸ繧ｪ繝槭せ繧ｿ繝ｼ縺ｫ霑ｫ繧玖・蝣ｴ諢溘ｒ逶ｮ謖・☆繧ｪ繝ｼ繝翫・讒倥∈縺雁匡繧√＠縺ｾ縺吶・,
+          "description": "アンプを内蔵しないことで、ノイズの干渉を極限まで抑え、純粋な信号処理に特化した「スタンドアロンDSP」です。\n\n外部アンプと組み合わせることで、圧倒的な解像度と鮮度誇るサウンドシステムを構築できます。スピーカーの能力を100%引き出し、スタジオマスターに迫る臨場感を目指すオーナー様へお勧めします。",
           "packageDetails": {
             "standardPrice": "180000",
             "savings": "0",
             "contents": [
               {
-                "title": "DSP譛ｬ菴・,
-                "description": "繝上う繧ｨ繝ｳ繝峨↑繧ｹ繧ｿ繝ｳ繝峨い繝ｭ繝ｳDSP繝ｦ繝九ャ繝医ｒ驕ｸ螳・,
+                "title": "DSP本体",
+                "description": "ハイエンドなスタンドアロンDSPユニットを選定",
                 "icon": "Settings"
               },
               {
-                "title": "鬮倬浹雉ｪ繝ｯ繧､繝､繝ｪ繝ｳ繧ｰ",
-                "description": "髮ｻ貅舌・菫｡蜿ｷ繝ｩ繧､繝ｳ縺ｮ蠕ｹ蠎輔＠縺溘ヮ繧､繧ｺ蟇ｾ遲匁命蟾･",
+                "title": "高音質ワイヤリング",
+                "description": "電源・信号ラインの徹底したノイズ対策施工",
                 "icon": "Activity"
               },
               {
-                "title": "邊ｾ蟇・浹髻ｿ繝√Η繝ｼ繝九Φ繧ｰ",
-                "description": "貂ｬ螳壼勣繧堤畑縺・◆縲∬ｻ雁ｮ､蜀・↓譛驕ｩ蛹悶＠縺溘し繧ｦ繝ｳ繝芽ｨｭ螳・,
+                "title": "精密音響チューニング",
+                "description": "測定器を用いた、車室内に最適化したサウンド設定",
                 "icon": "Mic"
               }
             ],
             "notes": [
-              "螟夜Κ繧｢繝ｳ繝励′蛻･騾泌ｿ・ｦ√〒縺呻ｼ医☆縺ｧ縺ｫ縺頑戟縺｡縺ｮ繧｢繝ｳ繝励ｒ豢ｻ逕ｨ縺吶ｋ縺薙→繧ょ庄閭ｽ縺ｧ縺呻ｼ峨・,
-              "霆顔ｨｮ繧・す繧ｹ繝・Β讒区・縺ｫ繧医ｊ縲ヽCA繧ｱ繝ｼ繝悶Ν遲峨・霑ｽ蜉繝代・繝・′蠢・ｦ√↑蝣ｴ蜷医′縺ゅｊ縺ｾ縺吶・,
-              "譁ｽ蟾･譎る俣縺ｯ1縲・譌･遞句ｺｦ縺ｧ縺吶ら┌譁吩ｻ｣霆翫ｒ縺皮畑諢上＠縺ｦ縺翫ｊ縺ｾ縺吶・
+              "外部アンプが別途必要です（すでにお持ちのアンプを活用することも可能です）。",
+              "車種やシステム構成により、RCAケーブル等の追加パーツが必要な場合があります。",
+              "施工時間は1〜2日程度です。無料代車をご用意しております。"
             ]
           },
           "lineup": [
             {
               "name": "HELIX / DSP.3S",
-              "description": "荳也阜讓呎ｺ悶・邊ｾ蠎ｦ繧定ｪ・ｋ繧ｹ繧ｿ繝ｳ繝峨い繝ｭ繝ｳDSP縺ｮ雜・ｮ夂分縲・
+              "description": "世界標準の精度を誇るスタンドアロンDSPの超定番。"
             },
             {
               "name": "HELIX / DSP ULTRA",
-              "description": "譛鬮伜ｳｰ縺ｮ蜃ｦ逅・・蜉帙ｒ謖√▽12ch繝上う繧ｨ繝ｳ繝峨・繝ｭ繧ｻ繝・し繝ｼ縲・
+              "description": "最高峰の処理能力を持つ12chハイエンドプロセッサー。"
             },
             {
               "name": "GOLDHORN / G2",
-              "description": "繝励Ξ繝ｼ繝､繝ｼ讖溯・繧ょ・阡ｵ縺励◆鬮倬浹雉ｪDSP縲・
+              "description": "プレーヤー機能も内蔵した高音質DSP。"
             }
           ]
         },
         {
-          "name": "繝｡繝・ぅ繧｢繝励Ξ繝ｼ繝､繝ｼ繝ｻ繝ｩ繧､繝ｳ繝翫ャ繝・,
+          "name": "メディアプレーヤー・ラインナップ",
           "price": "66000",
           "subType": "media",
           "badge": "Next Source",
           "features": [
-            "DSD/繝上う繝ｬ繧ｾ蟇ｾ蠢・,
-            "USB/SSD螟ｧ螳ｹ驥丞・逕・,
-            "DSP繝・ず繧ｿ繝ｫ謗･邯・
+            "DSD/ハイレゾ対応",
+            "USB/SSD大容量再生",
+            "DSPデジタル接続"
           ],
           "image": "/images/Audio/media_player.webp"
         },
         {
-          "name": "譛鬮伜ｳｰ繝翫ン縲舌し繧､繝舌・繝翫ン縲代・繝ｩ繝ｳ",
+          "name": "最高峰ナビ【サイバーナビ】プラン",
           "price": "220000",
           "subType": "media",
-          "badge": "遨ｶ讌ｵ縺ｮ繝翫ン",
+          "badge": "究極のナビ",
           "features": [
-            "遨ｶ讌ｵ縺ｮ髻ｳ雉ｪ",
-            "蜍慕判驟堺ｿ｡/Wi-Fi蟇ｾ蠢・,
-            "隱ｿ謨ｴ蟾･雉・ｾｼ"
+            "究極の音質",
+            "動画配信/Wi-Fi対応",
+            "調整工賃込"
           ],
           "image": "/images/Audio/cybernavi.webp"
         }
@@ -411,45 +411,45 @@
     },
     {
       "id": "install_tuning",
-      "category": "繝・ャ繝峨ル繝ｳ繧ｰ繝ｻ譁ｽ蟾･繝ｻ髮ｻ貅・,
+      "category": "デッドニング・施工・電源",
       "type": "audio",
-      "description": "讖滓攝縺ｮ諤ｧ閭ｽ繧・00%蠑輔″蜃ｺ縺吶・*繝峨い繝√Η繝ｼ繝九Φ繧ｰ**縺ｫ繧医ｋ迺ｰ蠅・紛蛯吶→縲・*髮ｻ貅仙ｼｷ蛹・*縺ｫ繧医ｋ螳牙ｮ夐ｧ・虚繧貞ｮ溽樟縺励∪縺吶・,
+      "description": "機材の性能を100%引き出す。**ドアチューニング**による環境整備と、**電源強化**による安定駆動を実現します。",
       "showDescriptionInMenu": true,
       "showDescriptionInList": true,
       "items": [
         {
-          "name": "繝峨い繝ｻ繝√Η繝ｼ繝九Φ繧ｰ・医ョ繝・ラ繝九Φ繧ｰ・・,
+          "name": "ドア・チューニング（デッドニング）",
           "price": "22000",
           "subType": "tuning",
-          "badge": "蠢・域命蟾･",
+          "badge": "必須施工",
           "features": [
-            "謖ｯ繝ｻ蜷ｸ髻ｳ繝ｻ諡｡謨｣繝ｻ驕ｮ髻ｳ",
-            "莠育ｮ励↓蜷医ｏ縺帙◆4繧ｳ繝ｼ繧ｹ",
-            "繧ｹ繝斐・繧ｫ繝ｼ縺ｮ諤ｧ閭ｽ繧呈怙螟ｧ蛹・
+            "振・吸音・拡散・遮音",
+            "予算に合わせた4コース",
+            "スピーカーの性能を最大化"
           ],
           "image": "/images/Audio/door_tuning.webp"
         },
         {
-          "name": "繧ｵ繧､繝ｬ繝ｳ繝医メ繝･繝ｼ繝九Φ繧ｰ(霆雁・髱咎浹譁ｽ蟾･)",
+          "name": "サイレントチューニング(車内静音施工)",
           "price": "19800",
           "subType": "tuning",
-          "badge": "髱咏ｲ帶ｧUP",
+          "badge": "静粛性UP",
           "features": [
-            "繝ｭ繝ｼ繝峨ヮ繧､繧ｺ菴取ｸ・,
-            "驕ｮ髻ｳ繝ｻ蛻ｶ謖ｯ繝ｻ驕ｮ辭ｱ",
-            "蜷・Κ菴榊挨繝代ャ繧ｱ繝ｼ繧ｸ"
+            "ロードノイズ低減",
+            "遮音・制振・遮熱",
+            "各部位別パッケージ"
           ],
           "image": "/images/Audio/silent.webp"
         },
         {
-          "name": "髮ｻ貅舌ヰ繝・峩繝ｻ繧ｭ繝｣繝代す繧ｿ繝ｼ繝ｻ繧｢繝ｼ繧ｹ",
+          "name": "電源バッ直・キャパシター・アース",
           "price": "25300",
           "subType": "power",
-          "badge": "髮ｻ貅千腸蠅・,
+          "badge": "電源環境",
           "features": [
-            "繝上う繧ｰ繝ｬ繝ｼ繝蛾・邱・,
-            "S/N蜷台ｸ・,
-            "隗｣蜒丞ｺｦ繧｢繝・・"
+            "ハイグレード配線",
+            "S/N向上",
+            "解像度アップ"
           ],
           "image": "/images/Audio/audio_performance_upgrade.webp"
         }
@@ -458,45 +458,45 @@
     },
     {
       "id": "custom_install",
-      "category": "繧ｫ繧ｹ繧ｿ繝繧､繝ｳ繧ｹ繝医・繝ｫ繝ｻ騾菴・,
+      "category": "カスタムインストール・造作",
       "type": "audio",
-      "description": "髻ｳ繧定ｳ縺ｧ讌ｽ縺励・縺縺代〒縺ｪ縺上・*蛹縺ｮ謚**縺ｧ隕冶ｦ夂噪縺ｫ繧らｾ弱＠縺上・*繝斐Λ繝ｼ蜉蟾･**繧・*繧｢繧ｦ繧ｿ繝ｼ繝舌ャ繝輔Ν**縺ｪ縺ｩ縲∽ｸ也阜縺ｫ荳蜿ｰ縺ｮ繧ｫ繧ｹ繧ｿ繝繧偵・,
+      "description": "音を耳で楽しむだけでなく、**匠の技**で視覚的にも美しく。**ピラー加工**や**アウターバッフル**など、世界に一台のカスタムを。",
       "showDescriptionInMenu": true,
       "showDescriptionInList": true,
       "items": [
         {
-          "name": "繝・ぅ繝ｼ繧ｿ繝ｼ繝斐Λ繝ｼ蝓九ａ霎ｼ縺ｿ蜉蟾･",
+          "name": "ツィーターピラー埋め込み加工",
           "price": "46200",
           "subType": "craft",
-          "badge": "鬲・○繧玖ｨｭ鄂ｮ",
+          "badge": "魅せる設置",
           "features": [
-            "繝斐Λ繝ｼ蝓九ａ霎ｼ縺ｿ蜉蟾･",
-            "隗貞ｺｦ繝ｻ菴咲ｽｮ縺ｮ譛驕ｩ蛹・,
-            "繝ｬ繧ｶ繝ｼ莉穂ｸ翫￡"
+            "ピラー埋め込み加工",
+            "角度・位置の最適化",
+            "レザー仕上げ"
           ],
           "image": "/images/Audio/custom_tweeter_mount.webp"
         },
         {
-          "name": "繧ｪ繝ｪ繧ｸ繝翫Ν繧｢繧ｦ繧ｿ繝ｼ繝舌ャ繝輔Ν陬ｽ菴・,
+          "name": "オリジナルアウターバッフル製作",
           "price": "107800",
           "subType": "craft",
-          "badge": "逅・Φ縺ｮ髻ｳ謚懊￠",
+          "badge": "理想の音抜け",
           "features": [
-            "髻ｳ謚懊￠謾ｹ蝟・,
-            "繝ｯ繝ｳ繧ｪ繝戊｣ｽ菴・,
-            "繧ｹ繝斐・繧ｫ繝ｼ髴ｲ蜃ｺ"
+            "音抜け改善",
+            "ワンオフ製作",
+            "スピーカー露出"
           ],
           "image": "/images/Audio/custom_outer_baffle.webp"
         },
         {
-          "name": "繧ｫ繧ｹ繧ｿ繝繧､繝ｳ繧ｹ繝医・繝ｫ繝ｻ繝ｯ繝ｳ繧ｪ繝戊｣ｽ菴・,
+          "name": "カスタムインストール・ワンオフ製作",
           "price": "ASK",
           "subType": "oneoff",
-          "badge": "螳悟・繧ｪ繝ｼ繝繝ｼ",
+          "badge": "完全オーダー",
           "features": [
-            "繝医Λ繝ｳ繧ｯ繧ｫ繧ｹ繧ｿ繝",
-            "繧｢繧ｦ繧ｿ繝ｼ繝舌ャ繝輔Ν",
-            "LED繝ｩ繧､繝・ぅ繝ｳ繧ｰ"
+            "トランクカスタム",
+            "アウターバッフル",
+            "LEDライティング"
           ],
           "image": "/images/Audio/custom_installation.webp"
         }
@@ -505,98 +505,98 @@
     },
     {
       "id": "security_panthera",
-      "category": "Panthera (繝代Φ繝・・繝ｩ)",
+      "category": "Panthera (パンテーラ)",
       "type": "security",
       "items": [
         {
-          "name": "Z706繧ｷ繝ｪ繝ｼ繧ｺ",
+          "name": "Z706シリーズ",
           "price": "286000",
-          "badge": "譛鬮伜ｳｰ繝｢繝・Ν"
+          "badge": "最高峰モデル"
         },
         {
-          "name": "Z306繧ｷ繝ｪ繝ｼ繧ｺ",
+          "name": "Z306シリーズ",
           "price": "242000",
-          "badge": "繧ｹ繧ｿ繝ｳ繝繝ｼ繝・
+          "badge": "スタンダード"
         },
         {
-          "name": "Z106繧ｷ繝ｪ繝ｼ繧ｺ",
+          "name": "Z106シリーズ",
           "price": "198000",
-          "badge": "繧ｨ繝ｳ繝医Μ繝ｼ"
+          "badge": "エントリー"
         }
       ],
       "images": []
     },
     {
       "id": "security_grgo",
-      "category": "Grgo (繧ｴ繝ｫ繧ｴ)",
+      "category": "Grgo (ゴルゴ)",
       "type": "security",
       "items": [
         {
-          "name": "ZV繧ｷ繝ｪ繝ｼ繧ｺ",
+          "name": "ZVシリーズ",
           "price": "165000",
-          "badge": "莠ｺ豌湧o.1"
+          "badge": "人気No.1"
         },
         {
-          "name": "V繧ｷ繝ｪ繝ｼ繧ｺ",
+          "name": "Vシリーズ",
           "price": "132000",
-          "badge": "繧ｳ繧ｹ繝鷹㍾隕・
+          "badge": "コスパ重視"
         },
         {
-          "name": "1/0繧ｷ繝ｪ繝ｼ繧ｺ",
+          "name": "1/0シリーズ",
           "price": "99000",
-          "badge": "繧ｹ繝槭・繝域命蟾･"
+          "badge": "スマート施工"
         }
       ],
       "images": []
     },
     {
       "id": "security_viper",
-      "category": "VIPER (繝舌う繝代・)",
+      "category": "VIPER (バイパー)",
       "type": "security",
       "items": [
         {
           "name": "DS4V",
           "price": "110000",
-          "badge": "譛譁ｰ繝・ず繧ｿ繝ｫ"
+          "badge": "最新デジタル"
         },
         {
           "name": "5706V",
           "price": "132000",
-          "badge": "螳夂分繝｢繝・Ν"
+          "badge": "定番モデル"
         },
         {
           "name": "330V",
           "price": "77000",
-          "badge": "繧ｨ繝ｳ繝医Μ繝ｼ"
+          "badge": "エントリー"
         }
       ],
       "images": []
     },
     {
       "id": "security_clifford",
-      "category": "CLIFFORD (繧ｯ繝ｪ繝輔か繝ｼ繝・",
+      "category": "CLIFFORD (クリフォード)",
       "type": "security",
       "items": [
         {
-          "name": "G6繧ｷ繝ｪ繝ｼ繧ｺ",
+          "name": "G6シリーズ",
           "price": "220000",
-          "badge": "荳也阜譛鬮伜ｳｰ"
+          "badge": "世界最高峰"
         },
         {
-          "name": "Matrix繧ｷ繝ｪ繝ｼ繧ｺ",
+          "name": "Matrixシリーズ",
           "price": "154000",
-          "badge": "鬮俶ｧ閭ｽ"
+          "badge": "高性能"
         }
       ],
       "images": []
     },
     {
       "id": "security_car",
-      "category": "霆顔ｨｮ蛻･縺翫☆縺吶ａ繝代ャ繧ｱ繝ｼ繧ｸ",
+      "category": "車種別おすすめパッケージ",
       "type": "security",
       "items": [
         {
-          "name": "譛蠑ｷ繝励Λ繝ｳ",
+          "name": "最強プラン",
           "price": "350000",
           "badge": "SUV/LC/AL"
         }
@@ -605,65 +605,65 @@
     },
     {
       "id": "dashcam",
-      "category": "繝峨Λ繧､繝悶Ξ繧ｳ繝ｼ繝繝ｼ",
+      "category": "ドライブレコーダー",
       "type": "others",
       "items": [
         {
-          "name": "蜑榊ｾ・繧ｫ繝｡繝ｩ繝｢繝・Ν",
+          "name": "前後2カメラモデル",
           "price": "44000",
-          "badge": "螳夂分莠ｺ豌・
+          "badge": "定番人気"
         }
       ],
       "images": []
     },
     {
       "id": "digital_mirror",
-      "category": "繝・ず繧ｿ繝ｫ繧､繝ｳ繝翫・繝溘Λ繝ｼ",
+      "category": "デジタルインナーミラー",
       "type": "others",
       "items": [
         {
-          "name": "邏疲ｭ｣莠､謠帛梛",
+          "name": "純正交換型",
           "price": "77000",
-          "badge": "隕也阜繧ｯ繝ｪ繧｢"
+          "badge": "視界クリア"
         }
       ],
       "images": []
     },
     {
       "id": "radar",
-      "category": "繝ｬ繝ｼ繝繝ｼ謗｢遏･讖・/ 繝ｬ繝ｼ繧ｶ繝ｼ蜿嶺ｿ｡讖・,
+      "category": "レーダー探知機 / レーザー受信機",
       "type": "others",
       "items": [
         {
-          "name": "繧ｻ繝代Ξ繝ｼ繝亥梛繝ｬ繝ｼ繝繝ｼ",
+          "name": "セパレート型レーダー",
           "price": "49500",
-          "badge": "譛蠑ｷ諢溷ｺｦ"
+          "badge": "最強感度"
         }
       ],
       "images": []
     },
     {
       "id": "safety_device",
-      "category": "鄂ｮ縺榊悉繧企亟豁｢螳牙・陬・ｽｮ",
+      "category": "置き去り防止安全装置",
       "type": "others",
       "items": [
         {
-          "name": "螳牙・陬・ｽｮ",
+          "name": "安全装置",
           "price": "88000",
-          "badge": "陬懷勧驥大ｯｾ蠢・
+          "badge": "補助金対応"
         }
       ],
       "images": []
     },
     {
       "id": "campit",
-      "category": "Campit (繧ｭ繝｣繝ｳ繝斐ャ繝・",
+      "category": "Campit (キャンピット)",
       "type": "others",
       "items": [
         {
-          "name": "襍ｰ陦悟・髮ｻ繧ｷ繧ｹ繝・Β",
+          "name": "走行充電システム",
           "price": "132000",
-          "badge": "霆贋ｸｭ豕企擠蜻ｽ"
+          "badge": "車中泊革命"
         }
       ],
       "images": []
@@ -673,338 +673,338 @@
   "guides": [
     {
       "id": "hires_guide",
-      "title": "繝上う繝ｬ繧ｾ蟆主・縺ｮ繧ｹ繧ｹ繝｡",
-      "badge": "鬮倩ｧ｣蜒丞ｺｦ",
+      "title": "ハイレゾ導入のススメ",
+      "badge": "高解像度",
       "features": [
-        "CD雜・∴縺ｮ諠・ｱ驥・,
-        "螟壼ｽｩ縺ｪ謗･邯壹・繝ｩ繝ｳ",
-        "DAP/繧ｹ繝槭・騾｣謳ｺ"
+        "CD超えの情報量",
+        "多彩な接続プラン",
+        "DAP/スマホ連携"
       ],
       "image": "/images/Audio/column/hires.webp",
-      "description": "<!DOCTYPE html>\n<html lang=\"ja\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>繝上う繝ｬ繧ｾ縺ｧ縲・浹讌ｽ縺ｯ繧ゅ▲縺ｨ雎翫°縺ｫ縺ｪ繧・/title>\n<link href=\"https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Bebas+Neue&display=swap\" rel=\"stylesheet\">\n<style>\n  /* 繧ｹ繧ｳ繝ｼ繝怜喧: 閭梧勹逋ｽ繝ｻ譁・ｭ励ム繝ｼ繧ｯ繧ｰ繝ｬ繝ｼ迚茨ｼ亥・繝励Λ繝ｳ蜿朱鹸・・*/\n  #hires-guide-wrapper {\n    --bg-white: #ffffff;\n    --bg-light: #f9f9f9;\n    --text-main: #333333;   /* 繝繝ｼ繧ｯ繧ｰ繝ｬ繝ｼ */\n    --text-sub: #666666;    /* 繧ｰ繝ｬ繝ｼ */\n    --card-bg: #ffffff;\n    --border: #e0e0e0;\n    --gold: #b38e2d;        /* 隕冶ｪ肴ｧ繧帝ｫ倥ａ縺滓ｿ・＞繧√・繧ｴ繝ｼ繝ｫ繝・*/\n    --gold-light: #d4af37;\n    --radius: 4px;\n\n    background: var(--bg-white);\n    color: var(--text-main);\n    font-family: 'Noto Sans JP', sans-serif;\n    font-weight: 300;\n    line-height: 1.8;\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n  }\n\n  #hires-guide-wrapper * { \n    box-sizing: border-box; \n    margin: 0; \n    padding: 0; \n  }\n\n  /* HERO */\n  #hires-guide-wrapper .hero {\n    min-height: 60vh;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    padding: 80px 24px;\n    position: relative;\n    overflow: hidden;\n    background: var(--bg-white);\n  }\n\n  #hires-guide-wrapper .hero::before {\n    content: '';\n    position: absolute;\n    inset: 0;\n    background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(179,142,45,0.06) 0%, transparent 70%);\n    pointer-events: none;\n  }\n\n  #hires-guide-wrapper .hero-waves {\n    position: absolute;\n    inset: 0;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    opacity: 0.15;\n    pointer-events: none;\n  }\n  #hires-guide-wrapper .hero-waves svg {\n    width: 100%;\n    height: 100%;\n    position: absolute;\n  }\n\n  #hires-guide-wrapper .hero-inner { position: relative; z-index: 1; max-width: 720px; }\n\n  #hires-guide-wrapper .hero-label {\n    display: inline-block;\n    font-size: 11px;\n    letter-spacing: 0.25em;\n    color: var(--gold);\n    border: 1px solid var(--gold);\n    padding: 4px 14px;\n    margin-bottom: 32px;\n    text-transform: uppercase;\n  }\n\n  #hires-guide-wrapper .hero h1 {\n    font-family: 'Noto Sans JP', sans-serif;\n    font-weight: 700;\n    font-size: clamp(2rem, 6vw, 3.5rem);\n    line-height: 1.25;\n    letter-spacing: -0.01em;\n    margin-bottom: 20px;\n    color: var(--text-main);\n  }\n\n  #hires-guide-wrapper .hero h1 span { color: var(--gold); }\n\n  #hires-guide-wrapper .hero p {\n    font-size: 1rem;\n    color: var(--text-sub);\n    max-width: 520px;\n    margin: 0 auto 40px;\n  }\n\n  #hires-guide-wrapper .btn-primary {\n    display: inline-block;\n    background: var(--gold);\n    color: #fff;\n    font-family: 'Noto Sans JP', sans-serif;\n    font-weight: 700;\n    font-size: 0.9rem;\n    letter-spacing: 0.05em;\n    padding: 14px 36px;\n    text-decoration: none;\n    transition: background 0.2s;\n  }\n  #hires-guide-wrapper .btn-primary:hover { background: var(--gold-light); }\n\n  /* SECTION BASE */\n  #hires-guide-wrapper section { padding: 80px 24px; }\n  #hires-guide-wrapper .container { max-width: 860px; margin: 0 auto; }\n\n  #hires-guide-wrapper .section-label {\n    font-size: 11px;\n    letter-spacing: 0.25em;\n    color: var(--gold);\n    text-transform: uppercase;\n    margin-bottom: 12px;\n  }\n\n  #hires-guide-wrapper .section-title {\n    font-weight: 700;\n    font-size: clamp(1.4rem, 3vw, 2rem);\n    margin-bottom: 24px;\n    line-height: 1.4;\n    color: var(--text-main);\n  }\n\n  /* WHAT IS HIRES */\n  #hires-guide-wrapper .what-section { background: var(--bg-light); border-top: 1px solid var(--border); }\n\n  #hires-guide-wrapper .what-grid {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    gap: 40px;\n    margin-top: 40px;\n  }\n  @media (max-width: 600px) { #hires-guide-wrapper .what-grid { grid-template-columns: 1fr; } }\n\n  #hires-guide-wrapper .stat-box {\n    border: 1px solid var(--border);\n    padding: 28px;\n    background: var(--card-bg);\n  }\n  #hires-guide-wrapper .stat-num {\n    font-family: 'Bebas Neue', sans-serif;\n    font-size: 3.5rem;\n    color: var(--gold);\n    line-height: 1;\n    margin-bottom: 8px;\n    letter-spacing: 0.02em;\n  }\n  #hires-guide-wrapper .stat-label { font-size: 0.85rem; color: var(--text-sub); }\n\n  #hires-guide-wrapper .what-text { font-size: 0.95rem; color: var(--text-main); line-height: 1.9; }\n  #hires-guide-wrapper .what-text + .what-text { margin-top: 16px; }\n\n  #hires-guide-wrapper .img-placeholder {\n    width: 100%;\n    aspect-ratio: 16/7;\n    background: #eee;\n    border: 1px dashed var(--border);\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    color: var(--text-sub);\n    font-size: 0.85rem;\n    letter-spacing: 0.1em;\n    margin: 40px 0;\n  }\n\n  /* PLANS */\n  #hires-guide-wrapper .plans-section { background: var(--bg-white); }\n\n  #hires-guide-wrapper .plan-intro {\n    font-size: 0.95rem;\n    color: var(--text-sub);\n    margin-bottom: 16px;\n    max-width: 640px;\n  }\n\n  #hires-guide-wrapper .level-tabs {\n    display: flex;\n    gap: 8px;\n    margin: 32px 0 40px;\n    flex-wrap: wrap;\n  }\n  #hires-guide-wrapper .level-tab {\n    padding: 8px 20px;\n    font-size: 0.8rem;\n    letter-spacing: 0.08em;\n    border: 1px solid var(--border);\n    color: var(--text-sub);\n    cursor: pointer;\n    transition: all 0.2s;\n    background: transparent;\n    font-family: 'Noto Sans JP', sans-serif;\n  }\n  #hires-guide-wrapper .level-tab:hover, #hires-guide-wrapper .level-tab.active {\n    border-color: var(--gold);\n    color: var(--gold);\n    background: #fffdf5;\n  }\n\n  #hires-guide-wrapper .plan-card {\n    border: 1px solid var(--border);\n    background: var(--card-bg);\n    margin-bottom: 20px;\n    overflow: hidden;\n    transition: all 0.2s;\n  }\n  #hires-guide-wrapper .plan-card:hover { border-color: var(--gold); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }\n\n  #hires-guide-wrapper .plan-header {\n    display: flex;\n    align-items: center;\n    gap: 20px;\n    padding: 24px 28px;\n    cursor: pointer;\n    user-select: none;\n  }\n\n  #hires-guide-wrapper .plan-badge {\n    font-family: 'Bebas Neue', sans-serif;\n    font-size: 1.6rem;\n    color: var(--gold);\n    min-width: 44px;\n    letter-spacing: 0.04em;\n  }\n\n  #hires-guide-wrapper .plan-title-wrap { flex: 1; }\n  #hires-guide-wrapper .plan-title {\n    font-weight: 700;\n    font-size: 1rem;\n    margin-bottom: 2px;\n    color: var(--text-main);\n  }\n  #hires-guide-wrapper .plan-subtitle { font-size: 0.8rem; color: var(--text-sub); }\n\n  #hires-guide-wrapper .plan-tag {\n    font-size: 0.7rem;\n    letter-spacing: 0.1em;\n    padding: 3px 10px;\n    border: 1px solid;\n    white-space: nowrap;\n  }\n  #hires-guide-wrapper .tag-easy { border-color: #4caf7d; color: #4caf7d; }\n  #hires-guide-wrapper .tag-mid  { border-color: var(--gold); color: var(--gold); }\n  #hires-guide-wrapper .tag-pro  { border-color: #e06060; color: #e06060; }\n\n  #hires-guide-wrapper .plan-toggle {\n    color: var(--text-sub);\n    font-size: 1.2rem;\n    transition: transform 0.3s;\n    min-width: 20px;\n    text-align: center;\n  }\n  #hires-guide-wrapper .plan-card.open .plan-toggle { transform: rotate(45deg); color: var(--gold); }\n\n  #hires-guide-wrapper .plan-body {\n    display: none;\n    padding: 0 28px 28px;\n    border-top: 1px solid var(--border);\n    background: #fcfcfc;\n  }\n  #hires-guide-wrapper .plan-card.open .plan-body { display: block; }\n\n  #hires-guide-wrapper .plan-body p {\n    font-size: 0.9rem;\n    color: var(--text-main);\n    margin: 20px 0 16px;\n    line-height: 1.9;\n  }\n\n  #hires-guide-wrapper .needs-title {\n    font-size: 0.75rem;\n    letter-spacing: 0.15em;\n    color: var(--gold);\n    text-transform: uppercase;\n    margin-bottom: 10px;\n    font-weight: 700;\n  }\n\n  #hires-guide-wrapper .needs-list {\n    list-style: none;\n    border-left: 2px solid var(--gold);\n    padding-left: 16px;\n    margin-bottom: 20px;\n  }\n  #hires-guide-wrapper .needs-list li {\n    font-size: 0.85rem;\n    color: var(--text-sub);\n    padding: 4px 0;\n  }\n  #hires-guide-wrapper .needs-list li::before {\n    content: '窶・';\n    color: var(--gold);\n  }\n\n  #hires-guide-wrapper .plan-cta {\n    display: inline-block;\n    font-size: 0.8rem;\n    color: var(--gold);\n    border-bottom: 1px solid var(--gold);\n    text-decoration: none;\n    letter-spacing: 0.05em;\n    padding-bottom: 2px;\n    transition: color 0.2s;\n    font-weight: 500;\n  }\n  #hires-guide-wrapper .plan-cta:hover { color: var(--gold-light); border-color: var(--gold-light); }\n\n  /* PHOTO SECTION */\n  #hires-guide-wrapper .photo-section {\n    background: var(--bg-light);\n    border-top: 1px solid var(--border);\n    padding: 60px 24px;\n  }\n  #hires-guide-wrapper .photo-grid {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    gap: 12px;\n    margin-top: 32px;\n  }\n  @media (max-width: 600px) { #hires-guide-wrapper .photo-grid { grid-template-columns: 1fr; } }\n\n  #hires-guide-wrapper .photo-slot {\n    aspect-ratio: 4/3;\n    background: #fff;\n    border: 1px solid var(--border);\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    color: var(--text-sub);\n    font-size: 0.75rem;\n    letter-spacing: 0.1em;\n  }\n\n  /* CTA SECTION */\n  #hires-guide-wrapper .cta-section {\n    background: var(--bg-white);\n    border-top: 1px solid var(--border);\n    text-align: center;\n    padding: 80px 24px;\n  }\n\n  #hires-guide-wrapper .cta-section h2 {\n    font-weight: 700;\n    font-size: clamp(1.4rem, 3vw, 2rem);\n    margin-bottom: 16px;\n    color: var(--text-main);\n  }\n\n  #hires-guide-wrapper .cta-section p {\n    color: var(--text-sub);\n    font-size: 0.95rem;\n    max-width: 480px;\n    margin: 0 auto 36px;\n  }\n\n  #hires-guide-wrapper .cta-buttons {\n    display: flex;\n    gap: 16px;\n    justify-content: center;\n    flex-wrap: wrap;\n  }\n\n  #hires-guide-wrapper .btn-secondary {\n    display: inline-block;\n    border: 1px solid var(--gold);\n    color: var(--gold);\n    font-family: 'Noto Sans JP', sans-serif;\n    font-weight: 500;\n    font-size: 0.9rem;\n    letter-spacing: 0.05em;\n    padding: 13px 32px;\n    text-decoration: none;\n    transition: all 0.2s;\n  }\n  #hires-guide-wrapper .btn-secondary:hover {\n    background: #fffaf0;\n    border-color: var(--gold-light);\n  }\n\n  /* FAQ */\n  #hires-guide-wrapper .faq-section {\n    background: var(--bg-light);\n    border-top: 1px solid var(--border);\n  }\n\n  #hires-guide-wrapper .faq-item {\n    border-bottom: 1px solid var(--border);\n    padding: 20px 0;\n    cursor: pointer;\n  }\n  #hires-guide-wrapper .faq-q {\n    font-weight: 500;\n    font-size: 0.95rem;\n    display: flex;\n    justify-content: space-between;\n    gap: 16px;\n    align-items: center;\n    color: var(--text-main);\n  }\n  #hires-guide-wrapper .faq-q span { color: var(--gold); font-size: 1rem; transition: transform 0.3s; }\n  #hires-guide-wrapper .faq-item.open .faq-q span { transform: rotate(45deg); }\n  #hires-guide-wrapper .faq-a {\n    display: none;\n    font-size: 0.875rem;\n    color: var(--text-sub);\n    margin-top: 12px;\n    line-height: 1.9;\n  }\n  #hires-guide-wrapper .faq-item.open .faq-a { display: block; }\n\n  #hires-guide-wrapper .gold-divider {\n    width: 40px;\n    height: 2px;\n    background: var(--gold);\n    margin: 20px 0 32px;\n  }\n\n  /* SCROLL REVEAL */\n  #hires-guide-wrapper .reveal {\n    opacity: 0;\n    transform: translateY(24px);\n    transition: opacity 0.6s ease, transform 0.6s ease;\n  }\n  #hires-guide-wrapper .reveal.visible {\n    opacity: 1;\n    transform: none;\n  }\n</style>\n</head>\n<body>\n\n<div id=\"hires-guide-wrapper\">\n  <section class=\"hero\">\n    <div class=\"hero-waves\">\n      <svg viewBox=\"0 0 1200 400\" preserveAspectRatio=\"xMidYMid slice\">\n        <path d=\"M0,200 Q150,120 300,200 T600,200 T900,200 T1200,200\" fill=\"none\" stroke=\"#b38e2d\" stroke-width=\"1\"/>\n        <path d=\"M0,200 Q150,80 300,200 T600,200 T900,200 T1200,200\" fill=\"none\" stroke=\"#b38e2d\" stroke-width=\"0.5\"/>\n      </svg>\n    </div>\n    <div class=\"hero-inner\">\n      <div class=\"hero-label\">Hi-Res Audio Guide</div>\n      <h1>霆翫・荳ｭ縺ｧ縲・span>繧ゅ▲縺ｨ縺・＞髻ｳ</span>繧・br>讌ｽ縺励ｓ縺ｧ縺ｿ縺ｾ縺帙ｓ縺具ｼ・/h1>\n      <p>繝上う繝ｬ繧ｾ縺ｨ縺ｯ菴輔°縲√←縺・☆繧後・蟋九ａ繧峨ｌ繧九°縲・br>縺ゅ↑縺溘↓蜷医▲縺溘・繝ｩ繝ｳ繧偵ｏ縺九ｊ繧・☆縺上＃邏ｹ莉九＠縺ｾ縺吶・/p>\n      <a href=\"https://page.line.me/312qjhsq?openQrModal=true\" class=\"btn-primary\">縺ｾ縺壹・逶ｸ隲・＠縺ｦ縺ｿ繧・/a>\n    </div>\n  </section>\n\n  <section class=\"what-section\">\n    <div class=\"container\">\n      <div class=\"reveal\">\n        <p class=\"section-label\">What is Hi-Res?</p>\n        <h2 class=\"section-title\">縲後ワ繧､繝ｬ繧ｾ縲阪▲縺ｦ縲・br>縺ｩ繧薙↑髻ｳ・・/h2>\n        <div class=\"gold-divider\"></div>\n      </div>\n      <div class=\"reveal\">\n        <p class=\"what-text\">荳險縺ｧ縺・≧縺ｨ縲，D繧医ｊ繧ゅ★縺｣縺ｨ諠・ｱ驥上・螟壹＞縲・ｫ倬浹雉ｪ縺ｪ髻ｳ讌ｽ繝輔か繝ｼ繝槭ャ繝医〒縺吶・D縺ｧ縺ｯ諡ｾ縺・″繧後↑縺九▲縺溽ｩｺ豌玲─繧・い繝ｼ繝・ぅ繧ｹ繝医・諱ｯ驕｣縺・∪縺ｧ縺瑚・辟ｶ縺ｫ閨槭％縺医※縺上ｋ窶披斐◎繧後′繝上う繝ｬ繧ｾ譛螟ｧ縺ｮ鬲・鴨縺ｧ縺吶ゅい繝翫Ο繧ｰ繝・Ξ繝薙′4K繝・Ξ繝薙↓縺ｪ縺｣縺溘→縺阪・諢溷虚繧偵・浹縺ｧ菴捺─縺ｧ縺阪ｋ繧､繝｡繝ｼ繧ｸ縺ｧ縺吶・/p>\n      </div>\n      <div class=\"what-grid reveal\">\n        <div class=\"stat-box\">\n          <div class=\"stat-num\">3縲・.5<span style=\"font-size:1.5rem\">ﾃ・/span></div>\n          <div class=\"stat-label\">CD縺ｨ豈斐∋縺滓ュ蝣ｱ驥上・蠅怜刈蛟咲紫</div>\n        </div>\n        <div class=\"stat-box\">\n          <div class=\"stat-num\">192<span style=\"font-size:1.5rem\">kHz</span></div>\n          <div class=\"stat-label\">譛螟ｧ繧ｵ繝ｳ繝励Μ繝ｳ繧ｰ蜻ｨ豕｢謨ｰ</div>\n        </div>\n      </div>\n      <div class=\"reveal\" style=style=\"margin: 40px 0;\">\n        <img src=\"/images/Audio/column/tennai.webp\" alt=\"蠎怜・縺ｮ鬚ｨ譎ｯ\" style=\"width: 100%; border-radius: 8px;\">\n      </div>\n    </div>\n  </section>\n\n  <section class=\"plans-section\">\n    <div class=\"container\">\n      <div class=\"reveal\">\n        <p class=\"section-label\">How to Start</p>\n        <h2 class=\"section-title\">縺ゅ↑縺溘↓蜷医▲縺溘・繝ｩ繝ｳ縺ｧ<br>蟋九ａ縺ｦ縺ｿ縺ｾ縺励ｇ縺・/h2>\n        <div class=\"gold-divider\"></div>\n        <p class=\"plan-intro\">縲後∪縺夊ｩｦ縺励◆縺・阪°繧峨梧悽譬ｼ逧・↓邨・∩縺溘＞縲阪∪縺ｧ縲・縺､縺ｮ繝励Λ繝ｳ繧偵＃逕ｨ諢上＠縺ｦ縺・∪縺吶・/p>\n      </div>\n\n      <div class=\"level-tabs reveal\">\n        <button class=\"level-tab active\" onclick=\"filterPlans('all', this)\">縺吶∋縺ｦ</button>\n        <button class=\"level-tab\" onclick=\"filterPlans('easy', this)\">縺九ｓ縺溘ｓ</button>\n        <button class=\"level-tab\" onclick=\"filterPlans('mid', this)\">縺薙□繧上ｊ</button>\n        <button class=\"level-tab\" onclick=\"filterPlans('pro', this)\">譛ｬ譬ｼ豢ｾ</button>\n      </div>\n\n      <div class=\"plan-card reveal\" data-level=\"easy\">\n        <div class=\"plan-header\" onclick=\"togglePlan(this)\">\n          <div class=\"plan-badge\">A</div>\n          <div class=\"plan-title-wrap\">\n            <div class=\"plan-title\">Bluetooth謗･邯壹〒縺ｾ縺夊ｩｦ縺励※縺ｿ繧・/div>\n            <div class=\"plan-subtitle\">繧ｹ繝槭・繝ｻ繝翫ン縺昴・縺ｾ縺ｾ菴ｿ縺医ｋ</div>\n          </div>\n          <span class=\"plan-tag tag-easy\">縺九ｓ縺溘ｓ</span>\n          <div class=\"plan-toggle\">+</div>\n        </div>\n        <div class=\"plan-body\">\n          <p>繧ｹ繝槭・繧ДAP縺九ｉBluetooth縺ｧ鬟帙・縺吶□縺代ゅこ繝ｼ繝悶Ν荳崎ｦ√∝ｷ･莠倶ｸ崎ｦ√ゆｻ頑律縺九ｉ縺ｧ繧ょｧ九ａ繧峨ｌ繧倶ｸ逡ｪ縺頑焔霆ｽ縺ｪ繝励Λ繝ｳ縺ｧ縺吶・/p>\n          <div class=\"needs-title\">蠢・ｦ√↑繧ゅ・</div>\n          <ul class=\"needs-list\">\n            <li>Bluetooth讖溯・莉倥″縺ｮ繝翫ン縺ｾ縺溘・繝励Ξ繝ｼ繝､繝ｼ</li>\n            <li>繧ｹ繝槭・繧ДAP</li>\n            <li>繝上う繝ｬ繧ｾ髻ｳ貅・/li>\n          </ul>\n          <a href=\"#contact\" class=\"plan-cta\">蠖灘ｺ励〒繝・Δ繧剃ｽ馴ｨ薙☆繧・竊・/a>\n        </div>\n      </div>\n\n      <div class=\"plan-card reveal\" data-level=\"easy\">\n        <div class=\"plan-header\" onclick=\"togglePlan(this)\">\n          <div class=\"plan-badge\">B</div>\n          <div class=\"plan-title-wrap\">\n            <div class=\"plan-title\">AUX/HDMI螟夜Κ蜈･蜉帙〒謇玖ｻｽ縺ｫ鬮倬浹雉ｪ蛹・/div>\n            <div class=\"plan-subtitle\">莉翫・繝翫ン繧偵◎縺ｮ縺ｾ縺ｾ豢ｻ縺九○繧・/div>\n          </div>\n          <span class=\"plan-tag tag-easy\">縺九ｓ縺溘ｓ</span>\n          <div class=\"plan-toggle\">+</div>\n        </div>\n        <div class=\"plan-body\">\n          <p>譌｢蟄倥・繝翫ン縺ｮAUX繧ЗDMI蜈･蜉帙↓繧ｹ繝槭・繧ДAP繧偵こ繝ｼ繝悶Ν縺ｧ縺､縺ｪ縺先婿豕輔〒縺吶ゅリ繝薙ｒ雋ｷ縺・崛縺医★縺ｫ莉翫☆縺仙ｧ九ａ繧峨ｌ縺ｾ縺吶・/p>\n          <div class=\"needs-title\">蠢・ｦ√↑繧ゅ・</div>\n          <ul class=\"needs-list\">\n            <li>AUX縺ｾ縺溘・HDMI蜈･蜉帑ｻ倥″縺ｮ繝翫ン</li>\n            <li>繧ｹ繝槭・繧ДAP</li>\n            <li>蟇ｾ蠢懊こ繝ｼ繝悶Ν</li>\n          </ul>\n          <a href=\"#contact\" class=\"plan-cta\">繧ｱ繝ｼ繝悶Ν驕ｸ縺ｳ繧堤嶌隲・☆繧・竊・/a>\n        </div>\n      </div>\n\n      <div class=\"plan-card reveal\" data-level=\"mid\">\n        <div class=\"plan-header\" onclick=\"togglePlan(this)\">\n          <div class=\"plan-badge\">C</div>\n          <div class=\"plan-title-wrap\">\n            <div class=\"plan-title\">D/A繧ｳ繝ｳ繝舌・繧ｿ繝ｼ霑ｽ蜉縺ｧ縺輔ｉ縺ｫ鬮倬浹雉ｪ縺ｫ</div>\n            <div class=\"plan-subtitle\">繝励Λ繝ｳB縺ｫ縺ｲ縺ｨ謇矩俣繝励Λ繧ｹ</div>\n          </div>\n          <span class=\"plan-tag tag-mid\">縺薙□繧上ｊ</span>\n          <div class=\"plan-toggle\">+</div>\n        </div>\n        <div class=\"plan-body\">\n          <p>鬮伜刀菴阪↑USB竊坦CA螟画鋤繝ｦ繝九ャ繝医ｒ霑ｽ蜉縺吶ｋ縺薙→縺ｧ縲．/A螟画鋤縺ｮ蜩∬ｳｪ縺悟髄荳翫＠縲√ｈ繧企ｮｮ譏弱↑繧ｵ繧ｦ繝ｳ繝峨′蠕励ｉ繧後∪縺吶・/p>\n          <div class=\"needs-title\">蠢・ｦ√↑繧ゅ・</div>\n          <ul class=\"needs-list\">\n            <li>AUX縺ｾ縺溘・螟夜Κ蜈･蜉帑ｻ倥″縺ｮ繝翫ン</li>\n            <li>USB竊坦CA螟画鋤繝ｦ繝九ャ繝・/li>\n            <li>繝上う繝ｬ繧ｾ髻ｳ貅・/li>\n          </ul>\n          <a href=\"#contact\" class=\"plan-cta\">譛驕ｩ縺ｪ讖溽ｨｮ繧堤嶌隲・☆繧・竊・/a>\n        </div>\n      </div>\n\n      <div class=\"plan-card reveal\" data-level=\"mid\">\n        <div class=\"plan-header\" onclick=\"togglePlan(this)\">\n          <div class=\"plan-badge\">D</div>\n          <div class=\"plan-title-wrap\">\n            <div class=\"plan-title\">繝上う繝ｬ繧ｾ蟇ｾ蠢懊リ繝薙〒謫堺ｽ懊ｂ髻ｳ雉ｪ繧ゅせ繝槭・繝医↓</div>\n            <div class=\"plan-subtitle\">蟾ｮ縺苓ｾｼ繧縺縺代∽ｸ逡ｪ繧ｷ繝ｳ繝励Ν縺ｪ譁ｹ豕・/div>\n          </div>\n          <span class=\"plan-tag tag-mid\">縺薙□繧上ｊ</span>\n          <div class=\"plan-toggle\">+</div>\n        </div>\n        <div class=\"plan-body\">\n          <p>繝上う繝ｬ繧ｾ蟇ｾ蠢懊リ繝薙↓SD繧ｫ繝ｼ繝峨ｄUSB繝｡繝｢繝ｪ繧貞ｷｮ縺苓ｾｼ繧縺縺代よ桃菴懈ｧ繝ｻ謇玖ｻｽ縺輔・繝舌Λ繝ｳ繧ｹ縺御ｸ逡ｪ縺・＞繝励Λ繝ｳ縺ｧ縺吶・/p>\n          <div class=\"needs-title\">蠢・ｦ√↑繧ゅ・</div>\n          <ul class=\"needs-list\">\n            <li>繝上う繝ｬ繧ｾ蜀咲函蟇ｾ蠢懊リ繝・/li>\n            <li>SD繧ｫ繝ｼ繝峨∪縺溘・USB繝｡繝｢繝ｪ</li>\n            <li>繝上う繝ｬ繧ｾ髻ｳ貅・/li>\n          </ul>\n          <a href=\"#contact\" class=\"plan-cta\">蟇ｾ蠢懊リ繝薙ｒ隕九↓譚･繧・竊・/a>\n        </div>\n      </div>\n\n      <div class=\"plan-card reveal\" data-level=\"pro\">\n        <div class=\"plan-header\" onclick=\"togglePlan(this)\">\n          <div class=\"plan-badge\">E</div>\n          <div class=\"plan-title-wrap\">\n            <div class=\"plan-title\">繝上う繝ｬ繧ｾ蟇ｾ蠢廛SP縺ｧ譛ｬ譬ｼ繧ｵ繧ｦ繝ｳ繝峨ｒ讒狗ｯ・/div>\n            <div class=\"plan-subtitle\">縺薙□繧上ｋ莠ｺ縺ｮ螳夂分讒区・</div>\n          </div>\n          <span class=\"plan-tag tag-pro\">譛ｬ譬ｼ豢ｾ</span>\n          <div class=\"plan-toggle\">+</div>\n        </div>\n        <div class=\"plan-body\">\n          <p>繝・ず繧ｿ繝ｫ菫｡蜿ｷ縺ｮ縺ｾ縺ｾDSP縺ｫ騾√ｊ縲．SP蜀・鳩DAC縺ｧ繧｢繝翫Ο繧ｰ螟画鋤縲ゆｿ｡蜿ｷ縺ｮ蜉｣蛹悶ｒ譛蟆城剞縺ｫ謚代∴縺溘け繝ｪ繧｢縺ｪ繧ｵ繧ｦ繝ｳ繝峨′讌ｽ縺励ａ縺ｾ縺吶・/p>\n          <div class=\"needs-title\">蠢・ｦ√↑繧ゅ・</div>\n          <ul class=\"needs-list\">\n            <li>繧ｹ繝槭・繧ДAP</li>\n            <li>繝上う繝ｬ繧ｾ蟇ｾ蠢廛SP</li>\n            <li>繝上う繝ｬ繧ｾ髻ｳ貅・/li>\n          </ul>\n          <a href=\"#contact\" class=\"plan-cta\">繧ｷ繧ｹ繝・Β讒区・繧堤嶌隲・☆繧・竊・/a>\n        </div>\n      </div>\n\n      <div class=\"plan-card reveal\" data-level=\"pro\">\n        <div class=\"plan-header\" onclick=\"togglePlan(this)\">\n          <div class=\"plan-badge\">F</div>\n          <div class=\"plan-title-wrap\">\n            <div class=\"plan-title\">LDAC蟇ｾ蠢廛AP縺ｧ繝ｯ繧､繝､繝ｬ繧ｹ縺ｮ縺ｾ縺ｾ繝上う繝ｬ繧ｾ繧・/div>\n            <div class=\"plan-subtitle\">繧ｱ繝ｼ繝悶Ν縺ｪ縺励〒鬮倬浹雉ｪ繧剃ｸ｡遶・/div>\n          </div>\n          <span class=\"plan-tag tag-pro\">譛ｬ譬ｼ豢ｾ</span>\n          <div class=\"plan-toggle\">+</div>\n        </div>\n        <div class=\"plan-body\">\n          <p>LDAC蟇ｾ蠢懈ｩ溷勣繧剃ｽｿ縺・％縺ｨ縺ｧ縲。luetooth縺ｮ縺ｾ縺ｾ96kHz/24bit縺ｮ繝上う繝ｬ繧ｾ蜀咲函縺悟庄閭ｽ縺ｫ縺ｪ繧翫∪縺吶・/p>\n          <div class=\"needs-title\">蠢・ｦ√↑繧ゅ・</div>\n          <ul class=\"needs-list\">\n            <li>LDAC蟇ｾ蠢懊・繧ｹ繝槭・縺ｾ縺溘・DAP</li>\n            <li>LDAC蟇ｾ蠢懊・Bluetooth蜿嶺ｿ｡繝ｦ繝九ャ繝・/li>\n          </ul>\n          <a href=\"#contact\" class=\"plan-cta\">蟇ｾ蠢懃憾豕√ｒ遒ｺ隱阪＠縺ｫ譚･繧・竊・/a>\n        </div>\n      </div>\n\n      <div class=\"plan-card reveal\" data-level=\"pro\">\n        <div class=\"plan-header\" onclick=\"togglePlan(this)\">\n          <div class=\"plan-badge\">G</div>\n          <div class=\"plan-title-wrap\">\n            <div class=\"plan-title\">繝｡繝・ぅ繧｢繝励Ξ繝ｼ繝､繝ｼ蟆主・縺ｧ遨ｶ讌ｵ縺ｮ繧ｪ繝ｼ繝・ぅ繧ｪ縺ｸ</div>\n            <div class=\"plan-subtitle\">繝ｩ繧､繝悶Λ繝ｪ縺斐→霆翫↓謖√■霎ｼ繧</div>\n          </div>\n          <span class=\"plan-tag tag-pro\">譛ｬ譬ｼ豢ｾ</span>\n          <div class=\"plan-toggle\">+</div>\n        </div>\n        <div class=\"plan-body\">\n          <p>螟ｧ螳ｹ驥輯SD縺ｫ髻ｳ貅舌Λ繧､繝悶Λ繝ｪ繧貞庶繧√∬ｻ雁・縺ｧ荳ｸ縺斐→讌ｽ縺励ａ繧九・縺後Γ繝・ぅ繧｢繝励Ξ繝ｼ繝､繝ｼ縺ｮ鬲・鴨縺ｧ縺吶・/p>\n          <div class=\"needs-title\">蠢・ｦ√↑繧ゅ・</div>\n          <ul class=\"needs-list\">\n            <li>髻ｳ貅舌・蜈･縺｣縺欟SB縺ｾ縺溘・SSD</li>\n            <li>繝上う繝ｬ繧ｾ蟇ｾ蠢懊Γ繝・ぅ繧｢繝励Ξ繝ｼ繝､繝ｼ</li>\n            <li>繝上う繝ｬ繧ｾ蟇ｾ蠢廛SP</li>\n          </ul>\n          <a href=\"#contact\" class=\"plan-cta\">繝・Δ讖溘ｒ隗ｦ繧翫↓譚･繧・竊・/a>\n        </div>\n      </div>\n\n    </div>\n  </section>\n\n  <section class=\"faq-section\">\n    <div class=\"container\">\n      <div class=\"reveal\">\n        <p class=\"section-label\">FAQ</p>\n        <h2 class=\"section-title\">繧医￥縺ゅｋ縺碑ｳｪ蝠・/h2>\n        <div class=\"gold-divider\"></div>\n      </div>\n      <div class=\"reveal\">\n        <div class=\"faq-item\" onclick=\"toggleFaq(this)\">\n          <div class=\"faq-q\">莉翫・繝翫ン縺ｮ縺ｾ縺ｾ菴ｿ縺医∪縺吶°・・span>+</span></div>\n          <div class=\"faq-a\">Bluetooth讖溯・縺ｾ縺溘・AUX/HDMI蜈･蜉帙′縺ゅｌ縺ｰ縲√リ繝薙ｒ雋ｷ縺・崛縺医★縺ｫ蟋九ａ繧峨ｌ繧九・繝ｩ繝ｳ縺後≠繧翫∪縺吶・/div>\n        </div>\n        <div class=\"faq-item\" onclick=\"toggleFaq(this)\">\n          <div class=\"faq-q\">莠育ｮ励・縺ｩ縺ｮ縺上ｉ縺・ｿ・ｦ√〒縺吶°・・span>+</span></div>\n          <div class=\"faq-a\">繝励Λ繝ｳA縺ｪ繧芽ｿｽ蜉雋ｻ逕ｨ縺ｯ縺ｻ縺ｼ繧ｼ繝ｭ縺九ｉ縲∵悽譬ｼ逧・↑DSP繧ｷ繧ｹ繝・Β縺ｧ縺ｯ謨ｰ荳・・縲懊↓縺ｪ繧翫∪縺吶・/div>\n        </div>\n      </div>\n    </div>\n  </section>\n\n  <section class=\"cta-section\" id=\"contact\">\n    <div class=\"container\">\n      <div class=\"reveal\">\n        <p class=\"section-label\">Contact</p>\n        <h2>霑ｷ縺｣縺溘ｉ縲√∪縺壹＃逶ｸ隲・ｒ</h2>\n        <div class=\"gold-divider\" style=\"margin: 20px auto 24px;\"></div>\n        <div class=\"cta-buttons\">\n          <a href=\"tel:092-503-5421\" class=\"btn-primary\">髮ｻ隧ｱ縺ｧ蝠上＞蜷医ｏ縺帙ｋ</a>\n          <a href=\"https://page.line.me/312qjhsq?openQrModal=true\" class=\"btn-secondary\">LINE縺ｧ逶ｸ隲・☆繧・/a>\n        </div>\n      </div>\n    </div>\n  </section>\n</div>\n\n<script>\n  function togglePlan(header) {\n    header.parentElement.classList.toggle('open');\n  }\n\n  function filterPlans(level, btn) {\n    const wrapper = btn.closest('#hires-guide-wrapper');\n    wrapper.querySelectorAll('.level-tab').forEach(t => t.classList.remove('active'));\n    btn.classList.add('active');\n    wrapper.querySelectorAll('.plan-card').forEach(card => {\n      card.style.display = (level === 'all' || card.dataset.level === level) ? '' : 'none';\n    });\n  }\n\n  function toggleFaq(item) {\n    item.classList.toggle('open');\n  }\n\n  const observer = new IntersectionObserver((entries) => {\n    entries.forEach(e => {\n      if (e.isIntersecting) {\n        e.target.classList.add('visible');\n        observer.unobserve(e.target);\n      }\n    });\n  }, { threshold: 0.1 });\n\n  document.querySelectorAll('#hires-guide-wrapper .reveal').forEach(el => observer.observe(el));\n</script>\n</body>\n</html>",
-      "category": "遏･隴倥・繧ｬ繧､繝・,
+      "description": "<!DOCTYPE html>\n<html lang=\"ja\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>ハイレゾで、音楽はもっと豊かになる</title>\n<link href=\"https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Bebas+Neue&display=swap\" rel=\"stylesheet\">\n<style>\n  /* スコープ化: 背景白・文字ダークグレー版（全プラン収録） */\n  #hires-guide-wrapper {\n    --bg-white: #ffffff;\n    --bg-light: #f9f9f9;\n    --text-main: #333333;   /* ダークグレー */\n    --text-sub: #666666;    /* グレー */\n    --card-bg: #ffffff;\n    --border: #e0e0e0;\n    --gold: #b38e2d;        /* 視認性を高めた濃いめのゴールド */\n    --gold-light: #d4af37;\n    --radius: 4px;\n\n    background: var(--bg-white);\n    color: var(--text-main);\n    font-family: 'Noto Sans JP', sans-serif;\n    font-weight: 300;\n    line-height: 1.8;\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n  }\n\n  #hires-guide-wrapper * { \n    box-sizing: border-box; \n    margin: 0; \n    padding: 0; \n  }\n\n  /* HERO */\n  #hires-guide-wrapper .hero {\n    min-height: 60vh;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    padding: 80px 24px;\n    position: relative;\n    overflow: hidden;\n    background: var(--bg-white);\n  }\n\n  #hires-guide-wrapper .hero::before {\n    content: '';\n    position: absolute;\n    inset: 0;\n    background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(179,142,45,0.06) 0%, transparent 70%);\n    pointer-events: none;\n  }\n\n  #hires-guide-wrapper .hero-waves {\n    position: absolute;\n    inset: 0;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    opacity: 0.15;\n    pointer-events: none;\n  }\n  #hires-guide-wrapper .hero-waves svg {\n    width: 100%;\n    height: 100%;\n    position: absolute;\n  }\n\n  #hires-guide-wrapper .hero-inner { position: relative; z-index: 1; max-width: 720px; }\n\n  #hires-guide-wrapper .hero-label {\n    display: inline-block;\n    font-size: 11px;\n    letter-spacing: 0.25em;\n    color: var(--gold);\n    border: 1px solid var(--gold);\n    padding: 4px 14px;\n    margin-bottom: 32px;\n    text-transform: uppercase;\n  }\n\n  #hires-guide-wrapper .hero h1 {\n    font-family: 'Noto Sans JP', sans-serif;\n    font-weight: 700;\n    font-size: clamp(2rem, 6vw, 3.5rem);\n    line-height: 1.25;\n    letter-spacing: -0.01em;\n    margin-bottom: 20px;\n    color: var(--text-main);\n  }\n\n  #hires-guide-wrapper .hero h1 span { color: var(--gold); }\n\n  #hires-guide-wrapper .hero p {\n    font-size: 1rem;\n    color: var(--text-sub);\n    max-width: 520px;\n    margin: 0 auto 40px;\n  }\n\n  #hires-guide-wrapper .btn-primary {\n    display: inline-block;\n    background: var(--gold);\n    color: #fff;\n    font-family: 'Noto Sans JP', sans-serif;\n    font-weight: 700;\n    font-size: 0.9rem;\n    letter-spacing: 0.05em;\n    padding: 14px 36px;\n    text-decoration: none;\n    transition: background 0.2s;\n  }\n  #hires-guide-wrapper .btn-primary:hover { background: var(--gold-light); }\n\n  /* SECTION BASE */\n  #hires-guide-wrapper section { padding: 80px 24px; }\n  #hires-guide-wrapper .container { max-width: 860px; margin: 0 auto; }\n\n  #hires-guide-wrapper .section-label {\n    font-size: 11px;\n    letter-spacing: 0.25em;\n    color: var(--gold);\n    text-transform: uppercase;\n    margin-bottom: 12px;\n  }\n\n  #hires-guide-wrapper .section-title {\n    font-weight: 700;\n    font-size: clamp(1.4rem, 3vw, 2rem);\n    margin-bottom: 24px;\n    line-height: 1.4;\n    color: var(--text-main);\n  }\n\n  /* WHAT IS HIRES */\n  #hires-guide-wrapper .what-section { background: var(--bg-light); border-top: 1px solid var(--border); }\n\n  #hires-guide-wrapper .what-grid {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    gap: 40px;\n    margin-top: 40px;\n  }\n  @media (max-width: 600px) { #hires-guide-wrapper .what-grid { grid-template-columns: 1fr; } }\n\n  #hires-guide-wrapper .stat-box {\n    border: 1px solid var(--border);\n    padding: 28px;\n    background: var(--card-bg);\n  }\n  #hires-guide-wrapper .stat-num {\n    font-family: 'Bebas Neue', sans-serif;\n    font-size: 3.5rem;\n    color: var(--gold);\n    line-height: 1;\n    margin-bottom: 8px;\n    letter-spacing: 0.02em;\n  }\n  #hires-guide-wrapper .stat-label { font-size: 0.85rem; color: var(--text-sub); }\n\n  #hires-guide-wrapper .what-text { font-size: 0.95rem; color: var(--text-main); line-height: 1.9; }\n  #hires-guide-wrapper .what-text + .what-text { margin-top: 16px; }\n\n  #hires-guide-wrapper .img-placeholder {\n    width: 100%;\n    aspect-ratio: 16/7;\n    background: #eee;\n    border: 1px dashed var(--border);\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    color: var(--text-sub);\n    font-size: 0.85rem;\n    letter-spacing: 0.1em;\n    margin: 40px 0;\n  }\n\n  /* PLANS */\n  #hires-guide-wrapper .plans-section { background: var(--bg-white); }\n\n  #hires-guide-wrapper .plan-intro {\n    font-size: 0.95rem;\n    color: var(--text-sub);\n    margin-bottom: 16px;\n    max-width: 640px;\n  }\n\n  #hires-guide-wrapper .level-tabs {\n    display: flex;\n    gap: 8px;\n    margin: 32px 0 40px;\n    flex-wrap: wrap;\n  }\n  #hires-guide-wrapper .level-tab {\n    padding: 8px 20px;\n    font-size: 0.8rem;\n    letter-spacing: 0.08em;\n    border: 1px solid var(--border);\n    color: var(--text-sub);\n    cursor: pointer;\n    transition: all 0.2s;\n    background: transparent;\n    font-family: 'Noto Sans JP', sans-serif;\n  }\n  #hires-guide-wrapper .level-tab:hover, #hires-guide-wrapper .level-tab.active {\n    border-color: var(--gold);\n    color: var(--gold);\n    background: #fffdf5;\n  }\n\n  #hires-guide-wrapper .plan-card {\n    border: 1px solid var(--border);\n    background: var(--card-bg);\n    margin-bottom: 20px;\n    overflow: hidden;\n    transition: all 0.2s;\n  }\n  #hires-guide-wrapper .plan-card:hover { border-color: var(--gold); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }\n\n  #hires-guide-wrapper .plan-header {\n    display: flex;\n    align-items: center;\n    gap: 20px;\n    padding: 24px 28px;\n    cursor: pointer;\n    user-select: none;\n  }\n\n  #hires-guide-wrapper .plan-badge {\n    font-family: 'Bebas Neue', sans-serif;\n    font-size: 1.6rem;\n    color: var(--gold);\n    min-width: 44px;\n    letter-spacing: 0.04em;\n  }\n\n  #hires-guide-wrapper .plan-title-wrap { flex: 1; }\n  #hires-guide-wrapper .plan-title {\n    font-weight: 700;\n    font-size: 1rem;\n    margin-bottom: 2px;\n    color: var(--text-main);\n  }\n  #hires-guide-wrapper .plan-subtitle { font-size: 0.8rem; color: var(--text-sub); }\n\n  #hires-guide-wrapper .plan-tag {\n    font-size: 0.7rem;\n    letter-spacing: 0.1em;\n    padding: 3px 10px;\n    border: 1px solid;\n    white-space: nowrap;\n  }\n  #hires-guide-wrapper .tag-easy { border-color: #4caf7d; color: #4caf7d; }\n  #hires-guide-wrapper .tag-mid  { border-color: var(--gold); color: var(--gold); }\n  #hires-guide-wrapper .tag-pro  { border-color: #e06060; color: #e06060; }\n\n  #hires-guide-wrapper .plan-toggle {\n    color: var(--text-sub);\n    font-size: 1.2rem;\n    transition: transform 0.3s;\n    min-width: 20px;\n    text-align: center;\n  }\n  #hires-guide-wrapper .plan-card.open .plan-toggle { transform: rotate(45deg); color: var(--gold); }\n\n  #hires-guide-wrapper .plan-body {\n    display: none;\n    padding: 0 28px 28px;\n    border-top: 1px solid var(--border);\n    background: #fcfcfc;\n  }\n  #hires-guide-wrapper .plan-card.open .plan-body { display: block; }\n\n  #hires-guide-wrapper .plan-body p {\n    font-size: 0.9rem;\n    color: var(--text-main);\n    margin: 20px 0 16px;\n    line-height: 1.9;\n  }\n\n  #hires-guide-wrapper .needs-title {\n    font-size: 0.75rem;\n    letter-spacing: 0.15em;\n    color: var(--gold);\n    text-transform: uppercase;\n    margin-bottom: 10px;\n    font-weight: 700;\n  }\n\n  #hires-guide-wrapper .needs-list {\n    list-style: none;\n    border-left: 2px solid var(--gold);\n    padding-left: 16px;\n    margin-bottom: 20px;\n  }\n  #hires-guide-wrapper .needs-list li {\n    font-size: 0.85rem;\n    color: var(--text-sub);\n    padding: 4px 0;\n  }\n  #hires-guide-wrapper .needs-list li::before {\n    content: '— ';\n    color: var(--gold);\n  }\n\n  #hires-guide-wrapper .plan-cta {\n    display: inline-block;\n    font-size: 0.8rem;\n    color: var(--gold);\n    border-bottom: 1px solid var(--gold);\n    text-decoration: none;\n    letter-spacing: 0.05em;\n    padding-bottom: 2px;\n    transition: color 0.2s;\n    font-weight: 500;\n  }\n  #hires-guide-wrapper .plan-cta:hover { color: var(--gold-light); border-color: var(--gold-light); }\n\n  /* PHOTO SECTION */\n  #hires-guide-wrapper .photo-section {\n    background: var(--bg-light);\n    border-top: 1px solid var(--border);\n    padding: 60px 24px;\n  }\n  #hires-guide-wrapper .photo-grid {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    gap: 12px;\n    margin-top: 32px;\n  }\n  @media (max-width: 600px) { #hires-guide-wrapper .photo-grid { grid-template-columns: 1fr; } }\n\n  #hires-guide-wrapper .photo-slot {\n    aspect-ratio: 4/3;\n    background: #fff;\n    border: 1px solid var(--border);\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    color: var(--text-sub);\n    font-size: 0.75rem;\n    letter-spacing: 0.1em;\n  }\n\n  /* CTA SECTION */\n  #hires-guide-wrapper .cta-section {\n    background: var(--bg-white);\n    border-top: 1px solid var(--border);\n    text-align: center;\n    padding: 80px 24px;\n  }\n\n  #hires-guide-wrapper .cta-section h2 {\n    font-weight: 700;\n    font-size: clamp(1.4rem, 3vw, 2rem);\n    margin-bottom: 16px;\n    color: var(--text-main);\n  }\n\n  #hires-guide-wrapper .cta-section p {\n    color: var(--text-sub);\n    font-size: 0.95rem;\n    max-width: 480px;\n    margin: 0 auto 36px;\n  }\n\n  #hires-guide-wrapper .cta-buttons {\n    display: flex;\n    gap: 16px;\n    justify-content: center;\n    flex-wrap: wrap;\n  }\n\n  #hires-guide-wrapper .btn-secondary {\n    display: inline-block;\n    border: 1px solid var(--gold);\n    color: var(--gold);\n    font-family: 'Noto Sans JP', sans-serif;\n    font-weight: 500;\n    font-size: 0.9rem;\n    letter-spacing: 0.05em;\n    padding: 13px 32px;\n    text-decoration: none;\n    transition: all 0.2s;\n  }\n  #hires-guide-wrapper .btn-secondary:hover {\n    background: #fffaf0;\n    border-color: var(--gold-light);\n  }\n\n  /* FAQ */\n  #hires-guide-wrapper .faq-section {\n    background: var(--bg-light);\n    border-top: 1px solid var(--border);\n  }\n\n  #hires-guide-wrapper .faq-item {\n    border-bottom: 1px solid var(--border);\n    padding: 20px 0;\n    cursor: pointer;\n  }\n  #hires-guide-wrapper .faq-q {\n    font-weight: 500;\n    font-size: 0.95rem;\n    display: flex;\n    justify-content: space-between;\n    gap: 16px;\n    align-items: center;\n    color: var(--text-main);\n  }\n  #hires-guide-wrapper .faq-q span { color: var(--gold); font-size: 1rem; transition: transform 0.3s; }\n  #hires-guide-wrapper .faq-item.open .faq-q span { transform: rotate(45deg); }\n  #hires-guide-wrapper .faq-a {\n    display: none;\n    font-size: 0.875rem;\n    color: var(--text-sub);\n    margin-top: 12px;\n    line-height: 1.9;\n  }\n  #hires-guide-wrapper .faq-item.open .faq-a { display: block; }\n\n  #hires-guide-wrapper .gold-divider {\n    width: 40px;\n    height: 2px;\n    background: var(--gold);\n    margin: 20px 0 32px;\n  }\n\n  /* SCROLL REVEAL */\n  #hires-guide-wrapper .reveal {\n    opacity: 0;\n    transform: translateY(24px);\n    transition: opacity 0.6s ease, transform 0.6s ease;\n  }\n  #hires-guide-wrapper .reveal.visible {\n    opacity: 1;\n    transform: none;\n  }\n</style>\n</head>\n<body>\n\n<div id=\"hires-guide-wrapper\">\n  <section class=\"hero\">\n    <div class=\"hero-waves\">\n      <svg viewBox=\"0 0 1200 400\" preserveAspectRatio=\"xMidYMid slice\">\n        <path d=\"M0,200 Q150,120 300,200 T600,200 T900,200 T1200,200\" fill=\"none\" stroke=\"#b38e2d\" stroke-width=\"1\"/>\n        <path d=\"M0,200 Q150,80 300,200 T600,200 T900,200 T1200,200\" fill=\"none\" stroke=\"#b38e2d\" stroke-width=\"0.5\"/>\n      </svg>\n    </div>\n    <div class=\"hero-inner\">\n      <div class=\"hero-label\">Hi-Res Audio Guide</div>\n      <h1>車の中で、<span>もっといい音</span>を<br>楽しんでみませんか？</h1>\n      <p>ハイレゾとは何か、どうすれば始められるか。<br>あなたに合ったプランをわかりやすくご紹介します。</p>\n      <a href=\"https://page.line.me/312qjhsq?openQrModal=true\" class=\"btn-primary\">まずは相談してみる</a>\n    </div>\n  </section>\n\n  <section class=\"what-section\">\n    <div class=\"container\">\n      <div class=\"reveal\">\n        <p class=\"section-label\">What is Hi-Res?</p>\n        <h2 class=\"section-title\">「ハイレゾ」って、<br>どんな音？</h2>\n        <div class=\"gold-divider\"></div>\n      </div>\n      <div class=\"reveal\">\n        <p class=\"what-text\">一言でいうと、CDよりもずっと情報量の多い、高音質な音楽フォーマットです。CDでは拾いきれなかった空気感やアーティストの息遣いまでが自然に聞こえてくる——それがハイレゾ最大の魅力です。アナログテレビが4Kテレビになったときの感動を、音で体感できるイメージです。</p>\n      </div>\n      <div class=\"what-grid reveal\">\n        <div class=\"stat-box\">\n          <div class=\"stat-num\">3〜6.5<span style=\"font-size:1.5rem\">×</span></div>\n          <div class=\"stat-label\">CDと比べた情報量の増加倍率</div>\n        </div>\n        <div class=\"stat-box\">\n          <div class=\"stat-num\">192<span style=\"font-size:1.5rem\">kHz</span></div>\n          <div class=\"stat-label\">最大サンプリング周波数</div>\n        </div>\n      </div>\n      <div class=\"reveal\" style=style=\"margin: 40px 0;\">\n        <img src=\"/images/Audio/column/tennai.webp\" alt=\"店内の風景\" style=\"width: 100%; border-radius: 8px;\">\n      </div>\n    </div>\n  </section>\n\n  <section class=\"plans-section\">\n    <div class=\"container\">\n      <div class=\"reveal\">\n        <p class=\"section-label\">How to Start</p>\n        <h2 class=\"section-title\">あなたに合ったプランで<br>始めてみましょう</h2>\n        <div class=\"gold-divider\"></div>\n        <p class=\"plan-intro\">「まず試したい」から「本格的に組みたい」まで、7つのプランをご用意しています。</p>\n      </div>\n\n      <div class=\"level-tabs reveal\">\n        <button class=\"level-tab active\" onclick=\"filterPlans('all', this)\">すべて</button>\n        <button class=\"level-tab\" onclick=\"filterPlans('easy', this)\">かんたん</button>\n        <button class=\"level-tab\" onclick=\"filterPlans('mid', this)\">こだわり</button>\n        <button class=\"level-tab\" onclick=\"filterPlans('pro', this)\">本格派</button>\n      </div>\n\n      <div class=\"plan-card reveal\" data-level=\"easy\">\n        <div class=\"plan-header\" onclick=\"togglePlan(this)\">\n          <div class=\"plan-badge\">A</div>\n          <div class=\"plan-title-wrap\">\n            <div class=\"plan-title\">Bluetooth接続でまず試してみる</div>\n            <div class=\"plan-subtitle\">スマホ・ナビそのまま使える</div>\n          </div>\n          <span class=\"plan-tag tag-easy\">かんたん</span>\n          <div class=\"plan-toggle\">+</div>\n        </div>\n        <div class=\"plan-body\">\n          <p>スマホやDAPからBluetoothで飛ばすだけ。ケーブル不要、工事不要。今日からでも始められる一番お手軽なプランです。</p>\n          <div class=\"needs-title\">必要なもの</div>\n          <ul class=\"needs-list\">\n            <li>Bluetooth機能付きのナビまたはプレーヤー</li>\n            <li>スマホやDAP</li>\n            <li>ハイレゾ音源</li>\n          </ul>\n          <a href=\"#contact\" class=\"plan-cta\">当店でデモを体験する →</a>\n        </div>\n      </div>\n\n      <div class=\"plan-card reveal\" data-level=\"easy\">\n        <div class=\"plan-header\" onclick=\"togglePlan(this)\">\n          <div class=\"plan-badge\">B</div>\n          <div class=\"plan-title-wrap\">\n            <div class=\"plan-title\">AUX/HDMI外部入力で手軽に高音質化</div>\n            <div class=\"plan-subtitle\">今のナビをそのまま活かせる</div>\n          </div>\n          <span class=\"plan-tag tag-easy\">かんたん</span>\n          <div class=\"plan-toggle\">+</div>\n        </div>\n        <div class=\"plan-body\">\n          <p>既存のナビのAUXやHDMI入力にスマホやDAPをケーブルでつなぐ方法です。ナビを買い替えずに今すぐ始められます。</p>\n          <div class=\"needs-title\">必要なもの</div>\n          <ul class=\"needs-list\">\n            <li>AUXまたはHDMI入力付きのナビ</li>\n            <li>スマホやDAP</li>\n            <li>対応ケーブル</li>\n          </ul>\n          <a href=\"#contact\" class=\"plan-cta\">ケーブル選びを相談する →</a>\n        </div>\n      </div>\n\n      <div class=\"plan-card reveal\" data-level=\"mid\">\n        <div class=\"plan-header\" onclick=\"togglePlan(this)\">\n          <div class=\"plan-badge\">C</div>\n          <div class=\"plan-title-wrap\">\n            <div class=\"plan-title\">D/Aコンバーター追加でさらに高音質に</div>\n            <div class=\"plan-subtitle\">プランBにひと手間プラス</div>\n          </div>\n          <span class=\"plan-tag tag-mid\">こだわり</span>\n          <div class=\"plan-toggle\">+</div>\n        </div>\n        <div class=\"plan-body\">\n          <p>高品位なUSB→RCA変換ユニットを追加することで、D/A変換の品質が向上し、より鮮明なサウンドが得られます。</p>\n          <div class=\"needs-title\">必要なもの</div>\n          <ul class=\"needs-list\">\n            <li>AUXまたは外部入力付きのナビ</li>\n            <li>USB→RCA変換ユニット</li>\n            <li>ハイレゾ音源</li>\n          </ul>\n          <a href=\"#contact\" class=\"plan-cta\">最適な機種を相談する →</a>\n        </div>\n      </div>\n\n      <div class=\"plan-card reveal\" data-level=\"mid\">\n        <div class=\"plan-header\" onclick=\"togglePlan(this)\">\n          <div class=\"plan-badge\">D</div>\n          <div class=\"plan-title-wrap\">\n            <div class=\"plan-title\">ハイレゾ対応ナビで操作も音質もスマートに</div>\n            <div class=\"plan-subtitle\">差し込むだけ、一番シンプルな方法</div>\n          </div>\n          <span class=\"plan-tag tag-mid\">こだわり</span>\n          <div class=\"plan-toggle\">+</div>\n        </div>\n        <div class=\"plan-body\">\n          <p>ハイレゾ対応ナビにSDカードやUSBメモリを差し込むだけ。操作性・手軽さのバランスが一番いいプランです。</p>\n          <div class=\"needs-title\">必要なもの</div>\n          <ul class=\"needs-list\">\n            <li>ハイレゾ再生対応ナビ</li>\n            <li>SDカードまたはUSBメモリ</li>\n            <li>ハイレゾ音源</li>\n          </ul>\n          <a href=\"#contact\" class=\"plan-cta\">対応ナビを見に来る →</a>\n        </div>\n      </div>\n\n      <div class=\"plan-card reveal\" data-level=\"pro\">\n        <div class=\"plan-header\" onclick=\"togglePlan(this)\">\n          <div class=\"plan-badge\">E</div>\n          <div class=\"plan-title-wrap\">\n            <div class=\"plan-title\">ハイレゾ対応DSPで本格サウンドを構築</div>\n            <div class=\"plan-subtitle\">こだわる人の定番構成</div>\n          </div>\n          <span class=\"plan-tag tag-pro\">本格派</span>\n          <div class=\"plan-toggle\">+</div>\n        </div>\n        <div class=\"plan-body\">\n          <p>デジタル信号のままDSPに送り、DSP内蔵DACでアナログ変換。信号の劣化を最小限に抑えたクリアなサウンドが楽しめます。</p>\n          <div class=\"needs-title\">必要なもの</div>\n          <ul class=\"needs-list\">\n            <li>スマホやDAP</li>\n            <li>ハイレゾ対応DSP</li>\n            <li>ハイレゾ音源</li>\n          </ul>\n          <a href=\"#contact\" class=\"plan-cta\">システム構成を相談する →</a>\n        </div>\n      </div>\n\n      <div class=\"plan-card reveal\" data-level=\"pro\">\n        <div class=\"plan-header\" onclick=\"togglePlan(this)\">\n          <div class=\"plan-badge\">F</div>\n          <div class=\"plan-title-wrap\">\n            <div class=\"plan-title\">LDAC対応DAPでワイヤレスのままハイレゾを</div>\n            <div class=\"plan-subtitle\">ケーブルなしで高音質を両立</div>\n          </div>\n          <span class=\"plan-tag tag-pro\">本格派</span>\n          <div class=\"plan-toggle\">+</div>\n        </div>\n        <div class=\"plan-body\">\n          <p>LDAC対応機器を使うことで、Bluetoothのまま96kHz/24bitのハイレゾ再生が可能になります。</p>\n          <div class=\"needs-title\">必要なもの</div>\n          <ul class=\"needs-list\">\n            <li>LDAC対応のスマホまたはDAP</li>\n            <li>LDAC対応のBluetooth受信ユニット</li>\n          </ul>\n          <a href=\"#contact\" class=\"plan-cta\">対応状況を確認しに来る →</a>\n        </div>\n      </div>\n\n      <div class=\"plan-card reveal\" data-level=\"pro\">\n        <div class=\"plan-header\" onclick=\"togglePlan(this)\">\n          <div class=\"plan-badge\">G</div>\n          <div class=\"plan-title-wrap\">\n            <div class=\"plan-title\">メディアプレーヤー導入で究極のオーディオへ</div>\n            <div class=\"plan-subtitle\">ライブラリごと車に持ち込む</div>\n          </div>\n          <span class=\"plan-tag tag-pro\">本格派</span>\n          <div class=\"plan-toggle\">+</div>\n        </div>\n        <div class=\"plan-body\">\n          <p>大容量SSDに音源ライブラリを収め、車内で丸ごと楽しめるのがメディアプレーヤーの魅力です。</p>\n          <div class=\"needs-title\">必要なもの</div>\n          <ul class=\"needs-list\">\n            <li>音源の入ったUSBまたはSSD</li>\n            <li>ハイレゾ対応メディアプレーヤー</li>\n            <li>ハイレゾ対応DSP</li>\n          </ul>\n          <a href=\"#contact\" class=\"plan-cta\">デモ機を触りに来る →</a>\n        </div>\n      </div>\n\n    </div>\n  </section>\n\n  <section class=\"faq-section\">\n    <div class=\"container\">\n      <div class=\"reveal\">\n        <p class=\"section-label\">FAQ</p>\n        <h2 class=\"section-title\">よくあるご質問</h2>\n        <div class=\"gold-divider\"></div>\n      </div>\n      <div class=\"reveal\">\n        <div class=\"faq-item\" onclick=\"toggleFaq(this)\">\n          <div class=\"faq-q\">今のナビのまま使えますか？<span>+</span></div>\n          <div class=\"faq-a\">Bluetooth機能またはAUX/HDMI入力があれば、ナビを買い替えずに始められるプランがあります。</div>\n        </div>\n        <div class=\"faq-item\" onclick=\"toggleFaq(this)\">\n          <div class=\"faq-q\">予算はどのくらい必要ですか？<span>+</span></div>\n          <div class=\"faq-a\">プランAなら追加費用はほぼゼロから、本格的なDSPシステムでは数万円〜になります。</div>\n        </div>\n      </div>\n    </div>\n  </section>\n\n  <section class=\"cta-section\" id=\"contact\">\n    <div class=\"container\">\n      <div class=\"reveal\">\n        <p class=\"section-label\">Contact</p>\n        <h2>迷ったら、まずご相談を</h2>\n        <div class=\"gold-divider\" style=\"margin: 20px auto 24px;\"></div>\n        <div class=\"cta-buttons\">\n          <a href=\"tel:092-503-5421\" class=\"btn-primary\">電話で問い合わせる</a>\n          <a href=\"https://page.line.me/312qjhsq?openQrModal=true\" class=\"btn-secondary\">LINEで相談する</a>\n        </div>\n      </div>\n    </div>\n  </section>\n</div>\n\n<script>\n  function togglePlan(header) {\n    header.parentElement.classList.toggle('open');\n  }\n\n  function filterPlans(level, btn) {\n    const wrapper = btn.closest('#hires-guide-wrapper');\n    wrapper.querySelectorAll('.level-tab').forEach(t => t.classList.remove('active'));\n    btn.classList.add('active');\n    wrapper.querySelectorAll('.plan-card').forEach(card => {\n      card.style.display = (level === 'all' || card.dataset.level === level) ? '' : 'none';\n    });\n  }\n\n  function toggleFaq(item) {\n    item.classList.toggle('open');\n  }\n\n  const observer = new IntersectionObserver((entries) => {\n    entries.forEach(e => {\n      if (e.isIntersecting) {\n        e.target.classList.add('visible');\n        observer.unobserve(e.target);\n      }\n    });\n  }, { threshold: 0.1 });\n\n  document.querySelectorAll('#hires-guide-wrapper .reveal').forEach(el => observer.observe(el));\n</script>\n</body>\n</html>",
+      "category": "知識・ガイド",
       "link": "https://www.soundang.com/hires.html",
       "packageDetails": {
         "standardPrice": "0",
         "savings": "0",
         "contents": [
           {
-            "title": "繝上う繝ｬ繧ｾ蟇ｾ蠢懊Θ繝九ャ繝・,
-            "description": "繝・ず繧ｿ繝ｫ菫｡蜿ｷ繧偵い繝翫Ο繧ｰ螟画鋤蜿ｯ閭ｽ縺ｪ讖滓攝縺ｮ驕ｸ螳・,
+            "title": "ハイレゾ対応ユニット",
+            "description": "デジタル信号をアナログ変換可能な機材の選定",
             "icon": "Music"
           },
           {
-            "title": "鬮倬浹雉ｪ繝ｯ繧､繝､繝ｪ繝ｳ繧ｰ",
-            "description": "繝・ず繧ｿ繝ｫ莨晞√Ο繧ｹ繧呈椛縺医ｋ鬮伜刀雉ｪ繧ｱ繝ｼ繝悶Ν",
+            "title": "高音質ワイヤリング",
+            "description": "デジタル伝送ロスを抑える高品質ケーブル",
             "icon": "Zap"
           },
           {
-            "title": "蜀咲函繧｢繝励Μ繝ｻ險ｭ螳・,
-            "description": "繧ｹ繝槭・繧ДAP縺ｧ縺ｮ譛驕ｩ縺ｪ蜀咲函迺ｰ蠅・・讒狗ｯ・,
+            "title": "再生アプリ・設定",
+            "description": "スマホやDAPでの最適な再生環境の構築",
             "icon": "Activity"
           },
           {
-            "title": "繧ｵ繧ｦ繝ｳ繝峨メ繝･繝ｼ繝九Φ繧ｰ",
-            "description": "繝上う繝ｬ繧ｾ縺ｮ蠎・ｸｯ蝓溘ｒ豢ｻ縺九☆邊ｾ蟇・↑隱ｿ謨ｴ",
+            "title": "サウンドチューニング",
+            "description": "ハイレゾの広帯域を活かす精密な調整",
             "icon": "Wrench"
           }
         ],
         "notes": [
-          "繝上う繝ｬ繧ｾ蜀咲函縺ｫ縺ｯ蟇ｾ蠢懊＠縺滓ｩ滓攝・医リ繝薙．SP縲．AP遲会ｼ峨′蠢・ｦ√〒縺吶・,
-          "蠕捺擂縺ｮCD繝励Ξ繝ｼ繝､繝ｼ繧・リ繝薙〒縺ｯ蜀咲函縺ｧ縺阪↑縺・ｴ蜷医′縺ゅｊ縺ｾ縺吶・,
-          "FLAC, WAV, DSD縺ｪ縺ｩ縲∵ｩ滓攝縺ｫ蜷医▲縺溘ヵ繧ｩ繝ｼ繝槭ャ繝医・驕ｸ螳壹′驥崎ｦ√〒縺吶・,
-          "繧ｹ繝斐・繧ｫ繝ｼ莠､謠帙↑縺ｩ縺ｮ蜀咲函迺ｰ蠅・ｒ謨ｴ縺医ｋ縺薙→縺ｧ縲√ｈ繧雁柑譫懊ｒ螳滓─縺ｧ縺阪∪縺吶・,
-          "蠖灘ｺ励ョ繧｣繧ｹ繝励Ξ繧､縺ｫ縺ｦ蜷・・繝ｩ繝ｳ縺ｮ繝・Δ縺悟庄閭ｽ縺ｧ縺吶ゅ♀豌苓ｻｽ縺ｫ縺願ｩｦ縺励￥縺縺輔＞縲・
+          "ハイレゾ再生には対応した機材（ナビ、DSP、DAP等）が必要です。",
+          "従来のCDプレーヤーやナビでは再生できない場合があります。",
+          "FLAC, WAV, DSDなど、機材に合ったフォーマットの選定が重要です。",
+          "スピーカー交換などの再生環境を整えることで、より効果を実感できます。",
+          "当店ディスプレイにて各プランのデモが可能です。お気軽にお試しください。"
         ]
       },
       "lineup": [
         {
-          "name": "繝励Λ繝ｳA・咤luetooth謗･邯・,
+          "name": "プランA：Bluetooth接続",
           "price": "0",
-          "description": "繧ｹ繝槭・繧ДAP縺九ｉ辟｡邱壹〒騾∽ｿ｡縲よ怙繧よ焔霆ｽ縺ｫ蟋九ａ繧峨ｌ繧九・繝ｩ繝ｳ縲ょｯｾ蠢懊い繝励Μ・・,000蜀・燕蠕鯉ｼ峨′蠢・ｦ√↑蝣ｴ蜷医′縺ゅｊ縺ｾ縺吶・
+          "description": "スマホやDAPから無線で送信。最も手軽に始められるプラン。対応アプリ（1,000円前後）が必要な場合があります。"
         },
         {
-          "name": "繝励Λ繝ｳB・哂UX/HDMI螟夜Κ蜈･蜉・,
+          "name": "プランB：AUX/HDMI外部入力",
           "price": "0",
-          "description": "譌｢蟄倥リ繝薙・螟夜Κ蜈･蜉帙ｒ蛻ｩ逕ｨ縲・DMI蜈･蜉帙′縺ゅｌ縺ｰ鬮倬浹雉ｪ莨晞√′蜿ｯ閭ｽ縲よ磁邯夂畑繧ｱ繝ｼ繝悶Ν縺悟挨騾泌ｿ・ｦ√〒縺吶・
+          "description": "既存ナビの外部入力を利用。HDMI入力があれば高音質伝送が可能。接続用ケーブルが別途必要です。"
         },
         {
-          "name": "繝励Λ繝ｳC・啅SB繝医Λ繝ｳ繧ｹ繝昴・繝郁ｿｽ蜉",
+          "name": "プランC：USBトランスポート追加",
           "price": "0",
-          "description": "繝・ず繧ｿ繝ｫ菫｡蜿ｷ縺ｮ縺ｾ縺ｾ蜿悶ｊ蜃ｺ縺励・ｫ倬浹雉ｪ縺ｪD/A繧ｳ繝ｳ繝舌・繧ｿ繝ｼ繧帝壹＠縺ｦ謗･邯壹る浹雉ｪ縺悟､ｧ縺阪￥謾ｹ蝟・＆繧後∪縺吶・
+          "description": "デジタル信号のまま取り出し、高音質なD/Aコンバーターを通して接続。音質が大きく改善されます。"
         },
         {
-          "name": "繝励Λ繝ｳD・壹ワ繧､繝ｬ繧ｾ蟇ｾ蠢懊リ繝灘ｰ主・",
+          "name": "プランD：ハイレゾ対応ナビ導入",
           "price": "0",
-          "description": "謫堺ｽ懈ｧ繧る浹雉ｪ繧よ栢鄒､縲４D繧ｫ繝ｼ繝峨ｄUSB繝｡繝｢繝ｪ繧貞ｷｮ縺苓ｾｼ繧縺縺代〒繧ｹ繝槭・繝医↓蜀咲函縲ゅち繝・メ繝代ロ繝ｫ謫堺ｽ懊ｂ蜿ｯ閭ｽ縲・
+          "description": "操作性も音質も抜群。SDカードやUSBメモリを差し込むだけでスマートに再生。タッチパネル操作も可能。"
         },
         {
-          "name": "繝励Λ繝ｳE・壹ワ繧､繝ｬ繧ｾ蟇ｾ蠢廛SP讒狗ｯ・,
+          "name": "プランE：ハイレゾ対応DSP構築",
           "price": "0",
-          "description": "迴ｾ蝨ｨ縺ｮ荳ｻ豬√ゅョ繧ｸ繧ｿ繝ｫ菫｡蜿ｷ縺ｮ縺ｾ縺ｾDSP縺ｸ蜈･蜉帙＠縲∝・阡ｵ縺ｮ鬮倬浹雉ｪDAC縺ｧ螟画鋤縲ゅΟ繧ｹ縺ｮ讌ｵ繧√※蟆代↑縺・す繧ｹ繝・Β縲・
+          "description": "現在の主流。デジタル信号のままDSPへ入力し、内蔵の高音質DACで変換。ロスの極めて少ないシステム。"
         },
         {
-          "name": "繝励Λ繝ｳF・哭DAC繝ｯ繧､繝､繝ｬ繧ｹ謗･邯・,
+          "name": "プランF：LDACワイヤレス接続",
           "price": "0",
-          "description": "繝ｯ繧､繝､繝ｬ繧ｹ縺ｪ縺後ｉ96k/24bit縺ｮ繝上う繝ｬ繧ｾ莨晞√ｒ螳溽樟縲ょ茜萓ｿ諤ｧ縺ｨ髻ｳ雉ｪ繧剃ｸ｡遶九・
+          "description": "ワイヤレスながら96k/24bitのハイレゾ伝送を実現。利便性と音質を両立。"
         },
         {
-          "name": "繝励Λ繝ｳG・壹Γ繝・ぅ繧｢繝励Ξ繝ｼ繝､繝ｼ蟆主・",
+          "name": "プランG：メディアプレーヤー導入",
           "price": "0",
-          "description": "螟ｧ螳ｹ驥輯SD遲峨↓蟇ｾ蠢懊＠縺溷ｰら畑讖溘らｩｶ讌ｵ繧呈ｱゅａ繧九Θ繝ｼ繧ｶ繝ｼ縺ｫ莠ｺ豌・ 繝ｩ繧､繝悶Λ繝ｪ繝ｼ繧剃ｸｸ縺斐→謖√■豁ｩ縺代∪縺吶・
+          "description": "大容量SSD等に対応した専用機。究極を求めるユーザーに人気. ライブラリーを丸ごと持ち歩けます。"
         }
       ]
     },
     {
       "id": "media_player_guide",
-      "title": "縺・∪豕ｨ逶ｮ・∬ｻ願ｼ峨Γ繝・ぅ繧｢繝励Ξ繝ｼ繝､繝ｼ",
-      "badge": "譛譁ｰ繝医Ξ繝ｳ繝・,
+      "title": "いま注目！車載メディアプレーヤー",
+      "badge": "最新トレンド",
       "features": [
-        "繝・ず繧ｿ繝ｫ鬮倬浹雉ｪ莨晞・,
-        "DSP騾｣謳ｺ",
-        "霆願ｼ牙ｰら畑險ｭ險・
+        "デジタル高音質伝送",
+        "DSP連携",
+        "車載専用設計"
       ],
       "image": "/images/Audio/media_player_lecture.png",
-      "description": "繝翫ン繧ГD繝励Ξ繝ｼ繝､繝ｼ縺ｨ縺・▲縺溘・繝・ラ繝ｦ繝九ャ繝井ｺ､謠帙′邁｡蜊倥↓縺ｧ縺阪◆縺ｮ縺ｯ驕主悉縺ｮ隧ｱ縲よ怙霑代・邏疲ｭ｣縺ｧ陬・捩縺輔ｌ縺溘リ繝薙ご繝ｼ繧ｷ繝ｧ繝ｳ縺ｯ蜿悶ｊ螟悶☆縺薙→縺後〒縺阪★縲・浹縺ｮ蜈･蜿｣縺ｨ縺ｪ繧九・繝・ラ繝ｦ繝九ャ繝医・髻ｳ雉ｪ蜷台ｸ翫・蝗ｰ髮｣縺ｫ縺ｪ繧翫∪縺励◆縲・n\n縺昴％縺ｧ譁ｰ縺励＞驕ｸ謚櫁い縺ｨ縺ｪ繧九・縺後瑚ｻ願ｼ峨Γ繝・ぅ繧｢繝励Ξ繝ｼ繝､繝ｼ縲阪〒縺吶らｴ疲ｭ｣縺ｮ繝・ぅ繧ｹ繝励Ξ繧､繧ｪ繝ｼ繝・ぅ繧ｪ縺ｪ縺ｩ繧偵Γ繧､繝ｳ繧ｽ繝ｼ繧ｹ縺ｨ縺励※繧ｫ繝ｼ繧ｪ繝ｼ繝・ぅ繧ｪ縺ｮ諡｡蠑ｵ繧帝ｲ繧√※縺阪◆譁ｹ縺ｫ縺翫☆縺吶ａ縺ｧ縲∝渕譛ｬ逧・↓縺ｯDSP縺ｨ縺ｮ邨・∩蜷医ｏ縺帙〒繧ｷ繧ｹ繝・Β繧呈ｧ区・縺励∪縺吶・n\n蜈峨ｄ蜷瑚ｻｸ遶ｯ蟄舌ｒ菴ｿ縺｣縺ｦ繝・ず繧ｿ繝ｫ繝・・繧ｿ繧偵◎縺ｮ縺ｾ縺ｾDSP縺ｸ蜈･蜉帙☆繧九％縺ｨ縺ｧ縲∫ｴ疲ｭ｣繧ｪ繝ｼ繝・ぅ繧ｪ縺ｮ蛻ｶ髯舌ｒ蜿励￠縺ｪ縺・悸蛟堤噪縺ｪ鬮倬浹雉ｪ繧貞ｮ溽樟縲ゅせ繝槭・繝医ヵ繧ｩ繝ｳ繧ДAP縺ｨ縺ｯ逡ｰ縺ｪ繧翫∬ｻ贋ｸ｡縺ｫ險ｭ鄂ｮ縺励※驕玖ｻ｢縺励↑縺後ｉ讌ｽ縺励・縺薙→繧貞燕謠舌↓險ｭ險医＆繧後◆縲∬ｻ翫・縺溘ａ縺ｮ譁ｰ縺励＞髻ｳ讌ｽ繧ｽ繝ｼ繧ｹ縺ｧ縺吶・n\n**陬ｽ蜩√Λ繧､繝ｳ繝翫ャ繝励ｒ隕九ｋ**: [繝｡繝・ぅ繧｢繝励Ξ繝ｼ繝､繝ｼ陬ｽ蜩∽ｸ隕ｧ](#/prices/media_player)",
-      "category": "遏･隴倥・繧ｬ繧､繝・,
+      "description": "ナビやCDプレーヤーといったヘッドユニット交換が簡単にできたのは過去の話。最近は純正で装着されたナビゲーションは取り外すことができず、音の入口となるヘッドユニットの音質向上は困難になりました。\n\nそこで新しい選択肢となるのが「車載メディアプレーヤー」です。純正のディスプレイオーディオなどをメインソースとしてカーオーディオの拡張を進めてきた方におすすめで、基本的にはDSPとの組み合わせでシステムを構成します。\n\n光や同軸端子を使ってデジタルデータをそのままDSPへ入力することで、純正オーディオの制限を受けない圧倒的な高音質を実現。スマートフォンやDAPとは異なり、車両に設置して運転しながら楽しむことを前提に設計された、車のための新しい音楽ソースです。\n\n**製品ラインナップを見る**: [メディアプレーヤー製品一覧](#/prices/media_player)",
+      "category": "知識・ガイド",
       "packageDetails": {
         "standardPrice": "0",
         "savings": "0",
         "contents": [
           {
-            "title": "繝｡繝・ぅ繧｢繝励Ξ繝ｼ繝､繝ｼ縺ｨ縺ｯ・・,
-            "description": "邏疲ｭ｣繝翫ン縺ｮ髻ｳ雉ｪ逧・剞逡後ｒ遯∫ｴ縺励√ョ繧ｸ繧ｿ繝ｫ菫｡蜿ｷ繧偵ム繧､繝ｬ繧ｯ繝医↓DSP縺ｸ螻翫￠繧句ｰら畑讖溘〒縺吶・,
+            "title": "メディアプレーヤーとは？",
+            "description": "純正ナビの音質的限界を突破し、デジタル信号をダイレクトにDSPへ届ける専用機です。",
             "icon": "Music"
           },
           {
-            "title": "繧ｹ繝槭・繝ｻDAP縺ｨ縺ｮ驕輔＞",
-            "description": "霆願ｼ牙ｰら畑險ｭ險医・縺溘ａ縲∝､ｧ螳ｹ驥上・螟夜Κ繧ｹ繝医Ξ繝ｼ繧ｸ蟇ｾ蠢懊ｄ縲√お繝ｳ繧ｸ繝ｳ騾｣蜍輔・蛻ｩ萓ｿ諤ｧ縺梧栢鄒､縺ｧ縺吶・,
+            "title": "スマホ・DAPとの違い",
+            "description": "車載専用設計のため、大容量の外部ストレージ対応や、エンジン連動の利便性が抜群です。",
             "icon": "Zap"
           },
           {
-            "title": "繧ｷ繧ｹ繝・Β繧｢繝・・縺ｮ隕・,
-            "description": "DSP繧貞昇莉､蝪斐→縺励√◎縺薙∈縲梧怙鬮倬ｮｮ蠎ｦ縺ｮ髻ｳ縲阪ｒ豬√＠霎ｼ繧縺溘ａ縺ｮ縲取怙蠑ｷ縺ｮ蜈･蜿｣縲上→縺ｪ繧翫∪縺吶・,
+            "title": "システムアップの要",
+            "description": "DSPを司令塔とし、そこへ「最高鮮度の音」を流し込むための『最強の入口』となります。",
             "icon": "Layers"
           }
         ],
         "notes": [
-          "蝓ｺ譛ｬ逧・↓縺ｯDSP・医ョ繧ｸ繧ｿ繝ｫ繝励Ο繧ｻ繝・し繝ｼ・峨→縺ｮ邨・∩蜷医ｏ縺帙′蠢・ｦ√〒縺吶・,
-          "邏疲ｭ｣繝翫ン縺ｮ髻ｳ雉ｪ縺ｫ荳肴ｺ縺後≠繧区婿縺ｮ繧ｹ繝・ャ繝励い繝・・縺ｫ譛驕ｩ縺ｧ縺吶・,
-          "USB繝｡繝｢繝ｪ繧ТSD遲峨↓菫晏ｭ倥＠縺溯・螟ｧ縺ｪ繝ｩ繧､繝悶Λ繝ｪ繝ｼ繧定ｻ雁・縺ｧ讌ｽ縺励ａ縺ｾ縺吶・,
-          "讖溽ｨｮ縺ｫ繧医ｊ謫堺ｽ懈婿豕包ｼ医Μ繝｢繧ｳ繝ｳ縲√せ繝槭・繧｢繝励Μ遲会ｼ峨′逡ｰ縺ｪ繧翫∪縺吶・,
-          "蜿紋ｻ倅ｽ咲ｽｮ繧・す繧ｹ繝・Β讒区・縺ｫ繧医ｊ縲∝挨騾泌ｷ･雉・ｄ繧ｱ繝ｼ繝悶Ν莉｣縺檎匱逕溘＠縺ｾ縺吶・
+          "基本的にはDSP（デジタルプロセッサー）との組み合わせが必要です。",
+          "純正ナビの音質に不満がある方のステップアップに最適です。",
+          "USBメモリやSSD等に保存した膨大なライブラリーを車内で楽しめます。",
+          "機種により操作方法（リモコン、スマホアプリ等）が異なります。",
+          "取付位置やシステム構成により、別途工賃やケーブル代が発生します。"
         ]
       },
       "lineup": [
         {
-          "name": "繝｡繝ｪ繝・ヨ1・夂ｴ疲ｭ｣繧ｷ繧ｹ繝・Β繧呈ｴｻ縺九○繧・,
-          "description": "譛霑代・霆翫↓螟壹＞縲悟､悶○縺ｪ縺・リ繝薙阪ｒ縺昴・縺ｾ縺ｾ縺ｫ縲・浹雉ｪ縺縺代ｒ鬟幄ｺ咲噪縺ｫ蜷台ｸ翫＆縺帙ｉ繧後∪縺吶・
+          "name": "メリット1：純正システムを活かせる",
+          "description": "最近の車に多い「外せないナビ」をそのままに、音質だけを飛躍的に向上させられます。"
         },
         {
-          "name": "繝｡繝ｪ繝・ヨ2・壼悸蛟堤噪縺ｪ繝ｩ繧､繝悶Λ繝ｪ繝ｼ驥・,
-          "description": "3TB縺ｾ縺ｧ縺ｮSSD蟇ｾ蠢懈ｩ溽ｨｮ繧ゅ≠繧翫√♀謖√■縺ｮ蜈ｨ髻ｳ讌ｽ繧ｳ繝ｬ繧ｯ繧ｷ繝ｧ繝ｳ繧定ｻ願ｼ牙庄閭ｽ縺ｧ縺吶・
+          "name": "メリット2：圧倒的なライブラリー量",
+          "description": "3TBまでのSSD対応機種もあり、お持ちの全音楽コレクションを車載可能です。"
         },
         {
-          "name": "繝｡繝ｪ繝・ヨ3・咼SD512遲峨・雜・ワ繧､繝ｬ繧ｾ蟇ｾ蠢・,
-          "description": "繧ｹ繝槭・縺ｧ縺ｯ蜀咲函縺碁屮縺励＞讌ｵ繧√※鬮伜刀菴阪↑髻ｳ貅舌ｂ縲∽ｽ吶☆縺薙→縺ｪ縺丞・逕溷庄閭ｽ縺ｧ縺吶・
+          "name": "メリット3：DSD512等の超ハイレゾ対応",
+          "description": "スマホでは再生が難しい極めて高品位な音源も、余すことなく再生可能です。"
         }
       ]
     },
     {
       "id": "hi_end_guide",
-      "title": "繝上う繧ｨ繝ｳ繝峨せ繝斐・繧ｫ繝ｼ縺ｸ縺ｮ隱倥＞",
-      "badge": "閾ｳ鬮倥・髻ｳ",
+      "title": "ハイエンドスピーカーへの誘い",
+      "badge": "至高の音",
       "features": [
-        "蝨ｧ蛟堤噪縺ｪ隗｣蜒丞ｺｦ",
-        "豁｣遒ｺ縺ｪ髻ｳ蜒丞ｮ壻ｽ・,
-        "闃ｸ陦鍋噪縺ｪ陦ｨ迴ｾ蜉・
+        "圧倒的な解像度",
+        "正確な音像定位",
+        "芸術的な表現力"
       ],
       "image": "https://picsum.photos/seed/hi-end-sp/800/600",
-      "description": "繝上う繧ｨ繝ｳ繝峨せ繝斐・繧ｫ繝ｼ繧偵う繝ｳ繧ｹ繝医・繝ｫ縺吶ｋ縺ｫ縺ｯ繝ｻ繝ｻ繝ｻ\n\n蜷・ヶ繝ｩ繝ｳ繝峨・荳贋ｽ阪Δ繝・Ν縺ｧ縺ｯ縲√◎縺ｮ繧ｹ繝壹ャ繧ｯ繧偵＠縺｣縺九ｊ縺ｨ豢ｻ縺九○繧九う繝ｳ繧ｹ繝医Ξ繝ｼ繧ｷ繝ｧ繝ｳ繧・こ繝ｼ繝悶Ν驕ｸ縺ｳ縺悟､ｧ蛻・↓縺ｪ繧翫∪縺吶ゅワ繧､繧ｨ繝ｳ繝峨せ繝斐・繧ｫ繝ｼ縺ｫ譁ｽ縺励◆縺・う繝ｳ繧ｹ繝医・繝ｫ縲√こ繝ｼ繝悶Ν驕ｸ縺ｳ縺ｪ縺ｩ繧偵＃邏ｹ莉九＠縺ｾ縺吶・n\n繝上う繧ｨ繝ｳ繝峨せ繝斐・繧ｫ繝ｼ縺ｫ闊亥袖繧呈戟縺｣縺溘ｉ縺懊・縺皮嶌隲・￥縺縺輔＞縲ゅが繝ｼ繝翫・讒倥・逅・Φ繧貞ｽ｢縺ｫ縺吶ｋ譛驕ｩ縺ｪ繧ｷ繧ｹ繝・Β繧偵＃謠先｡医＞縺溘＠縺ｾ縺吶・,
-      "category": "遏･隴倥・繧ｬ繧､繝・,
+      "description": "ハイエンドスピーカーをインストールするには・・・\n\n各ブランドの上位モデルでは、そのスペックをしっかりと活かせるインストレーションやケーブル選びが大切になります。ハイエンドスピーカーに施したいインストール、ケーブル選びなどをご紹介します。\n\nハイエンドスピーカーに興味を持ったらぜひご相談ください。オーナー様の理想を形にする最適なシステムをご提案いたします。",
+      "category": "知識・ガイド",
       "packageDetails": {
         "standardPrice": "0",
         "savings": "0",
         "contents": [
           {
-            "title": "繝・ぅ繝ｼ繧ｿ繝ｼ蜉蟾･蜿紋ｻ・,
-            "description": "蜿榊ｰ・ｒ閠・・縺励◆繝斐Λ繝ｼ繧・ラ繧｢繝溘Λ繝ｼ陬上∈縺ｮ蝓九ａ霎ｼ縺ｿ蜉蟾･",
+            "title": "ツィーター加工取付",
+            "description": "反射を考慮したピラーやドアミラー裏への埋め込み加工",
             "icon": "Activity"
           },
           {
-            "title": "繝峨い繧ｹ繝斐・繧ｫ繝ｼ蜿紋ｻ・,
-            "description": "謚懊￠繧定憶縺上☆繧・繧｢繧ｦ繧ｿ繝ｼ繝舌ャ繝輔Ν繧・ｼｷ蝗ｺ縺ｪ繝舌ャ繝輔Ν陬ｽ菴・,
+            "title": "ドアスピーカー取付",
+            "description": "抜けを良くする アウターバッフルや強固なバッフル製作",
             "icon": "Wrench"
           },
           {
-            "title": "鬮倬浹雉ｪ繝ｯ繧､繝､繝ｪ繝ｳ繧ｰ",
-            "description": "繝ｬ繧ｰ繧ｶ繝・ヨ縲｀&M縲√い繧ｯ繝ｭ繝ｪ繝ｳ繧ｯ遲峨・鬮倡ｴ壹こ繝ｼ繝悶Ν驕ｸ螳・,
+            "title": "高音質ワイヤリング",
+            "description": "レグザット、M&M、アクロリンク等の高級ケーブル選定",
             "icon": "Zap"
           },
           {
-            "title": "繧ｷ繧ｹ繝・Β讒区・",
-            "description": "DSP繧堤畑縺・◆繝槭Ν繝√Ρ繧､繝､繝ｪ繝ｳ繧ｰ・医い繧ｯ繝・ぅ繝厄ｼ臥ｭ峨・讒狗ｯ・,
+            "title": "システム構成",
+            "description": "DSPを用いたマルチワイヤリング（アクティブ）等の構築",
             "icon": "Layers"
           }
         ],
         "notes": [
-          "繝上う繧ｨ繝ｳ繝峨せ繝斐・繧ｫ繝ｼ縺ｯ繝ｦ繝九ャ繝医・諤ｧ閭ｽ繧貞ｼ輔″蜃ｺ縺吶◆繧√・迺ｰ蠅・ｽ懊ｊ縺御ｸ榊庄谺縺ｧ縺吶・,
-          "繧､繝ｳ繝翫・繝舌ャ繝輔Ν縺ｧ縺ｮ譁ｽ蟾･縺ｧ繧ゅ∝ｸりｲｩ蜩√ｒ驕ｿ縺代せ繝斐・繧ｫ繝ｼ繧偵＠縺｣縺九ｊ蜿励￠豁｢繧√ｋ陬ｽ菴懊′驥崎ｦ√〒縺吶・,
-          "隧ｦ閨ｴ螳､縺ｧ縺ｯ繧ｹ繝斐・繧ｫ繝ｼ繧ｱ繝ｼ繝悶Ν縺ｮ豈碑ｼ・ｂ蜿ｯ閭ｽ縺ｧ縺吶る浹縺ｮ驕輔＞繧剃ｽ捺─縺励※驕ｸ縺ｹ縺ｾ縺吶・
+          "ハイエンドスピーカーはユニットの性能を引き出すための環境作りが不可欠です。",
+          "インナーバッフルでの施工でも、市販品を避けスピーカーをしっかり受け止める製作が重要です。",
+          "試聴室ではスピーカーケーブルの比較も可能です。音の違いを体感して選べます。"
         ]
       },
       "lineup": [
         {
-          "name": "A繝斐Λ繝ｼ繝・ぅ繝ｼ繧ｿ繝ｼ蝓九ａ霎ｼ縺ｿ蜉蟾･",
+          "name": "Aピラーツィーター埋め込み加工",
           "price": "44000",
-          "description": "蜿榊ｰ・・蠖ｱ髻ｿ繧定・・縺励◆隗貞ｺｦ豎ｺ繧√ょｷｦ蜿ｳ霎ｼ 44,000蜀・・
+          "description": "反射の影響を考慮した角度決め。左右込 44,000円〜"
         },
         {
-          "name": "繧ｪ繝ｪ繧ｸ繝翫Ν繧｢繧ｦ繧ｿ繝ｼ繝舌ャ繝輔Ν陬ｽ菴・,
+          "name": "オリジナルアウターバッフル製作",
           "price": "107800",
-          "description": "繧ｹ繝斐・繧ｫ繝ｼ縺ｮ謚懊￠繧定憶縺上＠縲∵ュ蝣ｱ驥上ｒ譛螟ｧ髯舌↓蠑輔″蜃ｺ縺吶う繝ｳ繧ｹ繝医・繝ｫ縲・
+          "description": "スピーカーの抜けを良くし、情報量を最大限に引き出すインストール。"
         },
         {
-          "name": "繧ｨ繝ｳ繧ｯ繝ｭ繝ｼ繧ｸ繝｣繝ｼ莉墓ｧ倥い繧ｦ繧ｿ繝ｼ繝舌ャ繝輔Ν",
+          "name": "エンクロージャー仕様アウターバッフル",
           "price": "0",
-          "description": "繧ｹ繝斐・繧ｫ繝ｼ縺ｨ霆贋ｸ｡縺ｫ蜷医ｏ縺帙※縲∵賜蝨ｧ繧偵さ繝ｳ繝医Ο繝ｼ繝ｫ縺吶ｋ縺薙□繧上ｊ縺ｮ繧ｨ繝ｳ繧ｯ繝ｭ繝ｼ繧ｸ繝｣繝ｼ繧定｣ｽ菴懊・
+          "description": "スピーカーと車両に合わせて、排圧をコントロールするこだわりのエンクロージャーを製作。"
         }
       ]
     },
     {
       "id": "subwoofer_style_guide",
-      "title": "繧ｵ繝悶え繝ｼ繝上・繧､繝ｳ繧ｹ繝医・繝ｫ繝ｻ繧ｹ繧ｿ繧､繝ｫ繧ｬ繧､繝・,
-      "badge": "菴朱浹縺ｮ讌ｵ閾ｴ",
+      "title": "サブウーハーインストール・スタイルガイド",
+      "badge": "低音の極致",
       "features": [
-        "菴朱浹陬懷ｼｷ",
-        "BOX陬ｽ菴・,
-        "繝ｩ繧ｲ繝・ず蝓九ａ霎ｼ縺ｿ"
+        "低音補強",
+        "BOX製作",
+        "ラゲッジ埋め込み"
       ],
       "image": "https://picsum.photos/seed/subwoofer/800/600",
-      "description": "縺ｨ縺｣縺ｦ繧る㍾隕√↑繧ｵ繝悶え繝ｼ繝上・縺ｮ蠖ｹ蜑ｲ・∝庄閨ｴ蟶ｯ蝓溘・縺ｻ繧薙・荳驛ｨ縺ｧ縺吶′縲∝ｻｺ迚ｩ縺ｮ蝓ｺ遉弱→蜷後§縺ｧ縺薙％縺後＠縺｣縺九ｊ縺励※縺・↑縺・→蜈ｨ菴薙・繧､繝｡繝ｼ繧ｸ縺悟ｸ瑚埋縺ｫ縺ｪ縺｣縺ｦ縺励∪縺・∪縺吶・n\n髻ｳ縺ｯ蛟埼浹縺ｧ讒区・縺輔ｌ縺ｦ縺・∪縺吶・縺ｧ縲√し繝悶え繝ｼ繝上・縺御ｸｭ蠢・〒縺ｪ縺・ｈ縺・↑繝懊・繧ｫ繝ｫ繧・ヴ繧｢繝弱・髻ｳ繧ゅ√し繝悶え繝ｼ繝上・縺ｮ繧ｪ繝ｳ繧ｪ繝輔〒讒伜､峨ｏ繧翫＠縺ｾ縺吶・iFi繧ｹ繧ｿ繧､繝ｫ縺九ｉ繝代Ρ繝ｼ繧ｵ繧ｦ繝ｳ繝峨・㍾菴朱浹繧ｹ繧ｿ繧､繝ｫ縺ｾ縺ｧ縲∬・蛻・□縺代・蛟句ｮ､繧貞･ｽ縺阪↑繧ｵ繧ｦ繝ｳ繝峨↓繧｢繝ｬ繝ｳ繧ｸ縺励※讌ｽ縺励∩縺ｾ縺励ｇ縺・ｼ・,
-      "category": "遏･隴倥・繧ｬ繧､繝・,
+      "description": "とっても重要なサブウーハーの役割！可聴帯域のほんの一部ですが、建物の基礎と同じでここがしっかりしていないと全体のイメージが希薄になってしまいます。\n\n音は倍音で構成されていますので、サブウーハーが中心でないようなボーカルやピアノの音も、サブウーハーのオンオフで様変わりします。HiFiスタイルからパワーサウンド、重低音スタイルまで、自分だけの個室を好きなサウンドにアレンジして楽しみましょう！",
+      "category": "知識・ガイド",
       "packageDetails": {
         "standardPrice": "0",
         "savings": "0",
         "contents": [
           {
-            "title": "繧ｵ繝悶え繝ｼ繝上・繝ｦ繝九ャ繝・,
-            "description": "8繧､繝ｳ繝・20cm)縲・8繧､繝ｳ繝・45cm)縺ｾ縺ｧ蟷・ｺ・￥蟇ｾ蠢・,
+            "title": "サブウーハーユニット",
+            "description": "8インチ(20cm)〜18インチ(45cm)まで幅広く対応",
             "icon": "Music"
           },
           {
-            "title": "繝代Ρ繝ｼ繧｢繝ｳ繝・,
-            "description": "D繧ｯ繝ｩ繧ｹ繝｢繝弱い繝ｳ繝励ｄ2ch繝悶Μ繝・ず謗･邯壹↑縺ｩ譛驕ｩ縺ｪ鬧・虚",
+            "title": "パワーアンプ",
+            "description": "Dクラスモノアンプや2chブリッジ接続など最適な駆動",
             "icon": "Zap"
           },
           {
-            "title": "繧ｨ繝ｳ繧ｯ繝ｭ繝ｼ繧ｸ繝｣繝ｼ(BOX)",
-            "description": "繧ｷ繝ｼ繝ｫ繝峨・繝舌せ繝ｬ繝慕ｭ峨∵ｧ閭ｽ繧貞ｼ輔″蜃ｺ縺咎←豁｣螳ｹ驥上・險ｭ險・,
+            "title": "エンクロージャー(BOX)",
+            "description": "シールド・バスレフ等、性能を引き出す適正容量の設計",
             "icon": "Wrench"
           },
           {
-            "title": "繝ｯ繧､繝､繝ｪ繝ｳ繧ｰ繝ｻ蜿紋ｻ・,
-            "description": "髮ｻ貅舌・RCA繝ｻSP繧ｱ繝ｼ繝悶Ν縺ｮ驟咲ｷ壹→遒ｺ螳溘↑蝗ｺ螳壹・隱ｿ謨ｴ",
+            "title": "ワイヤリング・取付",
+            "description": "電源・RCA・SPケーブルの配線と確実な固定・調整",
             "icon": "Activity"
           }
         ],
         "notes": [
-          "繝輔Ο繝ｳ繝医せ繝斐・繧ｫ繝ｼ縺ｨ縺ｮ繝舌Λ繝ｳ繧ｹ繧定・∴縺・0縲・2繧､繝ｳ繝√′縺雁匡繧√〒縺吶・,
-          "BOX縺ｮ險ｭ險茨ｼ亥ｮｹ驥上ｄ蠖｢迥ｶ・峨↓繧医▲縺ｦ繧ｦ繝ｼ繝上・縺ｮ諤ｧ閭ｽ縺悟､ｧ縺阪￥螟峨ｏ繧翫∪縺吶・,
-          "繝医Λ繝ｳ繧ｯ險ｭ鄂ｮ譎ゅ・縲∬差迚ｩ縺ｮ遨崎ｼ峨ｒ閠・・縺励◆閼ｱ逹縺励ｄ縺吶＞蝗ｺ螳壽婿豕輔ｂ蜿ｯ閭ｽ縺ｧ縺吶・
+          "フロントスピーカーとのバランスを考えた10〜12インチがお勧めです。",
+          "BOXの設計（容量や形状）によってウーハーの性能が大きく変わります。",
+          "トランク設置時は、荷物の積載を考慮した脱着しやすい固定方法も可能です。"
         ]
       },
       "lineup": [
         {
-          "name": "縺頑焔霆ｽ繝代Ρ繝ｼ繝峨し繝悶え繝ｼ繝上・險ｭ鄂ｮ",
+          "name": "お手軽パワードサブウーハー設置",
           "price": "0",
-          "description": "繧｢繝ｳ繝怜・阡ｵ繧ｿ繧､繝励〒繧ｳ繧ｹ繝医→繧ｹ繝壹・繧ｹ繧呈椛蛻ｶ縲・
+          "description": "アンプ内蔵タイプでコストとスペースを抑制。"
         },
         {
-          "name": "繧ｹ繧ｿ繝ｳ繝繝ｼ繝隠OX險ｭ鄂ｮ・医ヨ繝ｩ繝ｳ繧ｯ・・,
+          "name": "スタンダードBOX設置（トランク）",
           "price": "0",
-          "description": "蝗幄ｧ偵＞繧ｿ繧､繝励・邂ｱ繧定｣ｽ菴懊＠縺ｦ繝医Λ繝ｳ繧ｯ縺ｫ險ｭ鄂ｮ縲・
+          "description": "四角いタイプの箱を製作してトランクに設置。"
         },
         {
-          "name": "繝輔Ο繧｢/繧ｹ繝壹い繧ｿ繧､繝､繧ｹ繝壹・繧ｹ蝓九ａ霎ｼ縺ｿ",
+          "name": "フロア/スペアタイヤスペース埋め込み",
           "price": "0",
-          "description": "繧ｵ繝悶ヨ繝ｩ繝ｳ繧ｯ繧・せ繝壹い繧ｿ繧､繝､繧ｹ繝壹・繧ｹ繧貞茜逕ｨ縺励※BOX繧定｣ｽ菴懊・
+          "description": "サブトランクやスペアタイヤスペースを利用してBOXを製作。"
         },
         {
-          "name": "繧ｫ繧ｹ繧ｿ繝繝ｻ繧ｷ繝ｧ繝ｼ繧｢繝・・繧､繝ｳ繧ｹ繝医・繝ｫ",
+          "name": "カスタム・ショーアップインストール",
           "price": "0",
-          "description": "LED繝ｩ繧､繝・ぅ繝ｳ繧ｰ繧・い繧ｯ繝ｪ繝ｫ繧堤ｵ・∩蜷医ｏ縺帙◆鬲・○繧九き繧ｹ繧ｿ繝縲・
+          "description": "LEDライティングやアクリルを組み合わせた魅せるカスタム。"
         }
       ]
     },
     {
       "id": "custom_install_guide",
-      "title": "繧ｫ繧ｹ繧ｿ繝繧､繝ｳ繧ｹ繝医・繝ｫ繝ｻ繝ｯ繝ｳ繧ｪ繝戊｣ｽ菴・,
-      "badge": "螳悟・繧ｪ繝ｼ繝繝ｼ",
+      "title": "カスタムインストール・ワンオフ製作",
+      "badge": "完全オーダー",
       "features": [
-        "繝医Λ繝ｳ繧ｯ繧ｫ繧ｹ繧ｿ繝",
-        "繧｢繧ｦ繧ｿ繝ｼ繝舌ャ繝輔Ν",
-        "LED繝ｩ繧､繝・ぅ繝ｳ繧ｰ"
+        "トランクカスタム",
+        "アウターバッフル",
+        "LEDライティング"
       ],
       "image": "https://picsum.photos/seed/custom-inst/800/600",
-      "description": "繧ｫ繝ｼ繧ｪ繝ｼ繝・ぅ繧ｪ縺ｪ繧峨〒縺ｯ・√＞縺・浹繧定ｳ縺ｧ讌ｽ縺励・縺縺代〒縺ｯ縺ｪ縺上√け繝ｼ繝ｫ縺ｪ繧､繝ｳ繧ｹ繝医・繝ｫ縺ｧ逶ｮ縺ｧ隕九※讌ｽ縺励・繧ｫ繧ｹ繧ｿ繝繧ｪ繝ｼ繝・ぅ繧ｪ縺ｮ荳也阜縲・n\n莉｣陦ｨ逧・↑蜿悶ｊ莉倥￠萓九ｒ縺皮ｴｹ莉九＠縺ｾ縺吶ょ叙繧贋ｻ倥￠繧九Θ繝九ャ繝医ｄ霆贋ｸ｡縲√∪縺溘う繝ｳ繧ｹ繝医・繝ｫ譁ｹ豕輔↓繧医ｊ雋ｻ逕ｨ縺ｯ讒倥・〒縺吶ゅ∪縺壹・縺頑ｰ苓ｻｽ縺ｫ縺皮嶌隲・￥縺縺輔＞縲・n\n繧ｪ繝ｼ繝翫・讒倥・繧､繝｡繝ｼ繧ｸ縺吶ｋ繧ｫ繧ｹ繧ｿ繝繧貞・迴ｾ蛹悶☆繧九♀謇倶ｼ昴＞繧偵＞縺溘＠縺ｾ縺吶ゅΡ繝ｳ繧ｪ繝輔〒縺ｮ繧ｫ繧ｹ繧ｿ繝縺ｨ縺ｪ繧翫√♀霆翫ｒ遒ｺ隱阪＠縺ｪ縺後ｉ縺ｮ蝠・ｫ・′蠢・ｦ√→縺ｪ繧翫∪縺吶・縺ｧ縲√●縺ｲ縺疲擂蠎励・荳翫＃逶ｸ隲・￥縺縺輔＞縲・,
-      "category": "遏･隴倥・繧ｬ繧､繝・,
+      "description": "カーオーディオならでは！いい音を耳で楽しむだけではなく、クールなインストールで目で見て楽しむカスタムオーディオの世界。\n\n代表的な取り付け例をご紹介します。取り付けるユニットや車両、またインストール方法により費用は様々です。まずはお気軽にご相談ください。\n\nオーナー様のイメージするカスタムを具現化するお手伝いをいたします。ワンオフでのカスタムとなり、お車を確認しながらの商談が必要となりますので、ぜひご来店の上ご相談ください。",
+      "category": "知識・ガイド",
       "packageDetails": {
         "standardPrice": "0",
         "savings": "0",
         "contents": [
           {
-            "title": "繝・じ繧､繝ｳ繝ｻ險ｭ險・,
-            "description": "霆贋ｸ｡蠖｢迥ｶ縺ｨ讖滓攝縺ｫ蜷医ｏ縺帙◆繝ｯ繝ｳ繧ｪ繝輔ョ繧ｶ繧､繝ｳ",
+            "title": "デザイン・設計",
+            "description": "車両形状と機材に合わせたワンオフデザイン",
             "icon": "Layers"
           },
           {
-            "title": "騾菴懊・蜉蟾･",
-            "description": "MDF縲√い繧ｯ繝ｪ繝ｫ縲√ヱ繝・ｭ峨ｒ逕ｨ縺・◆鬮伜ｺｦ縺ｪ蜉蟾･謚陦・,
+            "title": "造作・加工",
+            "description": "MDF、アクリル、パテ等を用いた高度な加工技術",
             "icon": "Wrench"
           },
           {
-            "title": "莉穂ｸ翫￡繝ｻ陬・｣ｾ",
-            "description": "繝ｬ繧ｶ繝ｼ縲√・繧､繝ｳ繝医´ED繝ｩ繧､繝・ぅ繝ｳ繧ｰ遲峨・貍泌・",
+            "title": "仕上げ・装飾",
+            "description": "レザー、ペイント、LEDライティング等の演出",
             "icon": "Activity"
           },
           {
-            "title": "髻ｳ髻ｿ繝√Η繝ｼ繝九Φ繧ｰ",
-            "description": "繧ｫ繧ｹ繧ｿ繝迺ｰ蠅・↓蜷医ｏ縺帙◆譛驕ｩ縺ｪ繧ｵ繧ｦ繝ｳ繝芽ｪｿ謨ｴ",
+            "title": "音響チューニング",
+            "description": "カスタム環境に合わせた最適なサウンド調整",
             "icon": "Music"
           }
         ],
         "notes": [
-          "險倩ｼ峨＠縺ｦ縺・ｋ萓｡譬ｼ縺ｯ荳萓九〒縺吶よ命蟾･蜀・ｮｹ縺ｫ繧医ｊ螟ｧ縺阪￥螟牙虚縺励∪縺吶・,
-          "繝ｯ繝ｳ繧ｪ繝戊｣ｽ菴懊・縺溘ａ縲√♀霆翫ｒ縺企舌°繧翫＠縺ｦ縺ｮ菴懈･ｭ縺ｨ縺ｪ繧翫∪縺吶・,
-          "縺ｾ縺壹・縺疲擂蠎励＞縺溘□縺阪√＃隕∵悍繧偵♀閨槭°縺帙￥縺縺輔＞縲ゅ♀隕狗ｩ阪ｂ繧翫ｒ菴懈・縺・◆縺励∪縺吶・
+          "記載している価格は一例です。施工内容により大きく変動します。",
+          "ワンオフ製作のため、お車をお預かりしての作業となります。",
+          "まずはご来店いただき、ご要望をお聞かせください。お見積もりを作成いたします。"
         ]
       },
       "lineup": [
         {
-          "name": "繝医Λ繝ｳ繧ｯ繝ｻ繧ｫ繝ｼ繧ｴ繧ｹ繝壹・繧ｹ繧､繝ｳ繧ｹ繝医・繝ｫ",
+          "name": "トランク・カーゴスペースインストール",
           "price": "100000",
-          "description": "繝輔Ο繧｢縺ｸ縺ｮ蝓九ａ霎ｼ縺ｿ繧・き繝舌・陬ｽ菴・ 縺翫ｈ縺・0荳・・縲懊・
+          "description": "フロアへの埋め込みやカバー製作. およそ10万円〜。"
         },
         {
-          "name": "繧ｻ繝繝ｳ繧ｿ繧､繝励ヨ繝ｩ繝ｳ繧ｯ繧､繝ｳ繧ｹ繝医・繝ｫ",
+          "name": "セダンタイプトランクインストール",
           "price": "150000",
-          "description": "閭後ｂ縺溘ｌ陬上∈縺ｮ繧ｦ繝ｼ繝上・蝓九ａ霎ｼ縺ｿ繧・い繝ｳ繝励・繝ｼ繝芽｣ｽ菴・ 縺翫ｈ縺・5荳・・縲懊・
+          "description": "背もたれ裏へのウーハー埋め込みやアンプボード製作. およそ15万円〜。"
         },
         {
-          "name": "繝峨い繧ｫ繧ｹ繧ｿ繝繧｢繧ｦ繧ｿ繝ｼ繝舌ャ繝輔Ν陬ｽ菴・,
+          "name": "ドアカスタムアウターバッフル製作",
           "price": "200000",
-          "description": "邏疲ｭ｣繝代ロ繝ｫ縺ｫ鬥ｴ譟薙・繧ｫ繧ｹ繧ｿ繝繧､繝ｳ繧ｹ繝医・繝ｫ. 蟾ｦ蜿ｳ縺ｧ縺翫ｈ縺・0荳・・縲懊・
+          "description": "純正パネルに馴染むカスタムインストール. 左右でおよそ20万円〜。"
         },
         {
-          "name": "繝峨い繝代ロ繝ｫ蜈ｨ髱｢譁ｽ蟾･繝ｻ繧ｨ繝ｳ繧ｯ繝ｭ繝ｼ繧ｸ繝｣繝ｼ",
+          "name": "ドアパネル全面施工・エンクロージャー",
           "price": "250000",
-          "description": "繝代ロ繝ｫ荳ｸ縺斐→蠑ｵ繧頑崛縺医ｄ繧ｨ繝ｳ繧ｯ繝ｭ繝ｼ繧ｸ繝｣繝ｼ蛹・ 縺翫ｈ縺・5荳・・縲懊・
+          "description": "パネル丸ごと張り替えやエンクロージャー化. およそ25万円〜。"
         },
         {
-          "name": "繧ｫ繧ｹ繧ｿ繝繝斐Λ繝ｼ繧､繝ｳ繧ｹ繝医・繝ｫ・・WAY蟇ｾ蠢懶ｼ・,
+          "name": "カスタムピラーインストール（3WAY対応）",
           "price": "80000",
-          "description": "繝輔Ο繝ｳ繝・WAY縺ｫ谺縺九○縺ｪ縺・ヴ繝ｩ繝ｼ蜉蟾･. 蟾ｦ蜿ｳ縺ｧ縺翫ｈ縺・荳・・縲懊・
+          "description": "フロント3WAYに欠かせないピラー加工. 左右でおよそ8万円〜。"
         }
       ]
     }
@@ -1012,35 +1012,35 @@
   "optionals": [
     {
       "id": "deadening_opt",
-      "name": "讓呎ｺ悶ョ繝・ラ繝九Φ繧ｰ",
+      "name": "標準デッドニング",
       "price": "0",
-      "description": "繧ｹ繝斐・繧ｫ繝ｼ莠､謠帙・繝ｩ繝ｳ縺ｫ縺ｯ讓呎ｺ悶〒莉伜ｱ槭ょｷｮ鬘阪〒荳贋ｽ阪・繝ｩ繝ｳ縺ｸ縺ｮ螟画峩繧ょ庄閭ｽ縺ｧ縺吶・,
-      "effect": "髻ｳ縺ｮ邱縺ｾ繧雁髄荳・,
+      "description": "スピーカー交換プランには標準で付属。差額で上位プランへの変更も可能です。",
+      "effect": "音の締まり向上",
       "percentage": 40,
       "image": "/images/Audio/basic-line-coaxial.png"
     },
     {
       "id": "cable_opt",
-      "name": "繧ｹ繝斐・繧ｫ繝ｼ繧ｱ繝ｼ繝悶Ν",
+      "name": "スピーカーケーブル",
       "price": "0",
-      "description": "讓呎ｺ悶こ繝ｼ繝悶Ν縺御ｻ伜ｱ槭ょｷｮ鬘阪〒鬮倬浹雉ｪOFC繧ｱ繝ｼ繝悶Ν遲峨∈繧｢繝・・繧ｰ繝ｬ繝ｼ繝牙庄閭ｽ縺ｧ縺吶・,
-      "effect": "諠・ｱ驥酋P",
+      "description": "標準ケーブルが付属。差額で高音質OFCケーブル等へアップグレード可能です。",
+      "effect": "情報量UP",
       "percentage": 30,
       "image": "/images/speaker.jpg"
     },
     {
       "id": "tuning_opt",
-      "name": "繧ｵ繧ｦ繝ｳ繝峨メ繝･繝ｼ繝九Φ繧ｰ",
+      "name": "サウンドチューニング",
       "price": "0",
-      "description": "蠖灘ｺ励〒縺碑ｳｼ蜈･繝ｻ譁ｽ蟾･縺・◆縺縺・◆縺雁ｮ｢讒倥↓縺ｯ縲∫┌譁吶〒髻ｳ髻ｿ隱ｿ謨ｴ繧定｡後▲縺ｦ縺翫ｊ縺ｾ縺吶・,
-      "effect": "魄ｮ蠎ｦ蝗槫ｾｩ",
+      "description": "当店でご購入・施工いただいたお客様には、無料で音響調整を行っております。",
+      "effect": "鮮度回復",
       "percentage": 100,
       "image": "/images/speaker.jpg"
     }
   ],
   "securityStatus": "",
   "emergencyAnnouncement": {
-    "text": "縲千ｷ頑･縺ｮ縺顔衍繧峨○縲醍樟蝨ｨ縲∵命蟾･莠育ｴ・′螟ｧ螟画ｷｷ縺ｿ蜷医▲縺ｦ縺翫ｊ縺ｾ縺吶ゅ♀譌ｩ繧√↓縺皮嶌隲・￥縺縺輔＞縲・,
+    "text": "【緊急のお知らせ】現在、施工予約が大変混み合っております。お早めにご相談ください。",
     "link": "",
     "image": "",
     "active": false
@@ -1061,41 +1061,41 @@
   },
   "recruitment": {
     "visible": true,
-    "title": "謗｡逕ｨ諠・ｱ",
-    "message": "繧ｫ繝ｼ繧ｻ繧ｭ繝･繝ｪ繝・ぅ繝ｼ蜿悶ｊ莉倥￠繝ｻ雋ｩ螢ｲ繧ｹ繧ｿ繝・ヵ蜍滄寔荳ｭ縺ｧ縺吶りｩｳ縺励￥縺ｯ縺企崕隧ｱ縺上□縺輔＞縲・92-503-5437諡・ｽ難ｼ壼｡壼・ or 譚台ｸ・,
+    "title": "採用情報",
+    "message": "カーセキュリティー取り付け・販売スタッフ募集中です。詳しくはお電話ください。092-503-5437担当：塚元 or 村上",
     "requirements": [
       ""
     ],
     "salary": "",
-    "contactInfo": "縺企崕隧ｱ縺ｫ縺ｦ縺雁撫縺・粋繧上○縺上□縺輔＞"
+    "contactInfo": "お電話にてお問い合わせください"
   },
   "securityRecruitment": {
     "visible": true,
-    "title": "繧ｹ繧ｿ繝・ヵ蜍滄寔荳ｭ",
-    "message": "繧ｫ繝ｼ繧ｻ繧ｭ繝･繝ｪ繝・ぅ繝ｼ蜿悶ｊ莉倥￠繝ｻ雋ｩ螢ｲ繧ｹ繧ｿ繝・ヵ蜍滄寔荳ｭ縺ｧ縺吶りｩｳ縺励￥縺ｯ縺企崕隧ｱ縺上□縺輔＞縲よ球蠖難ｼ壼｡壼・ or 譚台ｸ・,
+    "title": "スタッフ募集中",
+    "message": "カーセキュリティー取り付け・販売スタッフ募集中です。詳しくはお電話ください。担当：塚元 or 村上",
     "requirements": [
-      "霆翫′螂ｽ縺阪↑譁ｹ",
-      "蜈・ｰ励〒譏弱ｋ縺・婿",
-      "隕∵勸騾壼・險ｱ"
+      "車が好きな方",
+      "元気で明るい方",
+      "要普通免許"
     ],
     "showRequirements": false,
-    "salary": "蝓ｺ譛ｬ邨ｦ 蠢懃嶌隲・ｼ育ｵ碁ｨ薙・閭ｽ蜉帙ｒ閠・・縺ｮ荳頑ｱｺ螳夲ｼ・,
+    "salary": "基本給 応相談（経験・能力を考慮の上決定）",
     "showSalary": false,
     "contactInfo": "092-503-5437"
   },
   "audioRecruitment": {
     "visible": false,
-    "title": "謗｡逕ｨ諠・ｱ",
-    "message": "荳邱偵↓繧ｫ繝ｼ繧ｪ繝ｼ繝・ぅ繧ｪ縺ｮ荳也阜繧堤屁繧贋ｸ翫￡縺ｾ縺帙ｓ縺具ｼ溽ｵ碁ｨ楢・━驕・・譛ｪ邨碁ｨ捺ｭ楢ｿ・,
+    "title": "採用情報",
+    "message": "一緒にカーオーディオの世界を盛り上げませんか？経験者優遇・未経験歓迎",
     "requirements": [
-      "霆翫′螂ｽ縺阪↑譁ｹ",
-      "蜈・ｰ励〒譏弱ｋ縺・婿",
-      "隕∵勸騾壼・險ｱ"
+      "車が好きな方",
+      "元気で明るい方",
+      "要普通免許"
     ],
     "showRequirements": true,
-    "salary": "蝓ｺ譛ｬ邨ｦ 蠢懃嶌隲・ｼ育ｵ碁ｨ薙・閭ｽ蜉帙ｒ閠・・縺ｮ荳頑ｱｺ螳夲ｼ・,
+    "salary": "基本給 応相談（経験・能力を考慮の上決定）",
     "showSalary": true,
-    "contactInfo": "縺企崕隧ｱ縺ｫ縺ｦ縺雁撫縺・粋繧上○縺上□縺輔＞"
+    "contactInfo": "お電話にてお問い合わせください"
   },
   "auditionSpeakers": [
     {
@@ -1117,7 +1117,7 @@
       "origin": "Italy",
       "units": [
         {
-          "model": "APK165ﾎｩ2",
+          "model": "APK165Ω2",
           "price": "30800",
           "taxExcluded": "28000",
           "status": "Available",
@@ -1143,7 +1143,7 @@
           "price": "107800",
           "taxExcluded": "98000",
           "status": "Available",
-          "description": "BMW繝医Ξ繝ｼ繝峨う繝ｳ莠､謠帙ち繧､繝・,
+          "description": "BMWトレードイン交換タイプ",
           "youtube": "",
           "image": "/images/Demo/D-100S24BMW.jpg"
         },
@@ -1180,7 +1180,7 @@
       ]
     },
     {
-      "brand": "Pioneer (繧ｫ繝ｭ繝・ヤ繧ｧ繝ｪ繧｢)",
+      "brand": "Pioneer (カロッツェリア)",
       "origin": "Japan",
       "units": [
         {
@@ -1225,7 +1225,7 @@
       ]
     },
     {
-      "brand": "DIATONE / 繝繧､繝､繝医・繝ｳ",
+      "brand": "DIATONE / ダイヤトーン",
       "origin": "Japan",
       "units": [
         {
@@ -1370,11 +1370,11 @@
       ]
     },
     {
-      "brand": "morel 繝｢繝ｬ繝ｫ",
+      "brand": "morel モレル",
       "origin": "Israel",
       "units": [
         {
-          "model": "MAXIMO ULTRA 602HE Mk竇｡",
+          "model": "MAXIMO ULTRA 602HE MkⅡ",
           "price": "80300",
           "taxExcluded": "73000",
           "status": "Available",
@@ -1410,7 +1410,7 @@
       "id": "b1",
       "name": "Yupiteru",
       "category": "Security / Dashcam",
-      "description": "Panthera繝ｻGrgo縺ｮ豁｣隕剰ｲｩ螢ｲ蠎励→縺励※縲・ｫ伜ｺｦ縺ｪ繧ｻ繧ｭ繝･繝ｪ繝・ぅ繧ｷ繧ｹ繝・Β繧呈署萓帙＠縺ｦ縺・∪縺吶・,
+      "description": "Panthera・Grgoの正規販売店として、高度なセキュリティシステムを提供しています。",
       "iconName": "ShieldCheck",
       "url": "https://www.yupiteru.co.jp/"
     },
@@ -1418,7 +1418,7 @@
       "id": "b2",
       "name": "Focal",
       "category": "Car Audio",
-      "description": "繝輔Λ繝ｳ繧ｹ縺ｮ蜷埼摩繝悶Λ繝ｳ繝峨らｹ顔ｴｰ縺ｧ陦ｨ迴ｾ蜉幄ｱ翫°縺ｪ繧ｵ繧ｦ繝ｳ繝峨ｒ霆雁・縺ｸ縲・,
+      "description": "フランスの名門ブランド。繊細で表現力豊かなサウンドを車内へ。",
       "iconName": "Speaker",
       "url": "https://www.focal-audio.jp/"
     },
@@ -1426,7 +1426,7 @@
       "id": "b3",
       "name": "Alpine",
       "category": "Navigation / Audio",
-      "description": "蜈磯ｲ縺ｮ繝・け繝弱Ο繧ｸ繝ｼ縺ｧ縲∝ｿｫ驕ｩ縺ｪ繧ｫ繝ｼ繝ｩ繧､繝輔ｒ繧ｵ繝昴・繝医☆繧句嵜蜀・ヨ繝・・繝悶Λ繝ｳ繝峨・,
+      "description": "先進のテクノロジーで、快適なカーライフをサポートする国内トップブランド。",
       "iconName": "Video",
       "url": "https://www.alpine.co.jp/"
     },
@@ -1434,15 +1434,15 @@
       "id": "b4",
       "name": "Bewith",
       "category": "High-End Audio",
-      "description": "螯･蜊斐・縺ｪ縺・浹雉ｪ繧定ｿｽ豎ゅ☆繧九∵律譛ｬ逋ｺ縺ｮ繝上う繧ｨ繝ｳ繝峨が繝ｼ繝・ぅ繧ｪ繝悶Λ繝ｳ繝峨・,
+      "description": "妥協のない音質を追求する、日本発のハイエンドオーディオブランド。",
       "iconName": "Speaker",
       "url": "https://www.bewith.jp/"
     },
     {
       "id": "b5",
-      "name": "蜉阯､髮ｻ讖・,
+      "name": "加藤電機",
       "category": "Security",
-      "description": "VIPER繝ｻHORNET縺ｪ縺ｩ縲∽ｸ也阜蝓ｺ貅悶・繧ｻ繧ｭ繝･繝ｪ繝・ぅ繧ｷ繧ｹ繝・Β繧貞ｱ暮幕縲・,
+      "description": "VIPER・HORNETなど、世界基準のセキュリティシステムを展開。",
       "iconName": "ShieldCheck",
       "url": "https://www.kato-denki.com/"
     },
@@ -1450,7 +1450,7 @@
       "id": "b6",
       "name": "Pioneer",
       "category": "Carrozzeria",
-      "description": "繧ｫ繝ｼ繝翫ン繧ｲ繝ｼ繧ｷ繝ｧ繝ｳ縺九ｉ繧ｪ繝ｼ繝・ぅ繧ｪ縺ｾ縺ｧ縲∵･ｭ逡後ｒ繝ｪ繝ｼ繝峨☆繧矩擠譁ｰ諤ｧ縲・,
+      "description": "カーナビゲーションからオーディオまで、業界をリードする革新性。",
       "iconName": "Video",
       "url": "https://jpn.pioneer/ja/carrozzeria/"
     }
@@ -1458,66 +1458,66 @@
   "partners": [
     {
       "id": "p1",
-      "name": "繧ｪ繝ｼ繝・ぅ繧ｪ繝輔ぃ繧､繝ｫ",
-      "location": "蜊・痩逵・,
+      "name": "オーディオファイル",
+      "location": "千葉県",
       "url": "https://audiophile.co.jp/",
-      "description": "繝上う繧ｨ繝ｳ繝峨が繝ｼ繝・ぅ繧ｪ縺九ｉ繧ｫ繧ｹ繧ｿ繝縺ｾ縺ｧ縲∫｢ｺ縺九↑謚陦薙〒逅・Φ縺ｮ繧ｵ繧ｦ繝ｳ繝峨ｒ螳溽樟縲・
+      "description": "ハイエンドオーディオからカスタムまで、確かな技術で理想のサウンドを実現。"
     },
     {
       "id": "p2",
-      "name": "蟆ｾ譫励ヵ繧｡繧ｯ繝医Μ繝ｼ",
-      "location": "譚ｱ莠ｬ驛ｽ",
+      "name": "尾林ファクトリー",
+      "location": "東京都",
       "url": "http://www.obayashi-f.jp/",
-      "description": "迢ｬ蜑ｵ逧・↑繧ｫ繧ｹ繧ｿ繝繧ｪ繝ｼ繝・ぅ繧ｪ縺ｨ縲∝ｦ･蜊斐・縺ｪ縺・浹雉ｪ霑ｽ豎ゅ〒遏･繧峨ｌ繧句錐髢繧ｷ繝ｧ繝・・縲・
+      "description": "独創的なカスタムオーディオと、妥協のない音質追求で知られる名門ショップ。"
     },
     {
       "id": "p3",
-      "name": "繧ｭ繝・ぜ繧ｬ繝ｬ繝ｼ繧ｸ",
-      "location": "諢帷衍逵・,
+      "name": "キッズガレージ",
+      "location": "愛知県",
       "url": "https://www.kidsgarage.jp/",
-      "description": "繧ｻ繧ｭ繝･繝ｪ繝・ぅ縺ｨ繧ｪ繝ｼ繝・ぅ繧ｪ縺ｮ荳｡遶九ゆｸｭ驛ｨ繧ｨ繝ｪ繧｢繧剃ｻ｣陦ｨ縺吶ｋ繝励Ο繧ｷ繝ｧ繝・・縲・
+      "description": "セキュリティとオーディオの両立。中部エリアを代表するプロショップ。"
     },
     {
       "id": "p4",
-      "name": "繧ｱ繝ｳ繝・ャ繧ｯ",
-      "location": "菴占ｳ逵・,
+      "name": "ケンテック",
+      "location": "佐賀県",
       "url": "http://www.03g.xyz/",
-      "description": "荵晏ｷ槭お繝ｪ繧｢縺ｮ謚陦捺侠轤ｹ縲ゅ″繧∫ｴｰ繧・°縺ｪ譁ｽ蟾･ and 繧｢繝輔ち繝ｼ繧ｵ繝昴・繝医′鬲・鴨縲・
+      "description": "九州エリアの技術拠点。きめ細やかな施工 and アフターサポートが魅力。"
     },
     {
       "id": "p5",
-      "name": "繧ｵ繧ｦ繝ｳ繝峨・繝ｭ繧ｰ繝ｬ繧ｹ",
-      "location": "蜊・痩逵・,
+      "name": "サウンドプログレス",
+      "location": "千葉県",
       "url": "https://sound-progress.jp/",
-      "description": "髻ｳ縺ｮ繝励Ο繝輔ぉ繝・す繝ｧ繝翫Ν縺後√♀螳｢讒倅ｸ莠ｺ縺ｲ縺ｨ繧翫↓譛驕ｩ縺ｪ繧ｷ繧ｹ繝・Β繧呈署譯医・
+      "description": "音のプロフェッショナルが、お客様一人ひとりに最適なシステムを提案。"
     },
     {
       "id": "p6",
-      "name": "繧ｷ繝溘ぜ繝輔ぃ繧ｯ繝医Μ繝ｼ",
-      "location": "髟ｷ驥守恁",
+      "name": "シミズファクトリー",
+      "location": "長野県",
       "url": "http://www.shimizu-factory.com/",
-      "description": "菫｡蟾槭・繧ｫ繝ｼ繧ｪ繝ｼ繝・ぅ繧ｪ繧ｷ繝ｼ繝ｳ繧偵Μ繝ｼ繝峨るｫ倥＞謚陦灘鴨縺ｨ菫｡鬆ｼ縺ｮ螳溽ｸｾ縲・
+      "description": "信州のカーオーディオシーンをリード。高い技術力と信頼の実績。"
     },
     {
       "id": "p7",
-      "name": "繧ｸ繝繝ｻ繧､繝ｳ繝繧ｹ繝医Μ繝ｼ",
-      "location": "譬・惠逵・,
+      "name": "ジム・インダストリー",
+      "location": "栃木県",
       "url": "http://www.gymindustry.co.jp/",
-      "description": "蛹鈴未譚ｱ繧ｨ繝ｪ繧｢繧偵き繝舌・縲る浹雉ｪ蜷台ｸ翫°繧峨ラ繝ｬ繧ｹ繧｢繝・・縺ｾ縺ｧ蟷・ｺ・￥蟇ｾ蠢懊・
+      "description": "北関東エリアをカバー。音質向上からドレスアップまで幅広く対応。"
     },
     {
       "id": "p8",
-      "name": "繝薙け繝医Μ繝ｼ",
-      "location": "諢帷衍逵・,
+      "name": "ビクトリー",
+      "location": "愛知県",
       "url": "http://www.victory1987.co.jp/",
-      "description": "繧ｫ繝ｼ繧ｪ繝ｼ繝・ぅ繧ｪ縺ｨ繧ｻ繧ｭ繝･繝ｪ繝・ぅ縺ｮ蟆る摩蠎励よ・霆翫↓譛鬮倥・萓｡蛟､繧偵・繝ｩ繧ｹ縲・
+      "description": "カーオーディオとセキュリティの専門店。愛車に最高の価値をプラス。"
     },
     {
       "id": "p9",
       "name": "Sound ANG",
-      "location": "遖丞ｲ｡逵・,
+      "location": "福岡県",
       "url": "https://www.soundang.com/",
-      "description": "蠖薙す繝ｧ繝・・縲ゆｹ晏ｷ槫ｱ域欠縺ｮ謚陦灘鴨縺ｧ縲√♀螳｢讒倥・逅・Φ繧貞ｽ｢縺ｫ縺励∪縺吶・
+      "description": "当ショップ。九州屈指の技術力で、お客様の理想を形にします。"
     }
   ],
   "assets": {

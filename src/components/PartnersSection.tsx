@@ -1,4 +1,4 @@
-﻿import React, { useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion } from 'motion/react';
 import { ExternalLink, ShieldCheck, Speaker, Video, Globe } from 'lucide-react';
 import { useSite, BrandPartner } from '../contexts/SiteContext';
@@ -45,11 +45,12 @@ export const PartnersSection: React.FC<{ onViewAll: () => void }> = ({ onViewAll
           >
             <span className="text-blue-600 font-black tracking-[0.3em] uppercase text-xs mb-4 block">Trusted Partners</span>
             <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-gray-900 mb-6">
-              菫｡鬆ｼ縺ｮ繝代・繝医リ繝ｼ
+              信頼のパートナー
             </h2>
             <p className="text-gray-500 font-bold max-w-2xl mx-auto leading-relaxed">
-              Sound ANG縺瑚・菫｡繧呈戟縺｣縺ｦ謗ｨ螂ｨ縺吶ｋ繝｡繝ｼ繧ｫ繝ｼ蜷・､ｾ縲・br className="hidden md:block" />
-              縺昴＠縺ｦ蜈ｱ縺ｫ謚陦薙ｒ鬮倥ａ蜷医≧繧ｰ繝ｫ繝ｼ繝励ロ繝・ヨ繝ｯ繝ｼ繧ｯ繧偵＃邏ｹ莉九＠縺ｾ縺吶・            </p>
+              Sound ANGが自信を持って推奨するメーカー各社、<br className="hidden md:block" />
+              そして共に技術を高め合うグループネットワークをご紹介します。
+            </p>
           </motion.div>
         </div>
 
@@ -112,7 +113,7 @@ export const PartnersSection: React.FC<{ onViewAll: () => void }> = ({ onViewAll
             onClick={onViewAll}
             className="group flex items-center gap-3 bg-gray-900 text-white px-10 py-5 rounded-[2rem] font-black hover:bg-blue-600 transition-all shadow-xl shadow-blue-100"
           >
-            縺吶∋縺ｦ縺ｮ繝代・繝医リ繝ｼ繧定ｦ九ｋ
+            すべてのパートナーを見る
             <ExternalLink className="w-5 h-5 opacity-50 group-hover:opacity-100 transition-opacity" />
           </button>
         </div>
@@ -124,8 +125,8 @@ export const PartnersSection: React.FC<{ onViewAll: () => void }> = ({ onViewAll
             <div className="flex flex-col gap-8">
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
-                  <h3 className="text-2xl font-black text-white mb-2 tracking-tight">繧ｫ繝ｼ繧ｪ繝ｼ繝・ぅ繧ｪ繧ｻ繝ｳ繧ｿ繝ｼ繝ｻ繧ｰ繝ｫ繝ｼ繝・/h3>
-                  <p className="text-gray-400 text-sm font-bold">蜈ｨ蝗ｽ縺ｫ螻暮幕縺吶ｋ縲∝嵜蜀・怙螟ｧ邏壹・繝励Ο繧ｷ繝ｧ繝・・繝阪ャ繝医Ρ繝ｼ繧ｯ縺ｧ縺吶・/p>
+                  <h3 className="text-2xl font-black text-white mb-2 tracking-tight">カーオーディオセンター・グループ</h3>
+                  <p className="text-gray-400 text-sm font-bold">全国に展開する、国内最大級のプロショップネットワークです。</p>
                 </div>
                 <a
                   href="https://www.audio-center.ne.jp/"
@@ -133,7 +134,7 @@ export const PartnersSection: React.FC<{ onViewAll: () => void }> = ({ onViewAll
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm font-black transition-colors"
                 >
-                  繧ｰ繝ｫ繝ｼ繝怜・蠑上し繧､繝医ｒ隕九ｋ <ExternalLink className="w-4 h-4" />
+                  グループ公式サイトを見る <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
@@ -156,7 +157,8 @@ export const PartnersSection: React.FC<{ onViewAll: () => void }> = ({ onViewAll
 
         <div className="mt-16 text-center">
           <p className="text-gray-400 text-[10px] font-bold uppercase tracking-[0.2em]">
-            窶ｻ 蜷・Μ繝ｳ繧ｯ蜈医・螟夜Κ繧ｵ繧､繝医∈遘ｻ蜍輔＠縺ｾ縺吶・          </p>
+            ※ 各リンク先は外部サイトへ移動します。
+          </p>
         </div>
       </div>
     </section>

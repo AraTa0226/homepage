@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { 
   ArrowLeft, 
@@ -100,7 +100,7 @@ export const PriceManager: React.FC<PriceManagerProps> = ({ onBack }) => {
             </button>
             <div>
               <h1 className="text-xl font-black tracking-tighter">STAFF PRICE MANAGER</h1>
-              <p className="text-xs text-gray-400 font-bold uppercase tracking-widest">萓｡譬ｼ荳諡ｬ邂｡逅・す繧ｹ繝・Β</p>
+              <p className="text-xs text-gray-400 font-bold uppercase tracking-widest">価格一括管理システム</p>
             </div>
           </div>
           
@@ -110,14 +110,15 @@ export const PriceManager: React.FC<PriceManagerProps> = ({ onBack }) => {
               className="flex items-center gap-2 px-4 py-2 text-sm font-bold text-gray-500 hover:text-gray-900 transition-colors"
             >
               <RefreshCw className="w-4 h-4" />
-              繝ｪ繧ｻ繝・ヨ
+              リセット
             </button>
             <button 
               onClick={handleSave}
               className="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl font-black text-sm tracking-widest hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20"
             >
               <Save className="w-4 h-4" />
-              縺吶∋縺ｦ縺ｮ螟画峩繧剃ｿ晏ｭ・            </button>
+              すべての変更を保存
+            </button>
           </div>
         </div>
       </div>
@@ -131,10 +132,11 @@ export const PriceManager: React.FC<PriceManagerProps> = ({ onBack }) => {
               <div>
                 <div className="flex items-center gap-3 mb-2">
                   <TrendingUp className="w-6 h-6 text-blue-400" />
-                  <h2 className="text-xl font-black tracking-tight">荳諡ｬ萓｡譬ｼ隱ｿ謨ｴ繝・・繝ｫ</h2>
+                  <h2 className="text-xl font-black tracking-tight">一括価格調整ツール</h2>
                 </div>
                 <p className="text-xs text-gray-400 font-bold max-w-xs">
-                  窶ｻ蜈･蜉帙＠縺溘ヱ繝ｼ繧ｻ繝ｳ繝・・繧ｸ蛻・∝・縺ｦ縺ｮ繝励Λ繝ｳ萓｡譬ｼ繧貞｢玲ｸ帙＆縺帙∪縺吶・                </p>
+                  ※入力したパーセンテージ分、全てのプラン価格を増減させます。
+                </p>
               </div>
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-3 bg-white/10 p-2 rounded-xl border border-white/10">
@@ -150,7 +152,7 @@ export const PriceManager: React.FC<PriceManagerProps> = ({ onBack }) => {
                   onClick={handleBulkAdjust}
                   className="bg-blue-600 text-white px-8 py-4 rounded-xl font-black text-sm tracking-widest hover:bg-blue-500 transition-all shadow-lg shadow-blue-600/20"
                 >
-                  荳諡ｬ驕ｩ逕ｨ
+                  一括適用
                 </button>
               </div>
             </div>
@@ -161,7 +163,7 @@ export const PriceManager: React.FC<PriceManagerProps> = ({ onBack }) => {
               <RefreshCw className="w-5 h-5 text-gray-500" />
               <input 
                 type="text" 
-                placeholder="繝励Λ繝ｳ蜷阪ｄ繧ｫ繝・ざ繝ｪ繝ｼ縺ｧ讀懃ｴ｢..."
+                placeholder="プラン名やカテゴリーで検索..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="bg-transparent border-none text-lg font-bold w-full focus:ring-0 placeholder:text-gray-600"
@@ -178,7 +180,8 @@ export const PriceManager: React.FC<PriceManagerProps> = ({ onBack }) => {
             className="fixed top-24 left-1/2 -translate-x-1/2 bg-green-500 text-white px-8 py-4 rounded-2xl font-black shadow-2xl z-[100] flex items-center gap-3"
           >
             <CheckCircle2 className="w-6 h-6" />
-            萓｡譬ｼ縺ｮ譖ｴ譁ｰ縺悟ｮ御ｺ・＠縺ｾ縺励◆・・          </motion.div>
+            価格の更新が完了しました！
+          </motion.div>
         )}
 
         {/* Excel-like Table */}
@@ -199,7 +202,7 @@ export const PriceManager: React.FC<PriceManagerProps> = ({ onBack }) => {
                   <>
                     <tr className="bg-blue-50/50">
                       <td colSpan={4} className="px-6 py-3 text-xs font-black text-blue-600 uppercase tracking-widest border-b border-gray-200">
-                        繧ｪ繝励す繝ｧ繝ｳ繝｡繝九Η繝ｼ
+                        オプションメニュー
                       </td>
                     </tr>
                     {filteredOptionals.map((opt) => (
@@ -216,7 +219,7 @@ export const PriceManager: React.FC<PriceManagerProps> = ({ onBack }) => {
                         </td>
                         <td className="px-6 py-4">
                           <div className="relative flex items-center">
-                            <span className="absolute left-3 font-black text-gray-400 text-sm">ﾂ･</span>
+                            <span className="absolute left-3 font-black text-gray-400 text-sm">¥</span>
                             <input 
                               type="text" 
                               value={opt.price}
@@ -252,7 +255,7 @@ export const PriceManager: React.FC<PriceManagerProps> = ({ onBack }) => {
                         </td>
                         <td className="px-6 py-4">
                           <div className="relative flex items-center">
-                            <span className="absolute left-3 font-black text-gray-400 text-sm">ﾂ･</span>
+                            <span className="absolute left-3 font-black text-gray-400 text-sm">¥</span>
                             <input 
                               type="text" 
                               value={item.price}

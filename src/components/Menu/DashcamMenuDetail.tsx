@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { usePrices, formatPrice } from '../../contexts/PriceContext';
 import { useSite } from '../../contexts/SiteContext';
@@ -57,94 +57,94 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
 
   const categoryExplanations: Record<string, any> = {
     dashcam: {
-      title: "繝峨Λ繧､繝悶Ξ繧ｳ繝ｼ繝繝ｼ",
-      subtitle: "莠区腐縺ｮ險ｼ諡縺縺代〒縺ｪ縺上∫・繧企°霆｢蟇ｾ遲悶・蠢・医い繧､繝・Β縲・,
-      description: "譛譁ｰ縺ｮ蜑榊ｾ・繧ｫ繝｡繝ｩ繝｢繝・Ν繧・∵ｭｻ隗偵・縺ｪ縺・60蠎ｦ繝｢繝・Ν繧偵Λ繧､繝ｳ繝翫ャ繝励ょｰる摩蠎励↑繧峨〒縺ｯ縺ｮ縲碁・邱壹ｒ髫縺励◆鄒弱＠縺・う繝ｳ繧ｹ繝医・繝ｫ縲阪→縲檎｢ｺ螳溘↑髮ｻ貅千｢ｺ菫昴阪〒縲√＞縺悶→縺・≧譎ゅ↓鬆ｼ繧後ｋ繧ｷ繧ｹ繝・Β繧呈ｧ狗ｯ峨＠縺ｾ縺吶・,
-      sampleDescription: "縲先命蟾･萓九大燕蠕・繧ｫ繝｡繝ｩ ・・鬧占ｻ顔屮隕厄ｼ壹お繝ｳ繧ｸ繝ｳ蛛懈ｭ｢蠕後ｂ荳螳壽凾髢馴鹸逕ｻ繧堤ｶ咏ｶ壹ょｽ薙※騾・￡繧・＞縺溘★繧牙ｯｾ遲悶→縺励※髱槫ｸｸ縺ｫ莠ｺ豌励・鬮倥＞讒区・縺ｧ縺吶・,
+      title: "ドライブレコーダー",
+      subtitle: "事故の証拠だけでなく、煽り運転対策の必須アイテム。",
+      description: "最新の前後2カメラモデルや、死角のない360度モデルをラインナップ。専門店ならではの「配線を隠した美しいインストール」と「確実な電源確保」で、いざという時に頼れるシステムを構築します。",
+      sampleDescription: "【施工例】前後2カメラ ＋ 駐車監視：エンジン停止後も一定時間録画を継続。当て逃げやいたずら対策として非常に人気の高い構成です。",
       benefits: [
-        "辣ｽ繧企°霆｢繝ｻ莠区腐縺ｮ髫帙・遒ｺ螳溘↑險ｼ諡險倬鹸",
-        "鬧占ｻ贋ｸｭ縺ｮ蠖薙※騾・￡繝ｻ縺・◆縺壹ｉ逶｣隕厄ｼ医が繝励す繝ｧ繝ｳ・・,
-        "驟咲ｷ壹ｒ髫縺励◆繝励Ο縺ｫ繧医ｋ鄒弱＠縺・う繝ｳ繧ｹ繝医・繝ｫ",
-        "霆贋ｸ｡髮ｻ蝨ｧ繧堤屮隕悶＠縲√ヰ繝・ユ繝ｪ繝ｼ荳翫′繧翫ｒ髦ｲ豁｢"
+        "煽り運転・事故の際の確実な証拠記録",
+        "駐車中の当て逃げ・いたずら監視（オプション）",
+        "配線を隠したプロによる美しいインストール",
+        "車両電圧を監視し、バッテリー上がりを防止"
       ],
       image: assets.dashcamMenuImage,
       icon: Video,
       color: "blue",
       upgrades: [
-        { title: "螟ｧ螳ｹ驥輯D繧ｫ繝ｼ繝・, price: "+ﾂ･5,500縲・, icon: LayoutGrid, description: "繧医ｊ髟ｷ譎る俣縺ｮ骭ｲ逕ｻ繧貞庄閭ｽ縺ｫ縲るｫ倩蝉ｹ・Δ繝・Ν繧呈治逕ｨ縺励∪縺吶・ },
-        { title: "鬧占ｻ顔屮隕也畑繝槭Ν繝√ヰ繝・ユ繝ｪ繝ｼ", price: "+ﾂ･44,000縲・, icon: Zap, description: "霆贋ｸ｡繝舌ャ繝・Μ繝ｼ繧剃ｽｿ繧上★縺ｫ縲∵怙螟ｧ35譎る俣縺ｮ鬧占ｻ顔屮隕悶ｒ蜿ｯ閭ｽ縺ｫ縺励∪縺吶・ }
+        { title: "大容量SDカード", price: "+¥5,500〜", icon: LayoutGrid, description: "より長時間の録画を可能に。高耐久モデルを採用します。" },
+        { title: "駐車監視用マルチバッテリー", price: "+¥44,000〜", icon: Zap, description: "車両バッテリーを使わずに、最大35時間の駐車監視を可能にします。" }
       ]
     },
     digital_mirror: {
-      title: "繝・ず繧ｿ繝ｫ繧､繝ｳ繝翫・繝溘Λ繝ｼ",
-      subtitle: "繧｢繝ｫ繝代う繝ｳ陬ｽ縺ｪ縺ｩ縲∝ｾ梧婿縺ｮ隕也阜繧貞括逧・↓繧ｯ繝ｪ繧｢縺ｫ縲・,
-      description: "闕ｷ迚ｩ繧・酔荵苓・〒驕ｮ繧峨ｌ縺後■縺ｪ蠕梧婿隕也阜繧偵√き繝｡繝ｩ譏蜒上〒繝溘Λ繝ｼ縺ｫ譏縺怜・縺励∪縺吶ら音縺ｫ繧｢繝ｫ繝代う繝ｳ陬ｽ繝・ず繧ｿ繝ｫ繝溘Λ繝ｼ縺ｯ縲∬ｻ顔ｨｮ蟆ら畑險ｭ險医〒繝輔ぅ繝・ユ繧｣繝ｳ繧ｰ繧よ栢鄒､縲る岑螟ｩ譎ゅｄ螟憺俣縺ｧ繧るｩ壹￥縺ｻ縺ｩ譏弱ｋ縺上∝ｮ牙・縺ｪ繝峨Λ繧､繝悶ｒ繧ｵ繝昴・繝医＠縺ｾ縺吶・,
-      sampleDescription: "縲先命蟾･萓九代い繝ｫ繝代う繝ｳ邏疲ｭ｣莠､謠帛梛繝・ず繧ｿ繝ｫ繝溘Λ繝ｼ・夂ｴ疲ｭ｣繝溘Λ繝ｼ繧剃ｸｸ縺斐→莠､謠帙☆繧九◆繧√∝ｾ御ｻ倥￠諢溘・縺ｪ縺・せ繝槭・繝医↑莉穂ｸ翫′繧翫↓縲ょ燕蠕後ラ繝ｩ繝ｬ繧ｳ讖溯・莉倥″縺御ｸｻ豬√〒縺吶・,
+      title: "デジタルインナーミラー",
+      subtitle: "アルパイン製など、後方の視界を劇的にクリアに。",
+      description: "荷物や同乗者で遮られがちな後方視界を、カメラ映像でミラーに映し出します。特にアルパイン製デジタルミラーは、車種専用設計でフィッティングも抜群。雨天時や夜間でも驚くほど明るく、安全なドライブをサポートします。",
+      sampleDescription: "【施工例】アルパイン純正交換型デジタルミラー：純正ミラーを丸ごと交換するため、後付け感のないスマートな仕上がりに。前後ドラレコ機能付きが主流です。",
       benefits: [
-        "闕ｷ迚ｩ貅霈峨〒繧ょｾ梧婿隕也阜縺碁・繧峨ｌ縺ｪ縺・,
-        "螟憺俣繧・岑螟ｩ譎ゅ〒繧よ・繧九￥魄ｮ譏弱↑譏蜒・,
-        "蜑榊ｾ後ラ繝ｩ繝ｬ繧ｳ讖溯・謳ｭ霈峨〒荳遏ｳ莠碁ｳ･",
-        "繧｢繝ｫ繝代う繝ｳ陬ｽ縺ｪ縺ｩ霆顔ｨｮ蟆ら畑險ｭ險医〒繧ｹ繝・く繝ｪ"
+        "荷物満載でも後方視界が遮られない",
+        "夜間や雨天時でも明るく鮮明な映像",
+        "前後ドラレコ機能搭載で一石二鳥",
+        "アルパイン製など車種専用設計でスッキリ"
       ],
       image: assets.dashcamMenuImage,
       icon: Monitor,
       color: "indigo",
       upgrades: [
-        { title: "蜿榊ｰ・亟豁｢繝輔ぅ繝ｫ繝", price: "+ﾂ･3,300縲・, icon: Settings2, description: "譌･荳ｭ縺ｮ豸ｲ譎ｶ縺ｸ縺ｮ譏繧願ｾｼ縺ｿ繧呈椛縺医∬ｦ冶ｪ肴ｧ繧偵＆繧峨↓鬮倥ａ縺ｾ縺吶・ }
+        { title: "反射防止フィルム", price: "+¥3,300〜", icon: Settings2, description: "日中の液晶への映り込みを抑え、視認性をさらに高めます。" }
       ]
     },
     radar: {
-      title: "繝ｬ繝ｼ繝繝ｼ謗｢遏･讖・/ 繝ｬ繝ｼ繧ｶ繝ｼ蜿嶺ｿ｡讖・,
-      subtitle: "譛譁ｰ縺ｮ遘ｻ蜍募ｼ上が繝ｼ繝薙せ縺ｫ蟇ｾ蠢懊ょｮ牙・驕玖ｻ｢縺ｮ繝代・繝医リ繝ｼ縲・,
-      description: "譛譁ｰ縺ｮ繝ｬ繝ｼ繧ｶ繝ｼ蜈牙女菫｡縺ｫ蟇ｾ蠢懊＠縺溘Δ繝・Ν繧偵＃謠先｡医０BDII謗･邯壹↓繧医ｊ縲∬ｻ贋ｸ｡縺ｮ豁｣遒ｺ縺ｪ諠・ｱ繧定｡ｨ遉ｺ縺吶ｋ縺薙→繧ょ庄閭ｽ縺ｧ縺吶・,
-      sampleDescription: "縲先命蟾･萓九代そ繝代Ξ繝ｼ繝亥梛繝ｬ繝ｼ繝繝ｼ・壼女蜈蛾Κ繧偵ヵ繝ｭ繝ｳ繝医ぎ繝ｩ繧ｹ荳企Κ縺ｫ縲√Δ繝九ち繝ｼ繧帝°霆｢蟶ｭ讓ｪ縺ｫ縲りｦ冶ｪ肴ｧ縺ｨ蜿嶺ｿ｡諢溷ｺｦ繧剃ｸ｡遶九＠縺溯ｨｭ鄂ｮ繧定｡後＞縺ｾ縺吶・,
+      title: "レーダー探知機 / レーザー受信機",
+      subtitle: "最新の移動式オービスに対応。安全運転のパートナー。",
+      description: "最新のレーザー光受信に対応したモデルをご提案。OBDII接続により、車両の正確な情報を表示することも可能です。",
+      sampleDescription: "【施工例】セパレート型レーダー：受光部をフロントガラス上部に、モニターを運転席横に。視認性と受信感度を両立した設置を行います。",
       benefits: [
-        "譛譁ｰ縺ｮ遘ｻ蜍募ｼ上が繝ｼ繝薙せ・・SSS遲会ｼ峨↓螳悟・蟇ｾ蠢・,
-        "GPS繝・・繧ｿ譖ｴ譁ｰ縺ｫ繧医ｊ蟶ｸ縺ｫ譛譁ｰ縺ｮ蜿也ｷ諠・ｱ繧呈滑謠｡",
-        "OBDII謗･邯壹〒豌ｴ貂ｩ繧・ヶ繝ｼ繧ｹ繝亥悸縺ｪ縺ｩ縺ｮ霆贋ｸ｡諠・ｱ繧定｡ｨ遉ｺ",
-        "繝繝・す繝･繝懊・繝峨ｒ繧ｹ繝・く繝ｪ縺輔○繧九そ繝代Ξ繝ｼ繝郁ｨｭ鄂ｮ"
+        "最新の移動式オービス（MSSS等）に完全対応",
+        "GPSデータ更新により常に最新の取締情報を把握",
+        "OBDII接続で水温やブースト圧などの車両情報を表示",
+        "ダッシュボードをスッキリさせるセパレート設置"
       ],
       image: assets.dashcamMenuImage,
       icon: AlertTriangle,
       color: "orange",
       upgrades: [
-        { title: "OBDII繧｢繝繝励ち繝ｼ", price: "+ﾂ･8,800縲・, icon: Zap, description: "霆贋ｸ｡諠・ｱ繧貞叙蠕励＠縲√ｈ繧頑ｭ｣遒ｺ縺ｪ隴ｦ蝣ｱ縺ｨ霆贋ｸ｡迥ｶ諷九・繝｢繝九ち繝ｪ繝ｳ繧ｰ繧貞庄閭ｽ縺ｫ縺励∪縺吶・ }
+        { title: "OBDIIアダプター", price: "+¥8,800〜", icon: Zap, description: "車両情報を取得し、より正確な警報と車両状態のモニタリングを可能にします。" }
       ]
     },
     safety_device: {
-      title: "鄂ｮ縺榊悉繧企亟豁｢螳牙・陬・ｽｮ",
-      subtitle: "蟷ｼ遞壼恍繝舌せ繝ｻ騾∬ｿ弱ヰ繧ｹ縺ｮ螳牙・繧貞ｮ医ｋ縲らｾｩ蜍吝喧蟇ｾ蠢懊Δ繝・Ν縲・,
-      description: "繝偵Η繝ｼ繝槭Φ繧ｨ繝ｩ繝ｼ縺ｫ繧医ｋ霆雁・鄂ｮ縺榊悉繧贋ｺ区腐繧帝亟縺舌◆繧√・蟆ら畑繧ｷ繧ｹ繝・Β縲ゅお繝ｳ繧ｸ繝ｳ蛛懈ｭ｢蠕後・遒ｺ隱阪ヶ繧ｶ繝ｼ繧・∽ｸ・′荳縺ｮ髫帙・螟夜Κ騾夂衍讖溯・縺ｧ縲∝､ｧ蛻・↑蜻ｽ繧貞ｮ医ｊ縺ｾ縺吶り｣懷勧驥大ｯｾ雎｡繝｢繝・Ν繧ょ叙繧頑桶縺｣縺ｦ縺翫ｊ縺ｾ縺吶・,
-      sampleDescription: "縲先命蟾･萓九代・繝ｼ繝阪ャ繝郁ｻ雁・鄂ｮ縺榊悉繧企亟豁｢繧ｷ繧ｹ繝・Β・壹お繝ｳ繧ｸ繝ｳ蛛懈ｭ｢蠕後∵怙蠕悟ｰｾ縺ｾ縺ｧ遒ｺ隱阪↓陦後°縺ｪ縺・→繝悶じ繝ｼ縺梧ｭ｢縺ｾ繧峨↑縺・ｻ慕ｵ・∩繧呈ｧ狗ｯ峨ら｢ｺ螳溘↓霆雁・轤ｹ讀懊ｒ菫・＠縺ｾ縺吶・,
+      title: "置き去り防止安全装置",
+      subtitle: "幼稚園バス・送迎バスの安全を守る。義務化対応モデル。",
+      description: "ヒューマンエラーによる車内置き去り事故を防ぐための専用システム。エンジン停止後の確認ブザーや、万が一の際の外部通知機能で、大切な命を守ります。補助金対象モデルも取り扱っております。",
+      sampleDescription: "【施工例】ホーネット車内置き去り防止システム：エンジン停止後、最後尾まで確認に行かないとブザーが止まらない仕組みを構築。確実に車内点検を促します。",
       benefits: [
-        "繝偵Η繝ｼ繝槭Φ繧ｨ繝ｩ繝ｼ縺ｫ繧医ｋ莠区腐繧偵ユ繧ｯ繝弱Ο繧ｸ繝ｼ縺ｧ髦ｲ豁｢",
-        "蜀・魅蠎懊・繧ｬ繧､繝峨Λ繧､繝ｳ縺ｫ驕ｩ蜷医＠縺溯ｪ榊ｮ夊｣・ｽｮ",
-        "陬懷勧驥醍筏隲九・繧ｵ繝昴・繝医ｂ謇ｿ繧翫∪縺・,
-        "繝励Ο縺ｮ譁ｽ蟾･縺ｫ繧医ｋ隱､菴懷虚縺ｮ蟆代↑縺・｢ｺ螳溘↑蜍穂ｽ・
+        "ヒューマンエラーによる事故をテクノロジーで防止",
+        "内閣府のガイドラインに適合した認定装置",
+        "補助金申請のサポートも承ります",
+        "プロの施工による誤作動の少ない確実な動作"
       ],
       image: assets.dashcamMenuImage,
       icon: AlertTriangle,
       color: "red",
       upgrades: [
-        { title: "螟夜Κ繧ｵ繧､繝ｬ繝ｳ霑ｽ蜉", price: "+ﾂ･11,000縲・, icon: Zap, description: "霆雁､悶∈縺ｮ騾夂衍髻ｳ繧偵ｈ繧雁ｼｷ蜉帙↓縺励∝捉蝗ｲ縺ｸ縺ｮ逡ｰ蟶ｸ蜻ｨ遏･繧呈掠繧√∪縺吶・ }
+        { title: "外部サイレン追加", price: "+¥11,000〜", icon: Zap, description: "車外への通知音をより強力にし、周囲への異常周知を早めます。" }
       ]
     },
     campit: {
-      title: "Campit (繧ｭ繝｣繝ｳ繝斐ャ繝・",
-      subtitle: "霆贋ｸｭ豕翫・繧ｭ繝｣繝ｳ繝斐Φ繧ｰ繧ｫ繝ｼ繧偵ｈ繧雁ｿｫ驕ｩ縺ｫ縲る崕陬・き繧ｹ繧ｿ繝縲・,
-      description: "繝昴・繧ｿ繝悶Ν髮ｻ貅舌・襍ｰ陦悟・髮ｻ繧ｷ繧ｹ繝・Β繧・∬ｻ雁・縺ｸ縺ｮAC100V繧ｳ繝ｳ繧ｻ繝ｳ繝亥｢苓ｨｭ縺ｪ縺ｩ縲∵羅繧定ｱ翫°縺ｫ縺吶ｋ髮ｻ陬・き繧ｹ繧ｿ繝繧偵＃謠先｡医ゅし繝悶ヰ繝・ユ繝ｪ繝ｼ繧堤ｩ阪∪縺ｪ縺・焔霆ｽ縺ｪ繧ｷ繧ｹ繝・Β縺九ｉ譛ｬ譬ｼ逧・↑繧ゅ・縺ｾ縺ｧ蟇ｾ蠢懊＠縺ｾ縺吶・,
-      sampleDescription: "縲先命蟾･萓九題ｵｰ陦悟・髮ｻ繧ｷ繧ｹ繝・Β・夂ｧｻ蜍穂ｸｭ縺ｫ繝昴・繧ｿ繝悶Ν髮ｻ貅舌ｒ諤･騾溷・髮ｻ縲ら岼逧・慍縺ｫ逹縺・◆譎ゅ↓縺ｯ貅蜈・崕縺ｧ縲∝ｿｫ驕ｩ縺ｪ霆贋ｸｭ豕翫ｒ讌ｽ縺励ａ縺ｾ縺吶・,
+      title: "Campit (キャンピット)",
+      subtitle: "車中泊・キャンピングカーをより快適に。電装カスタム。",
+      description: "ポータブル電源の走行充電システムや、車内へのAC100Vコンセント増設など、旅を豊かにする電装カスタムをご提案。サブバッテリーを積まない手軽なシステムから本格的なものまで対応します。",
+      sampleDescription: "【施工例】走行充電システム：移動中にポータブル電源を急速充電。目的地に着いた時には満充電で、快適な車中泊を楽しめます。",
       benefits: [
-        "遘ｻ蜍穂ｸｭ縺ｫ繝昴・繧ｿ繝悶Ν髮ｻ貅舌ｒ蜉ｹ邇・ｈ縺丞・髮ｻ",
-        "邏疲ｭ｣鬚ｨ縺ｮ鄒弱＠縺・さ繝ｳ繧ｻ繝ｳ繝亥｢苓ｨｭ繝代ロ繝ｫ",
-        "螳牙・諤ｧ繧定・・縺励◆蟆ら畑蝗櫁ｷｯ縺ｨ繝偵Η繝ｼ繧ｺ險ｭ險・,
-        "霆贋ｸｭ豕翫〒縺ｮ髮ｻ蜉帑ｸ崎ｶｳ縺ｮ荳榊ｮ峨ｒ隗｣豸・
+        "移動中にポータブル電源を効率よく充電",
+        "純正風の美しいコンセント増設パネル",
+        "安全性を考慮した専用回路とヒューズ設計",
+        "車中泊での電力不足の不安を解消"
       ],
       image: assets.dashcamMenuImage,
       icon: Battery,
       color: "green",
       upgrades: [
-        { title: "螟夜Κ髮ｻ貅仙・蜉帙・繝ｼ繝・, price: "+ﾂ･33,000縲・, icon: Zap, description: "繧ｭ繝｣繝ｳ繝怜ｴ縺ｮ螟夜Κ髮ｻ貅舌°繧臥峩謗･霆雁・縺ｫ髮ｻ蜉帙ｒ蠑輔″霎ｼ繧√ｋ繧医≧縺ｫ縺励∪縺吶・ }
+        { title: "外部電源入力ポート", price: "+¥33,000〜", icon: Zap, description: "キャンプ場の外部電源から直接車内に電力を引き込めるようにします。" }
       ]
     }
   };
@@ -174,18 +174,18 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
   };
 
   const navLinks = [
-    { id: 'purpose-nav', label: '逶ｮ逧・挨繝翫ン' },
-    { id: 'plan-list', label: '繝励Λ繝ｳ荳隕ｧ' },
-    { id: 'installation', label: '繝励Ο縺ｮ譁ｽ蟾･謚陦・ },
-    { id: 'cta', label: '縺雁撫縺・粋繧上○' },
+    { id: 'purpose-nav', label: '目的別ナビ' },
+    { id: 'plan-list', label: 'プラン一覧' },
+    { id: 'installation', label: 'プロの施工技術' },
+    { id: 'cta', label: 'お問い合わせ' },
   ];
 
   const purposeNav = [
-    { id: 'dashcam', title: "莠区腐繝ｻ辣ｽ繧翫↓蛯吶∴縺溘＞", desc: "繝峨Λ繧､繝悶Ξ繧ｳ繝ｼ繝繝ｼ繝ｻ鬧占ｻ顔屮隕・, icon: Video, color: "blue" },
-    { id: 'digital_mirror', title: "蠕梧婿隕也阜繧定憶縺上＠縺溘＞", desc: "繝・ず繧ｿ繝ｫ繧､繝ｳ繝翫・繝溘Λ繝ｼ", icon: Monitor, color: "indigo" },
-    { id: 'radar', title: "螳牙・驕玖ｻ｢繧貞ｿ・′縺代◆縺・, desc: "繝ｬ繝ｼ繝繝ｼ謗｢遏･讖溘・繝ｬ繝ｼ繧ｶ繝ｼ蜿嶺ｿ｡讖・, icon: AlertTriangle, color: "orange" },
-    { id: 'safety_device', title: "繝舌せ縺ｮ螳牙・繧貞ｮ医ｊ縺溘＞", desc: "鄂ｮ縺榊悉繧企亟豁｢螳牙・陬・ｽｮ", icon: ShieldCheck, color: "red" },
-    { id: 'campit', title: "霆贋ｸｭ豕翫ｒ蠢ｫ驕ｩ縺ｫ縺励◆縺・, desc: "繧ｭ繝｣繝ｳ繝斐ャ繝医・髮ｻ陬・き繧ｹ繧ｿ繝", icon: Battery, color: "green" },
+    { id: 'dashcam', title: "事故・煽りに備えたい", desc: "ドライブレコーダー・駐車監視", icon: Video, color: "blue" },
+    { id: 'digital_mirror', title: "後方視界を良くしたい", desc: "デジタルインナーミラー", icon: Monitor, color: "indigo" },
+    { id: 'radar', title: "安全運転を心がけたい", desc: "レーダー探知機・レーザー受信機", icon: AlertTriangle, color: "orange" },
+    { id: 'safety_device', title: "バスの安全を守りたい", desc: "置き去り防止安全装置", icon: ShieldCheck, color: "red" },
+    { id: 'campit', title: "車中泊を快適にしたい", desc: "キャンピット・電装カスタム", icon: Battery, color: "green" },
   ];
 
   return (
@@ -208,7 +208,7 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
               <button
                 onClick={() => setSelectedItem(null)}
                 className="absolute top-6 right-6 w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-900 transition-all z-20"
-                aria-label="隧ｳ邏ｰ繧帝哩縺倥ｋ"
+                aria-label="詳細を閉じる"
               >
                 <X className="w-6 h-6" />
               </button>
@@ -218,7 +218,7 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
                   <SafeImage
                     src={selectedItem.image || "https://picsum.photos/seed/dashcam/1200/800"}
                     className="w-full h-full object-cover"
-                    alt={selectedItem.name + "縺ｮ繝峨Λ繧､繝悶Ξ繧ｳ繝ｼ繝繝ｼ"}
+                    alt={selectedItem.name + "のドライブレコーダー"}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
                   <div className="absolute bottom-8 left-8 right-8">
@@ -240,7 +240,7 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
                           Description
                         </h3>
                         <p className="text-gray-600 text-lg font-bold leading-relaxed whitespace-pre-wrap">
-                          {selectedItem.description || "隧ｳ邏ｰ縺ｪ隱ｬ譏弱・迴ｾ蝨ｨ貅門ｙ荳ｭ縺ｧ縺吶よ命蟾･蜀・ｮｹ繧・←蜷郁ｻ顔ｨｮ縺ｫ縺､縺・※縺ｯ縲√♀豌苓ｻｽ縺ｫ縺雁撫縺・粋繧上○縺上□縺輔＞縲・}
+                          {selectedItem.description || "詳細な説明は現在準備中です。施工内容や適合車種については、お気軽にお問い合わせください。"}
                         </p>
                       </div>
 
@@ -267,7 +267,7 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
                           <div className="text-4xl font-black text-blue-400 tracking-tighter">
                             {formatPrice(selectedItem.price)}
                           </div>
-                          <p className="text-[10px] text-gray-500 mt-2">窶ｻ蜿紋ｻ伜ｷ･雉・・繧ｷ繝ｧ繝ｼ繝医ヱ繝ｼ繝・ｾｼ縺ｿ</p>
+                          <p className="text-[10px] text-gray-500 mt-2">※取付工賃・ショートパーツ込み</p>
                         </div>
 
                         <div className="space-y-4">
@@ -278,7 +278,8 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
                             className="flex items-center justify-center gap-3 w-full bg-[#06C755] text-white py-4 rounded-xl font-black text-sm tracking-widest hover:scale-105 transition-all"
                           >
                             <MessageSquare className="w-5 h-5" />
-                            LINE縺ｧ逶ｸ隲・                          </a>
+                            LINEで相談
+                          </a>
                           <button
                             onClick={() => {
                               setSelectedItem(null);
@@ -287,7 +288,8 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
                             className="flex items-center justify-center gap-3 w-full bg-blue-600 text-white py-4 rounded-xl font-black text-sm tracking-widest hover:scale-105 transition-all"
                           >
                             <Calendar className="w-5 h-5" />
-                            譚･蠎嶺ｺ育ｴ・                          </button>
+                            来店予約
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -318,12 +320,12 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
                       <button
                         onClick={() => setViewingCategoryDetail(null)}
                         className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors font-bold group"
-                        aria-label="繝｡繝九Η繝ｼ縺ｫ謌ｻ繧・
+                        aria-label="メニューに戻る"
                       >
                         <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
                         <span className="text-sm">BACK TO MENU</span>
                       </button>
-                      <h2 className="font-black text-xl tracking-tighter">繧ｫ繝・ざ繝ｪ繝ｼ隗｣隱ｬ</h2>
+                      <h2 className="font-black text-xl tracking-tighter">カテゴリー解説</h2>
                       <div className="w-24"></div>
                     </div>
                   </div>
@@ -345,7 +347,7 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
                       <div className="mb-16">
                         <h3 className="text-2xl font-black mb-6 text-gray-900 flex items-center gap-3">
                           <div className={`w-2 h-8 rounded-full ${colorClasses[detail.color].split(' ')[0]}`}></div>
-                          隗｣隱ｬ
+                          解説
                         </h3>
                         <p className="text-gray-600 text-lg font-medium leading-relaxed mb-12">{detail.description}</p>
                         <div className={`p-8 rounded-[2.5rem] ${colorClasses[detail.color].split(' ')[1].replace('text-', 'bg-').replace('600', '50')} border border-current/10`}>
@@ -357,7 +359,7 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
                       <div>
                         <h3 className="text-2xl font-black mb-8 text-gray-900 flex items-center gap-3">
                           <div className={`w-2 h-8 rounded-full ${colorClasses[detail.color].split(' ')[0]}`}></div>
-                          蟆主・縺ｮ繝｡繝ｪ繝・ヨ
+                          導入のメリット
                         </h3>
                         <div className="grid gap-6">
                           {detail.benefits.map((benefit: string, i: number) => (
@@ -375,7 +377,7 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
                         <div className="mt-20 pt-20 border-t border-gray-100">
                           <h3 className="text-2xl font-black mb-8 text-gray-900 flex items-center gap-3">
                             <div className={`w-2 h-8 rounded-full ${colorClasses[detail.color].split(' ')[0]}`}></div>
-                            縺輔ｉ縺ｫ蠢ｫ驕ｩ縺ｫ縺吶ｋ繧ｪ繝励す繝ｧ繝ｳ
+                            さらに快適にするオプション
                           </h3>
                           <div className="grid md:grid-cols-2 gap-6">
                             {detail.upgrades.map((upgrade: any, i: number) => (
@@ -407,10 +409,11 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
                         }}
                         className="flex-grow bg-gray-900 text-white py-6 rounded-[2rem] font-black text-lg tracking-widest hover:bg-blue-600 transition-all shadow-xl shadow-blue-200"
                       >
-                        繝励Λ繝ｳ荳隕ｧ繧定ｦ九ｋ
+                        プラン一覧を見る
                       </button>
                       <button onClick={() => setViewingCategoryDetail(null)} className="flex-grow bg-white text-gray-900 py-6 rounded-[2rem] font-black text-lg tracking-widest border border-gray-200 hover:bg-gray-50 transition-all">
-                        繝｡繝九Η繝ｼ縺ｫ謌ｻ繧・                      </button>
+                        メニューに戻る
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -434,12 +437,12 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
                       <button
                         onClick={() => { setViewingFullList(null); window.scrollTo(0, 0); }}
                         className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors font-bold group"
-                        aria-label="繝｡繝九Η繝ｼ縺ｫ謌ｻ繧・
+                        aria-label="メニューに戻る"
                       >
                         <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
                         <span className="text-sm">BACK TO MENU</span>
                       </button>
-                      <h2 className="font-black text-xl tracking-tighter">{currentCategory?.category} 荳隕ｧ</h2>
+                      <h2 className="font-black text-xl tracking-tighter">{currentCategory?.category} 一覧</h2>
                       <div className="w-24"></div>
                     </div>
                   </div>
@@ -560,7 +563,7 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
                   <button
                     onClick={onBack}
                     className="w-12 h-12 flex items-center justify-center text-gray-600 hover:text-blue-600 transition-colors font-bold group shrink-0"
-                    aria-label="繝医ャ繝励↓謌ｻ繧・
+                    aria-label="トップに戻る"
                   >
                     <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
                   </button>
@@ -575,24 +578,24 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center w-12 h-12 md:w-auto md:px-5 md:py-2.5 bg-[#06C755] text-white rounded-xl font-black transition-all hover:bg-[#05b34c] shadow-sm shrink-0"
-                    aria-label="LINE縺ｧ逶ｸ隲・☆繧・
+                    aria-label="LINEで相談する"
                   >
                     <MessageSquare className="w-5 h-5 md:mr-2" />
-                    <span className="hidden md:inline text-[10px]">LINE逶ｸ隲・/span>
+                    <span className="hidden md:inline text-[10px]">LINE相談</span>
                   </a>
                   <button
                     onClick={() => scrollToSection('cta')}
                     className="flex items-center justify-center w-12 h-12 md:w-auto md:px-5 md:py-2.5 bg-blue-600 text-white rounded-xl font-black transition-all hover:bg-blue-700 shadow-sm shrink-0"
-                    aria-label="譚･蠎嶺ｺ育ｴ・
+                    aria-label="来店予約"
                   >
                     <Calendar className="w-5 h-5 md:mr-2" />
-                    <span className="hidden md:inline text-[10px]">譚･蠎嶺ｺ育ｴ・/span>
+                    <span className="hidden md:inline text-[10px]">来店予約</span>
                   </button>
                   <div className="relative shrink-0">
                     <button
                       onClick={() => setIsMenuOpen(!isMenuOpen)}
                       className="w-12 h-12 flex items-center justify-center hover:bg-gray-100 rounded-xl transition-colors"
-                      aria-label={isMenuOpen ? "繝｡繝九Η繝ｼ繧帝哩縺倥ｋ" : "繝｡繝九Η繝ｼ繧帝幕縺・}
+                      aria-label={isMenuOpen ? "メニューを閉じる" : "メニューを開く"}
                     >
                       {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                     </button>
@@ -624,7 +627,7 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
                 <SafeImage
                   src={assets.dashcamMenuImage}
                   className="w-full h-full object-cover"
-                  alt="鬮俶ｧ閭ｽ繝峨Λ繧､繝悶Ξ繧ｳ繝ｼ繝繝ｼ繝ｻ繝・ず繧ｿ繝ｫ繝溘Λ繝ｼ縺ｮ譁ｽ蟾･繧､繝｡繝ｼ繧ｸ"
+                  alt="高性能ドライブレコーダー・デジタルミラーの施工イメージ"
                   loading="eager"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-transparent to-gray-900"></div>
@@ -638,7 +641,8 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
                     DRIVE WITH<br /><span className="text-blue-500">CONFIDENCE.</span>
                   </h1>
                   <p className="text-lg md:text-xl text-gray-300 font-bold max-w-2xl mx-auto leading-relaxed">
-                    莠区腐縺ｮ險倬鹸縺九ｉ辣ｽ繧企°霆｢蟇ｾ遲悶・ｧ占ｻ贋ｸｭ縺ｮ逶｣隕悶∪縺ｧ縲よ怙譁ｰ縺ｮ繝・け繝弱Ο繧ｸ繝ｼ縺ｧ縲√≠縺ｪ縺溘・繝峨Λ繧､繝悶ｒ繧医ｊ螳牙・縺ｧ蠢ｫ驕ｩ縺ｪ繧ゅ・縺ｫ螟峨∴縺ｾ縺吶・                  </p>
+                    事故の記録から煽り運転対策、駐車中の監視まで。最新のテクノロジーで、あなたのドライブをより安全で快適なものに変えます。
+                  </p>
                 </motion.div>
               </div>
             </section>
@@ -648,7 +652,7 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
               <div className="max-w-7xl mx-auto px-4">
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md:text-5xl font-black tracking-tighter mb-4">WHAT IS YOUR PURPOSE?</h2>
-                  <p className="text-gray-500 font-bold uppercase tracking-widest text-xs">逶ｮ逧・°繧画爾縺・/p>
+                  <p className="text-gray-500 font-bold uppercase tracking-widest text-xs">目的から探す</p>
                 </div>
                 <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6">
                   {purposeNav.map((item, i) => (
@@ -680,25 +684,29 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
                   <div className="relative z-10 max-w-2xl">
                     <span className="text-blue-400 font-black text-xs tracking-widest uppercase mb-4 block">Professional Installation</span>
                     <h2 className="text-3xl md:text-5xl font-black text-white mb-6 tracking-tighter">
-                      蟆る摩蠎励□縺九ｉ縺ｧ縺阪ｋ縲・br />
-                      <span className="text-blue-500">縲碁國縺吶阪→縲悟ｮ医ｋ縲・/span>縺ｮ謚陦薙・                    </h2>
+                      専門店だからできる、<br />
+                      <span className="text-blue-500">「隠す」と「守る」</span>の技術。
+                    </h2>
                     <p className="text-gray-300 font-bold leading-relaxed mb-8">
-                      繝峨Λ繝ｬ繧ｳ繧・Ξ繝ｼ繝繝ｼ縺ｮ蜿悶ｊ莉倥￠縺ｧ譛繧る㍾隕√↑縺ｮ縺ｯ縲・・邱壹・蜃ｦ逅・→髮ｻ貅舌・蜿悶ｊ譁ｹ縺ｧ縺吶・NG縺ｧ縺ｯ縲∝・陬・ｒ蛯ｷ縺､縺代★縲・・邱壹ｒ荳蛻・ｦ九○縺ｪ縺・ｾ弱＠縺・う繝ｳ繧ｹ繝医・繝ｫ繧貞ｾｹ蠎輔ゅ∪縺溘∬ｻ贋ｸ｡縺ｮ繧ｳ繝ｳ繝斐Η繝ｼ繧ｿ繝ｼ縺ｫ謔ｪ蠖ｱ髻ｿ繧剃ｸ弱∴縺ｪ縺・｢ｺ螳溘↑髮ｻ貅千｢ｺ菫昴ｒ陦後＞縲・聞譛滄俣螳牙ｿ・＠縺ｦ縺比ｽｿ逕ｨ縺・◆縺縺代ｋ迺ｰ蠅・ｒ謨ｴ縺医∪縺吶・                    </p>
+                      ドラレコやレーダーの取り付けで最も重要なのは、配線の処理と電源の取り方です。ANGでは、内装を傷つけず、配線を一切見せない美しいインストールを徹底。また、車両のコンピューターに悪影響を与えない確実な電源確保を行い、長期間安心してご使用いただける環境を整えます。
+                    </p>
                     <div className="grid grid-cols-2 gap-6">
                       <div className="flex items-center gap-3 text-white font-bold">
                         <CheckCircle2 className="w-5 h-5 text-blue-500" />
-                        螳悟・髫阡ｽ驟咲ｷ・                      </div>
-                      <div className="flex items-center gap-3 text-white font-bold">
-                        <CheckCircle2 className="w-5 h-5 text-blue-500" />
-                        繝弱う繧ｺ蟇ｾ遲匁命蟾･
+                        完全隠蔽配線
                       </div>
                       <div className="flex items-center gap-3 text-white font-bold">
                         <CheckCircle2 className="w-5 h-5 text-blue-500" />
-                        霆贋ｸ｡險ｺ譁ｭ讖溘メ繧ｧ繝・け
+                        ノイズ対策施工
                       </div>
                       <div className="flex items-center gap-3 text-white font-bold">
                         <CheckCircle2 className="w-5 h-5 text-blue-500" />
-                        繝舌ャ繝・Μ繝ｼ邂｡逅・ｾｹ蠎・                      </div>
+                        車両診断機チェック
+                      </div>
+                      <div className="flex items-center gap-3 text-white font-bold">
+                        <CheckCircle2 className="w-5 h-5 text-blue-500" />
+                        バッテリー管理徹底
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -710,7 +718,7 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
               <div className="max-w-7xl mx-auto px-4">
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md:text-5xl font-black tracking-tighter mb-4">PRODUCT LINEUP</h2>
-                  <p className="text-gray-400 font-bold uppercase tracking-widest text-xs">繝励Λ繝ｳ荳隕ｧ</p>
+                  <p className="text-gray-400 font-bold uppercase tracking-widest text-xs">プラン一覧</p>
                 </div>
 
                 <div className="space-y-4 md:space-y-8">
@@ -743,7 +751,7 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
                             onClick={(e) => { e.stopPropagation(); setViewingFullList(category.id); window.scrollTo(0, 0); }}
                             className="hidden md:flex items-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-2xl font-black text-xs tracking-widest hover:bg-blue-600 transition-all shadow-lg"
                           >
-                            荳隕ｧ繧定ｦ九ｋ
+                            一覧を見る
                             <ChevronRight className="w-4 h-4" />
                           </button>
                           {isMobile && (
@@ -862,8 +870,8 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
                                 }}
                                 className="w-full flex items-center justify-center gap-3 bg-white border-2 border-blue-100 text-blue-600 py-4 md:py-6 rounded-2xl md:rounded-[2.5rem] font-black text-xs md:text-lg tracking-widest hover:bg-blue-50 hover:border-blue-200 transition-all shadow-sm group"
                               >
-                                <span className="hidden md:inline">{category.category}縺ｮ蜈ｨ繝励Λ繝ｳ繧偵メ繧ｧ繝・け縺吶ｋ</span>
-                                <span className="md:hidden">{category.category}縺ｮ蜈ｨ繝励Λ繝ｳ繧定ｦ九ｋ</span>
+                                <span className="hidden md:inline">{category.category}の全プランをチェックする</span>
+                                <span className="md:hidden">{category.category}の全プランを見る</span>
                                 <ChevronRight className="w-4 h-4 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" />
                               </button>
                             </div>
@@ -881,35 +889,36 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
               <div className="max-w-7xl mx-auto px-4">
                 <div className="text-center mb-16">
                   <span className="text-blue-500 font-bold tracking-widest uppercase text-sm mb-4 block">Professional Quality</span>
-                  <h2 className="text-4xl font-bold leading-tight">繝励Ο繝輔ぉ繝・す繝ｧ繝翫Ν縺ｪ譁ｽ蟾･菴灘宛</h2>
+                  <h2 className="text-4xl font-bold leading-tight">プロフェッショナルな施工体制</h2>
                   <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
-                    譛譁ｰ縺ｮ繝峨Λ繝ｬ繧ｳ繧・Ξ繝ｼ繝繝ｼ謗｢遏･讖溘ｒ縲・・邱壹ｒ髫縺励◆鄒弱＠縺・ｻ穂ｸ翫′繧翫〒蜿悶ｊ莉倥￠縲ゆｸ・′荳縺ｮ髫帙ｂ螳牙ｿ・・險ｭ蛯吶ｒ螳悟ｙ縺励※縺・∪縺吶・                  </p>
+                    最新のドラレコやレーダー探知機を、配線を隠した美しい仕上がりで取り付け。万が一の際も安心の設備を完備しています。
+                  </p>
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                   {[
                     {
                       icon: Award,
-                      title: "荵晏ｷ朦o.1縺ｮ譁ｽ蟾･螳溽ｸｾ",
-                      description: "繧ｻ繧ｭ繝･繝ｪ繝・ぅ騾｣蜍輔ラ繝ｩ繝ｬ繧ｳ縺ｮ譁ｽ蟾･螳溽ｸｾ縺ｯ荵晏ｷ槭ヨ繝・・繧ｯ繝ｩ繧ｹ縲り､・尅縺ｪ驟咲ｷ壹ｂ遒ｺ螳溘↓陦後＞縺ｾ縺吶・,
+                      title: "九州No.1の施工実績",
+                      description: "セキュリティ連動ドラレコの施工実績は九州トップクラス。複雑な配線も確実に行います。",
                       image: assets.kyushuNo1Image
                     },
                     {
                       icon: ShieldCheck,
-                      title: "SPS隱榊ｮ壼ｺ・(Grgo/Panthera)",
-                      description: "繝｡繝ｼ繧ｫ繝ｼ縺九ｉ鬮伜ｺｦ縺ｪ謚陦灘鴨繧定ｪ阪ａ繧峨ｌ縺溘後せ繝ｼ繝代・繝励Ο繧ｷ繝ｧ繝・・縲崎ｪ榊ｮ壼ｺ励ょｰる摩蠎励↑繧峨〒縺ｯ縺ｮ邊ｾ蟇・↑繧ｻ繝・ユ繧｣繝ｳ繧ｰ縺悟庄閭ｽ縺ｧ縺吶・,
+                      title: "SPS認定店 (Grgo/Panthera)",
+                      description: "メーカーから高度な技術力を認められた「スーパープロショップ」認定店。専門店ならではの精密なセッティングが可能です。",
                       image: assets.spsCertifiedImage
                     },
                     {
                       icon: Settings2,
-                      title: "Snap-on 險ｺ譁ｭ讖溷ｮ悟ｙ",
-                      description: "鬮俶ｧ閭ｽ縺ｪSnap-on險ｺ譁ｭ讖溘ｒ蟆主・縲よ命蟾･蠕後・繧ｨ繝ｩ繝ｼ繝√ぉ繝・け縺ｯ繧ゅ■繧阪ｓ縲∽ｸ・′荳縺ｮ霆贋ｸ｡繝医Λ繝悶Ν縺ｫ繧りｿ・溘↓蟇ｾ蠢懷庄閭ｽ縺ｧ縺吶・,
+                      title: "Snap-on 診断機完備",
+                      description: "高性能なSnap-on診断機を導入。施工後のエラーチェックはもちろん、万が一の車両トラブルにも迅速に対応可能です。",
                       image: assets.snaponImage
                     },
                     {
                       icon: Zap,
-                      title: "繝舌ャ繝・Μ繝ｼ蜈・崕蝎ｨ螳悟ｙ",
-                      description: "譁ｽ蟾･荳ｭ繧・聞譛滄舌°繧頑凾繧ゅヰ繝・ユ繝ｪ繝ｼ繧ｳ繝ｳ繝・ぅ繧ｷ繝ｧ繝ｳ繧呈怙驕ｩ縺ｫ邯ｭ謖√ょｮ牙ｿ・＠縺ｦ縺願ｻ翫ｒ縺企舌￠縺・◆縺縺代∪縺吶・,
+                      title: "バッテリー充電器完備",
+                      description: "施工中や長期預かり時もバッテリーコンディションを最適に維持。安心してお車をお預けいただけます。",
                       image: assets.batteryChargerImage
                     }
                   ].map((item, i) => (
@@ -945,15 +954,17 @@ export const DashcamMenuDetail: React.FC<DashcamMenuDetailProps> = ({ onBack }) 
               <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
                 <h2 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tighter">DRIVE SAFE, DRIVE SMART.</h2>
                 <p className="text-lg text-gray-400 font-bold mb-12 leading-relaxed">
-                  譛譁ｰ縺ｮ繝峨Λ繝ｬ繧ｳ繧・Ξ繝ｼ繝繝ｼ謗｢遏･讖溘↓縺､縺・※縲√・繝ｭ縺ｮ繧ｹ繧ｿ繝・ヵ縺御ｸ∝ｯｧ縺ｫ縺碑ｪｬ譏弱＞縺溘＠縺ｾ縺吶・br />
-                  驟咲ｷ壹ｒ髫縺励◆鄒弱＠縺・叙繧贋ｻ倥￠繧ゅ♀莉ｻ縺帙￥縺縺輔＞縲・                </p>
+                  最新のドラレコやレーダー探知機について、プロのスタッフが丁寧にご説明いたします。<br />
+                  配線を隠した美しい取り付けもお任せください。
+                </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
                   <a href="https://page.line.me/312qjhsq?openQrModal=true" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-4 bg-[#06C755] text-white px-10 py-6 rounded-[2rem] font-black text-lg tracking-widest hover:scale-105 transition-all shadow-xl shadow-green-500/20">
                     <MessageSquare className="w-6 h-6" />
-                    LINE縺ｧ辟｡譁咏嶌隲・                  </a>
+                    LINEで無料相談
+                  </a>
                   <button className="flex items-center justify-center gap-4 bg-blue-600 text-white px-10 py-6 rounded-[2rem] font-black text-lg tracking-widest hover:scale-105 transition-all shadow-xl shadow-blue-600/20">
                     <Calendar className="w-6 h-6" />
-                    譚･蠎嶺ｺ育ｴ・・隕狗ｩ阪ｊ
+                    来店予約・見積り
                   </button>
                 </div>
               </div>

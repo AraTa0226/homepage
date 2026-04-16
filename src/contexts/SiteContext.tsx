@@ -1,4 +1,4 @@
-﻿import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
+import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 import cmsData from '../data/cms.json';
 
 export interface Partner {
@@ -54,7 +54,7 @@ const initialBrandPartners: BrandPartner[] = [
     id: 'b1',
     name: "Yupiteru",
     category: "Security / Dashcam",
-    description: "Panthera繝ｻGrgo縺ｮ豁｣隕剰ｲｩ螢ｲ蠎励→縺励※縲・ｫ伜ｺｦ縺ｪ繧ｻ繧ｭ繝･繝ｪ繝・ぅ繧ｷ繧ｹ繝・Β繧呈署萓帙＠縺ｦ縺・∪縺吶・,
+    description: "Panthera・Grgoの正規販売店として、高度なセキュリティシステムを提供しています。",
     iconName: 'ShieldCheck',
     url: "https://www.yupiteru.co.jp/"
   },
@@ -62,7 +62,7 @@ const initialBrandPartners: BrandPartner[] = [
     id: 'b2',
     name: "Focal",
     category: "Car Audio",
-    description: "繝輔Λ繝ｳ繧ｹ縺ｮ蜷埼摩繝悶Λ繝ｳ繝峨らｹ顔ｴｰ縺ｧ陦ｨ迴ｾ蜉幄ｱ翫°縺ｪ繧ｵ繧ｦ繝ｳ繝峨ｒ霆雁・縺ｸ縲・,
+    description: "フランスの名門ブランド。繊細で表現力豊かなサウンドを車内へ。",
     iconName: 'Speaker',
     url: "https://www.focal-audio.jp/"
   },
@@ -70,7 +70,7 @@ const initialBrandPartners: BrandPartner[] = [
     id: 'b3',
     name: "Alpine",
     category: "Navigation / Audio",
-    description: "蜈磯ｲ縺ｮ繝・け繝弱Ο繧ｸ繝ｼ縺ｧ縲∝ｿｫ驕ｩ縺ｪ繧ｫ繝ｼ繝ｩ繧､繝輔ｒ繧ｵ繝昴・繝医☆繧句嵜蜀・ヨ繝・・繝悶Λ繝ｳ繝峨・,
+    description: "先進のテクノロジーで、快適なカーライフをサポートする国内トップブランド。",
     iconName: 'Video',
     url: "https://www.alpine.co.jp/"
   },
@@ -78,15 +78,15 @@ const initialBrandPartners: BrandPartner[] = [
     id: 'b4',
     name: "Bewith",
     category: "High-End Audio",
-    description: "螯･蜊斐・縺ｪ縺・浹雉ｪ繧定ｿｽ豎ゅ☆繧九∵律譛ｬ逋ｺ縺ｮ繝上う繧ｨ繝ｳ繝峨が繝ｼ繝・ぅ繧ｪ繝悶Λ繝ｳ繝峨・,
+    description: "妥協のない音質を追求する、日本発のハイエンドオーディオブランド。",
     iconName: 'Speaker',
     url: "https://www.bewith.jp/"
   },
   {
     id: 'b5',
-    name: "蜉阯､髮ｻ讖・,
+    name: "加藤電機",
     category: "Security",
-    description: "VIPER繝ｻHORNET縺ｪ縺ｩ縲∽ｸ也阜蝓ｺ貅悶・繧ｻ繧ｭ繝･繝ｪ繝・ぅ繧ｷ繧ｹ繝・Β繧貞ｱ暮幕縲・,
+    description: "VIPER・HORNETなど、世界基準のセキュリティシステムを展開。",
     iconName: 'ShieldCheck',
     url: "https://www.kato-denki.com/"
   },
@@ -94,7 +94,7 @@ const initialBrandPartners: BrandPartner[] = [
     id: 'b6',
     name: "Pioneer",
     category: "Carrozzeria",
-    description: "繧ｫ繝ｼ繝翫ン繧ｲ繝ｼ繧ｷ繝ｧ繝ｳ縺九ｉ繧ｪ繝ｼ繝・ぅ繧ｪ縺ｾ縺ｧ縲∵･ｭ逡後ｒ繝ｪ繝ｼ繝峨☆繧矩擠譁ｰ諤ｧ縲・,
+    description: "カーナビゲーションからオーディオまで、業界をリードする革新性。",
     iconName: 'Video',
     url: "https://jpn.pioneer/ja/carrozzeria/"
   }
@@ -103,66 +103,66 @@ const initialBrandPartners: BrandPartner[] = [
 const initialPartners: Partner[] = [
   {
     id: 'p1',
-    name: "繧ｪ繝ｼ繝・ぅ繧ｪ繝輔ぃ繧､繝ｫ",
-    location: "蜊・痩逵・,
+    name: "オーディオファイル",
+    location: "千葉県",
     url: "https://audiophile.co.jp/",
-    description: "繝上う繧ｨ繝ｳ繝峨が繝ｼ繝・ぅ繧ｪ縺九ｉ繧ｫ繧ｹ繧ｿ繝縺ｾ縺ｧ縲∫｢ｺ縺九↑謚陦薙〒逅・Φ縺ｮ繧ｵ繧ｦ繝ｳ繝峨ｒ螳溽樟縲・
+    description: "ハイエンドオーディオからカスタムまで、確かな技術で理想のサウンドを実現。"
   },
   {
     id: 'p2',
-    name: "蟆ｾ譫励ヵ繧｡繧ｯ繝医Μ繝ｼ",
-    location: "譚ｱ莠ｬ驛ｽ",
+    name: "尾林ファクトリー",
+    location: "東京都",
     url: "http://www.obayashi-f.jp/",
-    description: "迢ｬ蜑ｵ逧・↑繧ｫ繧ｹ繧ｿ繝繧ｪ繝ｼ繝・ぅ繧ｪ縺ｨ縲∝ｦ･蜊斐・縺ｪ縺・浹雉ｪ霑ｽ豎ゅ〒遏･繧峨ｌ繧句錐髢繧ｷ繝ｧ繝・・縲・
+    description: "独創的なカスタムオーディオと、妥協のない音質追求で知られる名門ショップ。"
   },
   {
     id: 'p3',
-    name: "繧ｭ繝・ぜ繧ｬ繝ｬ繝ｼ繧ｸ",
-    location: "諢帷衍逵・,
+    name: "キッズガレージ",
+    location: "愛知県",
     url: "https://www.kidsgarage.jp/",
-    description: "繧ｻ繧ｭ繝･繝ｪ繝・ぅ縺ｨ繧ｪ繝ｼ繝・ぅ繧ｪ縺ｮ荳｡遶九ゆｸｭ驛ｨ繧ｨ繝ｪ繧｢繧剃ｻ｣陦ｨ縺吶ｋ繝励Ο繧ｷ繝ｧ繝・・縲・
+    description: "セキュリティとオーディオの両立。中部エリアを代表するプロショップ。"
   },
   {
     id: 'p4',
-    name: "繧ｱ繝ｳ繝・ャ繧ｯ",
-    location: "菴占ｳ逵・,
+    name: "ケンテック",
+    location: "佐賀県",
     url: "http://www.03g.xyz/",
-    description: "荵晏ｷ槭お繝ｪ繧｢縺ｮ謚陦捺侠轤ｹ縲ゅ″繧∫ｴｰ繧・°縺ｪ譁ｽ蟾･ and 繧｢繝輔ち繝ｼ繧ｵ繝昴・繝医′鬲・鴨縲・
+    description: "九州エリアの技術拠点。きめ細やかな施工 and アフターサポートが魅力。"
   },
   {
     id: 'p5',
-    name: "繧ｵ繧ｦ繝ｳ繝峨・繝ｭ繧ｰ繝ｬ繧ｹ",
-    location: "蜊・痩逵・,
+    name: "サウンドプログレス",
+    location: "千葉県",
     url: "https://sound-progress.jp/",
-    description: "髻ｳ縺ｮ繝励Ο繝輔ぉ繝・す繝ｧ繝翫Ν縺後√♀螳｢讒倅ｸ莠ｺ縺ｲ縺ｨ繧翫↓譛驕ｩ縺ｪ繧ｷ繧ｹ繝・Β繧呈署譯医・
+    description: "音のプロフェッショナルが、お客様一人ひとりに最適なシステムを提案。"
   },
   {
     id: 'p6',
-    name: "繧ｷ繝溘ぜ繝輔ぃ繧ｯ繝医Μ繝ｼ",
-    location: "髟ｷ驥守恁",
+    name: "シミズファクトリー",
+    location: "長野県",
     url: "http://www.shimizu-factory.com/",
-    description: "菫｡蟾槭・繧ｫ繝ｼ繧ｪ繝ｼ繝・ぅ繧ｪ繧ｷ繝ｼ繝ｳ繧偵Μ繝ｼ繝峨るｫ倥＞謚陦灘鴨縺ｨ菫｡鬆ｼ縺ｮ螳溽ｸｾ縲・
+    description: "信州のカーオーディオシーンをリード。高い技術力と信頼の実績。"
   },
   {
     id: 'p7',
-    name: "繧ｸ繝繝ｻ繧､繝ｳ繝繧ｹ繝医Μ繝ｼ",
-    location: "譬・惠逵・,
+    name: "ジム・インダストリー",
+    location: "栃木県",
     url: "http://www.gymindustry.co.jp/",
-    description: "蛹鈴未譚ｱ繧ｨ繝ｪ繧｢繧偵き繝舌・縲る浹雉ｪ蜷台ｸ翫°繧峨ラ繝ｬ繧ｹ繧｢繝・・縺ｾ縺ｧ蟷・ｺ・￥蟇ｾ蠢懊・
+    description: "北関東エリアをカバー。音質向上からドレスアップまで幅広く対応。"
   },
   {
     id: 'p8',
-    name: "繝薙け繝医Μ繝ｼ",
-    location: "諢帷衍逵・,
+    name: "ビクトリー",
+    location: "愛知県",
     url: "http://www.victory1987.co.jp/",
-    description: "繧ｫ繝ｼ繧ｪ繝ｼ繝・ぅ繧ｪ縺ｨ繧ｻ繧ｭ繝･繝ｪ繝・ぅ縺ｮ蟆る摩蠎励よ・霆翫↓譛鬮倥・萓｡蛟､繧偵・繝ｩ繧ｹ縲・
+    description: "カーオーディオとセキュリティの専門店。愛車に最高の価値をプラス。"
   },
   {
     id: 'p9',
     name: "Sound ANG",
-    location: "遖丞ｲ｡逵・,
+    location: "福岡県",
     url: "https://www.soundang.com/",
-    description: "蠖薙す繝ｧ繝・・縲ゆｹ晏ｷ槫ｱ域欠縺ｮ謚陦灘鴨縺ｧ縲√♀螳｢讒倥・逅・Φ繧貞ｽ｢縺ｫ縺励∪縺吶・
+    description: "当ショップ。九州屈指の技術力で、お客様の理想を形にします。"
   }
 ];
 
