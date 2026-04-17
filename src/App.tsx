@@ -774,50 +774,8 @@ function MainView({
                 </button>
               </div>
 
-              <div className="flex-grow overflow-y-auto p-4">
-                <div className="grid grid-cols-2 gap-3 mb-6">
-                  <button
-                    onClick={() => { setIsMobileMenuOpen(false); navigate('/audio'); }}
-                    className="relative aspect-square rounded-2xl overflow-hidden group/m"
-                  >
-                    <SafeImage src={assets.audioMenuImage} className="absolute inset-0 w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white p-2">
-                      <Speaker className="w-6 h-6 mb-1" />
-                      <span className="text-[10px] font-black uppercase text-center">Audio</span>
-                    </div>
-                  </button>
-                  <button
-                    onClick={() => { setIsMobileMenuOpen(false); navigate('/security'); }}
-                    className="relative aspect-square rounded-2xl overflow-hidden"
-                  >
-                    <SafeImage src={assets.securityMenuImage} className="absolute inset-0 w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-blue-900/40 flex flex-col items-center justify-center text-white p-2">
-                      <ShieldCheck className="w-6 h-6 mb-1" />
-                      <span className="text-[10px] font-black uppercase text-center">Security</span>
-                    </div>
-                  </button>
-                  <button
-                    onClick={() => { setIsMobileMenuOpen(false); navigate('/dashcam'); }}
-                    className="relative aspect-square rounded-2xl overflow-hidden"
-                  >
-                    <SafeImage src={assets.dashcamMenuImage} className="absolute inset-0 w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-gray-900/40 flex flex-col items-center justify-center text-white p-2">
-                      <Package className="w-6 h-6 mb-1" />
-                      <span className="text-[10px] font-black uppercase text-center">Gadgets</span>
-                    </div>
-                  </button>
-                  <button
-                    onClick={() => { setIsMobileMenuOpen(false); navigate('/partners'); }}
-                    className="relative aspect-square rounded-2xl overflow-hidden border border-gray-100"
-                  >
-                    <div className="absolute inset-0 bg-gray-50 flex flex-col items-center justify-center text-gray-900 p-2">
-                      <LayoutGrid className="w-6 h-6 mb-1 text-blue-500" />
-                      <span className="text-[10px] font-black uppercase text-center">Partners</span>
-                    </div>
-                  </button>
-                </div>
-
-                <nav className="flex flex-col gap-2 border-t border-gray-50 pt-4">
+              <div className="flex-grow overflow-y-auto p-6">
+                <nav className="flex flex-col gap-3">
                   {[
                     { href: "#", en: "HOME", jp: "ホーム" },
                     { href: "#blog", en: "BLOG", jp: "ブログ" },
