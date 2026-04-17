@@ -624,16 +624,23 @@ function MainView({
 
           {/* Center: Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-8 text-sm font-bold uppercase tracking-widest shrink-0">
-            <a href="#" className="hover:text-blue-500 transition-colors">ホーム</a>
+            <a href="#" className="flex flex-col items-center group/item transition-colors">
+              <span className="text-sm font-black tracking-widest group-hover/item:text-blue-500">HOME</span>
+              <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">ホーム</span>
+            </a>
             <div
               className="relative py-8 group/nav"
               onMouseEnter={() => setShowMegaMenu(true)}
               onMouseLeave={() => setShowMegaMenu(false)}
             >
               <button
-                className={`hover:text-blue-500 transition-colors flex items-center gap-1 group-hover/nav:text-blue-500 ${showMegaMenu ? 'text-blue-500 font-black' : ''}`}
+                className={`flex flex-col items-center transition-colors group-hover/nav:text-blue-500 ${showMegaMenu ? 'text-blue-500' : ''}`}
               >
-                プラン一覧 <ChevronRight className={`w-4 h-4 transition-transform ${showMegaMenu ? 'rotate-90' : ''}`} />
+                <div className="flex items-center gap-1">
+                  <span className={`text-sm font-black tracking-widest ${showMegaMenu ? 'font-black' : ''}`}>LINEUP</span>
+                  <ChevronRight className={`w-3 h-3 transition-transform ${showMegaMenu ? 'rotate-90' : ''}`} />
+                </div>
+                <span className="text-[8px] font-bold opacity-40 group-hover/nav:opacity-100 transition-opacity">プラン一覧</span>
               </button>
 
               {/* Mega Menu Overlay */}
@@ -782,11 +789,26 @@ function MainView({
                 )}
               </AnimatePresence>
             </div>
-            <a href="#options" className="hover:text-blue-500 transition-colors">試聴スピーカー</a>
-            <a href="#blog" className="hover:text-blue-500 transition-colors">ブログ</a>
-            <a href="#partners" className="hover:text-blue-500 transition-colors">取扱ブランド</a>
-            <a href="#info" className="hover:text-blue-500 transition-colors">店舗案内</a>
-            <a href="#info" className="hover:text-blue-500 transition-colors">営業日</a>
+            <a href="#options" className="flex flex-col items-center group/item transition-colors">
+              <span className="text-sm font-black tracking-widest group-hover/item:text-blue-500">AUDITION</span>
+              <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">試聴スピーカー</span>
+            </a>
+            <a href="#blog" className="flex flex-col items-center group/item transition-colors">
+              <span className="text-sm font-black tracking-widest group-hover/item:text-blue-500">BLOG</span>
+              <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">ブログ</span>
+            </a>
+            <a href="#partners" className="flex flex-col items-center group/item transition-colors">
+              <span className="text-sm font-black tracking-widest group-hover/item:text-blue-500">BRANDS</span>
+              <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">取扱ブランド</span>
+            </a>
+            <a href="#access" className="flex flex-col items-center group/item transition-colors">
+              <span className="text-sm font-black tracking-widest group-hover/item:text-blue-500">ACCESS</span>
+              <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">店舗案内</span>
+            </a>
+            <a href="#info" className="flex flex-col items-center group/item transition-colors">
+              <span className="text-sm font-black tracking-widest group-hover/item:text-blue-500">SCHEDULE</span>
+              <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">営業日</span>
+            </a>
           </nav>
 
           {/* Right: Actions */}
@@ -942,22 +964,29 @@ function MainView({
 
                 <nav className="flex flex-col gap-1 border-t border-gray-50 pt-4">
                   {[
-                    { href: "#", label: "ホーム" },
-                    { href: "#services", label: "プラン一覧" },
-                    { href: "#options", label: "試聴スピーカー" },
-                    { href: "#blog", label: "ブログ" },
-                    { href: "#partners", label: "取扱ブランド" },
-                    { href: "#info", label: "店舗案内" },
-                    { href: "#info", label: "営業日" },
+                    { href: "#", en: "HOME", jp: "ホーム" },
+                    { href: "#services", en: "LINEUP", jp: "プラン一覧" },
+                    { href: "#options", en: "AUDITION", jp: "試聴スピーカー" },
+                    { href: "#blog", en: "BLOG", jp: "ブログ" },
+                    { href: "#partners", en: "BRANDS", jp: "取扱ブランド" },
+                    { href: "#access", en: "ACCESS", jp: "店舗案内" },
+                    { href: "#info", en: "SCHEDULE", jp: "営業日" },
                   ].map((link, i) => (
                     <a
                       key={i}
                       href={link.href}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className="px-4 py-3 rounded-xl text-xs font-black text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all flex items-center justify-between group"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const element = document.querySelector(link.href);
+                        if (element) {
+                          element.scrollIntoView({ behavior: 'smooth' });
+                          setIsMobileMenuOpen(false);
+                        }
+                      }}
+                      className="group p-4 flex flex-col justify-center rounded-2xl bg-white border border-gray-100 shadow-sm active:bg-gray-50 transition-all"
                     >
-                      {link.label}
-                      <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <span className="text-sm font-black tracking-[0.2em] group-active:text-blue-600">{link.en}</span>
+                      <span className="text-[10px] font-bold text-gray-400 mt-1">{link.jp}</span>
                     </a>
                   ))}
                 </nav>
@@ -1415,7 +1444,7 @@ function MainView({
       {/* Footer */}
       <footer id="contact" className="bg-gray-900 text-gray-400 pt-20 pb-10">
         <div className="max-w-7xl mx-auto px-4 mb-16">
-          <div className="grid lg:grid-cols-2 gap-12 items-start bg-white/5 p-8 md:p-12 rounded-[3rem] border border-white/10">
+          <div id="access" className="grid lg:grid-cols-2 gap-12 items-start bg-white/5 p-8 md:p-12 rounded-[3rem] border border-white/10">
             <div className="space-y-6">
               <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl border border-white/10">
                 <SafeImage
