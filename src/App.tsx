@@ -348,8 +348,8 @@ const VaultGrid = ({ categories, onCategoryClick, theme, handleMenuClick }: any)
 
           {/* Theme Overlay */}
           <div className={`absolute inset-0 transition-opacity duration-500 ${theme === 'dark'
-            ? 'bg-gradient-to-t from-black/95 via-black/40 to-transparent group-hover:bg-black/60'
-            : 'bg-gradient-to-t from-white/95 via-white/40 to-transparent group-hover:bg-white/60'
+            ? 'bg-gradient-to-t from-black/95 via-black/60 md:via-black/40 to-transparent group-hover:bg-black/60'
+            : 'bg-gradient-to-t from-white/95 via-white/60 md:via-white/40 to-transparent group-hover:bg-white/60'
             }`} />
 
           {/* Content HUD */}
