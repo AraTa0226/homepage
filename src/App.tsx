@@ -683,8 +683,7 @@ function MainView({
                 }`}>
                 <span className="font-black text-xl italic tracking-tighter">S</span>
               </div>
-              <div className="flex flex-col -gap-1">
-                <span className={`text-[10px] font-black tracking-[0.3em] uppercase opacity-50 ${theme === 'dark' ? 'text-emerald-400' : 'text-gray-900'}`}>The Vault of</span>
+              <div className="flex flex-col">
                 <span className={`text-xl md:text-2xl font-black tracking-tighter leading-none ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>Sound ANG</span>
               </div>
             </div>
