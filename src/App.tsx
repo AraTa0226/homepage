@@ -36,7 +36,7 @@ import {
   Search
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, lazy, Suspense } from 'react';
 import {
   BrowserRouter,
   Routes,
@@ -47,9 +47,9 @@ import {
   Navigate
 } from 'react-router-dom';
 import { BusinessCalendar } from './components/Calendar/BusinessCalendar';
-import { AudioMenuDetail } from './components/Menu/AudioMenuDetail';
-import { SecurityMenuDetail } from './components/Menu/SecurityMenuDetail';
-import { DashcamMenuDetail } from './components/Menu/DashcamMenuDetail';
+const AudioMenuDetail = lazy(() => import('./components/Menu/AudioMenuDetail').then(m => ({ default: m.AudioMenuDetail })));
+const SecurityMenuDetail = lazy(() => import('./components/Menu/SecurityMenuDetail').then(m => ({ default: m.SecurityMenuDetail })));
+const DashcamMenuDetail = lazy(() => import('./components/Menu/DashcamMenuDetail').then(m => ({ default: m.DashcamMenuDetail })));
 import { PriceProvider, usePrices } from './contexts/PriceContext';
 import { CalendarProvider } from './contexts/CalendarContext';
 import { SiteProvider, useSite } from './contexts/SiteContext';
@@ -294,104 +294,77 @@ function AppContent() {
   }, []);
 
   return (
-    <Routes>
-      <Route path="/audio" element={<AudioMenuDetail onBack={() => navigate('/')} />} />
-      <Route path="/audio/:planSlug" element={<AudioMenuDetail onBack={() => navigate('/')} />} />
-      <Route path="/security" element={
-        <SecurityMenuDetail
-          onBack={() => navigate('/')}
-          onNavigateToDashcam={() => navigate('/dashcam')}
-        />
-      } />
-      <Route path="/security/:planSlug" element={
-        <SecurityMenuDetail
-          onBack={() => navigate('/')}
-          onNavigateToDashcam={() => navigate('/dashcam')}
-        />
-      } />
-      <Route path="/dashcam" element={<DashcamMenuDetail onBack={() => navigate('/')} />} />
-      <Route path="/partners" element={<PartnersListPage onBack={() => navigate('/')} />} />
-      <Route path="/reservation" element={<ReservationFormPage onBack={() => navigate('/')} />} />
+    <AppContentWrapper>
 
-      {/* Legacy Redirects (soundang.com & sec-ang.com) */}
-      <Route path="/index.html" element={<Navigate to="/" replace />} />
-      <Route path="/shop.html" element={<Navigate to="/audio" replace />} />
-      <Route path="/link.html" element={<Navigate to="/partners" replace />} />
-      <Route path="/contact.html" element={<Navigate to="/" replace />} />
-      <Route path="/contactus.html" element={<Navigate to="/" replace />} />
-      <Route path="/reservation.html" element={<Navigate to="/audio" replace />} />
-
-      {/* Audio Specific Legacy */}
-      <Route path="/bmwspeaker.html" element={<Navigate to="/audio/bmwspeaker" replace />} />
-      <Route path="/benzspeaker.html" element={<Navigate to="/audio/benzspeaker" replace />} />
-      <Route path="/basiccoax.html" element={<Navigate to="/audio/basiccoax" replace />} />
-      <Route path="/basicsep.html" element={<Navigate to="/audio/basicsep" replace />} />
-      <Route path="/sp-standard.html" element={<Navigate to="/audio/sp-standard" replace />} />
-      <Route path="/sp-premium.html" element={<Navigate to="/audio/sp-premium" replace />} />
-      <Route path="/ampdsp.html" element={<Navigate to="/audio/ampdsp" replace />} />
-      <Route path="/door-turning.html" element={<Navigate to="/audio/door-turning" replace />} />
-
-      {/* Security Specific Legacy */}
-      <Route path="/security.html" element={<Navigate to="/security" replace />} />
-      <Route path="/rader-drrec.html" element={<Navigate to="/dashcam" replace />} />
-      <Route path="/sec-sample.html" element={<Navigate to="/security" replace />} />
-      <Route path="/civicfl5-security.html" element={<Navigate to="/security" replace />} />
-      <Route path="/harrier-security.html" element={<Navigate to="/security" replace />} />
-      <Route path="/prius-security.html" element={<Navigate to="/security" replace />} />
-      <Route path="/arver-security.html" element={<Navigate to="/security" replace />} />
-      <Route path="/hiace-security.html" element={<Navigate to="/security" replace />} />
-      <Route path="/keicar-security.html" element={<Navigate to="/security" replace />} />
-      <Route path="/landcruiser300-security.html" element={<Navigate to="/security" replace />} />
-      <Route path="/landcruiser70-security.html" element={<Navigate to="/security" replace />} />
-      <Route path="/landcruiser250-security.html" element={<Navigate to="/security" replace />} />
-      <Route path="/LX600-security.html" element={<Navigate to="/security" replace />} />
-      <Route path="/RX-security.html" element={<Navigate to="/security" replace />} />
-      <Route path="/NX-security.html" element={<Navigate to="/security" replace />} />
-      <Route path="/jimny-security.html" element={<Navigate to="/security" replace />} />
-
-      <Route path="/staff" element={
-        showStaffDashboard ? (
-          <StaffDashboard onBack={() => {
-            setShowStaffDashboard(false);
-            navigate('/');
-          }} />
-        ) : (
-          <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-            <button
-              onClick={() => setShowPasswordModal(true)}
-              className="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold"
-            >
-              管理者ログインが必要です。クリックして認証
-            </button>
-          </div>
-        )
-      } />
-      <Route path="/" element={
-        <MainView
-          assets={assets}
-          emergencyAnnouncement={emergencyAnnouncement}
-          posts={posts}
-          loading={loading}
-          showPasswordModal={showPasswordModal}
-          setShowPasswordModal={setShowPasswordModal}
-          password={password}
-          setPassword={setPassword}
-          passwordError={passwordError}
-          setPasswordError={setPasswordError}
-          handlePasswordSubmit={handlePasswordSubmit}
-          facilities={facilities}
-          isMobileMenuOpen={isMobileMenuOpen}
-          setIsMobileMenuOpen={setIsMobileMenuOpen}
-          handleLogoClick={handleLogoClick}
-          navigate={navigate}
-          showMegaMenu={showMegaMenu}
-          setShowMegaMenu={setShowMegaMenu}
-          handleMenuClick={handleMenuClick}
-        />
-      } />
-    </Routes>
+      <Suspense fallback={
+        <div className="fixed inset-0 bg-white z-[9999] flex items-center justify-center">
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+            className="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full"
+          />
+        </div>
+      }>
+        <Routes>
+          <Route path="/staff" element={
+            showStaffDashboard ? (
+              <StaffDashboard onBack={() => {
+                setShowStaffDashboard(false);
+                navigate('/');
+              }} />
+            ) : (
+              <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+                <button
+                  onClick={() => setShowPasswordModal(true)}
+                  className="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold"
+                >
+                  管理者ログインが必要です。クリックして認証
+                </button>
+              </div>
+            )
+          } />
+          <Route path="/" element={
+            <MainView
+              assets={assets}
+              emergencyAnnouncement={emergencyAnnouncement}
+              posts={posts}
+              loading={loading}
+              showPasswordModal={showPasswordModal}
+              setShowPasswordModal={setShowPasswordModal}
+              password={password}
+              setPassword={setPassword}
+              passwordError={passwordError}
+              setPasswordError={setPasswordError}
+              handlePasswordSubmit={handlePasswordSubmit}
+              facilities={facilities}
+              isMobileMenuOpen={isMobileMenuOpen}
+              setIsMobileMenuOpen={setIsMobileMenuOpen}
+              handleLogoClick={handleLogoClick}
+              navigate={navigate}
+              showMegaMenu={showMegaMenu}
+              setShowMegaMenu={setShowMegaMenu}
+              handleMenuClick={handleMenuClick}
+            />
+          } />
+          <Route path="/audio" element={<AudioMenuDetail show={true} onClose={() => navigate('/')} />} />
+          <Route path="/security" element={<SecurityMenuDetail show={true} onClose={() => navigate('/')} />} />
+          <Route path="/dashcam" element={<DashcamMenuDetail show={true} onClose={() => navigate('/')} />} />
+          <Route path="/partners" element={<PartnersListPage />} />
+          <Route path="/reservation" element={<ReservationFormPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </Suspense>
+    </AppContentWrapper>
   );
 }
+
+const AppContentWrapper = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <div className="min-h-screen bg-white">
+      {children}
+    </div>
+  );
+};
 
 const VaultGrid = ({ categories, onCategoryClick, theme, handleMenuClick }: any) => {
   return (
