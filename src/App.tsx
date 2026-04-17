@@ -468,7 +468,7 @@ function MainView({
   const [showFullAuditionList, setShowFullAuditionList] = useState(false);
   const [selectedAuditionImage, setSelectedAuditionImage] = useState<string | null>(null);
   const [activeYoutubeId, setActiveYoutubeId] = useState<string | null>(null);
-  const [isMobileLineupOpen, setIsMobileLineupOpen] = useState(false);
+  const [isLineupExpanded, setIsLineupExpanded] = useState(false);
 
   // Domain & Theme Logic
   const hostname = window.location.hostname;
@@ -833,101 +833,112 @@ function MainView({
               </div>
 
               <div className="flex-grow overflow-y-auto p-6">
-                <AnimatePresence mode="wait">
-                  {!isMobileLineupOpen ? (
-                    <motion.nav
-                      key="main-menu"
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
-                      className="flex flex-col gap-3"
-                    >
-                      {[
-                        { href: "#", en: "HOME", jp: "ホーム" },
-                        { href: "#blog", en: "BLOG", jp: "ブログ" },
-                        { href: "#services", en: "LINEUP", jp: "プラン一覧", isSub: true },
-                        { href: "#options", en: "AUDITION", jp: "試聴スピーカー" },
-                        { href: "#partners", en: "BRANDS", jp: "取扱ブランド" },
-                        { href: "#info", en: "SCHEDULE", jp: "営業日" },
-                        { href: "#access", en: "ACCESS", jp: "店舗案内" },
-                      ].map((link, i) => {
-                        const isActive = location.hash === link.href;
-                        return (
-                          <a
-                            key={i}
-                            href={link.href}
-                            onClick={(e) => {
-                              if (link.isSub) {
-                                e.preventDefault();
-                                setIsMobileLineupOpen(true);
-                              } else {
-                                setIsMobileMenuOpen(false);
-                              }
-                            }}
-                            className={`group flex items-center justify-between p-4 rounded-2xl border transition-all ${isActive
-                              ? 'bg-blue-600 border-blue-500 text-white'
-                              : 'bg-white border-gray-100 text-gray-900 active:bg-gray-50'
-                              }`}
-                          >
-                            <div className="flex flex-col gap-1">
-                              <span className={`text-sm font-black tracking-widest ${isActive ? 'text-white' : 'text-gray-900'}`}>{link.en}</span>
-                              <span className={`text-[9px] font-bold ${isActive ? 'text-white/70' : 'text-gray-400'}`}>{link.jp}</span>
-                            </div>
-                            <div className={`w-8 h-8 rounded-xl flex items-center justify-center transition-colors ${isActive ? 'bg-white/20' : 'bg-gray-50 group-active:bg-blue-600 group-active:text-white'}`}>
-                              <ChevronRight className="w-4 h-4" />
-                            </div>
-                          </a>
-                        );
-                      })}
-                    </motion.nav>
-                  ) : (
-                    <motion.div
-                      key="lineup-menu"
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: 20 }}
-                      className="flex flex-col gap-6"
-                    >
-                      <button
-                        onClick={() => setIsMobileLineupOpen(false)}
-                        className="flex items-center gap-2 text-gray-400 hover:text-gray-900 transition-colors font-black text-[10px] uppercase tracking-widest"
-                      >
-                        <ChevronLeft className="w-4 h-4" />
-                        Back to Menu
-                      </button>
+                <nav className="flex flex-col gap-3">
+                  {[
+                    { href: "#", en: "HOME", jp: "ホーム" },
+                    { href: "#blog", en: "BLOG", jp: "ブログ" },
+                    { href: "#services", en: "LINEUP", jp: "プラン一覧", isExpandable: true },
+                    { href: "#options", en: "AUDITION", jp: "試聴スピーカー" },
+                    { href: "#partners", en: "BRANDS", jp: "取扱ブランド" },
+                    { href: "#info", en: "SCHEDULE", jp: "営業日" },
+                    { href: "#access", en: "ACCESS", jp: "店舗案内" },
+                  ].map((link, i) => {
+                    const isExpandable = link.isExpandable;
+                    const isActive = location.hash === link.href && !isExpandable;
 
-                      <div className="space-y-4">
-                        <div className="flex flex-col gap-1">
-                          <h4 className="text-xl font-black tracking-tighter">LINEUP</h4>
-                          <p className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Select Category</p>
-                        </div>
+                    return (
+                      <div key={i} className="flex flex-col gap-2">
+                        <a
+                          href={link.href}
+                          onClick={(e) => {
+                            if (isExpandable) {
+                              e.preventDefault();
+                              setIsLineupExpanded(!isLineupExpanded);
+                            } else {
+                              setIsMobileMenuOpen(false);
+                            }
+                          }}
+                          className={`group flex items-center justify-between p-4 rounded-2xl border transition-all ${isActive
+                            ? 'bg-blue-600 border-blue-500 text-white'
+                            : 'bg-white border-gray-100 text-gray-900 active:bg-gray-50'
+                            }`}
+                        >
+                          <div className="flex flex-col gap-1">
+                            <span className={`text-sm font-black tracking-widest ${isActive ? 'text-white' : 'text-gray-900'}`}>{link.en}</span>
+                            <span className={`text-[9px] font-bold ${isActive ? 'text-white/70' : 'text-gray-400'}`}>{link.jp}</span>
+                          </div>
+                          <div className={`w-8 h-8 rounded-xl flex items-center justify-center transition-all ${isActive ? 'bg-white/20' : 'bg-gray-50 group-active:bg-blue-600 group-active:text-white'} ${isExpandable && isLineupExpanded ? 'rotate-90' : ''}`}>
+                            <ChevronRight className="w-4 h-4" />
+                          </div>
+                        </a>
 
-                        <div className="grid grid-cols-1 gap-3">
-                          {audioCategories.map((cat: any) => (
-                            <button
-                              key={cat.id}
-                              onClick={() => {
-                                setIsMobileMenuOpen(false);
-                                setIsMobileLineupOpen(false);
-                                navigate(cat.path);
-                              }}
-                              className="relative h-24 rounded-2xl overflow-hidden group transition-transform active:scale-[0.98]"
-                            >
-                              <SafeImage src={cat.image} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                              <div className="absolute inset-0 bg-black/40 flex items-center p-6 text-white">
-                                <div className="flex flex-col text-left">
-                                  <span className="text-[8px] font-bold tracking-[0.2em] opacity-80 uppercase">{cat.subtitle}</span>
-                                  <span className="text-sm font-black tracking-tight leading-tight">{cat.title}</span>
+                        {/* Accordion Content */}
+                        {isExpandable && (
+                          <AnimatePresence>
+                            {isLineupExpanded && (
+                              <motion.div
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: 'auto', opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                className="overflow-hidden bg-gray-50/50 rounded-[2rem] border border-gray-100/50"
+                              >
+                                <div className="p-4 flex flex-col gap-6">
+                                  {audioCategories.map((cat: any) => (
+                                    <div key={cat.id} className="space-y-3">
+                                      <div
+                                        onClick={() => {
+                                          setIsMobileMenuOpen(false);
+                                          navigate(cat.path);
+                                        }}
+                                        className="flex items-center gap-2 text-blue-600 font-black text-[10px] uppercase tracking-widest border-l-2 border-blue-500 pl-3 py-1 cursor-pointer hover:text-blue-700"
+                                      >
+                                        {cat.subtitle}
+                                        <ArrowUpRight className="w-3 h-3 opacity-40" />
+                                      </div>
+                                      <div className="flex flex-col gap-1.5 pl-3">
+                                        {cat.items.map((item: string, idx: number) => (
+                                          <button
+                                            key={idx}
+                                            onClick={() => {
+                                              const planMapping: Record<string, any> = {
+                                                "BASIC line (コアキシャル)": { id: "speaker_package", planName: "スピーカー交換BASIC line（コアキシャル）" },
+                                                "BASIC line (セパレート)": { id: "speaker_package", planName: "スピーカー交換BASIC line（セパレート）" },
+                                                "STANDARD line (10万円まで)": { id: "speaker_package", planName: "スピーカー交換STANDARD line（10万円まで）" },
+                                                "PREMIUM line (10万円以上)": { id: "speaker_package", planName: "スピーカー交換PREMIUM line（10万円以上）" },
+                                                "BMW専用パッケージ": { id: "speaker_package", planName: "BMWスピーカー交換パッケージ" },
+                                                "Mercedes Benz専用パッケージ": { id: "speaker_package", planName: "Mercedes Benzスピーカー交換パッケージ" },
+                                                "AMP内蔵DSPパッケージ": { id: "digital_source", planName: "アンプ内蔵DSPパッケージ" },
+                                                "AMPレスDSPパッケージ": { id: "digital_source", planName: "アンプレスDSPパッケージ" },
+                                                "お手軽低音増強 (パワード)": { id: "bass_power", planName: "チューンナップウーファー・パッケージ" },
+                                                "お手軽低音増強＋ (アンプ別)": { id: "bass_power", planName: "大型パワードウーファー・パッケージ" },
+                                                "店内の常時試聴ユニット": { id: "audition-showcase", isAnchor: true },
+                                                "施工ブログ / 店舗詳細": { id: "contact", isAnchor: true }
+                                              };
+                                              const target = planMapping[item] || { id: cat.id };
+                                              setIsMobileMenuOpen(false);
+                                              handleMenuClick(target);
+                                            }}
+                                            className="text-[11px] font-bold text-gray-400 hover:text-blue-600 transition-colors text-left flex items-center justify-between group/link"
+                                          >
+                                            <span className="flex items-center gap-2">
+                                              <div className="w-1 h-1 rounded-full bg-gray-200 group-hover/link:bg-blue-400 transition-colors" />
+                                              {item}
+                                            </span>
+                                            <ChevronRight className="w-3 h-3 opacity-0 group-hover/link:opacity-100 transition-all -translate-x-2 group-hover/link:translate-x-0" />
+                                          </button>
+                                        ))}
+                                      </div>
+                                    </div>
+                                  ))}
                                 </div>
-                                <ChevronRight className="w-5 h-5 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
-                              </div>
-                            </button>
-                          ))}
-                        </div>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        )}
                       </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                    );
+                  })}
+                </nav>
               </div>
 
               <div className="p-6 border-t border-gray-50 space-y-3">
