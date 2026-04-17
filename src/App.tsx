@@ -67,7 +67,41 @@ interface BlogPost {
   image?: string;
 }
 
-// DEPLOY_TIMESTAMP: 2026-04-18T04:45:00Z - Forced Sync for Mobile Menu & Desktop Fix
+// DEPLOY_TIMESTAMP: 2026-04-18T05:05:00Z - Restored Lineup Megamenu & Sub-menu
+const MegaMenu = ({ show, categories, theme, onClose }: any) => {
+  return (
+    <AnimatePresence>
+      {show && (
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 10 }}
+          className="absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50 pointer-events-auto"
+        >
+          <div className={`rounded-3xl shadow-2xl overflow-hidden border ${theme === 'dark' ? 'bg-black border-white/10' : 'bg-white border-gray-100'} p-8 w-[800px]`}>
+            <div className="grid grid-cols-3 gap-8">
+              {categories.map((cat: any) => (
+                <Link
+                  key={cat.id}
+                  to={cat.path}
+                  onClick={onClose}
+                  className="group/m relative h-40 rounded-2xl overflow-hidden"
+                >
+                  <SafeImage src={cat.image} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover/m:scale-110" />
+                  <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-4 text-white">
+                    <span className="text-[8px] font-bold tracking-widest opacity-80 uppercase">{cat.subtitle}</span>
+                    <span className="text-sm font-black leading-tight">{cat.title}</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+};
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -434,6 +468,7 @@ function MainView({
   const [showFullAuditionList, setShowFullAuditionList] = useState(false);
   const [selectedAuditionImage, setSelectedAuditionImage] = useState<string | null>(null);
   const [activeYoutubeId, setActiveYoutubeId] = useState<string | null>(null);
+  const [isMobileLineupOpen, setIsMobileLineupOpen] = useState(false);
 
   // Domain & Theme Logic
   const hostname = window.location.hostname;
@@ -660,6 +695,29 @@ function MainView({
               <span className="text-sm font-black tracking-widest group-hover/item:text-blue-500">SCHEDULE</span>
               <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">営業日</span>
             </a>
+            <div
+              className="relative py-8"
+              onMouseEnter={() => setShowMegaMenu(true)}
+              onMouseLeave={() => setShowMegaMenu(false)}
+            >
+              <a
+                href="#services"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleMenuClick('services');
+                }}
+                className="flex flex-col items-center group/item transition-colors"
+              >
+                <span className="text-sm font-black tracking-widest group-hover/item:text-blue-500">LINEUP</span>
+                <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">プラン一覧</span>
+              </a>
+              <MegaMenu
+                show={showMegaMenu}
+                categories={categories}
+                theme={theme}
+                onClose={() => setShowMegaMenu(false)}
+              />
+            </div>
             <a href="#access" className="flex flex-col items-center group/item transition-colors">
               <span className="text-sm font-black tracking-widest group-hover/item:text-blue-500">ACCESS</span>
               <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">店舗案内</span>
@@ -775,38 +833,101 @@ function MainView({
               </div>
 
               <div className="flex-grow overflow-y-auto p-6">
-                <nav className="flex flex-col gap-3">
-                  {[
-                    { href: "#", en: "HOME", jp: "ホーム" },
-                    { href: "#blog", en: "BLOG", jp: "ブログ" },
-                    { href: "#services", en: "LINEUP", jp: "プラン一覧" },
-                    { href: "#options", en: "AUDITION", jp: "試聴スピーカー" },
-                    { href: "#partners", en: "BRANDS", jp: "取扱ブランド" },
-                    { href: "#info", en: "SCHEDULE", jp: "営業日" },
-                    { href: "#access", en: "ACCESS", jp: "店舗案内" },
-                  ].map((link, i) => {
-                    const isActive = location.hash === link.href;
-                    return (
-                      <a
-                        key={i}
-                        href={link.href}
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        className={`group flex items-center justify-between p-4 rounded-2xl border transition-all ${isActive
-                          ? 'bg-blue-600 border-blue-500 text-white'
-                          : 'bg-white border-gray-100 text-gray-900 active:bg-gray-50'
-                          }`}
+                <AnimatePresence mode="wait">
+                  {!isMobileLineupOpen ? (
+                    <motion.nav
+                      key="main-menu"
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: -20 }}
+                      className="flex flex-col gap-3"
+                    >
+                      {[
+                        { href: "#", en: "HOME", jp: "ホーム" },
+                        { href: "#blog", en: "BLOG", jp: "ブログ" },
+                        { href: "#services", en: "LINEUP", jp: "プラン一覧", isSub: true },
+                        { href: "#options", en: "AUDITION", jp: "試聴スピーカー" },
+                        { href: "#partners", en: "BRANDS", jp: "取扱ブランド" },
+                        { href: "#info", en: "SCHEDULE", jp: "営業日" },
+                        { href: "#access", en: "ACCESS", jp: "店舗案内" },
+                      ].map((link, i) => {
+                        const isActive = location.hash === link.href;
+                        return (
+                          <a
+                            key={i}
+                            href={link.href}
+                            onClick={(e) => {
+                              if (link.isSub) {
+                                e.preventDefault();
+                                setIsMobileLineupOpen(true);
+                              } else {
+                                setIsMobileMenuOpen(false);
+                              }
+                            }}
+                            className={`group flex items-center justify-between p-4 rounded-2xl border transition-all ${isActive
+                              ? 'bg-blue-600 border-blue-500 text-white'
+                              : 'bg-white border-gray-100 text-gray-900 active:bg-gray-50'
+                              }`}
+                          >
+                            <div className="flex flex-col gap-1">
+                              <span className={`text-sm font-black tracking-widest ${isActive ? 'text-white' : 'text-gray-900'}`}>{link.en}</span>
+                              <span className={`text-[9px] font-bold ${isActive ? 'text-white/70' : 'text-gray-400'}`}>{link.jp}</span>
+                            </div>
+                            <div className={`w-8 h-8 rounded-xl flex items-center justify-center transition-colors ${isActive ? 'bg-white/20' : 'bg-gray-50 group-active:bg-blue-600 group-active:text-white'}`}>
+                              <ChevronRight className="w-4 h-4" />
+                            </div>
+                          </a>
+                        );
+                      })}
+                    </motion.nav>
+                  ) : (
+                    <motion.div
+                      key="lineup-menu"
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: 20 }}
+                      className="flex flex-col gap-6"
+                    >
+                      <button
+                        onClick={() => setIsMobileLineupOpen(false)}
+                        className="flex items-center gap-2 text-gray-400 hover:text-gray-900 transition-colors font-black text-[10px] uppercase tracking-widest"
                       >
+                        <ChevronLeft className="w-4 h-4" />
+                        Back to Menu
+                      </button>
+
+                      <div className="space-y-4">
                         <div className="flex flex-col gap-1">
-                          <span className={`text-sm font-black tracking-widest ${isActive ? 'text-white' : 'text-gray-900'}`}>{link.en}</span>
-                          <span className={`text-[9px] font-bold ${isActive ? 'text-white/70' : 'text-gray-400'}`}>{link.jp}</span>
+                          <h4 className="text-xl font-black tracking-tighter">LINEUP</h4>
+                          <p className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Select Category</p>
                         </div>
-                        <div className={`w-8 h-8 rounded-xl flex items-center justify-center transition-colors ${isActive ? 'bg-white/20' : 'bg-gray-50 group-active:bg-blue-600 group-active:text-white'}`}>
-                          <ChevronRight className="w-4 h-4" />
+
+                        <div className="grid grid-cols-1 gap-3">
+                          {audioCategories.map((cat: any) => (
+                            <button
+                              key={cat.id}
+                              onClick={() => {
+                                setIsMobileMenuOpen(false);
+                                setIsMobileLineupOpen(false);
+                                navigate(cat.path);
+                              }}
+                              className="relative h-24 rounded-2xl overflow-hidden group transition-transform active:scale-[0.98]"
+                            >
+                              <SafeImage src={cat.image} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                              <div className="absolute inset-0 bg-black/40 flex items-center p-6 text-white">
+                                <div className="flex flex-col text-left">
+                                  <span className="text-[8px] font-bold tracking-[0.2em] opacity-80 uppercase">{cat.subtitle}</span>
+                                  <span className="text-sm font-black tracking-tight leading-tight">{cat.title}</span>
+                                </div>
+                                <ChevronRight className="w-5 h-5 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
+                              </div>
+                            </button>
+                          ))}
                         </div>
-                      </a>
-                    );
-                  })}
-                </nav>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
 
               <div className="p-6 border-t border-gray-50 space-y-3">
