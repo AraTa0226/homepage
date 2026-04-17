@@ -26,9 +26,6 @@ import {
   Lock,
   Megaphone,
   Trophy,
-  Music2,
-  History,
-  Activity,
   Zap,
   ArrowUpRight,
   Youtube,
@@ -36,7 +33,7 @@ import {
   Search
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { useState, useEffect, useRef, lazy, Suspense } from 'react';
+import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
 import {
   BrowserRouter,
   Routes,
@@ -50,13 +47,14 @@ import { BusinessCalendar } from './components/Calendar/BusinessCalendar';
 const AudioMenuDetail = lazy(() => import('./components/Menu/AudioMenuDetail').then(m => ({ default: m.AudioMenuDetail })));
 const SecurityMenuDetail = lazy(() => import('./components/Menu/SecurityMenuDetail').then(m => ({ default: m.SecurityMenuDetail })));
 const DashcamMenuDetail = lazy(() => import('./components/Menu/DashcamMenuDetail').then(m => ({ default: m.DashcamMenuDetail })));
+const StaffDashboard = lazy(() => import('./components/Staff/StaffDashboard').then(m => ({ default: m.StaffDashboard })));
+const ReservationFormPage = lazy(() => import('./components/Form/ReservationFormPage').then(m => ({ default: m.ReservationFormPage })));
+
 import { PriceProvider, usePrices } from './contexts/PriceContext';
 import { CalendarProvider } from './contexts/CalendarContext';
 import { SiteProvider, useSite } from './contexts/SiteContext';
-import { StaffDashboard } from './components/Staff/StaffDashboard';
 import { PartnersSection } from './components/PartnersSection';
 import { PartnersListPage } from './components/PartnersListPage';
-import { ReservationFormPage } from './components/Form/ReservationFormPage';
 import { SafeImage } from './components/ui/SafeImage';
 
 interface BlogPost {
@@ -241,56 +239,36 @@ function AppContent() {
   }, []);
 
   useEffect(() => {
-    const fetchPosts = async () => {
+    const fetchPostsAndData = async () => {
       try {
-        const response = await fetch('https://www.soundang.com/webbrog/wp-json/wp/v2/posts?per_page=3&_embed');
-        if (!response.ok) throw new Error('Failed to fetch posts');
-        const data = await response.json();
-
-        const formattedPosts = data.map((post: any) => {
-          const date = new Date(post.date);
-          const category = post._embedded?.['wp:term']?.[0]?.[0]?.name || 'Blog';
-          const image = post._embedded?.['wp:featuredmedia']?.[0]?.source_url;
-
-          return {
-            date: `${date.getFullYear()}.${String(date.getMonth() + 1).padStart(2, '0')}.${String(date.getDate()).padStart(2, '0')}`,
-            category: category,
-            title: post.title.rendered.replace(/&nbsp;/g, ' ').replace(/&#8211;/g, '–').replace(/&#8212;/g, '—').replace(/&#8220;/g, '“').replace(/&#8221;/g, '”').replace(/&#8216;/g, '‘').replace(/&#8217;/g, '’'),
-            link: post.link,
-            image: image
-          };
-        });
-
-        setPosts(formattedPosts);
-      } catch (error) {
-        console.error('Error fetching blog posts:', error);
-        // Fallback to static data if fetch fails
-        setPosts([
-          {
-            date: "2026.03.30",
-            category: "Audio",
-            title: "【ウェブサイトのスピーカー交換パッケージのご紹介】",
-            link: "https://www.soundang.com/webbrog/2026/03/30/%e3%80%90%e3%82%a6%e3%82%a7%e3%83%96%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e3%82%b9%e3%83%94%e3%83%bc%e3%82%ab%e3%83%bc%e4%ba%a4%e6%8f%9b%e3%83%91%e3%83%83%e3%82%b1%e3%83%bc%e3%82%b8%e3%81%ae%e3%81%94/"
-          },
-          {
-            date: "2026.03.29",
-            category: "Audio",
-            title: "【カローラクロスのスピーカー交換】",
-            link: "https://www.soundang.com/webbrog/2026/03/29/%e3%80%90%e3%82%ab%e3%83%ad%e3%83%bc%e3%83%a9%e3%82%af%e3%83%ad%e3%82%b9%e3%81%ae%e3%82%b9%e3%83%94%e3%83%bc%e3%82%ab%e3%83%bc%e4%ba%a4%e6%8f%9b%e3%80%91/"
-          },
-          {
-            date: "2026.03.28",
-            category: "Info",
-            title: "【4月に集中】",
-            link: "https://www.soundang.com/webbrog/2026/03/28/%e3%80%904%e6%9c%88%e3%81%ab%e9%9b%86%e4%b8%ad%e3%80%91/"
-          }
+        const [postsResponse, cmsResponse] = await Promise.all([
+          fetch('https://www.soundang.com/webbrog/wp-json/wp-json/wp/v2/posts?per_page=3&_embed'),
+          fetch('/api/cms?all=true') // Assuming backend can handle a single 'all' request, or we just fetch the main one
         ]);
+
+        if (postsResponse.ok) {
+          const data = await postsResponse.json();
+          const formattedPosts = data.map((post: any) => {
+            const date = new Date(post.date);
+            const category = post._embedded?.['wp:term']?.[0]?.[0]?.name || 'Blog';
+            const image = post._embedded?.['wp:featuredmedia']?.[0]?.source_url;
+            return {
+              date: `${date.getFullYear()}.${String(date.getMonth() + 1).padStart(2, '0')}.${String(date.getDate()).padStart(2, '0')}`,
+              category: category,
+              title: post.title.rendered.replace(/&nbsp;/g, ' ').replace(/&#8211;/g, '–'),
+              link: post.link,
+              image: image
+            };
+          });
+          setPosts(formattedPosts);
+        }
+      } catch (error) {
+        console.error('Error fetching data:', error);
       } finally {
         setLoading(false);
       }
     };
-
-    fetchPosts();
+    fetchPostsAndData();
   }, []);
 
   return (
@@ -980,14 +958,14 @@ function MainView({
       </AnimatePresence>
 
 
-      {/* Hero */}
-      < section className="relative pt-20" >
+      <section className="relative pt-20">
         <div className="absolute inset-0 overflow-hidden">
           <SafeImage
             src={assets.heroImage}
             alt="Sound ANG 店舗正面イメージ"
             className="w-full h-full object-cover"
             loading="eager"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent"></div>
         </div>
