@@ -1318,57 +1318,45 @@ function MainView({
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-6">
-                {categories.map((category, index) => (
+              <div className="grid grid-cols-2 gap-4">
+                {facilities.map((facility: any, i: number) => (
                   <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.05 }}
-                    viewport={{ once: true }}
-                    className="group relative h-[200px] md:h-[450px] rounded-[2rem] md:rounded-[3rem] overflow-hidden bg-gray-900 border border-white/10 cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-700"
-                    onClick={() => onCategoryClick(category)}
+                    key={i}
+                    whileHover={{ scale: 1.02 }}
+                    className="group relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 bg-white/5"
                   >
-                    {/* Background Image */}
-                    <div className="absolute inset-0">
-                      <SafeImage
-                        src={category.image}
-                        className="w-full h-full object-cover opacity-50 group-hover:opacity-30 group-hover:scale-110 transition-all duration-1000"
-                        alt={category.title}
-                      />
-                      <div className={`absolute inset-0 bg-gradient-to-t ${getThemeColor(theme)} via-black/20 to-transparent`}></div>
+                    <SafeImage
+                      src={facility.image}
+                      alt={facility.title + "の写真"}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60 group-hover:opacity-100"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-4">
+                      <p className="text-white font-black text-xs tracking-wider">{facility.title}</p>
                     </div>
-
-                    {/* Content Container */}
-                    <div className="absolute inset-0 p-6 md:p-10 flex flex-col justify-end">
-                      <div className="mb-4 md:mb-6">
-                        <div className="flex items-center gap-2 mb-2">
-                          <span className={`w-1.5 h-1.5 rounded-full ${theme === 'dark' ? 'bg-emerald-400' : 'bg-blue-400'}`} />
-                          <span className="text-[8px] md:text-[10px] font-black uppercase tracking-[0.3em] opacity-60 text-white">
-                            Vault Grade
-                          </span>
-                        </div>
-                        <h3 className="text-lg md:text-3xl font-black text-white leading-tight tracking-tighter mb-2">
-                          {category.title}
-                        </h3>
-                        <p className="text-[10px] md:text-sm text-gray-400 font-bold opacity-100 md:opacity-100 transform translate-y-0 md:translate-y-2 group-hover:translate-y-0 transition-all duration-500 line-clamp-2">
-                          {category.description || category.subtitle}
-                        </p>
-                      </div>
-
-                      {/* Action Button */}
-                      <div className="flex items-center gap-3">
-                        <div className={`w-8 h-8 md:w-12 md:h-12 rounded-xl md:rounded-2xl ${theme === 'dark' ? 'bg-emerald-600' : 'bg-blue-600'} flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-500`}>
-                          <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
-                        </div>
-                        <span className="text-[10px] md:text-xs font-black uppercase tracking-widest text-white/40 group-hover:text-white transition-colors">View Plans</span>
-                      </div>
-                    </div>
-
-                    {/* Hover Glitch Effect Line */}
-                    <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent ${theme === 'dark' ? 'via-emerald-500' : 'via-blue-500'} to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000`} />
                   </motion.div>
                 ))}
+              </div>
+            </div>
+
+            <div className="lg:sticky lg:top-32 space-y-8">
+              <div>
+                <span className="text-blue-500 font-black text-xs uppercase tracking-[0.3em] mb-4 block">Shop Access</span>
+                <h2 className="text-3xl font-black text-white mb-6 tracking-tighter">店舗案内</h2>
+                <p className="text-gray-300 font-bold leading-relaxed mb-8">
+                  福岡県大野城市の御笠川沿いに店舗を構えております。
+                  こちらの外観を目印にお越しください。駐車場も完備しております。
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/10">
+                    <div className="w-10 h-10 rounded-xl bg-blue-600/20 flex items-center justify-center shrink-0">
+                      <MapPin className="w-5 h-5 text-blue-500" />
+                    </div>
+                    <div>
+                      <p className="text-white font-bold text-sm">所在地</p>
+                      <p className="text-sm text-gray-400">〒816-0912 福岡県大野城市御笠川5-4-14</p>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div className="w-full h-[240px] rounded-3xl overflow-hidden shadow-2xl border border-white/10 grayscale hover:grayscale-0 transition-all duration-700">
