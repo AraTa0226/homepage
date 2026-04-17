@@ -27,10 +27,16 @@ import {
   Megaphone,
   Trophy,
   Music2,
-  History
+  History,
+  Activity,
+  Zap,
+  ArrowUpRight,
+  Youtube,
+  Play,
+  Search
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import {
   BrowserRouter,
   Routes,
@@ -79,7 +85,12 @@ function AppContent() {
   const navigate = useNavigate();
   const location = useLocation();
   const { assets } = useSite();
-  const { emergencyAnnouncement } = usePrices();
+  const {
+    emergencyAnnouncement,
+    plans,
+    setSelectedPlan,
+    setSelectedCategory
+  } = usePrices();
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [showStaffDashboard, setShowStaffDashboard] = useState(false);
@@ -90,6 +101,7 @@ function AppContent() {
   const [passwordError, setPasswordError] = useState(false);
   const [showFacilityGallery, setShowFacilityGallery] = useState(false);
   const [showMegaMenu, setShowMegaMenu] = useState(false);
+  const megaMenuRef = useRef<HTMLDivElement>(null);
 
   const facilities = [
     { title: "ショールーム", image: assets.showroomImage, description: "最新のデモ機を多数展示。ゆったりとご相談いただけます。" },
@@ -123,6 +135,31 @@ function AppContent() {
       setPasswordError(false);
     } else {
       setPasswordError(true);
+    }
+  };
+
+  const handleMenuClick = (item: any) => {
+    setShowMegaMenu(false);
+    if (item.isExternal) {
+      window.open(item.url, '_blank');
+      return;
+    }
+    if (item.isAnchor) {
+      const element = document.getElementById(item.id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+      return;
+    }
+
+    // Find category and plan
+    const category = plans.find(p => p.id === item.id);
+    if (category) {
+      const planItem = category.items.find(i => i.name === item.planName);
+      if (planItem) {
+        setSelectedPlan(planItem);
+        setSelectedCategory(category);
+      }
     }
   };
 
@@ -282,11 +319,94 @@ function AppContent() {
           navigate={navigate}
           showMegaMenu={showMegaMenu}
           setShowMegaMenu={setShowMegaMenu}
+          handleMenuClick={handleMenuClick}
         />
       } />
     </Routes>
   );
 }
+
+const VaultGrid = ({ categories, onCategoryClick, theme, handleMenuClick }: any) => {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[350px] lg:auto-rows-[450px]">
+      {categories.map((cat: any, i: number) => (
+        <motion.div
+          key={cat.id}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: i * 0.1 }}
+          onClick={() => onCategoryClick(cat)}
+          className={`group relative rounded-[2.5rem] overflow-hidden cursor-pointer shadow-2xl border border-white/10 ${cat.gridClass || "col-span-1"
+            }`}
+        >
+          {/* Background Image */}
+          <SafeImage
+            src={cat.image}
+            alt={cat.title}
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+
+          {/* Theme Overlay */}
+          <div className={`absolute inset-0 transition-opacity duration-500 ${theme === 'dark'
+            ? 'bg-gradient-to-t from-black/95 via-black/40 to-transparent group-hover:bg-black/60'
+            : 'bg-gradient-to-t from-white/95 via-white/40 to-transparent group-hover:bg-white/60'
+            }`} />
+
+          {/* Content HUD */}
+          <div className="absolute inset-0 p-8 flex flex-col justify-end">
+            <div className={`mb-auto flex items-center gap-2 ${theme === 'dark' ? 'text-emerald-400' : 'text-blue-600'}`}>
+              <span className="text-[10px] font-black uppercase tracking-[0.3em]">{cat.subtitle}</span>
+              <div className="h-[1px] flex-grow bg-current opacity-30" />
+            </div>
+
+            <h3 className={`text-4xl font-black tracking-tighter mb-6 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+              {cat.title}
+            </h3>
+
+            <div className="space-y-3 relative z-10">
+              {cat.items.map((item: string, j: number) => (
+                <div
+                  key={j}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    const planMapping: Record<string, any> = {
+                      "BASIC line (コアキシャル)": { id: "speaker_package", planName: "スピーカー交換BASIC line（コアキシャル）" },
+                      "BASIC line (セパレート)": { id: "speaker_package", planName: "スピーカー交換BASIC line（セパレート）" },
+                      "STANDARD line (10万円まで)": { id: "speaker_package", planName: "スピーカー交換STANDARD line（10万円まで）" },
+                      "PREMIUM line (10万円以上)": { id: "speaker_package", planName: "スピーカー交換PREMIUM line（10万円以上）" },
+                      "BMW専用パッケージ": { id: "speaker_package", planName: "BMWスピーカー交換パッケージ" },
+                      "Mercedes Benz専用パッケージ": { id: "speaker_package", planName: "Mercedes Benzスピーカー交換パッケージ" },
+                      "AMP内蔵DSPパッケージ": { id: "digital_source", planName: "アンプ内蔵DSPパッケージ" },
+                      "AMPレスDSPパッケージ": { id: "digital_source", planName: "アンプレスDSPパッケージ" },
+                      "お手軽低音増強 (パワード)": { id: "bass_power", planName: "チューンナップウーファー・パッケージ" },
+                      "お手軽低音増強＋ (アンプ別)": { id: "bass_power", planName: "大型パワードウーファー・パッケージ" },
+                      "店内の常時試聴ユニット": { id: "audition-showcase", isAnchor: true },
+                      "施工ブログ / 店舗詳細": { id: "contact", isAnchor: true }
+                    };
+                    const target = planMapping[item] || { id: cat.id };
+                    handleMenuClick(target);
+                  }}
+                  className={`flex items-center justify-between text-sm font-bold transition-all hover:translate-x-2 p-1 rounded-lg hover:bg-white/5 ${theme === 'dark' ? 'text-white/90 hover:text-white' : 'text-gray-800 hover:text-blue-600'
+                    }`}
+                >
+                  <span>{item}</span>
+                  <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </div>
+              ))}
+            </div>
+
+            {/* Decorative Dot Matrix */}
+            <div className="absolute top-8 right-8 grid grid-cols-2 gap-1 opacity-20">
+              {[...Array(4)].map((_, i) => (
+                <div key={i} className={`w-1 h-1 rounded-full ${theme === 'dark' ? 'bg-white' : 'bg-black'}`} />
+              ))}
+            </div>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  );
+};
 
 function MainView({
   assets,
@@ -306,10 +426,119 @@ function MainView({
   handleLogoClick,
   navigate,
   showMegaMenu,
-  setShowMegaMenu
+  setShowMegaMenu,
+  handleMenuClick
 }: any) {
+  const { auditionSpeakers } = usePrices();
+  const [showFullAuditionList, setShowFullAuditionList] = useState(false);
+  const [selectedAuditionImage, setSelectedAuditionImage] = useState<string | null>(null);
+  const [activeYoutubeId, setActiveYoutubeId] = useState<string | null>(null);
+
+  // Domain & Theme Logic
+  const hostname = window.location.hostname;
+  const isSecurityDomain = hostname.includes('sec-ang.com');
+  const theme = isSecurityDomain ? 'dark' : 'light';
+
+  const audioCategories = [
+    {
+      id: 'speaker',
+      title: 'スピーカー・パッケージ',
+      subtitle: 'ACOUSTICS',
+      image: assets.audioMenuImage,
+      gridClass: 'lg:row-span-2',
+      items: [
+        'BASIC line (コアキシャル)',
+        'BASIC line (セパレート)',
+        'STANDARD line (10万円まで)',
+        'PREMIUM line (10万円以上)',
+        'フロント3WAYセット',
+        'BMW専用パッケージ',
+        'Mercedes Benz専用パッケージ',
+        '車種別スピーカー交換プラン',
+        'ハイエンドクラス・施工'
+      ],
+      path: '/audio/sp-package'
+    },
+    {
+      id: 'amp',
+      title: 'DSP / アンプ / ウーファー',
+      subtitle: 'ELECTRONICS',
+      image: assets.auditionRoomImage,
+      items: [
+        'AMP内蔵DSPパッケージ',
+        'AMPレスDSPパッケージ',
+        'アンプインスト・パッケージ',
+        '省スペース小型アンプ',
+        'お手軽低音増強 (パワード)',
+        'お手軽低音増強＋ (アンプ別)',
+        'サイバーナビ・プラン'
+      ],
+      path: '/audio/amp-dsp'
+    },
+    {
+      id: 'custom',
+      title: '施工・カスタム',
+      subtitle: 'EXPERT CUSTOM',
+      image: assets.workspaceImage,
+      items: [
+        'カスタムインストール',
+        'ツィーターCOOLマウント',
+        'オリジナルアウターバッフル',
+        'サブウーハー施工のアレコレ',
+        'ヘッドユニット / プロセッサー'
+      ],
+      path: '/audio/custom'
+    },
+    {
+      id: 'tech',
+      title: 'ハイレゾ・デジタル',
+      subtitle: 'TECH & DIGITAL',
+      image: assets.showroomImage,
+      items: [
+        'ハイレゾ導入のススメ',
+        'いま注目！メディアプレーヤー',
+        'デジタルソース・ビルドアップ'
+      ],
+      path: '/audio/digital-source'
+    },
+    {
+      id: 'deadening',
+      title: 'デッドニング・音響パーツ',
+      subtitle: 'DEADENING',
+      image: assets.pitImage,
+      items: [
+        'ドアチューニング (デッドニング)',
+        'サイレントチューニング (静音)',
+        '電源強化 / バッ直施工'
+      ],
+      path: '/audio/deadening'
+    }
+  ];
+
+  const securityCategories = [
+    {
+      id: 'security',
+      title: 'SECURITY VAULT',
+      subtitle: 'ACTIVE GUARD',
+      image: assets.securityMenuImage,
+      gridClass: 'lg:col-span-2 lg:row-span-2',
+      items: ['Panthera Z-Series', 'Grgo V-Series', 'Relay Attack Defense'],
+      path: '/security'
+    },
+    {
+      id: 'gadgets',
+      title: 'DASHCAM / HUD',
+      subtitle: 'DIGITAL EYE',
+      image: assets.dashcamMenuImage,
+      items: ['Digital Mirror', 'Radar Detector', 'Dual Cam Recording'],
+      path: '/dashcam'
+    }
+  ];
+
+  const categories = isSecurityDomain ? securityCategories : audioCategories;
+
   return (
-    <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-orange-500 selection:text-white">
+    <div className={`min-h-screen bg-white text-gray-900 font-sans selection:bg-blue-100 selection:text-blue-900 ${theme === 'dark' ? 'dark' : ''}`}>
 
       {/* Password Modal */}
       <AnimatePresence>
@@ -318,39 +547,41 @@ function MainView({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+            className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-black/60 backdrop-blur-md"
           >
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-white rounded-[2rem] p-8 w-full max-w-sm shadow-2xl border border-gray-100"
+              initial={{ scale: 0.9, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              className="bg-white rounded-[2.5rem] w-full max-w-sm p-8 shadow-2xl"
             >
               <div className="flex flex-col items-center text-center mb-8">
-                <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-4">
-                  <Lock className="w-8 h-8 text-blue-600" />
+                <div className="w-16 h-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
+                  <ShieldCheck className="w-8 h-8" />
                 </div>
-                <h3 className="text-2xl font-black tracking-tighter">STAFF LOGIN</h3>
-                <p className="text-xs text-gray-500 font-bold uppercase tracking-widest mt-1">管理者認証</p>
+                <h3 className="text-2xl font-black tracking-tighter text-gray-900">管理者認証</h3>
+                <p className="text-gray-500 text-sm font-bold mt-1 uppercase tracking-widest">Admin Access</p>
               </div>
-
               <form onSubmit={handlePasswordSubmit} className="space-y-4">
-                <div>
+                <div className="relative">
                   <input
                     type="password"
                     value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                    onChange={(e) => {
+                      setPassword(e.target.value);
+                      setPasswordError(false);
+                    }}
                     placeholder="パスワードを入力"
-                    className={`w-full px-6 py-4 bg-gray-50 border-2 rounded-2xl font-bold focus:outline-none transition-all ${passwordError ? 'border-red-500 bg-red-50' : 'border-transparent focus:border-blue-500'}`}
+                    className={`w-full bg-gray-50 border-2 rounded-2xl px-6 py-4 text-center font-bold tracking-widest placeholder:text-gray-300 focus:outline-none focus:ring-4 transition-all ${passwordError ? 'border-red-500 ring-red-100' : 'border-gray-100 focus:border-blue-500 focus:ring-blue-100'
+                      }`}
                     autoFocus
                   />
                   {passwordError && (
-                    <p className="text-red-500 text-[10px] font-bold mt-2 ml-2 uppercase tracking-widest">認証に失敗しました</p>
+                    <p className="text-red-500 text-[10px] font-bold uppercase tracking-widest mt-2">パスワードが正しくありません</p>
                   )}
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-2xl font-black tracking-widest shadow-lg shadow-blue-500/20 transition-all"
+                  className="w-full bg-gray-900 text-white font-black py-4 rounded-2xl hover:bg-black transition-all shadow-xl shadow-gray-200 uppercase tracking-widest text-sm"
                 >
                   認証する
                 </button>
@@ -373,23 +604,27 @@ function MainView({
 
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-[60] bg-white/90 backdrop-blur-md border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 h-16 md:h-20 flex items-center gap-2">
+        <div className="max-w-7xl mx-auto px-4 h-16 md:h-24 flex items-center gap-2">
           {/* Left: Logo */}
           <div className="flex-1 flex items-center">
             <div
-              className="flex items-center gap-2 cursor-pointer select-none group"
+              className="flex items-center gap-3 cursor-pointer select-none group"
               onClick={handleLogoClick}
             >
-              <div className="w-8 h-8 md:w-10 md:h-10 bg-gray-900 rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform">
-                <span className="text-white font-black text-lg md:text-xl italic">A</span>
+              <div className={`w-10 h-10 md:w-12 md:h-12 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-all shadow-xl ${theme === 'dark' ? 'bg-emerald-500 text-black' : 'bg-gray-900 text-white'
+                }`}>
+                <span className="font-black text-xl italic tracking-tighter">S</span>
               </div>
-              <span className="text-lg md:text-2xl font-black tracking-tighter text-gray-900">{assets.logoText}</span>
+              <div className="flex flex-col -gap-1">
+                <span className={`text-[10px] font-black tracking-[0.3em] uppercase opacity-50 ${theme === 'dark' ? 'text-emerald-400' : 'text-gray-900'}`}>The Vault of</span>
+                <span className={`text-xl md:text-2xl font-black tracking-tighter leading-none ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>Sound ANG</span>
+              </div>
             </div>
           </div>
 
           {/* Center: Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-8 text-sm font-bold uppercase tracking-widest shrink-0">
-            <a href="#" className="hover:text-blue-500 transition-colors">Home</a>
+            <a href="#" className="hover:text-blue-500 transition-colors">ホーム</a>
             <div
               className="relative py-8 group/nav"
               onMouseEnter={() => setShowMegaMenu(true)}
@@ -397,9 +632,8 @@ function MainView({
             >
               <button
                 className={`hover:text-blue-500 transition-colors flex items-center gap-1 group-hover/nav:text-blue-500 ${showMegaMenu ? 'text-blue-500 font-black' : ''}`}
-                onClick={() => navigate('/audio')}
               >
-                Services <ChevronRight className={`w-4 h-4 transition-transform ${showMegaMenu ? 'rotate-90' : ''}`} />
+                プラン一覧 <ChevronRight className={`w-4 h-4 transition-transform ${showMegaMenu ? 'rotate-90' : ''}`} />
               </button>
 
               {/* Mega Menu Overlay */}
@@ -409,58 +643,153 @@ function MainView({
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full left-1/2 -translate-x-1/2 w-[800px] bg-white rounded-[2rem] shadow-2xl border border-gray-100 overflow-hidden mt-2"
+                    className="absolute top-full left-1/2 -translate-x-1/2 w-[1200px] bg-white rounded-[2.5rem] shadow-2xl border border-gray-100 overflow-hidden mt-4 p-10"
                   >
-                    <div className="grid grid-cols-2 h-[400px]">
-                      {/* Left: Speakers (Visual Focus) */}
-                      <div className="relative group/cat overflow-hidden cursor-pointer" onClick={() => navigate('/audio')}>
-                        <SafeImage src={assets.audioMenuImage} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover/cat:scale-110" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                        <div className="absolute inset-0 p-8 flex flex-col justify-end text-white">
-                          <span className="text-[10px] font-black tracking-[0.3em] uppercase opacity-70 mb-2">Sound Upgrade</span>
-                          <h4 className="text-3xl font-black tracking-tighter mb-4">Car Audio</h4>
-                          <ul className="space-y-2">
-                            {['スピーカーパッケージ', 'サブウーファー', 'DSP/アンプ', 'デッドニング'].map(item => (
-                              <li key={item} className="flex items-center gap-2 text-xs font-bold opacity-0 group-hover/cat:opacity-100 transition-opacity translate-y-2 group-hover/cat:translate-y-0 duration-300">
-                                <CheckCircle2 className="w-3 h-3 text-blue-400" /> {item}
-                              </li>
-                            ))}
-                          </ul>
+                    <div className="grid grid-cols-5 gap-6">
+                      {/* Column 1: Acoustics (9 items) */}
+                      <div className="space-y-6">
+                        <div className="flex items-center gap-3 text-blue-600">
+                          <Speaker className="w-5 h-5" />
+                          <h4 className="font-black tracking-tighter text-lg uppercase text-black">スピーカー・パッケージ</h4>
                         </div>
+                        <ul className="space-y-3">
+                          {[
+                            { name: "BASIC line (コアキシャル)", id: "speaker_package", planName: "スピーカー交換BASIC line（コアキシャル）" },
+                            { name: "BASIC line (セパレート)", id: "speaker_package", planName: "スピーカー交換BASIC line（セパレート）" },
+                            { name: "STANDARD line (10万円まで)", id: "speaker_package", planName: "スピーカー交換STANDARD line（10万円まで）" },
+                            { name: "PREMIUM line (10万円以上)", id: "speaker_package", planName: "スピーカー交換PREMIUM line（10万円以上）" },
+                            { name: "フロント3WAYセット", id: "speaker_package", planName: "フロント3WAYセット" },
+                            { name: "BMW専用パッケージ", id: "speaker_package", planName: "BMWスピーカー交換パッケージ" },
+                            { name: "Mercedes Benz専用パッケージ", id: "speaker_package", planName: "Mercedes Benzスピーカー交換パッケージ" },
+                            { name: "車種別スピーカー交換プラン", id: "speaker_package", planName: "車種別スピーカー交換プラン" },
+                            { name: "ハイエンドクラス・施工", id: "speaker_package", planName: "ハイエンドクラススピーカーインストール" }
+                          ].map(item => (
+                            <li key={item.name}>
+                              <button
+                                onClick={() => handleMenuClick(item)}
+                                className="text-gray-800 hover:text-blue-600 font-bold text-[11px] transition-colors text-left leading-tight"
+                              >
+                                {item.name}
+                              </button>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
 
-                      {/* Right: Security & Others */}
-                      <div className="grid grid-rows-2">
-                        <div className="relative group/cat overflow-hidden cursor-pointer border-l border-white/10" onClick={() => navigate('/security')}>
-                          <SafeImage src={assets.securityMenuImage} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover/cat:scale-110" />
-                          <div className="absolute inset-0 bg-blue-900/40 backdrop-blur-[2px] group-hover/cat:backdrop-blur-none transition-all" />
-                          <div className="absolute inset-0 p-6 flex flex-col justify-center text-white text-center">
-                            <ShieldCheck className="w-8 h-8 mx-auto mb-2 text-blue-300" />
-                            <h4 className="text-xl font-black tracking-tighter">Security</h4>
-                            <p className="text-[10px] font-bold opacity-70 mt-1">愛車を護る、確かな技術</p>
-                          </div>
+                      {/* Column 2: Electronics (6 items) */}
+                      <div className="space-y-6 border-l border-gray-50 pl-6">
+                        <div className="flex items-center gap-3 text-blue-600">
+                          <Music2 className="w-5 h-5" />
+                          <h4 className="font-black tracking-tighter text-lg uppercase text-black">DSP / アンプ / ウーファー</h4>
                         </div>
-                        <div className="relative group/cat overflow-hidden cursor-pointer border-t border-l border-white/10" onClick={() => navigate('/dashcam')}>
-                          <SafeImage src={assets.dashcamMenuImage} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover/cat:scale-110" />
-                          <div className="absolute inset-0 bg-gray-900/40 backdrop-blur-[2px] group-hover/cat:backdrop-blur-none transition-all" />
-                          <div className="absolute inset-0 p-6 flex flex-col justify-center text-white text-center">
-                            <Package className="w-8 h-8 mx-auto mb-2 text-orange-300" />
-                            <h4 className="text-xl font-black tracking-tighter">Gadgets</h4>
-                            <p className="text-[10px] font-bold opacity-70 mt-1">ドラレコ・ミラー・他</p>
-                          </div>
+                        <ul className="space-y-3">
+                          {[
+                            { name: "AMP内蔵DSPパッケージ", id: "digital_source", planName: "アンプ内蔵DSPパッケージ" },
+                            { name: "AMPレスDSPパッケージ", id: "digital_source", planName: "アンプレスDSPパッケージ" },
+                            { name: "アンプインスト・パッケージ", id: "bass_power", planName: "アンプインスト・パッケージ" },
+                            { name: "省スペース小型アンプ", id: "bass_power", planName: "省スペース”小型”パワーアンプパッケージ" },
+                            { name: "お手軽低音増強 (パワード)", id: "bass_power", planName: "チューンナップウーファー・パッケージ" },
+                            { name: "お手軽低音増強＋ (アンプ別)", id: "bass_power", planName: "大型パワードウーファー・パッケージ" },
+                            { name: "サイバーナビ・プラン", id: "digital_source", planName: "最高峰ナビ【サイバーナビ】プラン" }
+                          ].map(item => (
+                            <li key={item.name}>
+                              <button
+                                onClick={() => handleMenuClick(item)}
+                                className="text-gray-800 hover:text-blue-600 font-bold text-[11px] transition-colors text-left leading-tight"
+                              >
+                                {item.name}
+                              </button>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {/* Column 3: Expert (5 items) */}
+                      <div className="space-y-6 border-l border-gray-50 pl-6">
+                        <div className="flex items-center gap-3 text-purple-600">
+                          <Zap className="w-5 h-5" />
+                          <h4 className="font-black tracking-tighter text-lg uppercase text-black">施工・カスタム</h4>
                         </div>
+                        <ul className="space-y-3">
+                          {[
+                            { name: "カスタム・施工プラン", id: "custom_install", planName: "カスタム施工" },
+                            { name: "ツィーターCOOLマウント", id: "custom_install", planName: "ツィーターピラー埋め込み加工" },
+                            { name: "オリジナルアウターバッフル", id: "custom_install", planName: "オリジナルアウターバッフル製作" },
+                            { name: "サブウーハー施工アレコレ", id: "custom_install", planName: "サブウーハーインストールのアレコレ" },
+                            { name: "ヘッドユニット/プロセッサー", id: "digital_source", planName: "ヘッドユニット／プロセッサー" }
+                          ].map(item => (
+                            <li key={item.name}>
+                              <button
+                                onClick={() => handleMenuClick(item)}
+                                className="text-gray-800 hover:text-blue-600 font-bold text-[11px] transition-colors text-left leading-tight"
+                              >
+                                {item.name}
+                              </button>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {/* Column 4: Tech & Digital (6 items) */}
+                      <div className="space-y-6 border-l border-gray-50 pl-6">
+                        <div className="flex items-center gap-3 text-emerald-600">
+                          <Trophy className="w-5 h-5" />
+                          <h4 className="font-black tracking-tighter text-lg uppercase text-black">ハイレゾ・デジタル</h4>
+                        </div>
+                        <ul className="space-y-3">
+                          {[
+                            { name: "ハイレゾ導入のススメ", id: "digital_source", planName: "ハイレゾ導入のススメ" },
+                            { name: "いま注目！メディアプレーヤー", id: "digital_source", planName: "メディアプレーヤー" },
+                            { name: "デジタルソース・ビルドアップ", id: "digital_source", planName: "デジタルソース・ビルドアップ" }
+                          ].map(item => (
+                            <li key={item.name}>
+                              <button
+                                onClick={() => handleMenuClick(item)}
+                                className="text-gray-800 hover:text-blue-600 font-bold text-[11px] transition-colors text-left leading-tight"
+                              >
+                                {item.name}
+                              </button>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {/* Column 5: Environment (3 items) */}
+                      <div className="space-y-6 border-l border-gray-50 pl-6">
+                        <div className="flex items-center gap-3 text-blue-600">
+                          <Award className="w-5 h-5" />
+                          <h4 className="font-black tracking-tighter text-lg uppercase text-black">デッドニング・音響パーツ</h4>
+                        </div>
+                        <ul className="space-y-3">
+                          {[
+                            { name: "ドアチューニング (デッドニング)", id: "install_tuning", planName: "ドア・チューニング（デッドニング）" },
+                            { name: "サイレントチューニング (静音)", id: "install_tuning", planName: "サイレントチューニング(車内静音施工)" },
+                            { name: "電源強化 / バッ直施工", id: "install_tuning", planName: "電源バッ直・キャパシター・アース" }
+                          ].map(item => (
+                            <li key={item.name}>
+                              <button
+                                onClick={() => handleMenuClick(item)}
+                                className="text-gray-800 hover:text-blue-600 font-bold text-[11px] transition-colors text-left leading-tight"
+                              >
+                                {item.name}
+                              </button>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     </div>
                   </motion.div>
                 )}
               </AnimatePresence>
             </div>
-            <a href="#partners" className="hover:text-blue-500 transition-colors">Partners</a>
-            <a href="#blog" className="hover:text-blue-500 transition-colors">Blog</a>
-            <a href="#info" className="hover:text-blue-500 transition-colors">Info</a>
-            <a href="#contact" className="hover:text-blue-500 transition-colors">Contact</a>
+            <a href="#options" className="hover:text-blue-500 transition-colors">試聴スピーカー</a>
+            <a href="#blog" className="hover:text-blue-500 transition-colors">ブログ</a>
+            <a href="#partners" className="hover:text-blue-500 transition-colors">取扱ブランド</a>
+            <a href="#info" className="hover:text-blue-500 transition-colors">店舗案内</a>
+            <a href="#info" className="hover:text-blue-500 transition-colors">営業日</a>
           </nav>
 
+          {/* Right: Actions */}
           {/* Right: Actions */}
           <div className="flex-1 flex items-center justify-end gap-1.5 md:gap-3">
             {/* LINE Inquiry - Icon only on small screens */}
@@ -613,10 +942,13 @@ function MainView({
 
                 <nav className="flex flex-col gap-1 border-t border-gray-50 pt-4">
                   {[
-                    { href: "#", label: "Home" },
-                    { href: "#blog", label: "Blog" },
-                    { href: "#info", label: "Info" },
-                    { href: "#contact", label: "Contact" },
+                    { href: "#", label: "ホーム" },
+                    { href: "#services", label: "プラン一覧" },
+                    { href: "#options", label: "試聴スピーカー" },
+                    { href: "#blog", label: "ブログ" },
+                    { href: "#partners", label: "取扱ブランド" },
+                    { href: "#info", label: "店舗案内" },
+                    { href: "#info", label: "営業日" },
                   ].map((link, i) => (
                     <a
                       key={i}
@@ -676,201 +1008,38 @@ function MainView({
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent"></div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 py-32 md:py-48">
+        <div className="relative max-w-7xl mx-auto px-4 py-32 md:py-40">
           <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }}>
             <div className="flex flex-col gap-4 mb-8">
               <div className="inline-flex items-center gap-2 md:gap-3 w-fit px-4 py-2 md:px-6 md:py-2.5 bg-blue-600/10 backdrop-blur-md border border-blue-500/20 rounded-full">
                 <span className="text-blue-400 text-[9px] md:text-sm font-black uppercase tracking-[0.15em] whitespace-nowrap">
-                  福岡のカーオーディオ・セキュリティ専門店
+                  福岡のカーオーディオ専門店
                 </span>
-                <div className="w-px h-3 md:h-4 bg-blue-500/30"></div>
-                <span className="text-white text-[10px] md:text-sm font-black tracking-[0.1em] whitespace-nowrap">エナジー</span>
               </div>
             </div>
 
             <h1 className="text-3xl md:text-7xl font-black text-white mb-8 leading-[1.2] md:leading-[1.1] tracking-tighter">
-              <span className="block md:inline whitespace-nowrap">感性を揺さぶる至高の音。</span><br className="hidden md:block" />
-              <span className="block md:inline whitespace-nowrap">愛車を護る、確かな技術。</span>
+              <span className="block md:inline whitespace-nowrap">感性を揺さぶる至高の音、</span><br className="hidden md:block" />
+              <span className="block md:inline whitespace-nowrap">サウンドエナジー</span>
             </h1>
 
             <div className="flex flex-col gap-3 mb-10">
-              <div className="flex items-center gap-2.5">
-                <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
-                <span className="text-blue-500 text-lg md:text-3xl font-black opacity-90 tracking-tight leading-none">九州No.1のセキュリティ実績</span>
-              </div>
               <div className="flex items-center gap-2.5">
                 <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
                 <span className="text-blue-500 text-lg md:text-3xl font-black opacity-90 tracking-tight leading-none">パイオニア最高峰「TS-Z1GR」認定店</span>
               </div>
             </div>
             <p className="text-base md:text-2xl text-gray-200 mb-8 font-bold leading-relaxed max-w-3xl">
-              音を極め、愛車を護り続けて30年以上。<br className="hidden md:block" />
-              ハイエンド・オーディオの繊細な調音から、鉄壁のセキュリティ施工まで。<br className="hidden md:block" />
-              熟練の技で、あなたのカーライフに究極の感動と安心を。
+              音を極め、音楽の真髄を届け続けて30年以上。<br className="hidden md:block" />
+              国内屈指の技術を誇るハイエンド・オーディオの繊細な調音と施工。<br className="hidden md:block" />
+              熟練の職人技で、あなたのカーライフに究極の感動を。
             </p>
           </motion.div>
         </div>
-
-        {/* Service Bar */}
-        <div className="max-w-5xl mx-auto px-4 -mb-20 relative z-20">
-          <div className="bg-white rounded-2xl p-8 grid grid-cols-3 gap-6 shadow-2xl border border-gray-200">
-            <button
-              onClick={() => navigate('/audio')}
-              className="flex flex-col items-center gap-3 group hover:scale-105 transition-transform"
-            >
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-600 transition-colors">
-                <Speaker className="w-8 h-8 text-blue-600 group-hover:text-white transition-colors" />
-              </div>
-              <span className="font-bold text-sm text-gray-600 uppercase tracking-widest group-hover:text-blue-600 transition-colors">Car Audio</span>
-            </button>
-            <button
-              onClick={() => navigate('/security')}
-              className="flex flex-col items-center gap-3 group hover:scale-105 transition-transform"
-            >
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-600 transition-colors">
-                <ShieldCheck className="w-8 h-8 text-blue-600 group-hover:text-white transition-colors" />
-              </div>
-              <span className="font-bold text-sm text-gray-600 uppercase tracking-widest group-hover:text-blue-600 transition-colors">Car Security</span>
-            </button>
-            <button
-              onClick={() => navigate('/dashcam')}
-              className="flex flex-col items-center gap-3 group hover:scale-105 transition-transform"
-            >
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-600 transition-colors">
-                <Package className="w-8 h-8 text-blue-600 group-hover:text-white transition-colors" />
-              </div>
-              <span className="font-bold text-sm text-gray-600 uppercase tracking-widest group-hover:text-blue-600 transition-colors">Dashcam, Mirror & Others</span>
-            </button>
-          </div>
-        </div>
-      </section >
-
-      {/* Trust Signals */}
-      < section className="bg-white pt-32 pb-16" >
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="flex items-start gap-4 p-8 bg-gray-50 rounded-2xl border border-gray-100 transition-all hover:bg-gray-100/50 group">
-              <div className="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-500/10 group-hover:scale-105 transition-transform">
-                <Trophy className="w-7 h-7 text-white" />
-              </div>
-              <div>
-                <h2 className="font-black text-xl mb-1 tracking-tighter">九州セキュリティ施工実績No.1</h2>
-                <p className="text-xs text-blue-600 font-black uppercase tracking-widest mb-3">Security Performance No.1</p>
-                <p className="text-sm text-gray-600 leading-relaxed font-bold">
-                  カーセキュリティの累計施工台数において九州トップクラスの実績。培ったノウハウが確かな安心を支えます。
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4 p-8 bg-gray-50 rounded-2xl border border-gray-100 transition-all hover:bg-gray-100/50 group">
-              <div className="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-500/10 group-hover:scale-105 transition-transform">
-                <Music2 className="w-7 h-7 text-white" />
-              </div>
-              <div>
-                <h2 className="font-black text-xl mb-1 tracking-tighter">パイオニア TS-Z1GR 認定店</h2>
-                <p className="text-xs text-blue-600 font-black uppercase tracking-widest mb-3">Carrozzeria RS Certified Shop</p>
-                <p className="text-sm text-gray-600 leading-relaxed font-bold">
-                  厳しい実技審査をクリア。パイオニア最高峰スピーカーの真価を引き出す、全国でも希少な認定ショップです。
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4 p-8 bg-gray-50 rounded-2xl border border-gray-100 transition-all hover:bg-gray-100/50 group">
-              <div className="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-500/10 group-hover:scale-105 transition-transform">
-                <ShieldCheck className="w-7 h-7 text-white" />
-              </div>
-              <div>
-                <h2 className="font-black text-xl mb-1 tracking-tighter">最高峰SPS認定店</h2>
-                <p className="text-xs text-blue-600 font-bold uppercase tracking-widest mb-3">Security Professional Shop</p>
-                <p className="text-sm text-gray-600 leading-relaxed font-bold">
-                  最新の盗難手口を知り尽くした「プロ」の集団。Grgo・Pantheraの性能を100%引き出す施工を約束します。
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4 p-8 bg-gray-50 rounded-2xl border border-gray-100 transition-all hover:bg-gray-100/50 group">
-              <div className="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-500/10 group-hover:scale-105 transition-transform">
-                <History className="w-7 h-7 text-white" />
-              </div>
-              <div>
-                <h2 className="font-black text-xl mb-1 tracking-tighter">創業30年以上の信頼</h2>
-                <p className="text-xs text-blue-600 font-black uppercase tracking-widest mb-3">Over 30 Years Experience</p>
-                <p className="text-sm text-gray-600 leading-relaxed font-bold">
-                  福岡で30年以上。熟練の技術者による確かな施工と充実のアフターフォローで、一生涯のパートナーとなります。
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section >
-
-      {/* Packages */}
-      < section id="services" className="pt-32 pb-24 bg-gray-50" >
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <span className="text-blue-500 font-bold tracking-widest uppercase text-sm mb-4 block">Service Menu</span>
-            <h2 className="text-4xl font-bold leading-tight">施工メニュー</h2>
-            <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
-              ANGが提供する専門サービス。各カテゴリーのメニューより詳細をご覧いただけます。
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "オーディオメニュー",
-                subtitle: "スピーカー交換・音質向上",
-                description: "純正スピーカーからの交換で劇的な変化を。デッドニング（防振）込みのパッケージもご用意。",
-                image: assets.audioMenuImage,
-                onClick: () => navigate('/audio')
-              },
-              {
-                title: "セキュリティーメニュー",
-                subtitle: "愛車を守る最新システム",
-                description: "最新の盗難手口（リレーアタック等）から愛車をガード。車種別の最適プランをご提案。",
-                image: assets.securityMenuImage,
-                onClick: () => navigate('/security')
-              },
-              {
-                title: "ドラレコ・デジタルミラー・他",
-                subtitle: "安心・安全のドライブをサポート",
-                description: "前後ドラレコ、アルパイン製デジタルミラー、レーダー探知機等、配線を隠して美しく取り付け。",
-                image: assets.dashcamMenuImage,
-                onClick: () => navigate('/dashcam')
-              }
-            ].map((pkg, i) => (
-              <motion.div
-                key={i}
-                whileHover={{ y: -8 }}
-                onClick={pkg.onClick}
-                className="bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-200 flex flex-col cursor-pointer group"
-              >
-                <div className="h-48">
-                  <SafeImage src={pkg.image} className="w-full h-full object-cover" alt={pkg.title} />
-                </div>
-                <div className="p-6 flex-grow flex flex-col">
-                  <div className="text-xs font-bold text-blue-500 mb-1">{pkg.subtitle}</div>
-                  <h3 className="text-xl font-bold mb-3">{pkg.title}</h3>
-                  <p className="text-gray-500 text-sm mb-4 flex-grow">{pkg.description}</p>
-                  <button
-                    onClick={() => {
-                      if (pkg.title === "オーディオメニュー") navigate('/audio');
-                      if (pkg.title === "セキュリティーメニュー") navigate('/security');
-                      if (pkg.title === "ドラレコ・デジタルミラー・他") navigate('/dashcam');
-                    }}
-                    className="w-full bg-gray-900 text-white py-3 rounded-full font-bold hover:bg-gray-700 transition-colors"
-                  >
-                    詳細を見る
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section >
+      </section>
 
       {/* Latest Blog / Journal Style List */}
-      < section id="blog" className="py-32 bg-gray-50 relative overflow-hidden" >
+      < section id="blog" className="py-24 md:py-32 bg-gray-50 relative overflow-hidden" >
         {/* Decorative background elements */}
         < div className="absolute top-0 right-0 w-96 h-96 bg-blue-50 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl opacity-50" ></div >
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-50 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl opacity-50"></div>
@@ -878,8 +1047,8 @@ function MainView({
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div className="max-w-2xl">
-              <span className="text-blue-600 font-black tracking-[0.3em] uppercase text-xs mb-4 block">Journal & Case Studies</span>
-              <h2 className="text-4xl md:text-5xl font-black leading-tight tracking-tighter">施工事例・ブログ</h2>
+              <span className="text-blue-600 font-black tracking-[0.3em] uppercase text-xs mb-4 block">Journal & Blog</span>
+              <h2 className="text-4xl md:text-5xl font-black leading-tight tracking-tighter">ブログ</h2>
               <p className="text-gray-500 mt-4 font-bold leading-relaxed">
                 最新の施工事例や、カーオーディオ・セキュリティに関する役立つ情報を発信しています。
               </p>
@@ -958,6 +1127,283 @@ function MainView({
         </div>
       </section >
 
+      {/* Main Showroom Hub (Audio/Security Selection) */}
+      <section id="services" className="py-32 px-4 bg-white relative z-10">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-16 text-center md:text-left">
+            <span className="text-blue-600 font-black tracking-[0.3em] uppercase text-xs mb-4 block">Service Selection</span>
+            <h2 className="text-4xl md:text-5xl font-black leading-tight tracking-tighter mb-4">
+              {isSecurityDomain ? 'SECURITY CATALOG' : 'オーディオ・ラインナップ'}
+            </h2>
+            <p className={`text-sm font-bold uppercase tracking-[0.2em] opacity-40 ${theme === 'dark' ? 'text-emerald-400' : 'text-blue-600'}`}>
+              {isSecurityDomain ? 'Vault Grade Protection for Your Assets' : '最高の音響空間をすべての人に'}
+            </p>
+          </div>
+
+          <VaultGrid
+            categories={categories}
+            theme={theme}
+            onCategoryClick={(cat: any) => navigate(cat.path)}
+            handleMenuClick={handleMenuClick}
+          />
+        </div>
+      </section>
+
+      {/* Audition Speakers Showcase Section (Restored) */}
+      {
+        !isSecurityDomain && (
+          <section id="options" className="py-20 md:py-32 bg-gray-900 overflow-hidden relative">
+            <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+              <div className="absolute top-10 left-10 w-96 h-96 bg-blue-500 rounded-full blur-[150px]"></div>
+              <div className="absolute bottom-10 right-10 w-96 h-96 bg-purple-500 rounded-full blur-[150px]"></div>
+            </div>
+
+            <div className="max-w-7xl mx-auto px-4 relative z-10">
+              <div className="text-center mb-12 md:mb-20">
+                <span className="text-blue-400 font-black tracking-[0.4em] uppercase text-[10px] md:text-sm mb-4 md:mb-6 block">Audition Units</span>
+                <h2 className="text-3xl md:text-8xl font-black text-white tracking-tighter mb-6 md:mb-8 leading-none">
+                  常時試聴可能な<br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">スピーカーのご紹介</span>
+                </h2>
+                <p className="text-gray-400 font-bold text-sm md:text-xl max-w-3xl mx-auto mb-10 md:mb-16 leading-relaxed">
+                  百聞は一見（一聴）に如かず。ANGでは、国内外の厳選されたスピーカーを実際に聴き比べ、納得のいく音を見つけていただける環境を整えています。
+                </p>
+              </div>
+
+              {/* Dynamic Grid for Speakers */}
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 mb-12 md:mb-24">
+                {auditionSpeakers.flatMap(brand =>
+                  brand.units.map(unit => ({ ...unit, brand: brand.brand, origin: brand.origin }))
+                ).slice(0, 5).map((sp, i) => {
+                  const layouts = [
+                    { col: "md:col-span-8", row: "h-[300px] md:h-[500px]" },
+                    { col: "md:col-span-4", row: "h-[300px] md:h-[500px]" },
+                    { col: "md:col-span-4", row: "h-[300px] md:h-[450px]" },
+                    { col: "md:col-span-4", row: "h-[300px] md:h-[450px]" },
+                    { col: "md:col-span-4", row: "h-[300px] md:h-[450px]" }
+                  ];
+                  const layout = layouts[i] || { col: "md:col-span-4", row: "h-[300px] md:h-[400px]" };
+
+                  return (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ delay: i * 0.05 }}
+                      viewport={{ once: true }}
+                      className={`relative ${layout.col} ${layout.row} rounded-[1.5rem] md:rounded-[3rem] overflow-hidden shadow-2xl bg-gray-900 group cursor-pointer`}
+                      onClick={(e) => {
+                        if (sp.image) {
+                          e.stopPropagation();
+                          setSelectedAuditionImage(sp.image);
+                        } else {
+                          setShowFullAuditionList(true);
+                        }
+                      }}
+                    >
+                      <SafeImage
+                        src={sp.image || `https://picsum.photos/seed/speaker${i}/800/600`}
+                        className="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-700"
+                        alt={sp.model}
+                      />
+                      {sp.image && (
+                        <div className="absolute top-6 right-6 md:top-10 md:right-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                          <div className="w-10 h-10 md:w-14 md:h-14 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/20">
+                            <Search className="w-5 h-5 md:w-7 md:h-7" />
+                          </div>
+                        </div>
+                      )}
+
+                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/20 to-transparent"></div>
+
+                      <div className="absolute bottom-6 left-6 right-6 md:bottom-10 md:left-10 md:right-10">
+                        <div className="flex items-center gap-2 mb-2 md:mb-3">
+                          <span className="px-2 py-0.5 bg-blue-600/20 border border-blue-500/30 text-blue-400 text-[8px] md:text-[9px] font-black uppercase tracking-widest rounded-full">
+                            {sp.brand} ({sp.origin})
+                          </span>
+                          {sp.status === 'Demo Car' && (
+                            <span className="px-2 py-0.5 bg-green-600/20 border border-green-500/30 text-green-400 text-[8px] md:text-[9px] font-black uppercase tracking-widest rounded-full">
+                              Demo Car
+                            </span>
+                          )}
+                        </div>
+
+                        <h3 className="text-xl md:text-5xl font-black text-white mb-1 md:mb-4 tracking-tighter leading-none">
+                          {sp.model}
+                        </h3>
+
+                        <p className="text-gray-400 font-bold text-[10px] md:text-lg leading-relaxed line-clamp-2">
+                          {sp.description || "試聴室にて実際の音調をご確認いただけます。豊かな音楽体験をANGで。"}
+                        </p>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
+
+              <div className="flex flex-col items-center">
+                <div className="flex justify-center mb-12">
+                  <button
+                    onClick={() => setShowFullAuditionList(!showFullAuditionList)}
+                    className={`relative px-8 md:px-16 py-4 md:py-8 rounded-[1.5rem] md:rounded-[2.5rem] font-black text-xs md:text-xl tracking-widest transition-all shadow-2xl flex items-center gap-3 md:gap-6 group ${showFullAuditionList ? 'bg-blue-600 text-white' : 'bg-white text-gray-900 hover:bg-blue-600 hover:text-white'
+                      }`}
+                  >
+                    <Speaker className={`w-5 h-5 md:w-8 md:h-8 ${showFullAuditionList ? 'animate-pulse' : ''}`} />
+                    {showFullAuditionList ? '試聴スピーカー一覧を閉じる' : `試聴スピーカー一覧を見る (${auditionSpeakers.length}ブランド)`}
+                    <ChevronRight className={`w-4 h-4 md:w-6 md:h-6 transition-transform ${showFullAuditionList ? 'rotate-90' : ''}`} />
+                  </button>
+                </div>
+
+                <AnimatePresence>
+                  {showFullAuditionList && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      className="w-full overflow-hidden"
+                    >
+                      {auditionSpeakers.length === 0 ? (
+                        <div className="text-center py-20 bg-white/5 rounded-3xl border border-white/10">
+                          <p className="text-gray-500 font-bold mb-4">データが読み込めませんでした。</p>
+                          <button onClick={() => window.location.reload()} className="text-blue-400 underline">ページを再読み込みする</button>
+                        </div>
+                      ) : (
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-2 md:px-4 pb-24">
+                          {auditionSpeakers.map((brand: any, bIdx: number) => (
+                            <div key={bIdx} className="space-y-4">
+                              <div className="flex items-center gap-3 border-b border-white/10 pb-2 mb-4">
+                                <h4 className="text-lg md:text-xl font-black text-white">{brand.brand}</h4>
+                                <span className="text-[8px] font-mono text-gray-500 uppercase tracking-widest bg-white/5 px-2 py-0.5 rounded">{brand.origin}</span>
+                              </div>
+                              <div className="space-y-2">
+                                {brand.units.map((unit: any, uIdx: number) => (
+                                  <div key={uIdx} className="group p-4 rounded-xl bg-white/[0.03] border border-white/5 hover:bg-white/[0.07] hover:border-blue-500/30 transition-all flex gap-4">
+                                    {unit.image && (
+                                      <div
+                                        className="w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden shrink-0 border border-white/10 cursor-zoom-in relative group/img"
+                                        onClick={() => setSelectedAuditionImage(unit.image!)}
+                                      >
+                                        <SafeImage src={unit.image} className="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-500" alt={unit.model} />
+                                        <div className="absolute inset-0 bg-black/20 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center">
+                                          <Search className="w-4 h-4 text-white" />
+                                        </div>
+                                      </div>
+                                    )}
+                                    <div className="flex-1 flex flex-col gap-2">
+                                      <div className="flex justify-between items-start">
+                                        <div className="text-white font-bold text-xs md:text-sm group-hover:text-blue-400 transition-colors uppercase tracking-tight">{unit.model}</div>
+                                        <div className="flex items-center gap-1.5 shrink-0">
+                                          <div className={`w-1 h-1 rounded-full ${unit.status === 'Demo Car' ? 'bg-blue-400' : 'bg-green-400'}`}></div>
+                                          <span className={`text-[8px] font-black uppercase tracking-tighter ${unit.status === 'Demo Car' ? 'text-blue-400' : 'text-green-400'}`}>
+                                            {unit.status === 'Demo Car' ? 'DEMO' : 'AVAIL'}
+                                          </span>
+                                        </div>
+                                      </div>
+                                      <div className="flex items-center justify-between mt-1">
+                                        <div className="text-[10px] md:text-xs font-black text-blue-500">
+                                          {unit.price === 'Open' ? 'OPEN' : `${parseInt(unit.price || "0").toLocaleString()}円`}
+                                          {unit.taxExcluded && <span className="text-gray-600 text-[8px] ml-1 font-bold">({parseInt(unit.taxExcluded).toLocaleString()}円税抜)</span>}
+                                        </div>
+                                        {unit.youtube && (
+                                          <button
+                                            onClick={() => {
+                                              const videoId = typeof unit.youtube === 'string' ? unit.youtube.split('v=')[1]?.split('&')[0] : null;
+                                              if (videoId) setActiveYoutubeId(videoId);
+                                              else {
+                                                const searchQuery = encodeURIComponent(`${brand.brand} ${unit.model}`);
+                                                window.open(`https://www.youtube.com/results?search_query=${searchQuery}`, '_blank');
+                                              }
+                                            }}
+                                            className="flex items-center gap-1 text-[8px] font-black text-red-500 hover:text-red-400 transition-colors uppercase tracking-widest"
+                                          >
+                                            <Youtube className="w-2.5 h-2.5" />
+                                            SAMPLE
+                                          </button>
+                                        )}
+                                      </div>
+                                    </div>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            </div>
+          </section>
+        )
+      }
+
+      {/* YouTube Modal */}
+      <AnimatePresence>
+        {activeYoutubeId && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-black/95 backdrop-blur-xl"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="w-full max-w-4xl aspect-video bg-black rounded-3xl overflow-hidden shadow-2xl relative"
+            >
+              <button
+                onClick={() => setActiveYoutubeId(null)}
+                className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all z-10"
+                aria-label="動画を閉じる"
+              >
+                <X className="w-6 h-6" />
+              </button>
+              <iframe
+                src={`https://www.youtube.com/embed/${activeYoutubeId}?autoplay=1`}
+                className="w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Full Screen Image Modal */}
+      <AnimatePresence>
+        {selectedAuditionImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedAuditionImage(null)}
+            className="fixed inset-0 z-[300] flex items-center justify-center p-4 bg-black/95 backdrop-blur-2xl cursor-zoom-out"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="relative max-w-7xl max-h-full"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => setSelectedAuditionImage(null)}
+                className="absolute -top-12 right-0 text-white hover:text-blue-400 transition-colors flex items-center gap-2 font-black text-sm tracking-widest uppercase"
+                aria-label="画像を閉じる"
+              >
+                CLOSE <X className="w-6 h-6" />
+              </button>
+              <SafeImage
+                src={selectedAuditionImage}
+                className="max-w-full max-h-[85vh] object-contain rounded-2xl shadow-2xl border border-white/10"
+                alt="Selected Speaker"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Business Calendar */}
       < div id="info" >
         <BusinessCalendar />
@@ -1008,7 +1454,7 @@ function MainView({
             <div className="lg:sticky lg:top-32 space-y-8">
               <div>
                 <span className="text-blue-500 font-black text-xs uppercase tracking-[0.3em] mb-4 block">Shop Access</span>
-                <h2 className="text-3xl font-black text-white mb-6 tracking-tighter">店舗のご案内</h2>
+                <h2 className="text-3xl font-black text-white mb-6 tracking-tighter">店舗案内</h2>
                 <p className="text-gray-300 font-bold leading-relaxed mb-8">
                   福岡県大野城市の御笠川沿いに店舗を構えております。
                   こちらの外観を目印にお越しください。駐車場も完備しております。
