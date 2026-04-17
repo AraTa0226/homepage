@@ -67,6 +67,7 @@ interface BlogPost {
   image?: string;
 }
 
+// DEPLOY_TIMESTAMP: 2026-04-18T04:45:00Z - Forced Sync for Mobile Menu & Desktop Fix
 export default function App() {
   return (
     <BrowserRouter>
@@ -336,7 +337,7 @@ const VaultGrid = ({ categories, onCategoryClick, theme, handleMenuClick }: any)
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: i * 0.1 }}
           onClick={() => onCategoryClick(cat)}
-          className={`group relative rounded-[2.5rem] overflow-hidden cursor-pointer shadow-2xl border border-white/10 w-full min-h-[550px] md:h-full ${cat.gridClass || "col-span-1"
+          className={`group relative rounded-[2.5rem] overflow-hidden cursor-pointer shadow-2xl border border-white/10 w-full min-h-[550px] md:min-h-0 md:h-full ${cat.gridClass || "col-span-1"
             }`}
         >
           {/* Background Image */}
