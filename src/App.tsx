@@ -816,7 +816,7 @@ function MainView({
                   </button>
                 </div>
 
-                <nav className="flex flex-col gap-1 border-t border-gray-50 pt-4">
+                <nav className="flex flex-col gap-2 border-t border-gray-50 pt-4">
                   {[
                     { href: "#", en: "HOME", jp: "ホーム" },
                     { href: "#blog", en: "BLOG", jp: "ブログ" },
@@ -825,24 +825,28 @@ function MainView({
                     { href: "#partners", en: "BRANDS", jp: "取扱ブランド" },
                     { href: "#info", en: "SCHEDULE", jp: "営業日" },
                     { href: "#access", en: "ACCESS", jp: "店舗案内" },
-                  ].map((link, i) => (
-                    <a
-                      key={i}
-                      href={link.href}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        const element = document.querySelector(link.href);
-                        if (element) {
-                          element.scrollIntoView({ behavior: 'smooth' });
-                          setIsMobileMenuOpen(false);
-                        }
-                      }}
-                      className="group p-4 flex flex-col justify-center rounded-2xl bg-white border border-gray-100 shadow-sm active:bg-gray-50 transition-all"
-                    >
-                      <span className="text-sm font-black tracking-[0.2em] group-active:text-blue-600">{link.en}</span>
-                      <span className="text-[10px] font-bold text-gray-400 mt-1">{link.jp}</span>
-                    </a>
-                  ))}
+                  ].map((link, i) => {
+                    const isActive = location.hash === link.href;
+                    return (
+                      <a
+                        key={i}
+                        href={link.href}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className={`group flex items-center justify-between p-4 rounded-2xl border transition-all ${isActive
+                          ? 'bg-blue-600 border-blue-500 text-white'
+                          : 'bg-white border-gray-100 text-gray-900 active:bg-gray-50'
+                          }`}
+                      >
+                        <div className="flex flex-col gap-1">
+                          <span className={`text-sm font-black tracking-widest ${isActive ? 'text-white' : 'text-gray-900'}`}>{link.en}</span>
+                          <span className={`text-[9px] font-bold ${isActive ? 'text-white/70' : 'text-gray-400'}`}>{link.jp}</span>
+                        </div>
+                        <div className={`w-8 h-8 rounded-xl flex items-center justify-center transition-colors ${isActive ? 'bg-white/20' : 'bg-gray-50 group-active:bg-blue-600 group-active:text-white'}`}>
+                          <ChevronRight className="w-4 h-4" />
+                        </div>
+                      </a>
+                    );
+                  })}
                 </nav>
               </div>
 
@@ -976,9 +980,9 @@ function MainView({
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: i * 0.1 }}
                     viewport={{ once: true, margin: "-50px" }}
-                    className="group flex flex-col md:flex-row md:items-center bg-white rounded-3xl overflow-hidden shadow-lg shadow-gray-200/50 border border-gray-100 hover:shadow-2xl hover:shadow-blue-500/10 transition-all hover:-translate-y-1 p-6 md:p-8 gap-6"
+                    className="group flex flex-col md:flex-row md:items-center bg-white rounded-2xl md:rounded-3xl overflow-hidden shadow-lg shadow-gray-200/50 border border-gray-100 hover:shadow-2xl hover:shadow-blue-500/10 transition-all hover:-translate-y-1 p-4 md:p-8 gap-3 md:gap-6"
                   >
-                    <div className={`w-2 h-12 md:h-16 rounded-full ${color.icon} shrink-0`}></div>
+                    <div className={`w-1 h-8 md:w-2 md:h-16 rounded-full ${color.icon} shrink-0`}></div>
 
                     <div className="flex flex-col md:flex-row md:items-center flex-grow gap-4 md:gap-8">
                       <div className="flex items-center gap-4 shrink-0 md:w-32">
@@ -994,8 +998,8 @@ function MainView({
 
                     <div className="flex items-center justify-between md:justify-end shrink-0 gap-4">
                       <span className="md:hidden text-[10px] font-black text-gray-500 uppercase tracking-widest group-hover:text-blue-600 transition-colors">Read More</span>
-                      <div className="w-12 h-12 rounded-2xl bg-gray-50 flex items-center justify-center group-hover:bg-blue-600 transition-all shadow-sm">
-                        <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-white transition-colors" />
+                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-gray-50 flex items-center justify-center group-hover:bg-blue-600 transition-all shadow-sm">
+                        <ChevronRight className="w-4 h-4 md:w-5 md:h-5 text-gray-500 group-hover:text-white transition-colors" />
                       </div>
                     </div>
                   </motion.a>
@@ -1314,45 +1318,57 @@ function MainView({
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                {facilities.map((facility, i) => (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-6">
+                {categories.map((category, index) => (
                   <motion.div
-                    key={i}
-                    whileHover={{ scale: 1.02 }}
-                    className="group relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 bg-white/5"
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.05 }}
+                    viewport={{ once: true }}
+                    className="group relative h-[200px] md:h-[450px] rounded-[2rem] md:rounded-[3rem] overflow-hidden bg-gray-900 border border-white/10 cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-700"
+                    onClick={() => onCategoryClick(category)}
                   >
-                    <SafeImage
-                      src={facility.image}
-                      alt={facility.title + "の写真"}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60 group-hover:opacity-100"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-4">
-                      <p className="text-white font-black text-xs tracking-wider">{facility.title}</p>
+                    {/* Background Image */}
+                    <div className="absolute inset-0">
+                      <SafeImage
+                        src={category.image}
+                        className="w-full h-full object-cover opacity-50 group-hover:opacity-30 group-hover:scale-110 transition-all duration-1000"
+                        alt={category.title}
+                      />
+                      <div className={`absolute inset-0 bg-gradient-to-t ${getThemeColor(theme)} via-black/20 to-transparent`}></div>
                     </div>
+
+                    {/* Content Container */}
+                    <div className="absolute inset-0 p-6 md:p-10 flex flex-col justify-end">
+                      <div className="mb-4 md:mb-6">
+                        <div className="flex items-center gap-2 mb-2">
+                          <span className={`w-1.5 h-1.5 rounded-full ${theme === 'dark' ? 'bg-emerald-400' : 'bg-blue-400'}`} />
+                          <span className="text-[8px] md:text-[10px] font-black uppercase tracking-[0.3em] opacity-60 text-white">
+                            Vault Grade
+                          </span>
+                        </div>
+                        <h3 className="text-lg md:text-3xl font-black text-white leading-tight tracking-tighter mb-2">
+                          {category.title}
+                        </h3>
+                        <p className="text-[10px] md:text-sm text-gray-400 font-bold opacity-100 md:opacity-100 transform translate-y-0 md:translate-y-2 group-hover:translate-y-0 transition-all duration-500 line-clamp-2">
+                          {category.description || category.subtitle}
+                        </p>
+                      </div>
+
+                      {/* Action Button */}
+                      <div className="flex items-center gap-3">
+                        <div className={`w-8 h-8 md:w-12 md:h-12 rounded-xl md:rounded-2xl ${theme === 'dark' ? 'bg-emerald-600' : 'bg-blue-600'} flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-500`}>
+                          <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
+                        </div>
+                        <span className="text-[10px] md:text-xs font-black uppercase tracking-widest text-white/40 group-hover:text-white transition-colors">View Plans</span>
+                      </div>
+                    </div>
+
+                    {/* Hover Glitch Effect Line */}
+                    <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent ${theme === 'dark' ? 'via-emerald-500' : 'via-blue-500'} to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000`} />
                   </motion.div>
                 ))}
-              </div>
-            </div>
-
-            <div className="lg:sticky lg:top-32 space-y-8">
-              <div>
-                <span className="text-blue-500 font-black text-xs uppercase tracking-[0.3em] mb-4 block">Shop Access</span>
-                <h2 className="text-3xl font-black text-white mb-6 tracking-tighter">店舗案内</h2>
-                <p className="text-gray-300 font-bold leading-relaxed mb-8">
-                  福岡県大野城市の御笠川沿いに店舗を構えております。
-                  こちらの外観を目印にお越しください。駐車場も完備しております。
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/10">
-                    <div className="w-10 h-10 rounded-xl bg-blue-600/20 flex items-center justify-center shrink-0">
-                      <MapPin className="w-5 h-5 text-blue-500" />
-                    </div>
-                    <div>
-                      <p className="text-white font-bold text-sm">所在地</p>
-                      <p className="text-sm text-gray-400">〒816-0912 福岡県大野城市御笠川5-4-14</p>
-                    </div>
-                  </div>
-                </div>
               </div>
 
               <div className="w-full h-[240px] rounded-3xl overflow-hidden shadow-2xl border border-white/10 grayscale hover:grayscale-0 transition-all duration-700">
