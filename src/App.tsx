@@ -819,7 +819,7 @@ function MainView({
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 bottom-0 w-[280px] bg-white z-[100] shadow-2xl lg:hidden flex flex-col"
+              className="fixed top-0 right-0 bottom-0 w-[80%] max-w-[340px] bg-white z-[100] shadow-2xl lg:hidden flex flex-col"
             >
               <div className="p-6 flex items-center justify-between border-b border-gray-50">
                 <span className="font-black tracking-tighter text-xl">MENU</span>
@@ -848,7 +848,7 @@ function MainView({
 
                     return (
                       <div key={i} className="flex flex-col gap-2">
-                        <a
+                        <div
                           href={link.href}
                           onClick={(e) => {
                             if (isExpandable) {
@@ -858,8 +858,8 @@ function MainView({
                               setIsMobileMenuOpen(false);
                             }
                           }}
-                          className={`group flex items-center justify-between p-4 rounded-2xl border transition-all ${isActive
-                            ? 'bg-blue-600 border-blue-500 text-white'
+                          className={`group flex items-center justify-between p-4 rounded-2xl border transition-all cursor-pointer ${isActive
+                            ? 'bg-blue-600 border-blue-500 text-white shadow-lg shadow-blue-500/10'
                             : 'bg-white border-gray-100 text-gray-900 active:bg-gray-50'
                             }`}
                         >
@@ -870,7 +870,7 @@ function MainView({
                           <div className={`w-8 h-8 rounded-xl flex items-center justify-center transition-all ${isActive ? 'bg-white/20' : 'bg-gray-50 group-active:bg-blue-600 group-active:text-white'} ${isExpandable && isLineupExpanded ? 'rotate-90' : ''}`}>
                             <ChevronRight className="w-4 h-4" />
                           </div>
-                        </a>
+                        </div>
 
                         {/* Accordion Content */}
                         {isExpandable && (
@@ -918,13 +918,13 @@ function MainView({
                                               setIsMobileMenuOpen(false);
                                               handleMenuClick(target);
                                             }}
-                                            className="text-[15px] font-bold text-gray-500 hover:text-blue-600 transition-colors text-left flex items-center justify-between group/link py-4 border-b border-gray-100 last:border-0"
+                                            className="text-[14px] leading-snug font-bold text-gray-500 hover:text-blue-600 transition-colors text-left flex items-center justify-between group/link py-4 border-b border-gray-100 last:border-0"
                                           >
-                                            <span className="flex items-center gap-3">
-                                              <div className="w-1.5 h-1.5 rounded-full bg-blue-100 group-hover/link:bg-blue-400 transition-colors" />
+                                            <span className="flex items-center gap-2">
+                                              <div className="w-1.5 h-1.5 rounded-full bg-blue-100 group-hover/link:bg-blue-400 transition-colors shrink-0" />
                                               {item}
                                             </span>
-                                            <ChevronRight className="w-4 h-4 opacity-30 group-hover/link:opacity-100 transition-all -translate-x-2 group-hover/link:translate-x-0" />
+                                            <ChevronRight className="w-4 h-4 opacity-30 group-hover/link:opacity-100 transition-all -translate-x-1 group-hover/link:translate-x-0 ml-2" />
                                           </button>
                                         ))}
                                       </div>
