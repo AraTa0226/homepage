@@ -328,7 +328,7 @@ function AppContent() {
 
 const VaultGrid = ({ categories, onCategoryClick, theme, handleMenuClick }: any) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[350px] lg:auto-rows-[450px]">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-auto md:auto-rows-[350px] lg:auto-rows-[450px]">
       {categories.map((cat: any, i: number) => (
         <motion.div
           key={cat.id}
@@ -336,7 +336,7 @@ const VaultGrid = ({ categories, onCategoryClick, theme, handleMenuClick }: any)
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: i * 0.1 }}
           onClick={() => onCategoryClick(cat)}
-          className={`group relative rounded-[2.5rem] overflow-hidden cursor-pointer shadow-2xl border border-white/10 ${cat.gridClass || "col-span-1"
+          className={`group relative rounded-[2.5rem] overflow-hidden cursor-pointer shadow-2xl border border-white/10 w-full h-auto md:h-full ${cat.gridClass || "col-span-1"
             }`}
         >
           {/* Background Image */}
@@ -353,17 +353,17 @@ const VaultGrid = ({ categories, onCategoryClick, theme, handleMenuClick }: any)
             }`} />
 
           {/* Content HUD */}
-          <div className="absolute inset-0 p-8 flex flex-col justify-end">
-            <div className={`mb-auto flex items-center gap-2 ${theme === 'dark' ? 'text-emerald-400' : 'text-blue-600'}`}>
+          <div className="absolute inset-0 p-6 md:p-8 flex flex-col pt-24 md:pt-8">
+            <div className={`mb-2 md:mb-auto flex items-center gap-2 ${theme === 'dark' ? 'text-emerald-400' : 'text-blue-600'}`}>
               <span className="text-[10px] font-black uppercase tracking-[0.3em]">{cat.subtitle}</span>
               <div className="h-[1px] flex-grow bg-current opacity-30" />
             </div>
 
-            <h3 className={`text-4xl font-black tracking-tighter mb-6 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+            <h3 className={`text-2xl md:text-4xl font-black tracking-tighter mb-4 md:mb-6 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
               {cat.title}
             </h3>
 
-            <div className="space-y-3 relative z-10">
+            <div className="space-y-3 relative z-10 flex flex-col justify-end flex-grow pb-2">
               {cat.items.map((item: string, j: number) => (
                 <div
                   key={j}
