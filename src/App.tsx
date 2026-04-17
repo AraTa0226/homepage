@@ -68,7 +68,7 @@ interface BlogPost {
 }
 
 // DEPLOY_TIMESTAMP: 2026-04-18T05:05:00Z - Restored Lineup Megamenu & Sub-menu
-const MegaMenu = ({ show, categories, theme, onClose }: any) => {
+const MegaMenu = ({ show, categories, theme, onClose, navigate, handleMenuClick }: any) => {
   return (
     <AnimatePresence>
       {show && (
@@ -78,21 +78,53 @@ const MegaMenu = ({ show, categories, theme, onClose }: any) => {
           exit={{ opacity: 0, y: 10 }}
           className="absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50 pointer-events-auto"
         >
-          <div className={`rounded-3xl shadow-2xl overflow-hidden border ${theme === 'dark' ? 'bg-black border-white/10' : 'bg-white border-gray-100'} p-8 w-[800px]`}>
-            <div className="grid grid-cols-3 gap-8">
+          <div className={`rounded-3xl shadow-2xl overflow-hidden border ${theme === 'dark' ? 'bg-black border-white/10' : 'bg-white border-gray-100'} p-10 w-[1100px]`}>
+            <div className="grid grid-cols-5 gap-8">
               {categories.map((cat: any) => (
-                <Link
-                  key={cat.id}
-                  to={cat.path}
-                  onClick={onClose}
-                  className="group/m relative h-40 rounded-2xl overflow-hidden"
-                >
-                  <SafeImage src={cat.image} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover/m:scale-110" />
-                  <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-4 text-white">
-                    <span className="text-[8px] font-bold tracking-widest opacity-80 uppercase">{cat.subtitle}</span>
-                    <span className="text-sm font-black leading-tight">{cat.title}</span>
+                <div key={cat.id} className="flex flex-col gap-4">
+                  <div
+                    onClick={() => {
+                      onClose();
+                      navigate(cat.path);
+                    }}
+                    className="flex flex-col gap-1 border-b border-gray-100 pb-3 group/header cursor-pointer"
+                  >
+                    <span className="text-[9px] font-black tracking-[0.2em] text-blue-600 uppercase">{cat.subtitle}</span>
+                    <span className={`text-[13px] font-black tracking-tight transition-colors ${theme === 'dark' ? 'text-white' : 'text-gray-900'} group-hover/header:text-blue-600`}>
+                      {cat.title.split('・')[0]}
+                    </span>
                   </div>
-                </Link>
+                  <div className="flex flex-col gap-3">
+                    {cat.items.map((item: string, idx: number) => (
+                      <button
+                        key={idx}
+                        onClick={() => {
+                          const planMapping: Record<string, any> = {
+                            "BASIC line (コアキシャル)": { id: "speaker_package", planName: "スピーカー交換BASIC line（コアキシャル）" },
+                            "BASIC line (セパレート)": { id: "speaker_package", planName: "スピーカー交換BASIC line（セパレート）" },
+                            "STANDARD line (10万円まで)": { id: "speaker_package", planName: "スピーカー交換STANDARD line（10万円まで）" },
+                            "PREMIUM line (10万円以上)": { id: "speaker_package", planName: "スピーカー交換PREMIUM line（10万円以上）" },
+                            "BMW専用パッケージ": { id: "speaker_package", planName: "BMWスピーカー交換パッケージ" },
+                            "Mercedes Benz専用パッケージ": { id: "speaker_package", planName: "Mercedes Benzスピーカー交換パッケージ" },
+                            "AMP内蔵DSPパッケージ": { id: "digital_source", planName: "アンプ内蔵DSPパッケージ" },
+                            "AMPレスDSPパッケージ": { id: "digital_source", planName: "アンプレスDSPパッケージ" },
+                            "お手軽低音増強 (パワード)": { id: "bass_power", planName: "チューンナップウーファー・パッケージ" },
+                            "お手軽低音増強＋ (アンプ別)": { id: "bass_power", planName: "大型パワードウーファー・パッケージ" },
+                            "店内の常時試聴ユニット": { id: "audition-showcase", isAnchor: true },
+                            "施工ブログ / 店舗詳細": { id: "contact", isAnchor: true }
+                          };
+                          const target = planMapping[item] || { id: cat.id };
+                          onClose();
+                          handleMenuClick(target);
+                        }}
+                        className="text-[11px] font-bold text-gray-400 hover:text-blue-600 transition-all hover:translate-x-1 text-left flex items-center gap-2 group/link"
+                      >
+                        <div className="w-1 h-1 rounded-full bg-gray-200 group-hover/link:bg-blue-400 transition-colors" />
+                        {item}
+                      </button>
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
           </div>
@@ -716,6 +748,8 @@ function MainView({
                 categories={categories}
                 theme={theme}
                 onClose={() => setShowMegaMenu(false)}
+                navigate={navigate}
+                handleMenuClick={handleMenuClick}
               />
             </div>
             <a href="#access" className="flex flex-col items-center group/item transition-colors">
