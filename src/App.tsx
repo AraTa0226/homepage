@@ -241,13 +241,12 @@ function AppContent() {
   useEffect(() => {
     const fetchPostsAndData = async () => {
       try {
-        const [postsResponse, cmsResponse] = await Promise.all([
-          fetch('https://www.soundang.com/webbrog/wp-json/wp-json/wp/v2/posts?per_page=3&_embed'),
-          fetch('/api/cms?all=true') // Assuming backend can handle a single 'all' request, or we just fetch the main one
+        const [postsResponse] = await Promise.all([
+          fetch('https://www.soundang.com/webbrog/wp-json/wp/v2/posts?per_page=3&_embed')
         ]);
 
         if (postsResponse.ok) {
-          const data = await postsResponse.json();
+          const data = await postsResponse.ok ? await postsResponse.json() : [];
           const formattedPosts = data.map((post: any) => {
             const date = new Date(post.date);
             const category = post._embedded?.['wp:term']?.[0]?.[0]?.name || 'Blog';
@@ -255,7 +254,7 @@ function AppContent() {
             return {
               date: `${date.getFullYear()}.${String(date.getMonth() + 1).padStart(2, '0')}.${String(date.getDate()).padStart(2, '0')}`,
               category: category,
-              title: post.title.rendered.replace(/&nbsp;/g, ' ').replace(/&#8211;/g, '–'),
+              title: post.title.rendered.replace(/&nbsp;/g, ' ').replace(/&#8211;/g, '–').replace(/&#8212;/g, '—').replace(/&#8220;/g, '“').replace(/&#8221;/g, '”').replace(/&#8216;/g, '‘').replace(/&#8217;/g, '’'),
               link: post.link,
               image: image
             };
