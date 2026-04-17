@@ -890,10 +890,10 @@ function MainView({
                                           setIsMobileMenuOpen(false);
                                           navigate(cat.path);
                                         }}
-                                        className="flex items-center gap-2 text-blue-600 font-black text-[10px] uppercase tracking-widest border-l-2 border-blue-500 pl-3 py-1 cursor-pointer hover:text-blue-700"
+                                        className="flex items-center gap-2 text-blue-600 font-black text-sm uppercase tracking-[0.15em] border-l-4 border-blue-500 pl-4 py-2 cursor-pointer hover:bg-blue-50/50 rounded-r-lg"
                                       >
                                         {cat.subtitle}
-                                        <ArrowUpRight className="w-3 h-3 opacity-40" />
+                                        <ArrowUpRight className="w-4 h-4 opacity-40 ml-auto" />
                                       </div>
                                       <div className="flex flex-col gap-1.5 pl-3">
                                         {cat.items.map((item: string, idx: number) => (
@@ -918,13 +918,13 @@ function MainView({
                                               setIsMobileMenuOpen(false);
                                               handleMenuClick(target);
                                             }}
-                                            className="text-[11px] font-bold text-gray-400 hover:text-blue-600 transition-colors text-left flex items-center justify-between group/link"
+                                            className="text-[15px] font-bold text-gray-500 hover:text-blue-600 transition-colors text-left flex items-center justify-between group/link py-4 border-b border-gray-100 last:border-0"
                                           >
-                                            <span className="flex items-center gap-2">
-                                              <div className="w-1 h-1 rounded-full bg-gray-200 group-hover/link:bg-blue-400 transition-colors" />
+                                            <span className="flex items-center gap-3">
+                                              <div className="w-1.5 h-1.5 rounded-full bg-blue-100 group-hover/link:bg-blue-400 transition-colors" />
                                               {item}
                                             </span>
-                                            <ChevronRight className="w-3 h-3 opacity-0 group-hover/link:opacity-100 transition-all -translate-x-2 group-hover/link:translate-x-0" />
+                                            <ChevronRight className="w-4 h-4 opacity-30 group-hover/link:opacity-100 transition-all -translate-x-2 group-hover/link:translate-x-0" />
                                           </button>
                                         ))}
                                       </div>
