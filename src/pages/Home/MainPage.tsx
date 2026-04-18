@@ -51,19 +51,54 @@ const MegaMenu = ({ show, categories, theme, onClose, navigate, handleMenuClick 
                     className="absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50 pointer-events-auto"
                 >
                     <div className={`rounded-3xl shadow-2xl overflow-hidden border ${theme === 'dark' ? 'bg-black border-white/10' : 'bg-white border-gray-100'} p-10 w-[1100px]`}>
-                        <VaultGrid
-                            categories={categories}
-                            theme={theme}
-                            onCategoryClick={(cat: any) => {
-                                onClose();
-                                navigate(cat.path);
-                            }}
-                            handleMenuClick={(target: any) => {
-                                onClose();
-                                handleMenuClick(target);
-                            }}
-                            isMegaMenu={true}
-                        />
+                        <div className="grid grid-cols-5 gap-8">
+                            {categories.map((cat: any) => (
+                                <div key={cat.id} className="flex flex-col gap-4">
+                                    <div
+                                        onClick={() => {
+                                            onClose();
+                                            navigate(cat.path);
+                                        }}
+                                        className="flex flex-col gap-1 border-b border-gray-100 pb-3 group/header cursor-pointer"
+                                    >
+                                        <span className="text-[9px] font-black tracking-[0.2em] text-blue-600 uppercase">{cat.subtitle}</span>
+                                        <span className={`text-[13px] font-black tracking-tight transition-colors ${theme === 'dark' ? 'text-white' : 'text-gray-900'} group-hover/header:text-blue-600`}>
+                                            {cat.title.split('・')[0]}
+                                        </span>
+                                    </div>
+                                    <div className="flex flex-col gap-3">
+                                        {cat.items.map((item: string, idx: number) => (
+                                            <button
+                                                key={idx}
+                                                onClick={() => {
+                                                    const planMapping: Record<string, any> = {
+                                                        "BASIC line (コアキシャル)": { id: "speaker_package", planName: "スピーカー交換BASIC line（コアキシャル）" },
+                                                        "BASIC line (セパレート)": { id: "speaker_package", planName: "スピーカー交換BASIC line（セパレート）" },
+                                                        "STANDARD line (10万円まで)": { id: "speaker_package", planName: "スピーカー交換STANDARD line（10万円まで）" },
+                                                        "PREMIUM line (10万円以上)": { id: "speaker_package", planName: "スピーカー交換PREMIUM line（10万円以上）" },
+                                                        "BMW専用パッケージ": { id: "speaker_package", planName: "BMWスピーカー交換パッケージ" },
+                                                        "Mercedes Benz専用パッケージ": { id: "speaker_package", planName: "Mercedes Benzスピーカー交換パッケージ" },
+                                                        "AMP内蔵DSPパッケージ": { id: "digital_source", planName: "アンプ内蔵DSPパッケージ" },
+                                                        "AMPレスDSPパッケージ": { id: "digital_source", planName: "アンプレスDSPパッケージ" },
+                                                        "お手軽低音増強 (パワード)": { id: "bass_power", planName: "チューンナップウーファー・パッケージ" },
+                                                        "お手軽低音増強＋ (アンプ別)": { id: "bass_power", planName: "大型パワードウーファー・パッケージ" },
+                                                        "店内の常時試聴ユニット": { id: "audition-showcase", isAnchor: true },
+                                                        "施工ブログ / 店舗詳細": { id: "contact", isAnchor: true }
+                                                    };
+                                                    const target = planMapping[item] || { id: cat.id };
+                                                    onClose();
+                                                    handleMenuClick(target);
+                                                }}
+                                                className="text-[11px] font-bold text-gray-400 hover:text-blue-600 transition-all hover:translate-x-1 text-left flex items-center gap-2 group/link"
+                                            >
+                                                <div className="w-1 h-1 rounded-full bg-gray-200 group-hover/link:bg-blue-400 transition-colors" />
+                                                {item}
+                                            </button>
+                                        ))}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </motion.div>
             )}
@@ -481,20 +516,41 @@ export const MainPage: React.FC<MainPageProps> = ({
                         </div>
                     ) : posts.length > 0 ? (
                         <div className="flex flex-col gap-4">
-                            {posts.map((post, i) => (
-                                <motion.a
-                                    key={i}
-                                    href={post.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="group flex flex-col md:flex-row md:items-center bg-white rounded-2xl p-4 md:p-8 gap-3 md:gap-6 border border-gray-100 shadow-sm hover:shadow-xl transition-all"
-                                >
-                                    <div className="text-gray-500 font-mono text-sm shrink-0">{post.date}</div>
-                                    <h3 className="text-lg md:text-xl font-black flex-grow group-hover:text-blue-600 transition-colors"
-                                        dangerouslySetInnerHTML={{ __html: post.title }} />
-                                    <ChevronRight className="w-5 h-5 text-gray-300 transition-transform group-hover:translate-x-1" />
-                                </motion.a>
-                            ))}
+                            {posts.map((post, i) => {
+                                // Colors based on index (1st: Blue, 2nd: Emerald, 3rd: Purple)
+                                const cycleColors = ['bg-blue-500', 'bg-emerald-500', 'bg-purple-500'];
+                                const accentColor = cycleColors[i % cycleColors.length];
+
+                                return (
+                                    <motion.a
+                                        key={i}
+                                        href={post.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        initial={{ opacity: 0, x: -20 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        transition={{ delay: i * 0.1 }}
+                                        className="group relative flex flex-col md:flex-row md:items-center bg-white rounded-2xl p-6 md:p-8 gap-3 md:gap-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all overflow-hidden"
+                                    >
+                                        <div className={`absolute left-0 top-0 bottom-0 w-1.5 ${accentColor} opacity-70 group-hover:opacity-100 transition-opacity`}></div>
+
+                                        <div className="flex flex-col gap-1 shrink-0">
+                                            <div className="text-gray-400 font-mono text-xs font-bold">{post.date}</div>
+                                            <span className={`text-[10px] font-black uppercase tracking-widest ${accentColor.replace('bg-', 'text-')} px-2 py-0.5 bg-gray-50 rounded-full w-fit`}>
+                                                {post.category}
+                                            </span>
+                                        </div>
+
+                                        <h3 className="text-lg md:text-xl font-black flex-grow group-hover:text-blue-600 transition-colors leading-snug"
+                                            dangerouslySetInnerHTML={{ __html: post.title }} />
+
+                                        <div className="flex items-center gap-4 text-gray-300">
+                                            <span className="hidden md:block text-[9px] font-black tracking-widest group-hover:text-blue-500 transition-colors">READ MORE</span>
+                                            <ChevronRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                                        </div>
+                                    </motion.a>
+                                );
+                            })}
                         </div>
                     ) : (
                         <p className="text-center text-gray-400 py-10 font-bold">記事が見つかりませんでした。</p>
@@ -519,17 +575,99 @@ export const MainPage: React.FC<MainPageProps> = ({
 
             {/* Audition Showcase */}
             {!isSecurityDomain && (
-                <section id="options" className="py-24 bg-gray-900 text-white">
-                    <div className="max-w-7xl mx-auto px-4">
-                        <h2 className="text-3xl md:text-7xl font-black tracking-tighter mb-12">AUDITION</h2>
-                        <div className="text-center mt-12">
+                <section id="options" className="py-24 md:py-32 bg-gray-900 text-white relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-600/5 skew-x-12 translate-x-1/2"></div>
+                    <div className="max-w-7xl mx-auto px-4 relative z-10">
+                        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                            <div className="max-w-2xl">
+                                <span className="text-blue-500 font-black tracking-[0.3em] uppercase text-xs mb-4 block">Sonic Experience Center</span>
+                                <h2 className="text-4xl md:text-7xl font-black tracking-tighter leading-tight">AUDITION</h2>
+                                <p className="text-gray-400 mt-6 font-bold text-lg leading-relaxed">
+                                    店内の常時試聴ユニットで、世界最高峰のサウンドをご体感ください。<br />
+                                    熟練のインストーラーが、お客様の好みに合わせたシステムをご提案します。
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Top 4 Spotlight */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                            {auditionSpeakers.slice(0, 4).map((speaker, idx) => (
+                                <motion.div
+                                    key={idx}
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    transition={{ delay: idx * 0.1 }}
+                                    className="group relative bg-white/5 backdrop-blur-sm rounded-[2rem] border border-white/10 overflow-hidden"
+                                >
+                                    <div className="aspect-[4/3] relative overflow-hidden">
+                                        <SafeImage
+                                            src={speaker.image}
+                                            alt={speaker.name}
+                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                                        <div className="absolute bottom-4 left-6">
+                                            <span className="text-[10px] font-black text-blue-400 uppercase tracking-widest">{speaker.brand}</span>
+                                            <h3 className="text-lg font-black text-white">{speaker.name}</h3>
+                                        </div>
+                                    </div>
+                                    <div className="p-6">
+                                        <p className="text-xs text-gray-400 font-bold mb-4 line-clamp-2">{speaker.desc}</p>
+                                        <div className="flex items-center justify-between">
+                                            <span className="text-[10px] font-black tracking-widest text-emerald-400">ON DEMAND</span>
+                                            {speaker.youtubeId && (
+                                                <button
+                                                    onClick={() => setActiveYoutubeId(speaker.youtubeId)}
+                                                    className="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 transition-transform"
+                                                >
+                                                    <Youtube className="w-4 h-4 text-white" />
+                                                </button>
+                                            )}
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+
+                        <div className="text-center">
                             <button
                                 onClick={() => setShowFullAuditionList(!showFullAuditionList)}
-                                className="bg-white text-gray-900 px-10 py-5 rounded-2xl font-black"
+                                className="group inline-flex items-center gap-4 bg-white text-gray-900 px-10 py-5 rounded-2xl font-black text-sm tracking-[0.2em] hover:bg-blue-600 hover:text-white transition-all shadow-2xl"
                             >
-                                試聴スピーカー一覧を見る
+                                {showFullAuditionList ? 'CLOSE LIST' : 'VIEW ALL SPEAKERS'}
+                                <ChevronRight className={`w-5 h-5 transition-transform ${showFullAuditionList ? 'rotate-90' : 'group-hover:translate-x-1'}`} />
                             </button>
                         </div>
+
+                        <AnimatePresence>
+                            {showFullAuditionList && (
+                                <motion.div
+                                    initial={{ opacity: 0, height: 0 }}
+                                    animate={{ opacity: 1, height: 'auto' }}
+                                    exit={{ opacity: 0, height: 0 }}
+                                    className="mt-16 overflow-hidden"
+                                >
+                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                        {auditionSpeakers.slice(4).map((speaker, idx) => (
+                                            <div key={idx} className="bg-white/5 p-6 rounded-2xl border border-white/5 flex items-center justify-between hover:bg-white/10 transition-colors">
+                                                <div className="flex flex-col">
+                                                    <span className="text-[9px] font-black text-blue-400 uppercase tracking-widest">{speaker.brand}</span>
+                                                    <span className="font-black text-sm">{speaker.name}</span>
+                                                </div>
+                                                {speaker.youtubeId && (
+                                                    <button
+                                                        onClick={() => setActiveYoutubeId(speaker.youtubeId)}
+                                                        className="text-gray-500 hover:text-red-500 transition-colors"
+                                                    >
+                                                        <Youtube className="w-5 h-5" />
+                                                    </button>
+                                                )}
+                                            </div>
+                                        ))}
+                                    </div>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
                     </div>
                 </section>
             )}
