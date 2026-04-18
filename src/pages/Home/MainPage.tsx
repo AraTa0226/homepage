@@ -783,6 +783,8 @@ export const MainPage: React.FC<MainPageProps> = ({
                             <ul className="space-y-4 text-sm font-bold">
                                 <li><a href="#" className="hover:text-blue-500 transition-colors">Home</a></li>
                                 <li><a href="#blog" className="hover:text-white transition-colors">Latest Journal</a></li>
+                                <li><a href="#blog" className="hover:text-white transition-colors">Event Archive</a></li>
+                                <li><a href="#blog" className="hover:text-white transition-colors">Latest News</a></li>
                                 <li><a href="#services" className="hover:text-white transition-colors">Service Catalog</a></li>
                                 <li><a href="#options" className="hover:text-white transition-colors">Audition Room</a></li>
                                 <li><button onClick={() => navigate('/reservation')} className="text-blue-500 hover:underline">Reservation Center</button></li>
