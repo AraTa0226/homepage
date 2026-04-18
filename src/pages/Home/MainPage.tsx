@@ -18,7 +18,8 @@ import {
     Facebook,
     Instagram,
     Loader2,
-    Clock
+    Clock,
+    Lock
 } from 'lucide-react';
 import { SafeImage } from '../../components/ui/SafeImage';
 import { BusinessCalendar } from '../../components/Calendar/BusinessCalendar';
@@ -323,7 +324,7 @@ export const MainPage: React.FC<MainPageProps> = ({
                         </div>
                     </div>
 
-                    <nav className="hidden lg:flex items-center gap-8 text-sm font-bold uppercase tracking-widest shrink-0">
+                    <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-bold uppercase tracking-widest shrink-0">
                         <a href="#" className="flex flex-col items-center group/item transition-colors">
                             <span className="text-sm font-black tracking-widest group-hover/item:text-blue-500">HOME</span>
                             <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">ホーム</span>
@@ -371,6 +372,13 @@ export const MainPage: React.FC<MainPageProps> = ({
                             <span className="text-sm font-black tracking-widest group-hover/item:text-blue-500">ACCESS</span>
                             <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">店舗案内</span>
                         </a>
+                        <button
+                            onClick={() => navigate('/security-home')}
+                            className="flex flex-col items-center group/item transition-colors border-l border-gray-100 pl-4 ml-2"
+                        >
+                            <span className="text-sm font-black tracking-widest text-emerald-600 group-hover/item:text-emerald-500">SECURITY</span>
+                            <span className="text-[8px] font-bold text-emerald-600/40 group-hover/item:text-emerald-500 transition-opacity">セキュリティー版</span>
+                        </button>
                     </nav>
 
                     <div className="flex-1 flex items-center justify-end gap-1.5 md:gap-3">
@@ -483,6 +491,33 @@ export const MainPage: React.FC<MainPageProps> = ({
                             国内屈指の技術を誇るハイエンド・オーディオの繊細な調音と施工。<br className="hidden md:block" />
                             熟練の職人技で、あなたのカーライフに究極の感動を。
                         </p>
+                        <div className="flex flex-col gap-6 mt-8">
+                            <div className="flex items-center gap-2 p-1.5 bg-white/5 backdrop-blur-2xl border border-white/10 rounded-2xl w-fit">
+                                <button
+                                    disabled
+                                    className="relative px-8 py-3 rounded-xl bg-blue-600 shadow-[0_0_20px_rgba(37,99,235,0.3)] flex items-center gap-3 transition-all cursor-default"
+                                >
+                                    <Speaker className="w-4 h-4 text-white" />
+                                    <span className="text-white text-[11px] font-black tracking-widest uppercase">Audio focus</span>
+                                    <motion.div
+                                        layoutId="activeTab"
+                                        className="absolute inset-0 bg-blue-600 rounded-xl -z-10"
+                                    />
+                                </button>
+                                <button
+                                    onClick={() => navigate('/security-home')}
+                                    className="group px-8 py-3 rounded-xl hover:bg-white/5 flex items-center gap-3 transition-all"
+                                >
+                                    <Lock className="w-4 h-4 text-emerald-500/50 group-hover:text-emerald-500" />
+                                    <span className="text-white/40 group-hover:text-white text-[11px] font-black tracking-widest uppercase">Security focus</span>
+                                    <ArrowUpRight className="w-3 h-3 text-emerald-500/0 group-hover:text-emerald-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                                </button>
+                            </div>
+                            <p className="text-[10px] text-gray-500 font-bold tracking-widest uppercase pl-4 flex items-center gap-2">
+                                <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
+                                Currently Viewing: High-End Audio Showcase
+                            </p>
+                        </div>
                     </motion.div>
                 </div>
             </section>

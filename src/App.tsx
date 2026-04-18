@@ -24,6 +24,7 @@ import { VaultGrid } from './components/VaultGrid';
 
 // Lazy Pages (Architectural Split for Lighthouse 100)
 const MainPage = lazy(() => import('./pages/Home/MainPage').then(m => ({ default: m.MainPage })));
+const SecurityMainPage = lazy(() => import('./pages/Home/SecurityMainPage').then(m => ({ default: m.SecurityMainPage })));
 const AudioMenuDetail = lazy(() => import('./components/Menu/AudioMenuDetail').then(m => ({ default: m.AudioMenuDetail })));
 const SecurityMenuDetail = lazy(() => import('./components/Menu/SecurityMenuDetail').then(m => ({ default: m.SecurityMenuDetail })));
 const DashcamMenuDetail = lazy(() => import('./components/Menu/DashcamMenuDetail').then(m => ({ default: m.DashcamMenuDetail })));
@@ -144,6 +145,23 @@ function AppContent() {
         <Routes>
           <Route path="/" element={
             <MainPage
+              assets={assets}
+              emergencyAnnouncement={emergencyAnnouncement}
+              posts={posts}
+              loading={loading}
+              facilities={facilities}
+              isMobileMenuOpen={isMobileMenuOpen}
+              setIsMobileMenuOpen={setIsMobileMenuOpen}
+              handleLogoClick={() => { }}
+              navigate={navigate}
+              handleMenuClick={handleMenuClick}
+              showMegaMenu={showMegaMenu}
+              setShowMegaMenu={setShowMegaMenu}
+              auditionSpeakers={auditionSpeakers}
+            />
+          } />
+          <Route path="/security-home" element={
+            <SecurityMainPage
               assets={assets}
               emergencyAnnouncement={emergencyAnnouncement}
               posts={posts}
