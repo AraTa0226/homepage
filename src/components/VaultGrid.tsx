@@ -31,10 +31,10 @@ export const VaultGrid: React.FC<VaultGridProps> = ({ categories, onCategoryClic
                         className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
 
-                    {/* Theme Overlay */}
+                    {/* Theme Overlay - Strengthened for better contrast */}
                     <div className={`absolute inset-0 transition-opacity duration-500 ${theme === 'dark'
-                        ? 'bg-gradient-to-t from-black/95 via-black/60 md:via-black/40 to-transparent group-hover:bg-black/60'
-                        : 'bg-gradient-to-t from-white/95 via-white/60 md:via-white/40 to-transparent group-hover:bg-white/60'
+                        ? 'bg-gradient-to-t from-black/95 via-black/80 md:via-black/60 to-transparent group-hover:bg-black/70'
+                        : 'bg-gradient-to-t from-white/95 via-white/80 md:via-white/60 to-transparent group-hover:bg-white/70'
                         }`} />
 
                     {/* Content HUD */}
@@ -48,7 +48,7 @@ export const VaultGrid: React.FC<VaultGridProps> = ({ categories, onCategoryClic
                             {cat.title}
                         </h3>
 
-                        <div className="space-y-4 relative z-10 flex flex-col justify-end flex-grow pb-4">
+                        <div className="space-y-2.5 relative z-10 flex flex-col justify-end flex-grow pb-4 max-w-[90%]">
                             {cat.items.map((item: string, j: number) => (
                                 <div
                                     key={j}
@@ -63,19 +63,19 @@ export const VaultGrid: React.FC<VaultGridProps> = ({ categories, onCategoryClic
                                             "Mercedes Benz専用パッケージ": { id: "speaker_package", planName: "Mercedes Benzスピーカー交換パッケージ" },
                                             "AMP内蔵DSPパッケージ": { id: "digital_source", planName: "アンプ内蔵DSPパッケージ" },
                                             "AMPレスDSPパッケージ": { id: "digital_source", planName: "アンプレスDSPパッケージ" },
-                                            "お手軽低音増強 (パワード)": { id: "bass_power", planName: "チューンナップウーファー・パッケージ" },
-                                            "お手軽低音増強＋ (アンプ別)": { id: "bass_power", planName: "大型パワードウーファー・パッケージ" },
                                             "店内の常時試聴ユニット": { id: "audition-showcase", isAnchor: true },
                                             "施工ブログ / 店舗詳細": { id: "contact", isAnchor: true }
                                         };
                                         const target = planMapping[item] || { id: cat.id };
                                         handleMenuClick(target);
                                     }}
-                                    className={`flex items-center justify-between text-sm font-bold transition-all hover:translate-x-2 p-1 rounded-lg hover:bg-white/5 ${theme === 'dark' ? 'text-white/90 hover:text-white' : 'text-gray-800 hover:text-blue-600'
+                                    className={`flex items-center justify-between text-[11px] md:text-xs font-black transition-all hover:translate-x-2 px-4 py-2 rounded-xl backdrop-blur-md border shadow-sm ${theme === 'dark'
+                                        ? 'bg-white/5 border-white/10 text-white/90 hover:bg-white/20 hover:text-white'
+                                        : 'bg-black/[0.03] border-black/5 text-gray-900 hover:bg-black/[0.08] hover:text-blue-600'
                                         }`}
                                 >
                                     <span>{item}</span>
-                                    <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                    <ArrowUpRight className="w-3 h-3 opacity-40 group-hover:opacity-100 transition-opacity" />
                                 </div>
                             ))}
                         </div>
