@@ -173,15 +173,14 @@ export const BusinessCalendar = () => {
                   />
                 </div>
                 <div className="relative z-10">
-                  <div className="flex items-center gap-2 mb-1">
+                  <div className="flex items-center gap-2 mb-2">
                     <span className="bg-green-500 text-white text-[9px] font-black px-2 py-0.5 rounded-full uppercase tracking-tighter">Official LINE</span>
                     <span className="text-green-600 animate-pulse flex items-center gap-1 text-[9px] font-bold">
                       <span className="w-1 h-1 bg-green-500 rounded-full"></span>
                       受付中
                     </span>
                   </div>
-                  <h4 className="text-xl font-black mb-0.5 text-gray-900">友達追加</h4>
-                  <p className="text-gray-500 text-xs font-medium">
+                  <p className="text-gray-900 text-sm font-bold leading-tight">
                     ラインからでも来店予約・お問い合わせ可能
                   </p>
                 </div>
