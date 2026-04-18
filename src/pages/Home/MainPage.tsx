@@ -17,7 +17,8 @@ import {
     MapPin,
     Facebook,
     Instagram,
-    Loader2
+    Loader2,
+    Clock
 } from 'lucide-react';
 import { SafeImage } from '../../components/ui/SafeImage';
 import { BusinessCalendar } from '../../components/Calendar/BusinessCalendar';
@@ -675,17 +676,219 @@ export const MainPage: React.FC<MainPageProps> = ({
             <BusinessCalendar />
             <PartnersSection onViewAll={() => navigate('/partners')} />
 
-            {/* Footer */}
-            <footer id="contact" className="bg-gray-900 text-gray-400 py-20">
-                <div className="max-w-7xl mx-auto px-4 text-center">
-                    <p className="mb-6 font-bold">〒816-0912 福岡県大野城市御笠川5-4-14</p>
-                    <div className="flex justify-center gap-6 mb-10">
-                        <Facebook className="w-6 h-6 hover:text-white cursor-pointer" />
-                        <Instagram className="w-6 h-6 hover:text-white cursor-pointer" />
+            {/* Access Section */}
+            <section id="access" className="py-24 md:py-32 bg-gray-900 relative overflow-hidden">
+                <div className="absolute inset-0 bg-blue-600/5 pointer-events-none"></div>
+                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                        <div className="space-y-8">
+                            <div>
+                                <span className="text-blue-500 font-black tracking-[0.3em] uppercase text-xs mb-4 block">Store & Access</span>
+                                <h2 className="text-4xl md:text-5xl font-black leading-tight tracking-tighter mb-8 italic text-white">SHOP INFO</h2>
+                                <p className="text-gray-400 font-bold leading-relaxed mb-8">
+                                    30年以上の実績を持つカーオーディオ・セキュリティ専門店。
+                                    福岡県大野城市の御笠川沿いに店舗を構えております。
+                                    こちらの外観を目印にお越しください。駐車場も完備しております。
+                                </p>
+                            </div>
+
+                            <div className="grid grid-cols-2 gap-4">
+                                {/* First large image (Exterior) */}
+                                <div className="col-span-2 group relative aspect-video rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10 bg-white/5">
+                                    <SafeImage src={assets.heroImage} alt="Sound ANG 店舗外観" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent flex items-end p-6">
+                                        <span className="text-white font-black text-sm tracking-widest uppercase">Shop Exterior</span>
+                                    </div>
+                                </div>
+                                {/* Remaining 4 facilities */}
+                                {facilities.map((fac, idx) => (
+                                    <div key={idx} className="group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-white/10 bg-white/5">
+                                        <SafeImage src={fac.image} alt={fac.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-100" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                                            <span className="text-white font-black text-xs tracking-widest">{fac.title}</span>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="space-y-8 lg:sticky lg:top-32">
+                            <div className="relative aspect-square rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/10 grayscale hover:grayscale-0 transition-all duration-700">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.293409151244!2d130.4851219762696!3d33.54575497335133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541908696b9963f%3A0x6b976696b9963f!2z44CSODE2LTA5MTIg56aP5bKh55yM5aSn6YeO5Z-O5biC5b6h56yg5bed77yV5LiB55uu77yU4minus77yR77yU!5e0!3m2!1sja!2sjp!4v1712288000000!5m2!1sja!2sjp"
+                                    className="w-full h-full invert opacity-80 contrast-125"
+                                    loading="lazy"
+                                />
+                            </div>
+
+                            <div className="p-8 rounded-[2.5rem] bg-white/5 shadow-2xl border border-white/10 backdrop-blur-sm">
+                                <h4 className="text-[10px] font-black tracking-widest text-blue-500 uppercase mb-4">Location Address</h4>
+                                <div className="flex gap-4">
+                                    <div className="w-12 h-12 rounded-2xl bg-blue-500/10 flex items-center justify-center shrink-0">
+                                        <MapPin className="w-6 h-6 text-blue-500" />
+                                    </div>
+                                    <div>
+                                        <p className="font-black text-white text-lg leading-tight tracking-tight">〒816-0912</p>
+                                        <p className="font-bold text-gray-400 text-sm mt-1">福岡県大野城市御笠川5-4-14</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <p className="text-[10px] opacity-20">&copy; 2026 Sound ANG. All rights reserved.</p>
+                </div>
+            </section>
+
+            {/* Footer */}
+            <footer id="contact" className="bg-gray-900 text-gray-400 py-24 relative overflow-hidden">
+                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+                        <div className="col-span-1 lg:col-span-1">
+                            <div className="text-2xl font-black italic tracking-tighter text-white mb-6">SOUND ANG</div>
+                            <p className="text-xs font-bold leading-relaxed mb-8 opacity-60 uppercase tracking-widest">
+                                Premium Car Audio & Security <br /> Professional Installation Suite
+                            </p>
+                            <div className="flex gap-4">
+                                <a href="https://www.facebook.com/profile.php?id=100063630308258" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all shadow-lg">
+                                    <Facebook className="w-5 h-5" />
+                                </a>
+                                <a href="https://www.instagram.com/sound_ang_security/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 hover:text-white transition-all shadow-lg">
+                                    <Instagram className="w-5 h-5" />
+                                </a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 className="text-white font-black text-xs tracking-widest uppercase mb-8">Contact Information</h4>
+                            <ul className="space-y-6 text-sm">
+                                <li className="flex gap-4">
+                                    <Phone className="w-5 h-5 text-blue-600 shrink-0" />
+                                    <div className="space-y-1">
+                                        <p className="text-white font-black">092-503-5421 <span className="text-[8px] opacity-40 ml-2">AUDIO</span></p>
+                                        <p className="text-white font-black">092-503-5437 <span className="text-[8px] opacity-40 ml-2">SECURITY</span></p>
+                                        <p className="text-[10px] opacity-40 underline">FAX: 092-503-5492</p>
+                                    </div>
+                                </li>
+                                <li className="flex gap-4 pt-4 border-t border-white/5">
+                                    <Mail className="w-5 h-5 text-blue-600 shrink-0" />
+                                    <div className="space-y-1">
+                                        <a href="mailto:ang@soundang.com" className="block text-white hover:text-blue-500 transition-colors">ang@soundang.com</a>
+                                        <a href="mailto:ang@sec-ang.com" className="block text-white hover:text-blue-500 transition-colors">ang@sec-ang.com</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 className="text-white font-black text-xs tracking-widest uppercase mb-8">Quick Links</h4>
+                            <ul className="space-y-4 text-sm font-bold">
+                                <li><a href="#" className="hover:text-blue-500 transition-colors">Home</a></li>
+                                <li><a href="#blog" className="hover:text-white transition-colors">Latest Journal</a></li>
+                                <li><a href="#services" className="hover:text-white transition-colors">Service Catalog</a></li>
+                                <li><a href="#options" className="hover:text-white transition-colors">Audition Room</a></li>
+                                <li><button onClick={() => navigate('/reservation')} className="text-blue-500 hover:underline">Reservation Center</button></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 className="text-white font-black text-xs tracking-widest uppercase mb-8">Legal & Business</h4>
+                            <div className="space-y-6">
+                                <p className="text-[10px] font-black leading-relaxed opacity-40">
+                                    適格請求書発行事業者登録番号<br />
+                                    <span className="text-white font-mono tracking-tight opacity-100">T4290002038758</span>
+                                </p>
+                                <div className="space-y-2">
+                                    <a href="#" className="block text-xs hover:text-white transition-colors">Privacy Policy</a>
+                                    <a href="#" className="block text-xs hover:text-white transition-colors">Terms of Service</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                        <p className="text-[10px] font-black tracking-widest">© 2026 SOUND ANG. PREMIUM INSTALLATION GROUP.</p>
+                        <button
+                            onClick={() => setShowPasswordModal(true)}
+                            className="text-white/5 hover:text-white/20 transition-colors text-[8px]"
+                        >
+                            ADMIN ACCESS
+                        </button>
+                    </div>
                 </div>
             </footer>
+
+            {/* Mobile Menu Overlay */}
+            <AnimatePresence>
+                {isMobileMenuOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, x: '100%' }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: '100%' }}
+                        className="fixed inset-0 z-[100] bg-white pointer-events-auto overflow-y-auto"
+                    >
+                        <div className="p-8 pb-32">
+                            <div className="flex items-center justify-between mb-12">
+                                <div className="text-xl font-black italic tracking-tighter text-blue-600">SOUND ANG</div>
+                                <button
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    className="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-xl"
+                                >
+                                    <X className="w-6 h-6" />
+                                </button>
+                            </div>
+
+                            <nav className="flex flex-col gap-6">
+                                {categories.map((cat: any) => (
+                                    <div key={cat.id} className="flex flex-col gap-3">
+                                        <div
+                                            onClick={() => {
+                                                setIsMobileMenuOpen(false);
+                                                navigate(cat.path);
+                                            }}
+                                            className="text-2xl font-black text-gray-900 flex items-center justify-between group"
+                                        >
+                                            {cat.title}
+                                            <ChevronRight className="w-6 h-6 text-blue-500 transition-transform group-hover:translate-x-1" />
+                                        </div>
+                                        <div className="flex flex-wrap gap-2">
+                                            {cat.items.slice(0, 3).map((item: string, idx: number) => (
+                                                <span key={idx} className="text-[10px] font-bold bg-gray-50 text-gray-400 px-3 py-1 rounded-full">{item}</span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                ))}
+
+                                <div className="h-px bg-gray-100 my-4" />
+
+                                <a href="#options" onClick={() => setIsMobileMenuOpen(false)} className="text-xl font-black text-gray-400 hover:text-blue-600 transition-colors">AUDITION</a>
+                                <a href="#info" onClick={() => setIsMobileMenuOpen(false)} className="text-xl font-black text-gray-400 hover:text-blue-600 transition-colors">SCHEDULE</a>
+                                <a href="#access" onClick={() => setIsMobileMenuOpen(false)} className="text-xl font-black text-gray-400 hover:text-blue-600 transition-colors">ACCESS</a>
+                            </nav>
+
+                            <div className="mt-16 grid grid-cols-1 gap-4">
+                                <a
+                                    href="https://page.line.me/312qjhsq?openQrModal=true"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center justify-center p-6 bg-[#06C755] text-white rounded-2xl font-black"
+                                >
+                                    <MessageSquare className="mr-3" />
+                                    LINEで相談・見積もり
+                                </a>
+                                <button
+                                    onClick={() => {
+                                        setIsMobileMenuOpen(false);
+                                        navigate('/reservation');
+                                    }}
+                                    className="flex items-center justify-center p-6 bg-blue-600 text-white rounded-2xl font-black"
+                                >
+                                    <CalendarIcon className="mr-3" />
+                                    Webで来店予約
+                                </button>
+                            </div>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
             {/* Full Screen Modals */}
             <AnimatePresence>
