@@ -163,7 +163,7 @@ function AppContent() {
           <Route path="/dashcam" element={<DashcamMenuDetail show={true} onClose={() => navigate('/')} />} />
           <Route path="/partners" element={<PartnersListPage />} />
           <Route path="/staff" element={<StaffDashboard onBack={() => navigate('/')} />} />
-          <Route path="/reservation" element={<ReservationFormPage />} />
+          <Route path="/reservation" element={<ReservationFormPage onBack={() => navigate('/')} />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Suspense>
