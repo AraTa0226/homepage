@@ -30,6 +30,7 @@ const DashcamMenuDetail = lazy(() => import('./components/Menu/DashcamMenuDetail
 const StaffDashboard = lazy(() => import('./components/Staff/StaffDashboard').then(m => ({ default: m.StaffDashboard })));
 const ReservationFormPage = lazy(() => import('./components/Form/ReservationFormPage').then(m => ({ default: m.ReservationFormPage })));
 const PartnersListPage = lazy(() => import('./components/PartnersListPage').then(m => ({ default: m.PartnersListPage })));
+const LegalInfoPage = lazy(() => import('./pages/Legal/LegalInfoPage').then(m => ({ default: m.LegalInfoPage })));
 
 export interface BlogPost {
   date: string;
@@ -164,6 +165,7 @@ function AppContent() {
           <Route path="/partners" element={<PartnersListPage />} />
           <Route path="/staff" element={<StaffDashboard onBack={() => navigate('/')} />} />
           <Route path="/reservation" element={<ReservationFormPage onBack={() => navigate('/')} />} />
+          <Route path="/legal" element={<LegalInfoPage onBack={() => navigate('/')} />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Suspense>

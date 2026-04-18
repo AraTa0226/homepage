@@ -799,8 +799,8 @@ export const MainPage: React.FC<MainPageProps> = ({
                                     <span className="text-white font-mono tracking-tight opacity-100">T4290002038758</span>
                                 </p>
                                 <div className="space-y-2">
-                                    <a href="#" className="block text-xs hover:text-white transition-colors">Privacy Policy</a>
-                                    <a href="#" className="block text-xs hover:text-white transition-colors">Terms of Service</a>
+                                    <button onClick={() => navigate('/legal')} className="block text-xs hover:text-white transition-colors">Privacy Policy</button>
+                                    <button onClick={() => navigate('/legal')} className="block text-xs hover:text-white transition-colors">Terms of Service</button>
                                 </div>
                             </div>
                         </div>
