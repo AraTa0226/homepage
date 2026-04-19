@@ -123,10 +123,6 @@ export const MainPage: React.FC<MainPageProps> = ({
     setShowMegaMenu,
     auditionSpeakers
 }) => {
-    const [showPasswordModal, setShowPasswordModal] = useState(false);
-    const [password, setPassword] = useState("");
-    const [passwordError, setPasswordError] = useState(false);
-    const [selectedAuditionImage, setSelectedAuditionImage] = useState<string | null>(null);
     const [activeYoutubeId, setActiveYoutubeId] = useState<string | null>(null);
     const [isLineupExpanded, setIsLineupExpanded] = useState(false);
     const [showFullAuditionList, setShowFullAuditionList] = useState(false);
@@ -134,16 +130,6 @@ export const MainPage: React.FC<MainPageProps> = ({
     const hostname = window.location.hostname;
     const isSecurityDomain = hostname.includes('sec-ang.com');
     const theme = isSecurityDomain ? 'dark' : 'light';
-
-    const handlePasswordSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        if (password === "ang888") {
-            setShowPasswordModal(false);
-            navigate('/staff');
-        } else {
-            setPasswordError(true);
-        }
-    };
 
     const audioCategories = [
         {
@@ -244,68 +230,8 @@ export const MainPage: React.FC<MainPageProps> = ({
     const categories = isSecurityDomain ? securityCategories : audioCategories;
 
     return (
-        <div className={`min-h-screen bg-white text-gray-900 font-sans selection:bg-blue-100 selection:text-blue-900 ${theme === 'dark' ? 'dark' : ''}`}>
-            {/* Password Modal */}
-            <AnimatePresence>
-                {showPasswordModal && (
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-black/60 backdrop-blur-md"
-                    >
-                        <motion.div
-                            initial={{ scale: 0.9, opacity: 0, y: 20 }}
-                            animate={{ scale: 1, opacity: 1, y: 0 }}
-                            className="bg-white rounded-[2.5rem] w-full max-w-sm p-8 shadow-2xl"
-                        >
-                            <div className="flex flex-col items-center text-center mb-8">
-                                <div className="w-16 h-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
-                                    <ShieldCheck className="w-8 h-8" />
-                                </div>
-                                <h3 className="text-2xl font-black tracking-tighter text-gray-900">管理者認証</h3>
-                                <p className="text-gray-500 text-sm font-bold mt-1 uppercase tracking-widest">Admin Access</p>
-                            </div>
-                            <form onSubmit={handlePasswordSubmit} className="space-y-4">
-                                <div className="relative">
-                                    <input
-                                        type="password"
-                                        value={password}
-                                        onChange={(e) => {
-                                            setPassword(e.target.value);
-                                            setPasswordError(false);
-                                        }}
-                                        placeholder="パスワードを入力"
-                                        className={`w-full bg-gray-50 border-2 rounded-2xl px-6 py-4 text-center font-bold tracking-widest placeholder:text-gray-300 focus:outline-none focus:ring-4 transition-all ${passwordError ? 'border-red-500 ring-red-100' : 'border-gray-100 focus:border-blue-500 focus:ring-blue-100'
-                                            }`}
-                                        autoFocus
-                                    />
-                                    {passwordError && (
-                                        <p className="text-red-500 text-[10px] font-bold uppercase tracking-widest mt-2">パスワードが正しくありません</p>
-                                    )}
-                                </div>
-                                <button
-                                    type="submit"
-                                    className="w-full bg-gray-900 text-white font-black py-4 rounded-2xl hover:bg-black transition-all shadow-xl shadow-gray-200 uppercase tracking-widest text-sm"
-                                >
-                                    認証する
-                                </button>
-                                <button
-                                    type="button"
-                                    onClick={() => {
-                                        setShowPasswordModal(false);
-                                        setPassword("");
-                                        setPasswordError(false);
-                                    }}
-                                    className="w-full text-gray-400 hover:text-gray-600 text-xs font-bold uppercase tracking-widest py-2"
-                                >
-                                    キャンセル
-                                </button>
-                            </form>
-                        </motion.div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
+        <div className={`min-h-screen bg-white text-gray-900 font-sans selection:bg-blue-100 selection:text-blue-900 ${theme === 'dark' ? 'dark' : ''}`} >
+
 
             <header className="fixed top-0 left-0 right-0 z-[60] bg-white/90 backdrop-blur-md border-b border-gray-100">
                 <div className="max-w-7xl mx-auto px-4 h-16 md:h-24 flex items-center gap-2">
@@ -413,44 +339,46 @@ export const MainPage: React.FC<MainPageProps> = ({
                 </div>
             </header>
 
-            {emergencyAnnouncement.active && emergencyAnnouncement.text && (
-                <div className="max-w-7xl mx-auto px-4 pt-24 -mb-16 relative z-30">
-                    <motion.div
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="bg-red-50 rounded-[2rem] p-6 md:p-8 shadow-2xl border-2 border-red-500 flex flex-col md:flex-row items-center gap-6"
-                    >
-                        <div className="w-16 h-16 rounded-2xl bg-red-100 flex items-center justify-center shrink-0">
-                            <Megaphone className="w-8 h-8 text-red-600" />
-                        </div>
-                        <div className="flex-grow text-center md:text-left">
-                            <span className="text-red-600 font-black text-xs uppercase tracking-widest mb-1 block">Emergency Notice</span>
-                            <div className="flex flex-col md:flex-row gap-6 items-center">
-                                {emergencyAnnouncement.image && (
-                                    <SafeImage
-                                        src={emergencyAnnouncement.image}
-                                        alt="緊急のお知らせ画像"
-                                        className="w-32 h-32 object-cover rounded-xl shadow-md"
-                                    />
-                                )}
-                                <p className="text-gray-900 font-black text-lg md:text-xl leading-tight whitespace-pre-wrap flex-grow">
-                                    {emergencyAnnouncement.text}
-                                </p>
+            {
+                emergencyAnnouncement.active && emergencyAnnouncement.text && (
+                    <div className="max-w-7xl mx-auto px-4 pt-24 -mb-16 relative z-30">
+                        <motion.div
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="bg-red-50 rounded-[2rem] p-6 md:p-8 shadow-2xl border-2 border-red-500 flex flex-col md:flex-row items-center gap-6"
+                        >
+                            <div className="w-16 h-16 rounded-2xl bg-red-100 flex items-center justify-center shrink-0">
+                                <Megaphone className="w-8 h-8 text-red-600" />
                             </div>
-                        </div>
-                        {emergencyAnnouncement.link && (
-                            <a
-                                href={emergencyAnnouncement.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="bg-red-600 text-white px-8 py-4 rounded-xl font-black text-sm tracking-widest hover:bg-red-700 transition-all shadow-lg shadow-red-200 shrink-0"
-                            >
-                                詳細を見る
-                            </a>
-                        )}
-                    </motion.div>
-                </div>
-            )}
+                            <div className="flex-grow text-center md:text-left">
+                                <span className="text-red-600 font-black text-xs uppercase tracking-widest mb-1 block">Emergency Notice</span>
+                                <div className="flex flex-col md:flex-row gap-6 items-center">
+                                    {emergencyAnnouncement.image && (
+                                        <SafeImage
+                                            src={emergencyAnnouncement.image}
+                                            alt="緊急のお知らせ画像"
+                                            className="w-32 h-32 object-cover rounded-xl shadow-md"
+                                        />
+                                    )}
+                                    <p className="text-gray-900 font-black text-lg md:text-xl leading-tight whitespace-pre-wrap flex-grow">
+                                        {emergencyAnnouncement.text}
+                                    </p>
+                                </div>
+                            </div>
+                            {emergencyAnnouncement.link && (
+                                <a
+                                    href={emergencyAnnouncement.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="bg-red-600 text-white px-8 py-4 rounded-xl font-black text-sm tracking-widest hover:bg-red-700 transition-all shadow-lg shadow-red-200 shrink-0"
+                                >
+                                    詳細を見る
+                                </a>
+                            )}
+                        </motion.div>
+                    </div>
+                )
+            }
 
             {/* Hero Section */}
             <section className="relative pt-20">
@@ -610,103 +538,105 @@ export const MainPage: React.FC<MainPageProps> = ({
             </section>
 
             {/* Audition Showcase */}
-            {!isSecurityDomain && (
-                <section id="options" className="py-24 md:py-32 bg-gray-900 text-white relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-600/5 skew-x-12 translate-x-1/2"></div>
-                    <div className="max-w-7xl mx-auto px-4 relative z-10">
-                        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-                            <div className="max-w-2xl">
-                                <span className="text-blue-500 font-black tracking-[0.3em] uppercase text-xs mb-4 block">Sonic Experience Center</span>
-                                <h2 className="text-4xl md:text-7xl font-black tracking-tighter leading-tight">AUDITION</h2>
-                                <p className="text-gray-400 mt-6 font-bold text-lg leading-relaxed">
-                                    店内の常時試聴ユニットで、世界最高峰のサウンドをご体感ください。<br />
-                                    熟練のインストーラーが、お客様の好みに合わせたシステムをご提案します。
-                                </p>
+            {
+                !isSecurityDomain && (
+                    <section id="options" className="py-24 md:py-32 bg-gray-900 text-white relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-600/5 skew-x-12 translate-x-1/2"></div>
+                        <div className="max-w-7xl mx-auto px-4 relative z-10">
+                            <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                                <div className="max-w-2xl">
+                                    <span className="text-blue-500 font-black tracking-[0.3em] uppercase text-xs mb-4 block">Sonic Experience Center</span>
+                                    <h2 className="text-4xl md:text-7xl font-black tracking-tighter leading-tight">AUDITION</h2>
+                                    <p className="text-gray-400 mt-6 font-bold text-lg leading-relaxed">
+                                        店内の常時試聴ユニットで、世界最高峰のサウンドをご体感ください。<br />
+                                        熟練のインストーラーが、お客様の好みに合わせたシステムをご提案します。
+                                    </p>
+                                </div>
                             </div>
-                        </div>
 
-                        {/* Top 4 Spotlight */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-                            {auditionSpeakers.slice(0, 4).map((speaker, idx) => (
-                                <motion.div
-                                    key={idx}
-                                    initial={{ opacity: 0, scale: 0.9 }}
-                                    whileInView={{ opacity: 1, scale: 1 }}
-                                    transition={{ delay: idx * 0.1 }}
-                                    className="group relative bg-white/5 backdrop-blur-sm rounded-[2rem] border border-white/10 overflow-hidden"
-                                >
-                                    <div className="aspect-[4/3] relative overflow-hidden">
-                                        <SafeImage
-                                            src={speaker.image}
-                                            alt={speaker.name}
-                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                                        <div className="absolute bottom-4 left-6">
-                                            <span className="text-[10px] font-black text-blue-400 uppercase tracking-widest">{speaker.brand}</span>
-                                            <h3 className="text-lg font-black text-white">{speaker.name}</h3>
+                            {/* Top 4 Spotlight */}
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                                {auditionSpeakers.slice(0, 4).map((speaker, idx) => (
+                                    <motion.div
+                                        key={idx}
+                                        initial={{ opacity: 0, scale: 0.9 }}
+                                        whileInView={{ opacity: 1, scale: 1 }}
+                                        transition={{ delay: idx * 0.1 }}
+                                        className="group relative bg-white/5 backdrop-blur-sm rounded-[2rem] border border-white/10 overflow-hidden"
+                                    >
+                                        <div className="aspect-[4/3] relative overflow-hidden">
+                                            <SafeImage
+                                                src={speaker.image}
+                                                alt={speaker.name}
+                                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                                            <div className="absolute bottom-4 left-6">
+                                                <span className="text-[10px] font-black text-blue-400 uppercase tracking-widest">{speaker.brand}</span>
+                                                <h3 className="text-lg font-black text-white">{speaker.name}</h3>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="p-6">
-                                        <p className="text-xs text-gray-400 font-bold mb-4 line-clamp-2">{speaker.desc}</p>
-                                        <div className="flex items-center justify-between">
-                                            <span className="text-[10px] font-black tracking-widest text-emerald-400">ON DEMAND</span>
-                                            {speaker.youtubeId && (
-                                                <button
-                                                    onClick={() => setActiveYoutubeId(speaker.youtubeId)}
-                                                    className="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 transition-transform"
-                                                >
-                                                    <Youtube className="w-4 h-4 text-white" />
-                                                </button>
-                                            )}
-                                        </div>
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </div>
-
-                        <div className="text-center">
-                            <button
-                                onClick={() => setShowFullAuditionList(!showFullAuditionList)}
-                                className="group inline-flex items-center gap-4 bg-white text-gray-900 px-10 py-5 rounded-2xl font-black text-sm tracking-[0.2em] hover:bg-blue-600 hover:text-white transition-all shadow-2xl"
-                            >
-                                {showFullAuditionList ? 'CLOSE LIST' : 'VIEW ALL SPEAKERS'}
-                                <ChevronRight className={`w-5 h-5 transition-transform ${showFullAuditionList ? 'rotate-90' : 'group-hover:translate-x-1'}`} />
-                            </button>
-                        </div>
-
-                        <AnimatePresence>
-                            {showFullAuditionList && (
-                                <motion.div
-                                    initial={{ opacity: 0, height: 0 }}
-                                    animate={{ opacity: 1, height: 'auto' }}
-                                    exit={{ opacity: 0, height: 0 }}
-                                    className="mt-16 overflow-hidden"
-                                >
-                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                                        {auditionSpeakers.slice(4).map((speaker, idx) => (
-                                            <div key={idx} className="bg-white/5 p-6 rounded-2xl border border-white/5 flex items-center justify-between hover:bg-white/10 transition-colors">
-                                                <div className="flex flex-col">
-                                                    <span className="text-[9px] font-black text-blue-400 uppercase tracking-widest">{speaker.brand}</span>
-                                                    <span className="font-black text-sm">{speaker.name}</span>
-                                                </div>
+                                        <div className="p-6">
+                                            <p className="text-xs text-gray-400 font-bold mb-4 line-clamp-2">{speaker.desc}</p>
+                                            <div className="flex items-center justify-between">
+                                                <span className="text-[10px] font-black tracking-widest text-emerald-400">ON DEMAND</span>
                                                 {speaker.youtubeId && (
                                                     <button
                                                         onClick={() => setActiveYoutubeId(speaker.youtubeId)}
-                                                        className="text-gray-500 hover:text-red-500 transition-colors"
+                                                        className="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 transition-transform"
                                                     >
-                                                        <Youtube className="w-5 h-5" />
+                                                        <Youtube className="w-4 h-4 text-white" />
                                                     </button>
                                                 )}
                                             </div>
-                                        ))}
-                                    </div>
-                                </motion.div>
-                            )}
-                        </AnimatePresence>
-                    </div>
-                </section>
-            )}
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </div>
+
+                            <div className="text-center">
+                                <button
+                                    onClick={() => setShowFullAuditionList(!showFullAuditionList)}
+                                    className="group inline-flex items-center gap-4 bg-white text-gray-900 px-10 py-5 rounded-2xl font-black text-sm tracking-[0.2em] hover:bg-blue-600 hover:text-white transition-all shadow-2xl"
+                                >
+                                    {showFullAuditionList ? 'CLOSE LIST' : 'VIEW ALL SPEAKERS'}
+                                    <ChevronRight className={`w-5 h-5 transition-transform ${showFullAuditionList ? 'rotate-90' : 'group-hover:translate-x-1'}`} />
+                                </button>
+                            </div>
+
+                            <AnimatePresence>
+                                {showFullAuditionList && (
+                                    <motion.div
+                                        initial={{ opacity: 0, height: 0 }}
+                                        animate={{ opacity: 1, height: 'auto' }}
+                                        exit={{ opacity: 0, height: 0 }}
+                                        className="mt-16 overflow-hidden"
+                                    >
+                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                            {auditionSpeakers.slice(4).map((speaker, idx) => (
+                                                <div key={idx} className="bg-white/5 p-6 rounded-2xl border border-white/5 flex items-center justify-between hover:bg-white/10 transition-colors">
+                                                    <div className="flex flex-col">
+                                                        <span className="text-[9px] font-black text-blue-400 uppercase tracking-widest">{speaker.brand}</span>
+                                                        <span className="font-black text-sm">{speaker.name}</span>
+                                                    </div>
+                                                    {speaker.youtubeId && (
+                                                        <button
+                                                            onClick={() => setActiveYoutubeId(speaker.youtubeId)}
+                                                            className="text-gray-500 hover:text-red-500 transition-colors"
+                                                        >
+                                                            <Youtube className="w-5 h-5" />
+                                                        </button>
+                                                    )}
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
+                        </div>
+                    </section>
+                )
+            }
 
             <BusinessCalendar />
             <PartnersSection onViewAll={() => navigate('/partners')} />
@@ -843,12 +773,7 @@ export const MainPage: React.FC<MainPageProps> = ({
 
                     <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
                         <p className="text-[10px] font-black tracking-widest">© 2026 SOUND ANG. PREMIUM INSTALLATION GROUP.</p>
-                        <button
-                            onClick={() => setShowPasswordModal(true)}
-                            className="text-white/5 hover:text-white/20 transition-colors text-[8px]"
-                        >
-                            ADMIN ACCESS
-                        </button>
+
                     </div>
                 </div>
             </footer>
@@ -1022,6 +947,6 @@ export const MainPage: React.FC<MainPageProps> = ({
                     </motion.div>
                 )}
             </AnimatePresence>
-        </div>
+        </div >
     );
 };

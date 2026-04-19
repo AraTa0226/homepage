@@ -28,7 +28,7 @@ const SecurityMainPage = lazy(() => import('./pages/Home/SecurityMainPage').then
 const AudioMenuDetail = lazy(() => import('./components/Menu/AudioMenuDetail').then(m => ({ default: m.AudioMenuDetail })));
 const SecurityMenuDetail = lazy(() => import('./components/Menu/SecurityMenuDetail').then(m => ({ default: m.SecurityMenuDetail })));
 const DashcamMenuDetail = lazy(() => import('./components/Menu/DashcamMenuDetail').then(m => ({ default: m.DashcamMenuDetail })));
-const StaffDashboard = lazy(() => import('./components/Staff/StaffDashboard').then(m => ({ default: m.StaffDashboard })));
+
 const ReservationFormPage = lazy(() => import('./components/Form/ReservationFormPage').then(m => ({ default: m.ReservationFormPage })));
 const PartnersListPage = lazy(() => import('./components/PartnersListPage').then(m => ({ default: m.PartnersListPage })));
 const LegalInfoPage = lazy(() => import('./pages/Legal/LegalInfoPage').then(m => ({ default: m.LegalInfoPage })));
@@ -181,7 +181,7 @@ function AppContent() {
           <Route path="/security" element={<SecurityMenuDetail show={true} onClose={() => navigate('/')} />} />
           <Route path="/dashcam" element={<DashcamMenuDetail show={true} onClose={() => navigate('/')} />} />
           <Route path="/partners" element={<PartnersListPage />} />
-          <Route path="/staff" element={<StaffDashboard onBack={() => navigate('/')} />} />
+
           <Route path="/reservation" element={<ReservationFormPage onBack={() => navigate('/')} />} />
           <Route path="/legal" element={<LegalInfoPage onBack={() => navigate('/')} />} />
           <Route path="*" element={<Navigate to="/" replace />} />

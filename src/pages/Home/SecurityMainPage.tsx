@@ -111,22 +111,12 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
     showMegaMenu,
     setShowMegaMenu,
 }) => {
-    const [showPasswordModal, setShowPasswordModal] = useState(false);
-    const [password, setPassword] = useState("");
-    const [passwordError, setPasswordError] = useState(false);
+
     const [isLineupExpanded, setIsLineupExpanded] = useState(false);
     const [showFullAuditionList, setShowFullAuditionList] = useState(false);
     const theme = 'dark'; // Security theme is always dark
 
-    const handlePasswordSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        if (password === "ang888") {
-            setShowPasswordModal(false);
-            navigate('/staff');
-        } else {
-            setPasswordError(true);
-        }
-    };
+
 
     const securityCategories = [
         {
@@ -200,67 +190,7 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
 
     return (
         <div className={`min-h-screen bg-black text-white font-sans selection:bg-emerald-500/30 selection:text-emerald-200 dark`}>
-            {/* Password Modal */}
-            <AnimatePresence>
-                {showPasswordModal && (
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-black/80 backdrop-blur-md"
-                    >
-                        <motion.div
-                            initial={{ scale: 0.9, opacity: 0, y: 20 }}
-                            animate={{ scale: 1, opacity: 1, y: 0 }}
-                            className="bg-gray-900 rounded-[2.5rem] w-full max-w-sm p-8 shadow-2xl border border-white/5"
-                        >
-                            <div className="flex flex-col items-center text-center mb-8">
-                                <div className="w-16 h-16 rounded-2xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center mb-4">
-                                    <ShieldCheck className="w-8 h-8" />
-                                </div>
-                                <h3 className="text-2xl font-black tracking-tighter text-white">管理者認証</h3>
-                                <p className="text-gray-500 text-sm font-bold mt-1 uppercase tracking-widest">Admin Access</p>
-                            </div>
-                            <form onSubmit={handlePasswordSubmit} className="space-y-4">
-                                <div className="relative">
-                                    <input
-                                        type="password"
-                                        value={password}
-                                        onChange={(e) => {
-                                            setPassword(e.target.value);
-                                            setPasswordError(false);
-                                        }}
-                                        placeholder="パスワードを入力"
-                                        className={`w-full bg-black/50 border-2 rounded-2xl px-6 py-4 text-center font-bold tracking-widest placeholder:text-gray-700 focus:outline-none focus:ring-4 transition-all ${passwordError ? 'border-red-500 ring-red-500/10' : 'border-white/5 focus:border-emerald-500 focus:ring-emerald-500/10'
-                                            }`}
-                                        autoFocus
-                                    />
-                                    {passwordError && (
-                                        <p className="text-red-500 text-[10px] font-bold uppercase tracking-widest mt-2 text-center">パスワードが正しくありません</p>
-                                    )}
-                                </div>
-                                <button
-                                    type="submit"
-                                    className="w-full bg-emerald-600 text-white font-black py-4 rounded-2xl hover:bg-emerald-500 transition-all shadow-xl shadow-emerald-500/20 uppercase tracking-widest text-sm"
-                                >
-                                    認証する
-                                </button>
-                                <button
-                                    type="button"
-                                    onClick={() => {
-                                        setShowPasswordModal(false);
-                                        setPassword("");
-                                        setPasswordError(false);
-                                    }}
-                                    className="w-full text-gray-500 hover:text-white text-xs font-bold uppercase tracking-widest py-2"
-                                >
-                                    キャンセル
-                                </button>
-                            </form>
-                        </motion.div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
+
 
             <header className="fixed top-0 left-0 right-0 z-[60] bg-black/80 backdrop-blur-xl border-b border-white/5">
                 <div className="max-w-7xl mx-auto px-4 h-16 md:h-24 flex items-center gap-2">
