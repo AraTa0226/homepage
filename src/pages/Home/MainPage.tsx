@@ -268,10 +268,10 @@ export const MainPage: React.FC<MainPageProps> = ({
                                 className={`flex flex-col items-center transition-colors group-hover/nav:text-blue-500 ${showMegaMenu ? 'text-blue-500' : ''}`}
                             >
                                 <div className="flex items-center gap-1">
-                                    <span className={`text-sm font-black tracking-widest ${showMegaMenu ? 'font-black' : ''}`}>LINEUP</span>
+                                    <span className={`text-sm font-black tracking-widest ${showMegaMenu ? 'font-black' : ''}`}>MENU</span>
                                     <ChevronRight className={`w-3 h-3 transition-transform ${showMegaMenu ? 'rotate-90' : ''}`} />
                                 </div>
-                                <span className="text-[8px] font-bold opacity-40 group-hover/nav:opacity-100 transition-opacity">プラン一覧</span>
+                                <span className="text-[8px] font-bold opacity-40 group-hover/nav:opacity-100 transition-opacity">メニュー一覧</span>
                             </button>
                             <MegaMenu
                                 show={showMegaMenu}
@@ -396,8 +396,8 @@ export const MainPage: React.FC<MainPageProps> = ({
                 <div className="relative max-w-7xl mx-auto px-4 py-32 md:py-40">
                     <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }}>
                         <div className="flex flex-col gap-4 mb-8">
-                            <div className="inline-flex items-center gap-2 md:gap-3 w-fit px-4 py-2 md:px-6 md:py-2.5 bg-blue-600/10 backdrop-blur-md border border-blue-500/20 rounded-full">
-                                <span className="text-blue-400 text-[9px] md:text-sm font-black uppercase tracking-[0.15em] whitespace-nowrap">
+                            <div className="inline-flex items-center gap-2 md:gap-3 w-fit px-4 py-2 md:px-6 md:py-2.5 bg-blue-600 rounded-full shadow-lg shadow-blue-500/20">
+                                <span className="text-white text-[9px] md:text-sm font-black uppercase tracking-[0.15em] whitespace-nowrap">
                                     福岡のカーオーディオ専門店
                                 </span>
                             </div>
@@ -451,21 +451,21 @@ export const MainPage: React.FC<MainPageProps> = ({
             </section>
 
             {/* Blog Section */}
-            <section id="blog" className="py-24 md:py-32 bg-gray-50 relative overflow-hidden">
+            <section id="blog" className="py-24 md:py-32 bg-gray-50 relative overflow-hidden text-gray-900">
                 <div className="max-w-7xl mx-auto px-4 relative z-10">
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                         <div className="max-w-2xl">
                             <span className="text-blue-600 font-black tracking-[0.3em] uppercase text-xs mb-4 block">Journal & Blog</span>
-                            <h2 className="text-4xl md:text-5xl font-black leading-tight tracking-tighter">ブログ</h2>
+                            <h2 className="text-5xl md:text-7xl font-black leading-tight tracking-tighter italic text-gray-900">BLOG</h2>
                             <p className="text-gray-500 mt-4 font-bold leading-relaxed">
-                                最新の施工事例や、カーオーディオ・セキュリティに関する役立つ情報を発信しています。
+                                最新の施工事例や、カーオーディオに関する深い知識、日々の出来事を発信しています。
                             </p>
                         </div>
                         <a
                             href="https://soundang.com/webbrog/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group flex items-center gap-3 bg-white px-8 py-4 rounded-2xl shadow-xl shadow-blue-500/5 border border-gray-100 text-sm font-black hover:bg-blue-600 hover:text-white transition-all"
+                            className="group flex items-center gap-3 bg-white px-8 py-4 rounded-2xl border border-gray-200 text-sm font-black hover:bg-blue-600 hover:text-white transition-all shadow-lg shadow-blue-500/5"
                         >
                             ブログ一覧を見る
                             <div className="w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center group-hover:bg-white/20 transition-colors">
@@ -479,42 +479,33 @@ export const MainPage: React.FC<MainPageProps> = ({
                             <Loader2 className="w-10 h-10 animate-spin text-blue-500" />
                         </div>
                     ) : posts.length > 0 ? (
-                        <div className="flex flex-col gap-4">
-                            {posts.map((post, i) => {
-                                // Colors based on index (1st: Blue, 2nd: Emerald, 3rd: Purple)
-                                const cycleColors = ['bg-blue-500', 'bg-emerald-500', 'bg-purple-500'];
-                                const accentColor = cycleColors[i % cycleColors.length];
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            {posts.map((post, i) => (
+                                <motion.a
+                                    key={i}
+                                    href={post.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: i * 0.1 }}
+                                    className="group relative bg-white rounded-[2.5rem] p-8 pl-10 border border-gray-100 hover:border-blue-500/20 transition-all shadow-xl hover:shadow-2xl overflow-hidden"
+                                >
+                                    {/* Left Accent Line */}
+                                    <div className="absolute left-0 top-10 bottom-10 w-1 bg-blue-500 rounded-r-full shadow-[0_0_10px_rgba(59,130,246,0.3)] group-hover:scale-y-110 transition-transform origin-center" />
 
-                                return (
-                                    <motion.a
-                                        key={i}
-                                        href={post.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        initial={{ opacity: 0, x: -20 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        transition={{ delay: i * 0.1 }}
-                                        className="group relative flex flex-col md:flex-row md:items-center bg-white rounded-2xl p-6 md:p-8 gap-3 md:gap-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all overflow-hidden"
-                                    >
-                                        <div className={`absolute left-0 top-0 bottom-0 w-1.5 ${accentColor} opacity-70 group-hover:opacity-100 transition-opacity`}></div>
-
-                                        <div className="flex flex-col gap-1 shrink-0">
-                                            <div className="text-gray-400 font-mono text-xs font-bold">{post.date}</div>
-                                            <span className={`text-[10px] font-black uppercase tracking-widest ${accentColor.replace('bg-', 'text-')} px-2 py-0.5 bg-gray-50 rounded-full w-fit`}>
-                                                {post.category}
-                                            </span>
+                                    <div className="mb-6 flex justify-between items-start">
+                                        <div className="w-12 h-12 rounded-2xl bg-blue-500 flex items-center justify-center shadow-lg shadow-blue-500/20">
+                                            <div className="text-[10px] font-black text-white">ANG</div>
                                         </div>
-
-                                        <h3 className="text-lg md:text-xl font-black flex-grow group-hover:text-blue-600 transition-colors leading-snug"
-                                            dangerouslySetInnerHTML={{ __html: post.title }} />
-
-                                        <div className="flex items-center gap-4 text-gray-300">
-                                            <span className="hidden md:block text-[9px] font-black tracking-widest group-hover:text-blue-500 transition-colors">READ MORE</span>
-                                            <ChevronRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                                        </div>
-                                    </motion.a>
-                                );
-                            })}
+                                        <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">{post.date}</span>
+                                    </div>
+                                    <h3 className="text-lg font-black leading-snug text-gray-900 group-hover:text-blue-600 transition-colors" dangerouslySetInnerHTML={{ __html: post.title }} />
+                                    <div className="mt-8 flex items-center gap-2 text-[10px] font-black tracking-[0.2em] text-blue-600 uppercase">
+                                        Read More <ChevronRight className="w-3 h-3" />
+                                    </div>
+                                </motion.a>
+                            ))}
                         </div>
                     ) : (
                         <p className="text-center text-gray-400 py-10 font-bold">記事が見つかりませんでした。</p>
@@ -526,7 +517,7 @@ export const MainPage: React.FC<MainPageProps> = ({
             <section id="services" className="py-24 px-4 bg-white">
                 <div className="max-w-7xl mx-auto">
                     <div className="mb-12">
-                        <h2 className="text-4xl font-black tracking-tighter">LINEUP</h2>
+                        <h2 className="text-4xl font-black tracking-tighter">MENU</h2>
                     </div>
                     <VaultGrid
                         categories={categories}
@@ -747,10 +738,10 @@ export const MainPage: React.FC<MainPageProps> = ({
                             <h4 className="text-white font-black text-xs tracking-widest uppercase mb-8">Quick Links</h4>
                             <ul className="space-y-4 text-sm font-bold">
                                 <li><a href="#" className="hover:text-blue-500 transition-colors">Home</a></li>
-                                <li><a href="#blog" className="hover:text-white transition-colors">Latest Journal</a></li>
+                                <li><a href="#blog" className="hover:text-white transition-colors">BLOG</a></li>
                                 <li><a href="#blog" className="hover:text-white transition-colors">Event Archive</a></li>
                                 <li><a href="#blog" className="hover:text-white transition-colors">Latest News</a></li>
-                                <li><a href="#services" className="hover:text-white transition-colors">Service Catalog</a></li>
+                                <li><a href="#services" className="hover:text-white transition-colors">Audio Menu</a></li>
                                 <li><a href="#options" className="hover:text-white transition-colors">Audition Room</a></li>
                                 <li><button onClick={() => navigate('/reservation')} className="text-blue-500 hover:underline">Reservation Center</button></li>
                             </ul>
@@ -811,7 +802,7 @@ export const MainPage: React.FC<MainPageProps> = ({
                                     {[
                                         { href: "#", en: "HOME", jp: "ホーム" },
                                         { href: "#blog", en: "BLOG", jp: "ブログ" },
-                                        { href: "#services", en: "LINEUP", jp: "プラン一覧", isExpandable: true },
+                                        { href: "#services", en: "MENU", jp: "メニュー", isExpandable: true },
                                         { href: "#options", en: "AUDITION", jp: "試聴スピーカー" },
                                         { href: "#partners", en: "BRANDS", jp: "取扱ブランド" },
                                         { href: "#info", en: "SCHEDULE", jp: "営業日" },

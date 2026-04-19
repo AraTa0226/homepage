@@ -28,10 +28,16 @@ const LineIcon = ({ className }: { className?: string }) => (
 // 定休日の初期設定（火曜・金曜）
 const DEFAULT_WEEKLY_HOLIDAYS = [2, 5]; // 0:日, 1:月, 2:火, 3:水, 4:木, 5:金, 6:土
 
-export const BusinessCalendar = () => {
+interface BusinessCalendarProps {
+  theme?: 'light' | 'dark';
+}
+
+export const BusinessCalendar: React.FC<BusinessCalendarProps> = ({ theme = 'light' }) => {
   const navigate = useNavigate();
   const [viewDate, setViewDate] = useState(new Date());
   const { holidays } = useCalendar();
+
+  const isDark = theme === 'dark';
 
   const nextMonth = () => {
     setViewDate(new Date(viewDate.getFullYear(), viewDate.getMonth() + 1, 1));
@@ -47,24 +53,27 @@ export const BusinessCalendar = () => {
   const firstDayOfMonth = new Date(year, month, 1).getDay();
   const monthKey = `${year}-${month + 1}`;
 
+  const accentColor = isDark ? 'emerald' : 'blue';
+  const secondaryAccent = isDark ? 'emerald' : 'red';
+
   return (
-    <section className="py-24 bg-gray-50 overflow-hidden relative">
+    <section className="py-24 bg-gray-50 overflow-hidden relative text-gray-900">
       <div className="max-w-7xl mx-auto px-4 relative">
-        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-blue-100 rounded-full blur-3xl opacity-50"></div>
-        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 bg-orange-100 rounded-full blur-3xl opacity-50"></div>
+        <div className={`absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full blur-3xl opacity-50 ${isDark ? 'bg-emerald-100' : 'bg-blue-100'}`}></div>
+        <div className={`absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 rounded-full blur-3xl opacity-50 ${isDark ? 'bg-emerald-100/50' : 'bg-orange-100'}`}></div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
           <div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <div className="flex items-center gap-4 mb-4">
-                <span className="text-blue-500 font-bold tracking-widest uppercase text-sm block cursor-default select-none">
+                <span className={`font-bold tracking-widest uppercase text-xs block cursor-default select-none ${isDark ? 'text-emerald-500' : 'text-blue-500'}`}>
                   Calendar
                 </span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight text-gray-900">
                 営業日のご案内
               </h2>
-              <p className="text-gray-600 text-lg mb-10 leading-relaxed">
+              <p className="text-lg mb-10 leading-relaxed text-gray-600">
                 Sound ANGは、お客様一人ひとりと向き合う時間を大切にするため、予約優先制となっております。
                 カレンダーより定休日をご確認の上、お気軽にお問い合わせください。
               </p>
@@ -76,23 +85,23 @@ export const BusinessCalendar = () => {
                     <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-200">
                       <Speaker className="w-5 h-5 text-white" />
                     </div>
-                    <h3 className="font-black text-xl tracking-tighter">AUDIO</h3>
+                    <h3 className="font-black text-xl tracking-tighter text-gray-900">AUDIO</h3>
                   </div>
                   <div className="space-y-3 text-sm flex-grow">
-                    <div className="flex items-start gap-3">
+                    <div className="flex items-start gap-4">
                       <MapPin className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
-                      <p className="text-gray-600 leading-tight">〒816-0912<br />福岡県大野城市御笠川5-4-14</p>
+                      <p className="text-gray-600 leading-tight font-bold">〒816-0912<br />福岡県大野城市御笠川5-4-14</p>
                     </div>
-                    <div className="flex items-start gap-3">
+                    <div className="flex items-start gap-4">
                       <Phone className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
                       <div>
-                        <p className="text-gray-900 font-bold text-base">092-503-5421</p>
-                        <p className="text-gray-400 text-[10px]">FAX: 092-503-5492</p>
+                        <p className="text-gray-900 font-black text-base">092-503-5421</p>
+                        <p className="text-gray-400 text-[10px] font-bold">FAX: 092-503-5492</p>
                       </div>
                     </div>
-                    <div className="flex items-start gap-3">
+                    <div className="flex items-start gap-4">
                       <Mail className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
-                      <a href="mailto:ang@soundang.com" className="text-gray-600 break-all font-medium hover:text-blue-500 transition-colors">ang@soundang.com</a>
+                      <a href="mailto:ang@soundang.com" className="text-gray-600 break-all font-bold hover:text-blue-500 transition-colors">ang@soundang.com</a>
                     </div>
                   </div>
                 </div>
@@ -104,25 +113,25 @@ export const BusinessCalendar = () => {
                       <ShieldCheck className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <h3 className="font-black text-xl tracking-tighter leading-none">SECURITY</h3>
-                      <p className="text-[10px] text-gray-400 font-bold mt-1">オートセキュリティーエナジー</p>
+                      <h3 className="font-black text-xl tracking-tighter leading-none text-gray-900">SECURITY</h3>
+                      <p className="text-[10px] text-gray-500 font-bold mt-1 uppercase tracking-widest">Auto Security Energy</p>
                     </div>
                   </div>
                   <div className="space-y-3 text-sm flex-grow">
-                    <div className="flex items-start gap-3">
+                    <div className="flex items-start gap-4">
                       <MapPin className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
-                      <p className="text-gray-600 leading-tight">〒816-0912<br />福岡県大野城市御笠川5-4-14</p>
+                      <p className="text-gray-600 leading-tight font-bold">〒816-0912<br />福岡県大野城市御笠川5-4-14</p>
                     </div>
-                    <div className="flex items-start gap-3">
+                    <div className="flex items-start gap-4">
                       <Phone className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                       <div>
-                        <p className="text-gray-900 font-bold text-base">092-503-5437</p>
-                        <p className="text-gray-400 text-[10px]">FAX: 092-503-5492</p>
+                        <p className="text-gray-900 font-black text-base">092-503-5437</p>
+                        <p className="text-gray-400 text-[10px] font-bold">FAX: 092-503-5492</p>
                       </div>
                     </div>
-                    <div className="flex items-start gap-3">
+                    <div className="flex items-start gap-4">
                       <Mail className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
-                      <a href="mailto:ang@sec-ang.com" className="text-gray-600 break-all font-medium hover:text-red-500 transition-colors">ang@sec-ang.com</a>
+                      <a href="mailto:ang@sec-ang.com" className="text-gray-600 break-all font-bold hover:text-red-500 transition-colors">ang@sec-ang.com</a>
                     </div>
                   </div>
                 </div>
@@ -131,9 +140,9 @@ export const BusinessCalendar = () => {
               <div className="bg-gray-100/50 rounded-[2rem] p-6 mb-8 border border-gray-100">
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div className="flex items-start gap-3">
-                    <Clock className="w-5 h-5 text-blue-500 shrink-0 mt-1" />
+                    <Clock className={`w-5 h-5 shrink-0 mt-1 ${isDark ? 'text-emerald-500' : 'text-blue-500'}`} />
                     <div>
-                      <h4 className="font-bold text-sm mb-1">営業時間</h4>
+                      <h4 className="font-bold text-xs mb-1">営業時間</h4>
                       <div className="text-xs text-gray-600 space-y-1">
                         <p>月・水・木・土：9:30 〜 18:30</p>
                         <p>日・祝日：9:30 〜 17:00</p>
@@ -143,7 +152,7 @@ export const BusinessCalendar = () => {
                   <div className="flex items-start gap-3">
                     <CalendarIcon className="w-5 h-5 text-red-500 shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-bold text-sm mb-1">定休日</h4>
+                      <h4 className="font-bold text-xs mb-1">定休日</h4>
                       <p className="text-red-500 font-bold text-xs">毎週火曜日 / 金曜日</p>
                     </div>
                   </div>
@@ -161,9 +170,9 @@ export const BusinessCalendar = () => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex items-center gap-6 p-6 bg-white rounded-[2rem] shadow-xl shadow-green-500/10 border border-green-50 transition-all group cursor-pointer relative overflow-hidden mb-10"
+                className={`${isDark ? 'bg-white/5 border-white/10' : 'bg-white border-green-50 shadow-green-500/10'} flex items-center gap-6 p-6 rounded-[2rem] shadow-xl transition-all group cursor-pointer relative overflow-hidden mb-10 border`}
               >
-                <div className="absolute top-0 right-0 w-24 h-24 bg-green-50 rounded-full -mr-8 -mt-8 opacity-50 group-hover:scale-110 transition-transform"></div>
+                <div className={`absolute top-0 right-0 w-24 h-24 rounded-full -mr-8 -mt-8 opacity-50 group-hover:scale-110 transition-transform ${isDark ? 'bg-emerald-500/10' : 'bg-green-50'}`}></div>
                 <div className="flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-105 relative z-10">
                   <img
                     src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
@@ -180,7 +189,7 @@ export const BusinessCalendar = () => {
                       受付中
                     </span>
                   </div>
-                  <p className="text-gray-900 text-sm font-bold leading-tight">
+                  <p className="text-sm font-black leading-tight text-gray-900">
                     ラインからでも来店予約・お問い合わせ可能
                   </p>
                 </div>
@@ -192,21 +201,21 @@ export const BusinessCalendar = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="bg-white rounded-[2.5rem] shadow-2xl shadow-blue-900/5 p-8 md:p-10 border border-white relative"
+            className={`rounded-[2.5rem] shadow-2xl p-8 md:p-10 border relative bg-white ${isDark ? 'border-emerald-500/10 shadow-emerald-500/5' : 'border-white shadow-blue-900/5'}`}
           >
             <div className="flex items-center justify-between mb-10">
-              <h3 className="text-2xl font-bold">{year}.{String(month + 1).padStart(2, '0')}</h3>
+              <h3 className="text-2xl font-black italic tracking-tighter text-gray-900">{year}.{String(month + 1).padStart(2, '0')}</h3>
               <div className="flex gap-2">
                 <button
                   onClick={prevMonth}
-                  className="p-3 hover:bg-gray-50 rounded-2xl border border-gray-100 transition-colors"
+                  className="p-3 rounded-2xl border transition-colors hover:bg-gray-50 border-gray-100 text-gray-900"
                   aria-label="前の月"
                 >
                   <ChevronLeft className="w-5 h-5" />
                 </button>
                 <button
                   onClick={nextMonth}
-                  className="p-3 hover:bg-gray-50 rounded-2xl border border-gray-100 transition-colors"
+                  className="p-3 rounded-2xl border transition-colors hover:bg-gray-50 border-gray-100 text-gray-900"
                   aria-label="次の月"
                 >
                   <ChevronRight className="w-5 h-5" />
@@ -216,7 +225,7 @@ export const BusinessCalendar = () => {
 
             <div className="grid grid-cols-7 gap-1 mb-6">
               {['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'].map((day, i) => (
-                <div key={day} className={`text-center text-[10px] font-black tracking-tighter ${i === 0 ? 'text-red-400' : i === 6 ? 'text-blue-400' : 'text-gray-300'}`}>
+                <div key={day} className={`text-center text-[10px] font-black tracking-tighter ${i === 0 ? 'text-red-500' : i === 6 ? 'text-blue-500' : 'text-gray-300'}`}>
                   {day}
                 </div>
               ))}
@@ -231,13 +240,8 @@ export const BusinessCalendar = () => {
                 const day = i + 1;
                 const dayOfWeek = new Date(year, month, day).getDay();
 
-                // 毎週の定休日判定
                 const isWeeklyHoliday = DEFAULT_WEEKLY_HOLIDAYS.includes(dayOfWeek);
-
-                // 個別設定の休日判定
                 const isManualHoliday = holidays[monthKey]?.includes(day) || false;
-
-                // 最終的な休日判定（毎週の休み XOR 個別設定）
                 const isClosed = isWeeklyHoliday !== isManualHoliday;
 
                 const isToday = new Date().getFullYear() === year &&
@@ -248,40 +252,47 @@ export const BusinessCalendar = () => {
                   <div
                     key={day}
                     className={`
-                      aspect-square flex flex-col items-center justify-center rounded-2xl text-sm font-bold transition-all relative group
-                      ${isClosed ? 'bg-red-50 text-red-500' : isToday ? 'bg-blue-600 text-white shadow-lg shadow-blue-200' : 'hover:bg-blue-50 hover:text-blue-600'}
+                      aspect-square flex flex-col items-center justify-center rounded-2xl text-sm font-black transition-all relative group
+                      ${isClosed
+                        ? (isDark ? 'bg-emerald-50 text-emerald-600' : 'bg-red-50 text-red-500')
+                        : isToday
+                          ? (isDark ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-200' : 'bg-blue-600 text-white shadow-lg shadow-blue-200')
+                          : 'hover:bg-gray-50 text-gray-900'}
                     `}
                   >
                     {day}
                     {isClosed && (
-                      <span className="absolute bottom-2 w-1 h-1 bg-red-400 rounded-full"></span>
+                      <span className={`absolute bottom-2 w-1.5 h-0.5 rounded-full ${isDark ? 'bg-emerald-500' : 'bg-red-400'}`}></span>
                     )}
                   </div>
                 );
               })}
             </div>
 
-            <div className="mt-10 pt-8 border-t border-gray-50 flex items-center justify-between text-xs text-gray-400 font-medium">
+            <div className="mt-10 pt-8 border-t border-gray-100 flex items-center justify-between text-[10px] font-black tracking-widest text-gray-400">
               <div className="flex gap-4">
                 <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-red-500"></span>
+                  <span className={`w-2.5 h-0.5 rounded-full ${isDark ? 'bg-emerald-500' : 'bg-red-500'}`}></span>
                   <span>定休日</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-blue-500"></span>
+                  <span className={`w-2 h-2 rounded-full ${isDark ? 'bg-emerald-600' : 'bg-blue-500'}`}></span>
                   <span>本日</span>
                 </div>
               </div>
-              <span className="italic opacity-50">Sound ANG Official</span>
+              <span className="italic opacity-50 font-black">Official</span>
             </div>
 
             <div className="mt-10">
               <button
                 onClick={() => navigate('/reservation')}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-2xl font-bold shadow-lg shadow-blue-500/20 transition-all flex items-center justify-center gap-2"
+                className={`w-full py-4 rounded-2xl font-black text-sm tracking-widest transition-all shadow-xl flex items-center justify-center gap-3 ${isDark
+                  ? 'bg-emerald-600 hover:bg-emerald-500 text-white shadow-emerald-900/20'
+                  : 'bg-blue-600 hover:bg-blue-700 text-white shadow-blue-500/20'
+                  }`}
               >
-                <Mail className="w-5 h-5 mr-1" />
-                <span className="text-lg">専用フォームで予約する</span>
+                <Mail className="w-5 h-5" />
+                <span>予約・お問い合わせ</span>
               </button>
             </div>
           </motion.div>

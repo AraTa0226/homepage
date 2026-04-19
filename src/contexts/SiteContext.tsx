@@ -167,7 +167,7 @@ const initialPartners: Partner[] = [
 ];
 
 const initialAssets: SiteAssets = {
-  heroImage: "/images/Top/tenpo.webp",
+  heroImage: "/images/Top/tenpo2.webp",
   logoText: "Sound ANG Security",
   audioMenuImage: "/images/Top/speaker.webp",
   securityMenuImage: "/images/Top/security.webp",

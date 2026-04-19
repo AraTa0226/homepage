@@ -13,7 +13,7 @@ interface VaultGridProps {
 
 export const VaultGrid: React.FC<VaultGridProps> = ({ categories, onCategoryClick, theme, handleMenuClick, isMegaMenu }) => {
     return (
-        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-auto md:auto-rows-[350px] lg:auto-rows-[450px] ${isMegaMenu ? 'max-w-6xl mx-auto p-8 bg-white/95 backdrop-blur-xl rounded-[3rem] shadow-2xl border border-gray-100' : ''}`}>
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-auto md:auto-rows-[280px] lg:auto-rows-[320px] ${isMegaMenu ? 'max-w-6xl mx-auto p-8 bg-white/95 backdrop-blur-xl rounded-[3rem] shadow-2xl border border-gray-100' : ''}`}>
             {categories.map((cat: any, i: number) => (
                 <motion.div
                     key={cat.id}
@@ -21,7 +21,7 @@ export const VaultGrid: React.FC<VaultGridProps> = ({ categories, onCategoryClic
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.1 }}
                     onClick={() => onCategoryClick(cat)}
-                    className={`group relative rounded-[2.5rem] overflow-hidden cursor-pointer shadow-2xl border border-white/10 w-full min-h-[550px] md:min-h-0 md:h-full ${cat.gridClass || "col-span-1"
+                    className={`group relative rounded-[2.5rem] overflow-hidden cursor-pointer shadow-2xl border border-white/10 w-full min-h-[400px] md:min-h-0 md:h-full ${cat.gridClass || "col-span-1"
                         }`}
                 >
                     {/* Background Image */}
@@ -33,8 +33,8 @@ export const VaultGrid: React.FC<VaultGridProps> = ({ categories, onCategoryClic
 
                     {/* Theme Overlay - Strengthened for better contrast */}
                     <div className={`absolute inset-0 transition-opacity duration-500 ${theme === 'dark'
-                        ? 'bg-gradient-to-t from-black/95 via-black/80 md:via-black/60 to-transparent group-hover:bg-black/70'
-                        : 'bg-gradient-to-t from-white/95 via-white/80 md:via-white/60 to-transparent group-hover:bg-white/70'
+                        ? 'bg-gradient-to-t from-black via-black/80 md:via-black/60 to-transparent group-hover:bg-black/70'
+                        : 'bg-gradient-to-t from-white via-white/80 md:via-white/60 to-transparent group-hover:bg-white/70'
                         }`} />
 
                     {/* Content HUD */}
@@ -69,9 +69,12 @@ export const VaultGrid: React.FC<VaultGridProps> = ({ categories, onCategoryClic
                                         const target = planMapping[item] || { id: cat.id };
                                         handleMenuClick(target);
                                     }}
-                                    className={`flex items-center justify-between text-[11px] md:text-xs font-black transition-all hover:translate-x-2 px-4 py-2 rounded-xl backdrop-blur-md border shadow-sm ${theme === 'dark'
-                                        ? 'bg-white/5 border-white/10 text-white/90 hover:bg-white/20 hover:text-white'
-                                        : 'bg-black/[0.03] border-black/5 text-gray-900 hover:bg-black/[0.08] hover:text-blue-600'
+                                    className={`flex items-center justify-between text-[11px] md:text-xs font-black transition-all hover:translate-x-2 px-4 py-2.5 rounded-xl backdrop-blur-md border shadow-sm ${theme === 'dark'
+                                        ? 'bg-white/10 border-white/20 text-white/90 hover:bg-white/20'
+                                        : 'bg-white/80 border-gray-200 text-gray-900 hover:bg-white'
+                                        } ${cat.id.includes('security') || cat.id === 'can_invader' || cat.id === 'radar' || cat.id === 'maintenance'
+                                            ? 'hover:text-emerald-500 hover:border-emerald-500/30'
+                                            : 'hover:text-blue-600 hover:border-blue-500/30'
                                         }`}
                                 >
                                     <span>{item}</span>

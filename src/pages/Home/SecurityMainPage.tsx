@@ -22,7 +22,11 @@ import {
     Lock,
     Eye,
     Zap,
-    AlertTriangle
+    AlertTriangle,
+    Award,
+    Wrench,
+    Activity,
+    Settings2
 } from 'lucide-react';
 import { SafeImage } from '../../components/ui/SafeImage';
 import { BusinessCalendar } from '../../components/Calendar/BusinessCalendar';
@@ -114,7 +118,7 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
 
     const [isLineupExpanded, setIsLineupExpanded] = useState(false);
     const [showFullAuditionList, setShowFullAuditionList] = useState(false);
-    const theme = 'dark'; // Security theme is always dark
+    const theme = 'light'; // Security theme is now light to match the physical store
 
 
 
@@ -124,15 +128,15 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
             title: '最新カーセキュリティ',
             subtitle: 'SYSTEMS',
             image: assets.securityMenuImage,
-            gridClass: 'lg:col-span-2 lg:row-span-2',
+            gridClass: 'lg:row-span-2',
             items: [
                 'Panthera (パンテーラ) Z-Series',
                 'Grgo (ゴルゴ) V-Series',
-                'Author Alarm (オーサーアラーム)',
-                'IGLA2+ (イグラ)',
-                'Keyless Phantom (キーレスファントム)',
-                'TOR (トール)',
-                'KVANT (クバント)'
+                'Author Alarm / IGLA2+',
+                'デジタル・イモビライザー',
+                'リレーアタック対策',
+                'CANインベーダー対策',
+                '防犯解析・高度施工'
             ],
             path: '/security'
         },
@@ -142,10 +146,10 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
             subtitle: 'PROTECTION',
             image: assets.pitImage,
             items: [
-                'IGLA ALARM',
-                'KLB (キーレスブロック)',
+                'IGLA ALARM / キーレスブロック',
                 'デジタル・イモビライザー',
-                'Author Alarm・防犯施工'
+                'Can-Invader防衛施工',
+                'OBDガード / 物理ロック'
             ],
             path: '/security'
         },
@@ -155,22 +159,22 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
             subtitle: 'EYE & RECORD',
             image: assets.dashcamMenuImage,
             items: [
-                '前後2カメラ・ドラレコ',
-                '360度＋リアカメラ・モデル',
-                '駐車監視オプションセット',
-                'デジタルインナーミラー'
+                '前後2カメラ・駐車監視',
+                'デジタルインナーミラー',
+                '360度全方位記録',
+                'ドラレコ・セキュリティー連動'
             ],
             path: '/dashcam'
         },
         {
             id: 'radar',
-            title: 'レーダー・レーザー探知機',
+            title: 'レーザー・レーダー探知機',
             subtitle: 'RADAR & LASER',
             image: assets.showroomImage,
             items: [
                 '最新MSSS対応モデル',
                 'セパレート型・高性能探知機',
-                'OBDII・車両情報連携'
+                'レーザー受信機（単体）'
             ],
             path: '/dashcam'
         },
@@ -182,17 +186,18 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
             items: [
                 'セキュリティ定期点検',
                 'リモコン電池・消耗品交換',
-                'システム・アップグレード'
+                'システム・アップグレード',
+                '店舗・アクセスマップ'
             ],
             path: '/security'
         }
     ];
 
     return (
-        <div className={`min-h-screen bg-black text-white font-sans selection:bg-emerald-500/30 selection:text-emerald-200 dark`}>
+        <div className={`min-h-screen bg-white text-gray-900 font-sans selection:bg-emerald-500/30 selection:text-emerald-900`}>
 
 
-            <header className="fixed top-0 left-0 right-0 z-[60] bg-black/80 backdrop-blur-xl border-b border-white/5">
+            <header className="fixed top-0 left-0 right-0 z-[60] bg-white/80 backdrop-blur-xl border-b border-gray-100">
                 <div className="max-w-7xl mx-auto px-4 h-16 md:h-24 flex items-center gap-2">
                     <div className="flex-1 flex items-center">
                         <div
@@ -203,7 +208,7 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                 <span className="font-black text-xl italic tracking-tighter">S</span>
                             </div>
                             <div className="flex flex-col">
-                                <span className="text-xl md:text-2xl font-black tracking-tighter leading-none text-white">Security ANG</span>
+                                <span className="text-xl md:text-2xl font-black tracking-tighter leading-none text-gray-900">AUTO SECURITY ANG</span>
                             </div>
                         </div>
                     </div>
@@ -212,10 +217,6 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                         <a href="#" className="flex flex-col items-center group/item transition-colors">
                             <span className="text-sm font-black tracking-widest group-hover/item:text-emerald-500">HOME</span>
                             <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">ホーム</span>
-                        </a>
-                        <a href="#blog" className="flex flex-col items-center group/item transition-colors">
-                            <span className="text-sm font-black tracking-widest group-hover/item:text-emerald-500">KNOWLEDGE</span>
-                            <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">防犯知識</span>
                         </a>
                         <div
                             className="relative py-8 group/nav"
@@ -226,7 +227,7 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                 className={`flex flex-col items-center transition-colors group-hover/nav:text-emerald-500 ${showMegaMenu ? 'text-emerald-500' : ''}`}
                             >
                                 <div className="flex items-center gap-1">
-                                    <span className={`text-sm font-black tracking-widest ${showMegaMenu ? 'font-black' : ''}`}>LINEUP</span>
+                                    <span className={`text-sm font-black tracking-widest ${showMegaMenu ? 'font-black' : ''}`}>MENU</span>
                                     <ChevronRight className={`w-3 h-3 transition-transform ${showMegaMenu ? 'rotate-90' : ''}`} />
                                 </div>
                                 <span className="text-[8px] font-bold opacity-40 group-hover/nav:opacity-100 transition-opacity">セキュリティ一覧</span>
@@ -240,13 +241,17 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                 handleMenuClick={handleMenuClick}
                             />
                         </div>
+                        <a href="#blog" className="flex flex-col items-center group/item transition-colors">
+                            <span className="text-sm font-black tracking-widest group-hover/item:text-emerald-500">BLOG</span>
+                            <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">ブログ</span>
+                        </a>
                         <a href="#access" className="flex flex-col items-center group/item transition-colors">
                             <span className="text-sm font-black tracking-widest group-hover/item:text-emerald-500">ACCESS</span>
                             <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">店舗案内</span>
                         </a>
                         <button
                             onClick={() => navigate('/')}
-                            className="flex flex-col items-center group/item transition-colors border-l border-white/10 pl-4 ml-2"
+                            className="flex flex-col items-center group/item transition-colors border-l border-gray-100 pl-4 ml-2"
                         >
                             <span className="text-sm font-black tracking-widest text-blue-500 group-hover/item:text-blue-400">AUDIO</span>
                             <span className="text-[8px] font-bold text-blue-500/40 group-hover/item:text-blue-400 transition-opacity">オーディオ版</span>
@@ -259,19 +264,19 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center justify-center w-12 h-12 md:w-auto md:px-5 md:py-2.5 bg-[#06C755] text-white rounded-xl font-black transition-all hover:bg-[#05b34c] shadow-lg shadow-green-500/10 shrink-0"
-                            aria-label="LINEで防犯相談"
+                            aria-label="LINEで相談"
                         >
                             <MessageSquare className="w-5 h-5 md:mr-2" />
-                            <span className="hidden sm:inline text-[10px] tracking-widest">防犯相談</span>
+                            <span className="hidden sm:inline text-[10px] tracking-widest">LINE相談</span>
                         </a>
 
                         <button
                             onClick={() => navigate('/reservation')}
                             className="flex items-center justify-center w-12 h-12 md:w-auto md:px-5 md:py-2.5 bg-emerald-600 text-white rounded-xl font-black transition-all hover:bg-emerald-700 shadow-lg shadow-emerald-500/10 shrink-0"
-                            aria-label="施工予約"
+                            aria-label="来店予約"
                         >
                             <CalendarIcon className="w-5 h-5 md:mr-2" />
-                            <span className="hidden sm:inline text-[10px] tracking-widest">施工予約</span>
+                            <span className="hidden sm:inline text-[10px] tracking-widest">来店予約</span>
                         </button>
 
                         <button
@@ -290,22 +295,22 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                     <motion.div
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="bg-emerald-500/5 backdrop-blur-md rounded-[2rem] p-6 md:p-8 shadow-2xl border-2 border-emerald-500/30 flex flex-col md:flex-row items-center gap-6"
+                        className="bg-emerald-50 backdrop-blur-md rounded-[2rem] p-6 md:p-8 shadow-2xl border-2 border-emerald-500/30 flex flex-col md:flex-row items-center gap-6"
                     >
                         <div className="w-16 h-16 rounded-2xl bg-emerald-500/10 flex items-center justify-center shrink-0">
                             <Megaphone className="w-8 h-8 text-emerald-500" />
                         </div>
                         <div className="flex-grow text-center md:text-left">
-                            <span className="text-emerald-500 font-black text-xs uppercase tracking-widest mb-1 block">Important Notice</span>
+                            <span className="text-emerald-600 font-black text-xs uppercase tracking-widest mb-1 block">Important Notice</span>
                             <div className="flex flex-col md:flex-row gap-6 items-center">
                                 {emergencyAnnouncement.image && (
                                     <SafeImage
                                         src={emergencyAnnouncement.image}
                                         alt="お知らせ画像"
-                                        className="w-32 h-32 object-cover rounded-xl shadow-md border border-white/10"
+                                        className="w-32 h-32 object-cover rounded-xl shadow-md border border-gray-100"
                                     />
                                 )}
-                                <p className="text-white font-black text-lg md:text-xl leading-tight whitespace-pre-wrap flex-grow">
+                                <p className="text-gray-900 font-black text-lg md:text-xl leading-tight whitespace-pre-wrap flex-grow">
                                     {emergencyAnnouncement.text}
                                 </p>
                             </div>
@@ -324,25 +329,25 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                         loading="eager"
                         fetchPriority="high"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/20"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent"></div>
                     {/* Security Scan Grid Overlay */}
-                    <div className="absolute inset-0 opacity-20 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#10b981 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
+                    <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#10b981 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
                 </div>
 
                 <div className="relative max-w-7xl mx-auto px-4 w-full">
                     <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }}>
                         <div className="flex flex-col gap-4 mb-10">
-                            <div className="inline-flex items-center gap-3 w-fit px-6 py-2.5 bg-emerald-600/10 backdrop-blur-md border border-emerald-500/20 rounded-full">
-                                <Lock className="w-4 h-4 text-emerald-500" />
-                                <span className="text-emerald-400 text-xs md:text-sm font-black uppercase tracking-[0.2em] whitespace-nowrap">
+                            <div className="inline-flex items-center gap-3 w-fit px-6 py-2.5 bg-emerald-600 text-white rounded-full shadow-lg shadow-emerald-500/20">
+                                <Lock className="w-3.5 h-3.5" />
+                                <span className="text-xs md:text-sm font-black uppercase tracking-[0.15em] whitespace-nowrap">
                                     福岡のカーセキュリティー専門店
                                 </span>
                             </div>
                         </div>
 
-                        <h1 className="text-4xl md:text-7xl font-black text-white mb-8 leading-[1.1] tracking-tighter">
+                        <h1 className="text-4xl md:text-7xl font-black text-gray-900 mb-8 leading-[1.1] tracking-tighter italic">
                             日常の安心を、<br />
-                            <span className="text-emerald-500">守護する技術。</span>
+                            <span className="text-emerald-600">守護する技術。</span>
                         </h1>
 
                         <div className="flex flex-col gap-4 mb-12">
@@ -352,22 +357,22 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                 { icon: ShieldCheck, text: "30年以上の実績と高度な解析技術" }
                             ].map((item, i) => (
                                 <div key={i} className="flex items-center gap-4 group/hitem cursor-default">
-                                    <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center border border-white/5 group-hover/hitem:border-emerald-500/50 transition-colors">
+                                    <div className="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center border border-gray-100 group-hover/hitem:border-emerald-500/50 transition-colors">
                                         <item.icon className="w-5 h-5 text-emerald-500" />
                                     </div>
-                                    <span className="text-lg md:text-xl font-bold text-gray-200">{item.text}</span>
+                                    <span className="text-lg md:text-xl font-bold text-gray-700">{item.text}</span>
                                 </div>
                             ))}
                         </div>
 
                         <div className="flex flex-col gap-6 mt-8">
-                            <div className="flex items-center gap-2 p-1.5 bg-white/5 backdrop-blur-2xl border border-white/10 rounded-2xl w-fit">
+                            <div className="flex items-center gap-2 p-1.5 bg-gray-100/50 backdrop-blur-2xl border border-gray-200 rounded-2xl w-fit">
                                 <button
                                     onClick={() => navigate('/')}
-                                    className="group px-8 py-3 rounded-xl hover:bg-white/5 flex items-center gap-3 transition-all"
+                                    className="group px-8 py-3 rounded-xl hover:bg-white flex items-center gap-3 transition-all"
                                 >
                                     <Speaker className="w-4 h-4 text-blue-500/50 group-hover:text-blue-500" />
-                                    <span className="text-white/40 group-hover:text-white text-[11px] font-black tracking-widest uppercase">Audio focus</span>
+                                    <span className="text-gray-400 group-hover:text-gray-900 text-[11px] font-black tracking-widest uppercase">Audio focus</span>
                                     <ArrowUpRight className="w-3 h-3 text-blue-500/0 group-hover:text-blue-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                                 </button>
                                 <button
@@ -391,17 +396,154 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                 </div>
             </section>
 
+            {/* Professional Standards & Certifications Section */}
+            <section className="py-32 relative overflow-hidden bg-[#0c1412]">
+                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-500/20 to-transparent"></div>
+                {/* Security Data Grid Overlay */}
+                <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'linear-gradient(#10b981 1px, transparent 1px), linear-gradient(90deg, #10b981 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
+
+                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
+                        {/* Left Side: Sticky Image / Brand Identity */}
+                        <div className="lg:col-span-5 lg:sticky lg:top-32">
+                            <div className="space-y-8">
+                                <span className="text-emerald-500 font-black tracking-[0.5em] uppercase text-[10px] block">The Protocol of Trust</span>
+                                <h2 className="text-5xl md:text-6xl font-black text-white leading-[1.1] tracking-tighter italic">
+                                    THE <br />
+                                    <span className="text-emerald-500 shadow-emerald-500/20 [text-shadow:_0_0_20px_rgb(16_185_129_/_0.3)]">STANDARDS.</span>
+                                </h2>
+                                <p className="text-gray-400 font-bold text-lg leading-relaxed max-w-sm">
+                                    メーカーの認めた技術と、確かなツール。当店が維持し続ける、カーセキュリティーの「正解」です。
+                                </p>
+                                <div className="relative rounded-[2.5rem] overflow-hidden border border-white/10 group aspect-square lg:aspect-auto lg:h-[400px]">
+                                    <SafeImage
+                                        src={assets.pitImage}
+                                        alt="Professional Installation"
+                                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Right Side: Editorial Flow */}
+                        <div className="lg:col-span-7 space-y-20">
+                            {/* Point 01: SPS */}
+                            <div className="relative pl-12">
+                                <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-emerald-500 via-emerald-500/10 to-transparent"></div>
+                                <div className="absolute left-[-4px] top-0 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.8)]"></div>
+                                <div className="space-y-4">
+                                    <div className="flex items-center gap-4">
+                                        <Award className="w-8 h-8 text-emerald-500" />
+                                        <span className="text-emerald-500 font-black text-[10px] tracking-widest uppercase italic">01 / Specialist Status</span>
+                                    </div>
+                                    <h3 className="text-3xl font-black text-white tracking-tight">Panthera / Grgo SPS認定店</h3>
+                                    <p className="text-gray-400 font-bold leading-relaxed text-sm">
+                                        Super Pro Shop (SPS) は、最新のセキュリティーシステムを高度に解析し、マシンのポテンシャルを最大限に引き出す取付技術を有するとメーカーが正式に認定した店舗です。
+                                        <br /><br />
+                                        <span className="text-white">高度な見識に基づき、各車両の特性に合わせた「最適な防犯設計」を構築。</span> 機能を熟知しているからこそ、誤作動を抑えつつ防犯能力を極限まで高める施工をお約束します。
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Point 02: VIPER */}
+                            <div className="relative pl-12">
+                                <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-blue-500 via-blue-500/20 to-transparent"></div>
+                                <div className="absolute left-[-4px] top-0 w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,1)]"></div>
+                                <div className="space-y-4">
+                                    <div className="flex items-center gap-4">
+                                        <ShieldCheck className="w-8 h-8 text-blue-500" />
+                                        <span className="text-blue-500 font-black text-[10px] tracking-widest uppercase italic">02 / Official Partnership</span>
+                                    </div>
+                                    <h3 className="text-3xl font-black text-white tracking-tight">VIPER プレミアムディーラー</h3>
+                                    <div className="space-y-6">
+                                        <p className="text-gray-400 font-bold leading-relaxed text-sm">
+                                            VIPER製品の取り扱いに精通したマイスター店として、正規販売から、高度な取付技術が必要となる車両への施工、万全のアフターサポートまで対応。
+                                        </p>
+                                        <div className="flex flex-col gap-3">
+                                            {[
+                                                { label: 'VIPER プレミアムディーラー', desc: 'マイスター認定を受けた上位店舗' },
+                                                { label: 'VIPER 取付実績表彰', desc: '豊富な施工実績に基づく確かな経験値' },
+                                                { label: '正規販売・取付店', desc: '正規品の保証とサポートを完全準拠' }
+                                            ].map((item, i) => (
+                                                <div key={i} className="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/5">
+                                                    <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-1.5"></div>
+                                                    <div>
+                                                        <p className="text-white font-black text-xs leading-none mb-1">{item.label}</p>
+                                                        <p className="text-gray-500 text-[10px] font-bold">{item.desc}</p>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Point 03: Snap-on */}
+                            <div className="relative pl-12">
+                                <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-white via-white/10 to-transparent"></div>
+                                <div className="absolute left-[-4px] top-0 w-2 h-2 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,1)]"></div>
+                                <div className="space-y-4">
+                                    <div className="flex items-center gap-4">
+                                        <Settings2 className="w-8 h-8 text-white" />
+                                        <span className="text-white font-black text-[10px] tracking-widest uppercase italic">03 / Precision Tools</span>
+                                    </div>
+                                    <h3 className="text-3xl font-black text-white tracking-tight italic">Snap-on Diagnostic Standard</h3>
+                                    <p className="text-gray-400 font-bold leading-relaxed text-sm">
+                                        最新車両の電子制御システムとセキュリティーの融合を高次元で成立させるため、施工後の最終診断には <span className="text-white font-black underline decoration-white/30 decoration-2 underline-offset-4">Snap-on社製車両診断テスター</span> を使用。
+                                        <br /><br />
+                                        ジャッキやバッテリー充電器、お客様の大切な愛車に触れる資機材において、信頼のおけるSnap-on社製を採用し、最善のメンテナンスと品質管理を徹底しています。
+                                    </p>
+                                    <div className="pt-6 flex gap-4">
+                                        <div className="px-6 py-2 rounded-full border border-white/20 text-[9px] font-black text-white/40 uppercase tracking-widest">Digital Diagnosis</div>
+                                        <div className="px-6 py-2 rounded-full border border-white/20 text-[9px] font-black text-white/40 uppercase tracking-widest">Pro-grade Maintenance</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Lineup Section */}
+            <section id="services" className="py-32 px-4 bg-white relative">
+                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-500/10 to-transparent"></div>
+                <div className="max-w-7xl mx-auto">
+                    <div className="mb-16 text-center">
+                        <span className="text-emerald-500 font-black tracking-[0.4em] uppercase text-[10px] mb-4 block">Security Menu</span>
+                        <h2 className="text-4xl md:text-6xl font-black tracking-tighter italic text-gray-900">MENU</h2>
+                    </div>
+                    <VaultGrid
+                        categories={securityCategories}
+                        theme={theme}
+                        onCategoryClick={(cat: any) => navigate(cat.path)}
+                        handleMenuClick={handleMenuClick}
+                    />
+                </div>
+            </section>
+
             {/* Knowledge Section (Security Blog) */}
-            <section id="blog" className="py-24 md:py-32 bg-[#020202] relative overflow-hidden">
+            <section id="blog" className="py-24 md:py-32 bg-gray-50 relative overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 relative z-10">
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                         <div className="max-w-2xl">
-                            <span className="text-emerald-500 font-black tracking-[0.3em] uppercase text-xs mb-4 block">Security Knowledge</span>
-                            <h2 className="text-4xl md:text-5xl font-black leading-tight tracking-tighter">最新の盗難情勢と対策</h2>
+                            <span className="text-emerald-600 font-black tracking-[0.3em] uppercase text-xs mb-4 block">Security Blog & Journal</span>
+                            <h2 className="text-5xl md:text-7xl font-black leading-tight tracking-tighter italic text-gray-900">BLOG</h2>
                             <p className="text-gray-500 mt-4 font-bold leading-relaxed">
-                                スマートキーの脆弱性を突いた最新の盗難手口や、それに対抗する術を解説します。
+                                最新の盗難情勢や防犯対策、施工事例など、オーナー様に知っていただきたい情報を発信しています。
                             </p>
                         </div>
+                        <a
+                            href="https://soundang.com/webbrog/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group flex items-center gap-3 bg-white px-8 py-4 rounded-2xl border border-gray-100 text-sm font-black text-gray-900 hover:bg-emerald-600 hover:text-white transition-all shadow-sm"
+                        >
+                            ブログ一覧を見る
+                            <div className="w-6 h-6 rounded-full bg-emerald-500/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                                <ChevronRight className="w-4 h-4" />
+                            </div>
+                        </a>
                     </div>
 
                     {loading ? (
@@ -416,17 +558,20 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                     href={post.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="group bg-white/5 rounded-[2.5rem] p-8 border border-white/5 hover:border-emerald-500/30 transition-all shadow-2xl"
+                                    className="group relative bg-white rounded-[2.5rem] p-8 pl-10 border border-gray-100 hover:border-emerald-500/30 transition-all shadow-xl hover:shadow-2xl overflow-hidden"
                                 >
+                                    {/* Left Accent Line */}
+                                    <div className="absolute left-0 top-10 bottom-10 w-1 bg-emerald-500 rounded-r-full shadow-[0_0_15px_rgba(16,185,129,0.5)] group-hover:scale-y-110 transition-transform origin-center" />
+
                                     <div className="mb-6 flex justify-between items-start">
                                         <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center">
                                             <AlertTriangle className="w-6 h-6 text-emerald-500" />
                                         </div>
                                         <span className="text-[10px] font-black text-gray-500 uppercase tracking-widest">{post.date}</span>
                                     </div>
-                                    <h3 className="text-lg font-black leading-snug group-hover:text-emerald-400 transition-colors" dangerouslySetInnerHTML={{ __html: post.title }} />
+                                    <h3 className="text-lg font-black leading-snug text-gray-900 group-hover:text-emerald-600 transition-colors" dangerouslySetInnerHTML={{ __html: post.title }} />
                                     <div className="mt-8 flex items-center gap-2 text-[10px] font-black tracking-[0.2em] text-emerald-600 uppercase">
-                                        View Details <ChevronRight className="w-3 h-3" />
+                                        詳細を見る <ChevronRight className="w-3 h-3" />
                                     </div>
                                 </motion.a>
                             ))}
@@ -435,63 +580,62 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                 </div>
             </section>
 
-            {/* Lineup Section */}
-            <section id="services" className="py-32 px-4 bg-black relative">
-                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-500/20 to-transparent"></div>
-                <div className="max-w-7xl mx-auto">
-                    <div className="mb-16 text-center">
-                        <span className="text-emerald-500 font-black tracking-[0.4em] uppercase text-[10px] mb-4 block">Security Menu</span>
-                        <h2 className="text-4xl md:text-6xl font-black tracking-tighter italic">LINEUP</h2>
-                    </div>
-                    <VaultGrid
-                        categories={securityCategories}
-                        theme={theme}
-                        onCategoryClick={(cat: any) => navigate(cat.path)}
-                        handleMenuClick={handleMenuClick}
-                    />
-                </div>
-            </section>
-
-            <BusinessCalendar />
+            <BusinessCalendar theme="light" />
             <PartnersSection onViewAll={() => navigate('/partners')} />
 
-            {/* Access Section (Darker theme) */}
-            <section id="access" className="py-32 bg-[#020202] border-t border-white/5">
-                <div className="max-w-7xl mx-auto px-4 text-center mb-20">
-                    <span className="text-emerald-500 font-black tracking-[0.4em] uppercase text-[10px] mb-4 block">Shop Location</span>
-                    <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-white uppercase italic">Access</h2>
-                </div>
-                <div className="max-w-7xl mx-auto px-4">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-                        <div className="relative h-[500px] rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.293409151244!2d130.4851219762696!3d33.54575497335133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541908696b9963f%3A0x6b976696b9963f!2zU291bmQgQU5H!5e0!3m2!1sja!2sjp!4v1712288000000!5m2!1sja!2sjp"
-                                className="w-full h-full grayscale invert opacity-80"
-                                loading="lazy"
-                            />
-                        </div>
-                        <div className="bg-white/5 rounded-[3rem] p-12 border border-white/10 backdrop-blur-xl flex flex-col justify-center">
-                            <div className="space-y-12">
-                                <div>
-                                    <h4 className="text-emerald-500 font-black tracking-widest text-xs uppercase mb-6">Address</h4>
-                                    <div className="flex gap-6">
-                                        <div className="w-14 h-14 rounded-2xl bg-emerald-500/10 flex items-center justify-center shrink-0 border border-emerald-500/20">
-                                            <MapPin className="w-7 h-7 text-emerald-500" />
-                                        </div>
-                                        <div>
-                                            <p className="font-black text-white text-3xl tracking-tighter mb-2">〒816-0912</p>
-                                            <p className="font-bold text-gray-400 text-lg leading-relaxed">福岡県大野城市御笠川5-4-14</p>
-                                        </div>
+            {/* Access Section */}
+            <section id="access" className="py-24 md:py-32 bg-[#0c1412] relative overflow-hidden">
+                <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'linear-gradient(#10b981 1px, transparent 1px), linear-gradient(90deg, #10b981 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
+                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                        <div className="space-y-8">
+                            <div>
+                                <span className="text-emerald-500 font-black tracking-[0.3em] uppercase text-xs mb-4 block">Store & Access</span>
+                                <h2 className="text-4xl md:text-5xl font-black leading-tight tracking-tighter mb-8 italic text-white underline decoration-emerald-500/30">SHOP INFO</h2>
+                                <p className="text-gray-400 font-bold leading-relaxed mb-8">
+                                    福岡県大野城市の御笠川沿いに位置する、九州屈指の施工実績を誇るプロショップ。<br />
+                                    完全予約制のピット、最新鋭の診断設備、そしてオーナー様がリラックスできる商談スペースを完備しています。
+                                </p>
+                            </div>
+
+                            <div className="grid grid-cols-2 gap-4">
+                                {/* First large image (Exterior) */}
+                                <div className="col-span-2 group relative aspect-video rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-white/5">
+                                    <SafeImage src={assets.heroImage} alt="Sound ANG 店舗外観" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 via-transparent to-transparent flex items-end p-6">
+                                        <span className="text-white font-black text-sm tracking-widest uppercase">Shop Exterior</span>
                                     </div>
                                 </div>
-                                <div className="grid grid-cols-2 gap-12 pt-12 border-t border-white/5">
-                                    <div>
-                                        <h4 className="text-emerald-500 font-black tracking-widest text-xs uppercase mb-4">Phone</h4>
-                                        <p className="text-white font-black text-xl italic tracking-tight">092-503-5437</p>
+                                {/* Remaining facilities */}
+                                {facilities.map((fac, idx) => (
+                                    <div key={idx} className="group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-white/10 bg-white/5">
+                                        <SafeImage src={fac.image} alt={fac.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent flex items-end p-4">
+                                            <span className="text-white font-black text-[10px] tracking-widest uppercase">{fac.title}</span>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="space-y-8 lg:sticky lg:top-32">
+                            <div className="relative aspect-square rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/10 hover:border-emerald-500/30 transition-all duration-700">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.293409151244!2d130.4851219762696!3d33.54575497335133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541908696b9963f%3A0x6b976696b9963f!2zU291bmQgQU5H!5e0!3m2!1sja!2sjp!4v1712288000000!5m2!1sja!2sjp"
+                                    className="w-full h-full"
+                                    loading="lazy"
+                                />
+                            </div>
+
+                            <div className="p-8 rounded-[2.5rem] bg-white/5 shadow-2xl border border-white/10 backdrop-blur-sm">
+                                <h4 className="text-[10px] font-black tracking-widest text-emerald-500 uppercase mb-4">Location Address</h4>
+                                <div className="flex gap-4">
+                                    <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center shrink-0">
+                                        <MapPin className="w-6 h-6 text-emerald-500" />
                                     </div>
                                     <div>
-                                        <h4 className="text-emerald-500 font-black tracking-widest text-xs uppercase mb-4">Open Hours</h4>
-                                        <p className="text-white font-black text-xl italic tracking-tight">10:00 - 19:00</p>
+                                        <p className="font-black text-white text-lg leading-tight tracking-tight">〒816-0912</p>
+                                        <p className="font-bold text-gray-400 text-sm mt-1">福岡県大野城市御笠川5-4-14</p>
                                     </div>
                                 </div>
                             </div>
@@ -501,50 +645,78 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
             </section>
 
             {/* Footer */}
-            <footer id="contact" className="bg-black text-gray-500 py-32 border-t border-white/5">
-                <div className="max-w-7xl mx-auto px-4">
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
-                        <div className="col-span-1">
-                            <div className="text-3xl font-black italic tracking-tighter text-white mb-8 group cursor-default">
-                                SOUND <span className="text-emerald-500">ANG</span>
+            <footer id="contact" className="bg-[#020202] text-gray-400 py-24 relative overflow-hidden border-t border-white/5">
+                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+                        <div className="col-span-1 lg:col-span-1">
+                            <div className="text-2xl font-black italic tracking-tighter text-white mb-6">
+                                AUTO SECURITY <span className="text-emerald-500">ANG</span>
                             </div>
+                            <p className="text-[10px] font-bold leading-relaxed mb-8 opacity-60 uppercase tracking-widest">
+                                Premium Car Security & Armor <br /> Professional Installation Suite
+                            </p>
                             <div className="flex gap-4">
-                                <a href="https://www.facebook.com/profile.php?id=100063630308258" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-all shadow-xl">
+                                <a href="https://www.facebook.com/profile.php?id=100063630308258" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-all shadow-lg">
                                     <Facebook className="w-5 h-5" />
                                 </a>
-                                <a href="https://www.instagram.com/sound_ang_security/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-all shadow-xl">
+                                <a href="https://www.instagram.com/sound_ang_security/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-all shadow-lg">
                                     <Instagram className="w-5 h-5" />
                                 </a>
                             </div>
                         </div>
-                        <div className="col-span-1">
-                            <h4 className="text-white font-black text-xs tracking-widest uppercase mb-8">Navigation</h4>
-                            <ul className="space-y-4 text-sm font-bold">
-                                <li><a href="#" className="hover:text-emerald-500 transition-colors">Security Home</a></li>
-                                <li><a href="#blog" className="hover:text-white transition-colors">Blog & Archive</a></li>
-                                <li><a href="#services" className="hover:text-white transition-colors">Lineup</a></li>
-                                <li><a href="#access" className="hover:text-white transition-colors">Access</a></li>
+
+                        <div>
+                            <h4 className="text-white font-black text-xs tracking-widest uppercase mb-8">Contact Information</h4>
+                            <ul className="space-y-6 text-sm">
+                                <li className="flex gap-4">
+                                    <Phone className="w-5 h-5 text-emerald-500 shrink-0" />
+                                    <div className="space-y-1">
+                                        <p className="text-white font-black">092-503-5437 <span className="text-[8px] opacity-40 ml-2 uppercase">Security Line</span></p>
+                                        <p className="text-white font-black">092-503-5421 <span className="text-[8px] opacity-40 ml-2 uppercase">Audio Line</span></p>
+                                    </div>
+                                </li>
+                                <li className="flex gap-4 pt-4 border-t border-white/5">
+                                    <Mail className="w-5 h-5 text-emerald-500 shrink-0" />
+                                    <div className="space-y-1">
+                                        <a href="mailto:ang@sec-ang.com" className="block text-white hover:text-emerald-500 transition-colors">ang@sec-ang.com</a>
+                                        <a href="mailto:ang@soundang.com" className="block text-white hover:text-emerald-500 transition-colors text-xs opacity-60">ang@soundang.com</a>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
-                        <div className="col-span-2">
-                            <h4 className="text-white font-black text-xs tracking-widest uppercase mb-8">Protection Contact</h4>
-                            <div className="flex flex-col md:flex-row gap-8">
+
+                        <div>
+                            <h4 className="text-white font-black text-xs tracking-widest uppercase mb-8">Quick Navigation</h4>
+                            <ul className="space-y-4 text-sm font-bold">
+                                <li><a href="#" className="hover:text-emerald-500 transition-colors">Top</a></li>
+                                <li><a href="#blog" className="hover:text-white transition-colors">Blog</a></li>
+                                <li><a href="#blog" className="hover:text-white transition-colors">Event Archive</a></li>
+                                <li><a href="#blog" className="hover:text-white transition-colors">Latest News</a></li>
+                                <li><a href="#services" className="hover:text-white transition-colors">Menu</a></li>
+                                <li><a href="#access" className="hover:text-white transition-colors">Shop Access</a></li>
+                                <li><button onClick={() => navigate('/reservation')} className="text-emerald-500 hover:underline">Consultation Booking</button></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 className="text-white font-black text-xs tracking-widest uppercase mb-8">Legal & Business</h4>
+                            <div className="space-y-6">
+                                <p className="text-[10px] font-black leading-relaxed opacity-40">
+                                    適格請求書発行事業者登録番号<br />
+                                    <span className="text-white font-mono tracking-tight opacity-100">T4290002038758</span>
+                                </p>
                                 <div className="space-y-2">
-                                    <p className="text-[10px] font-black uppercase tracking-widest text-emerald-500 opacity-60">Emergency Call</p>
-                                    <p className="text-2xl font-black text-white italic">092-503-5437</p>
-                                </div>
-                                <div className="space-y-2">
-                                    <p className="text-[10px] font-black uppercase tracking-widest text-emerald-500 opacity-60">Security Email</p>
-                                    <p className="text-xl font-black text-white underline decoration-emerald-500">ang@sec-ang.com</p>
+                                    <button onClick={() => navigate('/legal')} className="block text-xs hover:text-white transition-colors">Privacy Policy</button>
+                                    <button onClick={() => navigate('/legal')} className="block text-xs hover:text-white transition-colors">Terms of Service</button>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-                        <p className="text-[10px] font-black tracking-[0.3em] uppercase">© 2026 SOUND ANG. SECURITY ARMOR SYSTEMS.</p>
-                        <div className="flex gap-8 text-[9px] font-black uppercase tracking-widest">
-                            <button onClick={() => navigate('/legal')} className="hover:text-emerald-500">Privacy Policy</button>
-                            <button onClick={() => navigate('/legal')} className="hover:text-emerald-500">Terms of Service</button>
+                        <p className="text-[10px] font-black tracking-widest uppercase opacity-40">© 2026 AUTO SECURITY ANG. SECURITY ARMOR SYSTEMS.</p>
+                        <div className="flex gap-8">
+                            <span className="text-[8px] font-black text-emerald-500/40 uppercase tracking-[0.4em]">Official Certified SPS Dealer</span>
                         </div>
                     </div>
                 </div>
@@ -566,18 +738,18 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                             animate={{ x: 0 }}
                             exit={{ x: '100%' }}
                             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-                            className="fixed top-0 right-0 bottom-0 w-[320px] bg-black z-[100] lg:hidden flex flex-col shadow-2xl border-l border-white/5"
+                            className="fixed top-0 right-0 bottom-0 w-[320px] bg-white z-[100] lg:hidden flex flex-col shadow-2xl border-l border-gray-100"
                         >
-                            <div className="p-6 h-16 md:h-24 flex items-center justify-between border-b border-white/5">
-                                <span className="font-black tracking-tighter text-xl italic text-white flex items-center gap-2">
+                            <div className="p-6 h-16 md:h-24 flex items-center justify-between border-b border-gray-100">
+                                <span className="font-black tracking-tighter text-xl italic text-gray-900 flex items-center gap-2">
                                     <div className="w-8 h-8 rounded-lg bg-emerald-500 text-black flex items-center justify-center not-italic">S</div>
                                     MENU
                                 </span>
                                 <button
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="w-12 h-12 flex items-center justify-center hover:bg-white/5 rounded-xl transition-colors border border-white/5"
+                                    className="w-12 h-12 flex items-center justify-center hover:bg-gray-50 rounded-xl transition-colors border border-gray-100"
                                 >
-                                    <X className="w-6 h-6 text-white" />
+                                    <X className="w-6 h-6 text-gray-900" />
                                 </button>
                             </div>
 
@@ -585,8 +757,8 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                 <nav className="flex flex-col gap-3">
                                     {[
                                         { href: "#", en: "HOME", jp: "ホーム" },
-                                        { href: "#blog", en: "KNOWLEDGE", jp: "防犯知識" },
-                                        { href: "#services", en: "LINEUP", jp: "メニュー", isExpandable: true },
+                                        { href: "#blog", en: "BLOG", jp: "ブログ" },
+                                        { href: "#services", en: "MENU", jp: "メニュー", isExpandable: true },
                                         { href: "#access", en: "ACCESS", jp: "店舗案内" },
                                     ].map((link, i) => {
                                         const isExpandable = link.isExpandable;
@@ -602,13 +774,13 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                                             if (element) element.scrollIntoView({ behavior: 'smooth' });
                                                         }
                                                     }}
-                                                    className="group flex items-center justify-between p-4 rounded-2xl border border-white/5 bg-white/5 text-white active:bg-white/10 transition-all cursor-pointer"
+                                                    className="group flex items-center justify-between p-4 rounded-2xl border border-gray-100 bg-gray-50 text-gray-900 active:bg-gray-100 transition-all cursor-pointer"
                                                 >
                                                     <div className="flex flex-col gap-1">
                                                         <span className="text-sm font-black tracking-widest">{link.en}</span>
-                                                        <span className="text-[9px] font-bold text-emerald-500 opacity-60">{link.jp}</span>
+                                                        <span className="text-[9px] font-bold text-emerald-600 opacity-60">{link.jp}</span>
                                                     </div>
-                                                    <div className={`w-8 h-8 rounded-xl flex items-center justify-center transition-all bg-white/5 ${isExpandable && isLineupExpanded ? 'rotate-90 bg-emerald-500 text-black' : ''}`}>
+                                                    <div className={`w-8 h-8 rounded-xl flex items-center justify-center transition-all bg-white ${isExpandable && isLineupExpanded ? 'rotate-90 bg-emerald-500 text-black' : ''}`}>
                                                         <ChevronRight className="w-4 h-4" />
                                                     </div>
                                                 </div>
@@ -619,7 +791,7 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                                             initial={{ height: 0, opacity: 0 }}
                                                             animate={{ height: 'auto', opacity: 1 }}
                                                             exit={{ height: 0, opacity: 0 }}
-                                                            className="overflow-hidden bg-black/40 rounded-2xl border border-white/5"
+                                                            className="overflow-hidden bg-gray-50 rounded-2xl border border-gray-100"
                                                         >
                                                             <div className="p-2 grid grid-cols-1 gap-1">
                                                                 {securityCategories.map((sub, idx) => (
@@ -645,12 +817,12 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                 </nav>
                             </div>
 
-                            <div className="p-6 border-t border-white/5 space-y-3">
+                            <div className="p-6 border-t border-gray-100 space-y-3">
                                 <a href="tel:0925035437" className="flex items-center justify-center gap-3 w-full bg-emerald-600 text-white py-4 rounded-2xl font-black text-sm tracking-widest shadow-xl shadow-emerald-500/10">
                                     <Phone className="w-5 h-5" />
                                     CALL 092-503-5437
                                 </a>
-                                <button onClick={() => { setIsMobileMenuOpen(false); navigate('/reservation'); }} className="flex items-center justify-center gap-3 w-full bg-white/5 text-white py-4 rounded-2xl font-black text-sm tracking-widest border border-white/10">
+                                <button onClick={() => { setIsMobileMenuOpen(false); navigate('/reservation'); }} className="flex items-center justify-center gap-3 w-full bg-gray-100 text-gray-900 py-4 rounded-2xl font-black text-sm tracking-widest border border-gray-100">
                                     <CalendarIcon className="w-5 h-5" />
                                     RESERVATION
                                 </button>
@@ -659,6 +831,6 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                     </>
                 )}
             </AnimatePresence>
-        </div>
+        </div >
     );
 };
