@@ -126,9 +126,9 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
         {
             id: 'security_full',
             title: '最新カーセキュリティ',
-            subtitle: 'SYSTEMS',
+            subtitle: 'SECURITY',
             image: assets.securityMenuImage,
-            gridClass: 'lg:row-span-2',
+            gridClass: 'lg:col-span-1 lg:row-span-1',
             items: [
                 'Panthera (パンテーラ) Z-Series',
                 'Grgo (ゴルゴ) V-Series',
@@ -141,53 +141,49 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
             path: '/security'
         },
         {
-            id: 'can_invader',
-            title: 'キャンインベーダー対策',
-            subtitle: 'PROTECTION',
+            id: 'security_car',
+            title: '車種別おすすめセキュリティ',
+            subtitle: 'VEHICLE',
             image: assets.pitImage,
+            gridClass: 'lg:col-span-2 lg:row-span-2',
             items: [
-                'IGLA ALARM / キーレスブロック',
-                'デジタル・イモビライザー',
-                'Can-Invader防衛施工',
-                'OBDガード / 物理ロック'
+                'レクサス (GX550 / LX / RX / NX / LBX)',
+                'ランドクルーザー (300 / 250 / 70 / 全モデル)',
+                'アルファード / ヴェルファイア',
+                'クラウン (スポーツ / クロスオーバー / セダン / エステート)',
+                'ハリアー / ハイエース / プリウス',
+                'シビック TYPE-R (FL5) / ジムニー / シエラ',
+                '軽自動車 K-CAR 専用セキュリティ'
             ],
             path: '/security'
         },
         {
-            id: 'dashcam',
-            title: 'ドラレコ・デジタルミラー',
-            subtitle: 'EYE & RECORD',
+            id: 'security_options',
+            title: '防犯連動おすすめ装備',
+            subtitle: 'SECURITY SET',
             image: assets.dashcamMenuImage,
+            gridClass: 'lg:col-span-1 lg:row-span-1',
             items: [
-                '前後2カメラ・駐車監視',
+                '前後2カメラ・駐車監視ドラレコ',
+                '360度全方位記録システム',
                 'デジタルインナーミラー',
-                '360度全方位記録',
-                'ドラレコ・セキュリティー連動'
-            ],
-            path: '/dashcam'
-        },
-        {
-            id: 'radar',
-            title: 'レーザー・レーダー探知機',
-            subtitle: 'RADAR & LASER',
-            image: assets.showroomImage,
-            items: [
-                '最新MSSS対応モデル',
-                'セパレート型・高性能探知機',
-                'レーザー受信機（単体）'
+                'レーザー・レーダー探知機',
+                'セキュリティー連動録画'
             ],
             path: '/dashcam'
         },
         {
             id: 'maintenance',
-            title: 'サポート・点検',
+            title: 'サポート・施工案内',
             subtitle: 'SUPPORT',
             image: assets.workspaceImage,
+            gridClass: 'lg:col-span-3',
             items: [
                 'セキュリティ定期点検',
                 'リモコン電池・消耗品交換',
                 'システム・アップグレード',
-                '店舗・アクセスマップ'
+                '店舗案内・アクセスマップ',
+                'よくあるご質問 (FAQ)'
             ],
             path: '/security'
         }
