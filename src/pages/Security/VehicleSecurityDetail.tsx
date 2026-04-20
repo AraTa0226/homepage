@@ -35,7 +35,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         'lexus-gx550': {
             name: 'LEXUS GX550',
             year: '2024-',
-            image: '/images/Security/vehicle/gx550.webp',
+            image: '/images/Security/vehicle/gx.webp',
             description: '最新鋭のオフローダー。CANインベーダーやゲームボーイといった最新手口への完全対策が必須です。'
         },
         'lexus-lx': {
@@ -53,19 +53,19 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         'lexus-nx': {
             name: 'LEXUS NX',
             year: '2021-',
-            image: '/images/Security/vehicle/nx.jpg',
+            image: '/images/Security/vehicle/nx.webp',
             description: '都会派SUVとして高い支持。利便性を損なわず、かつ強力な防犯性能を両立させます。'
         },
         'lexus-lbx': {
             name: 'LEXUS LBX',
             year: '2023-',
-            image: '/images/Security/vehicle/lbx.jpg',
+            image: '/images/Security/vehicle/lbx.webp',
             description: '「高級車の概念を変える」コンパクトSUV。小型車ながら狙われやすいため、確実なデジタル対策が必要です。'
         },
         'lexus-lm': {
             name: 'LEXUS LM',
             year: '2023-',
-            image: '/images/Security/vehicle/lx.webp', // 仮でLXを使用（画像到着次第更新可能）
+            image: '/images/Security/vehicle/lx.webp', // 仮
             description: '究極の移動空間。その価値に見合う、隙のないセキュリティ構築をご提案します。'
         }
     };
@@ -163,13 +163,13 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             <main className="max-w-6xl mx-auto p-4 md:p-10">
                 {/* Vehicle Hero Image Space */}
                 <div className="relative mb-16 -mt-12 md:-mt-20">
-                    <div className="aspect-[21/9] md:aspect-[25/9] rounded-[2rem] md:rounded-[4rem] overflow-hidden shadow-3xl bg-neutral-900 border-4 border-white relative group">
+                    <div className="aspect-[21/9] md:aspect-[25/9] rounded-[2rem] md:rounded-[4rem] overflow-hidden shadow-3xl bg-[#0b1210] border-4 border-white relative group">
                         <SafeImage
                             src={currentVehicle.image}
                             alt={currentVehicle.name}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[10s]"
+                            className="w-full h-full object-contain p-4 md:p-8 group-hover:scale-105 transition-transform duration-700"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#0b1210]/80 via-transparent to-transparent" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#0b1210]/40 via-transparent to-transparent pointer-events-none" />
                         <div className="absolute bottom-6 left-6 md:bottom-12 md:left-12">
                             <div className="flex items-center gap-3 text-white mb-2">
                                 <div className="w-10 h-px bg-emerald-500" />
