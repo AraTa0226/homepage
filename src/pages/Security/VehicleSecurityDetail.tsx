@@ -146,7 +146,61 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                     </div>
 
                     <div className="bg-white rounded-[2rem] shadow-2xl overflow-hidden border border-gray-100 mb-6">
-                        <div className="overflow-x-auto">
+                        {/* Mobile View: Card Stack */}
+                        <div className="md:hidden divide-y divide-gray-100">
+                            {filteredPlans.map((plan) => (
+                                <div
+                                    key={plan.id}
+                                    className={`p-6 ${plan.isRecommended ? 'bg-emerald-50/30' : ''}`}
+                                >
+                                    <div className="flex justify-between items-start mb-4">
+                                        <div>
+                                            <div className="flex items-center gap-2 mb-1">
+                                                <span className="text-[10px] font-black text-emerald-500 uppercase tracking-widest">{plan.brand}</span>
+                                                {plan.isRecommended && (
+                                                    <span className="bg-emerald-500 text-white text-[8px] font-black px-2 py-0.5 rounded-full">おすすめ</span>
+                                                )}
+                                            </div>
+                                            <h3 className="text-lg font-black text-gray-900 tracking-tight">{plan.grade}</h3>
+                                        </div>
+                                        <div className="text-right">
+                                            <div className="text-lg font-black tracking-tighter text-gray-900">¥{plan.price}</div>
+                                            <div className="text-[9px] font-bold text-gray-400">(税込¥{plan.priceTax})</div>
+                                        </div>
+                                    </div>
+
+                                    <div className="grid grid-cols-4 gap-2 mb-6">
+                                        {[
+                                            { label: '衝撃', val: plan.features.shock },
+                                            { label: 'トリプル', val: plan.features.triple },
+                                            { label: '傾斜', val: plan.features.tilt },
+                                            { label: '解析', val: plan.features.algorithm },
+                                            { label: 'ボンネット', val: plan.features.bonnet },
+                                            { label: 'マイクロ波', val: plan.features.microwave },
+                                            { label: 'サイレン', val: plan.features.siren },
+                                            { label: 'CANガード', val: plan.features.canguard }
+                                        ].map((f, i) => (
+                                            <div key={i} className={`flex flex-col items-center p-2 rounded-xl border ${f.val ? 'bg-white border-emerald-100 shadow-sm' : 'bg-gray-50/50 border-gray-100 opacity-30'}`}>
+                                                {f.val ? (
+                                                    <CheckCircle2 className="w-4 h-4 text-emerald-500 mb-1" />
+                                                ) : (
+                                                    <div className="w-4 h-4 mb-1" />
+                                                )}
+                                                <span className={`text-[8px] font-black leading-none text-center h-4 flex items-center ${f.val ? 'text-gray-900' : 'text-gray-400'}`}>{f.label}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    <button className="w-full py-4 rounded-2xl bg-[#0b1210] text-emerald-400 text-xs font-black shadow-xl shadow-gray-200 flex items-center justify-center gap-2">
+                                        <span>プラン詳細</span>
+                                        <ChevronRight className="w-4 h-4" />
+                                    </button>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Desktop View: Comparison Table */}
+                        <div className="hidden md:block overflow-x-auto">
                             <table className="w-full text-left border-collapse min-w-[1050px]">
                                 <thead>
                                     <tr className="bg-[#0b1210] text-emerald-400/80 text-[10px] md:text-[11px] font-black uppercase tracking-widest">
