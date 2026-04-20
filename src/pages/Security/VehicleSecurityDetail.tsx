@@ -47,7 +47,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             isRecommended: true,
             price: '388,600',
             priceTax: '427,460',
-            features: { shock: true, triple: false, tilt: true, bonnet: true, microwave: true, siren: false, algorithm: false, canguard: true },
+            features: { shock: true, triple: false, tilt: true, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
             category: 'grgo'
         },
         {
@@ -107,14 +107,36 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
     if (modelId === 'lexus-gx550') {
         return (
             <div className="min-h-screen bg-neutral-50 font-sans pb-32">
-                <header className="bg-[#0b1210] text-white p-6 md:p-8 rounded-b-[2rem] shadow-2xl">
-                    <div className="max-w-6xl mx-auto">
-                        <div className="text-[10px] md:text-sm font-bold text-emerald-400 tracking-[0.3em] uppercase mb-2">LEXUS GX550</div>
-                        <h1 className="text-2xl md:text-4xl font-black tracking-tight italic">おすすめセキュリティープラン</h1>
+                <header className="bg-[#0b1210] text-white p-6 md:p-10 rounded-b-[3rem] shadow-2xl relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-1/3 h-full bg-emerald-500/5 -skew-x-12 translate-x-1/2" />
+                    <div className="max-w-6xl mx-auto relative z-10">
+                        <div className="text-xs md:text-sm font-black text-emerald-400 tracking-[0.4em] uppercase mb-3 italic">Lexus Specialist Works</div>
+                        <h1 className="text-3xl md:text-6xl font-black tracking-tighter italic leading-none mb-4">
+                            LEXUS <span className="text-emerald-500">GX550</span><br />
+                            <span className="text-xl md:text-2xl opacity-80 not-italic">SECURITY SELECTION.</span>
+                        </h1>
                     </div>
                 </header>
 
                 <main className="max-w-6xl mx-auto p-4 md:p-10">
+                    {/* Vehicle Hero Image Space */}
+                    <div className="relative mb-16 -mt-12 md:-mt-20">
+                        <div className="aspect-[21/9] md:aspect-[25/9] rounded-[2rem] md:rounded-[4rem] overflow-hidden shadow-3xl bg-neutral-900 border-4 border-white relative group">
+                            <SafeImage
+                                src="/images/Security/vehicle/gx550.webp"
+                                alt="Lexus GX550"
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[10s]"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#0b1210]/80 via-transparent to-transparent" />
+                            <div className="absolute bottom-6 left-6 md:bottom-12 md:left-12">
+                                <div className="flex items-center gap-3 text-white mb-2">
+                                    <div className="w-10 h-px bg-emerald-500" />
+                                    <span className="text-[10px] md:text-xs font-black tracking-widest uppercase">Visual Identification</span>
+                                </div>
+                                <h2 className="text-white text-xl md:text-3xl font-black italic tracking-tighter">LEXUS GX550 / 2024-</h2>
+                            </div>
+                        </div>
+                    </div>
                     <div className="flex flex-wrap gap-3 mb-10">
                         {[
                             { id: 'all', label: 'すべて' },
@@ -132,16 +154,19 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                         ))}
                     </div>
 
-                    <div className="bg-emerald-50 border-2 border-emerald-100 rounded-[2rem] p-8 mb-10 relative overflow-hidden">
+                    <div className="bg-emerald-50 border-2 border-emerald-100 rounded-[2rem] p-8 md:p-10 mb-10 relative overflow-hidden">
                         <div className="absolute top-0 right-0 p-4 opacity-10">
                             <Zap className="w-20 h-20 text-emerald-600" />
                         </div>
-                        <h4 className="text-emerald-950 text-sm font-black mb-3 flex items-center gap-2">
+                        <h4 className="text-emerald-950 text-base font-black mb-4 flex items-center gap-2">
                             <span className="bg-emerald-500 text-white text-[10px] px-2 py-0.5 rounded shadow-sm italic uppercase tracking-tighter">ANG Original Plan</span>
                             純正の利便性と最新手口に対応したユニットを追加したプランです
                         </h4>
-                        <p className="text-xs text-emerald-800 font-bold leading-relaxed max-w-4xl relative z-10 italic">
-                            掲載のプランはすべて、メーカーのベースユニットに「スマートキー連動ユニット」と「CANインベーダー対策ユニット」を当店独自のノウハウで融合させたオリジナルパッケージです。
+                        <p className="text-base text-emerald-900 font-medium leading-relaxed max-w-4xl relative z-10">
+                            掲載のプランはすべて、メーカーのベースユニットに「スマートキー連動ユニット」と「CANインベーダー対策ユニット」を当店独自のノウハウで融合させたオリジナルパッケージです。<br />
+                            <span className="text-sm mt-2 block opacity-80 font-bold">
+                                ※表の中で不足しているセンサーやサイレン等の項目も、ご要望に応じて<span className="text-emerald-950 decoration-2 underline underline-offset-4">オプションで自由に追加可能</span>です。
+                            </span>
                         </p>
                     </div>
 
@@ -156,16 +181,16 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                     <div className="flex justify-between items-start mb-4">
                                         <div>
                                             <div className="flex items-center gap-2 mb-1">
-                                                <span className="text-[10px] font-black text-emerald-500 uppercase tracking-widest">{plan.brand}</span>
+                                                <span className="text-xs font-black text-emerald-500 uppercase tracking-widest">{plan.brand}</span>
                                                 {plan.isRecommended && (
-                                                    <span className="bg-emerald-500 text-white text-[8px] font-black px-2 py-0.5 rounded-full">おすすめ</span>
+                                                    <span className="bg-emerald-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full">おすすめ</span>
                                                 )}
                                             </div>
-                                            <h3 className="text-lg font-black text-gray-900 tracking-tight">{plan.grade}</h3>
+                                            <h3 className="text-xl font-black text-gray-900 tracking-tight">{plan.grade}</h3>
                                         </div>
                                         <div className="text-right">
-                                            <div className="text-lg font-black tracking-tighter text-gray-900">¥{plan.price}</div>
-                                            <div className="text-[9px] font-bold text-gray-400">(税込¥{plan.priceTax})</div>
+                                            <div className="text-xl font-black tracking-tighter text-gray-900">¥{plan.price}</div>
+                                            <div className="text-xs font-bold text-gray-400">(税込¥{plan.priceTax})</div>
                                         </div>
                                     </div>
 
@@ -174,19 +199,19 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                             { label: '衝撃', val: plan.features.shock },
                                             { label: 'トリプル', val: plan.features.triple },
                                             { label: '傾斜', val: plan.features.tilt },
-                                            { label: '解析', val: plan.features.algorithm },
+                                            { label: 'アルゴリズム', val: plan.features.algorithm },
                                             { label: 'ボンネット', val: plan.features.bonnet },
                                             { label: 'マイクロ波', val: plan.features.microwave },
                                             { label: 'サイレン', val: plan.features.siren },
                                             { label: 'CANガード', val: plan.features.canguard }
                                         ].map((f, i) => (
-                                            <div key={i} className={`flex flex-col items-center p-2 rounded-xl border ${f.val ? 'bg-white border-emerald-100 shadow-sm' : 'bg-gray-50/50 border-gray-100 opacity-30'}`}>
+                                            <div key={i} className={`flex flex-col items-center p-3 rounded-xl border ${f.val ? 'bg-white border-emerald-100 shadow-sm' : 'bg-gray-50/50 border-gray-100 opacity-30'}`}>
                                                 {f.val ? (
-                                                    <CheckCircle2 className="w-4 h-4 text-emerald-500 mb-1" />
+                                                    <CheckCircle2 className="w-5 h-5 text-emerald-500 mb-1" />
                                                 ) : (
-                                                    <div className="w-4 h-4 mb-1" />
+                                                    <div className="w-5 h-5 mb-1" />
                                                 )}
-                                                <span className={`text-[8px] font-black leading-none text-center h-4 flex items-center ${f.val ? 'text-gray-900' : 'text-gray-400'}`}>{f.label}</span>
+                                                <span className={`text-[10px] font-black leading-none text-center h-4 flex items-center ${f.val ? 'text-gray-900' : 'text-gray-400'}`}>{f.label}</span>
                                             </div>
                                         ))}
                                     </div>
@@ -203,17 +228,17 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                         <div className="hidden md:block overflow-x-auto">
                             <table className="w-full text-left border-collapse min-w-[1050px]">
                                 <thead>
-                                    <tr className="bg-[#0b1210] text-emerald-400/80 text-[10px] md:text-[11px] font-black uppercase tracking-widest">
+                                    <tr className="bg-[#0b1210] text-emerald-400/80 text-xs font-black uppercase tracking-widest">
                                         <th className="px-8 py-6">モデル</th>
                                         <th className="px-6 py-6">グレード</th>
                                         <th className="px-6 py-6 text-right">施工価格 (税込)</th>
                                         <th className="px-4 py-6 text-center">衝撃</th>
                                         <th className="px-4 py-6 text-center">トリプル</th>
                                         <th className="px-4 py-6 text-center">傾斜</th>
-                                        <th className="px-4 py-6 text-center text-[9px] leading-tight">高精度<br />解析</th>
+                                        <th className="px-4 py-6 text-center text-[10px] leading-tight">アルゴリズム<br />機能</th>
                                         <th className="px-4 py-6 text-center">ボンネット</th>
                                         <th className="px-4 py-6 text-center">マイクロ波</th>
-                                        <th className="px-4 py-6 text-center text-[9px] leading-tight">バックアップ<br />サイレン</th>
+                                        <th className="px-4 py-6 text-center text-[10px] leading-tight">バックアップ<br />サイレン</th>
                                         <th className="px-4 py-6 text-center">CAN<br />ガード</th>
                                         <th className="px-8 py-6 text-center"> </th>
                                     </tr>
@@ -243,10 +268,10 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                             </td>
                                             <td className="px-6 py-6 text-right">
                                                 <div className="flex flex-col">
-                                                    <span className="text-lg font-black tracking-tighter text-gray-900">
+                                                    <span className="text-xl font-black tracking-tighter text-gray-900">
                                                         ¥{plan.price}
                                                     </span>
-                                                    <span className="text-[10px] font-bold text-gray-400 mt-0.5">
+                                                    <span className="text-xs font-bold text-gray-400 mt-0.5">
                                                         (税込¥{plan.priceTax})
                                                     </span>
                                                 </div>
@@ -287,22 +312,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                         </div>
                     </div>
 
-                    <div className="bg-emerald-50 border-2 border-emerald-100 rounded-[2rem] p-8 mb-6 relative overflow-hidden">
-                        <div className="absolute top-0 right-0 p-4 opacity-10">
-                            <Zap className="w-20 h-20 text-emerald-600" />
-                        </div>
-                        <h4 className="text-emerald-950 text-sm font-black mb-3 flex items-center gap-2">
-                            <span className="bg-emerald-500 text-white text-[10px] px-2 py-0.5 rounded shadow-sm italic uppercase tracking-tighter">ANG Original Plan</span>
-                            純正の利便性と最新手口に対応したユニットを追加したプランです
-                        </h4>
-                        <p className="text-xs text-emerald-800 font-bold leading-relaxed max-w-4xl relative z-10 italic">
-                            掲載のプランはすべて、メーカーのベースユニットに「スマートキー連動ユニット」と「CANインベーダー対策ユニット」を当店独自のノウハウで融合させたオリジナルパッケージです。
-                        </p>
-                    </div>
 
-                    <p className="text-[11px] text-gray-400 font-bold mb-14 px-4">
-                        ※全プランに2WAYリモコン・ドアセンサー・イモビライザー・LEDプレート・スマートキー連動・CANガードが含まれます
-                    </p>
 
                     <section className="mt-20 border-t border-gray-100 pt-16">
                         <div className="flex items-center gap-4 mb-10">
@@ -318,18 +328,18 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                 <div className="text-emerald-500 text-[10px] font-black tracking-[0.4em] uppercase mb-6 italic">The Standard</div>
                                 <h3 className="text-2xl font-black mb-8 text-gray-900 tracking-tighter">Grgo：完成された定番</h3>
                                 <div className="space-y-6">
-                                    <p className="text-sm text-gray-900 font-black leading-relaxed italic">
+                                    <p className="text-lg text-gray-900 font-black leading-relaxed">
                                         Pantheraが“最高峰”なら、<br />
                                         Grgoは“完成された定番”。
                                     </p>
-                                    <p className="text-xs text-gray-500 font-bold leading-relaxed">
+                                    <p className="text-base text-gray-600 font-medium leading-relaxed">
                                         派手な機能より、確かな安心。<br />
                                         必要な防犯性能をしっかり備え、日常で使いやすく、誤報を抑えた実用性。
                                     </p>
-                                    <p className="text-xs text-gray-500 font-bold leading-relaxed">
+                                    <p className="text-base text-gray-600 font-medium leading-relaxed">
                                         多くのお客様に選ばれ続けてきた理由は、そのバランスの良さにあります。
                                     </p>
-                                    <p className="text-sm text-gray-900 font-black italic border-l-2 border-emerald-500 pl-4 py-1">
+                                    <p className="text-base text-gray-900 font-black border-l-4 border-emerald-500 pl-4 py-1">
                                         守るべきものに、ちょうどいい安心を。<br />
                                         それが Grgo という選択です。
                                     </p>
@@ -341,20 +351,20 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                     <ShieldAlert className="w-24 h-24 text-emerald-400" />
                                 </div>
                                 <div className="text-emerald-400 text-[10px] font-black tracking-[0.4em] uppercase mb-6 italic">The Masterpiece</div>
-                                <h3 className="text-2xl font-black mb-8 text-white tracking-tighter italic">Panthera：妥協しない人のための、最高峰。</h3>
+                                <h3 className="text-2xl font-black mb-8 text-white tracking-tighter">Panthera：妥協しない人のための、最高峰。</h3>
                                 <div className="space-y-6 text-white/90">
-                                    <p className="text-sm font-black leading-relaxed italic text-emerald-400">
+                                    <p className="text-lg font-black leading-relaxed text-emerald-400">
                                         ユピテル最高峰のカーセキュリティ。<br />
                                         狙われる車には、それに見合う対策が必要です。
                                     </p>
-                                    <p className="text-xs font-bold leading-relaxed text-gray-400">
+                                    <p className="text-base font-medium leading-relaxed text-gray-300">
                                         32段階の細かな感度調整により、<br />
                                         強く守りながら誤報を極限まで抑える。
                                     </p>
-                                    <p className="text-xs font-bold leading-relaxed text-gray-400">
+                                    <p className="text-base font-medium leading-relaxed text-gray-300">
                                         車種、駐車環境、使い方まで考え抜き、一台ごとに最適化して仕上げるフルオーダー型セキュリティ。
                                     </p>
-                                    <p className="text-sm font-black italic border-l-2 border-emerald-500 pl-4 py-1">
+                                    <p className="text-base font-black border-l-4 border-emerald-500 pl-4 py-1">
                                         守るために、妥協しない。<br />
                                         それが Panthera です。
                                     </p>
