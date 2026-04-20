@@ -255,10 +255,6 @@ export const MainPage: React.FC<MainPageProps> = ({
                             <span className="text-sm font-black tracking-widest group-hover/item:text-blue-500">HOME</span>
                             <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">ホーム</span>
                         </a>
-                        <a href="#blog" className="flex flex-col items-center group/item transition-colors">
-                            <span className="text-sm font-black tracking-widest group-hover/item:text-blue-500">BLOG</span>
-                            <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">ブログ</span>
-                        </a>
                         <div
                             className="relative py-8 group/nav"
                             onMouseEnter={() => setShowMegaMenu(true)}
@@ -282,17 +278,9 @@ export const MainPage: React.FC<MainPageProps> = ({
                                 handleMenuClick={handleMenuClick}
                             />
                         </div>
-                        <a href="#options" className="flex flex-col items-center group/item transition-colors">
-                            <span className="text-sm font-black tracking-widest group-hover/item:text-blue-500">AUDITION</span>
-                            <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">試聴スピーカー</span>
-                        </a>
-                        <a href="#partners" className="flex flex-col items-center group/item transition-colors">
-                            <span className="text-sm font-black tracking-widest group-hover/item:text-blue-500">BRANDS</span>
-                            <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">取扱ブランド</span>
-                        </a>
-                        <a href="#info" className="flex flex-col items-center group/item transition-colors">
-                            <span className="text-sm font-black tracking-widest group-hover/item:text-blue-500">SCHEDULE</span>
-                            <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">営業日</span>
+                        <a href="#blog" className="flex flex-col items-center group/item transition-colors">
+                            <span className="text-sm font-black tracking-widest group-hover/item:text-blue-500">BLOG</span>
+                            <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">ブログ</span>
                         </a>
                         <a href="#access" className="flex flex-col items-center group/item transition-colors">
                             <span className="text-sm font-black tracking-widest group-hover/item:text-blue-500">ACCESS</span>
