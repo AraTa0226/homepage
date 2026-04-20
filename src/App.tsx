@@ -25,6 +25,7 @@ import { VaultGrid } from './components/VaultGrid';
 // Lazy Pages (Architectural Split for Lighthouse 100)
 const MainPage = lazy(() => import('./pages/Home/MainPage').then(m => ({ default: m.MainPage })));
 const SecurityMainPage = lazy(() => import('./pages/Home/SecurityMainPage').then(m => ({ default: m.SecurityMainPage })));
+const VehicleSecurityDetail = lazy(() => import('./pages/Security/VehicleSecurityDetail'));
 const AudioMenuDetail = lazy(() => import('./components/Menu/AudioMenuDetail').then(m => ({ default: m.AudioMenuDetail })));
 const SecurityMenuDetail = lazy(() => import('./components/Menu/SecurityMenuDetail').then(m => ({ default: m.SecurityMenuDetail })));
 const DashcamMenuDetail = lazy(() => import('./components/Menu/DashcamMenuDetail').then(m => ({ default: m.DashcamMenuDetail })));
@@ -94,6 +95,30 @@ function AppContent() {
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
+      return;
+    }
+
+    if (item.id === 'security_car') {
+      const slugMap: Record<string, string> = {
+        'GX550': 'lexus-gx550',
+        'LX': 'lexus-lx',
+        'RX': 'lexus-rx',
+        'NX': 'lexus-nx',
+        'LBX': 'lexus-lbx',
+        'ランドクルーザー 300': 'toyota-landcruiser-300',
+        'ランドクルーザー 250': 'toyota-landcruiser-250',
+        'ランクル 70': 'toyota-landcruiser-70',
+        'アルファード / ヴェルファイア': 'toyota-alphard-vellfire',
+        'クラウン各種': 'toyota-crown',
+        'ハリアー': 'toyota-harrier',
+        'ハイエース': 'toyota-hiace',
+        'プリウス': 'toyota-prius',
+        'シビック TYPE-R (FL5)': 'honda-civic-typer',
+        'ジムニー / シエラ / ノマド': 'suzuki-jimny',
+        'K-CAR 専用セキュリティ': 'kcar-special'
+      };
+      const slug = slugMap[item.name] || 'special-model';
+      navigate(`/security/vehicle/${slug}`);
       return;
     }
 
@@ -177,6 +202,7 @@ function AppContent() {
               auditionSpeakers={auditionSpeakers}
             />
           } />
+          <Route path="/security/vehicle/:modelId" element={<VehicleSecurityDetail assets={assets} />} />
           <Route path="/audio/sp-package" element={<AudioMenuDetail show={true} onClose={() => navigate('/')} />} />
           <Route path="/security" element={<SecurityMenuDetail show={true} onClose={() => navigate('/')} />} />
           <Route path="/dashcam" element={<DashcamMenuDetail show={true} onClose={() => navigate('/')} />} />
