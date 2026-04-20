@@ -76,20 +76,47 @@ const MegaMenu = ({ show, categories, theme, onClose, navigate, handleMenuClick 
                                         </span>
                                     </div>
                                     <div className="flex flex-col gap-3">
-                                        {cat.items.map((item: string, idx: number) => (
-                                            <button
-                                                key={idx}
-                                                onClick={() => {
-                                                    // Mapping logic for security items
-                                                    onClose();
-                                                    handleMenuClick({ id: cat.id, name: item });
-                                                }}
-                                                className="text-[11px] font-bold text-gray-400 hover:text-emerald-500 transition-all hover:translate-x-1 text-left flex items-center gap-2 group/link"
-                                            >
-                                                <div className="w-1 h-1 rounded-full bg-gray-200 group-hover/link:bg-emerald-400 transition-colors" />
-                                                {item}
-                                            </button>
-                                        ))}
+                                        {cat.groups ? (
+                                            <div className="grid grid-cols-1 gap-6 py-2">
+                                                {cat.groups.map((group: any, gIdx: number) => (
+                                                    <div key={gIdx} className="space-y-2">
+                                                        <div className="text-[9px] font-black text-emerald-500/60 tracking-[0.2em] border-b border-emerald-500/5 pb-1 mb-2 uppercase">
+                                                            {group.name}
+                                                        </div>
+                                                        <div className="flex flex-col gap-1.5">
+                                                            {group.items.map((item: string, idx: number) => (
+                                                                <button
+                                                                    key={idx}
+                                                                    onClick={() => {
+                                                                        onClose();
+                                                                        handleMenuClick({ id: cat.id, name: item });
+                                                                    }}
+                                                                    className="text-left text-[11px] font-bold text-gray-500 hover:text-emerald-600 transition-colors flex items-center gap-2 group/mlink"
+                                                                >
+                                                                    <div className="w-1 h-1 rounded-full bg-gray-100 group-hover/mlink:bg-emerald-400 transition-colors" />
+                                                                    {item}
+                                                                </button>
+                                                            ))}
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        ) : (
+                                            cat.items?.map((item: string, idx: number) => (
+                                                <button
+                                                    key={idx}
+                                                    onClick={() => {
+                                                        // Mapping logic for security items
+                                                        onClose();
+                                                        handleMenuClick({ id: cat.id, name: item });
+                                                    }}
+                                                    className="text-[11px] font-bold text-gray-400 hover:text-emerald-500 transition-all hover:translate-x-1 text-left flex items-center gap-2 group/link"
+                                                >
+                                                    <div className="w-1 h-1 rounded-full bg-gray-200 group-hover/link:bg-emerald-400 transition-colors" />
+                                                    {item}
+                                                </button>
+                                            ))
+                                        )}
                                     </div>
                                 </div>
                             ))}
@@ -124,11 +151,47 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
 
     const securityCategories = [
         {
+            id: 'security_car',
+            title: '車種別おすすめセキュリティ',
+            subtitle: 'VEHICLE',
+            image: assets.pitImage,
+            gridClass: 'lg:col-span-3',
+            groups: [
+                {
+                    name: 'LEXUS',
+                    items: ['GX550', 'LX', 'RX', 'NX', 'LBX']
+                },
+                {
+                    name: 'TOYOTA',
+                    items: [
+                        'ランドクルーザー 300',
+                        'ランドクルーザー 250',
+                        'ランクル 70',
+                        'アルファード / ヴェルファイア',
+                        'クラウン各種',
+                        'ハリアー',
+                        'ハイエース',
+                        'プリウス'
+                    ]
+                },
+                {
+                    name: 'OTHER',
+                    items: [
+                        'シビック TYPE-R (FL5)',
+                        'ジムニー / シエラ / ノマド',
+                        'K-CAR 専用セキュリティ',
+                        '上記以外もご相談ください'
+                    ]
+                }
+            ],
+            path: '/security'
+        },
+        {
             id: 'security_full',
             title: '最新カーセキュリティ',
             subtitle: 'SECURITY',
             image: assets.securityMenuImage,
-            gridClass: 'lg:col-span-1 lg:row-span-1',
+            gridClass: 'col-span-1',
             items: [
                 'Panthera (パンテーラ) Z-Series',
                 'Grgo (ゴルゴ) V-Series',
@@ -141,28 +204,11 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
             path: '/security'
         },
         {
-            id: 'security_car',
-            title: '車種別おすすめセキュリティ',
-            subtitle: 'VEHICLE',
-            image: assets.pitImage,
-            gridClass: 'lg:col-span-2 lg:row-span-2',
-            items: [
-                'レクサス (GX550 / LX / RX / NX / LBX)',
-                'ランドクルーザー (300 / 250 / 70 / 全モデル)',
-                'アルファード / ヴェルファイア',
-                'クラウン (スポーツ / クロスオーバー / セダン / エステート)',
-                'ハリアー / ハイエース / プリウス',
-                'シビック TYPE-R (FL5) / ジムニー / シエラ',
-                '軽自動車 K-CAR 専用セキュリティ'
-            ],
-            path: '/security'
-        },
-        {
             id: 'security_options',
             title: '防犯連動おすすめ装備',
             subtitle: 'SECURITY SET',
             image: assets.dashcamMenuImage,
-            gridClass: 'lg:col-span-1 lg:row-span-1',
+            gridClass: 'col-span-1',
             items: [
                 '前後2カメラ・駐車監視ドラレコ',
                 '360度全方位記録システム',
@@ -177,7 +223,7 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
             title: 'サポート・施工案内',
             subtitle: 'SUPPORT',
             image: assets.workspaceImage,
-            gridClass: 'lg:col-span-3',
+            gridClass: 'col-span-1',
             items: [
                 'セキュリティ定期点検',
                 'リモコン電池・消耗品交換',
