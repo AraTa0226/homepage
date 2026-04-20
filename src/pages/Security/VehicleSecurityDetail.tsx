@@ -10,7 +10,7 @@ import {
     ChevronRight,
     ArrowLeft,
     MessageSquare,
-    CheckCircle2,
+    Check,
     HardDrive,
     Eye
 } from 'lucide-react';
@@ -213,7 +213,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                     </p>
                 </div>
 
-                <div className="bg-white rounded-[2rem] shadow-2xl overflow-hidden border border-gray-100 mb-6">
+                <div className="bg-white md:bg-transparent rounded-[2rem] md:rounded-none shadow-2xl md:shadow-none overflow-hidden border border-gray-100 md:border-none mb-6">
                     {/* Mobile View: Card Stack */}
                     <div className="md:hidden divide-y divide-gray-100">
                         {filteredPlans.map((plan) => (
@@ -250,7 +250,9 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                     ].map((f, i) => (
                                         <div key={i} className={`flex flex-col items-center p-3 rounded-xl border ${f.val ? 'bg-white border-emerald-100 shadow-sm' : 'bg-gray-50/50 border-gray-100 opacity-30'}`}>
                                             {f.val ? (
-                                                <CheckCircle2 className="w-5 h-5 fill-emerald-500/20 text-emerald-600 mb-1" />
+                                                <div className="w-5 h-5 bg-emerald-500 rounded-full flex items-center justify-center text-white mb-1 shadow-sm">
+                                                    <Check className="w-3.5 h-3.5 stroke-[4]" />
+                                                </div>
                                             ) : (
                                                 <div className="w-5 h-5 mb-1" />
                                             )}
@@ -270,86 +272,61 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                         ))}
                     </div>
 
-                    {/* Desktop View: Comparison Table */}
-                    <div className="hidden md:block overflow-x-auto">
-                        <table className="w-full text-left border-collapse min-w-[1050px]">
+                    {/* Desktop View: Transposed Comparison Matrix */}
+                    <div className="hidden md:block overflow-hidden bg-white rounded-[3rem] shadow-2xl border border-gray-100 mb-16">
+                        <table className="w-full text-left border-collapse table-fixed">
                             <thead>
-                                <tr className="bg-[#0b1210] text-emerald-400/80 text-xs font-black uppercase tracking-widest">
-                                    <th className="px-8 py-6">モデル</th>
-                                    <th className="px-6 py-6">グレード</th>
-                                    <th className="px-6 py-6 text-right">施工価格 (税込)</th>
-                                    <th className="px-4 py-6 text-center">衝撃</th>
-                                    <th className="px-4 py-6 text-center">トリプル</th>
-                                    <th className="px-4 py-6 text-center">傾斜</th>
-                                    <th className="px-4 py-6 text-center text-[10px] leading-tight">アルゴリズム<br />機能</th>
-                                    <th className="px-4 py-6 text-center">ボンネット</th>
-                                    <th className="px-4 py-6 text-center">マイクロ波</th>
-                                    <th className="px-4 py-6 text-center text-[10px] leading-tight">バックアップ<br />サイレン</th>
-                                    <th className="px-4 py-6 text-center">CAN<br />ガード</th>
-                                    <th className="px-8 py-6 text-center"> </th>
+                                <tr className="bg-[#0b1210]">
+                                    <th className="w-[18%] px-8 py-10 text-emerald-400 text-xs font-black uppercase tracking-widest border-b border-emerald-500/20">比較項目</th>
+                                    {filteredPlans.map((plan) => (
+                                        <th key={plan.id} className={`px-2 py-10 text-center border-b border-emerald-500/20 ${plan.isRecommended ? 'bg-emerald-900/20 relative' : ''}`}>
+                                            {plan.isRecommended && (
+                                                <div className="absolute top-0 left-0 right-0 bg-emerald-500 text-[#0b1210] text-[9px] font-black py-1 uppercase tracking-tighter shadow-sm">おすすめ</div>
+                                            )}
+                                            <div className="text-emerald-500 text-[9px] font-black mb-2 italic tracking-widest">{plan.brand}</div>
+                                            <div className="text-white text-[13px] font-black leading-tight h-12 flex items-center justify-center italic">{plan.grade}</div>
+                                        </th>
+                                    ))}
                                 </tr>
                             </thead>
-                            <tbody>
-                                {filteredPlans.map((plan) => (
-                                    <tr
-                                        key={plan.id}
-                                        className={`transition-colors border-b border-gray-50 ${plan.isRecommended ? 'bg-emerald-50/40' : 'hover:bg-gray-50/50'}`}
-                                    >
-                                        <td className="px-8 py-6">
-                                            <div className="flex flex-col">
-                                                <span className={`text-base font-black ${plan.isRecommended ? 'text-gray-900' : 'text-gray-400'}`}>
-                                                    {plan.brand}
-                                                </span>
-                                                {plan.isRecommended && (
-                                                    <span className="inline-flex mt-1 bg-emerald-500 text-white text-[8px] font-black px-2 py-0.5 rounded-full w-fit">
-                                                        おすすめ
-                                                    </span>
-                                                )}
-                                            </div>
+                            <tbody className="text-gray-900 font-medium">
+                                {/* Price Row */}
+                                <tr className="border-b border-gray-100 bg-gray-50/50">
+                                    <td className="px-8 py-8 font-black text-xs text-gray-700 uppercase tracking-wider bg-gray-200/20">施工価格 <span className="text-[10px] opacity-60">(税込)</span></td>
+                                    {filteredPlans.map((plan) => (
+                                        <td key={plan.id} className={`px-2 py-8 text-center ${plan.isRecommended ? 'bg-emerald-50/50' : ''}`}>
+                                            <div className="text-xl font-black tracking-tighter text-gray-950">¥{plan.price}</div>
+                                            <div className="text-[11px] font-bold text-gray-400 mt-1"> (税込¥{plan.priceTax})</div>
                                         </td>
-                                        <td className="px-6 py-6 whitespace-nowrap">
-                                            <span className="bg-gray-800 text-white text-[10px] font-bold px-4 py-1.5 rounded-full tracking-wider whitespace-nowrap inline-block">
-                                                {plan.grade}
-                                            </span>
+                                    ))}
+                                </tr>
+
+                                {/* Feature Rows */}
+                                {[
+                                    { key: 'shock' as const, label: '衝撃センサー' },
+                                    { key: 'triple' as const, label: 'トリプルセンサー' },
+                                    { key: 'tilt' as const, label: '傾斜センサー' },
+                                    { key: 'algorithm' as const, label: 'アルゴリズム機能', isEmerald: true },
+                                    { key: 'bonnet' as const, label: 'ボンネットピン' },
+                                    { key: 'microwave' as const, label: 'マイクロ波センサー' },
+                                    { key: 'siren' as const, label: 'バックアップサイレン' },
+                                    { key: 'canguard' as const, label: 'CANガード', isEmerald: true },
+                                ].map((feature, idx) => (
+                                    <tr key={feature.key} className={`border-b border-gray-50 ${idx % 2 === 0 ? 'bg-white' : 'bg-gray-50/30'}`}>
+                                        <td className={`px-8 py-6 text-xs font-black tracking-widest ${feature.isEmerald ? 'text-emerald-600' : 'text-gray-500'} bg-gray-50/50 whitespace-nowrap`}>
+                                            {feature.label}
                                         </td>
-                                        <td className="px-6 py-6 text-right">
-                                            <div className="flex flex-col">
-                                                <span className="text-xl font-black tracking-tighter text-gray-900">
-                                                    ¥{plan.price}
-                                                </span>
-                                                <span className="text-xs font-bold text-gray-400 mt-0.5">
-                                                    (税込¥{plan.priceTax})
-                                                </span>
-                                            </div>
-                                        </td>
-                                        {[
-                                            plan.features.shock,
-                                            plan.features.triple,
-                                            plan.features.tilt,
-                                            plan.features.algorithm,
-                                            plan.features.bonnet,
-                                            plan.features.microwave,
-                                            plan.features.siren,
-                                            plan.features.canguard
-                                        ].map((f, i) => (
-                                            <td key={i} className="px-4 py-6 text-center">
-                                                {f ? (
-                                                    <div className="inline-flex items-center justify-center w-6 h-6 text-emerald-500 font-bold">
-                                                        <CheckCircle2 className="w-5 h-5 fill-emerald-500/20 text-emerald-600" />
+                                        {filteredPlans.map((plan) => (
+                                            <td key={plan.id} className={`px-2 py-6 text-center ${plan.isRecommended ? 'bg-emerald-50/30' : ''}`}>
+                                                {plan.features[feature.key] ? (
+                                                    <div className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-emerald-500 text-white shadow-lg shadow-emerald-500/20 scale-75">
+                                                        <Check className="w-4 h-4 stroke-[4]" />
                                                     </div>
                                                 ) : (
-                                                    <span className="text-gray-200">―</span>
+                                                    <span className="text-gray-200 text-xs">—</span>
                                                 )}
                                             </td>
                                         ))}
-                                        <td className="px-8 py-6 text-center">
-                                            <button
-                                                onClick={() => navigate('/contact')}
-                                                className="px-5 py-2 rounded-xl border border-emerald-500/30 text-emerald-600 text-[11px] font-black hover:bg-emerald-500 hover:text-white transition-all uppercase tracking-tighter"
-                                            >
-                                                見積り依頼
-                                            </button>
-                                        </td>
                                     </tr>
                                 ))}
                             </tbody>
