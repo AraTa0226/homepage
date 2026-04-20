@@ -38,7 +38,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             image: '/images/Security/vehicle/gx550.webp',
             description: '最新鋭のオフローダー。CANインベーダーやゲームボーイといった最新手口への完全対策が必須です。'
         },
-        'lexus-lx600': {
+        'lexus-lx': {
             name: 'LEXUS LX600',
             year: '2022-',
             image: '/images/Security/vehicle/lx.webp',
