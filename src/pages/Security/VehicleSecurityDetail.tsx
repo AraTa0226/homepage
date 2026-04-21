@@ -645,8 +645,8 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                         'ステータスインジケーター', '2WAYアンサーバックリモコン', '暗証番号式バレースイッチ', 'ハイパワーサイレン', 'ハザードフラッシュ機能'
                                     ].map((item, i) => (
                                         <div key={i} className="flex items-center gap-2">
-                                            <div className="w-1.5 h-1.5 rounded-full bg-white border-2 border-emerald-400 shadow-sm" />
-                                            <span className="text-[11px] md:text-ce font-black text-slate-600 tracking-tight whitespace-nowrap">{item}</span>
+                                            <div className="w-1.5 h-1.5 rounded-full bg-white border-2 border-emerald-400 shadow-sm shrink-0" />
+                                            <span className="text-[10px] md:text-xs font-black text-slate-600 tracking-tight leading-tight">{item}</span>
                                         </div>
                                     ))}
                                 </div>
@@ -655,8 +655,8 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                     </div>
                 </div>
 
-                <div className="bg-white md:bg-transparent rounded-[2rem] md:rounded-none shadow-2xl md:shadow-none overflow-hidden border border-gray-100 md:border-none mb-6">
-                    <p className="mb-4 text-[11px] text-emerald-600 font-bold italic text-right">
+                <div className="bg-white md:bg-transparent rounded-[2rem] md:rounded-none shadow-2xl md:shadow-none overflow-hidden border border-gray-100 md:border-none mb-6 px-6 md:px-0">
+                    <p className="mb-4 text-[11px] md:text-xs text-emerald-600 font-bold italic text-left md:text-right leading-relaxed">
                         ※表にチェックが入っていないセンサー類も、オプションとして追加取り付けが可能です。お気軽にご相談ください。
                     </p>
                     {/* Mobile View: Card Stack */}
