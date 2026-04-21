@@ -184,6 +184,82 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         }
     ];
 
+    // ランドクルーザー70専用設定データ
+    const landcruiser70Plans = [
+        {
+            id: 'lc70-grgo-5vf',
+            brand: 'Grgo',
+            grade: '5Vf II ＋ トリプル',
+            description: '1WAYリモコンモデルにトリプルセンサーを追加。アドブルーリッド対策も対応可。',
+            price: '225,800',
+            priceTax: '248,380',
+            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
+            category: 'grgo'
+        },
+        {
+            id: 'lc70-grgo-zv',
+            brand: 'Grgo',
+            grade: 'ZV II ＋ トリプル',
+            description: 'アンサーバックリモコンモデル。トリプルセンサーで検知能力を強化。',
+            price: '243,800',
+            priceTax: '268,180',
+            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'grgo'
+        },
+        {
+            id: 'lc70-grgo-zvt',
+            brand: 'Grgo',
+            grade: 'ZVT II ＋ スマートキー連動',
+            description: '傾斜センサー・1WAYリモコン付属の最上位Grgo。利便性と防犯を両立。',
+            price: '265,800',
+            priceTax: '292,380',
+            isRecommended: true,
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'grgo'
+        },
+        {
+            id: 'lc70-panthera-z106',
+            brand: 'Panthera',
+            grade: 'Z106 ＋ トリプル',
+            description: 'パンテーラの緻密なアルゴリズムを70に。トリプルセンサーで全方位監視。',
+            price: '313,800',
+            priceTax: '345,180',
+            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'lc70-panthera-z306',
+            brand: 'Panthera',
+            grade: 'Z306 Standard',
+            description: '人気の傾斜センサーを標準装備。70の盗難・レッカー被害を徹底阻止。',
+            price: '335,800',
+            priceTax: '369,380',
+            isRecommended: true,
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'lc70-panthera-z306-microwave',
+            brand: 'Panthera',
+            grade: 'Z306 ＋ マイクロ波',
+            description: '接近検知を追加。不審なうろつきや車内覗き込みを未然に防ぎます。',
+            price: '387,800',
+            priceTax: '426,580',
+            features: { triple: true, tilt: true, bonnet: false, microwave: true, siren: false, algorithm: true, canguard: false },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'lc70-panthera-z706-full',
+            brand: 'Panthera',
+            grade: 'Z706 Ultimate',
+            description: '全センサー装備の最高峰。70を守り抜くANGのフルスペックパッケージ。',
+            price: '425,800',
+            priceTax: '468,380',
+            features: { triple: true, tilt: true, bonnet: false, microwave: true, siren: true, algorithm: true, canguard: false, ir: true },
+            category: 'パンテーラ'
+        }
+    ];
+
     // GX550専用設定データ
     const gxPlans = [
         {
@@ -606,6 +682,13 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             image: '/images/Security/vehicle/250.webp',
             description: 'プラドの後継として登場した注目の新型モデル。伝統の信頼性に加え、最新のデジタルセキュリティを融合させた最強の防犯対策をご提案します。',
             plans: landcruiser250Plans
+        },
+        'toyota-landcruiser-70': {
+            name: 'Land Cruiser 70',
+            year: '2023-',
+            image: '/images/Security/vehicle/70.webp',
+            description: '不変の信頼性を誇る本格オフローダー。最新モデルでは盗難リスクも高まっており、伝統的な物理防御と最新システムの融合が必要です。※別途オプションでアドブルーリッド対策可能です。',
+            plans: landcruiser70Plans
         },
         'toyota-landcruiser-300': {
             name: 'Land Cruiser 300',
