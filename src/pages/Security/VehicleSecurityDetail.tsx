@@ -38,16 +38,17 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'rx-grgo-zv-full',
             brand: 'Grgo',
             grade: 'ZV II ＋ CANガード ＋ トリプル',
+            description: 'スマート連動とトリプルセンサーを含むANG推奨パッケージ。',
             price: '314,600',
             priceTax: '346,060',
             features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
             category: 'grgo'
         },
-        // ... (ZVT II kept as is)
         {
             id: 'rx-grgo-zvt-full',
             brand: 'Grgo',
             grade: 'ZVT II ＋ CANガード',
+            description: '傾斜センサーとCANガード。1WAYリモコンも付属した上位モデル。',
             price: '336,600',
             priceTax: '370,260',
             isRecommended: true,
@@ -58,6 +59,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'rx-panthera-z106-plus',
             brand: 'Panthera',
             grade: 'Z106 ＋ CANガード ＋ トリプル',
+            description: 'パンテーラの高精度な検知能力を最大限に活かしたフルガード。',
             price: '374,800',
             priceTax: '412,280',
             features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
@@ -67,6 +69,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'rx-panthera-z306-standard',
             brand: 'Panthera',
             grade: 'Z306 Standard',
+            description: '基本的な車両監視を網羅。後からオプション追加も可能です。',
             price: '360,800',
             priceTax: '396,880',
             features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: false, canguard: false },
@@ -76,6 +79,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'rx-panthera-z306-canguard',
             brand: 'Panthera',
             grade: 'Z306 ＋ CANガード',
+            description: 'Z306の多機能にデジタル対策のCANガードを完全統合。',
             price: '396,800',
             priceTax: '436,480',
             isRecommended: true,
@@ -86,6 +90,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'rx-panthera-z306-microwave',
             brand: 'Panthera',
             grade: 'Z306 ＋ CANガード ＋ マイクロ波',
+            description: '接近検知を追加し、愛車へのうろつきも許さない最強布陣。',
             price: '448,800',
             priceTax: '493,680',
             features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
@@ -95,6 +100,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'rx-panthera-z706-full',
             brand: 'Panthera',
             grade: 'Z706 Ultimate ＋ CANガード',
+            description: 'あらゆる手口から車を守る、ANGノウハウの結晶プラン。',
             price: '486,800',
             priceTax: '535,480',
             features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: true, ir: true },
@@ -108,6 +114,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'nx-grgo-zv-full',
             brand: 'Grgo',
             grade: 'ZV II ＋ CANガード ＋ トリプル',
+            description: 'スマート連動とトリプルセンサー。NXオーナーに一番支持される構成。',
             price: '314,600',
             priceTax: '346,060',
             features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
@@ -117,6 +124,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'nx-grgo-zvt-full',
             brand: 'Grgo',
             grade: 'ZVT II ＋ CANガード',
+            description: '傾斜センサーとCANガード、1WAYリモコン。安心をワンランク上げるプラン。',
             price: '331,600',
             priceTax: '364,760',
             isRecommended: true,
@@ -127,6 +135,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'nx-panthera-z106-plus',
             brand: 'Panthera',
             grade: 'Z106 ＋ CANガード ＋ トリプル',
+            description: 'パンテーラの高度な検知能力と操作性を追求したパッケージ。',
             price: '369,800',
             priceTax: '406,780',
             features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
@@ -136,6 +145,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'nx-panthera-z306-standard',
             brand: 'Panthera',
             grade: 'Z306 Standard',
+            description: '充実のセンサー構成。車両の安全をバランスよく監視します。',
             price: '360,800',
             priceTax: '396,880',
             features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: false, canguard: false },
@@ -145,6 +155,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'nx-panthera-z306-canguard',
             brand: 'Panthera',
             grade: 'Z306 ＋ CANガード',
+            description: '全方位監視とCANインベーダー対策を完全に両立させたプラン。',
             price: '391,800',
             priceTax: '430,980',
             isRecommended: true,
@@ -155,6 +166,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'nx-panthera-z306-microwave',
             brand: 'Panthera',
             grade: 'Z306 ＋ CANガード ＋ マイクロ波',
+            description: '車外への威嚇を強化し、不審な接近を未然に警告。',
             price: '443,800',
             priceTax: '488,180',
             features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
@@ -164,9 +176,162 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'nx-panthera-z706-full',
             brand: 'Panthera',
             grade: 'Z706 Ultimate ＋ CANガード',
+            description: '全機能を解放。NXを守るためのANGフラッグシッププラン。',
             price: '481,800',
             priceTax: '529,980',
             features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: true, ir: true },
+            category: 'パンテーラ'
+        }
+    ];
+
+    // GX550専用設定データ
+    const gxPlans = [
+        {
+            id: 'gx-grgo-zv',
+            brand: 'Grgo',
+            grade: 'ZV II ＋ CANガード ＋ トリプル',
+            description: 'スマート連動にCANガードとトリプルセンサーを追加。',
+            price: '314,600',
+            priceTax: '346,060',
+            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'grgo'
+        },
+        {
+            id: 'gx-grgo-zvt',
+            brand: 'Grgo',
+            grade: 'ZVT II ＋ CANガード',
+            description: '傾斜センサー標準装備。CANガードと1WAYリモコンも付属。',
+            price: '331,600',
+            priceTax: '364,760',
+            isRecommended: true,
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'grgo'
+        },
+        {
+            id: 'gx-grgo-zvt-microwave',
+            brand: 'Grgo',
+            grade: 'ZVT II ＋ CANガード ＋ マイクロ波',
+            description: 'ZVT IIに車外接近検知（うろつき対策）を追加。',
+            price: '369,800',
+            priceTax: '406,780',
+            features: { triple: true, tilt: true, bonnet: false, microwave: true, siren: false, algorithm: true, canguard: true },
+            category: 'grgo'
+        },
+        {
+            id: 'gx-panthera-z106',
+            brand: 'Panthera',
+            grade: 'Z106 ＋ CANガード ＋ トリプル',
+            description: 'パンテーラの緻密な感度調整を活かす実戦的パッケージ。',
+            price: '360,800',
+            priceTax: '396,880',
+            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'gx-panthera-z106-microwave',
+            brand: 'Panthera',
+            grade: 'Z106 ＋ CANガード ＋ トリプル ＋ マイクロ波',
+            description: 'Z106パッケージに接近検知のマイクロ波をプラス。',
+            price: '391,800',
+            priceTax: '430,980',
+            features: { triple: true, tilt: false, bonnet: false, microwave: true, siren: false, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'gx-panthera-z306',
+            brand: 'Panthera',
+            grade: 'Z306 ＋ CANガード',
+            description: '全方位検知のZ306に最新のCANガードを融合。',
+            price: '443,800',
+            priceTax: '488,180',
+            isRecommended: true,
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'gx-panthera-z706-full',
+            brand: 'Panthera',
+            grade: 'Z706 Ultimate ＋ CANガード',
+            description: 'すべてのセンサーを装備した究極の多重防御モデル。',
+            price: '481,800',
+            priceTax: '529,980',
+            features: { triple: true, tilt: true, bonnet: false, microwave: true, siren: true, algorithm: true, canguard: true, ir: true },
+            category: 'パンテーラ'
+        }
+    ];
+
+    // LX600専用設定データ
+    const lxPlans = [
+        {
+            id: 'lx-grgo-zv',
+            brand: 'Grgo',
+            grade: 'ZV II ＋ CANガード ＋ トリプル',
+            description: '最新の盗難手口からデジタル・アナログ両面で守ります。',
+            price: '314,600',
+            priceTax: '346,060',
+            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'grgo'
+        },
+        {
+            id: 'lx-grgo-zvt',
+            brand: 'Grgo',
+            grade: 'ZVT II ＋ CANガード',
+            description: 'LX必須の傾斜センサー。CANガード、リモコンもセット。',
+            price: '331,600',
+            priceTax: '364,760',
+            isRecommended: true,
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'grgo'
+        },
+        {
+            id: 'lx-grgo-zvt-microwave',
+            brand: 'Grgo',
+            grade: 'ZVT II ＋ CANガード ＋ マイクロ波',
+            description: '接近検知を追加し、高級車LXの死角をなくしたモデル。',
+            price: '369,800',
+            priceTax: '406,780',
+            features: { triple: true, tilt: true, bonnet: false, microwave: true, siren: false, algorithm: true, canguard: true },
+            category: 'grgo'
+        },
+        {
+            id: 'lx-panthera-z106',
+            brand: 'Panthera',
+            grade: 'Z106 ＋ CANガード ＋ トリプル',
+            description: 'パンテーラの緻密なアルゴリズムで誤報を排し鉄壁の護り。',
+            price: '360,800',
+            priceTax: '396,880',
+            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'lx-panthera-z106-microwave',
+            brand: 'Panthera',
+            grade: 'Z106 ＋ CANガード ＋ トリプル ＋ マイクロ波',
+            description: 'Z106パッケージに覗き込み対策のマイクロ波を。',
+            price: '391,800',
+            priceTax: '430,980',
+            features: { triple: true, tilt: false, bonnet: false, microwave: true, siren: false, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'lx-panthera-z306',
+            brand: 'Panthera',
+            grade: 'Z306 ＋ CANガード',
+            description: 'フラッグシップSUVに相応しい多機能検知パッケージ。',
+            price: '443,800',
+            priceTax: '488,180',
+            isRecommended: true,
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'lx-panthera-z706-full',
+            brand: 'Panthera',
+            grade: 'Z706 Ultimate ＋ CANガード',
+            description: '全センサー装備の最高峰。LXを守り抜く最強の選択肢。',
+            price: '481,800',
+            priceTax: '529,980',
+            features: { triple: true, tilt: true, bonnet: false, microwave: true, siren: true, algorithm: true, canguard: true, ir: true },
             category: 'パンテーラ'
         }
     ];
@@ -177,6 +342,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'lbx-grgo-zv',
             brand: 'Grgo',
             grade: 'ZV II ＋ CANガード ＋ ボンネット',
+            description: 'LBX必須のボンネットセンサーとCANガードを含む基本パッケージ。',
             price: '302,800',
             priceTax: '333,080',
             features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
@@ -186,6 +352,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'lbx-grgo-zvt',
             brand: 'Grgo',
             grade: 'ZVT II ＋ CANガード ＋ ボンネット',
+            description: '感度良好な傾斜センサーを搭載。LBXに最高水準の守りを。',
             price: '334,600',
             priceTax: '368,060',
             isRecommended: true,
@@ -196,6 +363,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'lbx-panthera-z106',
             brand: 'Panthera',
             grade: 'Z106 ＋ CANガード',
+            description: 'パンテーラの緻密な警備を。小回りの利くLBXにも最適な布陣。',
             price: '372,800',
             priceTax: '410,080',
             features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
@@ -205,6 +373,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'lbx-panthera-z306',
             brand: 'Panthera',
             grade: 'Z306 ＋ CANガード',
+            description: '充実のセンサー群で死角なし。デジタル盗難手口も完全ブロック。',
             price: '394,800',
             priceTax: '434,280',
             features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
@@ -214,6 +383,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'lbx-panthera-z306-microwave',
             brand: 'Panthera',
             grade: 'Z306 ＋ CANガード ＋ マイクロ波',
+            description: '車外検知を追加し、高級コンパクトLBXの価値を徹底防衛。',
             price: '446,800',
             priceTax: '491,480',
             isRecommended: true,
@@ -224,6 +394,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'lbx-panthera-z706-full',
             brand: 'Panthera',
             grade: 'Z706 Ultimate ＋ CANガード',
+            description: 'すべてのセンサーを纏った、LBXのための最強仕様。',
             price: '484,800',
             priceTax: '533,280',
             features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: true, ir: true },
@@ -237,6 +408,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'lc250-grgo-zv',
             brand: 'Grgo',
             grade: 'ZV II ＋ CANガード ＋ トリプル ＋ ボンネット',
+            description: '新型250に必須のボンネット保護とCANガードを融合。',
             price: '314,600',
             priceTax: '346,060',
             features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
@@ -246,6 +418,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'lc250-grgo-zvt',
             brand: 'Grgo',
             grade: 'ZVT II ＋ CANガード ＋ ボンネット',
+            description: '傾斜センサーと1WAYリモコン付属。多重防御のANG推奨プラン。',
             price: '336,600',
             priceTax: '370,260',
             isRecommended: true,
@@ -256,6 +429,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'lc250-panthera-z106',
             brand: 'Panthera',
             grade: 'Z106 ＋ CANガード ＋ トリプル ＋ ボンネット',
+            description: 'パンテーラの緻密な感度調整で、新型250を誤報なく守る。',
             price: '374,800',
             priceTax: '412,280',
             features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
@@ -265,6 +439,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'lc250-panthera-z106-microwave',
             brand: 'Panthera',
             grade: 'Z106 ＋ CANガード ＋ トリプル ＋ ボンネット ＋ マイクロ波',
+            description: '接近検知のマイクロ波を追加。不審なうろつきを未然に排除。',
             price: '426,800',
             priceTax: '469,480',
             features: { triple: true, tilt: false, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
@@ -274,6 +449,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'lc250-panthera-z306',
             brand: 'Panthera',
             grade: 'Z306 ＋ CANガード ＋ ボンネット',
+            description: '全センサー構成のZ306に最先端のデジタル対策を統合。',
             price: '396,800',
             priceTax: '436,480',
             features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
@@ -283,6 +459,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'lc250-panthera-z306-microwave',
             brand: 'Panthera',
             grade: 'Z306 ＋ CANガード ＋ ボンネット ＋ マイクロ波',
+            description: 'センサー満載のフルガード。250の安全をあらゆる角度から監視。',
             price: '448,800',
             priceTax: '493,680',
             features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
@@ -292,6 +469,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'lc250-panthera-z706-full',
             brand: 'Panthera',
             grade: 'Z706 Ultimate ＋ CANガード ＋ ボンネット',
+            description: '全センサー＋バックアップサイレン。250を守り抜く究極の回答。',
             price: '486,800',
             priceTax: '535,480',
             isRecommended: true,
@@ -306,6 +484,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'lc300-grgo-zv',
             brand: 'Grgo',
             grade: 'ZV II ＋ CANガード ＋ トリプル ＋ ボンネット',
+            description: '最も狙われる300必須のアナログ防御と電子対策をパッケージ。',
             price: '314,600',
             priceTax: '346,060',
             features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
@@ -315,6 +494,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'lc300-grgo-zvt',
             brand: 'Grgo',
             grade: 'ZVT II ＋ CANガード ＋ ボンネット',
+            description: '高精度な傾斜センサーが、300のパーツ盗難やレッカーを阻止。',
             price: '336,600',
             priceTax: '370,260',
             isRecommended: true,
@@ -325,6 +505,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'lc300-grgo-zvt-microwave',
             brand: 'Grgo',
             grade: 'ZVT II ＋ CANガード ＋ ボンネット ＋ マイクロ波',
+            description: '車外への接近検知を追加。300への干渉を未然に威嚇。',
             price: '388,600',
             priceTax: '427,460',
             features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
@@ -334,6 +515,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'lc300-panthera-z106',
             brand: 'Panthera',
             grade: 'Z106 ＋ CANガード ＋ トリプル ＋ ボンネット',
+            description: '世界最強クラスのパンテーラで、300への不正信号を遮断。',
             price: '374,800',
             priceTax: '412,280',
             features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
@@ -343,6 +525,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'lc300-panthera-z106-microwave',
             brand: 'Panthera',
             grade: 'Z106 ＋ CANガード ＋ トリプル ＋ ボンネット ＋ マイクロ波',
+            description: '高感度検知を活かし、不審車の接近もうろつきも逃さない。',
             price: '426,800',
             priceTax: '469,480',
             features: { triple: true, tilt: false, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
@@ -352,6 +535,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'lc300-panthera-z306',
             brand: 'Panthera',
             grade: 'Z306 ＋ CANガード ＋ ボンネット',
+            description: '充実のセンサー群で全方位監視。300を鉄壁の守りへ。',
             price: '396,800',
             priceTax: '436,480',
             features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
@@ -361,6 +545,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'lc300-panthera-z306-microwave',
             brand: 'Panthera',
             grade: 'Z306 ＋ CANガード ＋ ボンネット ＋ マイクロ波',
+            description: 'マイクロ波を含むフルセンサー構成。300防衛の最高峰。',
             price: '448,800',
             priceTax: '493,680',
             features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
@@ -370,6 +555,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'lc300-panthera-z706-full',
             brand: 'Panthera',
             grade: 'Z706 Ultimate ＋ CANガード ＋ ボンネット',
+            description: 'ANGノウハウを結集。300を守るためのバックアップサイレン付最終回答。',
             price: '486,800',
             priceTax: '535,480',
             isRecommended: true,
@@ -383,13 +569,15 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             name: 'LEXUS GX550',
             year: '2024-',
             image: '/images/Security/vehicle/gx.webp',
-            description: '最新鋭のオフローダー。CANインベーダーやゲームボーイといった最新手口への完全対策が必須です。'
+            description: '最新鋭のオフローダー。CANインベーダーやゲームボーイといった最新手口への完全対策が必須です。',
+            plans: gxPlans
         },
         'lexus-lx': {
             name: 'LEXUS LX600',
             year: '2022-',
             image: '/images/Security/vehicle/lx.webp',
-            description: 'レクサスのフラッグシップSUV。最新のデジタル窃盗手口への完全対策が必須であり、Pantheraを中心とした最強の多重防御を推奨します。'
+            description: 'レクサスのフラッグシップSUV。最新のデジタル窃盗手口への完全対策が必須であり、Pantheraを中心とした最強の多重防御を推奨します。',
+            plans: lxPlans
         },
         'lexus-rx': {
             name: 'LEXUS RX',
@@ -674,7 +862,12 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                                 <span className="bg-emerald-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full">おすすめ</span>
                                             )}
                                         </div>
-                                        <h3 className="text-xl font-black text-gray-900 tracking-tight">{plan.grade}</h3>
+                                        <h3 className="text-xl font-black text-gray-900 tracking-tight leading-tight">{plan.grade}</h3>
+                                        {(plan as any).description && (
+                                            <p className="mt-2 text-[10px] text-gray-500 font-medium leading-relaxed italic border-l-2 border-emerald-500/20 pl-2">
+                                                {(plan as any).description}
+                                            </p>
+                                        )}
                                     </div>
                                     <div className="text-right">
                                         <div className="text-xl font-black tracking-tighter text-gray-900">¥{plan.price}</div>
@@ -726,12 +919,19 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                 <tr className="bg-[#0b1210]">
                                     <th className="w-[18%] px-8 py-10 text-emerald-400 text-xs font-black uppercase tracking-widest border-b border-emerald-500/20">比較項目</th>
                                     {filteredPlans.map((plan) => (
-                                        <th key={plan.id} className={`px-2 py-10 text-center border-b border-emerald-500/20 ${plan.isRecommended ? 'bg-emerald-900/20 relative' : ''}`}>
+                                        <th key={plan.id} className={`px-2 py-8 text-center border-b border-emerald-500/20 ${plan.isRecommended ? 'bg-emerald-900/20 relative' : ''}`}>
                                             {plan.isRecommended && (
-                                                <div className="absolute top-0 left-0 right-0 bg-emerald-500 text-[#0b1210] text-[9px] font-black py-1 uppercase tracking-tighter shadow-sm">おすすめ</div>
+                                                <div className="absolute top-0 left-0 right-0 bg-emerald-500 text-[#0b1210] text-[8px] font-black py-0.5 uppercase tracking-tighter shadow-sm">おすすめ</div>
                                             )}
-                                            <div className="text-emerald-500 text-[9px] font-black mb-2 italic tracking-widest">{plan.brand}</div>
-                                            <div className="text-white text-[13px] font-black leading-tight flex items-center justify-center italic">{plan.grade}</div>
+                                            <div className="text-emerald-500 text-[8px] font-black mb-1.5 italic tracking-widest">{plan.brand}</div>
+                                            <div className="text-white text-[12px] font-black leading-tight flex flex-col items-center justify-center italic gap-1">
+                                                <span>{plan.grade}</span>
+                                                {(plan as any).description && (
+                                                    <span className="text-[9px] text-emerald-400/60 font-medium not-italic leading-tight max-w-[120px] mx-auto">
+                                                        {(plan as any).description}
+                                                    </span>
+                                                )}
+                                            </div>
                                         </th>
                                     ))}
                                 </tr>
