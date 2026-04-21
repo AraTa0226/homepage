@@ -14,7 +14,8 @@ import {
     HardDrive,
     Eye,
     HelpCircle,
-    Monitor
+    Monitor,
+    Award
 } from 'lucide-react';
 import { SafeImage } from '../../components/ui/SafeImage';
 
@@ -31,6 +32,75 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
     }, [modelId]);
 
     const [filter, setFilter] = React.useState('all');
+
+    // 汎用ベースプラン（他車種・相談用）
+    const basePlans = [
+        {
+            id: 1,
+            brand: 'Grgo',
+            grade: 'ZVT II',
+            price: '336,600',
+            priceTax: '370,260',
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'grgo'
+        },
+        {
+            id: 2,
+            brand: 'Grgo',
+            grade: 'ZVT II + マイクロ波',
+            isRecommended: true,
+            price: '388,600',
+            priceTax: '427,460',
+            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
+            category: 'grgo'
+        },
+        {
+            id: 3,
+            brand: 'Panthera',
+            grade: 'Z106',
+            price: '374,800',
+            priceTax: '412,280',
+            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        },
+        {
+            id: 4,
+            brand: 'Panthera',
+            grade: 'Z106 + マイクロ波',
+            price: '426,800',
+            priceTax: '469,480',
+            features: { triple: true, tilt: false, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        },
+        {
+            id: 5,
+            brand: 'Panthera',
+            grade: 'Z306',
+            price: '396,800',
+            priceTax: '436,480',
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        },
+        {
+            id: 6,
+            brand: 'Panthera',
+            grade: 'Z306 + マイクロ波',
+            isRecommended: true,
+            price: '448,800',
+            priceTax: '493,680',
+            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        },
+        {
+            id: 7,
+            brand: 'Panthera',
+            grade: 'Z706',
+            price: '486,800',
+            priceTax: '535,480',
+            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: true, ir: true },
+            category: 'パンテーラ'
+        }
+    ];
 
     // 車種別設定データ
     const rxPlans = [
@@ -203,18 +273,18 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'アンサーバックリモコンモデル。トリプルセンサーで検知能力を強化。',
             price: '243,800',
             priceTax: '268,180',
-            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
             category: 'grgo'
         },
         {
             id: 'lc70-grgo-zvt',
             brand: 'Grgo',
-            grade: 'ZVT II ＋ スマートキー連動',
-            description: '傾斜センサー・1WAYリモコン付属の最上位Grgo。利便性と防犯を両立。',
+            grade: 'ZVT II 標準パッケージ',
+            description: '傾斜センサー・1WAYリモコン付属の最上位Grgo。アナログキー車に最適なセッティングで施工。',
             price: '265,800',
             priceTax: '292,380',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
             category: 'grgo'
         },
         {
@@ -224,7 +294,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'パンテーラの緻密なアルゴリズムを70に。トリプルセンサーで全方位監視。',
             price: '313,800',
             priceTax: '345,180',
-            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
             category: 'パンテーラ'
         },
         {
@@ -235,7 +305,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '335,800',
             priceTax: '369,380',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
             category: 'パンテーラ'
         },
         {
@@ -245,7 +315,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '接近検知を追加。不審なうろつきや車内覗き込みを未然に防ぎます。',
             price: '387,800',
             priceTax: '426,580',
-            features: { triple: true, tilt: true, bonnet: false, microwave: true, siren: false, algorithm: true, canguard: false },
+            features: { triple: true, tilt: true, bonnet: false, microwave: true, siren: false, algorithm: false, canguard: false },
             category: 'パンテーラ'
         },
         {
@@ -255,7 +325,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '全センサー装備の最高峰。70を守り抜くANGのフルスペックパッケージ。',
             price: '425,800',
             priceTax: '468,380',
-            features: { triple: true, tilt: true, bonnet: false, microwave: true, siren: true, algorithm: true, canguard: false, ir: true },
+            features: { triple: true, tilt: true, bonnet: false, microwave: true, siren: true, algorithm: false, canguard: false, ir: true },
             category: 'パンテーラ'
         }
     ];
@@ -554,6 +624,781 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         }
     ];
 
+
+    // ランドクルーザー 150/200系 (スマートキー車両) 専用設定データ
+
+    const landcruiser150Plans = [
+        {
+            id: 'lc150-grgo-zv-canguard',
+            brand: 'Grgo',
+            grade: 'ZV II ＋ CANガード ＋ トリプル ＋ ボンネット',
+            description: '信頼のZV IIにCANインベーダー対策ユニットを物理追加した鉄壁プラン。',
+            price: '314,600',
+            priceTax: '346,060',
+            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'grgo'
+        },
+        {
+            id: 'lc150-grgo-zvt-canguard',
+            brand: 'Grgo',
+            grade: 'ZVT II ＋ CANガード ＋ ボンネット',
+            description: '傾斜センサー含むフルセンサー構成にCANガードを統合した最良バランスの一台。',
+            price: '336,600',
+            priceTax: '370,260',
+            isRecommended: true,
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'grgo'
+        },
+        {
+            id: 'lc150-panthera-z106-canguard',
+            brand: 'Panthera',
+            grade: 'Z106 ＋ CANガード ＋ トリプル ＋ ボンネット',
+            description: 'パンテーラに独自のCANガードを施工。デジタルとアナログの高度な融合。',
+            price: '374,800',
+            priceTax: '412,280',
+            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'lc150-panthera-z306-canguard',
+            brand: 'Panthera',
+            grade: 'Z306 ＋ CANガード ＋ ボンネット',
+            description: '不動の人気Z306にCANガードをプラス。圧倒的な防犯性能と安心を提供。',
+            price: '396,800',
+            priceTax: '436,480',
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'lc150-panthera-z706-canguard',
+            brand: 'Panthera',
+            grade: 'Z706 Ultimate ＋ CANガード ＋ ボンネット',
+            description: 'ANG最強の組み合わせ。バックアップサイレン、全センサー、物理CAN対策の集大成。',
+            price: '486,800',
+            priceTax: '535,480',
+            isRecommended: true,
+            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: true, ir: true },
+            category: 'パンテーラ'
+        }
+    ];
+
+    // ハリアー（80系）専用設定データ
+    const harrier80Plans = [
+        {
+            id: 'harrier-grgo-zv-smaclo',
+            brand: 'Grgo',
+            grade: 'ZV II ＋ スマクロ ＋ トリプル',
+            description: '信頼のZV IIにスマートキー連動（スマクロ）を追加。利便性を損なわず最新の盗難手口からガード。',
+            price: '293,800',
+            priceTax: '323,180',
+            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'grgo'
+        },
+        {
+            id: 'harrier-grgo-zv-canguard',
+            brand: 'Grgo',
+            grade: 'ZV II ＋ CANガード ＋ スマ連 ＋ トリプル',
+            description: 'ZV IIをベースに、物理的なCANガードを施工。デジタルとアナログの多重防御でハリアーを守ります。',
+            price: '289,800',
+            priceTax: '318,780',
+            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'grgo'
+        },
+        {
+            id: 'harrier-grgo-zvt-smaclo',
+            brand: 'Grgo',
+            grade: 'ZVT II ＋ スマクロ',
+            description: '傾斜センサーを標準装備した最上位Grgo。スマクロ機能で、より今の時代にあったセキュリティーとして選ばれています。',
+            price: '320,800',
+            priceTax: '352,880',
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: true, algorithm: true, canguard: false },
+            category: 'grgo'
+        },
+        {
+            id: 'harrier-grgo-zvt-canguard',
+            brand: 'Grgo',
+            grade: 'ZVT II ＋ CANガード ＋ スマ連',
+            description: 'ZVT IIの高度な検知能力に、物理CANガードを統合。ハリアーの盗難・部品盗を徹底阻止。',
+            price: '316,800',
+            priceTax: '348,480',
+            isRecommended: true,
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: true, algorithm: true, canguard: true },
+            category: 'grgo'
+        },
+        {
+            id: 'harrier-panthera-z106-smaclo',
+            brand: 'Panthera',
+            grade: 'Z106 ＋ スマクロ ＋ トリプル',
+            description: 'パンテーラの緻密なアルゴリズムと、スマクロの利便性を融合。大きな車体のハリアーに最適なパッケージ。',
+            price: '363,800',
+            priceTax: '400,180',
+            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'harrier-panthera-z106-canguard',
+            brand: 'Panthera',
+            grade: 'Z106 ＋ CANガード ＋ トリプル',
+            description: 'Z106をベースに、物理CANガードを追加。あらゆる角度から狙われるハリアーを鉄壁に護ります。',
+            price: '359,800',
+            priceTax: '395,780',
+            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'harrier-panthera-z306-smaclo',
+            brand: 'Panthera',
+            grade: 'Z306 ＋ スマクロ',
+            description: '人気の傾斜センサーを標準装備したZ306。最新のスマクロ機能を加え、最新手口への対策と使い勝手を両立。',
+            price: '390,800',
+            priceTax: '429,880',
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'harrier-panthera-z306-canguard',
+            brand: 'Panthera',
+            grade: 'Z306 ＋ CANガード',
+            description: 'Z306の多機能検知に物理CAN対策をプラス。レッカー盗難もインベーダーも、どちらも妥協なく防ぎます。',
+            price: '386,800',
+            priceTax: '425,480',
+            isRecommended: true,
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'harrier-panthera-z706-smaclo',
+            brand: 'Panthera',
+            grade: 'Z706 ＋ スマクロ',
+            description: 'パンテーラ最高峰。全センサー、バックアップサイレンのフルスペックに、スマクロの最新CAN対策を統合。',
+            price: '480,800',
+            priceTax: '528,880',
+            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: false },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'harrier-panthera-z706-canguard',
+            brand: 'Panthera',
+            grade: 'Z706 ＋ CANガード',
+            description: 'ANG最強のハリアー防衛プラン。フルスペックパンテーラ＋物理CANガードの、正真正銘の鉄壁モデル。',
+            price: '476,800',
+            priceTax: '524,480',
+            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        }
+    ];
+
+    // 40系アルファード・ヴェルファイア専用設定データ
+    const alphardVellfire40Plans = [
+        {
+            id: 'av40-grgo-zv-canguard',
+            brand: 'Grgo',
+            grade: 'ZV II ＋ CANガード ＋ スマ連 ＋ トリプル',
+            description: '物理的なCANガードとスマートキー連動を組み合わせた実戦的パッケージ。アンサーバックで車両状態も手元で把握可能。',
+            price: '270,728',
+            priceTax: '297,800',
+            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'grgo'
+        },
+        {
+            id: 'av40-grgo-zvt-canguard',
+            brand: 'Grgo',
+            grade: 'ZVT II ＋ CANガード ＋ スマ連',
+            description: 'ZVT IIをベースに、物理CAN対策とスマートキー連動を両立。多重のセンサーと物理防御で40系を全方位からガード。',
+            price: '295,273',
+            priceTax: '324,800',
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: true, algorithm: true, canguard: true },
+            category: 'grgo'
+        },
+        {
+            id: 'av40-panthera-z106-canguard',
+            brand: 'Panthera',
+            grade: 'Z106 ＋ CANガード ＋ トリプル',
+            description: 'パンテーラの基本性能に物理CANガードをプラス。デジタルとアナログ両面からエンジンの不正始動を阻止。',
+            price: '315,545',
+            priceTax: '347,100',
+            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'av40-panthera-z306-canguard',
+            brand: 'Panthera',
+            grade: 'Z306 ＋ CANガード',
+            description: 'Z306の多重センサーに物理CAN対策を統合。レッカー盗難もCANインベーダーも、どちらも妥協なく防ぎます。',
+            price: '358,909',
+            priceTax: '394,800',
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'av40-panthera-z706-canguard',
+            brand: 'Panthera',
+            grade: 'Z706 ＋ CANガード',
+            description: 'ANGが提案する究極の40系防衛プラン。フルスペックパンテーラに物理CANガードを添えた、正真正銘の鉄壁。',
+            price: '440,727',
+            priceTax: '484,800',
+            isRecommended: true,
+            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        }
+    ];
+
+    // K-CAR（軽自動車）専用設定データ
+    const kcarPlans = [
+        {
+            id: 'kcar-grgo-1vs',
+            brand: 'Grgo',
+            grade: '純正キーレス連動モデル ＋ ANGプレート',
+            description: '難しい操作は一切不要。純正キーのロック・アンロックに連動して警備を開始する、K-CARオーナーに一番人気のパッケージ。',
+            price: '124,800',
+            priceTax: '137,280',
+            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'grgo'
+        },
+        {
+            id: 'kcar-grgo-5vf',
+            brand: 'Grgo',
+            grade: '5Vf II 標準モデル',
+            description: '薄型1WAYリモコン付属。スマートな見た目と確かな防犯性能を両立したスタンダードモデル。',
+            price: '156,800',
+            priceTax: '172,480',
+            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
+            category: 'grgo'
+        },
+        {
+            id: 'kcar-grgo-zv-led',
+            brand: 'Grgo',
+            grade: 'ZV II ＋ ANGプレート',
+            description: '日本語表示可能なアンサーバックリモコンで操作性抜群。離れた場所からでも異常を感知し、手元のリモコンへ通知。',
+            price: '172,800',
+            priceTax: '190,080',
+            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'grgo'
+        },
+        {
+            id: 'kcar-grgo-zv-smaclo',
+            brand: 'Grgo',
+            grade: 'ZV II ＋ スマクロ ＋ LEDプレート',
+            description: '最新の窃盗手口に対抗するスマクロ機能を搭載。利便性と高度な防犯を両立したいK-CARオーナー様へ。',
+            price: '207,800',
+            priceTax: '228,580',
+            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'grgo'
+        },
+        {
+            id: 'kcar-grgo-zvt',
+            brand: 'Grgo',
+            grade: 'ZVT II 標準モデル',
+            description: '傾斜・トリプルセンサーを同梱。ジャッキアップや車体へのあらゆる衝撃を逃さず検知する、Grgo最上位構成。',
+            price: '219,800',
+            priceTax: '241,780',
+            isRecommended: true,
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: true, algorithm: true, canguard: false },
+            category: 'grgo'
+        },
+        {
+            id: 'kcar-grgo-zvt-smaclo',
+            brand: 'Grgo',
+            grade: 'ZVT II ＋ スマクロ ＋ ボンネット',
+            description: 'フルスペックGrgoにスマクロとボンネットセンサーを追加。強引な侵入やバッテリー切断も防ぐ、K-CAR最強のデジタル対策。',
+            price: '264,600',
+            priceTax: '291,060',
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: true, algorithm: true, canguard: false },
+            category: 'grgo'
+        },
+        {
+            id: 'kcar-panthera-z106-smaclo',
+            brand: 'Panthera',
+            grade: 'Panthera Z106 ＋ スマクロ',
+            description: 'パンテーラの緻密な警備。スマクロ対応により、純正キーの快適さを維持しながらハイエンドブランドの安心を。',
+            price: '293,800',
+            priceTax: '323,180',
+            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'kcar-panthera-z306-smaclo',
+            brand: 'Panthera',
+            grade: 'Panthera Z306 ＋ スマクロ',
+            description: '人気センサーを網羅したZ306にスマクロを追加。ホイール盗難からイタズラまで、全方位で車両を監視。',
+            price: '315,800',
+            priceTax: '347,380',
+            isRecommended: true,
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'kcar-panthera-z706-smaclo',
+            brand: 'Panthera',
+            grade: 'Panthera Z706 ＋ スマクロ',
+            description: '全センサー解放。マイクロ波による接近検知やバックアップサイレンまで備えた、K-CARの防犯を極めるための頂点プラン。',
+            price: '395,800',
+            priceTax: '435,380',
+            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: false },
+            category: 'パンテーラ'
+        }
+    ];
+
+    // ジムニー（JB64/JB74/JC74）専用設定データ
+    const jimnyPlans = [
+        {
+            id: 'jimny-grgo-sm连',
+            brand: 'Grgo',
+            grade: 'スマートキー連動モデル',
+            description: '操作性に優れたスマートキー連動モデル。純正キーの施錠・解錠に連動して警備を開始でき、初めての方でも安心。',
+            price: '142,800',
+            priceTax: '157,080',
+            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'grgo'
+        },
+        {
+            id: 'jimny-grgo-1way',
+            brand: 'Grgo',
+            grade: '1WAYリモコン付属モデル',
+            description: '薄型1WAYリモコンが付属。状況に応じた設定変更がしやすく、サブのリモコンとしても重宝します。',
+            price: '180,800',
+            priceTax: '198,880',
+            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
+            category: 'grgo'
+        },
+        {
+            id: 'jimny-grgo-2way',
+            brand: 'Grgo',
+            grade: 'アンサーバックリモコン搭載モデル',
+            description: '2WAYアンサーバックリモコンにより、離れた場所からでも車両の異常をリアルタイムで把握可能。',
+            price: '198,800',
+            priceTax: '218,680',
+            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'grgo'
+        },
+        {
+            id: 'jimny-grgo-zvt',
+            brand: 'Grgo',
+            grade: 'Grgo-ZVT II',
+            description: '傾斜センサーとトリプルセンサーを標準装備。ジャッキアップや車体への衝撃を確実にキャッチする上位モデル。',
+            price: '248,800',
+            priceTax: '273,680',
+            isRecommended: true,
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: true, algorithm: true, canguard: false },
+            category: 'grgo'
+        },
+        {
+            id: 'jimny-panthera-z106',
+            brand: 'Panthera',
+            grade: 'Panthera-Z106',
+            description: 'パンテーラの高精度な検知能力をジムニーに。将来的なセンサー追加にも柔軟に対応できるベースモデル。',
+            price: '268,800',
+            priceTax: '295,680',
+            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'jimny-panthera-z306',
+            brand: 'Panthera',
+            grade: 'Panthera-Z306',
+            description: 'トリプルセンサーと傾斜センサーが同梱。ジムニーの人気カスタムパーツであるタイヤ・ホイールも死角なくガード。',
+            price: '318,800',
+            priceTax: '350,680',
+            isRecommended: true,
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'jimny-panthera-z706',
+            brand: 'Panthera',
+            grade: 'Panthera-Z706',
+            description: 'すべてのセンサーを網羅した最高峰フルスペックモデル。ジムニーを愛するオーナー様のための究極の守り。',
+            price: '408,800',
+            priceTax: '449,680',
+            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: false },
+            category: 'パンテーラ'
+        }
+    ];
+
+    // シビックTYPE-R（FL5）専用設定データ
+    const civicFL5Plans = [
+        {
+            id: 'fl5-grgo-zvt',
+            brand: 'Grgo',
+            grade: 'ZVT II 標準モデル',
+            description: 'ジャッキアップを警告する傾斜センサーやトリプルセンサーを含む、スポーツカーに必須の検知能力を備えたモデル。',
+            price: '268,800',
+            priceTax: '295,680',
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: true, algorithm: true, canguard: false },
+            category: 'grgo'
+        },
+        {
+            id: 'fl5-grgo-zvt-full',
+            brand: 'Grgo',
+            grade: 'ZVT II ＋ スマート連動 ＋ CANガード',
+            description: '最上位ZVT IIにスマートキー連動と物理CANガードを追加。利便性と鉄壁の防犯性能を両立した推奨パッケージ。',
+            price: '309,800',
+            priceTax: '340,780',
+            isRecommended: true,
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: true, algorithm: true, canguard: true },
+            category: 'grgo'
+        },
+        {
+            id: 'fl5-panthera-z106',
+            brand: 'Panthera',
+            grade: 'Z106 ベーシックモデル',
+            description: 'パンテーラの緻密な警備アルゴリズム。ベースモデルながらスポーツカーの盗難リスクを大幅に低減。',
+            price: '288,800',
+            priceTax: '317,680',
+            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'fl5-panthera-z106-full',
+            brand: 'Panthera',
+            grade: 'Z106 ＋ スマート連動 ＋ CANガード',
+            description: 'Z106に最新のCANインベーダー対策を統合。物理的な盾を設けることで、不正なエンジン始動を阻止。',
+            price: '329,800',
+            priceTax: '362,780',
+            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'fl5-panthera-z306',
+            brand: 'Panthera',
+            grade: 'Z306 人気センサー同梱モデル',
+            description: '傾斜センサーとトリプルセンサーを標準装備。あらゆる角度からの侵入・いたずら・移動を即座に検知。',
+            price: '338,800',
+            priceTax: '372,680',
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'fl5-panthera-z306-full',
+            brand: 'Panthera',
+            grade: 'Z306 ＋ スマート連動 ＋ CANガード',
+            description: '充実のセンサー構成に多重の盗難防止策を上乗せ。FL5オーナーに一番支持される、隙のない最強構成。',
+            price: '379,800',
+            priceTax: '417,780',
+            isRecommended: true,
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'fl5-panthera-z706',
+            brand: 'Panthera',
+            grade: 'Z706 フラッグシップモデル',
+            description: '全センサーを搭載したパンテーラ最高峰。マイクロ波による接近検知やバックアップサイレンを備えた頂点の守り。',
+            price: '428,000',
+            priceTax: '470,800',
+            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: false },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'fl5-panthera-z706-full',
+            brand: 'Panthera',
+            grade: 'Z706 ＋ スマート連動 ＋ CANガード',
+            description: 'ANGのノウハウを全て投入。フルスペックパンテーラに物理CAN対策を加えた、TYPE-Rを守り抜くための最終結論。',
+            price: '469,800',
+            priceTax: '516,780',
+            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        }
+    ];
+
+    // プリウス（60系）専用設定データ
+    const prius60Plans = [
+        {
+            id: 'prius-grgo-keyless',
+            brand: 'Grgo',
+            grade: '純正キーレス連動モデル ＋ ANGプレート',
+            description: 'スマートキーに完全連動。リモコンを追加せず、純正の使い勝手そのままに警備を開始できるベーシックセット。',
+            price: '191,055',
+            priceTax: '210,160',
+            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'grgo'
+        },
+        {
+            id: 'prius-grgo-5vf',
+            brand: 'Grgo',
+            grade: '5Vf II ＋ LEDプレート',
+            description: '薄型1WAYリモコンモデル。オプション追加でスマートキー連動も可能（別途費用）。スマートな運用を求める方に。',
+            price: '205,600',
+            priceTax: '226,160',
+            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
+            category: 'grgo'
+        },
+        {
+            id: 'prius-grgo-zv-smaclo',
+            brand: 'Grgo',
+            grade: 'ZV II ＋ スマクロ ＋ LEDプレート',
+            description: 'ZV IIにスマクロ機能を追加。CANインベーダーやリレーアタックに対抗する最新のデジタルセキュリティ。',
+            price: '258,600',
+            priceTax: '284,460',
+            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'grgo'
+        },
+        {
+            id: 'prius-grgo-zv-canguard',
+            brand: 'Grgo',
+            grade: 'ZV II ＋ CANガード ＋ スマ連',
+            description: '物理的なCANガードを組み合わせた、より強固なパッケージ。デジタル・アナログ両面でプリウスを守ります。',
+            price: '254,800',
+            priceTax: '280,280',
+            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'grgo'
+        },
+        {
+            id: 'prius-grgo-zvt-smaclo',
+            brand: 'Grgo',
+            grade: 'ZVT II ＋ スマクロ',
+            description: '傾斜・トリプルセンサーを同梱した最上位Grgo。ジャッキアップやホイール盗難も逃さず検知。',
+            price: '308,600',
+            priceTax: '339,460',
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: true, algorithm: true, canguard: false },
+            category: 'grgo'
+        },
+        {
+            id: 'prius-grgo-zvt-canguard',
+            brand: 'Grgo',
+            grade: 'ZVT II ＋ CANガード ＋ スマ連',
+            description: 'ZVT IIの高度な検知に、物理CANガードを統合。プリウスに求められる全ての防犯性能を凝縮。',
+            price: '304,800',
+            priceTax: '335,280',
+            isRecommended: true,
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: true, algorithm: true, canguard: true },
+            category: 'grgo'
+        },
+        {
+            id: 'prius-panthera-z106',
+            brand: 'Panthera',
+            grade: 'Z106 ＋ LEDプレート',
+            description: 'パンテーラの緻密な感度調整がプリウスに。パンテーラリモコンによるドアロック開閉で高い防犯性を発揮。',
+            price: '293,600',
+            priceTax: '322,960',
+            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'prius-panthera-z106-smaclo',
+            brand: 'Panthera',
+            grade: 'Z106 ＋ スマクロ',
+            description: 'Z106にスマクロ機能を追加。スマートキーの利便性を保ちつつ、パンテーラの鉄壁なバリアを実現。',
+            price: '328,600',
+            priceTax: '361,460',
+            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'prius-panthera-z106-canguard',
+            brand: 'Panthera',
+            grade: 'Z106 ＋ CANガード',
+            description: '最高品質のパンテーラに、ANG独自の物理CANガードを施工。二重の盾でエンジンの不正始動を阻止。',
+            price: '324,800',
+            priceTax: '357,280',
+            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'prius-panthera-z306-smaclo',
+            brand: 'Panthera',
+            grade: 'Z306 ＋ スマクロ',
+            description: '全センサーを搭載した人気モデルにスマクロを追加。ホイール盗難からインベーダーまで完全網羅。',
+            price: '378,600',
+            priceTax: '416,460',
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'prius-panthera-z306-canguard',
+            brand: 'Panthera',
+            grade: 'Z306 ＋ CANガード',
+            description: '多重センサー警備のZ306に、物理CAN対策をプラス。プリウスオーナーに一番支持される最強の一台。',
+            price: '374,800',
+            priceTax: '412,280',
+            isRecommended: true,
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'prius-panthera-z706-canguard',
+            brand: 'Panthera',
+            grade: 'Z706 ＋ CANガード',
+            description: 'パンテーラ最高峰。全機能と全センサーを解放し、物理的なデジタル対策も完備した頂点モデル。',
+            price: '464,800',
+            priceTax: '511,280',
+            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        }
+    ];
+
+    // ハイエース（200系・スマートキー搭載車）専用設定データ
+    const hiacePlans = [
+        {
+            id: 'hiace-grgo-5vf',
+            brand: 'Grgo',
+            grade: '5Vf II ＋ トリプル ＋ ミラー連動',
+            description: '薄型1WAYリモコンでスマートに運用。トリプルセンサーで感度を高め、ミラー連動で利便性も向上。',
+            price: '191,000',
+            priceTax: '210,100',
+            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
+            category: 'grgo'
+        },
+        {
+            id: 'hiace-grgo-zv',
+            brand: 'Grgo',
+            grade: 'ZV II ＋ トリプル ＋ ミラー連動',
+            description: 'リモコンでドアロックと警備を同時操作し、高い防犯効果を実現。実用的なミラー連動も標準装備。',
+            price: '223,800',
+            priceTax: '246,180',
+            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'grgo'
+        },
+        {
+            id: 'hiace-grgo-zv-smaclo',
+            brand: 'Grgo',
+            grade: 'ZV II ＋ スマクロ ＋ トリプル ＋ ミラー連動',
+            description: '最新の窃盗手口に対抗するスマクロ機能を搭載。アンサーバックで車両状態も手元で把握可能。',
+            price: '246,800',
+            priceTax: '271,480',
+            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'grgo'
+        },
+        {
+            id: 'hiace-grgo-zvt',
+            brand: 'Grgo',
+            grade: 'ZVT II ＋ ミラー連動',
+            description: '傾斜・トリプルセンサーを同梱した上位モデル。ハイエースのレッカー盗難も確実に検知。',
+            price: '250,800',
+            priceTax: '275,880',
+            isRecommended: true,
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: true, algorithm: true, canguard: false },
+            category: 'grgo'
+        },
+        {
+            id: 'hiace-grgo-zvt-smaclo',
+            brand: 'Grgo',
+            grade: 'ZVT II ＋ スマクロ ＋ ミラー連動',
+            description: '最高位Grgoにスマクロを追加。利便性と鉄壁の防犯、さらにミラー連動の快適性を一台に。',
+            price: '293,800',
+            priceTax: '323,180',
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: true, algorithm: true, canguard: false },
+            category: 'grgo'
+        },
+        {
+            id: 'hiace-panthera-z106',
+            brand: 'Panthera',
+            grade: 'Z106 ＋ トリプル ＋ ミラー連動',
+            description: 'パンテーラの緻密な警備。ドアロック開閉をパンテーラリモコンで行うことで防犯性能を最大化。',
+            price: '293,800',
+            priceTax: '323,180',
+            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'hiace-panthera-z106-smaclo',
+            brand: 'Panthera',
+            grade: 'Z106 ＋ スマクロ ＋ トリプル ＋ ミラー連動',
+            description: 'Z106にスマクロを追加。純正スマートキーを使いながら、パンテーラの鉄壁バリアを構築。',
+            price: '316,800',
+            priceTax: '348,480',
+            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'hiace-panthera-z306',
+            brand: 'Panthera',
+            grade: 'Z306 ＋ ミラー連動',
+            description: '全センサー標準装備。ハイエースオーナーに最も支持される、高性能とお買得感を両立したプラン。',
+            price: '320,800',
+            priceTax: '352,880',
+            isRecommended: true,
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'hiace-panthera-z306-smaclo',
+            brand: 'Panthera',
+            grade: 'Z306 ＋ スマクロ ＋ ミラー連動',
+            description: 'Z306の多機能検知にスマクロの便利さをプラス。最新のインベーダー対策も網羅したハイエンドプラン。',
+            price: '343,800',
+            priceTax: '378,180',
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'パンテーラ'
+        }
+    ];
+
+    // クラウン各種（スポーツ・クロスオーバー・セダン・エステート）専用設定データ
+    const crownPlans = [
+        {
+            id: 'crown-grgo-zv',
+            brand: 'Grgo',
+            grade: 'ZV II ＋ スマート連動 ＋ CANガード ＋ ボンネット',
+            description: '最新のクラウンシリーズに最適。物理CANガードとスマートキー連動を組み合わせ、利便性と防犯を両立。',
+            price: '314,600',
+            priceTax: '346,060',
+            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'grgo'
+        },
+        {
+            id: 'crown-grgo-zvt',
+            brand: 'Grgo',
+            grade: 'ZVT II ＋ スマート連動 ＋ CANガード ＋ ボンネット',
+            description: '傾斜センサーと1WAYリモコンを標準装備。ジャッキアップやレッカー移動にも対応する多重防御プラン。',
+            price: '336,600',
+            priceTax: '370,260',
+            isRecommended: true,
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'grgo'
+        },
+        {
+            id: 'crown-panthera-z106-canguard',
+            brand: 'Panthera',
+            grade: 'Z106 ＋ スマート連動 ＋ CANガード ＋ トリプル',
+            description: '最高品質パンテーラをクラウンに施工。CANインベーダー対策とトリプルセンサーで予兆を確実に検知。',
+            price: '374,800',
+            priceTax: '412,280',
+            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'crown-panthera-z106-microwave',
+            brand: 'Panthera',
+            grade: 'Z106 ＋ CANガード ＋ トリプル ＋ マイクロ波',
+            description: 'Z106に覗き込み対策のマイクロ波センサーを追加。不審なうろつきを未然に威嚇、排除します。',
+            price: '426,800',
+            priceTax: '469,480',
+            features: { triple: true, tilt: false, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'crown-panthera-z306-canguard',
+            brand: 'Panthera',
+            grade: 'Z306 ＋ スマート連動 ＋ CANガード',
+            description: '傾斜センサー標準装備の人気モデル。クラウンのあらゆる弱点を補い、誤作動を排した高度な警備を実現。',
+            price: '396,800',
+            priceTax: '436,480',
+            isRecommended: true,
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'crown-panthera-z306-microwave',
+            brand: 'Panthera',
+            grade: 'Z306 ＋ CANガード ＋ マイクロ波',
+            description: 'センサー満載のフルガードパッケージ。うろつき検知を追加し、高級車クラウンを全方位から監視。',
+            price: '448,800',
+            priceTax: '493,680',
+            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'crown-panthera-z706-canguard',
+            brand: 'Panthera',
+            grade: 'Z706 ＋ スマート連動 ＋ CANガード',
+            description: '全センサー＋バックアップサイレン仕様のパンテーラ最上位。クラウンを守り抜く究極の回答。',
+            price: '486,800',
+            priceTax: '535,480',
+            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        }
+    ];
+
     // ランドクルーザー300専用設定データ
     const landcruiser300Plans = [
         {
@@ -641,6 +1486,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
     ];
 
     const vehicleConfigs: Record<string, any> = {
+
         'lexus-gx550': {
             name: 'LEXUS GX550',
             year: '2024-',
@@ -676,6 +1522,27 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '「高級車の概念を変える」コンパクトSUV。小型車ながら狙われやすいため、確実なデジタル対策が必要です。',
             plans: lbxPlans
         },
+        'suzuki-jimny': {
+            name: 'Jimny / Sierra / Nomad',
+            year: 'JB64 / JB74 / JC74',
+            image: '/images/Security/vehicle/jimny.webp',
+            description: '絶大な人気を誇るジムニーシリーズ。車上荒らしや盗難のリスクが高いため、GrgoやPantheraによる確実なガードを推奨します。',
+            plans: jimnyPlans
+        },
+        'honda-civic-typer': {
+            name: 'Civic TYPE-R (FL5)',
+            year: '2022-',
+            image: '/images/Security/vehicle/fl5.webp',
+            description: '究極のFFスポーツ性能を誇るFL5。国内外での人気の高さから常に盗難の危険と隣り合わせです。最新のCANインベーダー対策を含めた、実戦的な多重防御をご提案します。',
+            plans: civicFL5Plans
+        },
+        'toyota-alphard-vellfire': {
+            name: 'Alphard / Vellfire (40)',
+            year: '2023-',
+            image: '/images/Security/vehicle/al,vel.webp',
+            description: '最新の40系。CANインベーダーや最新手口に対し、スマートキー連動や物理CANガードを組み合わせた鉄壁の布陣をご提案します。',
+            plans: alphardVellfire40Plans
+        },
         'toyota-landcruiser-250': {
             name: 'Land Cruiser 250',
             year: '2024-',
@@ -697,84 +1564,67 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '世界的に需要が高く、最も警戒が必要な一台。CANインベーダー、リレーアタック、指紋認証回避など、あらゆる手口を想定した最強の布陣を推奨します。',
             plans: landcruiser300Plans
         },
+        'toyota-harrier': {
+            name: 'Harrier (80)',
+            year: '2020-',
+            image: '/images/Security/vehicle/80harrier.webp',
+            description: '高い人気を誇るSUV。最新の盗難手口に対し、スマクロ機能や物理CANガードを組み合わせた、都市部でも安心のセキュリティをご提供します。',
+            plans: harrier80Plans
+        },
+        'toyota-hiace': {
+            name: 'Hiace',
+            year: '200系',
+            image: '/images/Security/vehicle/hiace.webp',
+            description: '仕事からレジャーまで幅広く活躍するハイエース。狙われやすい車種だからこそ、センサー感度の追求と利便性を両立した専用プランをご用意しました。',
+            plans: hiacePlans
+        },
+        'toyota-prius': {
+            name: 'Prius (60)',
+            year: '2023-',
+            image: '/images/Security/vehicle/prius.webp',
+            description: '洗練されたデザインと高い防犯性能の両立。最新の60系プリウスに対し、CANガードやパンテーラを組み合わせた、都市部でも安心のパッケージをご提案します。',
+            plans: prius60Plans
+        },
         'lexus-lm': {
             name: 'LEXUS LM',
             year: '2023-',
             image: '/images/Security/vehicle/lx.webp',
             description: '究極の移動空間。その価値に見合う、隙のないセキュリティ構築をご提案します。'
+        },
+        'toyota-crown': {
+            name: 'Crown',
+            year: 'Current Models',
+            image: '/images/Security/vehicle/crown.webp',
+            description: 'スポーツ、クロスオーバー、セダン、エステート。最新のクラウンシリーズに対し、CANガードやパンテーラを組み合わせた、オーナー様のライフスタイルに合わせた最適な防犯対策をご提案します。',
+            plans: crownPlans
+        },
+        'toyota-landcruiser-prado-150-200': {
+            name: 'Land Cruiser Prado',
+            year: '2009-2023',
+            image: '/images/Security/vehicle/prado.webp',
+            description: 'スマートキー連動による最新の窃盗対策や、物理的なCANガードなど、年式に応じた最適な対策をご提案します。',
+            plans: landcruiser150Plans
+        },
+        'kcar-special': {
+            name: 'K-CAR Dedicated Security',
+            year: 'Standard Models',
+            image: '/images/Security/vehicle/k-car.webp',
+            description: '軽自動車だからこそ、センサー感度の追求と利便性を両立。車上荒らしやイタズラから愛車を守る、K-CAR専用の最適パッケージをご提案します。',
+            plans: kcarPlans
+        },
+        'special-model': {
+            name: 'Other Models / Custom',
+            year: 'Consulting Service',
+            image: '/images/security.jpg',
+            description: '輸入車、旧車、希少車、そしてキャンピングカーまで。リストにない車種でも、ANGの確かな技術力で最適な防犯プランをご提案します。オーナー様の不安に寄り添い、一台一台時間をかけて解析・施工いたします。',
+            plans: basePlans
         }
     };
+
 
     // 現在の車種設定を取得（見つからない場合はGX550をデフォルトに）
     const currentVehicle = vehicleConfigs[modelId || 'lexus-gx550'] || vehicleConfigs['lexus-gx550'];
 
-    const basePlans = [
-        {
-            id: 1,
-            brand: 'Grgo',
-            grade: 'ZVT II',
-            price: '336,600',
-            priceTax: '370,260',
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
-            category: 'grgo'
-        },
-        {
-            id: 2,
-            brand: 'Grgo',
-            grade: 'ZVT II + マイクロ波',
-            isRecommended: true,
-            price: '388,600',
-            priceTax: '427,460',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
-            category: 'grgo'
-        },
-        {
-            id: 3,
-            brand: 'Panthera',
-            grade: 'Z106',
-            price: '374,800',
-            priceTax: '412,280',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
-            category: 'パンテーラ'
-        },
-        {
-            id: 4,
-            brand: 'Panthera',
-            grade: 'Z106 + マイクロ波',
-            price: '426,800',
-            priceTax: '469,480',
-            features: { triple: true, tilt: false, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
-            category: 'パンテーラ'
-        },
-        {
-            id: 5,
-            brand: 'Panthera',
-            grade: 'Z306',
-            price: '396,800',
-            priceTax: '436,480',
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
-            category: 'パンテーラ'
-        },
-        {
-            id: 6,
-            brand: 'Panthera',
-            grade: 'Z306 + マイクロ波',
-            isRecommended: true,
-            price: '448,800',
-            priceTax: '493,680',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
-            category: 'パンテーラ'
-        },
-        {
-            id: 7,
-            brand: 'Panthera',
-            grade: 'Z706',
-            price: '486,800',
-            priceTax: '535,480',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: true, ir: true },
-            category: 'パンテーラ'
-        }
-    ];
 
     const activePlans = currentVehicle.plans || basePlans;
     const filteredPlans = activePlans.filter(p => {
@@ -794,6 +1644,10 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             }
         }
     }, [currentVehicle]);
+
+    // アナログキー（非スマートキー）車両かどうかの判定
+    const isAnalogKey = modelId === 'toyota-landcruiser-70';
+    const isSpecialModel = modelId === 'special-model';
 
     return (
         <div className="min-h-screen bg-neutral-50 font-sans pb-32">
@@ -835,489 +1689,394 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                     </div>
                 </div>
 
-                <div className="flex flex-wrap gap-3 mb-10">
-                    {[
-                        { id: 'all', label: 'すべて' },
-                        { id: 'grgo', label: 'GRGO' },
-                        { id: 'パンテーラ', label: 'パンテーラ' },
-                        { id: 'microwave', label: 'マイクロ波あり' }
-                    ].map(t => (
-                        <button
-                            key={t.id}
-                            onClick={() => setFilter(t.id)}
-                            className={`px-8 py-3 rounded-2xl text-sm font-bold transition-all border-2 ${filter === t.id ? 'bg-white border-gray-100 text-gray-900 shadow-xl' : 'bg-transparent border-gray-200/50 text-gray-400 hover:border-gray-300'}`}
-                        >
-                            {t.label}
-                        </button>
-                    ))}
-                </div>
+                {/* Main Content Area: Conditional Rendering */}
+                {isSpecialModel ? (
+                    <div className="flex flex-col gap-12">
+                        {/* Custom Consultation Section */}
+                        <div className="bg-white rounded-[3rem] p-8 md:p-16 shadow-2xl border border-emerald-100 relative overflow-hidden">
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-50 opacity-40 rounded-full -mr-32 -mt-32 blur-3xl" />
 
-                {/* Unified Premium Info Card - Platinum Emerald Re-design */}
-                <div className="mb-10 bg-gradient-to-br from-[#f8fafc] to-[#f1f5f9] rounded-[2rem] p-8 md:p-12 text-slate-900 relative overflow-hidden shadow-2xl border border-emerald-200/40">
-                    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-500/[0.03] rounded-full -mr-64 -mt-64 blur-3xl" />
-
-                    <div className="flex flex-col gap-10 relative z-10">
-                        {/* Top: CAN Guard (The USP) */}
-                        <div className="flex flex-col">
-                            <div className="flex items-center gap-4 mb-5">
-                                <div className="p-2.5 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-xl shadow-lg shadow-emerald-500/30 text-white">
-                                    <ShieldCheck className="w-7 h-7" />
-                                </div>
-                                <div>
-                                    <h3 className="text-xl md:text-2xl font-black tracking-tight italic uppercase text-slate-800 leading-none">
-                                        ANG Original Package <span className="text-emerald-600 font-black ml-1">CANガード</span>
-                                    </h3>
-                                    <div className="h-1 w-20 bg-emerald-500/20 mt-2 rounded-full" />
-                                </div>
-                            </div>
-                            <p className="text-base md:text-lg text-slate-600 font-bold leading-relaxed mb-6 italic tracking-tight">
-                                豊富な施工経験から最新の盗難手口に対応させた独自プラン。
-                                <span className="text-slate-900 block md:inline font-black ml-0 md:ml-1 underline decoration-emerald-300 decoration-4 underline-offset-4">
-                                    スマートキーの利便性はそのままに、鉄壁の守りを提供します。
-                                </span>
-                            </p>
-                            <div className="flex flex-wrap gap-2 mb-8">
-                                {['Anti-リレーアタック', 'Anti-CANインベーダー', 'Anti-コードグラバー'].map((threat) => (
-                                    <span key={threat} className="px-4 py-1.5 bg-white rounded-lg text-[10px] font-black tracking-[0.2em] text-emerald-700 uppercase border border-emerald-100 shadow-sm">
-                                        {threat}
-                                    </span>
-                                ))}
-                            </div>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                                <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-5 border border-white shadow-sm hover:shadow-md transition-shadow">
-                                    <div className="flex items-center gap-2 mb-2">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                                        <div className="text-slate-800 text-xs font-black tracking-widest uppercase">Digital Immobilize</div>
+                            <div className="max-w-4xl mx-auto relative z-10">
+                                <div className="text-center mb-16">
+                                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 rounded-full text-emerald-700 text-xs font-black tracking-widest uppercase mb-6 italic">
+                                        <MessageSquare className="w-4 h-4" /> Customized Consulting
                                     </div>
-                                    <div className="text-[12px] text-slate-500 font-bold leading-relaxed ml-3.5">不正信号によるエンジン始動をデジタル的に徹底ブロック。</div>
+                                    <h2 className="text-3xl md:text-5xl font-black italic tracking-tighter text-slate-900 mb-6 uppercase">
+                                        リストにない車種こそ、<br className="md:hidden" />
+                                        <span className="text-emerald-600">対話から始まる防犯</span>を。
+                                    </h2>
+                                    <p className="text-slate-500 font-bold leading-relaxed max-w-2xl mx-auto">
+                                        輸入車、旧車、そして最新の電気自動車まで。構造が複雑な車両や、前例の少ないお車ほど、画一的なプランではなく、一台一台の状態に合わせた緻密な設計が必要です。
+                                    </p>
                                 </div>
-                                <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-5 border border-white shadow-sm hover:shadow-md transition-shadow">
-                                    <div className="flex items-center gap-2 mb-2">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                                        <div className="text-slate-800 text-xs font-black tracking-widest uppercase">Seamless Operation</div>
-                                    </div>
-                                    <div className="text-[12px] text-slate-500 font-bold leading-relaxed ml-3.5">純正キー操作のみで全システムが連動。</div>
-                                </div>
-                            </div>
-                        </div>
 
-                        {/* Bottom: Common Equipment (Standard) */}
-                        <div className="bg-slate-900/5 rounded-3xl p-8 border border-slate-900/5">
-                            <div className="flex flex-col lg:flex-row lg:items-center gap-6">
-                                <div className="lg:border-r lg:border-slate-200 lg:pr-8 min-w-[max-content]">
-                                    <h4 className="text-emerald-700 text-[11px] font-black flex items-center gap-2 tracking-widest uppercase italic mb-1">
-                                        <Zap className="w-3.5 h-3.5 fill-emerald-500" /> Standard Equipment
-                                    </h4>
-                                    <div className="text-[10px] text-slate-400 font-bold uppercase tracking-tighter italic">全プラン共通 標準装備</div>
-                                </div>
-                                <div className="flex flex-wrap gap-x-6 gap-y-3">
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                                     {[
-                                        'ショックセンサ', 'ドアセンサ', 'トランクセンサ', 'イモビライザ', 'オリジナルLEDプレート',
-                                        'ステータスインジケーター', '2WAYアンサーバックリモコン', '暗証番号式バレースイッチ', 'ハイパワーサイレン', 'ハザードフラッシュ機能'
-                                    ].map((item, i) => (
-                                        <div key={i} className="flex items-center gap-2">
-                                            <div className="w-1.5 h-1.5 rounded-full bg-white border-2 border-emerald-400 shadow-sm shrink-0" />
-                                            <span className="text-[10px] md:text-xs font-black text-slate-600 tracking-tight leading-tight">{item}</span>
+                                        {
+                                            step: '01',
+                                            title: 'Hearing',
+                                            text: 'お客様の駐車環境、使用頻度、過去の不安な経験を細かくお伺いします。',
+                                            icon: ShieldCheck
+                                        },
+                                        {
+                                            step: '02',
+                                            title: 'Diagnosis',
+                                            text: '実際にお車を確認し、構造や電気系統、既存のシステムをプロの目で解析します。',
+                                            icon: Zap
+                                        },
+                                        {
+                                            step: '03',
+                                            title: 'Design',
+                                            text: '世界に一台、そのお車とお客様のためだけの最強防犯パッケージを設計します。',
+                                            icon: ShieldAlert
+                                        }
+                                    ].map((item, idx) => (
+                                        <div key={idx} className="relative group">
+                                            <div className="bg-neutral-50 rounded-3xl p-8 border border-neutral-100 transition-all duration-500 hover:bg-white hover:shadow-xl hover:-translate-y-1">
+                                                <div className="text-[40px] font-black text-emerald-500/20 italic absolute top-4 right-6 leading-none">{item.step}</div>
+                                                <item.icon className="w-10 h-10 text-emerald-600 mb-6 group-hover:scale-110 transition-transform" />
+                                                <h4 className="text-lg font-black italic text-slate-800 mb-3 uppercase tracking-tighter">{item.title}</h4>
+                                                <p className="text-xs text-slate-500 font-medium leading-loose">{item.text}</p>
+                                            </div>
+                                            {idx < 2 && (
+                                                <div className="hidden md:block absolute top-1/2 -right-4 translate-y-[-50%] z-20">
+                                                    <ChevronRight className="w-8 h-8 text-emerald-200" />
+                                                </div>
+                                            )}
                                         </div>
                                     ))}
+                                </div>
+
+                                <div className="bg-[#0b1210] rounded-[2.5rem] p-10 text-center relative overflow-hidden group">
+                                    <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                                    <h3 className="text-white text-xl md:text-2xl font-black italic mb-2 tracking-tight">まずは、愛車とお越しください。</h3>
+                                    <p className="text-emerald-400/80 text-sm font-bold mb-10 italic">私たちは、お車に触れることから「本当の守り」を始めます。</p>
+
+                                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                                        <button
+                                            onClick={() => navigate('/contact')}
+                                            className="w-full sm:w-auto px-10 py-5 bg-emerald-500 hover:bg-emerald-400 text-white font-black italic rounded-2xl transition-all shadow-lg shadow-emerald-500/20 active:scale-95"
+                                        >
+                                            無料個別相談を予約する
+                                        </button>
+                                        <button
+                                            onClick={() => navigate('/access')}
+                                            className="w-full sm:w-auto px-10 py-5 bg-white/10 hover:bg-white/20 text-white font-black italic rounded-2xl transition-all border border-white/20"
+                                        >
+                                            店舗案内はこちら
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div className="bg-white md:bg-transparent rounded-[2rem] md:rounded-none shadow-2xl md:shadow-none overflow-hidden border border-gray-100 md:border-none mb-6 px-6 md:px-0">
-                    <p className="mb-4 text-[11px] md:text-xs text-emerald-600 font-bold italic text-left md:text-right leading-relaxed">
-                        ※表にチェックが入っていないセンサー類も、オプションとして追加取り付けが可能です。お気軽にご相談ください。
-                    </p>
-                    {/* Mobile View: Card Stack */}
-                    <div className="md:hidden divide-y divide-gray-100">
-                        {filteredPlans.map((plan) => (
-                            <div
-                                key={plan.id}
-                                className={`p-6 ${plan.isRecommended ? 'bg-emerald-50/30' : ''}`}
-                            >
-                                <div className="flex justify-between items-start mb-4">
-                                    <div>
-                                        <div className="flex items-center gap-2 mb-1">
-                                            <span className="text-xs font-black text-emerald-500 uppercase tracking-widest">{plan.brand}</span>
-                                            {plan.isRecommended && (
-                                                <span className="bg-emerald-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full">おすすめ</span>
-                                            )}
-                                        </div>
-                                        <h3 className="text-xl font-black text-gray-900 tracking-tight leading-tight">{plan.grade}</h3>
-                                        {(plan as any).description && (
-                                            <p className="mt-2 text-[10px] text-gray-500 font-medium leading-relaxed italic border-l-2 border-emerald-500/20 pl-2">
-                                                {(plan as any).description}
-                                            </p>
-                                        )}
-                                    </div>
-                                    <div className="text-right">
-                                        <div className="text-xl font-black tracking-tighter text-gray-900">¥{plan.price}</div>
-                                        <div className="text-xs font-bold text-gray-400">(税込¥{plan.priceTax})</div>
-                                    </div>
-                                </div>
-
-                                <div className="grid grid-cols-4 gap-2 mb-6">
-                                    {[
-                                        { label: 'トリプル', val: plan.features.triple },
-                                        { label: '傾斜', val: plan.features.tilt },
-                                        { label: 'マイクロ波', val: plan.features.microwave },
-                                        { label: 'ボンネット', val: plan.features.bonnet },
-                                        { key: 'siren', label: 'サイレン', val: plan.features.siren },
-                                        { label: 'スマートキー連動', val: plan.features.algorithm },
-                                        { label: 'CANガード', val: plan.features.canguard },
-                                        { label: 'ドラレコ連動', val: true },
-                                        { label: 'IR', val: plan.features.ir },
-                                        { label: '1WAYリモコン', val: plan.grade.includes('ZVT') || plan.brand === 'Panthera' }
-                                    ].map((f, i) => (
-                                        <div key={i} className={`flex flex-col items-center p-3 rounded-xl border ${f.val ? 'bg-white border-emerald-100 shadow-sm' : 'bg-gray-50/50 border-gray-100 opacity-30'}`}>
-                                            {f.val ? (
-                                                <div className="w-5 h-5 bg-emerald-500 rounded-full flex items-center justify-center text-white mb-1 shadow-sm">
-                                                    <Check className="w-3.5 h-3.5 stroke-[4]" />
-                                                </div>
-                                            ) : (
-                                                <div className="w-5 h-5 mb-1" />
-                                            )}
-                                            <span className={`text-[8px] font-black leading-[1.1] text-center h-6 flex items-center break-all ${f.val ? 'text-gray-900' : 'text-gray-400'}`}>{f.label}</span>
-                                        </div>
-                                    ))}
-                                </div>
-
+                ) : (
+                    <>
+                        <div className="flex flex-wrap gap-4 mb-10 justify-center">
+                            {[
+                                { id: 'all', label: 'すべて' },
+                                { id: 'grgo', label: 'GRGO' },
+                                { id: 'パンテーラ', label: 'パンテーラ' },
+                                { id: 'microwave', label: 'マイクロ波あり' }
+                            ].map(t => (
                                 <button
-                                    onClick={() => navigate('/contact')}
-                                    className="w-full py-4 rounded-2xl bg-[#0b1210] text-emerald-400 text-xs font-black shadow-xl shadow-gray-200 flex items-center justify-center gap-2 hover:bg-black transition-colors"
+                                    key={t.id}
+                                    onClick={() => setFilter(t.id)}
+                                    className={`px-8 py-3 rounded-2xl text-sm font-bold transition-all border-2 ${filter === t.id ? 'bg-white border-gray-100 text-gray-900 shadow-xl' : 'bg-transparent border-gray-200/50 text-gray-400 hover:border-gray-300'}`}
                                 >
-                                    <span>プラン詳細・お見積もり</span>
-                                    <ChevronRight className="w-4 h-4" />
+                                    {t.label}
                                 </button>
-                            </div>
-                        ))}
-                    </div>
+                            ))}
+                        </div>
 
-                    {/* Desktop View: Transposed Comparison Matrix */}
-                    <div className="hidden md:block overflow-hidden bg-white rounded-[3rem] shadow-2xl border border-gray-100 mb-16">
-                        <table className="w-full text-left border-collapse table-fixed">
-                            <thead>
-                                <tr className="bg-[#0b1210]">
-                                    <th className="w-[18%] px-8 py-10 text-emerald-400 text-xs font-black uppercase tracking-widest border-b border-emerald-500/20">比較項目</th>
-                                    {filteredPlans.map((plan) => (
-                                        <th key={plan.id} className={`px-2 py-8 text-center border-b border-emerald-500/20 ${plan.isRecommended ? 'bg-emerald-900/20 relative' : ''}`}>
-                                            {plan.isRecommended && (
-                                                <div className="absolute top-0 left-0 right-0 bg-emerald-500 text-[#0b1210] text-[8px] font-black py-0.5 uppercase tracking-tighter shadow-sm">おすすめ</div>
-                                            )}
-                                            <div className="text-emerald-500 text-[8px] font-black mb-1.5 italic tracking-widest">{plan.brand}</div>
-                                            <div className="text-white text-[12px] font-black leading-tight flex flex-col items-center justify-center italic gap-1">
-                                                <span>{plan.grade}</span>
-                                                {(plan as any).description && (
-                                                    <span className="text-[9px] text-emerald-400/60 font-medium not-italic leading-tight max-w-[120px] mx-auto">
-                                                        {(plan as any).description}
-                                                    </span>
-                                                )}
+                        {/* Unified Premium Info Card - Platinum Emerald Re-design */}
+                        <div className="mb-10 bg-gradient-to-br from-[#f8fafc] to-[#f1f5f9] rounded-[2rem] p-8 md:p-12 text-slate-900 relative overflow-hidden shadow-2xl border border-emerald-200/40">
+                            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-500/[0.03] rounded-full -mr-64 -mt-64 blur-3xl" />
+
+                            <div className="flex flex-col gap-10 relative z-10">
+                                {/* Top: Package Title (Dynamic) */}
+                                <div className="flex flex-col">
+                                    <div className="flex items-center gap-4 mb-5">
+                                        <div className="p-2.5 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-xl shadow-lg shadow-emerald-500/30 text-white">
+                                            <ShieldCheck className="w-7 h-7" />
+                                        </div>
+                                        <div>
+                                            <h3 className="text-xl md:text-2xl font-black tracking-tight italic uppercase text-slate-800 leading-none">
+                                                ANG Original Package <span className="text-emerald-600 font-black ml-1">{isAnalogKey ? 'Analog Protection' : 'CANガード'}</span>
+                                            </h3>
+                                            <div className="h-1 w-20 bg-emerald-500/20 mt-2 rounded-full" />
+                                        </div>
+                                    </div>
+                                    <p className="text-base md:text-lg text-slate-600 font-bold leading-relaxed mb-6 italic tracking-tight">
+                                        {isAnalogKey
+                                            ? '長年の実績に基づく、伝統的な物理防御と最新システムの融合プラン。'
+                                            : '豊富な施工経験から最新の盗難手口に対応させた独自プラン。'}
+                                        <span className="text-slate-900 block md:inline font-black ml-0 md:ml-1 underline decoration-emerald-300 decoration-4 underline-offset-4">
+                                            {isAnalogKey
+                                                ? 'お車の構造を熟知したプロの技で、大切な愛車を徹底的に守り抜きます。'
+                                                : 'スマートキーの利便性はそのままに、鉄壁の守りを提供します。'}
+                                        </span>
+                                    </p>
+                                    <div className="flex flex-wrap gap-2 mb-8">
+                                        {(isAnalogKey
+                                            ? ['Anti-プロ窃盗集団', 'Anti-自走盗難', 'Anti-部品盗難']
+                                            : ['Anti-リレーアタック', 'Anti-CANインベーダー', 'Anti-コードグラバー']
+                                        ).map((threat) => (
+                                            <span key={threat} className="px-4 py-1.5 bg-white rounded-lg text-[10px] font-black tracking-[0.2em] text-emerald-700 uppercase border border-emerald-100 shadow-sm">
+                                                {threat}
+                                            </span>
+                                        ))}
+                                    </div>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                        <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-5 border border-white shadow-sm hover:shadow-md transition-shadow">
+                                            <div className="flex items-center gap-2 mb-2">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                                                <div className="text-slate-800 text-xs font-black tracking-widest uppercase">{isAnalogKey ? 'Analog Immobilize' : 'Digital Immobilize'}</div>
                                             </div>
-                                        </th>
-                                    ))}
-                                </tr>
-                            </thead>
-                            <tbody className="text-gray-900 font-medium">
-                                {/* Price Row */}
-                                <tr className="border-b border-gray-100 bg-gray-50/50">
-                                    <td className="px-8 py-8 font-black text-xs text-gray-700 uppercase tracking-wider bg-gray-200/20">施工価格 <span className="text-[10px] opacity-60">(税込)</span></td>
-                                    {filteredPlans.map((plan) => (
-                                        <td key={plan.id} className={`px-2 py-8 text-center ${plan.isRecommended ? 'bg-emerald-50/50' : ''}`}>
-                                            <div className="text-xl font-black tracking-tighter text-gray-950">¥{plan.price}</div>
-                                            <div className="text-[11px] font-bold text-gray-400 mt-1"> (税込¥{plan.priceTax})</div>
-                                        </td>
-                                    ))}
-                                </tr>
+                                            <div className="text-[12px] text-slate-500 font-bold leading-relaxed ml-3.5">
+                                                {isAnalogKey
+                                                    ? 'スターター回路等の物理遮断により、エンジンの自走盗難を確実に阻止します。'
+                                                    : '不正信号による engine 始動をデジタル的に徹底ブロック。'}
+                                            </div>
+                                        </div>
+                                        <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-5 border border-white shadow-sm hover:shadow-md transition-shadow">
+                                            <div className="flex items-center gap-2 mb-2">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                                                <div className="text-slate-800 text-xs font-black tracking-widest uppercase">{isAnalogKey ? 'Robust Protection' : 'Seamless Operation'}</div>
+                                            </div>
+                                            <div className="text-[12px] text-slate-500 font-bold leading-relaxed ml-3.5">
+                                                {isAnalogKey
+                                                    ? '屈強なサイレンとセンサー構成により、強引な侵入も即座に迎撃。'
+                                                    : '純正キー操作のみで全システムが連動。'}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-                                {/* Feature Rows */}
-                                {[
-                                    { key: 'triple' as const, label: 'トリプルセンサ', desc: 'ガラス割り等の「衝撃」だけでなく、空圧の変化も検知する高精度センサ。' },
-                                    { key: 'tilt' as const, label: '傾斜センサ', desc: '車両の傾き（1度以上）を検知。タイヤ・ホイール盗難やレッカー移動を阻止します。' },
-                                    { key: 'microwave' as const, label: 'マイクロ波センサ', desc: '車両への接近を検知。不審者のうろつきや車内への覗き込みを未然に威嚇します。' },
-                                    { key: 'bonnet' as const, label: 'ボンネットセンサ', desc: 'エンジンルームへの不正侵入を検知。バッテリー切断による無力化を防ぎます。' },
-                                    { key: 'siren' as const, label: 'バックアップサイレン', desc: '車両バッテリーの外された場合でも、内蔵電池の駆動でサイレンを鳴らし続けます。' },
-                                    { key: 'algorithm' as const, label: 'スマートキー連動', isEmerald: true, desc: '純正キー操作にセキュリティが自動連動。利便性を損なわず鉄壁の守りを実現。' },
-                                    { key: 'canguard' as const, label: 'CANガード', isEmerald: true, desc: '最新手口「CANインベーダー」等を遮断。リレーアタック対策のキーレスOFF機能も含みます。' },
-                                    { key: 'dr' as const, label: 'ドラレコ連動録画', isEmerald: true, desc: '警告・警報時にユピテル製ドラレコを自動起動し記録。※別途専用ケーブル(J-760)が必要です。' },
-                                    { key: 'ir' as const, label: 'IRセンサ', desc: '車内への侵入を検知。マイクロ波センサと組み合わせることで警報精度が向上します。' },
-                                    { key: 'remote1way' as const, label: '1WAYスペアリモコン', desc: '予備としての基本操作はもちろん、ご家族での共用にも便利なリモコン。' },
-                                ].map((feature, idx) => {
-                                    return (
-                                        <tr key={feature.label} className={`border-b border-gray-50 ${idx % 2 === 0 ? 'bg-white' : 'bg-gray-50/30'} group/row`}>
-                                            <td className={`px-8 py-6 text-xs font-black tracking-widest ${feature.isEmerald ? 'text-emerald-600' : 'text-gray-500'} bg-gray-50/50 whitespace-nowrap min-w-[240px]`}>
-                                                <div className="flex flex-col gap-1">
-                                                    <div className="flex items-center gap-1.5">
-                                                        {feature.label}
-                                                        <HelpCircle className="w-3 h-3 text-gray-300 group-hover/row:text-emerald-400 transition-colors cursor-help" />
-                                                    </div>
-                                                    <div className="max-w-[200px] text-[9px] text-gray-400 font-bold leading-tight opacity-0 group-hover/row:opacity-100 transition-opacity whitespace-normal h-0 group-hover/row:h-auto overflow-hidden">
-                                                        {feature.desc}
-                                                    </div>
+                                {/* Bottom: Common Equipment (Standard) */}
+                                <div className="bg-slate-900/5 rounded-3xl p-8 border border-slate-900/5">
+                                    <div className="flex flex-col lg:flex-row lg:items-center gap-6">
+                                        <div className="lg:border-r lg:border-slate-200 lg:pr-8 min-w-[max-content]">
+                                            <h4 className="text-emerald-700 text-[11px] font-black flex items-center gap-2 tracking-widest uppercase italic mb-1">
+                                                <Zap className="w-3.5 h-3.5 fill-emerald-500" /> Standard Equipment
+                                            </h4>
+                                            <div className="text-[10px] text-slate-400 font-bold uppercase tracking-tighter italic">全プラン共通 標準装備</div>
+                                        </div>
+                                        <div className="flex flex-wrap gap-x-6 gap-y-3">
+                                            {[
+                                                'ショックセンサ', 'ドアセンサ', 'トランクセンサ', 'イモビライザ', 'オリジナルLEDプレート',
+                                                'ステータスインジケーター', '2WAYアンサーバックリモコン', '暗証番号式バレースイッチ', 'ハイパワーサイレン', 'ハザードフラッシュ機能'
+                                            ].map((item, i) => (
+                                                <div key={i} className="flex items-center gap-2">
+                                                    <div className="w-1.5 h-1.5 rounded-full bg-white border-2 border-emerald-400 shadow-sm shrink-0" />
+                                                    <span className="text-[10px] md:text-xs font-black text-slate-600 tracking-tight leading-tight">{item}</span>
                                                 </div>
-                                            </td>
-                                            {filteredPlans.map((plan) => {
-                                                let isChecked = false;
-                                                if (feature.key === 'remote1way') {
-                                                    isChecked = plan.grade.includes('ZVT') || plan.brand === 'Panthera';
-                                                } else if (feature.key === 'dr') {
-                                                    isChecked = true; // All our recommended plans support this as option
-                                                } else {
-                                                    isChecked = !!(plan.features as any)[feature.key];
-                                                }
-
-                                                return (
-                                                    <td key={plan.id} className={`px-2 py-6 text-center ${plan.isRecommended ? 'bg-emerald-50/30' : ''}`}>
-                                                        {isChecked ? (
-                                                            <div className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-emerald-500 text-white shadow-lg shadow-emerald-500/20 scale-75">
-                                                                <Check className="w-4 h-4 stroke-[4]" />
-                                                            </div>
-                                                        ) : (
-                                                            <span className="text-gray-200 text-xs">—</span>
-                                                        )}
-                                                    </td>
-                                                );
-                                            })}
-                                        </tr>
-                                    );
-                                })}
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <section className="mt-20 border-t border-gray-100 pt-16">
-                    <div className="flex items-center gap-4 mb-10">
-                        <div className="w-1.5 h-8 bg-emerald-500 rounded-full" />
-                        <h2 className="text-2xl font-black tracking-tight text-gray-900 italic">選定の決め手：GRGO vs PANTHERA</h2>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-                        <div className="bg-white p-8 md:p-12 rounded-[3rem] shadow-xl border border-gray-100 relative overflow-hidden group hover:shadow-2xl transition-all">
-                            <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:scale-110 transition-transform">
-                                <ShieldCheck className="w-24 h-24 text-gray-900" />
-                            </div>
-                            <div className="text-emerald-500 text-[10px] font-black tracking-[0.4em] uppercase mb-6 italic">The Standard</div>
-                            <h3 className="text-2xl font-black mb-8 text-gray-900 tracking-tighter">Grgo：完成された定番</h3>
-                            <div className="space-y-6">
-                                <p className="text-lg text-gray-900 font-black leading-relaxed">
-                                    Pantheraが“最高峰”なら、<br />
-                                    Grgoは“完成された定番”。
-                                </p>
-                                <p className="text-base text-gray-600 font-medium leading-relaxed">
-                                    派手な機能より、確かな安心。<br />
-                                    必要な防犯性能をしっかり備え、日常で使いやすく、誤報を抑えた実用性。
-                                </p>
-                                <p className="text-base text-gray-600 font-medium leading-relaxed">
-                                    多くのお客様に選ばれ続けてきた理由は、そのバランスの良さにあります。
-                                </p>
-                                <p className="text-base text-gray-900 font-black border-l-4 border-emerald-500 pl-4 py-1">
-                                    守るべきものに、ちょうどいい安心を。<br />
-                                    それが Grgo という選択です。
-                                </p>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <div className="bg-[#0b1210] p-8 md:p-12 rounded-[3rem] shadow-xl border border-white/5 relative overflow-hidden group hover:shadow-2xl transition-all">
-                            <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:scale-110 transition-transform">
-                                <ShieldAlert className="w-24 h-24 text-emerald-400" />
-                            </div>
-                            <div className="text-emerald-400 text-[10px] font-black tracking-[0.4em] uppercase mb-6 italic">The Masterpiece</div>
-                            <h3 className="text-2xl font-black mb-8 text-white tracking-tighter">Panthera：妥協しない人のための、最高峰。</h3>
-                            <div className="space-y-6 text-white/90">
-                                <p className="text-lg font-black leading-relaxed text-emerald-400">
-                                    ユピテル最高峰のカーセキュリティ。<br />
-                                    狙われる車には、それに見合う対策が必要です。
-                                </p>
-                                <p className="text-base font-medium leading-relaxed text-gray-300">
-                                    32段階の細かな感度調整により、<br />
-                                    強く守りながら誤報を極限まで抑える。
-                                </p>
-                                <p className="text-base font-medium leading-relaxed text-gray-300">
-                                    車種、駐車環境、使い方まで考え抜き、一台ごとに最適化して仕上げるフルオーダー型セキュリティ。
-                                </p>
-                                <p className="text-base font-black border-l-4 border-emerald-500 pl-4 py-1">
-                                    守るために、妥協しない。<br />
-                                    それが Panthera です。
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Brand & Remote Showcase */}
-                    <div className="mb-24">
-                        <h2 className="text-2xl font-black text-[#0b1210] mb-8 border-l-4 border-emerald-500 pl-4 italic uppercase tracking-tighter flex items-center gap-3">
-                            <Monitor className="w-6 h-6 text-emerald-500" />
-                            Remotes & Design
-                        </h2>
-                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
-                            {/* Grgo Brand Card */}
-                            <div className="group bg-white rounded-[2.5rem] p-8 shadow-xl border border-gray-100 hover:border-emerald-200 transition-all duration-500 hover:shadow-2xl flex flex-col">
-                                <div className="flex items-center gap-4 mb-6">
-                                    <div className="h-9 px-4 flex items-center justify-center bg-[#0b1210] rounded-lg">
-                                        <span className="text-emerald-400 font-black italic tracking-widest text-base uppercase">Grgo</span>
-                                    </div>
-                                    <div className="h-[1px] flex-grow bg-gradient-to-r from-emerald-500/30 to-transparent"></div>
-                                </div>
-
-                                <div className="flex flex-col gap-6 items-center flex-grow">
-                                    <div className="w-full space-y-3">
-                                        <div className="relative group/img aspect-[4/3] bg-gray-50 rounded-3xl overflow-hidden border border-gray-100 p-6 flex items-center justify-center">
-                                            <div className="absolute inset-x-0 bottom-0 py-2 bg-emerald-500/90 text-white text-[9px] font-black italic text-center tracking-widest opacity-0 group-hover/img:opacity-100 transition-opacity uppercase z-20">Main 2way Remote</div>
-                                            <SafeImage
-                                                src="/images/Security/model/grgo2way.webp"
-                                                className="w-full h-full object-contain drop-shadow-2xl transition-transform duration-700 group-hover/img:scale-110"
-                                            />
-                                        </div>
-                                        <div className="flex gap-3">
-                                            <div className="flex-1 h-24 bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 p-3 flex items-center justify-center relative group/spare shadow-inner">
-                                                <SafeImage src="/images/Security/model/grgo1way.webp" className="h-full w-auto object-contain transition-transform duration-500 group-hover/spare:scale-110" />
-                                                <span className="absolute bottom-2 right-3 text-[8px] font-black text-gray-400 tracking-tighter">1WAY SPARE</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="w-full space-y-4">
-                                        <div>
-                                            <h3 className="text-lg font-black text-gray-900 mb-2 italic">直感的な操作性</h3>
-                                            <p className="text-[11px] text-gray-500 font-medium leading-relaxed">
-                                                フルカラー/モノクロ液晶を採用し、車両の異常をアニメーションと日本語で瞬時に通知。日本のユーザーに最も支持されているブランド。
-                                            </p>
-                                        </div>
-                                        <ul className="space-y-1.5">
-                                            {['視認性に優れた日本語表示', '日本の駐車環境に特化', '長期間信頼できる耐久性'].map((point) => (
-                                                <li key={point} className="flex items-center gap-2 text-[10px] font-bold text-gray-600">
-                                                    <div className="w-1 h-1 rounded-full bg-emerald-500" />
-                                                    {point}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Panthera Brand Card */}
-                            <div className="group bg-[#0b1210] rounded-[2.5rem] p-8 shadow-xl border border-gray-800 hover:border-emerald-500/30 transition-all duration-500 hover:shadow-2xl flex flex-col">
-                                <div className="flex items-center gap-4 mb-6">
-                                    <div className="h-9 px-4 flex items-center justify-center bg-emerald-500 rounded-lg shadow-lg shadow-emerald-500/20">
-                                        <span className="text-[#0b1210] font-black italic tracking-widest text-base uppercase">Panthera</span>
-                                    </div>
-                                    <div className="h-[1px] flex-grow bg-gradient-to-r from-emerald-500 to-transparent opacity-20"></div>
-                                </div>
-
-                                <div className="flex flex-col gap-6 items-center flex-grow">
-                                    <div className="grid grid-cols-2 gap-3 h-72">
-                                        {/* 2WAY Main Remote (Vertical) */}
-                                        <div className="relative group/img bg-[#1a2220] rounded-2xl overflow-hidden border border-white/5 p-4 flex flex-col items-center justify-center shadow-inner">
-                                            <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/10 to-transparent pointer-events-none" />
-                                            <SafeImage
-                                                src="/images/Security/model/panthera2way.webp"
-                                                className="h-full w-auto object-contain drop-shadow-[0_10px_30px_rgba(16,185,129,0.3)] transition-transform duration-700 group-hover/img:scale-110"
-                                            />
-                                            <div className="absolute bottom-1 right-2 text-[6px] font-black text-emerald-500 uppercase tracking-widest bg-[#0b1210]/80 px-1.5 py-0.5 rounded">2way Main</div>
-                                        </div>
-                                        {/* 1WAY Spare Remote (Vertical) */}
-                                        <div className="relative group/spare bg-[#1a2220] rounded-2xl overflow-hidden border border-white/5 p-4 flex flex-col items-center justify-center shadow-inner">
-                                            <SafeImage
-                                                src="/images/Security/model/panthera1way.webp"
-                                                className="h-full w-auto object-contain transition-transform duration-500 group-hover/spare:scale-110"
-                                            />
-                                            <div className="absolute bottom-1 right-2 text-[6px] font-black text-gray-400 uppercase tracking-widest bg-[#0b1210]/80 px-1.5 py-0.5 rounded">1way Spare</div>
-                                        </div>
-                                    </div>
-                                    <div className="w-full space-y-4">
-                                        <div>
-                                            <h3 className="text-lg font-black text-white mb-2 italic">究極の迎撃性能</h3>
-                                            <p className="text-[11px] text-gray-400 font-medium leading-relaxed">
-                                                最先端の検知アルゴリズムを搭載。誤報を極限まで抑えつつ、ターゲットを確実に迎撃するユピテル最高峰ブランド。
-                                            </p>
-                                        </div>
-                                        <ul className="space-y-1.5">
-                                            {['業界最高水準の検知能力', '高感度IRセンサ標準対応', 'フルタッチパネル液晶リモコン'].map((point) => (
-                                                <li key={point} className="flex items-center gap-2 text-[10px] font-bold text-gray-300">
-                                                    <div className="w-1 h-1 rounded-full bg-emerald-500" />
-                                                    {point}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* LED Plate Feature Card */}
-                            <div className="group bg-gradient-to-br from-gray-50 to-white rounded-[2.5rem] p-8 shadow-xl border border-emerald-100/50 hover:border-emerald-300 transition-all duration-500 hover:shadow-2xl flex flex-col">
-                                <div className="flex items-center gap-4 mb-6">
-                                    <div className="h-9 px-4 flex items-center justify-center bg-emerald-100 rounded-lg">
-                                        <span className="text-emerald-700 font-black italic tracking-widest text-base uppercase">Authentic</span>
-                                    </div>
-                                    <div className="h-[1px] flex-grow bg-gradient-to-r from-emerald-500/30 to-transparent"></div>
-                                </div>
-
-                                <div className="flex flex-col gap-6 items-center flex-grow">
-                                    <div className="w-full space-y-3">
-                                        <div className="relative group/img aspect-[4/3] bg-[#0b1210] rounded-3xl overflow-hidden border border-gray-100 p-4 flex items-center justify-center shadow-inner">
-                                            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.2)_0%,transparent_70%)] animate-pulse" />
-                                            <div className="absolute inset-x-0 bottom-0 py-2 bg-emerald-500 text-white text-[9px] font-black italic text-center tracking-widest opacity-0 group-hover/img:opacity-100 transition-opacity uppercase z-20">Standard Equipment</div>
-                                            <SafeImage
-                                                src="/images/Security/model/led-plate.webp"
-                                                className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_15px_rgba(16,185,129,0.5)] transition-transform duration-700 group-hover/img:scale-105"
-                                            />
-                                        </div>
-                                        <div className="flex gap-3">
-                                            <div className="flex-1 h-24 bg-white/50 rounded-2xl border border-emerald-100 flex items-center justify-center shadow-inner">
-                                                <div className="flex flex-col items-center">
-                                                    <ShieldCheck className="w-6 h-6 text-emerald-500 mb-1 opacity-50" />
-                                                    <span className="text-[8px] font-black text-emerald-600 tracking-widest uppercase italic">Visual Security</span>
+                        <div className="bg-white md:bg-transparent rounded-[2rem] md:rounded-none shadow-2xl md:shadow-none overflow-hidden border border-gray-100 md:border-none mb-6 px-6 md:px-0">
+                            <p className="mb-4 text-[11px] md:text-xs text-emerald-600 font-bold italic text-left md:text-right leading-relaxed">
+                                ※表にチェックが入っていないセンサー類も、オプションとして追加取り付けが可能です。お気軽にご相談ください。
+                            </p>
+                            {/* Mobile View: Card Stack */}
+                            <div className="md:hidden divide-y divide-gray-100">
+                                {filteredPlans.map((plan) => (
+                                    <div
+                                        key={plan.id}
+                                        className={`p-6 ${plan.isRecommended ? 'bg-emerald-50/30' : ''}`}
+                                    >
+                                        <div className="flex justify-between items-start mb-4">
+                                            <div>
+                                                <div className="flex items-center gap-2 mb-1">
+                                                    <span className="text-xs font-black text-emerald-500 uppercase tracking-widest">{plan.brand}</span>
+                                                    {plan.isRecommended && (
+                                                        <span className="bg-emerald-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full">おすすめ</span>
+                                                    )}
                                                 </div>
+                                                <h3 className="text-xl font-black text-gray-900 tracking-tight leading-tight">{plan.grade}</h3>
+                                            </div>
+                                            <div className="text-right">
+                                                <div className="text-xl font-black tracking-tighter text-gray-900">¥{plan.price}</div>
+                                                <div className="text-xs font-bold text-gray-400">(税込¥{plan.priceTax})</div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div className="w-full space-y-4">
-                                        <div>
-                                            <h3 className="text-lg font-black text-gray-900 mb-2 italic">ANG オリジナルLED</h3>
-                                            <p className="text-[11px] text-gray-500 font-medium leading-relaxed">
-                                                夜間の防犯アピールの要。犯人を物理的に寄せ付けない、強力な光の威嚇を全モデルに標準装備。
-                                            </p>
-                                        </div>
-                                        <ul className="space-y-1.5">
-                                            {['視認性抜群の高輝度LED', '高級感を高めるアクリル意匠', '全パッケージに標準付帯'].map((point) => (
-                                                <li key={point} className="flex items-center gap-2 text-[10px] font-bold text-gray-600">
-                                                    <div className="w-1 h-1 rounded-full bg-emerald-500" />
-                                                    {point}
-                                                </li>
+
+                                        <div className="grid grid-cols-2 gap-x-4 gap-y-2 mb-6">
+                                            {[
+                                                { label: 'トリプルセンサー', active: plan.features.triple },
+                                                { label: '傾斜センサー', active: plan.features.tilt },
+                                                { label: 'ボンネットセンサー', active: plan.features.bonnet },
+                                                { label: 'マイクロ波', active: plan.features.microwave },
+                                                { label: 'バックアップサイレン', active: plan.features.siren },
+                                                { label: 'スマートキー連動', active: plan.features.algorithm },
+                                                { label: 'CANガード', active: plan.features.canguard }
+                                            ].map((f, i) => (
+                                                <div key={i} className={`flex items-center gap-2 ${f.active ? 'opacity-100' : 'opacity-20'}`}>
+                                                    <div className={`w-3.5 h-3.5 rounded-full flex items-center justify-center ${f.active ? 'bg-emerald-100' : 'bg-gray-100'}`}>
+                                                        <Check className={`w-2 h-2 ${f.active ? 'text-emerald-600' : 'text-gray-400'}`} />
+                                                    </div>
+                                                    <span className="text-[10px] font-bold text-gray-600 italic whitespace-nowrap">{f.label}</span>
+                                                </div>
                                             ))}
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                        </div>
 
-                    {/* Installation Flow Section */}
-                    <div className="relative py-24 bg-gradient-to-b from-[#f8fafc] to-white rounded-[4rem] overflow-hidden border border-slate-100 shadow-sm mt-16">
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#ecfdf5_0%,transparent_70%)] opacity-30" />
-                        <div className="max-w-5xl mx-auto px-6 relative z-10 text-center">
-                            <h2 className="text-[10px] font-black tracking-[0.5em] text-emerald-600 uppercase mb-4 italic">Installation Flow</h2>
-                            <h3 className="text-3xl md:text-4xl font-black tracking-tighter text-gray-950 italic mb-16">施工の流れ・安心の理由</h3>
-
-                            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                                {[
-                                    { step: '01', title: 'ご相談・見学', desc: 'LINEやお電話にて、お客様の環境や不安をご相談ください。' },
-                                    { step: '02', title: 'プランニング', desc: '豊富なデータから、お車に最適なパッケージをご提案します。' },
-                                    { step: '03', title: '取付', desc: '熟練の技師が一台一台、配線一本まで拘って施工します（1〜3日）。' },
-                                    { step: '04', title: 'お引渡し', desc: '実機を使って操作説明を行い、安心してお乗り出しいただけます。' }
-                                ].map((item, idx) => (
-                                    <div key={item.step} className="relative group">
-                                        <div className="text-5xl font-black text-emerald-500/10 absolute -top-10 left-1/2 -translate-x-1/2 group-hover:text-emerald-500/20 transition-colors">{item.step}</div>
-                                        <h4 className="text-lg font-black text-gray-900 mb-3 relative z-10">{item.title}</h4>
-                                        <p className="text-xs text-gray-500 font-bold leading-relaxed">{item.desc}</p>
-                                        {idx < 3 && <ChevronRight className="hidden md:block absolute top-[1.2rem] -right-8 w-6 h-6 text-emerald-500/20" />}
+                                        <button
+                                            onClick={() => navigate('/contact')}
+                                            className="w-full py-4 bg-[#0b1210] hover:bg-emerald-950 text-white font-black italic text-xs rounded-xl transition-all shadow-lg active:scale-95"
+                                        >
+                                            SELECT THIS PLAN & CONSULT
+                                        </button>
                                     </div>
                                 ))}
                             </div>
+
+                            {/* Desktop View: Comparison Table */}
+                            <div className="hidden md:block overflow-x-auto">
+                                <table className="w-full border-collapse">
+                                    <thead>
+                                        <tr className="border-b-4 border-[#0b1210]">
+                                            <th className="py-8 px-6 text-left bg-neutral-50/50 w-[20%]">
+                                                <div className="p-3 bg-[#0b1210] inline-block rounded-xl shadow-xl shadow-emerald-950/20 mb-4">
+                                                    <ShieldCheck className="w-8 h-8 text-emerald-400" />
+                                                </div>
+                                                <div className="text-[#0b1210] text-sm font-black italic tracking-widest uppercase">Security grade</div>
+                                                <div className="text-gray-400 text-[10px] font-bold mt-1">比較項目</div>
+                                            </th>
+                                            {filteredPlans.map((plan) => (
+                                                <th key={plan.id} className={`py-8 px-6 text-center transition-all ${plan.isRecommended ? 'bg-emerald-50/50' : 'bg-white'}`}>
+                                                    <div className="text-emerald-500 text-[8px] font-black mb-1.5 italic tracking-widest">{plan.brand}</div>
+                                                    <div className="text-[#0b1210] text-[12px] font-black leading-tight flex flex-col items-center justify-center italic gap-1">
+                                                        <span>{plan.grade}</span>
+                                                    </div>
+                                                </th>
+                                            ))}
+                                        </tr>
+                                    </thead>
+                                    <tbody className="divide-y divide-gray-100">
+                                        {[
+                                            { label: 'トリプルセンサー', key: 'triple', desc: '衝撃に加えて空圧の変化も検知。' },
+                                            { label: '傾斜センサー', key: 'tilt', desc: 'レッカー移動やホイール盗難を阻止。' },
+                                            { label: 'ボンネットセンサー', key: 'bonnet', desc: 'バッテリー切断等の侵入を阻止。' },
+                                            { label: 'マイクロ波センサー', key: 'microwave', desc: '車両への不審な接近を事前威嚇。' },
+                                            { label: 'バックアップサイレン', key: 'siren', desc: '電源断でも鳴り続ける専用サイレン。' },
+                                            { label: 'スマートキー連動', key: 'algorithm', desc: '純正キー操作にセキュリティが同期。' },
+                                            { label: 'CANガード施工', key: 'canguard', desc: 'デジタル通信を遮断する鉄壁の防御。' }
+                                        ].map((feature, idx) => (
+                                            <tr key={feature.key} className={`hover:bg-neutral-50/50 transition-colors group`}>
+                                                <td className="py-5 px-8">
+                                                    <div className="flex flex-col gap-1">
+                                                        <div className="flex items-center gap-3">
+                                                            <div className="w-1.5 h-1.5 rounded-full bg-emerald-500/30 group-hover:bg-emerald-500 transition-colors" />
+                                                            <span className="text-xs font-black text-gray-600 italic uppercase tracking-tighter">{feature.label}</span>
+                                                        </div>
+                                                        <div className="text-[9px] text-gray-400 font-bold ml-4 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap overflow-hidden h-0 group-hover:h-auto">
+                                                            {feature.desc}
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                {filteredPlans.map((plan) => (
+                                                    <td key={plan.id} className={`py-5 px-6 text-center ${plan.isRecommended ? 'bg-emerald-50/30' : ''}`}>
+                                                        <div className="flex justify-center">
+                                                            {(plan.features as any)[feature.key] ? (
+                                                                <div className="w-7 h-7 bg-emerald-100 rounded-full flex items-center justify-center shadow-inner">
+                                                                    <Check className="w-4 h-4 text-emerald-600 stroke-[3px]" />
+                                                                </div>
+                                                            ) : (
+                                                                <div className="w-2 h-2 rounded-full bg-gray-100" />
+                                                            )}
+                                                        </div>
+                                                    </td>
+                                                ))}
+                                            </tr>
+                                        ))}
+                                        <tr className="bg-neutral-50/30">
+                                            <td className="py-10 px-8">
+                                                <div className="text-[10px] font-black text-[#0b1210] italic tracking-widest uppercase mb-1">Pricing info</div>
+                                                <div className="text-xs font-black text-gray-500 italic">標準パッケージ価格</div>
+                                            </td>
+                                            {filteredPlans.map((plan) => (
+                                                <td key={plan.id} className={`py-10 px-6 text-center ${plan.isRecommended ? 'bg-emerald-50/50' : ''}`}>
+                                                    <div className="text-2xl font-black tracking-tighter text-gray-900 italic">
+                                                        ¥{plan.price}
+                                                    </div>
+                                                    <div className="text-[9px] text-gray-400 font-bold mt-1 tracking-widest">
+                                                        (税込 ¥{plan.priceTax})
+                                                    </div>
+                                                    <button
+                                                        onClick={() => navigate('/contact')}
+                                                        className="mt-6 w-full py-3 bg-[#0b1210] hover:bg-emerald-950 text-white font-black italic text-[10px] rounded-xl transition-all shadow-xl active:scale-95"
+                                                    >
+                                                        FREE CONSULTATION
+                                                    </button>
+                                                </td>
+                                            ))}
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </>
+                )}
+
+                {/* Trust & Commitment Section */}
+                <div className="mt-16 bg-[#0b1210] rounded-[3rem] p-8 md:p-16 text-white relative overflow-hidden shadow-3xl">
+                    <div className="absolute top-0 right-0 w-1/2 h-full bg-emerald-500/5 -skew-x-12 translate-x-1/4" />
+                    <div className="max-w-4xl mx-auto relative z-10">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 rounded-full text-emerald-400 text-[10px] font-black tracking-[0.3em] uppercase mb-8 italic">
+                            <ShieldCheck className="w-4 h-4" /> Professional Integrity
+                        </div>
+
+                        <h2 className="text-2xl md:text-4xl font-black italic tracking-tighter mb-10 leading-tight">
+                            私たちは、<span className="text-emerald-500">「見えない守り」</span>に妥協しません。
+                        </h2>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                            <div className="space-y-6">
+                                <div className="flex items-center gap-4">
+                                    <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center border border-white/20">
+                                        <Lock className="w-6 h-6 text-emerald-400" />
+                                    </div>
+                                    <h3 className="text-lg font-black italic tracking-tight">徹底した秘匿施工</h3>
+                                </div>
+                                <p className="text-sm text-gray-400 font-bold leading-relaxed">
+                                    防犯上の理由により、施工中の写真や配線の詳細は一切公開しておりません。それは、万が一車両に侵入された際も、システムの所在を悟らせない「最強の盾」であるための私たちの拘りです。
+                                </p>
+                            </div>
+
+                            <div className="space-y-6">
+                                <div className="flex items-center gap-4">
+                                    <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center border border-white/20">
+                                        <Award className="w-6 h-6 text-emerald-400" />
+                                    </div>
+                                    <h3 className="text-lg font-black italic tracking-tight">認定店としての技術力</h3>
+                                </div>
+                                <p className="text-sm text-gray-400 font-bold leading-relaxed">
+                                    ユピテル（Grgo/Panthera）の最上位認定取付店として、独自の車両解析データを完備。{currentVehicle.name}の構造を熟知したプロが、純正同等のクオリティでインストールいたします。
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="mt-12 pt-12 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left transition-all">
+                            <div>
+                                <div className="text-emerald-500 text-[10px] font-black tracking-widest uppercase mb-2">Experience & Results</div>
+                                <p className="text-xs text-gray-400 font-bold leading-relaxed">
+                                    ブログにて多数の{currentVehicle.name} 施工車両ログを公開中。<br className="hidden md:block" />
+                                    数多くの実績が、何よりの信頼の証です。
+                                </p>
+                            </div>
+                            <button
+                                onClick={() => navigate('/contact')}
+                                className="px-10 py-5 bg-white text-[#0b1210] font-black italic rounded-2xl transition-all hover:bg-emerald-500 hover:text-white active:scale-95 shadow-xl shadow-black/40"
+                            >
+                                プランの相談を予約する
+                            </button>
                         </div>
                     </div>
-                </section>
+                </div>
             </main>
 
             <div className="fixed bottom-0 left-0 right-0 z-[60] bg-[#0c1311] border-t border-white/5 p-5 shadow-[0_-20px_50px_rgba(0,0,0,0.3)]">
@@ -1339,7 +2098,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                     </a>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

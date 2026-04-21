@@ -1419,9 +1419,20 @@ const initialPlans: PlanCategory[] = [
     category: "車種別おすすめパッケージ",
     type: 'security',
     items: [
-      { name: "SUV / ランドクルーザー / アルファード", price: "350000", features: ["Panthera Z706", "CLIFFORD G6", "ダブルガード施工"], badge: "最強プラン", image: "/images/security.jpg" },
-      { name: "スポーツカー / プレミアムセダン", price: "280000", features: ["Grgo ZV", "VIPER DS4", "エンジンスターター"], badge: "快適・安心", image: "/images/security.jpg" },
-      { name: "コンパクトカー / 軽自動車", price: "150000", features: ["Grgo Vシリーズ", "VIPER 330V", "純正キーレス連動"], badge: "お手軽プラン", image: "/images/security.jpg" }
+      { name: "ランドクルーザー 300", price: "350000", features: ["ダブルイモビライザー必須", "デジタル通信対応", "Can-Invader対策"], badge: "盗難率No.1", image: "/images/security.jpg" },
+      { name: "ランドクルーザー 250", price: "314600", features: ["物理CANガード追加", "ボンネットセンサー", "スマートキー完全連動"], badge: "新型ハイリスク", image: "/images/security.jpg" },
+      { name: "ランドクルーザー プラド", price: "265800", features: ["キーレスオフ機能", "CANインベーダー対策", "トリプルセンサー"], badge: "スマート連動", image: "/images/security.jpg" },
+      { name: "ランクル 70", price: "235800", features: ["1WAYリモコン運用", "物理防御強化", "アドブルーリッド対策可"], badge: "再販・復刻", image: "/images/security.jpg" },
+      { name: "レクサス LX600 専用パッケージ", price: "350000", features: ["ダブルイモビライザー必須", "スマートキー連動", "Can-Invader対策"], badge: "絶対防衛", image: "/images/security.jpg" },
+      { name: "レクサス RX 専用パッケージ", price: "286000", features: ["リレーアタック対策", "キーエミュレーター対策", "ドラレコ連動"], badge: "高度防衛", image: "/images/security.jpg" },
+      { name: "ハリアー", price: "289800", features: ["スマクロ対応", "CANガード施工", "トリプルセンサー"], badge: "80系専用設計", image: "/images/Security/vehicle/80harrier.webp" },
+      { name: "クラウン各種", price: "314600", features: ["CANガード追加", "スマート連動", "トリプルセンサー"], badge: "新型全モデル対応", image: "/images/Security/vehicle/crown.webp" },
+      { name: "アルファード / ヴェルファイア (40系)", price: "270728", features: ["スマートキー連動", "CANガード可", "トリプルセンサー"], badge: "新型専用設計", image: "/images/security.jpg" },
+      { name: "ハイエース", price: "191000", features: ["ミラー格納連動", "トリプルセンサー", "仕事車・アウトドア車対策"], badge: "盗難多発車種", image: "/images/Security/vehicle/hiace.webp" },
+      { name: "プリウス", price: "191055", features: ["スマートキー完全連動", "CANガード可", "最新デジタル対策"], badge: "60系専用設計", image: "/images/Security/vehicle/prius.webp" },
+      { name: "シビック TYPE-R", price: "268800", features: ["CANガード追加", "リレーアタック対策", "自走盗難完全阻止"], badge: "FL5専用設計", image: "/images/Security/vehicle/fl5.webp" },
+      { name: "ジムニー / シエラ", price: "142800", features: ["スマートキー連動", "スペアタイヤ盗難対策", "車上荒らし対策"], badge: "JB64/74対応", image: "/images/Security/vehicle/jimny.webp" },
+      { name: "軽自動車", price: "124800", features: ["スマートキー連動", "イタズラ対策", "車上荒らし対策"], badge: "おまかせプラン", image: "/images/Security/vehicle/k-car.webp" }
     ]
   },
   {
