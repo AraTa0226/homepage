@@ -27,8 +27,13 @@ const MainPage = lazy(() => import('./pages/Home/MainPage').then(m => ({ default
 const SecurityMainPage = lazy(() => import('./pages/Home/SecurityMainPage').then(m => ({ default: m.SecurityMainPage })));
 const VehicleSecurityDetail = lazy(() => import('./pages/Security/VehicleSecurityDetail'));
 const AudioMenuDetail = lazy(() => import('./components/Menu/AudioMenuDetail').then(m => ({ default: m.AudioMenuDetail })));
-const SecurityMenuDetail = lazy(() => import('./components/Menu/SecurityMenuDetail').then(m => ({ default: m.SecurityMenuDetail })));
-const DashcamMenuDetail = lazy(() => import('./components/Menu/DashcamMenuDetail').then(m => ({ default: m.DashcamMenuDetail })));
+const PantheraPage = lazy(() => import('./pages/Security/PantheraPage').then(m => ({ default: m.PantheraPage })));
+const GrgoPage = lazy(() => import('./pages/Security/GrgoPage').then(m => ({ default: m.GrgoPage })));
+const GrgoV2Page = lazy(() => import('./pages/Security/GrgoV2Page').then(m => ({ default: m.GrgoV2Page })));
+const DigitalSecurityPage = lazy(() => import('./pages/Security/DigitalPage').then(m => ({ default: m.DigitalSecurityPage })));
+const DashcamPage = lazy(() => import('./pages/Security/DashcamPage').then(m => ({ default: m.DashcamPage })));
+const ViperPage = lazy(() => import('./pages/Security/ViperPage').then(m => ({ default: m.ViperPage })));
+const CliffordPage = lazy(() => import('./pages/Security/CliffordPage').then(m => ({ default: m.CliffordPage })));
 
 const ReservationFormPage = lazy(() => import('./components/Form/ReservationFormPage').then(m => ({ default: m.ReservationFormPage })));
 const PartnersListPage = lazy(() => import('./components/PartnersListPage').then(m => ({ default: m.PartnersListPage })));
@@ -86,6 +91,11 @@ function AppContent() {
 
   const handleMenuClick = (item: any) => {
     setShowMegaMenu(false);
+
+    if (item.path) {
+      navigate(item.path);
+    }
+
     if (item.isExternal) {
       window.open(item.url, '_blank');
       return;
@@ -123,12 +133,57 @@ function AppContent() {
       return;
     }
 
+    const brandPathMap: Record<string, string> = {
+      'security_panthera': '/security/panthera',
+      'security_grgo': '/security/grgo',
+      'security_grgo_v2': '/security/grgo-v2',
+      'security_digital': '/security/digital',
+      'security_viper': '/security/viper',
+      'security_clifford': '/security/clifford',
+      'dashcam': '/security/dashcam'
+    };
+
+    // Label-based mapping for generic categories or items with specific names
+    const labelPathMap: Record<string, string> = {
+      'Panthera (パンテーラ) Z-Series': '/security/panthera',
+      'Grgo (ゴルゴ) V2': '/security/grgo-v2',
+      'Grgo (ゴルゴ) V-Series': '/security/grgo',
+      'Author Alarm / IGLA2+': '/security/digital',
+      'デジタル・イモビライザー': '/security/digital',
+      'リレーアタック対策': '/security/digital',
+      '前後2カメラ・駐車監視ドラレコ': '/security/dashcam',
+      '360度全方位記録システム': '/security/dashcam',
+      'デジタルインナーミラー': '/security/dashcam',
+      'Viper (バイパー)': '/security/viper',
+      'VIPER (バイパー)': '/security/viper',
+      'Clifford (クリフォード)': '/security/clifford',
+      'CLIFFORD (クリフォード)': '/security/clifford'
+    };
+
+    if (brandPathMap[item.id]) {
+      navigate(brandPathMap[item.id]);
+      return;
+    }
+
+    if (item.name && labelPathMap[item.name]) {
+      navigate(labelPathMap[item.name]);
+      return;
+    }
+
     const category = plans.find(p => p.id === item.id);
     if (category) {
-      const planItem = category.items.find(i => i.name === item.planName);
-      if (planItem) {
-        setSelectedPlan(planItem);
-        setSelectedCategory(category);
+      setSelectedCategory(category);
+
+      if (item.planName) {
+        const planItem = category.items.find(i => i.name === item.planName);
+        if (planItem) {
+          setSelectedPlan(planItem);
+          navigate(`/security/vehicle/special#${planItem.id}`);
+        } else {
+          navigate('/security-home');
+        }
+      } else {
+        navigate('/security-home');
       }
     }
   };
@@ -203,10 +258,14 @@ function AppContent() {
               auditionSpeakers={auditionSpeakers}
             />
           } />
+          <Route path="/security/panthera" element={<PantheraPage />} />
+          <Route path="/security/grgo" element={<GrgoPage />} />
+          <Route path="/security/grgo-v2" element={<GrgoV2Page />} />
+          <Route path="/security/digital" element={<DigitalSecurityPage />} />
+          <Route path="/security/dashcam" element={<DashcamPage />} />
+          <Route path="/security/viper" element={<ViperPage />} />
+          <Route path="/security/clifford" element={<CliffordPage />} />
           <Route path="/security/vehicle/:modelId" element={<VehicleSecurityDetail assets={assets} />} />
-          <Route path="/audio/sp-package" element={<AudioMenuDetail show={true} onClose={() => navigate('/')} />} />
-          <Route path="/security" element={<SecurityMenuDetail show={true} onClose={() => navigate('/')} />} />
-          <Route path="/dashcam" element={<DashcamMenuDetail show={true} onClose={() => navigate('/')} />} />
           <Route path="/partners" element={<PartnersListPage />} />
 
           <Route path="/reservation" element={<ReservationFormPage onBack={() => navigate('/')} />} />

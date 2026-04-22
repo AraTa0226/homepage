@@ -1396,6 +1396,40 @@ const initialPlans: PlanCategory[] = [
     ]
   },
   {
+    id: 'security_grgo_v2',
+    category: "最新セキュリティー (Grgo V2)",
+    type: 'security',
+    items: [
+      {
+        name: "Grgo V2 ベーシック",
+        price: "110000",
+        badge: "最新・盗難特化",
+        features: [
+          "デジタル・イモビライザー",
+          "キーエミュレーター対向",
+          "車両システム独立防衛",
+          "※サイレン、衝撃センサー別売"
+        ],
+        image: "/images/Security/model/grgov2.webp",
+        description: "車両システムとは独立した「自走防止」に特化した最新プラン。※サイレンおよび衝撃センサーはオプションとなります。"
+      },
+      {
+        name: "Grgo V2 + ショックセンサー + サイレン",
+        price: "137500",
+        badge: "推奨パッケージ",
+        features: [
+          "デジタル・イモビライザー",
+          "ハイパワーサイレン内蔵",
+          "2段階衝撃センサー内蔵",
+          "キーエミュレーター対向",
+          "車両システム独立防衛"
+        ],
+        image: "/images/Security/model/grgov2.webp",
+        description: "サイレンと衝撃センサーを追加した、防犯性能と使い勝手のバランスに優れた推奨プラン。"
+      }
+    ]
+  },
+  {
     id: 'security_viper',
     category: "VIPER (バイパー)",
     type: 'security',

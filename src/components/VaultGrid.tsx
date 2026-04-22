@@ -103,10 +103,21 @@ export const VaultGrid: React.FC<VaultGridProps> = ({ categories, onCategoryClic
                                                     "Mercedes Benz専用パッケージ": { id: "speaker_package", planName: "Mercedes Benzスピーカー交換パッケージ" },
                                                     "AMP内蔵DSPパッケージ": { id: "digital_source", planName: "アンプ内蔵DSPパッケージ" },
                                                     "AMPレスDSPパッケージ": { id: "digital_source", planName: "アンプレスDSPパッケージ" },
+                                                    "Panthera (パンテーラ) Z-Series": { id: "security_panthera" },
+                                                    "Grgo (ゴルゴ) V2": { id: "security_grgo_v2" },
+                                                    "Grgo (ゴルゴ) V-Series": { id: "security_grgo" },
+                                                    "Relay Attack Defense": { id: "security_digital" },
+                                                    "Digital Mirror": { id: "dashcam" },
+                                                    "Dual Cam Recording": { id: "dashcam" },
+                                                    "Radar Detector": { id: "security_digital" },
+                                                    "Author Alarm / IGLA2+": { id: "security_digital" },
+                                                    "デジタル・イモビライザー": { id: "security_digital" },
+                                                    "リレーアタック対策": { id: "security_digital" },
+                                                    "CANインベーダー対策": { id: "security_digital" },
                                                     "店内の常時試聴ユニット": { id: "audition-showcase", isAnchor: true },
                                                     "施工ブログ / 店舗詳細": { id: "contact", isAnchor: true }
                                                 };
-                                                const target = planMapping[item] || { id: cat.id };
+                                                const target = { ...(planMapping[item] || { id: cat.id }) };
                                                 handleMenuClick(target);
                                             }}
                                             className={`flex items-center justify-between text-xs md:text-sm font-black transition-all hover:translate-x-2 px-6 py-3.5 rounded-xl backdrop-blur-md border shadow-sm ${theme === 'dark'

@@ -215,7 +215,7 @@ export const MainPage: React.FC<MainPageProps> = ({
             image: assets.securityMenuImage,
             gridClass: 'lg:col-span-2 lg:row-span-2',
             items: ['Panthera Z-Series', 'Grgo V-Series', 'Relay Attack Defense'],
-            path: '/security'
+            path: '/security/panthera'
         },
         {
             id: 'gadgets',
@@ -223,7 +223,7 @@ export const MainPage: React.FC<MainPageProps> = ({
             subtitle: 'DIGITAL EYE',
             image: assets.dashcamMenuImage,
             items: ['Digital Mirror', 'Radar Detector', 'Dual Cam Recording'],
-            path: '/dashcam'
+            path: '/security/dashcam'
         }
     ];
 

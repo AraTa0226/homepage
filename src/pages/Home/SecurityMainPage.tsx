@@ -185,7 +185,7 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                     ]
                 }
             ],
-            path: '/security'
+            path: '/security/panthera'
         },
         {
             id: 'security_full',
@@ -195,14 +195,17 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
             gridClass: 'col-span-1',
             items: [
                 'Panthera (パンテーラ) Z-Series',
+                'Grgo (ゴルゴ) V2',
                 'Grgo (ゴルゴ) V-Series',
                 'Author Alarm / IGLA2+',
                 'デジタル・イモビライザー',
                 'リレーアタック対策',
+                'Viper (バイパー)',
+                'Clifford (クリフォード)',
                 'CANインベーダー対策',
                 '防犯解析・高度施工'
             ],
-            path: '/security'
+            path: '/security/panthera'
         },
         {
             id: 'security_options',
@@ -217,7 +220,7 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                 'レーザー・レーダー探知機',
                 'セキュリティー連動録画'
             ],
-            path: '/dashcam'
+            path: '/security/dashcam'
         },
         {
             id: 'maintenance',
@@ -232,7 +235,7 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                 '店舗案内・アクセスマップ',
                 'よくあるご質問 (FAQ)'
             ],
-            path: '/security'
+            path: '/security/panthera'
         }
     ];
 
