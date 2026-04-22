@@ -49,7 +49,7 @@ export const PantheraPage: React.FC = () => {
                 "トリプルセンサ / デジタル傾斜センサ",
                 "IRセンサ標準装備",
                 "バックアップサイレン標準装備",
-                "2ポイントイモビライザー"
+                "ハイブリッド・プロテクション"
             ]
         },
         {
@@ -61,7 +61,7 @@ export const PantheraPage: React.FC = () => {
                 "トリプルセンサ標準装備",
                 "デジタル傾斜センサ標準装備",
                 "ハイパワーサイレン",
-                "2ポイントイモビライザー",
+                "ハイブリッド・プロテクション",
                 "ドラレコ連携機能"
             ]
         },
@@ -72,7 +72,7 @@ export const PantheraPage: React.FC = () => {
             description: "ニーズに合わせて自由に拡張可能な、Pantheraの基本性能を凝縮。",
             features: [
                 "3ゾーンショックセンサ",
-                "2ポイントイモビライザー",
+                "ハイブリッド・プロテクション",
                 "ハイパワーサイレン",
                 "ドラレコ連携録画機能",
                 "各種オプション追加対応"
@@ -81,7 +81,7 @@ export const PantheraPage: React.FC = () => {
     ];
 
     const techSpecs = [
-        { title: "2ポイントイモビライザー", desc: "エンジン始動を2箇所で制限。乗り逃げを確実に阻止します。", icon: Lock },
+        { title: "ハイブリッド・プロテクション", desc: "最新車両の電子制御に合わせ、CANガードと連携したデジタル×システムの多重遮断を構築。", icon: Lock },
         { title: "VAS・IMBマーク取得", desc: "国土交通省の技術基準に適合。信頼の国内登録製品です。", icon: CheckCircle2 },
         { title: "4つの警戒モード", desc: "駐車環境に合わせ、リモコンで瞬時に感度設定を切り替え可能。", icon: Settings2 },
         { title: "ドラレコ連携", desc: "異常検知時にドラレコ（ユピテル製）を自動起動し証拠を記録。", icon: Video }
@@ -187,7 +187,7 @@ export const PantheraPage: React.FC = () => {
                             </thead>
                             <tbody className="text-sm font-bold">
                                 {[
-                                    { name: "2ポイントイモビライザー", z7: "●", z3: "●", z1: "●" },
+                                    { name: "ハイブリッド・プロテクション", z7: "●", z3: "●", z1: "●" },
                                     { name: "衝撃検知 (強・弱)", z7: "●", z3: "●", z1: "●" },
                                     { name: "ドア/ボンネット/トランク開放検知", z7: "●", z3: "●", z1: "●" },
                                     { name: "接近検知 (マイクロ波)", z7: "●", z3: "OP", z1: "OP" },
