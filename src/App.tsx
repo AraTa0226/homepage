@@ -145,6 +145,8 @@ function AppContent() {
 
     // Label-based mapping for generic categories or items with specific names
     const labelPathMap: Record<string, string> = {
+      'Panthera (パンテーラ)': '/security/panthera',
+      'PANTHERA (パンテーラ)': '/security/panthera',
       'Panthera (パンテーラ) Z-Series': '/security/panthera',
       'Grgo (ゴルゴ) V2': '/security/grgo-v2',
       'Grgo (ゴルゴ) V-Series': '/security/grgo',

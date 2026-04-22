@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-04-22T09:36:00Z",
-  "cacheVersion": "19",
+  "lastUpdated": "2026-04-22T09:44:00Z",
+  "cacheVersion": "20",
   "plans": [
     {
       "id": "speaker_package",
@@ -549,6 +549,56 @@
         }
       ],
       "images": []
+    },
+    {
+      "id": "security_panthera",
+      "category": "Panthera (パンテーラ) Z-Series",
+      "type": "security",
+      "items": [
+        {
+          "name": "Z706",
+          "price": "385000",
+          "badge": "フルスペックモデル",
+          "features": [
+            "全センサー装備",
+            "トリプル/傾斜/マイクロ波/IR",
+            "バックアップサイレン標準",
+            "2ポイントイモビライザー"
+          ],
+          "image": "/images/Security/model/pantheraz.webp",
+          "description": "Panthera Zシリーズ最高位モデル。4つのセンサー（32段階設定）をアルゴリズムに組み合わせ、確実な警告・警報を出します。バックアップサイレンも標準装備。"
+        },
+        {
+          "name": "Z306",
+          "price": "275000",
+          "badge": "ハイスペックモデル",
+          "features": [
+            "トリプルセンサー標準",
+            "デジタル傾斜センサー標準",
+            "ハイパワーサイレン",
+            "2ポイントイモビライザー"
+          ],
+          "image": "/images/Security/model/pantheraz.webp",
+          "description": "Z106の警戒機能に加え、人気ユニットのトリプルセンサー・デジタル傾斜センサーを標準装備したハイスペックモデル。"
+        },
+        {
+          "name": "Z106",
+          "price": "198000",
+          "badge": "ベーシックモデル",
+          "features": [
+            "3ゾーンショックセンサー",
+            "2ポイントイモビライザー",
+            "ハイパワーサイレン",
+            "ドラレコ連携録画"
+          ],
+          "image": "/images/Security/model/pantheraz.webp",
+          "description": "ドア/ボンネット/トランク全開放検知。Pantheraの高度なアルゴリズムを凝縮したベーシックモデル。"
+        }
+      ],
+      "images": [
+        "/images/Security/model/pantheraz.webp",
+        "/images/Security/model/panthera-key.webp"
+      ]
     },
     {
       "id": "security_grgo_v2",
