@@ -227,7 +227,7 @@ export const PantheraPage: React.FC = () => {
                             </h3>
                             <p className="text-gray-400 text-lg font-bold leading-relaxed mb-10">
                                 Pantheraの多機能な警戒システムに、最新のデジタル防御「CANガード」を統合。
-                                最新車両で懸念される<span className="text-white">システムエラーのリスクを排除</span>しつつ、純正スマートキーの利便性を完璧に維持。デジタル（CANガード）とシステム（Panthera）が幾重にも重なる「ハイブリッド・ディフェンス」が、現代のあらゆる盗難ルートを封鎖します。
+                                最新車両で懸念される<span className="text-white">システムエラーのリスクを排除</span>しつつ、純正スマートキーの利便性を完璧に維持。デジタル（CANガード）とシステム（Panthera）が幾重にも重なる「ハイブリッド・ディフェンス」が、CANインベーダーやキーエミュレーター（通称：ゲームボーイ）といった現代のあらゆる盗難ルートを封鎖します。
                             </p>
                             <div className="flex flex-wrap gap-4 text-white">
                                 <div className="bg-white/5 border border-white/10 px-6 py-4 rounded-2xl">
@@ -236,7 +236,7 @@ export const PantheraPage: React.FC = () => {
                                 </div>
                                 <div className="bg-white/5 border border-white/10 px-6 py-4 rounded-2xl">
                                     <p className="text-[10px] font-black text-blue-500 uppercase mb-1">Benefit 02</p>
-                                    <p className="font-bold text-sm">CANインベーダー完全無効化</p>
+                                    <p className="font-bold text-sm">CANインベーダー&ゲームボーイ無効化</p>
                                 </div>
                             </div>
                         </div>
