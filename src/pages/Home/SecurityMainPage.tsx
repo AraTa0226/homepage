@@ -639,7 +639,7 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                 <span className="text-emerald-500 font-black tracking-[0.3em] uppercase text-xs mb-4 block">Store & Access</span>
                                 <h2 className="text-4xl md:text-5xl font-black leading-tight tracking-tighter mb-8 italic text-white underline decoration-emerald-500/30">SHOP INFO</h2>
                                 <p className="text-gray-400 font-bold leading-relaxed mb-8">
-                                    福岡県大野城市の御笠川沿いに位置する、九州屈指の施工実績を誇るプロショップ。<br />
+                                    福岡県大野城市の御笠川沿いに位置する、九州No.1の施工実績を誇るプロショップ。<br />
                                     完全予約制のピット、最新鋭の診断設備、そしてオーナー様がリラックスできる商談スペースを完備しています。
                                 </p>
                             </div>

@@ -431,7 +431,7 @@ export const PantheraPage: React.FC = () => {
             <section className="py-24 bg-blue-600 text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 blur-3xl"></div>
                 <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
-                    <h3 className="text-4xl md:text-5xl font-black mb-8 tracking-tighter">日本一のセキュリティ施工実績を誇るANGへ。</h3>
+                    <h3 className="text-4xl md:text-5xl font-black mb-8 tracking-tighter">九州No.1のセキュリティ施工実績を誇るANGへ。</h3>
                     <p className="text-lg font-bold opacity-80 mb-12 max-w-2xl mx-auto italic">
                         Pantheraの性能を100%引き出すのは、確かな施工技術です。まずはお気軽にご相談ください。
                     </p>
