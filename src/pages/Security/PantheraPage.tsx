@@ -27,7 +27,6 @@ export const PantheraPage: React.FC = () => {
     const { plans } = usePrices();
     const navigate = useNavigate();
     const [selectedItem, setSelectedItem] = useState<any | null>(null);
-    const [activeModel, setActiveModel] = useState<any | null>(null);
 
     const categoryId = 'security_panthera';
     const currentCategory = plans.find(p => p.id === categoryId);
@@ -363,6 +362,10 @@ export const PantheraPage: React.FC = () => {
                     <div className="text-center mb-24">
                         <span className="text-blue-500 text-xs font-black uppercase tracking-[0.3em] mb-4 inline-block">Z-Series Selection</span>
                         <h3 className="text-4xl md:text-7xl font-black tracking-tighter italic">Models Lineup<span className="text-blue-600">.</span></h3>
+                        <p className="text-gray-400 font-bold mt-6 max-w-2xl mx-auto">
+                            最高峰のセキュリティ性能を、あなたのライフスタイルに合わせて。
+                            プロの技術者が、車両の特性と保管環境に最適な構成をご提案します。
+                        </p>
                     </div>
 
                     <div className="grid lg:grid-cols-3 gap-8">
@@ -374,7 +377,7 @@ export const PantheraPage: React.FC = () => {
                             >
                                 <span className="text-blue-400 text-[10px] font-black uppercase tracking-widest mb-4 inline-block">{model.tag}</span>
                                 <h4 className="text-5xl font-black mb-6">{model.name}</h4>
-                                <p className="text-gray-400 font-bold text-sm mb-12 leading-relaxed h-16">{model.description}</p>
+                                <p className="text-gray-400 font-bold text-sm mb-12 leading-relaxed min-h-[4rem]">{model.description}</p>
 
                                 <div className="space-y-4 mb-12 flex-grow text-gray-200">
                                     {model.features.map((f, i) => (
@@ -386,10 +389,11 @@ export const PantheraPage: React.FC = () => {
                                 </div>
 
                                 <button
-                                    onClick={() => setActiveModel(model)}
-                                    className="w-full bg-white text-gray-950 py-5 rounded-2xl font-black text-sm tracking-widest hover:bg-blue-600 hover:text-white transition-all shadow-xl shadow-black/20"
+                                    onClick={() => navigate('/reservation')}
+                                    className="w-full bg-white text-gray-950 py-5 rounded-2xl font-black text-sm tracking-widest hover:bg-blue-600 hover:text-white transition-all shadow-xl shadow-black/20 group flex items-center justify-center gap-3"
                                 >
-                                    PLAN DETAILS
+                                    <span>無料相談・予約</span>
+                                    <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                 </button>
                             </motion.div>
                         ))}
@@ -442,89 +446,6 @@ export const PantheraPage: React.FC = () => {
                 </div>
             </section>
 
-            {/* Model Detail Modal */}
-            <AnimatePresence>
-                {activeModel && (
-                    <div className="fixed inset-0 z-[100] flex items-center justify-center px-4">
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            onClick={() => setActiveModel(null)}
-                            className="absolute inset-0 bg-black/80 backdrop-blur-sm"
-                        />
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.95, y: 20 }}
-                            animate={{ opacity: 1, scale: 1, y: 0 }}
-                            exit={{ opacity: 0, scale: 0.95, y: 20 }}
-                            className="relative bg-white w-full max-w-4xl max-h-[90vh] rounded-[3.5rem] overflow-hidden shadow-2xl flex flex-col md:flex-row"
-                        >
-                            <button
-                                onClick={() => setActiveModel(null)}
-                                className="absolute top-6 right-6 z-10 w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-900 hover:bg-red-500 hover:text-white transition-all shadow-lg"
-                            >
-                                <X className="w-5 h-5" />
-                            </button>
-
-                            <div className="md:w-2/5 bg-gray-50 p-12 flex flex-col justify-center border-r border-gray-100">
-                                <div className="space-y-6 text-gray-950">
-                                    <span className="bg-blue-600 text-white text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest">{activeModel.tag}</span>
-                                    <h4 className="text-6xl font-black text-gray-900 italic tracking-tighter">{activeModel.name}</h4>
-                                    <div className="pt-12">
-                                        <div className="bg-blue-600 p-8 rounded-3xl shadow-xl shadow-blue-500/20">
-                                            <p className="text-[10px] font-black text-white/60 uppercase tracking-[0.2em] mb-4">Core Technology</p>
-                                            <div className="flex items-center gap-3 text-white mb-2 font-black italic">
-                                                <Activity className="w-5 h-5 text-blue-300" />
-                                                <span>32段階独立感度調整</span>
-                                            </div>
-                                            <div className="flex items-center gap-3 text-white font-black italic">
-                                                <Lock className="w-5 h-5 text-blue-300" />
-                                                <span>ハイブリッド・防御</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="md:w-3/5 p-12 overflow-y-auto">
-                                <div className="space-y-12">
-                                    <div>
-                                        <h5 className="text-[10px] font-black text-blue-600 uppercase tracking-widest mb-6 border-b border-blue-100 pb-2">Full Description</h5>
-                                        <p className="text-gray-600 font-bold leading-relaxed text-lg italic">
-                                            {activeModel.longDescription}
-                                        </p>
-                                    </div>
-
-                                    <div>
-                                        <h5 className="text-[10px] font-black text-blue-600 uppercase tracking-widest mb-6 border-b border-blue-100 pb-2">Technical Specs</h5>
-                                        <div className="grid grid-cols-2 gap-x-8 gap-y-4 text-gray-900">
-                                            {Object.entries(activeModel.specs).map(([key, value]: [string, any]) => (
-                                                <div key={key} className="flex flex-col gap-1">
-                                                    <span className="text-[9px] font-black text-gray-400 uppercase tracking-widest">{key}</span>
-                                                    <span className="text-sm font-bold">{value}</span>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-
-                                    <div className="pt-6">
-                                        <button
-                                            onClick={() => {
-                                                setActiveModel(null);
-                                                navigate('/reservation');
-                                            }}
-                                            className="w-full bg-gray-900 text-white py-6 rounded-2xl font-black text-sm tracking-[0.2em] shadow-xl hover:bg-blue-600 transition-all flex items-center justify-center gap-4 group"
-                                        >
-                                            <Calendar className="w-5 h-5 opacity-50 group-hover:opacity-100" />
-                                            <span>このプランを予約・相談する</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
-                    </div>
-                )}
-            </AnimatePresence>
         </motion.div>
     );
 };
