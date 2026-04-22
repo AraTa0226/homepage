@@ -226,8 +226,8 @@ export const PantheraPage: React.FC = () => {
                                 <span className="text-blue-600">鉄壁の防御を両立。</span>
                             </h3>
                             <p className="text-gray-400 text-lg font-bold leading-relaxed mb-10">
-                                Pantheraの性能を最大限に活かしつつ、最新の「CANインベーダー」対策を完璧にするなら、<span className="text-white">CANガードの追加施工</span>を強く推奨します。
-                                純正スマートキーの快適な操作性はそのままに、車両システムへの不正アクセスを物理的・電子的に遮断。デジタルとアナログ、両面からの守護が究極の安心を生みます。
+                                Pantheraの多機能な警戒システムに、最新のデジタル防御「CANガード」を統合。
+                                最新車両で懸念される<span className="text-white">システムエラーのリスクを排除</span>しつつ、純正スマートキーの利便性を完璧に維持。デジタル（CANガード）とシステム（Panthera）が幾重にも重なる「ハイブリッド・ディフェンス」が、現代のあらゆる盗難ルートを封鎖します。
                             </p>
                             <div className="flex flex-wrap gap-4 text-white">
                                 <div className="bg-white/5 border border-white/10 px-6 py-4 rounded-2xl">
@@ -278,9 +278,9 @@ export const PantheraPage: React.FC = () => {
                             <div className="w-16 h-16 rounded-[2rem] bg-blue-50 flex items-center justify-center text-blue-600 mb-8">
                                 <Lock className="w-8 h-8" />
                             </div>
-                            <h4 className="text-2xl font-black italic border-l-4 border-blue-600 pl-6">物理的に断つ、<br />2ポイント・イモビ。</h4>
+                            <h4 className="text-2xl font-black italic border-l-4 border-blue-600 pl-6">デジタルとアナログ、<br />究極のハイブリッド。</h4>
                             <p className="text-gray-500 font-bold leading-relaxed">
-                                多くのセキュリティが電子信号のみで制御する中、Pantheraは独立した2系統の回路を物理的に遮断する「2ポイントイモビライザー」を搭載。万が一、メインユニットがハッキングされても、車両の起動を物理的に阻止し、自走盗難から愛車を確実に守ります。
+                                最新車両の複雑な電子システムでは、単純な回路カットはエラーの原因となります。ANGでは、CANガードによる「デジタルブロック」と、Pantheraが司る「システム防衛」を統合。車両へのダメージを避けつつ、最新のデジタル窃盗と古典的な物理破壊、その両面を完璧に封じ込めるハイブリッド施工を確立しています。
                             </p>
                         </div>
                         <div className="space-y-6">
