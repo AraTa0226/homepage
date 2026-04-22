@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-04-22T09:44:00Z",
-  "cacheVersion": "20",
+  "lastUpdated": "2026-04-22T09:52:00Z",
+  "cacheVersion": "21",
   "plans": [
     {
       "id": "speaker_package",
@@ -565,7 +565,7 @@
             "バックアップサイレン標準",
             "2ポイントイモビライザー"
           ],
-          "image": "/images/Security/model/pantheraz.webp",
+          "image": "/images/Security/model/panthera.webp",
           "description": "Panthera Zシリーズ最高位モデル。4つのセンサー（32段階設定）をアルゴリズムに組み合わせ、確実な警告・警報を出します。バックアップサイレンも標準装備。"
         },
         {
@@ -596,7 +596,7 @@
         }
       ],
       "images": [
-        "/images/Security/model/pantheraz.webp",
+        "/images/Security/model/panthera.webp",
         "/images/Security/model/panthera-key.webp"
       ]
     },

@@ -1405,7 +1405,7 @@ const initialPlans: PlanCategory[] = [
         price: "385000",
         badge: "フルスペックモデル",
         features: ["全センサー装備", "マイクロ波/トリプル/傾斜/IR", "バックアップサイレン", "2ポイントイモビライザー"],
-        image: "/images/Security/model/pantheraz.webp",
+        image: "/images/Security/model/panthera.webp",
         description: "最高位フルスペックモデル。あらゆる死角を排除した鉄壁のセキュリティ。"
       },
       {
@@ -1413,7 +1413,7 @@ const initialPlans: PlanCategory[] = [
         price: "275000",
         badge: "ハイスペックモデル",
         features: ["トリプルセンサー", "デジタル傾斜センサー", "ハイパワーサイレン", "2ポイントイモビライザー"],
-        image: "/images/Security/model/pantheraz.webp",
+        image: "/images/Security/model/panthera.webp",
         description: "主要センサーを標準装備した、攻守のバランスに優れた人気モデル。"
       },
       {
@@ -1421,7 +1421,7 @@ const initialPlans: PlanCategory[] = [
         price: "198000",
         badge: "ベーシックモデル",
         features: ["3ゾーンショックセンサー", "ドア/トランク/ボンネット検知", "特定小電力リモコン", "イモビライザー"],
-        image: "/images/Security/model/pantheraz.webp",
+        image: "/images/Security/model/panthera.webp",
         description: "パンテーラの卓越した基本性能を凝縮したエントリーモデル。"
       }
     ]

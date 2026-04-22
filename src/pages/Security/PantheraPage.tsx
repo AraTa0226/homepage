@@ -34,7 +34,7 @@ export const PantheraPage: React.FC = () => {
         title: "Panthera (パンテーラ)",
         subtitle: "日本最高峰のセキュリティシステムを誇る、最強の安心を。",
         description: "純正キーの電波を悪用する「リレーアタック」や、車両システムをハッキングする「CANインベンター」にも完全対応。益々巧妙化する盗難手口から、大切な愛車を守り抜きます。",
-        image: "/images/Security/model/pantheraz.webp",
+        image: "/images/Security/model/panthera.webp",
         remoteImage: "/images/Security/model/panthera-key.webp"
     };
 
