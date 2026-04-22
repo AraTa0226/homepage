@@ -211,6 +211,91 @@ export const PantheraPage: React.FC = () => {
                 </div>
             </section>
 
+            {/* Strategic Synergy: CAN Guard Section */}
+            <section className="py-32 bg-gray-950 relative overflow-hidden">
+                <div className="absolute inset-0 bg-blue-600/5 mix-blend-overlay"></div>
+                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div className="order-2 lg:order-1">
+                            <div className="inline-flex items-center gap-3 px-4 py-2 bg-blue-600/20 rounded-full border border-blue-600/30 mb-8">
+                                <Zap className="w-4 h-4 text-blue-400" />
+                                <span className="text-blue-400 text-[10px] font-black uppercase tracking-[0.2em]">Strategic Synergy</span>
+                            </div>
+                            <h3 className="text-4xl md:text-6xl font-black text-white tracking-tighter mb-8 leading-tight italic">
+                                スマートキーの利便性と、<br />
+                                <span className="text-blue-600">鉄壁の防御を両立。</span>
+                            </h3>
+                            <p className="text-gray-400 text-lg font-bold leading-relaxed mb-10">
+                                Pantheraの性能を最大限に活かしつつ、最新の「CANインベーダー」対策を完璧にするなら、<span className="text-white">CANガードの追加施工</span>を強く推奨します。
+                                純正スマートキーの快適な操作性はそのままに、車両システムへの不正アクセスを物理的・電子的に遮断。デジタルとアナログ、両面からの守護が究極の安心を生みます。
+                            </p>
+                            <div className="flex flex-wrap gap-4 text-white">
+                                <div className="bg-white/5 border border-white/10 px-6 py-4 rounded-2xl">
+                                    <p className="text-[10px] font-black text-blue-500 uppercase mb-1">Benefit 01</p>
+                                    <p className="font-bold text-sm">スマートキー連動を維持</p>
+                                </div>
+                                <div className="bg-white/5 border border-white/10 px-6 py-4 rounded-2xl">
+                                    <p className="text-[10px] font-black text-blue-500 uppercase mb-1">Benefit 02</p>
+                                    <p className="font-bold text-sm">CANインベーダー完全無効化</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="order-1 lg:order-2 relative aspect-video rounded-[3rem] overflow-hidden border border-white/10">
+                            <SafeImage src="/images/Security/model/panthera.webp" className="w-full h-full object-cover scale-150 grayscale opacity-40" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/20 to-transparent"></div>
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="relative">
+                                    <div className="absolute inset-0 bg-blue-600 blur-[60px] opacity-40 animate-pulse"></div>
+                                    <ShieldCheck className="w-32 h-32 text-blue-600 relative z-10 drop-shadow-2xl" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Why Panthera Section */}
+            <section className="py-32 bg-white">
+                <div className="max-w-7xl mx-auto px-4">
+                    <div className="max-w-3xl mb-24">
+                        <span className="text-blue-600 font-black tracking-[0.4em] uppercase text-xs mb-4 block">The Ultimate Choice</span>
+                        <h3 className="text-5xl md:text-7xl font-black text-gray-900 tracking-tighter italic leading-[1.1]">
+                            なぜ、<br />Pantheraなのか。
+                        </h3>
+                    </div>
+
+                    <div className="grid md:grid-cols-3 gap-12 text-gray-900">
+                        <div className="space-y-6">
+                            <div className="w-16 h-16 rounded-[2rem] bg-blue-50 flex items-center justify-center text-blue-600 mb-8">
+                                <Activity className="w-8 h-8" />
+                            </div>
+                            <h4 className="text-2xl font-black italic border-l-4 border-blue-600 pl-6">誤作動を排除する、<br />極限の解析精度。</h4>
+                            <p className="text-gray-500 font-bold leading-relaxed">
+                                Pantheraが最高峰とされる最大の理由は、その「解析精度」にあります。独自のアルゴリズムが環境ノイズと実害を瞬時に判別。32段階という緻密なセンサー調整により、日本の過密な駐車環境下でも「鳴るべき時だけ鳴る」信頼性を実現しています。
+                            </p>
+                        </div>
+                        <div className="space-y-6">
+                            <div className="w-16 h-16 rounded-[2rem] bg-blue-50 flex items-center justify-center text-blue-600 mb-8">
+                                <Lock className="w-8 h-8" />
+                            </div>
+                            <h4 className="text-2xl font-black italic border-l-4 border-blue-600 pl-6">物理的に断つ、<br />2ポイント・イモビ。</h4>
+                            <p className="text-gray-500 font-bold leading-relaxed">
+                                多くのセキュリティが電子信号のみで制御する中、Pantheraは独立した2系統の回路を物理的に遮断する「2ポイントイモビライザー」を搭載。万が一、メインユニットがハッキングされても、車両の起動を物理的に阻止し、自走盗難から愛車を確実に守ります。
+                            </p>
+                        </div>
+                        <div className="space-y-6">
+                            <div className="w-16 h-16 rounded-[2rem] bg-blue-50 flex items-center justify-center text-blue-600 mb-8">
+                                <ShieldCheck className="w-8 h-8" />
+                            </div>
+                            <h4 className="text-2xl font-black italic border-l-4 border-blue-600 pl-6">日本生まれの、<br />日本専用設計。</h4>
+                            <p className="text-gray-500 font-bold leading-relaxed">
+                                海外製セキュリティにはない、日本の気候、複雑な駐車事情、そして日本の車泥棒の手口を熟知。ユピテルの長年の実績が注ぎ込まれたPantheraは、日本のオーナー様のためにゼロから設計された、まさにメイドインジャパンの守護神です。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Remote Info Section */}
             <section className="py-32 overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4">
