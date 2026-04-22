@@ -17,7 +17,8 @@ import {
     Radio,
     Activity,
     Bell,
-    Video
+    Video,
+    Calendar
 } from 'lucide-react';
 import { SafeImage } from '../../components/ui/SafeImage';
 
@@ -26,6 +27,7 @@ export const PantheraPage: React.FC = () => {
     const { plans } = usePrices();
     const navigate = useNavigate();
     const [selectedItem, setSelectedItem] = useState<any | null>(null);
+    const [activeModel, setActiveModel] = useState<any | null>(null);
 
     const categoryId = 'security_panthera';
     const currentCategory = plans.find(p => p.id === categoryId);
@@ -43,40 +45,64 @@ export const PantheraPage: React.FC = () => {
             id: "z706",
             name: "Z706",
             tag: "フルスペックモデル",
+            price: "385,000",
             description: "全てのセンサを装備。シリーズ最高位の鉄壁ガード。",
+            longDescription: "シリーズ最高位のフルスペックモデル。4つのセンサー（32段階設定）をアルゴリズムに組み合わせ、確実な警告・警報を出します。バックアップサイレンも標準装備され、バッテリーを外されても警報を継続します。あらゆる死角を排除し、究極の安心をお届けします。",
             features: [
                 "3ゾーンワイドエリアマイクロ波センサ",
                 "トリプルセンサ / デジタル傾斜センサ",
                 "IRセンサ標準装備",
                 "バックアップサイレン標準装備",
                 "ハイブリッド・プロテクション"
-            ]
+            ],
+            specs: {
+                "センサー数": "4（32段階調整）",
+                "イモビライザー": "2ポイント",
+                "サイレン": "ハイパワー + バックアップ",
+                "リモコン": "フルカラー液晶アンサーバック"
+            }
         },
         {
             id: "z306",
             name: "Z306",
             tag: "ハイスペックモデル",
+            price: "275,000",
             description: "人気の常用ユニットを標準装備した、攻守のバランスに優れたモデル。",
+            longDescription: "スタンダードモデルに、特に要望の多い「トリプルセンサー」と「デジタル傾斜センサー」を標準装備。ジャッキアップや衝撃に対して非常に高い検知能力を発揮します。高性能とコストパフォーマンスのバランスが最も優れた、ANGでも一番人気のモデルです。",
             features: [
                 "トリプルセンサ標準装備",
                 "デジタル傾斜センサ標準装備",
                 "ハイパワーサイレン",
                 "ハイブリッド・プロテクション",
                 "ドラレコ連携機能"
-            ]
+            ],
+            specs: {
+                "センサー数": "2（32段階調整）",
+                "イモビライザー": "2ポイント",
+                "サイレン": "ハイパワーサイレン",
+                "リモコン": "フルカラー液晶アンサーバック"
+            }
         },
         {
             id: "z106",
             name: "Z106",
             tag: "ベーシックモデル",
+            price: "198,000",
             description: "ニーズに合わせて自由に拡張可能な、Pantheraの基本性能を凝縮。",
+            longDescription: "Panthera独自の高度な解析アルゴリズムを凝縮したベーシックモデル。ドア・ボンネット・トランクの全開放検知や、3ゾーンショックセンサーを搭載。特定の感度調整など、Pantheraが誇る基本性能をすべて備えており、必要に応じて各センサーをオプションで追加可能です。",
             features: [
                 "3ゾーンショックセンサ",
                 "ハイブリッド・プロテクション",
                 "ハイパワーサイレン",
                 "ドラレコ連携録画機能",
                 "各種オプション追加対応"
-            ]
+            ],
+            specs: {
+                "センサー数": "1（32段階調整）",
+                "イモビライザー": "2ポイント",
+                "サイレン": "ハイパワーサイレン",
+                "リモコン": "フルカラー液晶アンサーバック"
+            }
         }
     ];
 
@@ -357,7 +383,7 @@ export const PantheraPage: React.FC = () => {
                                 </div>
 
                                 <button
-                                    onClick={() => navigate('/reservation')}
+                                    onClick={() => setActiveModel(model)}
                                     className="w-full bg-white text-gray-950 py-5 rounded-2xl font-black text-sm tracking-widest hover:bg-blue-600 hover:text-white transition-all shadow-xl shadow-black/20"
                                 >
                                     PLAN DETAILS
@@ -412,6 +438,84 @@ export const PantheraPage: React.FC = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Model Detail Modal */}
+            <AnimatePresence>
+                {activeModel && (
+                    <div className="fixed inset-0 z-[100] flex items-center justify-center px-4">
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setActiveModel(null)}
+                            className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+                        />
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+                            className="relative bg-white w-full max-w-4xl max-h-[90vh] rounded-[3.5rem] overflow-hidden shadow-2xl flex flex-col md:flex-row"
+                        >
+                            <button
+                                onClick={() => setActiveModel(null)}
+                                className="absolute top-6 right-6 z-10 w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-900 hover:bg-red-500 hover:text-white transition-all shadow-lg"
+                            >
+                                <X className="w-5 h-5" />
+                            </button>
+
+                            <div className="md:w-2/5 bg-gray-50 p-12 flex flex-col justify-center border-r border-gray-100">
+                                <div className="space-y-6 text-gray-950">
+                                    <span className="bg-blue-600 text-white text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest">{activeModel.tag}</span>
+                                    <h4 className="text-6xl font-black text-gray-900 italic tracking-tighter">{activeModel.name}</h4>
+                                    <div className="pt-8 space-y-4">
+                                        <div className="flex items-center justify-between border-b border-gray-200 pb-4">
+                                            <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Installation Price</span>
+                                            <span className="text-2xl font-black text-blue-600">¥{activeModel.price}<span className="text-[10px] ml-1">〜 (税込)</span></span>
+                                        </div>
+                                        <p className="text-[10px] font-bold text-gray-400 italic leading-relaxed text-right">※車両・工賃込の概算価格です。車種により変動します。</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="md:w-3/5 p-12 overflow-y-auto">
+                                <div className="space-y-12">
+                                    <div>
+                                        <h5 className="text-[10px] font-black text-blue-600 uppercase tracking-widest mb-6 border-b border-blue-100 pb-2">Full Description</h5>
+                                        <p className="text-gray-600 font-bold leading-relaxed text-lg italic">
+                                            {activeModel.longDescription}
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <h5 className="text-[10px] font-black text-blue-600 uppercase tracking-widest mb-6 border-b border-blue-100 pb-2">Technical Specs</h5>
+                                        <div className="grid grid-cols-2 gap-x-8 gap-y-4 text-gray-900">
+                                            {Object.entries(activeModel.specs).map(([key, value]: [string, any]) => (
+                                                <div key={key} className="flex flex-col gap-1">
+                                                    <span className="text-[9px] font-black text-gray-400 uppercase tracking-widest">{key}</span>
+                                                    <span className="text-sm font-bold">{value}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    <div className="pt-6">
+                                        <button
+                                            onClick={() => {
+                                                setActiveModel(null);
+                                                navigate('/reservation');
+                                            }}
+                                            className="w-full bg-gray-900 text-white py-6 rounded-2xl font-black text-sm tracking-[0.2em] shadow-xl hover:bg-blue-600 transition-all flex items-center justify-center gap-4 group"
+                                        >
+                                            <Calendar className="w-5 h-5 opacity-50 group-hover:opacity-100" />
+                                            <span>このプランを予約・相談する</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </div>
+                )}
+            </AnimatePresence>
         </motion.div>
     );
 };
