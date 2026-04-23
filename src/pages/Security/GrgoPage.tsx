@@ -1,222 +1,417 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import React from 'react';
+import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import { usePrices, formatPrice } from '../../contexts/PriceContext';
 import { useSite } from '../../contexts/SiteContext';
 import {
     ShieldCheck,
     CheckCircle2,
     ArrowLeft,
-    X,
-    Settings2,
+    Shield,
     Zap,
-    Info
+    Activity,
+    Smartphone,
+    Gamepad2,
+    Clock,
+    Lock,
+    Eye,
+    Signal,
+    Thermometer,
+    Settings,
+    MessageSquare
 } from 'lucide-react';
 import { SafeImage } from '../../components/ui/SafeImage';
 
 export const GrgoPage: React.FC = () => {
     const { assets } = useSite();
-    const { plans } = usePrices();
     const navigate = useNavigate();
-    const [selectedItem, setSelectedItem] = useState<any | null>(null);
 
-    const categoryId = 'security_grgo';
-    const currentCategory = plans.find(p => p.id === categoryId);
-
-    const detail = {
-        title: "Grgo VⅡシリーズ",
-        subtitle: "日本特有の盗難手口と環境に呼応する、純国産の高精度セキュリティ。",
-        description: "ユピテルが誇る純国産ブランド「Grgo（ゴルゴ）」。日本特有の住宅環境や駐車事情に合わせ、きめ細かい感度設定と誤作動の少なさを追求した、国内最高峰の信頼性を誇るセキュリティシステムです。全モデルで共通の高い基本性能を備えつつ、リモコンの仕様や標準装備されるセンサーの数により、お客様のニーズに合わせた4つのラインアップを展開しています。",
-        image: "/images/Security/model/grgo.webp",
-        specs: { usageStandby: "2.8mA 〜 8.2mA", usageAlert: "4.0mA 〜 10.7mA" }
-    };
-
-    const featureTable = [
-        { name: "アンサーバックリモコン", zv: "● (1台付)", zvt: "● (1台付)", vs: "-", vf: "OP", desc: "カラー液晶で異常・状態を通知" },
-        { name: "1WAYリモコン", zv: "OP", zvt: "● (1台付)", vs: "-", vf: "● (1台付)", desc: "5ボタン単方向リモコン" },
-        { name: "警戒モード", zv: "3モード", zvt: "3モード", vs: "3モード", vf: "3モード", desc: "環境に合わせ警戒感度を切替" },
-        { name: "センサー感度設定", zv: "●", zvt: "●", vs: "▲", vf: "▲", desc: "32段階設定。▲は施工店用" },
-        { name: "イモビライザー機能", zv: "1系統", zvt: "1系統", vs: "1系統", vf: "1系統", desc: "エンジン始動を制限" },
-        { name: "ショックセンサー", zv: "●", zvt: "●", vs: "●", vf: "●", desc: "強弱2段階の衝撃を検知" },
-        { name: "トリプルセンサー", zv: "OP", zvt: "●", vs: "OP", vf: "OP", desc: "ジャッキアップや接近も検知" },
-        { name: "傾斜センサー", zv: "OP", zvt: "●", vs: "OP", vf: "OP", desc: "1度の傾きを検知。盗難対策" },
-        { name: "不正アンロック検知", zv: "-", zvt: "-", vs: "●", vf: "-", desc: "純正キー以外での解除を警戒" },
-        { name: "MCアダプタⅣ", zv: "OP", zvt: "OP", vs: "● (付属)", vf: "OP", desc: "純正キー連動・リレーアタック対策" },
-        { name: "デジタル防衛", zv: "OP", zvt: "OP", vs: "OP", vf: "OP", desc: "CANガード施工で最新手口に対応" },
+    const lineUp = [
+        { id: 'zvt2', name: 'Grgo-ZVTⅡ', type: 'アンサーバックモデル', desc: '視認性・利便性に優れたフルカラー液晶リモコンを標準装備。' },
+        { id: 'zv2', name: 'Grgo-ZVⅡ', type: 'アンサーバックモデル', desc: 'ベースモデル。高機能を直感的に操作可能。' },
+        { id: '1vs2', name: 'Grgo-1VsⅡ', type: '純正キーレス連動モデル', desc: '純正スマートキーの操作で警戒解除・開始が可能。' },
+        { id: '5vf2', name: 'Grgo-5VfⅡ', type: '単方向モデル', desc: '5ボタン単方向リモコン付属。シンプルな操作性。' },
     ];
 
     return (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-white pb-24">
-            <div className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 flex items-center justify-between px-4 h-16">
-                <button onClick={() => navigate('/security-home')} className="flex items-center gap-2 text-gray-600 font-bold">
-                    <ArrowLeft className="w-5 h-5" /> <span className="text-sm uppercase tracking-widest">BACK</span>
-                </button>
-                <h1 className="font-black text-xl italic tracking-tighter">Grgo VⅡ</h1>
-                <button onClick={() => navigate('/reservation')} className="bg-blue-600 text-white px-6 py-2 rounded-xl font-bold text-xs">相談予約</button>
+        <div className="min-h-screen bg-[#05070a] text-white selection:bg-blue-500/30">
+            {/* Sticky Header */}
+            <header className="fixed top-0 w-full z-[100] bg-[#05070a]/80 backdrop-blur-2xl border-b border-white/5">
+                <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                    <button
+                        onClick={() => navigate('/security-home')}
+                        className="group flex items-center gap-3 text-gray-500 hover:text-white transition-colors"
+                    >
+                        <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-white/10 transition-all">
+                            <ArrowLeft className="w-5 h-5" />
+                        </div>
+                        <span className="text-[10px] font-black tracking-[0.3em] uppercase">BACK TO SECURITY</span>
+                    </button>
+
+                    <div className="flex flex-col items-center">
+                        <span className="text-[10px] font-black text-blue-500 tracking-[0.5em] uppercase mb-1">Main Series</span>
+                        <h1 className="text-2xl font-black italic tracking-tighter">Grgo VⅡ</h1>
+                    </div>
+
+                    <button
+                        onClick={() => navigate('/reservation')}
+                        className="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-full font-black text-[10px] tracking-widest transition-all shadow-lg shadow-blue-600/20 active:scale-95"
+                    >
+                        相談予約
+                    </button>
+                </div>
+            </header>
+
+            {/* Hero Section */}
+            <section className="relative h-[95vh] min-h-[700px] w-full pt-20 overflow-hidden bg-black">
+                <SafeImage
+                    src="/images/Security/model/grgo-h.webp"
+                    className="w-full h-full object-contain"
+                    alt="Grgo Series Hero"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#05070a] via-transparent to-transparent"></div>
+            </section>
+
+            {/* Content Container */}
+            <div className="max-w-7xl mx-auto px-6 pb-48">
+
+                {/* Introduction Section */}
+                <section className="relative z-10 -mt-32 mb-48">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="bg-[#0b1015] border border-white/5 rounded-[4rem] p-12 md:p-24 shadow-2xl backdrop-blur-3xl"
+                    >
+                        <div className="grid lg:grid-cols-2 gap-20 items-center">
+                            <div className="space-y-12">
+                                <div className="space-y-4">
+                                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-600/10 border border-blue-500/20 text-blue-400 text-[10px] font-black tracking-widest uppercase">
+                                        <ShieldCheck className="w-3 h-3" />
+                                        Grgo販売取付店 専門モデル
+                                    </div>
+                                    <h2 className="text-4xl md:text-7xl font-black text-white italic tracking-tighter leading-[0.9]">
+                                        純国産の<br />
+                                        <span className="text-blue-500">最高峰ガード。</span>
+                                    </h2>
+                                </div>
+                                <p className="text-gray-400 font-bold text-lg leading-relaxed max-w-xl">
+                                    益々巧妙化する不審な盗難手口。日本特有の住宅環境と駐車事情。
+                                    これらに対応すべく、Grgoは新システムの採用や、きめ細かい感度設定を可能にしました。
+                                    日本人だからこそ創れる設計で、Grgoはこれからも純国産にこだわり、高い信頼性と安心をご提供します。
+                                </p>
+                            </div>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div className="p-8 rounded-3xl bg-white/5 border border-white/5 space-y-4">
+                                    <h4 className="text-white font-black text-xs uppercase tracking-widest">適合基準</h4>
+                                    <p className="text-[10px] text-gray-500 font-bold leading-relaxed">全ての製品でVAS・IMBマークを取得。新保安基準に基づいた適合登録品です。</p>
+                                </div>
+                                <div className="p-8 rounded-3xl bg-white/5 border border-white/5 space-y-4">
+                                    <h4 className="text-white font-black text-xs uppercase tracking-widest">技術基準</h4>
+                                    <p className="text-[10px] text-gray-500 font-bold leading-relaxed">総務省技術基準（技適）に適合した国内専用設計。安心の特定小電力無線を採用。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </motion.div>
+                </section>
+
+                {/* Lineup Stack */}
+                <section className="space-y-48">
+
+                    {/* Model Overview Section */}
+                    <div className="space-y-24">
+                        <div className="text-center space-y-6">
+                            <span className="text-blue-500 font-black tracking-[0.4em] uppercase text-[10px]">Product Lineup</span>
+                            <h3 className="text-4xl md:text-6xl font-black italic tracking-tighter">選ばれる4つの形態。</h3>
+                        </div>
+
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            {lineUp.map((item) => (
+                                <div key={item.id} className="group relative bg-[#0c1218] border border-white/5 rounded-[3rem] p-10 hover:border-blue-500/30 transition-all overflow-hidden flex flex-col justify-between">
+                                    <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/5 blur-[60px] group-hover:bg-blue-600/10 transition-all"></div>
+                                    <div className="space-y-6 relative z-10">
+                                        <div className="space-y-2">
+                                            <span className="text-[10px] font-black text-blue-500 uppercase tracking-widest">{item.type}</span>
+                                            <h4 className="text-3xl font-black italic tracking-tighter text-white">{item.name}</h4>
+                                        </div>
+                                        <p className="text-xs text-gray-500 font-bold leading-relaxed">{item.desc}</p>
+                                    </div>
+                                    <div className="pt-8 relative z-10">
+                                        <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all text-gray-500">
+                                            <Shield className="w-5 h-5" />
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Detailed Section: Answerback Models */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="space-y-32"
+                    >
+                        <div className="grid lg:grid-cols-2 gap-20 items-center">
+                            <div className="space-y-8">
+                                <span className="text-blue-500 font-black tracking-[0.4em] uppercase text-[10px]">Answerback Series</span>
+                                <h3 className="text-4xl md:text-5xl font-black italic tracking-tighter">ZVTⅡ / ZVⅡ</h3>
+                                <p className="text-gray-400 font-bold text-lg leading-relaxed">
+                                    異常の発生を通報音とバイブレータでお知らせ。
+                                    フルカラー・アニメーション表示のリモコンで、車両の状態を一目で把握。
+                                    2アクションのダイレクト操作で、高い防犯性能を直感的にコントロールできます。
+                                </p>
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div className="p-6 bg-white/5 border border-white/5 rounded-3xl">
+                                        <h5 className="text-white font-black text-xs mb-2">履歴履歴機能</h5>
+                                        <p className="text-[10px] text-gray-500 font-bold">4秒おきのリモコン通知で聞き逃しを防止</p>
+                                    </div>
+                                    <div className="p-6 bg-white/5 border border-white/5 rounded-3xl">
+                                        <h5 className="text-white font-black text-xs mb-2">ダイレクト操作</h5>
+                                        <p className="text-[10px] text-gray-500 font-bold">素早い操作が可能な直感的インターフェース</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="relative aspect-square rounded-[4rem] bg-white/5 border border-white/5 p-8 overflow-hidden flex items-center justify-center group">
+                                <SafeImage src="/images/Security/model/grgo-key.webp" className="w-[85%] h-auto transform group-hover:scale-110 transition-transform duration-1000" />
+                            </div>
+                        </div>
+
+                        <div className="grid lg:grid-cols-2 gap-12 bg-white/5 p-12 md:p-20 rounded-[4rem] border border-white/5">
+                            <div className="space-y-8">
+                                <h4 className="text-2xl font-black italic tracking-tighter text-blue-500 uppercase tracking-widest">主な対応機能</h4>
+                                <div className="grid md:grid-cols-2 gap-y-4 gap-x-8">
+                                    {[
+                                        "ドアセンサ / トランクセンサ",
+                                        "イモビライザ (1系統)",
+                                        "ショックセンサ (強弱検知)",
+                                        "トリプルセンサ (物理衝撃/空圧)",
+                                        "傾斜センサ (ジャッキアップ)",
+                                        "フルカラー液晶リモコン",
+                                        "ハザードフラッシュ機能",
+                                        "暗証番号式バレースイッチ"
+                                    ].map((f, i) => (
+                                        <div key={i} className="flex items-center gap-3 text-xs font-black text-gray-300">
+                                            <CheckCircle2 className="w-4 h-4 text-blue-600" />
+                                            {f}
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                            <div className="space-y-8">
+                                <h4 className="text-2xl font-black italic tracking-tighter text-gray-400 uppercase tracking-widest">主要オプション</h4>
+                                <div className="grid md:grid-cols-2 gap-y-4 gap-x-8">
+                                    {[
+                                        "マイクロ波センサ (接近検知)",
+                                        "ボンネットセンサ (不正開放)",
+                                        "バックアップサイレン (電源遮断対策)",
+                                        "IRセンサ (車内侵入検知)",
+                                        "スタータユニット (リモコン始動)",
+                                        "ドライブレコーダー録画連動",
+                                        "純正キーレスアダプタ (MCアダプタⅣ)",
+                                        "Smart Xross 対応"
+                                    ].map((o, i) => (
+                                        <div key={i} className="flex items-center gap-3 text-xs font-black text-gray-500">
+                                            <div className="w-1 h-1 rounded-full bg-gray-700" />
+                                            {o}
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </motion.div>
+
+                    {/* Detailed Section: 1Vs2 (Keyless 연동) */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="grid lg:grid-cols-2 gap-20 items-center"
+                    >
+                        <div className="order-2 lg:order-1 relative aspect-video rounded-[4rem] bg-white/5 border border-white/5 p-12 overflow-hidden flex items-center justify-center">
+                            <Lock className="w-64 h-64 text-blue-600/5 absolute" />
+                            <div className="text-center relative z-10 space-y-8">
+                                <Gamepad2 className="w-16 h-16 text-blue-500 mx-auto" />
+                                <h4 className="text-3xl font-black">純正連動の究極系。</h4>
+                            </div>
+                        </div>
+                        <div className="order-1 lg:order-2 space-y-8">
+                            <span className="text-blue-500 font-black tracking-[0.4em] uppercase text-[10px]">OEM Integration</span>
+                            <h3 className="text-4xl md:text-5xl font-black italic tracking-tighter">Grgo-1VsⅡ</h3>
+                            <p className="text-gray-400 font-bold text-lg leading-relaxed">
+                                純正スマートキーのドアロック操作に連動して警戒を開始・解除。
+                                セキュリティを意識することなく、いつもの操作でGrgoをコントロールできます。
+                                独自の不正アンロック検知機能により、利便性と防犯性能を高次元で両立。
+                            </p>
+                            <div className="space-y-4">
+                                <div className="flex items-center gap-4 p-6 rounded-3xl bg-blue-600/5 border border-blue-500/10">
+                                    <Zap className="w-6 h-6 text-blue-500" />
+                                    <span className="text-sm font-black italic">リレーアタック・CANインベーダー対策</span>
+                                </div>
+                            </div>
+                        </div>
+                    </motion.div>
+
+                    {/* Technical Matrix Table */}
+                    <section className="space-y-24 scroll-mt-32" id="matrix">
+                        <div className="text-center space-y-6">
+                            <span className="text-blue-500 font-black tracking-[0.4em] uppercase text-[10px]">Specifications</span>
+                            <h3 className="text-4xl md:text-6xl font-black italic tracking-tighter">VⅡ SERIES MATRIX</h3>
+                        </div>
+
+                        <div className="overflow-x-auto pb-8">
+                            <div className="min-w-[1000px] bg-[#0c1218] rounded-[3rem] border border-white/5 p-12">
+                                <table className="w-full">
+                                    <thead>
+                                        <tr className="text-left border-b border-white/10">
+                                            <th className="pb-8 text-[11px] font-black tracking-[0.3em] text-gray-500 uppercase">Main Functions</th>
+                                            <th className="pb-8 text-center text-blue-500 font-black italic tracking-tighter text-2xl">ZVTⅡ</th>
+                                            <th className="pb-8 text-center text-white font-black italic tracking-tighter text-2xl opacity-60">ZVⅡ</th>
+                                            <th className="pb-8 text-center text-white font-black italic tracking-tighter text-2xl opacity-60">1VsⅡ</th>
+                                            <th className="pb-8 text-center text-white font-black italic tracking-tighter text-2xl opacity-60">5VfⅡ</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="divide-y divide-white/5">
+                                        {[
+                                            { n: "アンサーバックリモコン", zvt: "● (1台付)", zv: "● (1台付)", vs: "-", vf: "OP" },
+                                            { n: "1WAYリモコン (5ボタン)", zvt: "● (1台付)", zv: "OP", vs: "-", vf: "● (1台付)" },
+                                            { n: "3つの警戒モード", zvt: "●", zv: "●", vs: "●", vf: "●" },
+                                            { n: "イモビライザ機能", zvt: "●", zv: "●", vs: "●", vf: "●" },
+                                            { n: "ドア / トランク開放検知", zvt: "●", zv: "●", vs: "●", vf: "●" },
+                                            { n: "ショックセンサ (強弱)", zvt: "●", zv: "●", vs: "●", vf: "●" },
+                                            { n: "トリプルセンサ", zvt: "●", zv: "OP", vs: "OP", vf: "OP" },
+                                            { n: "傾斜センサ (2軸)", zvt: "●", zv: "OP", vs: "OP", vf: "OP" },
+                                            { n: "不正アンロック検知", zvt: "-", zv: "-", vs: "●", vf: "-" },
+                                            { n: "省電力スリープ機能", zvt: "●", zv: "●", vs: "●", vf: "●" },
+                                            { n: "消費電流 (警戒中)", zvt: "10.7mA", zv: "8.8mA", vs: "4.0mA", vf: "8.8mA" }
+                                        ].map((row, i) => (
+                                            <tr key={i} className="group hover:bg-white/[0.02] transition-colors">
+                                                <td className="py-6 pr-8">
+                                                    <div className="text-sm font-black text-gray-200 tracking-tight">{row.n}</div>
+                                                </td>
+                                                <td className="py-6 text-center text-blue-500 font-bold">{row.zvt}</td>
+                                                <td className="py-6 text-center text-gray-500 font-bold">{row.zv}</td>
+                                                <td className="py-6 text-center text-gray-500 font-bold">{row.vs}</td>
+                                                <td className="py-6 text-center text-gray-500 font-bold">{row.vf}</td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Legal / Technical Compliance */}
+                    <section className="grid lg:grid-cols-2 gap-12">
+                        <div className="bg-[#121820] rounded-[4rem] p-16 border border-white/5 space-y-10 relative overflow-hidden group">
+                            <div className="absolute top-0 right-0 p-12">
+                                <Signal className="w-12 h-12 text-blue-600/20 group-hover:text-blue-600/40 transition-colors" />
+                            </div>
+                            <h3 className="text-3xl font-black italic tracking-tighter">法令適合の確かな信頼</h3>
+                            <p className="text-gray-400 font-bold leading-relaxed">
+                                全てのモデルでVAS・IMBマークを取得。国土交通省が定める厳格な技術基準に適合しており、
+                                JAAMA（全国自動車用品工業会）の自主基準登録証が付属します。
+                                これは、正規の法規制を遵守した信頼できるセキュリティ製品である証です。
+                            </p>
+                            <div className="flex gap-4">
+                                <div className="px-6 py-3 rounded-2xl bg-blue-600/10 border border-blue-500/20 text-[10px] font-black text-blue-400 uppercase tracking-widest">VAS 適合</div>
+                                <div className="px-6 py-3 rounded-2xl bg-blue-600/10 border border-blue-500/20 text-[10px] font-black text-blue-400 uppercase tracking-widest">IMB 適合</div>
+                            </div>
+                        </div>
+                        <div className="bg-[#0c1412] rounded-[4rem] p-16 border border-white/5 space-y-10">
+                            <h3 className="text-3xl font-black italic tracking-tighter text-emerald-500">超省電力設計</h3>
+                            <p className="text-gray-400 font-bold leading-relaxed">
+                                Grgoは「セキュリティはバッテリーに厳しい」という常識を覆します。
+                                待機時電流はわずか2.8mA〜。長期間お車を使用しない際も、バッテリーへの不可を最小限に抑えつつ
+                                強固な警戒を継続することが可能です。
+                            </p>
+                            <div className="grid grid-cols-2 gap-12">
+                                <div className="space-y-2">
+                                    <div className="text-[10px] font-black text-gray-500 uppercase tracking-widest">Min Consumption</div>
+                                    <div className="text-5xl font-black italic tracking-tighter">2.8<span className="text-lg opacity-20 ml-2">mA</span></div>
+                                </div>
+                                <div className="flex items-center">
+                                    <Activity className="w-12 h-12 text-emerald-500/20" />
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Sensor Options List */}
+                    <section className="space-y-12">
+                        <div className="text-center">
+                            <span className="text-blue-500 font-black tracking-[0.4em] uppercase text-[10px]">Customization</span>
+                            <h3 className="text-3xl font-black italic tracking-tighter">多彩なオプションで強化する。</h3>
+                        </div>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                            {[
+                                { n: "マイクロ波センサ", d: "車外からの接近を検知", icon: Signal },
+                                { n: "傾斜センサ", d: "ジャッキアップを検知", icon: Activity },
+                                { n: "IRセンサ", d: "車内への侵入を感知", icon: Eye },
+                                { n: "バックアップサイレン", d: "電源切断を検知し発報", icon: Zap },
+                                { n: "スタータユニット", d: "リモコンでエンジン始動", icon: Thermometer },
+                                { n: "ドラレコ録画連動", d: "衝撃検知時に自動録画", icon: Settings },
+                                { n: "ボンネットセンサ", d: "不正な開放を警戒", icon: Shield },
+                                { n: "1WAYリモコン追加", d: "利便性を向上するスペア", icon: Smartphone }
+                            ].map((opt, i) => (
+                                <div key={i} className="p-8 rounded-[2rem] bg-white/5 border border-white/5 hover:border-blue-500/20 transition-all flex flex-col justify-between">
+                                    <opt.icon className="w-8 h-8 text-blue-600 mb-6" />
+                                    <div>
+                                        <div className="text-sm font-black text-white">{opt.n}</div>
+                                        <div className="text-[10px] text-gray-500 font-bold uppercase tracking-widest">{opt.d}</div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+                </section>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 py-8">
-                <div className="relative aspect-video w-full rounded-[3rem] overflow-hidden shadow-2xl bg-black mb-20">
-                    <SafeImage src={assets.grgoHeroImage || "/images/Security/model/grgo-h.webp"} className="w-full h-full object-contain" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent"></div>
-                    <div className="absolute bottom-12 left-12 right-12 text-white">
-                        <span className="bg-blue-600 text-[10px] font-black px-4 py-1 rounded-full uppercase mb-6 inline-block">Pure Japanese Quality</span>
-                        <h2 className="text-3xl md:text-5xl font-black italic tracking-tighter leading-tight mb-8">{detail.subtitle}</h2>
-                        <div className="flex gap-4">
-                            <a href="#plans" className="bg-blue-600 px-10 py-5 rounded-2xl font-black text-sm shadow-xl shadow-blue-600/30">LINE UP</a>
-                            <button onClick={() => navigate('/reservation')} className="bg-white/10 border border-white/20 px-10 py-5 rounded-2xl font-black text-sm">CONTACT</button>
-                        </div>
+            {/* Bottom Call to Action */}
+            <section className="bg-gradient-to-b from-[#05070a] to-[#0c1218] py-48 px-6 text-center border-t border-white/5">
+                <div className="max-w-4xl mx-auto space-y-12">
+                    <h2 className="text-5xl md:text-8xl font-black text-white italic tracking-tighter">YOUR CAR,<br />YOUR ARMOR.</h2>
+                    <p className="text-xl text-gray-400 font-bold leading-relaxed">
+                        専門用語や複雑な操作を意識することなく、最強のセキュリティをその手に。<br />
+                        当店は正規認定店として、最適な施工とアフターサポートをお約束します。
+                    </p>
+                    <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+                        <button
+                            onClick={() => navigate('/reservation')}
+                            className="group relative bg-blue-600 hover:bg-blue-500 text-white px-12 py-6 rounded-full font-black text-sm tracking-widest transition-all shadow-2xl shadow-blue-600/20 active:scale-95 flex items-center gap-4 shrink-0"
+                        >
+                            来店予約・お問い合わせ
+                            <Smartphone className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                        </button>
+                        <a
+                            href="https://page.line.me/312qjhsq?openQrModal=true"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group relative bg-[#06c755] hover:bg-[#05b34c] text-white px-12 py-6 rounded-full font-black text-sm tracking-widest transition-all shadow-2xl shadow-[#06c755]/20 active:scale-95 flex items-center gap-4 shrink-0"
+                        >
+                            LINEで無料相談
+                            <MessageSquare className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                        </a>
                     </div>
                 </div>
+            </section>
 
-                <section className="grid lg:grid-cols-2 gap-12 mb-32 items-center">
-                    <div className="space-y-8">
-                        <h3 className="text-4xl font-black italic tracking-tighter">THE INTERFACE<span className="text-blue-600">.</span></h3>
-                        <p className="text-gray-600 font-bold leading-relaxed">
-                            視認性に優れたフルカラー液晶リモコン（ZVⅡ/ZVTⅡ）。異常を音と光、そして画面上のアニメーションで即座に通知します。
-                            日本国内の電波法に適合した特定小電力無線を採用し、安定した通信距離と省電力を両立しています。
-                        </p>
-                        <ul className="space-y-4">
-                            {["フルカラー液晶表示", "アンサーバック機能", "特定小電力無線適合", "多彩なステータス表示"].map((item, i) => (
-                                <li key={i} className="flex items-center gap-3 font-black text-xs text-gray-900 italic">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-blue-600" />
-                                    {item}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div className="relative group">
-                        <div className="absolute inset-0 bg-blue-600/10 rounded-[3rem] blur-3xl group-hover:bg-blue-600/20 transition-all" />
-                        <div className="relative bg-white rounded-[3rem] p-8 border border-gray-100 shadow-2xl">
-                            <SafeImage
-                                src="/images/Security/model/grgo-key.webp"
-                                className="w-full h-auto rounded-2xl transform group-hover:scale-105 transition-transform duration-700"
-                                alt="Grgo Remote"
-                            />
+            {/* Sub Footer for Compliance Icons */}
+            <footer className="bg-[#05070a] py-20 px-6 border-t border-white/5">
+                <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12 opacity-30">
+                    <div className="flex gap-12 items-center">
+                        <div className="text-center">
+                            <div className="text-[10px] font-black tracking-widest mb-2 uppercase">Compliance</div>
+                            <div className="text-2xl font-black italic tracking-tighter">VAS / IMB</div>
+                        </div>
+                        <div className="text-center">
+                            <div className="text-[10px] font-black tracking-widest mb-2 uppercase">Wireless</div>
+                            <div className="text-2xl font-black italic tracking-tighter">技適マーク</div>
                         </div>
                     </div>
-                </section>
-
-                <section className="grid lg:grid-cols-2 gap-12 mb-32 items-center">
-                    <div className="relative order-2 lg:order-1">
-                        <div className="absolute inset-0 bg-blue-600/10 rounded-[3rem] blur-3xl" />
-                        <div className="relative bg-white rounded-[3rem] p-8 border border-gray-100 shadow-2xl">
-                            <SafeImage
-                                src="/images/Security/model/grgo.webp"
-                                className="w-full h-auto rounded-2xl"
-                                alt="Grgo Main Unit"
-                            />
-                        </div>
-                    </div>
-                    <div className="space-y-8 order-1 lg:order-2 lg:pl-12">
-                        <h3 className="text-4xl font-black italic tracking-tighter">THE HARDWARE<span className="text-blue-600">.</span></h3>
-                        <p className="text-gray-600 font-bold leading-relaxed">
-                            日本の過酷な環境（温度変化、湿気、振動）に耐えうる信頼設計。
-                            最新の国産車に搭載される複雑な電子制御システムとも、独自の解析技術により高次元で融合します。
-                        </p>
-                        <div className="p-8 bg-gray-50 rounded-[2.5rem] border border-gray-100">
-                            <div className="flex items-center gap-4 mb-4">
-                                <ShieldCheck className="w-6 h-6 text-blue-600" />
-                                <span className="font-black text-sm italic">Made in Japan</span>
-                            </div>
-                            <p className="text-xs text-gray-500 font-bold leading-relaxed">
-                                企画・設計から製造までを一貫して日本国内で行う「純国産カーセキュリティ」。
-                                日本人ならではの細やかな気配りが、高い信頼性と使いやすさを生んでいます。
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <section className="mb-32">
-                    <h3 className="text-4xl font-black italic mb-12 tracking-tighter">VⅡ SERIES MATRIX<span className="text-blue-600">.</span></h3>
-                    <div className="overflow-x-auto bg-white rounded-[2.5rem] shadow-xl border border-gray-100 p-8 md:p-12">
-                        <table className="w-full min-w-[800px]">
-                            <thead>
-                                <tr className="border-b-2 border-gray-900 text-[10px] font-black text-gray-400 uppercase tracking-widest">
-                                    <th className="py-6 text-left">Feature</th>
-                                    <th className="py-6 text-center bg-gray-50/50">ZVⅡ</th>
-                                    <th className="py-6 text-center bg-gray-50/50">ZVTⅡ</th>
-                                    <th className="py-6 text-center bg-gray-50/50">1VsⅡ</th>
-                                    <th className="py-6 text-center bg-gray-50/50">5VfⅡ</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {featureTable.map((row, i) => (
-                                    <tr key={i} className="border-b border-gray-100 group">
-                                        <td className="py-6"><div className="font-black text-sm text-gray-900">{row.name}</div><div className="text-[10px] text-gray-400 font-bold">{row.desc}</div></td>
-                                        <td className={`text-center font-black ${row.zv.includes('●') ? 'text-blue-600 bg-blue-50/20' : 'text-gray-400'}`}>{row.zv}</td>
-                                        <td className={`text-center font-black ${row.zvt.includes('●') ? 'text-blue-600 bg-blue-50/20' : 'text-gray-400'}`}>{row.zvt}</td>
-                                        <td className={`text-center font-black ${row.vs.includes('●') ? 'text-blue-600 bg-blue-50/20' : 'text-gray-400'}`}>{row.vs}</td>
-                                        <td className={`text-center font-black ${row.vf.includes('●') ? 'text-blue-600 bg-blue-50/20' : 'text-gray-400'}`}>{row.vf}</td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-                <section id="lineup" className="mb-32">
-                    <h3 className="text-4xl font-black italic mb-12 tracking-tighter text-gray-900">LINEUP<span className="text-blue-600">.</span></h3>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {currentCategory?.items.map((item, i) => (
-                            <motion.div
-                                key={i}
-                                onClick={() => setSelectedItem(item)}
-                                className="bg-white rounded-[2.5rem] p-8 shadow-xl border border-gray-100 relative group cursor-pointer hover:shadow-2xl transition-all overflow-hidden"
-                            >
-                                <div className="absolute top-0 left-0 w-full h-1 bg-gray-100 group-hover:bg-blue-600 transition-colors" />
-                                <div className="mb-6">
-                                    <span className="text-[10px] font-black text-blue-600 bg-blue-50 px-4 py-1 rounded-full uppercase tracking-widest">{item.badge}</span>
-                                </div>
-                                <h4 className="text-2xl font-black mb-4 text-gray-900 italic tracking-tighter">{item.name}</h4>
-                                <div className="text-2xl font-black text-blue-600 mb-8">{formatPrice(item.price)}<span className="text-xs text-gray-400 ml-1 font-bold italic">〜</span></div>
-                                <ul className="space-y-3 mb-8">
-                                    {(item.features || []).slice(0, 4).map((f: string, j: number) => (
-                                        <li key={j} className="flex items-center text-[11px] font-bold text-gray-500">
-                                            <CheckCircle2 className="w-3.5 h-3.5 text-blue-600 mr-2 shrink-0" />
-                                            {f}
-                                        </li>
-                                    ))}
-                                </ul>
-                                <div className="pt-4 border-t border-gray-50 flex items-center justify-between text-[10px] font-black text-gray-400 group-hover:text-blue-600 transition-colors uppercase tracking-widest">
-                                    <span>Model Details</span>
-                                    <Info className="w-4 h-4" />
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </section>
-
-                <section className="grid md:grid-cols-3 gap-8">
-                    <div className="bg-gray-50 p-8 rounded-[2.5rem] border border-gray-100">
-                        <Zap className="w-8 h-8 text-blue-600 mb-6" />
-                        <h4 className="font-black mb-4">消費電流</h4>
-                        <div className="text-sm font-bold text-gray-600">待機時: {detail.specs.usageStandby}<br />警戒時: {detail.specs.usageAlert}</div>
-                    </div>
-                    <div className="md:col-span-2 bg-gray-900 p-8 rounded-[2.5rem] text-white">
-                        <ShieldCheck className="w-8 h-8 text-blue-400 mb-6" />
-                        <h4 className="font-black mb-4">国内適合基準</h4>
-                        <p className="text-xs text-gray-400 leading-relaxed font-bold">国土交通省規定の「盗難発生警報装置技術基準・イモビライザ技術基準(VAS/IMB)」に完全適合。総務省技適マークも取得済みです。</p>
-                    </div>
-                </section>
-            </div>
-
-            <AnimatePresence>
-                {selectedItem && (
-                    <motion.div onClick={() => setSelectedItem(null)} className="fixed inset-0 z-[110] bg-gray-950/90 backdrop-blur-md flex items-center justify-center p-4">
-                        <motion.div onClick={e => e.stopPropagation()} className="bg-white w-full max-w-2xl rounded-[3rem] overflow-hidden shadow-2xl relative p-8">
-                            <button onClick={() => setSelectedItem(null)} className="absolute top-6 right-6 w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center"><X className="w-5 h-5" /></button>
-                            <h2 className="text-3xl font-black mb-2 italic tracking-tighter">{selectedItem.name}</h2>
-                            <span className="text-blue-600 font-black text-sm mb-8 block">{formatPrice(selectedItem.price)}</span>
-                            <p className="text-gray-600 font-bold mb-8 text-sm leading-relaxed">{selectedItem.description}</p>
-                            <div className="space-y-3">
-                                {selectedItem.features.map((f: string, idx: number) => (
-                                    <div key={idx} className="flex items-center gap-3 bg-gray-50 p-4 rounded-xl border border-gray-100"><CheckCircle2 className="w-4 h-4 text-blue-600" /><span className="text-xs font-bold text-gray-700">{f}</span></div>
-                                ))}
-                            </div>
-                        </motion.div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-        </motion.div>
+                    <div className="text-xs font-bold tracking-widest">PURE JAPANESE QUALITY / GRGO SERIES</div>
+                </div>
+            </footer>
+        </div>
     );
 };
