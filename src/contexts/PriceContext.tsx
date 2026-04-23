@@ -1387,13 +1387,42 @@ const initialPlans: PlanCategory[] = [
   },
   {
     id: 'security_grgo',
-    category: "Grgo (ゴルゴ)",
+    category: "Grgo (ゴルゴ) VⅡ",
     type: 'security',
     items: [
-      { name: "ZVシリーズ", price: "165000", features: ["アンサーバックリモコン", "マイクロ波センサー対応", "暗証番号式解除", "純正キー連動可"], badge: "人気No.1", image: "/images/security.jpg" },
-      { name: "Vシリーズ", price: "132000", features: ["1WAYリモコン", "衝撃センサー", "ドアセンサー", "ステータスLED"], badge: "コスパ重視", image: "/images/security.jpg" },
-      { name: "1/0シリーズ", price: "99000", features: ["純正キーレス連動", "シンプル構成", "誤作動防止機能"], badge: "スマート施工", image: "/images/security.jpg" }
-    ]
+      {
+        name: "ZVⅡ",
+        price: "165000",
+        badge: "人気No.1推奨",
+        features: ["2次元フルカラー液晶リモコン", "3ゾーン衝撃センサー", "1ポイントイモビライザー", "ドア/トランク/ボンネット検知"],
+        image: "/images/Security/model/grgo.webp",
+        description: "フルカラー液晶リモコンで車両の状態をリアルタイムに確認可能。高い検知能力と操作性を両立した、Grgoシリーズの核となるモデルです。"
+      },
+      {
+        name: "ZVTⅡ",
+        price: "198000",
+        badge: "最上位フルガード",
+        features: ["デジタル傾斜センサー標準装備", "トリプルセンサー標準装備", "アンサーバック液晶リモコン", "1WAYスペアリモコン付属"],
+        image: "/images/Security/model/grgo.webp",
+        description: "ZVⅡの機能に加え、レッカー移動対策の傾斜センサーや衝撃検知を強化するトリプルセンサーを標準装備した、物理ガードの決定版。"
+      },
+      {
+        name: "1VsⅡ",
+        price: "99000",
+        badge: "純正キーレス連動",
+        features: ["純正リモコン連動", "ショックセンサー内蔵", "イモビライザー", "ドア/トランク/ボンネット検知"],
+        image: "/images/Security/model/grgo.webp",
+        description: "純正スマートキーの操作に連動してセキュリティを起動。シンプルながらGrgoの高い信頼性を手軽に導入できるモデルです。"
+      },
+      {
+        name: "5VfⅡ",
+        price: "110000",
+        badge: "実用性重視",
+        features: ["5ボタン1WAYリモコン", "ショックセンサー内蔵", "ドア/トランク/ボンネット検知", "車載用リモコンホルダー対応"],
+        image: "/images/Security/model/grgo.webp",
+        description: "液晶なしのシンプルなリモコンを採用。機能を絞り込みつつ、Grgoならではの確実な警報・警告能力を維持した実用モデル。"
+      }
+    ],
   },
   {
     id: 'security_panthera',
@@ -1423,40 +1452,6 @@ const initialPlans: PlanCategory[] = [
         features: ["3ゾーンショックセンサー", "ドア/トランク/ボンネット検知", "特定小電力リモコン", "イモビライザー"],
         image: "/images/Security/model/panthera.webp",
         description: "パンテーラの卓越した基本性能を凝縮したエントリーモデル。"
-      }
-    ]
-  },
-  {
-    id: 'security_grgo_v2',
-    category: "最新セキュリティー (Grgo V2)",
-    type: 'security',
-    items: [
-      {
-        name: "Grgo V2 ベーシック",
-        price: "110000",
-        badge: "最新・盗難特化",
-        features: [
-          "デジタル・イモビライザー",
-          "キーエミュレーター対向",
-          "車両システム独立防衛",
-          "※サイレン、衝撃センサー別売"
-        ],
-        image: "/images/Security/model/grgov2.webp",
-        description: "車両システムとは独立した「自走防止」に特化した最新プラン。※サイレンおよび衝撃センサーはオプションとなります。"
-      },
-      {
-        name: "Grgo V2 + ショックセンサー + サイレン",
-        price: "137500",
-        badge: "推奨パッケージ",
-        features: [
-          "デジタル・イモビライザー",
-          "ハイパワーサイレン内蔵",
-          "2段階衝撃センサー内蔵",
-          "キーエミュレーター対向",
-          "車両システム独立防衛"
-        ],
-        image: "/images/Security/model/grgov2.webp",
-        description: "サイレンと衝撃センサーを追加した、防犯性能と使い勝手のバランスに優れた推奨プラン。"
       }
     ]
   },
@@ -1571,37 +1566,45 @@ export const PriceProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   };
 
   const [plans, setPlans] = useState<PlanCategory[]>(() => {
+    const cacheVersion = (cmsData as any).cacheVersion || "0";
+    const savedVersion = localStorage.getItem('ang_plans_version');
     const saved = localStorage.getItem('ang_plans');
     const basePlans = (cmsData as any).plans || initialPlans;
-    if (saved) {
-      try {
-        const parsed = JSON.parse(saved);
-        return basePlans.map((initialCat: any) => {
-          const savedCat = parsed.find((c: any) => c.id === initialCat.id);
-          if (!savedCat) return initialCat;
-          return {
-            ...initialCat,
-            ...savedCat,
-            items: initialCat.items.map((initialItem: any) => {
-              const savedItem = savedCat.items?.find((i: any) => i.name === initialItem.name);
-              if (!savedItem) return initialItem;
 
-              // Normalize the saved image path to fix stale uppercase/wrong paths
-              const normalizedSavedImage = normalizeStoredImagePath(savedItem.image);
-              return {
-                ...initialItem,
-                ...savedItem,
-                // Dashboard (savedItem) wins, but path is normalized; fall back to cms.json
-                image: normalizedSavedImage || initialItem.image,
-              };
-            })
-          };
-        });
-      } catch (e) {
-        return basePlans;
-      }
+    // If version mismatch or first time, ignore saved data and use basePlans
+    if (!saved || savedVersion !== cacheVersion) {
+      localStorage.setItem('ang_plans_version', cacheVersion);
+      // Clean up the stale data if it exists
+      if (saved) localStorage.removeItem('ang_plans');
+      return basePlans;
     }
-    return basePlans;
+
+    try {
+      const parsed = JSON.parse(saved);
+      return basePlans.map((initialCat: any) => {
+        const savedCat = parsed.find((c: any) => c.id === initialCat.id);
+        if (!savedCat) return initialCat;
+        return {
+          ...initialCat,
+          ...savedCat,
+          items: initialCat.items.map((initialItem: any) => {
+            const savedItem = savedCat.items?.find((i: any) => i.name === initialItem.name);
+            if (!savedItem) return initialItem;
+
+            // Normalize the saved image path to fix stale uppercase/wrong paths
+            const normalizedSavedImage = normalizeStoredImagePath(savedItem.image);
+            return {
+              ...initialItem,
+              ...savedItem,
+              // Dashboard (savedItem) wins, but path is normalized; fall back to cms.json
+              image: normalizedSavedImage || initialItem.image,
+            };
+          })
+        };
+      });
+    } catch (e) {
+      return basePlans;
+    }
   });
 
   const [guides, setGuides] = useState<KnowledgeGuide[]>(() => {

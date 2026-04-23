@@ -39,7 +39,7 @@ export const ViperPage: React.FC = () => {
             "スマホアプリからの操作・状態確認に対応",
             "純正キーレス連動でスマートな操作感を実現"
         ],
-        image: assets.securityMenuImage,
+        image: assets.viperImage || "/images/Security/model/viper.webp",
         icon: ShieldCheck,
         color: "blue",
         upgrades: [
@@ -63,12 +63,12 @@ export const ViperPage: React.FC = () => {
             </div>
 
             <div className="max-w-7xl mx-auto px-4 py-12">
-                <div className="relative h-[400px] md:h-[500px] rounded-[3rem] overflow-hidden mb-12 shadow-2xl">
+                <div className="relative aspect-[21/6] w-full rounded-[3rem] overflow-hidden mb-12 shadow-2xl bg-black">
                     <SafeImage src={detail.image} className="w-full h-full object-cover" alt={detail.title} />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    <div className="absolute bottom-12 left-12">
-                        <h2 className="text-5xl md:text-7xl font-black text-white mb-4 tracking-tighter">{detail.title}</h2>
-                        <p className="text-lg md:text-2xl text-blue-300 font-bold max-w-2xl">{detail.subtitle}</p>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    <div className="absolute bottom-8 left-12">
+                        <h2 className="text-4xl md:text-6xl font-black text-white mb-2 tracking-tighter">{detail.title}</h2>
+                        <p className="text-base md:text-xl text-blue-300 font-bold max-w-2xl">{detail.subtitle}</p>
                     </div>
                 </div>
 
@@ -107,17 +107,26 @@ export const ViperPage: React.FC = () => {
                         <h3 className="text-3xl font-black mb-12 tracking-tighter">VIPER Lineup</h3>
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                             {currentCategory.items.map((item, i) => (
-                                <motion.div key={i} onClick={() => setSelectedItem(item)} className="bg-white rounded-[2.5rem] p-8 shadow-xl border border-gray-100 cursor-pointer hover:border-blue-300 transition-all group">
-                                    <h4 className="text-2xl font-black mb-4 group-hover:text-blue-700 transition-colors">{item.name}</h4>
-                                    <div className="text-3xl font-black text-blue-600 mb-8">{formatPrice(item.price)}</div>
-                                    <ul className="space-y-3 mb-8">
-                                        {item.features.slice(0, 3).map((f, j) => (
-                                            <li key={j} className="flex items-center gap-2 text-xs font-bold text-gray-500">
-                                                <div className="w-1 h-1 bg-blue-700 rounded-full" /> {f}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                    <div className="w-full text-center py-3 border border-gray-100 rounded-xl font-black text-xs group-hover:bg-blue-700 group-hover:text-white transition-all">DETAILS</div>
+                                <motion.div
+                                    key={i}
+                                    onClick={() => setSelectedItem(item)}
+                                    className="bg-white rounded-[2.5rem] p-10 shadow-xl border border-gray-100 cursor-pointer hover:border-blue-300 transition-all group relative flex flex-col"
+                                >
+                                    <div className="flex justify-between items-start mb-6">
+                                        <h4 className="text-2xl font-black group-hover:text-blue-700 transition-colors leading-none">{item.name}</h4>
+                                        {item.badge && (
+                                            <span className="bg-blue-50 text-blue-700 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">{item.badge}</span>
+                                        )}
+                                    </div>
+                                    <p className="text-gray-500 font-bold text-sm leading-relaxed mb-8 flex-grow">
+                                        {item.description || "世界が認めたバイパー。高度な解析能力と拡張性を備えた、最高峰のセキュリティーパフォーマンスを提供します。"}
+                                    </p>
+                                    <div className="mt-auto">
+                                        <div className="text-3xl font-black text-gray-900 mb-8">
+                                            {formatPrice(item.price)}
+                                        </div>
+                                        <div className="w-full text-center py-4 bg-gray-50 group-hover:bg-blue-700 group-hover:text-white rounded-2xl font-black text-[13px] tracking-widest transition-all uppercase">詳しくはこちら</div>
+                                    </div>
                                 </motion.div>
                             ))}
                         </div>

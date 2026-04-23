@@ -149,7 +149,7 @@ function AppContent() {
       'PANTHERA (パンテーラ)': '/security/panthera',
       'Panthera (パンテーラ) Z-Series': '/security/panthera',
       'Grgo (ゴルゴ) V2': '/security/grgo-v2',
-      'Grgo (ゴルゴ) V-Series': '/security/grgo',
+      'Grgo (ゴルゴ) VⅡ': '/security/grgo',
       'Author Alarm / IGLA2+': '/security/digital',
       'デジタル・イモビライザー': '/security/digital',
       'リレーアタック対策': '/security/digital',
@@ -247,8 +247,6 @@ function AppContent() {
             <SecurityMainPage
               assets={assets}
               emergencyAnnouncement={emergencyAnnouncement}
-              posts={posts}
-              loading={loading}
               facilities={facilities}
               isMobileMenuOpen={isMobileMenuOpen}
               setIsMobileMenuOpen={setIsMobileMenuOpen}

@@ -32,6 +32,10 @@ export interface SiteAssets {
   spsCertifiedImage: string;
   snaponImage: string;
   batteryChargerImage: string;
+  viperImage: string;
+  pantheraHeroImage: string;
+  grgoHeroImage: string;
+  grgoVHeroImage: string;
 }
 
 interface SiteContextType {
@@ -179,7 +183,11 @@ const initialAssets: SiteAssets = {
   kyushuNo1Image: "/images/Top/tenpo.webp",
   spsCertifiedImage: "/images/Top/security.webp",
   snaponImage: "/images/Top/tenpo.webp",
-  batteryChargerImage: "/images/Top/pitroom.webp"
+  batteryChargerImage: "/images/Top/pitroom.webp",
+  viperImage: "/images/Security/model/viper.webp",
+  pantheraHeroImage: "/images/Security/model/pantheraz.webp",
+  grgoHeroImage: "/images/Security/model/grgov2.webp",
+  grgoVHeroImage: "/images/Security/model/grgo-h.webp"
 };
 
 const SiteContext = createContext<SiteContextType | undefined>(undefined);

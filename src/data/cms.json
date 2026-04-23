@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-04-22T09:52:00Z",
-  "cacheVersion": "21",
+  "cacheVersion": "33",
   "plans": [
     {
       "id": "speaker_package",
@@ -529,113 +529,63 @@
     },
     {
       "id": "security_grgo",
-      "category": "Grgo (ゴルゴ)",
+      "category": "Grgo (ゴルゴ) VⅡ",
       "type": "security",
       "items": [
         {
-          "name": "ZVシリーズ",
+          "name": "ZVⅡ",
           "price": "165000",
-          "badge": "人気No.1"
+          "badge": "人気No.1推奨",
+          "features": [
+            "2次元フルカラー液晶リモコン",
+            "3ゾーン衝撃センサー",
+            "1ポイントイモビライザー",
+            "ドア/トランク/ボンネット検知"
+          ],
+          "image": "/images/Security/model/grgo.webp",
+          "description": "フルカラー液晶リモコン for 車両の状態をリアルタイムに確認可能。高い検知能力と操作性を両立した、Grgoシリーズの核となるモデルです。"
         },
         {
-          "name": "Vシリーズ",
-          "price": "132000",
-          "badge": "コスパ重視"
+          "name": "ZVTⅡ",
+          "price": "198000",
+          "badge": "最上位フルガード",
+          "features": [
+            "デジタル傾斜センサー標準装備",
+            "トリプルセンサー標準装備",
+            "アンサーバック液晶リモコン",
+            "1WAYスペアリモコン付属"
+          ],
+          "image": "/images/Security/model/grgo.webp",
+          "description": "ZVⅡの機能に加え、レッカー移動対策の傾斜センサーや衝撃検知を強化するトリプルセンサーを標準装備した、物理ガードの決定版。"
         },
         {
-          "name": "1/0シリーズ",
+          "name": "1VsⅡ",
           "price": "99000",
-          "badge": "スマート施工"
+          "badge": "純正キーレス連動",
+          "features": [
+            "純正リモコン連動",
+            "ショックセンサー内蔵",
+            "イモビライザー",
+            "ドア/トランク/ボンネット検知"
+          ],
+          "image": "/images/Security/model/grgo.webp",
+          "description": "純正スマートキーの操作に連動してセキュリティを起動. シンプルながらGrgoの高い信頼性を手軽に導入できるモデルです。"
+        },
+        {
+          "name": "5VfⅡ",
+          "price": "110000",
+          "badge": "実用性重視",
+          "features": [
+            "5ボタン1WAYリモコン",
+            "ショックセンサー内蔵",
+            "ドア/トランク/ボンネット検知",
+            "車載用リモコンホルダー対応"
+          ],
+          "image": "/images/Security/model/grgo.webp",
+          "description": "液晶なしのシンプルなリモコンを採用。機能を絞り込みつつ、Grgoならではの確実な警報・警告能力を維持した実用モデル。"
         }
       ],
       "images": []
-    },
-    {
-      "id": "security_panthera",
-      "category": "Panthera (パンテーラ) Z-Series",
-      "type": "security",
-      "items": [
-        {
-          "name": "Z706",
-          "price": "385000",
-          "badge": "フルスペックモデル",
-          "features": [
-            "全センサー装備",
-            "トリプル/傾斜/マイクロ波/IR",
-            "バックアップサイレン標準",
-            "2ポイントイモビライザー"
-          ],
-          "image": "/images/Security/model/panthera.webp",
-          "description": "Panthera Zシリーズ最高位モデル。4つのセンサー（32段階設定）をアルゴリズムに組み合わせ、確実な警告・警報を出します。バックアップサイレンも標準装備。"
-        },
-        {
-          "name": "Z306",
-          "price": "275000",
-          "badge": "ハイスペックモデル",
-          "features": [
-            "トリプルセンサー標準",
-            "デジタル傾斜センサー標準",
-            "ハイパワーサイレン",
-            "2ポイントイモビライザー"
-          ],
-          "image": "/images/Security/model/pantheraz.webp",
-          "description": "Z106の警戒機能に加え、人気ユニットのトリプルセンサー・デジタル傾斜センサーを標準装備したハイスペックモデル。"
-        },
-        {
-          "name": "Z106",
-          "price": "198000",
-          "badge": "ベーシックモデル",
-          "features": [
-            "3ゾーンショックセンサー",
-            "2ポイントイモビライザー",
-            "ハイパワーサイレン",
-            "ドラレコ連携録画"
-          ],
-          "image": "/images/Security/model/pantheraz.webp",
-          "description": "ドア/ボンネット/トランク全開放検知。Pantheraの高度なアルゴリズムを凝縮したベーシックモデル。"
-        }
-      ],
-      "images": [
-        "/images/Security/model/panthera.webp",
-        "/images/Security/model/panthera-key.webp"
-      ]
-    },
-    {
-      "id": "security_grgo_v2",
-      "category": "最新セキュリティー (Grgo V2)",
-      "type": "security",
-      "items": [
-        {
-          "name": "Grgo V2 ベーシック",
-          "price": "110000",
-          "badge": "最新・盗難特化",
-          "features": [
-            "デジタル・イモビライザー",
-            "キーエミュレーター対向",
-            "車両システム独立ガード",
-            "※サイレン、衝撃センサー別売"
-          ],
-          "image": "/images/Security/model/grgov2.webp",
-          "description": "機能を盗難対策（自走防止）に特化させることで、レクサス・ランクル等のハイリスク車にも安心の防衛力を低価格で提供。※サイレンおよび衝撃センサーはオプションとなります。"
-        },
-        {
-          "name": "Grgo V2 + ショックセンサー + サイレン",
-          "price": "137500",
-          "badge": "推奨パッケージ",
-          "features": [
-            "デジタル・イモビライザー",
-            "ハイパワーサイレン内蔵",
-            "2段階衝撃センサー内蔵",
-            "キーエミュレーター対向",
-            "車両システム独立防衛"
-          ],
-          "image": "/images/Security/model/grgov2.webp",
-          "description": "V2ベーシックに「サイレン」と「衝撃センサー」を追加した当店一番人気の推奨パッケージ。音と衝撃検知により、自走盗難だけでなく車上荒らしや悪戯からも愛車を守ります。"
-        }
-      ],
-      "images": [
-        "/images/Security/model/grgov2-key.webp"
-      ]
     },
     {
       "id": "security_viper",

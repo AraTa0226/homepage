@@ -36,8 +36,6 @@ import { VaultGrid } from '../../components/VaultGrid';
 interface SecurityMainPageProps {
     assets: any;
     emergencyAnnouncement: any;
-    posts: any[];
-    loading: boolean;
     facilities: any[];
     isMobileMenuOpen: boolean;
     setIsMobileMenuOpen: (open: boolean) => void;
@@ -131,8 +129,6 @@ const MegaMenu = ({ show, categories, theme, onClose, navigate, handleMenuClick 
 export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
     assets,
     emergencyAnnouncement,
-    posts,
-    loading,
     facilities,
     isMobileMenuOpen,
     setIsMobileMenuOpen,
@@ -195,10 +191,8 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
             gridClass: 'col-span-1',
             items: [
                 'Panthera (パンテーラ) Z-Series',
+                'Grgo (ゴルゴ) VⅡ',
                 'Grgo (ゴルゴ) V2',
-                'Grgo (ゴルゴ) V-Series',
-                'Author Alarm / IGLA2+',
-                'デジタル・イモビライザー',
                 'リレーアタック対策',
                 'Viper (バイパー)',
                 'Clifford (クリフォード)',
@@ -568,63 +562,6 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                 </div>
             </section>
 
-            {/* Knowledge Section (Security Blog) */}
-            <section id="blog" className="py-24 md:py-32 bg-gray-50 relative overflow-hidden">
-                <div className="max-w-7xl mx-auto px-4 relative z-10">
-                    <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-                        <div className="max-w-2xl">
-                            <span className="text-emerald-600 font-black tracking-[0.3em] uppercase text-xs mb-4 block">Security Blog & Journal</span>
-                            <h2 className="text-5xl md:text-7xl font-black leading-tight tracking-tighter italic text-gray-900">BLOG</h2>
-                            <p className="text-gray-500 mt-4 font-bold leading-relaxed">
-                                最新の盗難情勢や防犯対策、施工事例など、オーナー様に知っていただきたい情報を発信しています。
-                            </p>
-                        </div>
-                        <a
-                            href="https://soundang.com/webbrog/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group flex items-center gap-3 bg-white px-8 py-4 rounded-2xl border border-gray-100 text-sm font-black text-gray-900 hover:bg-emerald-600 hover:text-white transition-all shadow-sm"
-                        >
-                            ブログ一覧を見る
-                            <div className="w-6 h-6 rounded-full bg-emerald-500/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                                <ChevronRight className="w-4 h-4" />
-                            </div>
-                        </a>
-                    </div>
-
-                    {loading ? (
-                        <div className="py-20 flex flex-col items-center justify-center text-gray-400 gap-4">
-                            <Loader2 className="w-10 h-10 animate-spin text-emerald-500" />
-                        </div>
-                    ) : (
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            {posts.map((post, i) => (
-                                <motion.a
-                                    key={i}
-                                    href={post.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="group relative bg-white rounded-[2.5rem] p-8 pl-10 border border-gray-100 hover:border-emerald-500/30 transition-all shadow-xl hover:shadow-2xl overflow-hidden"
-                                >
-                                    {/* Left Accent Line */}
-                                    <div className="absolute left-0 top-10 bottom-10 w-1 bg-emerald-500 rounded-r-full shadow-[0_0_15px_rgba(16,185,129,0.5)] group-hover:scale-y-110 transition-transform origin-center" />
-
-                                    <div className="mb-6 flex justify-between items-start">
-                                        <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center">
-                                            <AlertTriangle className="w-6 h-6 text-emerald-500" />
-                                        </div>
-                                        <span className="text-[10px] font-black text-gray-500 uppercase tracking-widest">{post.date}</span>
-                                    </div>
-                                    <h3 className="text-lg font-black leading-snug text-gray-900 group-hover:text-emerald-600 transition-colors" dangerouslySetInnerHTML={{ __html: post.title }} />
-                                    <div className="mt-8 flex items-center gap-2 text-[10px] font-black tracking-[0.2em] text-emerald-600 uppercase">
-                                        詳細を見る <ChevronRight className="w-3 h-3" />
-                                    </div>
-                                </motion.a>
-                            ))}
-                        </div>
-                    )}
-                </div>
-            </section>
 
             <BusinessCalendar theme="light" />
             <PartnersSection onViewAll={() => navigate('/partners')} />
@@ -735,9 +672,6 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                             <h4 className="text-white font-black text-xs tracking-widest uppercase mb-8">Quick Navigation</h4>
                             <ul className="space-y-4 text-sm font-bold">
                                 <li><a href="#" className="hover:text-emerald-500 transition-colors">Top</a></li>
-                                <li><a href="#blog" className="hover:text-white transition-colors">Blog</a></li>
-                                <li><a href="#blog" className="hover:text-white transition-colors">Event Archive</a></li>
-                                <li><a href="#blog" className="hover:text-white transition-colors">Latest News</a></li>
                                 <li><a href="#services" className="hover:text-white transition-colors">Menu</a></li>
                                 <li><a href="#access" className="hover:text-white transition-colors">Shop Access</a></li>
                                 <li><button onClick={() => navigate('/reservation')} className="text-emerald-500 hover:underline">Consultation Booking</button></li>
@@ -803,7 +737,6 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                 <nav className="flex flex-col gap-3">
                                     {[
                                         { href: "#", en: "HOME", jp: "ホーム" },
-                                        { href: "#blog", en: "BLOG", jp: "ブログ" },
                                         { href: "#services", en: "MENU", jp: "メニュー", isExpandable: true },
                                         { href: "#access", en: "ACCESS", jp: "店舗案内" },
                                     ].map((link, i) => {

@@ -135,39 +135,40 @@ export const PantheraPage: React.FC = () => {
             </div>
 
             {/* Hero Section */}
-            <section className="relative h-[80vh] min-h-[600px] bg-black overflow-hidden flex items-center">
-                <div className="absolute inset-0 opacity-40">
-                    <SafeImage src={detail.image} className="w-full h-full object-cover" />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent"></div>
+            <div className="max-w-7xl mx-auto px-4 py-8">
+                <div className="relative aspect-video w-full rounded-[3rem] overflow-hidden shadow-2xl bg-black">
+                    <SafeImage
+                        src={assets.pantheraHeroImage || "/images/Security/model/pantheraz.webp"}
+                        className="w-full h-full object-cover"
+                        alt="Panthera Z-Series"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
 
-                <div className="max-w-7xl mx-auto px-4 relative z-10 w-full">
-                    <motion.div
-                        initial={{ opacity: 0, x: -30 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        className="max-w-2xl"
-                    >
-                        <div className="flex items-center gap-3 mb-6">
-                            <span className="bg-blue-600 text-white text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest">Flagship Model</span>
-                            <span className="text-white/50 text-[10px] font-black uppercase tracking-widest">Made in Japan</span>
-                        </div>
-                        <h2 className="text-6xl md:text-8xl font-black text-white mb-8 tracking-tighter leading-none italic uppercase">
-                            Panthera<span className="text-blue-600 text-3xl align-top">.</span>
-                        </h2>
-                        <p className="text-xl md:text-2xl text-gray-300 font-bold leading-tight mb-12">
-                            {detail.subtitle}
-                        </p>
-                        <div className="flex flex-wrap gap-4">
-                            <a href="#lineup" className="bg-blue-600 text-white px-10 py-5 rounded-2xl font-black text-sm tracking-widest hover:scale-105 transition-all shadow-xl shadow-blue-600/30 text-center min-w-[200px]">
-                                LINE UP
-                            </a>
-                            <button onClick={() => navigate('/reservation')} className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-5 rounded-2xl font-black text-sm tracking-widest hover:bg-white hover:text-black transition-all min-w-[200px]">
-                                お問い合わせ
-                            </button>
-                        </div>
-                    </motion.div>
+                    <div className="absolute bottom-12 left-12 right-12">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="max-w-3xl"
+                        >
+                            <div className="flex items-center gap-3 mb-6">
+                                <span className="bg-blue-600 text-white text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest">Flagship Model</span>
+                                <span className="text-white/50 text-[10px] font-black uppercase tracking-widest tracking-[0.3em]">Made in Japan</span>
+                            </div>
+                            <p className="text-2xl md:text-4xl text-white font-black leading-tight tracking-tighter mb-10 drop-shadow-lg">
+                                {detail.subtitle}
+                            </p>
+                            <div className="flex flex-wrap gap-4">
+                                <a href="#lineup" className="bg-blue-600 text-white px-10 py-5 rounded-2xl font-black text-sm tracking-widest hover:scale-105 transition-all shadow-xl shadow-blue-600/30 text-center min-w-[200px]">
+                                    LINE UP
+                                </a>
+                                <button onClick={() => navigate('/reservation')} className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-5 rounded-2xl font-black text-sm tracking-widest hover:bg-white hover:text-black transition-all min-w-[200px]">
+                                    お問い合わせ
+                                </button>
+                            </div>
+                        </motion.div>
+                    </div>
                 </div>
-            </section>
+            </div>
 
             {/* Tech Specs Grid */}
             <section className="py-32 bg-gray-50 border-y border-gray-100">

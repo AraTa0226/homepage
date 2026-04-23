@@ -105,7 +105,7 @@ export const VaultGrid: React.FC<VaultGridProps> = ({ categories, onCategoryClic
                                                     "AMPレスDSPパッケージ": { id: "digital_source", planName: "アンプレスDSPパッケージ" },
                                                     "Panthera (パンテーラ) Z-Series": { id: "security_panthera" },
                                                     "Grgo (ゴルゴ) V2": { id: "security_grgo_v2" },
-                                                    "Grgo (ゴルゴ) V-Series": { id: "security_grgo" },
+                                                    "Grgo (ゴルゴ) VⅡ": { id: "security_grgo" },
                                                     "Relay Attack Defense": { id: "security_digital" },
                                                     "Digital Mirror": { id: "dashcam" },
                                                     "Dual Cam Recording": { id: "dashcam" },
@@ -113,6 +113,8 @@ export const VaultGrid: React.FC<VaultGridProps> = ({ categories, onCategoryClic
                                                     "Author Alarm / IGLA2+": { id: "security_digital" },
                                                     "デジタル・イモビライザー": { id: "security_digital" },
                                                     "リレーアタック対策": { id: "security_digital" },
+                                                    "Viper (バイパー)": { id: "security_viper" },
+                                                    "Clifford (クリフォード)": { id: "security_clifford" },
                                                     "CANインベーダー対策": { id: "security_digital" },
                                                     "店内の常時試聴ユニット": { id: "audition-showcase", isAnchor: true },
                                                     "施工ブログ / 店舗詳細": { id: "contact", isAnchor: true }
