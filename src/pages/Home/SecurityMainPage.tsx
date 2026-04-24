@@ -193,10 +193,11 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                 'Panthera (パンテーラ) Z-Series',
                 'Grgo (ゴルゴ) VⅡ',
                 'Grgo (ゴルゴ) V2',
-                'リレーアタック対策',
                 'Viper (バイパー)',
                 'Clifford (クリフォード)',
-                'CANインベーダー対策',
+                '一瞬で盗まれる『リレーアタック』の手口',
+                '最新手口『CANインベーダー』の実態',
+                '最凶の次世代手口『キーエミュレーター』',
                 '防犯解析・高度施工'
             ],
             path: '/security/panthera'

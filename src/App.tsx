@@ -30,10 +30,13 @@ const AudioMenuDetail = lazy(() => import('./components/Menu/AudioMenuDetail').t
 const PantheraPage = lazy(() => import('./pages/Security/PantheraPage').then(m => ({ default: m.PantheraPage })));
 const GrgoPage = lazy(() => import('./pages/Security/GrgoPage').then(m => ({ default: m.GrgoPage })));
 const GrgoV2Page = lazy(() => import('./pages/Security/GrgoV2Page').then(m => ({ default: m.GrgoV2Page })));
-const DigitalSecurityPage = lazy(() => import('./pages/Security/DigitalPage').then(m => ({ default: m.DigitalSecurityPage })));
+
 const DashcamPage = lazy(() => import('./pages/Security/DashcamPage').then(m => ({ default: m.DashcamPage })));
 const ViperPage = lazy(() => import('./pages/Security/ViperPage').then(m => ({ default: m.ViperPage })));
 const CliffordPage = lazy(() => import('./pages/Security/CliffordPage').then(m => ({ default: m.CliffordPage })));
+const RelayAttackPage = lazy(() => import('./pages/Security/RelayAttackPage').then(m => ({ default: m.RelayAttackPage })));
+const CanInvaderPage = lazy(() => import('./pages/Security/CanInvaderPage').then(m => ({ default: m.CanInvaderPage })));
+const KeyEmulatorPage = lazy(() => import('./pages/Security/KeyEmulatorPage').then(m => ({ default: m.KeyEmulatorPage })));
 
 const ReservationFormPage = lazy(() => import('./components/Form/ReservationFormPage').then(m => ({ default: m.ReservationFormPage })));
 const PartnersListPage = lazy(() => import('./components/PartnersListPage').then(m => ({ default: m.PartnersListPage })));
@@ -137,7 +140,9 @@ function AppContent() {
       'security_panthera': '/security/panthera',
       'security_grgo': '/security/grgo',
       'security_grgo_v2': '/security/grgo-v2',
-      'security_digital': '/security/digital',
+      'security_relay_attack': '/security/relay-attack',
+      'security_can_invader': '/security/can-invader',
+      'security_key_emulator': '/security/key-emulator',
       'security_viper': '/security/viper',
       'security_clifford': '/security/clifford',
       'dashcam': '/security/dashcam'
@@ -152,7 +157,11 @@ function AppContent() {
       'Grgo (ゴルゴ) VⅡ': '/security/grgo',
       'Author Alarm / IGLA2+': '/security/digital',
       'デジタル・イモビライザー': '/security/digital',
-      'リレーアタック対策': '/security/digital',
+      'リレーアタック対策': '/security/relay-attack',
+      '一瞬で盗まれる『リレーアタック』の手口': '/security/relay-attack',
+      '最新手口『CANインベーダー』の実態': '/security/can-invader',
+      '最凶の次世代手口『キーエミュレーター』': '/security/key-emulator',
+      'CANインベーダー対策': '/security/can-invader',
       '前後2カメラ・駐車監視ドラレコ': '/security/dashcam',
       '360度全方位記録システム': '/security/dashcam',
       'デジタルインナーミラー': '/security/dashcam',
@@ -250,7 +259,7 @@ function AppContent() {
               facilities={facilities}
               isMobileMenuOpen={isMobileMenuOpen}
               setIsMobileMenuOpen={setIsMobileMenuOpen}
-              handleLogoClick={() => { }}
+              handleLogoClick={() => navigate('/')}
               navigate={navigate}
               handleMenuClick={handleMenuClick}
               showMegaMenu={showMegaMenu}
@@ -258,10 +267,13 @@ function AppContent() {
               auditionSpeakers={auditionSpeakers}
             />
           } />
+          <Route path="/security/relay-attack" element={<RelayAttackPage />} />
+          <Route path="/security/can-invader" element={<CanInvaderPage />} />
+          <Route path="/security/key-emulator" element={<KeyEmulatorPage />} />
           <Route path="/security/panthera" element={<PantheraPage />} />
           <Route path="/security/grgo" element={<GrgoPage />} />
           <Route path="/security/grgo-v2" element={<GrgoV2Page />} />
-          <Route path="/security/digital" element={<DigitalSecurityPage />} />
+
           <Route path="/security/dashcam" element={<DashcamPage />} />
           <Route path="/security/viper" element={<ViperPage />} />
           <Route path="/security/clifford" element={<CliffordPage />} />

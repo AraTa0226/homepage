@@ -106,20 +106,18 @@ export const VaultGrid: React.FC<VaultGridProps> = ({ categories, onCategoryClic
                                                     "Panthera (パンテーラ) Z-Series": { id: "security_panthera" },
                                                     "Grgo (ゴルゴ) V2": { id: "security_grgo_v2" },
                                                     "Grgo (ゴルゴ) VⅡ": { id: "security_grgo" },
-                                                    "Relay Attack Defense": { id: "security_digital" },
-                                                    "Digital Mirror": { id: "dashcam" },
-                                                    "Dual Cam Recording": { id: "dashcam" },
-                                                    "Radar Detector": { id: "security_digital" },
-                                                    "Author Alarm / IGLA2+": { id: "security_digital" },
-                                                    "デジタル・イモビライザー": { id: "security_digital" },
-                                                    "リレーアタック対策": { id: "security_digital" },
+                                                    "Relay Attack Defense": { id: "security_relay_attack" },
+                                                    "リレーアタック対策": { id: "security_relay_attack" },
+                                                    "一瞬で盗まれる『リレーアタック』の手口": { id: "security_relay_attack" },
+                                                    "最新手口『CANインベーダー』の実態": { id: "security_can_invader" },
+                                                    "最凶の次世代手口『キーエミュレーター』": { id: "security_key_emulator" },
+                                                    "CANインベーダー対策": { id: "security_can_invader" },
                                                     "Viper (バイパー)": { id: "security_viper" },
                                                     "Clifford (クリフォード)": { id: "security_clifford" },
-                                                    "CANインベーダー対策": { id: "security_digital" },
                                                     "店内の常時試聴ユニット": { id: "audition-showcase", isAnchor: true },
                                                     "施工ブログ / 店舗詳細": { id: "contact", isAnchor: true }
                                                 };
-                                                const target = { ...(planMapping[item] || { id: cat.id }) };
+                                                const target = { ...(planMapping[item] || { id: cat.id }), name: item };
                                                 handleMenuClick(target);
                                             }}
                                             className={`flex items-center justify-between text-xs md:text-sm font-black transition-all hover:translate-x-2 px-6 py-3.5 rounded-xl backdrop-blur-md border shadow-sm ${theme === 'dark'
