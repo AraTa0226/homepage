@@ -223,7 +223,7 @@ export const MainPage: React.FC<MainPageProps> = ({
             subtitle: 'DIGITAL EYE',
             image: assets.dashcamMenuImage,
             items: ['Digital Mirror', 'Radar Detector', 'Dual Cam Recording'],
-            path: '/security/dashcam'
+            path: '/security/drive_recorder'
         }
     ];
 

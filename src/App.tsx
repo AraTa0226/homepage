@@ -145,7 +145,8 @@ function AppContent() {
       'security_key_emulator': '/security/key-emulator',
       'security_viper': '/security/viper',
       'security_clifford': '/security/clifford',
-      'dashcam': '/security/dashcam'
+      'dashcam': '/security/drive_recorder',
+      'security_options': '/security/drive_recorder'
     };
 
     // Label-based mapping for generic categories or items with specific names
@@ -155,16 +156,11 @@ function AppContent() {
       'Panthera (パンテーラ) Z-Series': '/security/panthera',
       'Grgo (ゴルゴ) V2': '/security/grgo-v2',
       'Grgo (ゴルゴ) VⅡ': '/security/grgo',
-      'Author Alarm / IGLA2+': '/security/digital',
-      'デジタル・イモビライザー': '/security/digital',
-      'リレーアタック対策': '/security/relay-attack',
-      '一瞬で盗まれる『リレーアタック』の手口': '/security/relay-attack',
-      '最新手口『CANインベーダー』の実態': '/security/can-invader',
       '最凶の次世代手口『キーエミュレーター』': '/security/key-emulator',
       'CANインベーダー対策': '/security/can-invader',
-      '前後2カメラ・駐車監視ドラレコ': '/security/dashcam',
-      '360度全方位記録システム': '/security/dashcam',
-      'デジタルインナーミラー': '/security/dashcam',
+      'ドライブレコーダー': '/security/drive_recorder',
+      'レーダー探知機': '/security/drive_recorder',
+      'デジタルインナーミラー': '/security/drive_recorder',
       'Viper (バイパー)': '/security/viper',
       'VIPER (バイパー)': '/security/viper',
       'Clifford (クリフォード)': '/security/clifford',
@@ -274,7 +270,8 @@ function AppContent() {
           <Route path="/security/grgo" element={<GrgoPage />} />
           <Route path="/security/grgo-v2" element={<GrgoV2Page />} />
 
-          <Route path="/security/dashcam" element={<DashcamPage />} />
+          <Route path="/security/drive_recorder" element={<DashcamPage />} />
+          <Route path="/security/drive_recorder/:productId" element={<DashcamPage />} />
           <Route path="/security/viper" element={<ViperPage />} />
           <Route path="/security/clifford" element={<CliffordPage />} />
           <Route path="/security/vehicle/:modelId" element={<VehicleSecurityDetail assets={assets} />} />

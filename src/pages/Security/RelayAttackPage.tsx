@@ -241,13 +241,6 @@ export const RelayAttackPage: React.FC = () => {
                     </p>
 
                     <div className="flex flex-col md:flex-row gap-6 justify-center items-center pt-8">
-                        <button
-                            onClick={() => navigate('/security/digital')}
-                            className="w-full md:w-auto px-12 py-5 bg-emerald-500 text-black font-black italic tracking-tighter rounded-full text-lg hover:scale-105 transition-all flex items-center justify-center gap-3 group"
-                        >
-                            対策製品を見る
-                            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform font-bold" />
-                        </button>
                         <a
                             href="https://page.line.me/312qjhsq?openQrModal=true"
                             className="w-full md:w-auto px-12 py-5 bg-white/5 border border-white/10 text-white font-black italic tracking-tighter rounded-full text-lg hover:bg-white/10 transition-all flex items-center justify-center gap-3"

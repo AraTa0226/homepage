@@ -114,6 +114,9 @@ export const VaultGrid: React.FC<VaultGridProps> = ({ categories, onCategoryClic
                                                     "CANインベーダー対策": { id: "security_can_invader" },
                                                     "Viper (バイパー)": { id: "security_viper" },
                                                     "Clifford (クリフォード)": { id: "security_clifford" },
+                                                    "ドライブレコーダー": { id: "dashcam" },
+                                                    "レーダー探知機": { id: "dashcam" },
+                                                    "デジタルインナーミラー": { id: "dashcam" },
                                                     "店内の常時試聴ユニット": { id: "audition-showcase", isAnchor: true },
                                                     "施工ブログ / 店舗詳細": { id: "contact", isAnchor: true }
                                                 };

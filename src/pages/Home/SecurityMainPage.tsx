@@ -197,8 +197,7 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                 'Clifford (クリフォード)',
                 '一瞬で盗まれる『リレーアタック』の手口',
                 '最新手口『CANインベーダー』の実態',
-                '最凶の次世代手口『キーエミュレーター』',
-                '防犯解析・高度施工'
+                '最凶の次世代手口『キーエミュレーター』'
             ],
             path: '/security/panthera'
         },
@@ -209,13 +208,11 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
             image: assets.dashcamMenuImage,
             gridClass: 'col-span-1',
             items: [
-                '前後2カメラ・駐車監視ドラレコ',
-                '360度全方位記録システム',
-                'デジタルインナーミラー',
-                'レーザー・レーダー探知機',
-                'セキュリティー連動録画'
+                'ドライブレコーダー',
+                'レーダー探知機',
+                'デジタルインナーミラー'
             ],
-            path: '/security/dashcam'
+            path: '/security/drive_recorder'
         },
         {
             id: 'maintenance',
@@ -282,10 +279,7 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                 handleMenuClick={handleMenuClick}
                             />
                         </div>
-                        <a href="#blog" className="flex flex-col items-center group/item transition-colors">
-                            <span className="text-sm font-black tracking-widest group-hover/item:text-emerald-500">BLOG</span>
-                            <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">ブログ</span>
-                        </a>
+
                         <a href="#access" className="flex flex-col items-center group/item transition-colors">
                             <span className="text-sm font-black tracking-widest group-hover/item:text-emerald-500">ACCESS</span>
                             <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">店舗案内</span>

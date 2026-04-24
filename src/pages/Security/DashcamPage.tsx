@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { usePrices, formatPrice } from '../../contexts/PriceContext';
 import { useSite } from '../../contexts/SiteContext';
 import {
@@ -9,6 +9,9 @@ import {
     ShieldCheck,
     CheckCircle2,
     ArrowLeft,
+    Camera,
+    Layers,
+    Shield,
     X,
     MessageSquare,
     Calendar,
@@ -17,34 +20,82 @@ import {
     Zap,
     HardDrive
 } from 'lucide-react';
+
+// アイコンマッピングの定義
+const iconMap: Record<string, any> = {
+    Camera,
+    Layers,
+    Zap,
+    Shield,
+    HardDrive,
+    Info
+};
 import { SafeImage } from '../../components/ui/SafeImage';
 
 export const DashcamPage: React.FC = () => {
     const { assets } = useSite();
     const { plans } = usePrices();
     const navigate = useNavigate();
+    const { productId } = useParams();
     const [selectedItem, setSelectedItem] = useState<any | null>(null);
 
     const categoryId = 'dashcam';
     const currentCategory = plans.find(p => p.id === categoryId);
 
+    // URLのproductIdに基づいてselectedItemを同期
+    React.useEffect(() => {
+        if (productId && currentCategory) {
+            const item = currentCategory.items.find((i: any) => i.slug === productId);
+            if (item) {
+                setSelectedItem(item);
+            } else {
+                setSelectedItem(null);
+            }
+        } else {
+            setSelectedItem(null);
+        }
+    }, [productId, currentCategory]);
+
+    // モーダルを閉じる際のナビゲーション
+    const handleClose = () => {
+        navigate('/security/drive_recorder');
+    };
+
+    // モーダルを開く際のナビゲーション
+    const handleOpen = (item: any) => {
+        if (item.slug) {
+            navigate(`/security/drive_recorder/${item.slug}`);
+        } else {
+            setSelectedItem(item);
+        }
+    };
+
     const detail = {
-        title: "Dashcam (ドライブレコーダー)",
-        subtitle: "セキュリティの警報に連動して、ドラレコを強制録画。証拠を確実に残します。",
-        description: "PantheraやGrgoのセンサーが異常を検知した際、ドライブレコーダーの電源を強制的にONにして録画を開始します。駐車中の当て逃げやいたずらの証拠を確実に残すための必須オプションです。もちろん、単体での高画質録画モデルも多数取り揃えております。",
-        sampleDescription: "【施工例】Grgo ZV ＋ 前後ドラレコ連動：不審者の接近をマイクロ波センサーが検知すると、ドラレコが即座に録画を開始。手元のリモコンにも通知が届きます。",
+        title: "Drive Recorder (ドライブレコーダー)",
+        subtitle: "万が一の瞬間を、決定的な証拠として記録。最新のAI技術と連動機能で愛車を守ります。",
+        description: "高度化する車両盗難やあおり運転から愛車を守るために。ドライブレコーダーは今や、万が一の際の決定的な証拠となるだけでなく、カーセキュリティと連動させることで『事後』だけでなく『未然に防ぐ』ための重要な監視デバイスとなります。当店では、画質や画角といったカタログスペックだけでなく、駐車監視時のバッテリー負荷やLED信号機との同期問題など、実用面での信頼性を重視。専門業者ならではの確かな施工技術とともに、お客様の走行環境に最適な構成をご提案いたします。",
+        merits: {
+            threeCamera: {
+                title: "3カメラモデルのメリット",
+                content: "フロントカメラ＋リアデュアルカメラという組み合わせ。後方から撮影する前方の映像は後ろから見渡すように見えるため状況がわかりやすいのが特徴です。前方カメラは前方だけに特化するため設置位置の汎用性が高く、360°撮影レンズで懸念される干渉物の影響も最小限に抑えられます。室内映像は後方からの撮影となるため、同乗者の顔などが映らずプライバシー配慮にも有効で、魚眼レンズと比べても映像が非常に明瞭です。"
+            },
+            security: {
+                title: "セキュリティ連動と高度な監視",
+                content: "電源監視ユニットを標準装備し、オプション無しでの自動駐車監視切り替えや、最速2秒での録画スタートを可能としました。カーセキュリティーとの連動では、盗難防止の防犯カメラとして威力を発揮します。運転席横の映像を重視する場合は360°モデルがベターですが、用途に合わせて最適な構成をご提案します。オプションのマイクロ波センサーを追加すれば、より高度な駐車監視が可能です。"
+            }
+        },
         benefits: [
-            "セキュリティ警報時に自動で録画を開始し、逃さず記録",
-            "駐車監視モードよりも確実に、かつバッテリー負荷を抑えて運用",
-            "360度モデルやデジタルミラー型など、最新機種との連携",
-            "前方だけでなく、車内や後方の映像も高精細にキャッチ"
+            "最新のSTARVIS2搭載モデルによる圧倒的な夜間視認性",
+            "人検知A.Iによる駐車中の高度なイタズラ監視記録",
+            "360度全方位＋リアカメラによる死角のない全周囲カバー",
+            "SDカードフォーマット不要の新方式でメンテナンスフリー"
         ],
         image: assets.dashcamMenuImage,
         icon: Video,
         color: "blue",
         upgrades: [
-            { title: "セキュリティ連動ユニット", price: "+¥11,000〜", icon: ShieldCheck, description: "セキュリティの警報に連動して、ドラレコの電源を強制ONにします。" },
-            { title: "大容量SDカード", price: "+¥5,500〜", icon: HardDrive, description: "長時間の録画データを高信頼性メディアで保存します。" }
+            { title: "マイクロ波センサー", price: "+¥16,500〜", icon: ShieldCheck, description: "車両への接近を検知し、より高度な駐車監視録画を可能にします。" },
+            { title: "マルチバッテリー", price: "+¥27,500〜", icon: Zap, description: "車両バッテリーへの負荷をゼロにし、長時間の駐車録画を実現します。" }
         ]
     };
 
@@ -60,7 +111,7 @@ export const DashcamPage: React.FC = () => {
                         <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
                         <span className="text-sm">SECURITY HOME</span>
                     </button>
-                    <h1 className="font-black text-xl tracking-tighter">Dashcam</h1>
+                    <h1 className="font-black text-xl tracking-tighter uppercase">Drive Recorder</h1>
                     <div className="flex items-center gap-4">
                         <button onClick={() => navigate('/reservation')} className="bg-gray-900 text-white px-6 py-2.5 rounded-xl font-black text-xs">
                             RESERVATION
@@ -101,9 +152,15 @@ export const DashcamPage: React.FC = () => {
                                     </div>
                                 ))}
                             </div>
-                            <div className="p-8 rounded-[2.5rem] bg-gray-50 border border-gray-200">
-                                <h4 className="text-sm font-black mb-4 uppercase tracking-[0.2em] text-gray-400">Practical Example</h4>
-                                <p className="text-gray-800 font-bold leading-relaxed italic">{detail.sampleDescription}</p>
+                            <div className="grid md:grid-cols-2 gap-8 mt-12 mb-10">
+                                <div className="p-8 rounded-[2.5rem] bg-gray-50 border border-gray-200">
+                                    <h4 className="text-sm font-black mb-4 uppercase tracking-[0.2em] text-blue-600">{detail.merits.threeCamera.title}</h4>
+                                    <p className="text-gray-800 font-bold leading-relaxed text-sm italic">{detail.merits.threeCamera.content}</p>
+                                </div>
+                                <div className="p-8 rounded-[2.5rem] bg-gray-50 border border-gray-200">
+                                    <h4 className="text-sm font-black mb-4 uppercase tracking-[0.2em] text-blue-600">{detail.merits.security.title}</h4>
+                                    <p className="text-gray-800 font-bold leading-relaxed text-sm italic">{detail.merits.security.content}</p>
+                                </div>
                             </div>
                         </section>
                     </div>
@@ -149,11 +206,11 @@ export const DashcamPage: React.FC = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.1 }}
-                                onClick={() => setSelectedItem(item)}
+                                onClick={() => handleOpen(item)}
                                 className="bg-white rounded-[2.5rem] p-8 shadow-xl border border-gray-100 flex flex-col relative group overflow-hidden cursor-pointer"
                             >
-                                <div className="relative h-48 -mx-8 -mt-8 mb-8 overflow-hidden">
-                                    <SafeImage src={item.image || assets.dashcamMenuImage} alt={item.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                                <div className="relative h-48 -mx-8 -mt-8 mb-8 overflow-hidden bg-white flex items-center justify-center">
+                                    <SafeImage src={item.image || assets.dashcamMenuImage} alt={item.name} className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-700" />
                                     <div className="absolute top-4 right-4">
                                         <span className="bg-blue-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-lg">{item.badge}</span>
                                     </div>
@@ -162,15 +219,21 @@ export const DashcamPage: React.FC = () => {
                                     <h4 className="text-2xl font-black mb-2 text-gray-900">{item.name}</h4>
                                     <div className="text-3xl font-black text-blue-600 mb-6">{formatPrice(item.price)}</div>
                                     <div className="space-y-3 mb-8">
-                                        {item.features.slice(0, 3).map((f, j) => (
+                                        {item.features?.slice(0, 3).map((f: string, j: number) => (
                                             <div key={j} className="flex items-center gap-3 text-xs font-bold text-gray-500">
                                                 <CheckCircle2 className="w-4 h-4 text-green-500" />
                                                 {f}
                                             </div>
-                                        ))}
+                                        )) || <div className="text-xs font-bold text-gray-400">詳細情報準備中</div>}
                                     </div>
                                 </div>
-                                <button className="w-full bg-gray-900 text-white py-4 rounded-2xl font-black text-sm tracking-widest hover:bg-blue-600 transition-all shadow-lg">
+                                <button
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        handleOpen(item);
+                                    }}
+                                    className="w-full bg-gray-900 text-white py-4 rounded-2xl font-black text-sm tracking-widest hover:bg-blue-600 transition-all shadow-lg"
+                                >
                                     VIEW DETAILS
                                 </button>
                             </motion.div>
@@ -185,34 +248,123 @@ export const DashcamPage: React.FC = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
+                        onClick={handleClose}
                         className="fixed inset-0 z-[110] flex items-center justify-center p-4 md:p-8 bg-gray-950/90 backdrop-blur-md"
                     >
                         <motion.div
                             initial={{ scale: 0.9, opacity: 0, y: 20 }}
                             animate={{ scale: 1, opacity: 1, y: 0 }}
                             exit={{ scale: 0.9, opacity: 0, y: 20 }}
-                            className="bg-white w-full max-w-2xl rounded-[3rem] overflow-hidden shadow-2xl flex flex-col relative"
+                            onClick={(e) => e.stopPropagation()}
+                            className="bg-white w-full max-w-2xl max-h-[90vh] rounded-[3rem] shadow-2xl flex flex-col relative overflow-hidden"
                         >
-                            <button onClick={() => setSelectedItem(null)} className="absolute top-6 right-6 w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-900 z-20">
+                            <button onClick={handleClose} className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/80 backdrop-blur-md shadow-sm flex items-center justify-center text-gray-900 z-30 border border-gray-100 hover:bg-gray-50 transition-colors">
                                 <X className="w-6 h-6" />
                             </button>
-                            <div className="p-12">
-                                <span className="bg-blue-100 text-blue-600 text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest mb-6 inline-block">{selectedItem.badge}</span>
-                                <h2 className="text-4xl font-black text-gray-900 mb-6 tracking-tighter">{selectedItem.name}</h2>
-                                <div className="text-gray-600 font-bold leading-relaxed mb-10">
-                                    {selectedItem.description}
-                                </div>
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
-                                    {selectedItem.features.map((f: string, idx: number) => (
-                                        <div key={idx} className="flex items-center gap-3 bg-gray-50 p-4 rounded-xl border border-gray-100">
-                                            <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" />
-                                            <span className="text-xs font-bold text-gray-700">{f}</span>
+
+                            <div className="flex-1 overflow-y-auto p-8 md:p-12 text-gray-900">
+                                <div className="pt-4">
+                                    {selectedItem.image && (
+                                        <div className="mb-10 -mx-4 md:-mx-0 bg-white rounded-[2rem] overflow-hidden shadow-xl border border-gray-100 flex items-center justify-center">
+                                            <SafeImage
+                                                src={selectedItem.image}
+                                                alt={selectedItem.name}
+                                                className="w-full aspect-[16/10] object-contain p-6"
+                                            />
                                         </div>
-                                    ))}
-                                </div>
-                                <div className="flex items-center justify-between pt-8 border-t border-gray-100">
-                                    <div className="text-3xl font-black text-gray-900">{formatPrice(selectedItem.price)}</div>
-                                    <button onClick={() => navigate('/reservation')} className="bg-blue-600 text-white px-8 py-3 rounded-xl font-black text-sm hover:scale-105 transition-all">予約相談</button>
+                                    )}
+                                    <span className="bg-blue-100 text-blue-600 text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest mb-6 inline-block">{selectedItem.badge}</span>
+                                    <h2 className="text-4xl font-black text-gray-900 mb-6 tracking-tighter leading-tight">{selectedItem.name}</h2>
+
+                                    {/* スペックサマリーのグリッド表示 */}
+                                    {selectedItem.specSummary && (
+                                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-10">
+                                            {selectedItem.specSummary.map((spec: any, sIdx: number) => {
+                                                const Icon = iconMap[spec.icon] || Info;
+                                                return (
+                                                    <div key={sIdx} className="bg-gray-50 rounded-2xl p-4 border border-gray-100 flex flex-col items-center text-center group hover:border-blue-200 transition-colors">
+                                                        <Icon className="w-5 h-5 text-blue-500 mb-2" />
+                                                        <div className="text-[10px] text-gray-400 font-bold mb-1">{spec.label}</div>
+                                                        <div className="text-[11px] text-gray-900 font-extrabold leading-tight">{spec.value}</div>
+                                                    </div>
+                                                );
+                                            })}
+                                        </div>
+                                    )}
+
+                                    <div className="text-gray-600 font-bold leading-relaxed mb-10">
+                                        {selectedItem.description}
+                                    </div>
+
+                                    {/* YouTube動画の埋め込み */}
+                                    {selectedItem.youtubeId && (
+                                        <div className="mb-12">
+                                            <h3 className="text-sm font-black text-gray-400 uppercase tracking-widest mb-4 flex items-center gap-2">
+                                                <Video className="w-4 h-4" />
+                                                Actual Footage / 走行動画
+                                            </h3>
+                                            <div className="aspect-video w-full rounded-[2rem] overflow-hidden shadow-xl border border-gray-100 bg-gray-50">
+                                                <iframe
+                                                    width="100%"
+                                                    height="100%"
+                                                    src={`https://www.youtube.com/embed/${selectedItem.youtubeId}`}
+                                                    title="Product Video"
+                                                    frameBorder="0"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                    allowFullScreen
+                                                ></iframe>
+                                            </div>
+                                            <p className="mt-4 text-[10px] text-gray-400 font-bold text-center italic">
+                                                ※メーカー公式YouTubeより引用
+                                            </p>
+                                        </div>
+                                    )}
+
+                                    {/* 詳細セクションがある場合の描画 */}
+                                    {selectedItem.detailedSections && (
+                                        <div className="space-y-8 mb-12">
+                                            {selectedItem.detailedSections.map((section: any, sIdx: number) => (
+                                                <div key={sIdx} className="bg-gray-50 rounded-3xl p-8 border border-gray-100">
+                                                    <h3 className="text-lg font-black text-gray-900 mb-4 flex items-center gap-3">
+                                                        <div className="w-1.5 h-6 bg-blue-500 rounded-full" />
+                                                        {section.title}
+                                                    </h3>
+                                                    <div className="text-sm text-gray-600 font-bold leading-loose whitespace-pre-wrap">
+                                                        {section.content}
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
+
+                                    {!selectedItem.detailedSections && (
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
+                                            {selectedItem.features?.map((f: string, idx: number) => (
+                                                <div key={idx} className="flex items-center gap-3 bg-gray-50 p-4 rounded-xl border border-gray-100">
+                                                    <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" />
+                                                    <span className="text-xs font-bold text-gray-700">{f}</span>
+                                                </div>
+                                            )) || <div className="col-span-full text-center text-gray-400 font-bold py-8">機能詳細情報を準備しております。</div>}
+                                        </div>
+                                    )}
+
+                                    <div className="flex flex-col sm:flex-row sm:items-center justify-between pt-8 border-t border-gray-100 gap-6">
+                                        <div className="flex flex-col">
+                                            <div className="text-3xl font-black text-gray-900">{formatPrice(selectedItem.price)}</div>
+                                            {(selectedItem.link || selectedItem.url) ? (
+                                                <div className="text-[10px] text-gray-400 font-bold mt-1 max-w-[200px] truncate">
+                                                    URL: {selectedItem.link || selectedItem.url}
+                                                </div>
+                                            ) : (
+                                                <div className="text-[10px] text-gray-300 font-bold mt-1 italic">
+                                                    製品個別ページ準備中
+                                                </div>
+                                            )}
+                                        </div>
+                                        <button onClick={() => navigate('/reservation')} className="bg-blue-600 text-white px-10 py-4 rounded-2xl font-black text-sm hover:scale-105 transition-all shadow-lg shadow-blue-500/20 active:scale-95 whitespace-nowrap">
+                                            予約相談
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </motion.div>
