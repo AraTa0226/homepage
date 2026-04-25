@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-04-22T09:52:00Z",
-  "cacheVersion": "38",
+  "cacheVersion": "39",
   "plans": [
     {
       "id": "speaker_package",
@@ -1098,7 +1098,7 @@
           "price": "29700",
           "badge": "360°+スマホ連動",
           "image": "/images/Security/drive_recorder/zq-25.webp",
-          "youtubeId": "Vv1jxIbVe28",
+          "featureImage": "/images/Security/drive_recorder/zq-25-image.webp",
           "features": [
             "全周囲360°録画",
             "無線LAN搭載・スマホ連動",

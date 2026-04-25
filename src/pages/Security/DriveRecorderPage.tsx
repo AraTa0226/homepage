@@ -297,25 +297,36 @@ export const DriveRecorderPage: React.FC = () => {
                                     </div>
 
                                     {/* YouTube動画の埋め込み */}
-                                    {selectedItem.youtubeId && (
+                                    {/* YouTube動画の埋め込み または 静止画の表示 */}
+                                    {(selectedItem.youtubeId || selectedItem.featureImage) && (
                                         <div className="mb-12">
                                             <h3 className="text-sm font-black text-gray-400 uppercase tracking-widest mb-4 flex items-center gap-2">
-                                                <Video className="w-4 h-4" />
-                                                Actual Footage / 走行動画
+                                                {selectedItem.youtubeId ? <Video className="w-4 h-4" /> : <Camera className="w-4 h-4" />}
+                                                {selectedItem.youtubeId ? "Actual Footage / 走行動画" : "Feature Image / 機能イメージ"}
                                             </h3>
-                                            <div className="aspect-video w-full rounded-[2rem] overflow-hidden shadow-xl border border-gray-100 bg-gray-50">
-                                                <iframe
-                                                    width="100%"
-                                                    height="100%"
-                                                    src={`https://www.youtube.com/embed/${selectedItem.youtubeId}`}
-                                                    title="Product Video"
-                                                    frameBorder="0"
-                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                                    allowFullScreen
-                                                ></iframe>
+                                            <div className="w-full rounded-[2rem] overflow-hidden shadow-xl border border-gray-100 bg-gray-50">
+                                                {selectedItem.youtubeId ? (
+                                                    <div className="aspect-video">
+                                                        <iframe
+                                                            width="100%"
+                                                            height="100%"
+                                                            src={`https://www.youtube.com/embed/${selectedItem.youtubeId}`}
+                                                            title="Product Video"
+                                                            frameBorder="0"
+                                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                            allowFullScreen
+                                                        ></iframe>
+                                                    </div>
+                                                ) : (
+                                                    <SafeImage
+                                                        src={selectedItem.featureImage}
+                                                        alt="Feature Image"
+                                                        className="w-full h-auto object-cover"
+                                                    />
+                                                )}
                                             </div>
                                             <p className="mt-4 text-[10px] text-gray-400 font-bold text-center italic">
-                                                ※メーカー公式YouTubeより引用
+                                                {selectedItem.youtubeId ? "※メーカー公式YouTubeより引用" : "※機能イメージ画像"}
                                             </p>
                                         </div>
                                     )}
