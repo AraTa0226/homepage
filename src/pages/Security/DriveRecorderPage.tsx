@@ -32,7 +32,7 @@ const iconMap: Record<string, any> = {
 };
 import { SafeImage } from '../../components/ui/SafeImage';
 
-export const DashcamPage: React.FC = () => {
+export const DriveRecorderPage: React.FC = () => {
     const { assets } = useSite();
     const { plans } = usePrices();
     const navigate = useNavigate();

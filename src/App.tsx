@@ -31,7 +31,7 @@ const PantheraPage = lazy(() => import('./pages/Security/PantheraPage').then(m =
 const GrgoPage = lazy(() => import('./pages/Security/GrgoPage').then(m => ({ default: m.GrgoPage })));
 const GrgoV2Page = lazy(() => import('./pages/Security/GrgoV2Page').then(m => ({ default: m.GrgoV2Page })));
 
-const DashcamPage = lazy(() => import('./pages/Security/DashcamPage').then(m => ({ default: m.DashcamPage })));
+const DriveRecorderPage = lazy(() => import('./pages/Security/DriveRecorderPage').then(m => ({ default: m.DriveRecorderPage })));
 const ViperPage = lazy(() => import('./pages/Security/ViperPage').then(m => ({ default: m.ViperPage })));
 const CliffordPage = lazy(() => import('./pages/Security/CliffordPage').then(m => ({ default: m.CliffordPage })));
 const RelayAttackPage = lazy(() => import('./pages/Security/RelayAttackPage').then(m => ({ default: m.RelayAttackPage })));
@@ -270,8 +270,9 @@ function AppContent() {
           <Route path="/security/grgo" element={<GrgoPage />} />
           <Route path="/security/grgo-v2" element={<GrgoV2Page />} />
 
-          <Route path="/security/drive_recorder" element={<DashcamPage />} />
-          <Route path="/security/drive_recorder/:productId" element={<DashcamPage />} />
+          <Route path="/security/drive_recorder/sn-tw100di" element={<Navigate to="/security/drive_recorder/zq-25" replace />} />
+          <Route path="/security/drive_recorder" element={<DriveRecorderPage />} />
+          <Route path="/security/drive_recorder/:productId" element={<DriveRecorderPage />} />
           <Route path="/security/viper" element={<ViperPage />} />
           <Route path="/security/clifford" element={<CliffordPage />} />
           <Route path="/security/vehicle/:modelId" element={<VehicleSecurityDetail assets={assets} />} />
