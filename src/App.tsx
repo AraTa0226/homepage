@@ -271,6 +271,7 @@ function AppContent() {
           <Route path="/security/grgo-v2" element={<GrgoV2Page />} />
 
           <Route path="/security/drive_recorder/sn-tw100di" element={<Navigate to="/security/drive_recorder/zq-25" replace />} />
+          <Route path="/security/drive_recorder/sn-st2300c" element={<Navigate to="/security/drive_recorder/q-03" replace />} />
           <Route path="/security/drive_recorder" element={<DriveRecorderPage />} />
           <Route path="/security/drive_recorder/:productId" element={<DriveRecorderPage />} />
           <Route path="/security/viper" element={<ViperPage />} />

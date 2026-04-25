@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-04-22T09:52:00Z",
-  "cacheVersion": "39",
+  "cacheVersion": "41",
   "plans": [
     {
       "id": "speaker_package",
@@ -1162,16 +1162,72 @@
           ]
         },
         {
-          "name": "Yupiteru SN-ST2300c",
-          "price": "13200",
-          "badge": "シンプルフロント",
+          "name": "Yupiteru Q-03",
+          "price": "38500",
+          "badge": "全天球720°記録",
+          "image": "/images/Security/drive_recorder/q-03.webp",
+          "featureImage": "/images/Security/drive_recorder/q-03-image.webp",
           "features": [
-            "フロントのみ",
-            "超広角160度",
-            "HDR搭載",
-            "コンパクト設計"
+            "全方位720°録画",
+            "STARVIS搭載・夜間鮮明",
+            "GPS・Gセンサー内蔵",
+            "3年保証・16GB付属"
           ],
-          "slug": "sn-st2300c"
+          "slug": "q-03",
+          "specSummary": [
+            {
+              "label": "カメラ構成",
+              "value": "全天球720°フロントカメラ",
+              "icon": "Camera"
+            },
+            {
+              "label": "夜間補正",
+              "value": "STARVIS & HDR搭載",
+              "icon": "Zap"
+            },
+            {
+              "label": "視野角",
+              "value": "垂直360°/ 水平360°",
+              "icon": "Maximize"
+            },
+            {
+              "label": "駐車監視",
+              "value": "オプション対応",
+              "icon": "Shield"
+            },
+            {
+              "label": "SDカード",
+              "value": "16GB付属 / 最大128GB",
+              "icon": "HardDrive"
+            },
+            {
+              "label": "保証期間",
+              "value": "3年間保証",
+              "icon": "Info"
+            }
+          ],
+          "detailedSections": [
+            {
+              "title": "全方位720°記録「死角のない」証拠能力",
+              "content": "交通事故の7割強が側面や後方からの衝突です。Q-03は全天球レンズにより、1台で前後・左右・上下の全方位を記録。従来のカメラでは死角となる両サイドの状況まで、万が一の瞬間を逃さず捉えます。"
+            },
+            {
+              "title": "STARVIS搭載で昼夜問わず鮮明に記録",
+              "content": "高感度センサー『STARVIS』を採用。独自のノウハウで映像解像度を自動調整し、街灯の少ない暗い夜道でも人や車をはっきりと記録します。夜間の走行も安心のクオリティを提供します。"
+            },
+            {
+              "title": "GPS・Gセンサー搭載で詳細な状況を記録",
+              "content": "自車位置や速度情報を映像と共に記録。時刻もGPSで自動補正されるため、正確な証拠能力を発揮します。衝撃検知時はGセンサーが作動し、録画データを自動的に保護します。"
+            },
+            {
+              "title": "HDR搭載で白とび・黒つぶれを抑制",
+              "content": "トンネルの出入り口や夜間の対向車のライトなど、明暗差の激しいシーンでも映像を最適化。白とびや黒つぶれを抑えた、視認性の高い明瞭な映像を記録し続けます。"
+            },
+            {
+              "title": "カメラ部可動式 & 充実の基本性能",
+              "content": "カメラ部の角度調整が可能で、フロントガラスの傾斜が異なる様々な車種に対応。地デジノイズ低減設計や音声記録、買替補償制度（4万円）など、プロショップが選ぶ安心の基本性能を備えています。"
+            }
+          ]
         },
         {
           "name": "Yupiteru SN-ST3400d",
