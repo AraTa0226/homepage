@@ -151,6 +151,7 @@ function AppContent() {
       'security_clifford': '/security/clifford',
       'dashcam': '/security/drive_recorder',
       'security_radar': '/security/radar',
+      'digital_mirror': '/security/digital_mirror',
       'security_options': '/security/drive_recorder'
 
     };
@@ -166,6 +167,7 @@ function AppContent() {
       'CANインベーダー対策': '/security/can-invader',
       'ドライブレコーダー': '/security/drive_recorder',
       'レーダー探知機': '/security/radar',
+      'デジタルインナーミラー': '/security/digital_mirror',
 
       'Viper (バイパー)': '/security/viper',
       'VIPER (バイパー)': '/security/viper',
@@ -173,13 +175,13 @@ function AppContent() {
       'CLIFFORD (クリフォード)': '/security/clifford'
     };
 
-    if (brandPathMap[item.id]) {
-      navigate(brandPathMap[item.id]);
+    if (item.name && labelPathMap[item.name]) {
+      navigate(labelPathMap[item.name]);
       return;
     }
 
-    if (item.name && labelPathMap[item.name]) {
-      navigate(labelPathMap[item.name]);
+    if (brandPathMap[item.id]) {
+      navigate(brandPathMap[item.id]);
       return;
     }
 
@@ -284,8 +286,8 @@ function AppContent() {
           <Route path="/security/drive_recorder/:productId" element={<DriveRecorderPage />} />
           <Route path="/security/radar" element={<RadarPage />} />
           <Route path="/security/radar/:productId" element={<RadarPage />} />
-          <Route path="/security-home/d-mirror" element={<DigitalMirrorPage />} />
-          <Route path="/security-home/d-mirror/:productId" element={<DigitalMirrorPage />} />
+          <Route path="/security/digital_mirror" element={<DigitalMirrorPage />} />
+          <Route path="/security/digital_mirror/:productId" element={<DigitalMirrorPage />} />
           <Route path="/security/relay-attack" element={<RelayAttackPage />} />
           <Route path="/security/viper" element={<ViperPage />} />
 

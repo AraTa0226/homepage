@@ -41,13 +41,13 @@ export const DigitalMirrorPage: React.FC = () => {
 
     // モーダルを閉じる際のナビゲーション
     const handleClose = () => {
-        navigate('/security-home/d-mirror');
+        navigate('/security/digital_mirror');
     };
 
     // モーダルを開く際のナビゲーション
     const handleOpen = (item: any) => {
         if (item.slug) {
-            navigate(`/security-home/d-mirror/${item.slug}`);
+            navigate(`/security/digital_mirror/${item.slug}`);
         } else {
             setSelectedItem(item);
         }
