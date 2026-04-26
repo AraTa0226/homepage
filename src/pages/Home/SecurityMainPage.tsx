@@ -203,8 +203,8 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
         },
         {
             id: 'security_options',
-            title: '防犯連動おすすめ装備',
-            subtitle: 'SECURITY SET',
+            title: '運転支援・セーフティ',
+            subtitle: 'SAFETY UPGRADE',
             image: assets.dashcamMenuImage,
             gridClass: 'col-span-1',
             items: [

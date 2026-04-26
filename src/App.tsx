@@ -37,6 +37,9 @@ const CliffordPage = lazy(() => import('./pages/Security/CliffordPage').then(m =
 const RelayAttackPage = lazy(() => import('./pages/Security/RelayAttackPage').then(m => ({ default: m.RelayAttackPage })));
 const CanInvaderPage = lazy(() => import('./pages/Security/CanInvaderPage').then(m => ({ default: m.CanInvaderPage })));
 const KeyEmulatorPage = lazy(() => import('./pages/Security/KeyEmulatorPage').then(m => ({ default: m.KeyEmulatorPage })));
+const RadarPage = lazy(() => import('./pages/Security/RadarPage').then(m => ({ default: m.RadarPage })));
+const DigitalMirrorPage = lazy(() => import('./pages/Security/DigitalMirrorPage').then(m => ({ default: m.DigitalMirrorPage })));
+
 
 const ReservationFormPage = lazy(() => import('./components/Form/ReservationFormPage').then(m => ({ default: m.ReservationFormPage })));
 const PartnersListPage = lazy(() => import('./components/PartnersListPage').then(m => ({ default: m.PartnersListPage })));
@@ -97,6 +100,7 @@ function AppContent() {
 
     if (item.path) {
       navigate(item.path);
+      return;
     }
 
     if (item.isExternal) {
@@ -146,7 +150,9 @@ function AppContent() {
       'security_viper': '/security/viper',
       'security_clifford': '/security/clifford',
       'dashcam': '/security/drive_recorder',
+      'security_radar': '/security/radar',
       'security_options': '/security/drive_recorder'
+
     };
 
     // Label-based mapping for generic categories or items with specific names
@@ -159,8 +165,8 @@ function AppContent() {
       '最凶の次世代手口『キーエミュレーター』': '/security/key-emulator',
       'CANインベーダー対策': '/security/can-invader',
       'ドライブレコーダー': '/security/drive_recorder',
-      'レーダー探知機': '/security/drive_recorder',
-      'デジタルインナーミラー': '/security/drive_recorder',
+      'レーダー探知機': '/security/radar',
+
       'Viper (バイパー)': '/security/viper',
       'VIPER (バイパー)': '/security/viper',
       'Clifford (クリフォード)': '/security/clifford',
@@ -276,7 +282,13 @@ function AppContent() {
           <Route path="/security/drive_recorder/z-300" element={<Navigate to="/security/drive_recorder/sn-r13d" replace />} />
           <Route path="/security/drive_recorder" element={<DriveRecorderPage />} />
           <Route path="/security/drive_recorder/:productId" element={<DriveRecorderPage />} />
+          <Route path="/security/radar" element={<RadarPage />} />
+          <Route path="/security/radar/:productId" element={<RadarPage />} />
+          <Route path="/security-home/d-mirror" element={<DigitalMirrorPage />} />
+          <Route path="/security-home/d-mirror/:productId" element={<DigitalMirrorPage />} />
+          <Route path="/security/relay-attack" element={<RelayAttackPage />} />
           <Route path="/security/viper" element={<ViperPage />} />
+
           <Route path="/security/clifford" element={<CliffordPage />} />
           <Route path="/security/vehicle/:modelId" element={<VehicleSecurityDetail assets={assets} />} />
           <Route path="/partners" element={<PartnersListPage />} />
