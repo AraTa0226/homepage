@@ -209,11 +209,13 @@ export const DriveRecorderPage: React.FC = () => {
                                 onClick={() => handleOpen(item)}
                                 className="bg-white rounded-[2.5rem] p-8 shadow-xl border border-gray-100 flex flex-col relative group overflow-hidden cursor-pointer"
                             >
-                                <div className="relative h-48 -mx-8 -mt-8 mb-8 overflow-hidden bg-white flex items-center justify-center">
-                                    <SafeImage src={item.image || assets.dashcamMenuImage} alt={item.name} className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-700" />
-                                    <div className="absolute top-4 right-4">
-                                        <span className="bg-blue-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-lg">{item.badge}</span>
+                                {item.image !== "" && (
+                                    <div className="relative h-48 -mx-8 -mt-8 mb-8 overflow-hidden bg-white flex items-center justify-center">
+                                        <SafeImage src={item.image || assets.dashcamMenuImage} alt={item.name} className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-700" />
                                     </div>
+                                )}
+                                <div className="absolute top-4 right-4">
+                                    <span className="bg-blue-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-lg">{item.badge}</span>
                                 </div>
                                 <div className="flex-grow">
                                     <h4 className="text-2xl font-black mb-2 text-gray-900">{item.name}</h4>

@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-04-22T09:52:00Z",
-  "cacheVersion": "43",
+  "cacheVersion": "46",
   "plans": [
     {
       "id": "speaker_package",
@@ -1307,31 +1307,8 @@
             "スモーク対応",
             "スマホ連携"
           ],
-          "slug": "sn-r13d"
-        },
-        {
-          "name": "Yupiteru Z-300",
-          "price": "44000",
-          "badge": "3カメラ・普及版",
-          "features": [
-            "フロント+リア対面",
-            "全方面記録",
-            "SDフォーマット不要",
-            "3年保証"
-          ],
-          "slug": "z-300"
-        },
-        {
-          "name": "Yupiteru SN-TW90di",
-          "price": "31900",
-          "badge": "無線LAN前後",
-          "features": [
-            "前後2カメラ",
-            "無線LAN対応",
-            "ブラケット一体型",
-            "STARVIS搭載"
-          ],
-          "slug": "sn-tw90di"
+          "slug": "sn-r13d",
+          "image": "/images/Security/drive_recorder/sn-r13d.webp"
         }
       ],
       "images": [],
