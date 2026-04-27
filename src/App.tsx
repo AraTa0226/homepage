@@ -158,21 +158,17 @@ function AppContent() {
 
     // Label-based mapping for generic categories or items with specific names
     const labelPathMap: Record<string, string> = {
-      'Panthera (パンテーラ)': '/security/panthera',
-      'PANTHERA (パンテーラ)': '/security/panthera',
       'Panthera (パンテーラ) Z-Series': '/security/panthera',
-      'Grgo (ゴルゴ) V2': '/security/grgo-v2',
       'Grgo (ゴルゴ) VⅡ': '/security/grgo',
-      '最凶の次世代手口『キーエミュレーター』': '/security/key-emulator',
+      '一瞬で盗まれる『リレーアタック』の手口': '/security/relay-attack',
+      '最新手口『CANインベーダー』': '/security/can-invader',
       'CANインベーダー対策': '/security/can-invader',
+      '最凶の次世代手口『キーエミュレーター』': '/security/key-emulator',
       'ドライブレコーダー': '/security/drive_recorder',
       'レーダー探知機': '/security/radar',
       'デジタルインナーミラー': '/security/digital_mirror',
-
       'Viper (バイパー)': '/security/viper',
-      'VIPER (バイパー)': '/security/viper',
-      'Clifford (クリフォード)': '/security/clifford',
-      'CLIFFORD (クリフォード)': '/security/clifford'
+      'Clifford (クリフォード)': '/security/clifford'
     };
 
     if (item.name && labelPathMap[item.name]) {

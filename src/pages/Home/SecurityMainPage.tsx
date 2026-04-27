@@ -185,19 +185,16 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
         },
         {
             id: 'security_full',
-            title: '最新カーセキュリティ',
-            subtitle: 'SECURITY',
+            title: 'セキュリティー&置き去り防止システム',
+            subtitle: 'SECURITY & SAFETY',
             image: assets.securityMenuImage,
             gridClass: 'col-span-1',
             items: [
                 'Panthera (パンテーラ) Z-Series',
                 'Grgo (ゴルゴ) VⅡ',
-                'Grgo (ゴルゴ) V2',
                 'Viper (バイパー)',
                 'Clifford (クリフォード)',
-                '一瞬で盗まれる『リレーアタック』の手口',
-                '最新手口『CANインベーダー』の実態',
-                '最凶の次世代手口『キーエミュレーター』'
+                '送迎バス 置き去り防止支援装置'
             ],
             path: '/security/panthera'
         },
@@ -216,15 +213,15 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
         },
         {
             id: 'maintenance',
-            title: 'サポート・施工案内',
-            subtitle: 'SUPPORT',
+            title: '最新の盗難手口とサポート',
+            subtitle: 'TECH & SUPPORT',
             image: assets.workspaceImage,
             gridClass: 'col-span-1',
             items: [
-                'セキュリティ定期点検',
-                'リモコン電池・消耗品交換',
-                'システム・アップグレード',
-                '店舗案内・アクセスマップ',
+                '一瞬で盗まれる『リレーアタック』の手口',
+                '最新手口『CANインベーダー』',
+                '最凶の次世代手口『キーエミュレーター』',
+                'セキュリティー診断サービス',
                 'よくあるご質問 (FAQ)'
             ],
             path: '/security/panthera'
@@ -555,6 +552,92 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                         handleMenuClick={handleMenuClick}
                     />
                 </div>
+            </section>
+
+            {/* Partnership Solutions Section */}
+            <section className="py-32 bg-gray-50 relative overflow-hidden">
+                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                    <div className="mb-20 flex flex-col md:flex-row items-end justify-between gap-8">
+                        <div className="space-y-4">
+                            <span className="text-emerald-500 font-black tracking-[0.4em] uppercase text-[10px] block">Special Collaboration</span>
+                            <h2 className="text-4xl md:text-6xl font-black tracking-tighter italic text-gray-900 leading-none">PARTNERSHIP<br /><span className="text-emerald-600 underline decoration-emerald-500/20 underline-offset-8">SOLUTIONS.</span></h2>
+                            <p className="text-gray-500 font-bold max-w-xl text-lg mt-6">確かな技術を持つパートナー企業との提携により、車のある生活をより豊かに、より安心にするための特別なソリューションをご提案します。</p>
+                        </div>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-10">
+                        {/* CAMPit Card */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="group relative bg-white rounded-[3.5rem] overflow-hidden shadow-2xl border border-gray-100 flex flex-col h-full hover:border-emerald-500/30 transition-all duration-700"
+                        >
+                            <div className="relative aspect-[16/10] overflow-hidden bg-gray-100">
+                                <SafeImage src="/images/Home/campit.webp" alt="CAMPit" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                <div className="absolute bottom-8 left-8">
+                                    <span className="bg-emerald-500 text-black text-[9px] font-black px-5 py-2 rounded-full uppercase tracking-widest shadow-lg">Outdoor & Lifestyle</span>
+                                </div>
+                            </div>
+                            <div className="p-12 flex flex-col flex-grow">
+                                <h3 className="text-3xl font-black text-gray-900 mb-6 tracking-tighter italic">CAMPit <span className="text-sm not-italic opacity-40 ml-2">（キャンピット）</span></h3>
+                                <p className="text-emerald-600 font-black text-lg mb-6 leading-tight select-none">
+                                    「何もないところがキャンプ場になる」
+                                </p>
+                                <p className="text-gray-500 font-bold leading-relaxed mb-10 flex-grow text-sm">
+                                    私達の望みを叶える、”清潔、快適、簡単”な私達にピッタリのキャンプユニット。場所を選ばず、あなたの車を最高の居住空間へと変貌させます。
+                                </p>
+                                <div className="flex items-center justify-between pt-8 border-t border-gray-50">
+                                    <button
+                                        onClick={() => navigate('/partners/campit')}
+                                        className="group/btn flex items-center gap-3 text-gray-900 font-black"
+                                    >
+                                        <span className="text-xs tracking-widest border-b-2 border-emerald-500 pb-1 group-hover/btn:border-emerald-600 transition-colors">VIEW SOLUTION</span>
+                                        <ArrowUpRight className="w-4 h-4 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
+                                    </button>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        {/* Mobile Toilet Card */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
+                            className="group relative bg-white rounded-[3.5rem] overflow-hidden shadow-2xl border border-gray-100 flex flex-col h-full hover:border-blue-500/30 transition-all duration-700"
+                        >
+                            <div className="relative aspect-[16/10] overflow-hidden bg-gray-100">
+                                <SafeImage src="/images/Home/mobile-toilet.webp" alt="Mobile Toilet Unit" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                <div className="absolute bottom-8 left-8">
+                                    <span className="bg-blue-500 text-white text-[9px] font-black px-5 py-2 rounded-full uppercase tracking-widest shadow-lg">Safety & Hygiene</span>
+                                </div>
+                            </div>
+                            <div className="p-12 flex flex-col flex-grow">
+                                <h3 className="text-3xl font-black text-gray-900 mb-6 tracking-tighter italic whitespace-pre-wrap">移動型トイレユニット</h3>
+                                <p className="text-blue-600 font-black text-lg mb-6 leading-tight select-none">
+                                    「あなたの近くに運べる、水入らずのトイレルーム」
+                                </p>
+                                <p className="text-gray-500 font-bold leading-relaxed mb-10 flex-grow text-sm">
+                                    イベントや災害対応で移動可能な、清潔でプライバシーに配慮した移動型システム。水を使わない最新技術で、快適な環境をどこへでも届けます。
+                                </p>
+                                <div className="flex items-center justify-between pt-8 border-t border-gray-50">
+                                    <button
+                                        onClick={() => navigate('/partners/mobile-toilet')}
+                                        className="group/btn flex items-center gap-3 text-gray-900 font-black"
+                                    >
+                                        <span className="text-xs tracking-widest border-b-2 border-blue-500 pb-1 group-hover/btn:border-blue-600 transition-colors">VIEW SOLUTION</span>
+                                        <ArrowUpRight className="w-4 h-4 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
+                                    </button>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
+                {/* Visual Accent */}
+                <div className="absolute bottom-0 left-0 w-full h-1/2 bg-white -z-10 skew-y-3 origin-right"></div>
             </section>
 
 
