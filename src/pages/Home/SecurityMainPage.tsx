@@ -26,11 +26,11 @@ import {
     Award,
     Wrench,
     Activity,
-    Settings2
+    Settings2,
+    ExternalLink
 } from 'lucide-react';
 import { SafeImage } from '../../components/ui/SafeImage';
 import { BusinessCalendar } from '../../components/Calendar/BusinessCalendar';
-import { PartnersSection } from '../../components/PartnersSection';
 import { VaultGrid } from '../../components/VaultGrid';
 
 interface SecurityMainPageProps {
@@ -671,7 +671,82 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
 
 
             <BusinessCalendar theme="light" />
-            <PartnersSection onViewAll={() => navigate('/partners')} />
+            {/* Security Partners Section */}
+            <section id="partners" className="py-32 bg-white relative overflow-hidden">
+                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                    <div className="mb-20 text-center">
+                        <span className="text-emerald-500 font-black tracking-[0.3em] uppercase text-xs mb-4 block">Trusted Partners</span>
+                        <h2 className="text-4xl md:text-5xl font-black tracking-tighter italic text-gray-900 leading-tight">セキュリティーの<br className="md:hidden" /><span className="text-emerald-600">信頼のパートナー</span></h2>
+                        <p className="text-gray-500 font-bold max-w-2xl mx-auto mt-6">確かな技術力と信頼の実績を持つ、Sound ANGが推奨するメーカーと提携サイトをご紹介します。</p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                        {[
+                            { name: "アーマテック株式会社", brand: "CLIFFORD", url: "http://clifford.co.jp/" },
+                            { name: "加藤電機株式会社", brand: "VIPER", url: "https://kato-denki.com/" },
+                            { name: "CAN plus", brand: "アンパイア", url: "http://www.ampire.jp/" },
+                            { name: "クラフトマン", brand: "LOCK音", url: "http://lockon.to/" },
+                            { name: "株式会社ユピテル", brand: "GRGO/パンテーラ/レーダー/ドラレコ", url: "http://www.yupiteru.co.jp/" },
+                            { name: "シーバスリンク", brand: "HID / ライティング", url: "http://www.seabass-link.co.jp/" },
+                            { name: "SMART DIVISION", brand: "HID", url: "http://minkara.carview.co.jp/userid/560861/profile/" },
+                            { name: "BELLOF", brand: "HID / LED", url: "http://www.bellof.co.jp/" },
+                            { name: "クラッツィオ", brand: "シートカバー", url: "http://www.11i.co.jp/" }
+                        ].map((partner, idx) => (
+                            <motion.a
+                                key={idx}
+                                href={partner.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: idx * 0.05 }}
+                                className="group p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:bg-white hover:shadow-2xl hover:shadow-emerald-500/5 transition-all duration-500 flex flex-col justify-between h-48"
+                            >
+                                <div>
+                                    <span className="text-[10px] font-black text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full uppercase tracking-widest mb-4 inline-block">Official Partner</span>
+                                    <h3 className="text-xl font-black text-gray-900 tracking-tight group-hover:text-emerald-600 transition-colors">{partner.name}</h3>
+                                    <p className="text-gray-400 text-xs font-bold mt-2 italic">{partner.brand}</p>
+                                </div>
+                                <div className="flex items-center justify-end">
+                                    <ArrowUpRight className="w-5 h-5 text-gray-300 group-hover:text-emerald-500 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                                </div>
+                            </motion.a>
+                        ))}
+                    </div>
+
+                    <div className="bg-gray-900 rounded-[3rem] p-10 md:p-16 relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl -mr-48 -mt-48"></div>
+                        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
+                            <div className="max-w-md">
+                                <h3 className="text-3xl font-black text-white mb-4 tracking-tighter italic uppercase">TECHNICAL PARTNERS</h3>
+                                <p className="text-emerald-500 font-bold text-xs uppercase tracking-widest mb-4">技術提携パートナー</p>
+                                <p className="text-gray-400 font-bold text-sm">スペアキー作製からカーフィルム施工まで、愛車のトータルケアをサポートする専門パートナーです。</p>
+                            </div>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full md:w-auto">
+                                {[
+                                    { name: "カギ商福岡", desc: "スペアキー", url: "http://www.kuruma-kagi.com/" },
+                                    { name: "ハローサービス", desc: "カーフィルム等", url: "http://efuhs-tint.com/" }
+                                ].map((site, idx) => (
+                                    <a
+                                        key={idx}
+                                        href={site.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="min-w-[200px] p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-emerald-500/50 transition-all group flex flex-col gap-2"
+                                    >
+                                        <span className="text-white font-black text-lg tracking-tight">{site.name}</span>
+                                        <div className="flex items-center justify-between">
+                                            <span className="text-emerald-500 text-[10px] font-black uppercase tracking-widest">{site.desc}</span>
+                                            <ExternalLink className="w-4 h-4 text-white/20 group-hover:text-emerald-500 transition-colors" />
+                                        </div>
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             {/* Access Section */}
             <section id="access" className="py-24 md:py-32 bg-[#0c1412] relative overflow-hidden">
