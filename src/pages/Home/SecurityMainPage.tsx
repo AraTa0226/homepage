@@ -571,7 +571,7 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                         <h2 className="text-4xl md:text-6xl font-black tracking-tighter italic text-gray-900">MENU</h2>
                     </div>
                     <VaultGrid
-                        categories={securityCategories}
+                        categories={securityCategories.filter(cat => cat.id !== 'mobile_solution')}
                         theme={theme}
                         onCategoryClick={(cat: any) => navigate(cat.path)}
                         handleMenuClick={handleMenuClick}
