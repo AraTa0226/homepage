@@ -64,7 +64,11 @@ const MegaMenu = ({ show, categories, theme, onClose, navigate, handleMenuClick 
                                     <div
                                         onClick={() => {
                                             onClose();
-                                            navigate(cat.path);
+                                            if (cat.items && cat.isExternal) {
+                                                window.open(cat.path, '_blank');
+                                            } else {
+                                                navigate(cat.path);
+                                            }
                                         }}
                                         className="flex flex-col gap-1 border-b border-emerald-500/10 pb-3 group/header cursor-pointer"
                                     >
@@ -104,9 +108,12 @@ const MegaMenu = ({ show, categories, theme, onClose, navigate, handleMenuClick 
                                                 <button
                                                     key={idx}
                                                     onClick={() => {
-                                                        // Mapping logic for security items
                                                         onClose();
-                                                        handleMenuClick({ id: cat.id, name: item });
+                                                        if (cat.isExternal) {
+                                                            window.open(cat.path, '_blank');
+                                                        } else {
+                                                            handleMenuClick({ id: cat.id, name: item });
+                                                        }
                                                     }}
                                                     className="text-[11px] font-bold text-gray-400 hover:text-emerald-500 transition-all hover:translate-x-1 text-left flex items-center gap-2 group/link"
                                                 >
@@ -225,6 +232,19 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                 'よくあるご質問 (FAQ)'
             ],
             path: '/security/panthera'
+        },
+        {
+            id: 'mobile_solution',
+            title: 'CAMPit & MobiRest',
+            subtitle: 'MOBILE SOLUTION',
+            image: assets.facilities?.[0]?.image || assets.pitImage,
+            gridClass: 'col-span-1',
+            items: [
+                'CAMPit (キャンピット)',
+                'MobiRest (モビレスト)'
+            ],
+            path: 'https://campit.jp/',
+            isExternal: true
         }
     ];
 
@@ -865,18 +885,64 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                                             className="overflow-hidden bg-gray-50 rounded-2xl border border-gray-100"
                                                         >
                                                             <div className="p-2 grid grid-cols-1 gap-1">
-                                                                {securityCategories.map((sub, idx) => (
-                                                                    <button
-                                                                        key={idx}
-                                                                        onClick={() => {
-                                                                            setIsMobileMenuOpen(false);
-                                                                            navigate(sub.path);
-                                                                        }}
-                                                                        className="flex flex-col p-4 rounded-xl hover:bg-emerald-500/10 text-left transition-colors"
-                                                                    >
-                                                                        <span className="text-[10px] font-black text-emerald-500 uppercase tracking-widest mb-1">{sub.subtitle}</span>
-                                                                        <span className="text-xs font-bold text-gray-300">{sub.title}</span>
-                                                                    </button>
+                                                                {securityCategories.map((cat: any, catIdx: number) => (
+                                                                    <div key={catIdx} className="p-5 border-b border-gray-100 last:border-0">
+                                                                        <div className="flex flex-col gap-1 mb-4 select-none border-l-2 border-emerald-500 pl-4">
+                                                                            <span className="text-[9px] font-black tracking-[0.2em] text-emerald-500 uppercase">{cat.subtitle}</span>
+                                                                            <span className="text-xs font-black tracking-tight text-gray-900 transition-colors cursor-pointer hover:text-emerald-600" onClick={() => { setIsMobileMenuOpen(false); navigate(cat.path); }}>
+                                                                                {cat.title}
+                                                                            </span>
+                                                                        </div>
+
+                                                                        <div className="pl-4 space-y-4">
+                                                                            {cat.groups ? (
+                                                                                <div className="space-y-6">
+                                                                                    {cat.groups.map((group: any, gIdx: number) => (
+                                                                                        <div key={gIdx} className="space-y-3">
+                                                                                            <div className="text-[9px] font-black text-gray-400 tracking-[0.2em] border-b border-gray-50 pb-1 uppercase">
+                                                                                                {group.name}
+                                                                                            </div>
+                                                                                            <div className="grid grid-cols-2 gap-x-4 gap-y-2.5">
+                                                                                                {group.items.map((item: string, iIdx: number) => (
+                                                                                                    <button
+                                                                                                        key={iIdx}
+                                                                                                        onClick={() => {
+                                                                                                            setIsMobileMenuOpen(false);
+                                                                                                            if (cat.isExternal) {
+                                                                                                                window.open(cat.path, '_blank');
+                                                                                                            } else {
+                                                                                                                handleMenuClick({ id: cat.id, name: item });
+                                                                                                            }
+                                                                                                        }}
+                                                                                                        className="text-left text-[11px] font-bold text-gray-500 hover:text-emerald-600 transition-colors flex items-center gap-2"
+                                                                                                    >
+                                                                                                        <div className="w-1 h-1 rounded-full bg-emerald-500/20" />
+                                                                                                        {item}
+                                                                                                    </button>
+                                                                                                ))}
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    ))}
+                                                                                </div>
+                                                                            ) : (
+                                                                                <div className="flex flex-col gap-2.5">
+                                                                                    {cat.items?.map((item: string, iIdx: number) => (
+                                                                                        <button
+                                                                                            key={iIdx}
+                                                                                            onClick={() => {
+                                                                                                setIsMobileMenuOpen(false);
+                                                                                                handleMenuClick({ id: cat.id, name: item });
+                                                                                            }}
+                                                                                            className="text-[11px] font-bold text-gray-500 hover:text-emerald-500 transition-all text-left flex items-center gap-3 py-1.5"
+                                                                                        >
+                                                                                            <div className="w-1 h-1 rounded-full bg-gray-200" />
+                                                                                            {item}
+                                                                                        </button>
+                                                                                    ))}
+                                                                                </div>
+                                                                            )}
+                                                                        </div>
+                                                                    </div>
                                                                 ))}
                                                             </div>
                                                         </motion.div>

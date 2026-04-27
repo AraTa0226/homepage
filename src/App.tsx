@@ -168,11 +168,20 @@ function AppContent() {
       'レーダー探知機': '/security/radar',
       'デジタルインナーミラー': '/security/digital_mirror',
       'Viper (バイパー)': '/security/viper',
-      'Clifford (クリフォード)': '/security/clifford'
+      'Clifford (クリフォード)': '/security/clifford',
+      '送迎バス 置き去り防止支援装置': '/security/panthera', // Redirect to Panthera for now as placeholder
+      'セキュリティー診断サービス': '/security/panthera', // Redirect to Panthera for now
+      'CAMPit (キャンピット)': 'https://campit.jp/',
+      'MobiRest (モビレスト)': 'https://campit.jp/'
     };
 
     if (item.name && labelPathMap[item.name]) {
-      navigate(labelPathMap[item.name]);
+      const target = labelPathMap[item.name];
+      if (target.startsWith('http')) {
+        window.open(target, '_blank');
+      } else {
+        navigate(target);
+      }
       return;
     }
 
