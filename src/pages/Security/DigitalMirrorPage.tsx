@@ -181,16 +181,16 @@ export const DigitalMirrorPage: React.FC = () => {
             </section>
 
             {/* CTA */}
-            <section className="bg-gray-50 py-24 mb-12">
+            <section className="bg-gray-50 py-24">
                 <div className="max-w-4xl mx-auto px-4 text-center space-y-12">
                     <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto shadow-sm">
                         <Zap className="w-8 h-8 text-emerald-600" />
                     </div>
                     <div className="space-y-6">
-                        <h2 className="text-3xl md:text-4xl font-black text-gray-900 tracking-tight">車種専用モデルも承っております</h2>
+                        <h2 className="text-3xl md:text-4xl font-black text-gray-900 tracking-tight">車種専用キットによる、純正さながらの仕上がり</h2>
                         <p className="text-gray-500 font-bold text-lg leading-relaxed">
-                            国産車、輸入車問わず、車種専用設計のアームを用いたスマートな取付に対応いたします。<br />
-                            施工時間や適合の確認は、LINEにてお気軽にお問い合わせください。
+                            純正ミラー交換タイプは、<span className="text-emerald-600">車種専用取付けキット</span>を使用することで配線を露出させず、まるで純正品のようなスマートな装着が可能です（国産車各モデルに対応）。<br />
+                            また、キット設定のない車種や輸入車についても、お車に合わせた最適な取付方法をご提案いたします。適合や施工の詳細はLINEにてお気軽にご相談ください。
                         </p>
                     </div>
                     <div className="pt-8">
@@ -200,6 +200,32 @@ export const DigitalMirrorPage: React.FC = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Fitting Kit Link Section */}
+            <section className="py-20 bg-white">
+                <div className="max-w-7xl mx-auto px-4 font-bold">
+                    <div className="bg-gray-900 rounded-[3rem] p-10 md:p-16 text-white relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 blur-[100px] rounded-full"></div>
+                        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
+                            <div className="space-y-4">
+                                <h2 className="text-3xl font-black tracking-tight italic">車種専用取付けキット適合確認</h2>
+                                <p className="text-gray-400">
+                                    アルパイン製品の車種専用取付けキットの適合状況は、メーカー公式サイトよりご確認いただけます。
+                                </p>
+                            </div>
+                            <a
+                                href="https://www.alpine.co.jp/products/accessory/fitting-kit-dm"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-white text-gray-900 px-8 py-4 rounded-xl font-black text-sm hover:bg-emerald-500 hover:text-white transition-all shadow-xl whitespace-nowrap"
+                            >
+                                メーカー適合サイトを表示
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
 
             <AnimatePresence>
                 {selectedItem && (
