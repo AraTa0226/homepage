@@ -27,19 +27,24 @@ import {
 } from 'lucide-react';
 import { SafeImage } from '../../components/ui/SafeImage';
 
+import { usePrices } from '../../contexts/PriceContext';
+
 export const ViperPage: React.FC = () => {
     const { assets } = useSite();
+    const { plans } = usePrices();
     const navigate = useNavigate();
 
-    const lineUp = [
-        { id: '8818v', name: 'VIPER 8818V', label: 'コンパクトリモコンモデル', desc: 'マルチレベル対応3ボタンリモコンを採用した保安基準対応モデル。', series: 'main', image: '/images/Security/model/8818v.webp' },
-        { id: '5305vi', name: 'VIPER 5305Vi', label: '液晶アンサーバックモデル', desc: '手元に異常を通知する液晶リモコン付属。見通し約500mの広範囲監視。', series: 'main', image: '/images/Security/model/5305vI.webp' },
-        { id: '5304vi', name: 'VIPER 5304Vi', label: '4ボタンスマートリモコン', desc: '飛距離、操作性抜群の4ボタンスマートリモコンを2個標準装備。', series: 'main', image: '/images/Security/model/5304vI.webp' },
-        { id: '5300vi', name: 'VIPER 5300Vi', label: '純正スマートキー連動', desc: '純正キーのロック/アンロックに連動してVIPERが作動・解除。', series: 'main', image: '/images/Security/model/5300vi.webp' },
-        { id: '330v5', name: 'VIPER 330V5', label: '液晶アンサーバックモデル', desc: 'ダブルガードショックセンサー等、鉄壁の防犯機能を備えたアンサーバックモデル。', series: '330v', image: '/images/Security/model/330V5.webp' },
-        { id: '330v4', name: 'VIPER 330V4', label: '4ボタンスマートリモコン', desc: '飛距離・操作性抜群の4ボタンスマートリモコンを2個装備した高機能モデル。', series: '330v', image: '/images/Security/model/330V4.webp' },
-        { id: '330v', name: 'VIPER 330V', label: '純正スマートキー連動', desc: '純正キーレス連動で、利便性と防犯性を高次元で両立。', series: '330v', image: '/images/Security/model/330V.webp' },
-    ];
+    const viperCategory = plans.find(p => p.id === 'security_viper');
+    const lineUp = (viperCategory?.items || []).map(item => ({
+        id: item.name.toLowerCase().replace(/\s+/g, '_'),
+        name: item.name,
+        label: item.badge,
+        desc: item.description,
+        series: item.subType || 'main',
+        image: item.image,
+        features: item.features
+    }));
+
 
     const options = [
         {

@@ -335,9 +335,15 @@ export const RadarPage: React.FC = () => {
                                                 工賃別 / 取付位置により変動します
                                             </div>
                                         </div>
-                                        <button onClick={() => navigate('/reservation')} className="bg-emerald-600 text-white px-10 py-4 rounded-2xl font-black text-sm hover:scale-105 transition-all shadow-lg shadow-emerald-500/20 active:scale-95 whitespace-nowrap">
-                                            予約相談
-                                        </button>
+                                        <a
+                                            href="https://page.line.me/312qjhsq?openQrModal=true"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="bg-[#06c755] text-white px-10 py-4 rounded-2xl font-black text-sm hover:scale-105 transition-all shadow-lg shadow-[#06c755]/20 active:scale-95 whitespace-nowrap flex items-center justify-center gap-2"
+                                        >
+                                            <MessageSquare className="w-4 h-4" />
+                                            LINEで相談
+                                        </a>
                                     </div>
                                 </div>
                             </div>

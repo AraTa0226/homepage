@@ -19,25 +19,39 @@ import {
 } from 'lucide-react';
 import { SafeImage } from '../../components/ui/SafeImage';
 
+import { usePrices } from '../../contexts/PriceContext';
+
 export const CliffordPage: React.FC = () => {
     const navigate = useNavigate();
+    const { plans } = usePrices();
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
-    const g6Lineup = [
-        { id: '880j', name: 'IntelliGuard 880J', label: 'フラッグシップモデル', desc: '衝撃学習機能付きオムニセンサでボディへの衝撃も完璧に検知。', image: '/images/Security/model/clifford-880J.webp' },
-        { id: '480j', name: 'Concept 480J', label: 'オンボードダブルイモビライザー', desc: '独自のダブルイモビライザーを標準装備した、CLIFFORDの代名詞的モデル。', image: '/images/Security/model/clifford-480J.webp' },
-        { id: '6j', name: 'Arrow 6J', label: 'スタンダードモデル', desc: 'オンボードシングルイモビライザーを標準装備した、導入しやすいG6エントリーモデル。', image: '/images/Security/model/clifford-Arrow6J.webp' },
-    ];
+    const cliffordCategory = plans.find(p => p.id === 'security_clifford');
+    const allCliffordItems = cliffordCategory?.items || [];
 
-    const matrixLineup = [
-        { id: '730xj', name: 'MATRIX 730XJ', label: '液晶アンサーバック', desc: '液晶ディスプレイと音で通知。スマートスタート対応ハイエンドモデル。', image: '/images/Security/model/CLIFFORD-730XJ.webp' },
-        { id: '720xj', name: 'MATRIX 720XJ', label: 'LEDアンサーバック', desc: 'LED表示と音で異常を通知。確実な操作性を誇る高機能モデル。', image: '/images/Security/model/CLIFFORD-720XJ.webp' },
-        { id: '330x', name: 'MATRIX 330X/X3 SP', label: 'CAN-BUS / 純正連動', desc: '純正キーレスにフル連動。CAN-BUS採用車に最適な最新リンクモデル。', image: '/images/Security/model/CLIFFORD-330X-SP.webp' },
-        { id: 's330', name: 'MATRIX S330', label: '純正キーレス連動', desc: '操作感なくセキュリティ機能を使用できる、シンプルかつ強固な連動モデル。', image: '/images/Security/model/clifford-MATRIX-S330.webp' },
-    ];
+    const g6Lineup = allCliffordItems
+        .filter(item => item.subType === 'g6')
+        .map(item => ({
+            id: item.name.toLowerCase().replace(/\s+/g, '_'),
+            name: item.name,
+            label: item.badge,
+            desc: item.description,
+            image: item.image
+        }));
+
+    const matrixLineup = allCliffordItems
+        .filter(item => item.subType === 'matrix')
+        .map(item => ({
+            id: item.name.toLowerCase().replace(/\s+/g, '_'),
+            name: item.name,
+            label: item.badge,
+            desc: item.description,
+            image: item.image
+        }));
+
 
     const techHighlights = [
         {

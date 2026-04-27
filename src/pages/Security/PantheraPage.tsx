@@ -23,15 +23,22 @@ import {
 } from 'lucide-react';
 import { SafeImage } from '../../components/ui/SafeImage';
 
+import { usePrices } from '../../contexts/PriceContext';
+
 export const PantheraPage: React.FC = () => {
     const { assets } = useSite();
+    const { plans } = usePrices();
     const navigate = useNavigate();
 
-    const lineUp = [
-        { id: 'z706', name: 'Panthera Z706', label: 'フルスペックモデル', desc: '全てのセンサを装備したシリーズ最高位モデル。' },
-        { id: 'z306', name: 'Panthera Z306', label: 'ハイスペックモデル', desc: '人気のセンサを標準装備したバランスの取れた上位モデル。' },
-        { id: 'z106', name: 'Panthera Z106', label: 'ベーシックモデル', desc: 'ニーズに合わせて自由に拡張可能な基本モデル。' },
-    ];
+    const pantheraCategory = plans.find(p => p.id === 'security_panthera');
+    const lineUp = (pantheraCategory?.items || []).map(item => ({
+        id: item.name.toLowerCase().replace(/\s+/g, '_'),
+        name: item.name,
+        label: item.badge,
+        desc: item.description,
+        image: item.image
+    }));
+
 
     return (
         <div className="min-h-screen bg-[#05070a] text-white selection:bg-blue-500/30">

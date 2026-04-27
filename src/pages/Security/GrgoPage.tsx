@@ -21,16 +21,22 @@ import {
 } from 'lucide-react';
 import { SafeImage } from '../../components/ui/SafeImage';
 
+import { usePrices } from '../../contexts/PriceContext';
+
 export const GrgoPage: React.FC = () => {
     const { assets } = useSite();
+    const { plans } = usePrices();
     const navigate = useNavigate();
 
-    const lineUp = [
-        { id: 'zvt2', name: 'Grgo-ZVTⅡ', type: 'アンサーバックモデル', desc: '視認性・利便性に優れたフルカラー液晶リモコンを標準装備。' },
-        { id: 'zv2', name: 'Grgo-ZVⅡ', type: 'アンサーバックモデル', desc: 'ベースモデル。高機能を直感的に操作可能。' },
-        { id: '1vs2', name: 'Grgo-1VsⅡ', type: '純正キーレス連動モデル', desc: '純正スマートキーの操作で警戒解除・開始が可能。' },
-        { id: '5vf2', name: 'Grgo-5VfⅡ', type: '単方向モデル', desc: '5ボタン単方向リモコン付属。シンプルな操作性。' },
-    ];
+    const grgoCategory = plans.find(p => p.id === 'security_grgo');
+    const lineUp = (grgoCategory?.items || []).map(item => ({
+        id: item.name.toLowerCase().replace(/\s+/g, '_'),
+        name: item.name,
+        type: item.badge,
+        desc: item.description,
+        image: item.image
+    }));
+
 
     return (
         <div className="min-h-screen bg-[#05070a] text-white selection:bg-blue-500/30">

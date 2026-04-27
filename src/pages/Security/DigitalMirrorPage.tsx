@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Shield, ArrowLeft, Camera, Maximize, Zap, Info, CheckCircle2, X } from 'lucide-react';
+import { Shield, ArrowLeft, Camera, Maximize, Zap, Info, CheckCircle2, X, MessageSquare } from 'lucide-react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { usePrices, formatPrice } from '../../contexts/PriceContext';
 import { useSite } from '../../contexts/SiteContext';
@@ -292,12 +292,15 @@ export const DigitalMirrorPage: React.FC = () => {
                                                 </div>
                                             </div>
                                         )}
-                                        <button
-                                            onClick={() => navigate('/reservation')}
-                                            className={`bg-emerald-600 text-white px-10 py-4 rounded-2xl font-black text-sm hover:scale-105 transition-all shadow-lg shadow-emerald-500/20 active:scale-95 whitespace-nowrap ${parseInt(selectedItem.price) <= 0 ? 'w-full sm:w-auto ml-auto' : ''}`}
+                                        <a
+                                            href="https://page.line.me/312qjhsq?openQrModal=true"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className={`bg-[#06c755] text-white px-10 py-4 rounded-2xl font-black text-sm hover:scale-105 transition-all shadow-lg shadow-[#06c755]/20 active:scale-95 whitespace-nowrap flex items-center justify-center gap-2 ${parseInt(selectedItem.price) <= 0 ? 'w-full sm:w-auto ml-auto' : ''}`}
                                         >
-                                            施工予約・相談
-                                        </button>
+                                            <MessageSquare className="w-4 h-4" />
+                                            LINEで相談
+                                        </a>
                                     </div>
                                 </div>
                             </div>
