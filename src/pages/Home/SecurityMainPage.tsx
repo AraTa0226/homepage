@@ -559,9 +559,9 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                 <div className="max-w-7xl mx-auto px-4 relative z-10">
                     <div className="mb-20 flex flex-col md:flex-row items-end justify-between gap-8">
                         <div className="space-y-4">
-                            <span className="text-emerald-500 font-black tracking-[0.4em] uppercase text-[10px] block">Special Collaboration</span>
-                            <h2 className="text-4xl md:text-6xl font-black tracking-tighter italic text-gray-900 leading-none">PARTNERSHIP<br /><span className="text-emerald-600 underline decoration-emerald-500/20 underline-offset-8">SOLUTIONS.</span></h2>
-                            <p className="text-gray-500 font-bold max-w-xl text-lg mt-6">確かな技術を持つパートナー企業との提携により、車のある生活をより豊かに、より安心にするための特別なソリューションをご提案します。</p>
+                            <span className="text-emerald-500 font-black tracking-[0.4em] uppercase text-[10px] block">Mobile Solution</span>
+                            <h2 className="text-4xl md:text-6xl font-black tracking-tighter italic text-gray-900 leading-none">CAMPit &<br /><span className="text-emerald-600 underline decoration-emerald-500/20 underline-offset-8">MobiRest.</span></h2>
+                            <p className="text-gray-500 font-bold max-w-xl text-lg mt-6">「遊び」を最高にするキャンプユニットと、「安心」を届ける移動型トイレ。場所の制約を解き放ち、車のある生活に新しい価値をもたらす次世代のユニットをご提案します。</p>
                         </div>
                     </div>
 
@@ -574,7 +574,7 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                             className="group relative bg-white rounded-[3.5rem] overflow-hidden shadow-2xl border border-gray-100 flex flex-col h-full hover:border-emerald-500/30 transition-all duration-700"
                         >
                             <div className="relative aspect-[16/10] overflow-hidden bg-gray-100">
-                                <SafeImage src="/images/Home/campit.webp" alt="CAMPit" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+                                <SafeImage src="/images/Security/hero-campit.webp" alt="CAMPit" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                                 <div className="absolute bottom-8 left-8">
                                     <span className="bg-emerald-500 text-black text-[9px] font-black px-5 py-2 rounded-full uppercase tracking-widest shadow-lg">Outdoor & Lifestyle</span>
@@ -611,7 +611,7 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                             className="group relative bg-white rounded-[3.5rem] overflow-hidden shadow-2xl border border-gray-100 flex flex-col h-full hover:border-blue-500/30 transition-all duration-700"
                         >
                             <div className="relative aspect-[16/10] overflow-hidden bg-gray-100">
-                                <SafeImage src="/images/Home/mobile-toilet.webp" alt="MobiRest" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+                                <SafeImage src="/images/Security/hero-mobirest.webp" alt="MobiRest" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                                 <div className="absolute bottom-8 left-8">
                                     <span className="bg-blue-500 text-white text-[9px] font-black px-5 py-2 rounded-full uppercase tracking-widest shadow-lg">Safety & Hygiene</span>
