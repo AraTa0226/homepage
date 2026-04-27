@@ -586,16 +586,18 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                     「何もないところがキャンプ場になる」
                                 </p>
                                 <p className="text-gray-500 font-bold leading-relaxed mb-10 flex-grow text-sm">
-                                    私達の望みを叶える、”清潔、快適、簡単”な私達にピッタリのキャンプユニット。場所を選ばず、あなたの車を最高の居住空間へと変貌させます。
+                                    本格システムキッチン、50L給水タンク、そして清潔なトイレを完備。 “清潔、快適、簡単” をコンセプトに、場所を選ばず最高級のキャンプ体験を可能にする移動型ユニットです。
                                 </p>
                                 <div className="flex items-center justify-between pt-8 border-t border-gray-50">
-                                    <button
-                                        onClick={() => navigate('/partners/campit')}
+                                    <a
+                                        href="https://campit.jp/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="group/btn flex items-center gap-3 text-gray-900 font-black"
                                     >
-                                        <span className="text-xs tracking-widest border-b-2 border-emerald-500 pb-1 group-hover/btn:border-emerald-600 transition-colors">VIEW SOLUTION</span>
+                                        <span className="text-xs tracking-widest border-b-2 border-emerald-500 pb-1 group-hover/btn:border-emerald-600 transition-colors">OFFICIAL SITE</span>
                                         <ArrowUpRight className="w-4 h-4 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </motion.div>
@@ -609,28 +611,30 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                             className="group relative bg-white rounded-[3.5rem] overflow-hidden shadow-2xl border border-gray-100 flex flex-col h-full hover:border-blue-500/30 transition-all duration-700"
                         >
                             <div className="relative aspect-[16/10] overflow-hidden bg-gray-100">
-                                <SafeImage src="/images/Home/mobile-toilet.webp" alt="Mobile Toilet Unit" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+                                <SafeImage src="/images/Home/mobile-toilet.webp" alt="MobiRest" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                                 <div className="absolute bottom-8 left-8">
                                     <span className="bg-blue-500 text-white text-[9px] font-black px-5 py-2 rounded-full uppercase tracking-widest shadow-lg">Safety & Hygiene</span>
                                 </div>
                             </div>
                             <div className="p-12 flex flex-col flex-grow">
-                                <h3 className="text-3xl font-black text-gray-900 mb-6 tracking-tighter italic whitespace-pre-wrap">移動型トイレユニット</h3>
+                                <h3 className="text-3xl font-black text-gray-900 mb-6 tracking-tighter italic whitespace-pre-wrap">MobiRest <span className="text-sm not-italic opacity-40 ml-2">（モビレスト）</span></h3>
                                 <p className="text-blue-600 font-black text-lg mb-6 leading-tight select-none">
-                                    「あなたの近くに運べる、水入らずのトイレルーム」
+                                    「あなたの近くに運べる、水要らずのトイレルーム」
                                 </p>
                                 <p className="text-gray-500 font-bold leading-relaxed mb-10 flex-grow text-sm">
-                                    イベントや災害対応で移動可能な、清潔でプライバシーに配慮した移動型システム。水を使わない最新技術で、快適な環境をどこへでも届けます。
+                                    水を使わず熱圧着で排泄物を密閉する「ラップポン」システムを採用。臭わず清潔、上下水道不要でどこでも設置可能。災害時やイベントに最適な超低床設計の移動型トイレユニットです。
                                 </p>
                                 <div className="flex items-center justify-between pt-8 border-t border-gray-50">
-                                    <button
-                                        onClick={() => navigate('/partners/mobile-toilet')}
+                                    <a
+                                        href="https://campit.jp/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="group/btn flex items-center gap-3 text-gray-900 font-black"
                                     >
-                                        <span className="text-xs tracking-widest border-b-2 border-blue-500 pb-1 group-hover/btn:border-blue-600 transition-colors">VIEW SOLUTION</span>
+                                        <span className="text-xs tracking-widest border-b-2 border-blue-500 pb-1 group-hover/btn:border-blue-600 transition-colors">OFFICIAL SITE</span>
                                         <ArrowUpRight className="w-4 h-4 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </motion.div>
