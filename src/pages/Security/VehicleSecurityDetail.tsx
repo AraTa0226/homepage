@@ -918,93 +918,73 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'kcar-grgo-1vs',
             brand: 'Grgo',
-            grade: '純正キーレス連動モデル ＋ ANGプレート',
+            grade: '1Vs II',
             description: '難しい操作は一切不要。純正キーのロック・アンロックに連動して警備を開始する、K-CARオーナーに一番人気のパッケージ。',
             price: '124,800',
             priceTax: '137,280',
-            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
             category: 'grgo'
         },
         {
             id: 'kcar-grgo-5vf',
             brand: 'Grgo',
-            grade: '5Vf II 標準モデル',
+            grade: '5Vf II',
             description: '薄型1WAYリモコン付属。スマートな見た目と確かな防犯性能を両立したスタンダードモデル。',
             price: '156,800',
             priceTax: '172,480',
-            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: false, canguard: false },
+            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
             category: 'grgo'
         },
         {
-            id: 'kcar-grgo-zv-led',
+            id: 'kcar-grgo-zv',
             brand: 'Grgo',
-            grade: 'ZV II ＋ ANGプレート',
+            grade: 'ZV II',
             description: '日本語表示可能なアンサーバックリモコンで操作性抜群。離れた場所からでも異常を感知し、手元のリモコンへ通知。',
             price: '172,800',
             priceTax: '190,080',
-            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
-            category: 'grgo'
-        },
-        {
-            id: 'kcar-grgo-zv-smaclo',
-            brand: 'Grgo',
-            grade: 'ZV II ＋ スマクロ ＋ LEDプレート',
-            description: '最新の窃盗手口に対抗するスマクロ機能を搭載。利便性と高度な防犯を両立したいK-CARオーナー様へ。',
-            price: '207,800',
-            priceTax: '228,580',
-            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
             category: 'grgo'
         },
         {
             id: 'kcar-grgo-zvt',
             brand: 'Grgo',
-            grade: 'ZVT II 標準モデル',
+            grade: 'ZVT II',
             description: '傾斜・トリプルセンサーを同梱。ジャッキアップや車体へのあらゆる衝撃を逃さず検知する、Grgo最上位構成。',
             price: '219,800',
             priceTax: '241,780',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
             category: 'grgo'
         },
         {
-            id: 'kcar-grgo-zvt-smaclo',
-            brand: 'Grgo',
-            grade: 'ZVT II ＋ スマクロ ＋ ボンネット',
-            description: 'フルスペックGrgoにスマクロとボンネットセンサーを追加。強引な侵入やバッテリー切断も防ぐ、K-CAR最強のデジタル対策。',
-            price: '264,600',
-            priceTax: '291,060',
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
-            category: 'grgo'
-        },
-        {
-            id: 'kcar-panthera-z106-smaclo',
+            id: 'kcar-panthera-z106',
             brand: 'Panthera',
-            grade: 'Panthera Z106 ＋ スマクロ',
-            description: 'パンテーラの緻密な警備。スマクロ対応により、純正キーの快適さを維持しながらハイエンドブランドの安心を。',
+            grade: 'Z106',
+            description: 'パンテーラの緻密な警備。ハイエンドブランドの安心を。',
             price: '293,800',
             priceTax: '323,180',
-            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: false, canguard: false },
             category: 'パンテーラ'
         },
         {
-            id: 'kcar-panthera-z306-smaclo',
+            id: 'kcar-panthera-z306',
             brand: 'Panthera',
-            grade: 'Panthera Z306 ＋ スマクロ',
-            description: '人気センサーを網羅したZ306にスマクロを追加。ホイール盗難からイタズラまで、全方位で車両を監視。',
+            grade: 'Z306',
+            description: '人気センサーを網羅したZ306。ホイール盗難からイタズラまで、全方位で車両を監視。',
             price: '315,800',
             priceTax: '347,380',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: false, canguard: false },
             category: 'パンテーラ'
         },
         {
-            id: 'kcar-panthera-z706-smaclo',
+            id: 'kcar-panthera-z706',
             brand: 'Panthera',
-            grade: 'Panthera Z706 ＋ スマクロ',
+            grade: 'Z706',
             description: '全センサー解放。マイクロ波による接近検知やバックアップサイレンまで備えた、K-CARの防犯を極めるための頂点プラン。',
             price: '395,800',
             priceTax: '435,380',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: false },
+            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: false, canguard: false },
             category: 'パンテーラ'
         }
     ];
@@ -1038,7 +1018,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '2WAYアンサーバックリモコンにより、離れた場所からでも車両の異常をリアルタイムで把握可能。',
             price: '198,800',
             priceTax: '218,680',
-            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
             category: 'grgo'
         },
         {
@@ -1049,7 +1029,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '248,800',
             priceTax: '273,680',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
             category: 'grgo'
         },
         {
@@ -1059,7 +1039,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'パンテーラの高精度な検知能力をジムニーに。将来的なセンサー追加にも柔軟に対応できるベースモデル。',
             price: '268,800',
             priceTax: '295,680',
-            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: false, canguard: false },
             category: 'パンテーラ'
         },
         {
@@ -1070,7 +1050,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '318,800',
             priceTax: '350,680',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: false, canguard: false },
             category: 'パンテーラ'
         },
         {
@@ -1080,7 +1060,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'すべてのセンサーを網羅した最高峰フルスペックモデル。ジムニーを愛するオーナー様のための究極の守り。',
             price: '408,800',
             priceTax: '449,680',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: false },
+            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: false, canguard: false },
             category: 'パンテーラ'
         }
     ];
