@@ -1685,7 +1685,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         'special-model': {
             name: 'Other Models / Custom',
             year: 'Consulting Service',
-            image: '/images/security.jpg',
+            image: '/images/Security/vehicle/special-model.png',
             description: '輸入車、旧車、希少車、そしてキャンピングカーまで。リストにない車種でも、ANGの確かな技術力で最適な防犯プランをご提案します。オーナー様の不安に寄り添い、一台一台時間をかけて解析・施工いたします。',
             plans: basePlans
         }
