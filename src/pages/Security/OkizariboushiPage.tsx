@@ -7,6 +7,7 @@ import {
     AlertTriangle,
     CheckCircle2,
     ChevronRight,
+    ChevronLeft,
     Info,
     Calendar,
     ArrowRight,
@@ -54,13 +55,22 @@ export const OkizariboushiPage: React.FC = () => {
             {/* Navigation Header */}
             <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-white/80 backdrop-blur-xl shadow-lg h-16 md:h-20' : 'bg-transparent h-20 md:h-28'}`}>
                 <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
-                    <div className="flex items-center gap-4 cursor-pointer group" onClick={() => navigate('/security-home')}>
-                        <div className="w-10 h-10 md:w-12 md:h-12 bg-rose-600 rounded-2xl flex items-center justify-center text-white shadow-xl shadow-rose-600/20 group-hover:scale-105 transition-all">
-                            <ShieldCheck className="w-6 h-6 md:w-7 md:h-7" />
-                        </div>
-                        <div className="flex flex-col">
-                            <span className="text-lg md:text-xl font-black tracking-tighter leading-none">ANG SECURITY</span>
-                            <span className="text-[9px] font-black tracking-[0.3em] text-rose-600 uppercase mt-1 leading-none">Smart Bus Shield</span>
+                    <div className="flex items-center gap-4">
+                        <button
+                            onClick={() => navigate('/security-home')}
+                            className="w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 hover:bg-rose-50 hover:text-rose-600 transition-colors"
+                            aria-label="戻る"
+                        >
+                            <ChevronLeft className="w-6 h-6" />
+                        </button>
+                        <div className="flex items-center gap-4 cursor-pointer group" onClick={() => navigate('/security-home')}>
+                            <div className="w-10 h-10 md:w-12 md:h-12 bg-rose-600 rounded-2xl flex items-center justify-center text-white shadow-xl shadow-rose-600/20 group-hover:scale-105 transition-all">
+                                <ShieldCheck className="w-6 h-6 md:w-7 md:h-7" />
+                            </div>
+                            <div className="flex flex-col">
+                                <span className="text-lg md:text-xl font-black tracking-tighter leading-none text-slate-900">ANG SECURITY</span>
+                                <span className="text-[9px] font-black tracking-[0.3em] text-rose-600 uppercase mt-1 leading-none">Smart Bus Shield</span>
+                            </div>
                         </div>
                     </div>
 
