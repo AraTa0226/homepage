@@ -256,7 +256,7 @@ export const MaintainPage: React.FC = () => {
                                     onClick={() => navigate('/reservation')}
                                     className="px-12 py-5 bg-blue-900 text-white font-black italic rounded-2xl hover:bg-blue-800 transition-all text-sm uppercase tracking-widest"
                                 >
-                                    Check Availability
+                                    予約空き状況を確認する
                                 </button>
                             </div>
                         </div>
