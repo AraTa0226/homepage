@@ -1090,28 +1090,28 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'fl5-grgo-zvt',
             brand: 'Grgo',
-            grade: 'ZVT II 標準モデル',
+            grade: 'ZVT II ＋ スマキー連動/スマクロ',
             description: 'ジャッキアップを警告する傾斜センサーやトリプルセンサーを含む、スポーツカーに必須の検知能力を備えたモデル。',
             price: '268,800',
             priceTax: '295,680',
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
             category: 'grgo'
         },
         {
             id: 'fl5-grgo-zvt-full',
             brand: 'Grgo',
-            grade: 'ZVT II ＋ スマート連動 ＋ CANガード',
+            grade: 'ZVT II ＋ CANガード',
             description: '最上位ZVT IIにスマートキー連動と物理CANガードを追加。利便性と鉄壁の防犯性能を両立した推奨パッケージ。',
             price: '309,800',
             priceTax: '340,780',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: true },
             category: 'grgo'
         },
         {
             id: 'fl5-panthera-z106',
             brand: 'Panthera',
-            grade: 'Z106 ベーシックモデル',
+            grade: 'Z106 ＋ スマキー連動/スマクロ',
             description: 'パンテーラの緻密な警備アルゴリズム。ベースモデルながらスポーツカーの盗難リスクを大幅に低減。',
             price: '288,800',
             priceTax: '317,680',
@@ -1121,7 +1121,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'fl5-panthera-z106-full',
             brand: 'Panthera',
-            grade: 'Z106 ＋ スマート連動 ＋ CANガード',
+            grade: 'Z106 ＋ CANガード',
             description: 'Z106に最新のCANインベーダー対策を統合。物理的な盾を設けることで、不正なエンジン始動を阻止。',
             price: '329,800',
             priceTax: '362,780',
@@ -1131,7 +1131,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'fl5-panthera-z306',
             brand: 'Panthera',
-            grade: 'Z306 人気センサー同梱モデル',
+            grade: 'Z306 ＋ スマキー連動/スマクロ',
             description: '傾斜センサーとトリプルセンサーを標準装備。あらゆる角度からの侵入・いたずら・移動を即座に検知。',
             price: '338,800',
             priceTax: '372,680',
@@ -1141,7 +1141,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'fl5-panthera-z306-full',
             brand: 'Panthera',
-            grade: 'Z306 ＋ スマート連動 ＋ CANガード',
+            grade: 'Z306 ＋ CANガード',
             description: '充実のセンサー構成に多重の盗難防止策を上乗せ。FL5オーナーに一番支持される、隙のない最強構成。',
             price: '379,800',
             priceTax: '417,780',
@@ -1152,7 +1152,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'fl5-panthera-z706',
             brand: 'Panthera',
-            grade: 'Z706 フラッグシップモデル',
+            grade: 'Z706 ＋ スマキー連動/スマクロ',
             description: '全センサーを搭載したパンテーラ最高峰。マイクロ波による接近検知やバックアップサイレンを備えた頂点の守り。',
             price: '428,000',
             priceTax: '470,800',
@@ -1162,7 +1162,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'fl5-panthera-z706-full',
             brand: 'Panthera',
-            grade: 'Z706 ＋ スマート連動 ＋ CANガード',
+            grade: 'Z706 ＋ CANガード',
             description: 'ANGのノウハウを全て投入。フルスペックパンテーラに物理CAN対策を加えた、TYPE-Rを守り抜くための最終結論。',
             price: '469,800',
             priceTax: '516,780',
