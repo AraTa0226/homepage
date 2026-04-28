@@ -39,6 +39,7 @@ const CanInvaderPage = lazy(() => import('./pages/Security/CanInvaderPage').then
 const KeyEmulatorPage = lazy(() => import('./pages/Security/KeyEmulatorPage').then(m => ({ default: m.KeyEmulatorPage })));
 const RadarPage = lazy(() => import('./pages/Security/RadarPage').then(m => ({ default: m.RadarPage })));
 const DigitalMirrorPage = lazy(() => import('./pages/Security/DigitalMirrorPage').then(m => ({ default: m.DigitalMirrorPage })));
+const OkizariboushiPage = lazy(() => import('./pages/Security/OkizariboushiPage').then(m => ({ default: m.OkizariboushiPage })));
 
 
 const ReservationFormPage = lazy(() => import('./components/Form/ReservationFormPage').then(m => ({ default: m.ReservationFormPage })));
@@ -169,7 +170,7 @@ function AppContent() {
       'デジタルインナーミラー': '/security/digital_mirror',
       'Viper (バイパー)': '/security/viper',
       'Clifford (クリフォード)': '/security/clifford',
-      '送迎バス 置き去り防止支援装置': '/security/panthera', // Redirect to Panthera for now as placeholder
+      '送迎バス 置き去り防止支援装置': '/security/okizariboushi',
       'セキュリティー診断サービス': '/security/panthera', // Redirect to Panthera for now
       'CAMPit (キャンピット)': 'https://campit.jp/',
       'MobiRest (モビレスト)': 'https://campit.jp/'
@@ -297,6 +298,7 @@ function AppContent() {
           <Route path="/security/viper" element={<ViperPage />} />
 
           <Route path="/security/clifford" element={<CliffordPage />} />
+          <Route path="/security/okizariboushi" element={<OkizariboushiPage />} />
           <Route path="/security/vehicle/:modelId" element={<VehicleSecurityDetail assets={assets} />} />
           <Route path="/partners" element={<PartnersListPage />} />
 
