@@ -598,13 +598,34 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
 
     const landcruiser150Plans = [
         {
+            id: 'lc150-grgo-zv-keyless',
+            brand: 'Grgo',
+            grade: 'ZV II ＋ スマキー連動/スマクロ ＋ トリプル',
+            description: 'スマートキーに連動し、日常の利便性を損なわず愛車を守る基本パッケージ。',
+            price: '260,855',
+            priceTax: '286,940',
+            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'grgo'
+        },
+        {
             id: 'lc150-grgo-zv-canguard',
             brand: 'Grgo',
             grade: 'ZV II ＋ CANガード ＋ トリプル',
             description: '信頼のZV IIにCANインベーダー対策ユニットを物理追加した鉄壁プラン。',
-            price: '314,600',
-            priceTax: '346,060',
+            price: '272,600',
+            priceTax: '299,860',
             features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'grgo'
+        },
+        {
+            id: 'lc150-grgo-zvt-keyless',
+            brand: 'Grgo',
+            grade: 'ZVT II ＋ スマキー連動/スマクロ',
+            description: '傾斜センサー含むフルセンサー構成にスマートキー連動をプラスし、利便性を高めた一台。',
+            price: '299,600',
+            priceTax: '329,560',
+            isRecommended: true,
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
             category: 'grgo'
         },
         {
@@ -612,20 +633,39 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             brand: 'Grgo',
             grade: 'ZVT II ＋ CANガード',
             description: '傾斜センサー含むフルセンサー構成にCANガードを統合した最良バランスの一台。',
-            price: '336,600',
-            priceTax: '370,260',
-            isRecommended: true,
+            price: '310,827',
+            priceTax: '341,909',
             features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
             category: 'grgo'
+        },
+        {
+            id: 'lc150-panthera-z106-keyless',
+            brand: 'Panthera',
+            grade: 'Z106 ＋ スマキー連動/スマクロ ＋ トリプル',
+            description: 'パンテーラの緻密な感度はそのままに、スマートキーに連動し日常の利便性を確保。',
+            price: '321,300',
+            priceTax: '353,430',
+            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'パンテーラ'
         },
         {
             id: 'lc150-panthera-z106-canguard',
             brand: 'Panthera',
             grade: 'Z106 ＋ CANガード ＋ トリプル',
             description: 'パンテーラに独自のCANガードを施工。デジタルとアナログの高度な融合。',
-            price: '374,800',
-            priceTax: '412,280',
+            price: '332,800',
+            priceTax: '366,080',
             features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'lc150-panthera-z306-keyless',
+            brand: 'Panthera',
+            grade: 'Z306 ＋ スマキー連動/スマクロ',
+            description: '不動の人気Z306にスマートキー連動をプラス。高い防犯性能と使いやすさを両立。',
+            price: '348,300',
+            priceTax: '383,130',
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
             category: 'パンテーラ'
         },
         {
@@ -633,9 +673,19 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             brand: 'Panthera',
             grade: 'Z306 ＋ CANガード',
             description: '不動の人気Z306にCANガードをプラス。圧倒的な防犯性能と安心を提供。',
-            price: '396,800',
-            priceTax: '436,480',
+            price: '359,800',
+            priceTax: '395,780',
             features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'lc150-panthera-z706-keyless',
+            brand: 'Panthera',
+            grade: 'Z706 ＋ スマキー連動/スマクロ',
+            description: 'ANG最強の組み合わせにスマートキー連動をプラス。利便性を極めた最上位パッケージ。',
+            price: '438,300',
+            priceTax: '482,130',
+            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: false, ir: true },
             category: 'パンテーラ'
         },
         {
@@ -643,8 +693,8 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             brand: 'Panthera',
             grade: 'Z706 ＋ CANガード',
             description: 'ANG最強の組み合わせ。バックアップサイレン、全センサー、物理CAN対策の集大成。',
-            price: '486,800',
-            priceTax: '535,480',
+            price: '449,800',
+            priceTax: '494,780',
             isRecommended: true,
             features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: true, ir: true },
             category: 'パンテーラ'
