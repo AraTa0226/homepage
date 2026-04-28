@@ -1176,7 +1176,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'prius-grgo-1vs',
             brand: 'Grgo',
-            grade: '1Vs II ＋ ANGプレート',
+            grade: '1Vs II',
             description: 'スマートキーに完全連動。リモコンを追加せず、純正の使い勝手そのままに警備を開始できるベーシックセット。',
             price: '191,055',
             priceTax: '210,160',
@@ -1186,7 +1186,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'prius-grgo-5vf',
             brand: 'Grgo',
-            grade: '5Vf II ＋ LEDプレート',
+            grade: '5Vf II',
             description: '薄型1WAYリモコンモデル。オプション追加でスマートキー連動も可能（別途費用）。スマートな運用を求める方に。',
             price: '205,600',
             priceTax: '226,160',
@@ -1196,7 +1196,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'prius-grgo-zv-smaclo',
             brand: 'Grgo',
-            grade: 'ZV II ＋ スマキー連動/スマクロ ＋ LEDプレート',
+            grade: 'ZV II ＋ スマキー連動/スマクロ',
             description: 'ZV IIにスマクロ機能を追加。CANインベーダーやリレーアタックに対抗する最新のデジタルセキュリティ。',
             price: '258,600',
             priceTax: '284,460',
@@ -1237,7 +1237,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'prius-panthera-z106',
             brand: 'Panthera',
-            grade: 'Z106 ＋ LEDプレート',
+            grade: 'Z106',
             description: 'パンテーラの緻密な感度調整がプリウスに。パンテーラリモコンによるドアロック開閉で高い防犯性を発揮。',
             price: '293,600',
             priceTax: '322,960',
