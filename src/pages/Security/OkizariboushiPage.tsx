@@ -179,7 +179,7 @@ export const OkizariboushiPage: React.FC = () => {
                             </div>
 
                             <a
-                                href="https://kato-denki.com/products/hornet/bs-700c/"
+                                href="https://kato-denki.com/safety_device/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-3 text-slate-900 font-black italic text-xs tracking-widest group border-b-2 border-rose-600 pb-1 hover:text-rose-600 transition-colors"
@@ -203,7 +203,7 @@ export const OkizariboushiPage: React.FC = () => {
                             </p>
                         </div>
                         <a
-                            href="https://jpn.pioneer/ja/car-security/bus/"
+                            href="https://jpn.pioneer/ja/np1/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="shrink-0 w-full md:w-auto px-12 py-6 bg-slate-900 text-white font-black italic rounded-2xl hover:bg-rose-600 transition-all shadow-xl shadow-slate-900/10 active:scale-95 text-center"
