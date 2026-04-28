@@ -409,54 +409,13 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
     // LX600専用設定データ
     const lxPlans = [
         {
-            id: 'lx-grgo-zv',
-            brand: 'Grgo',
-            grade: 'ZV II ＋ CANガード ＋ トリプル',
-            description: '最新の盗難手口からデジタル・アナログ両面で守ります。',
-            price: '314,600',
-            priceTax: '346,060',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
-            category: 'grgo'
-        },
-        {
-            id: 'lx-grgo-zvt',
-            brand: 'Grgo',
-            grade: 'ZVT II ＋ CANガード',
-            description: 'LX必須の傾斜センサー。CANガード、リモコンもセット。',
-            price: '331,600',
-            priceTax: '364,760',
-            isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
-            category: 'grgo'
-        },
-        {
-            id: 'lx-grgo-zvt-microwave',
-            brand: 'Grgo',
-            grade: 'ZVT II ＋ CANガード ＋ マイクロ波',
-            description: '接近検知を追加し、高級車LXの死角をなくしたモデル。',
-            price: '369,800',
-            priceTax: '406,780',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
-            category: 'grgo'
-        },
-        {
             id: 'lx-panthera-z106',
             brand: 'Panthera',
             grade: 'Z106 ＋ CANガード ＋ トリプル',
             description: 'パンテーラの緻密なアルゴリズムで誤報を排し鉄壁の護り。',
-            price: '360,800',
-            priceTax: '396,880',
+            price: '384,800',
+            priceTax: '423,280',
             features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
-            category: 'パンテーラ'
-        },
-        {
-            id: 'lx-panthera-z106-microwave',
-            brand: 'Panthera',
-            grade: 'Z106 ＋ CANガード ＋ トリプル ＋ マイクロ波',
-            description: 'Z106パッケージに覗き込み対策のマイクロ波を。',
-            price: '391,800',
-            priceTax: '430,980',
-            features: { triple: true, tilt: false, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
             category: 'パンテーラ'
         },
         {
@@ -464,10 +423,20 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             brand: 'Panthera',
             grade: 'Z306 ＋ CANガード',
             description: 'フラッグシップSUVに相応しい多機能検知パッケージ。',
-            price: '443,800',
-            priceTax: '488,180',
+            price: '406,800',
+            priceTax: '447,480',
             isRecommended: true,
             features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'パンテーラ'
+        },
+        {
+            id: 'lx-panthera-z306-microwave',
+            brand: 'Panthera',
+            grade: 'Z306 ＋ CANガード ＋ マイクロ波',
+            description: '多機能検知パッケージに、事前検知のマイクロ波をプラス。',
+            price: '458,800',
+            priceTax: '504,680',
+            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
             category: 'パンテーラ'
         },
         {
@@ -475,8 +444,8 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             brand: 'Panthera',
             grade: 'Z706 ＋ CANガード',
             description: '全センサー装備の最高峰。LXを守り抜く最強の選択肢。',
-            price: '481,800',
-            priceTax: '529,980',
+            price: '496,800',
+            priceTax: '546,480',
             features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: true, ir: true },
             category: 'パンテーラ'
         }
