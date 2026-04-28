@@ -1094,7 +1094,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'ジャッキアップを警告する傾斜センサーやトリプルセンサーを含む、スポーツカーに必須の検知能力を備えたモデル。',
             price: '268,800',
             priceTax: '295,680',
-            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
             category: 'grgo'
         },
         {
@@ -1115,7 +1115,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'パンテーラの緻密な警備アルゴリズム。ベースモデルながらスポーツカーの盗難リスクを大幅に低減。',
             price: '288,800',
             priceTax: '317,680',
-            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: false, canguard: false },
             category: 'パンテーラ'
         },
         {
@@ -1135,7 +1135,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '傾斜センサーとトリプルセンサーを標準装備。あらゆる角度からの侵入・いたずら・移動を即座に検知。',
             price: '338,800',
             priceTax: '372,680',
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: false, canguard: false },
             category: 'パンテーラ'
         },
         {
@@ -1156,7 +1156,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '全センサーを搭載したパンテーラ最高峰。マイクロ波による接近検知やバックアップサイレンを備えた頂点の守り。',
             price: '428,000',
             priceTax: '470,800',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: false },
+            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: false, canguard: false },
             category: 'パンテーラ'
         },
         {
