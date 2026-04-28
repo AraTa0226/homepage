@@ -169,7 +169,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'rx-panthera-z706-full',
             brand: 'Panthera',
-            grade: 'Z706 Ultimate ＋ CANガード',
+            grade: 'Z706 ＋ CANガード',
             description: 'あらゆる手口から車を守る、ANGノウハウの結晶プラン。',
             price: '486,800',
             priceTax: '535,480',
@@ -245,7 +245,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'nx-panthera-z706-full',
             brand: 'Panthera',
-            grade: 'Z706 Ultimate ＋ CANガード',
+            grade: 'Z706 ＋ CANガード',
             description: '全機能を解放。NXを守るためのANGフラッグシッププラン。',
             price: '481,800',
             priceTax: '529,980',
@@ -321,7 +321,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lc70-panthera-z706-full',
             brand: 'Panthera',
-            grade: 'Z706 Ultimate',
+            grade: 'Z706',
             description: '全センサー装備の最高峰。70を守り抜くANGのフルスペックパッケージ。',
             price: '425,800',
             priceTax: '468,380',
@@ -397,7 +397,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'gx-panthera-z706-full',
             brand: 'Panthera',
-            grade: 'Z706 Ultimate ＋ CANガード',
+            grade: 'Z706 ＋ CANガード',
             description: 'すべてのセンサーを装備した究極の多重防御モデル。',
             price: '481,800',
             priceTax: '529,980',
@@ -473,7 +473,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lx-panthera-z706-full',
             brand: 'Panthera',
-            grade: 'Z706 Ultimate ＋ CANガード',
+            grade: 'Z706 ＋ CANガード',
             description: '全センサー装備の最高峰。LXを守り抜く最強の選択肢。',
             price: '481,800',
             priceTax: '529,980',
@@ -539,7 +539,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lbx-panthera-z706-full',
             brand: 'Panthera',
-            grade: 'Z706 Ultimate ＋ CANガード',
+            grade: 'Z706 ＋ CANガード',
             description: 'すべてのセンサーを纏った、LBXのための最強仕様。',
             price: '484,800',
             priceTax: '533,280',
@@ -614,7 +614,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lc250-panthera-z706-full',
             brand: 'Panthera',
-            grade: 'Z706 Ultimate ＋ CANガード ＋ ボンネット',
+            grade: 'Z706 ＋ CANガード ＋ ボンネット',
             description: '全センサー＋バックアップサイレン。250を守り抜く究極の回答。',
             price: '486,800',
             priceTax: '535,480',
@@ -672,7 +672,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lc150-panthera-z706-canguard',
             brand: 'Panthera',
-            grade: 'Z706 Ultimate ＋ CANガード ＋ ボンネット',
+            grade: 'Z706 ＋ CANガード ＋ ボンネット',
             description: 'ANG最強の組み合わせ。バックアップサイレン、全センサー、物理CAN対策の集大成。',
             price: '486,800',
             priceTax: '535,480',
@@ -1475,7 +1475,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lc300-panthera-z706-full',
             brand: 'Panthera',
-            grade: 'Z706 Ultimate ＋ CANガード ＋ ボンネット',
+            grade: 'Z706 ＋ CANガード ＋ ボンネット',
             description: 'ANGノウハウを結集。300を守るためのバックアップサイレン付最終回答。',
             price: '486,800',
             priceTax: '535,480',
@@ -1897,7 +1897,13 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                                         <span className="bg-emerald-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full">おすすめ</span>
                                                     )}
                                                 </div>
-                                                <h3 className="text-xl font-black text-gray-900 tracking-tight leading-tight">{plan.grade}</h3>
+                                                <h3 className="text-xl font-black text-gray-900 tracking-tight leading-tight">
+                                                    {plan.grade.split(' ＋ ').map((part, i) => (
+                                                        <span key={i} className="block">
+                                                            {i === 0 ? part : <span className="text-base text-gray-600">＋ {part}</span>}
+                                                        </span>
+                                                    ))}
+                                                </h3>
                                             </div>
                                             <div className="text-right">
                                                 <div className="text-xl font-black tracking-tighter text-gray-900">¥{plan.price}</div>
@@ -1935,22 +1941,28 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                             </div>
 
                             {/* Desktop View: Comparison Table */}
-                            <div className="hidden md:block overflow-x-auto">
-                                <table className="w-full border-collapse">
+                            <div className="hidden md:block">
+                                <table className="w-full table-fixed border-collapse">
                                     <thead>
                                         <tr className="border-b-4 border-[#0b1210]">
-                                            <th className="py-8 px-6 text-left bg-neutral-50/50 w-[20%]">
-                                                <div className="p-3 bg-[#0b1210] inline-block rounded-xl shadow-xl shadow-emerald-950/20 mb-4">
-                                                    <ShieldCheck className="w-8 h-8 text-emerald-400" />
+                                            <th className="py-6 px-2 lg:px-4 text-left bg-neutral-50/50 w-24 md:w-32 lg:w-[15%]">
+                                                <div className="p-2 lg:p-3 bg-[#0b1210] inline-block rounded-xl shadow-xl shadow-emerald-950/20 mb-2">
+                                                    <ShieldCheck className="w-6 h-6 lg:w-8 lg:h-8 text-emerald-400" />
                                                 </div>
-                                                <div className="text-[#0b1210] text-sm font-black italic tracking-widest uppercase">Security grade</div>
-                                                <div className="text-gray-400 text-[10px] font-bold mt-1">比較項目</div>
+                                                <div className="text-[#0b1210] text-[10px] lg:text-xs font-black italic tracking-widest uppercase">Security grade</div>
+                                                <div className="text-gray-400 text-[8px] font-bold mt-1">比較項目</div>
                                             </th>
                                             {filteredPlans.map((plan) => (
-                                                <th key={plan.id} className={`py-8 px-6 text-center transition-all ${plan.isRecommended ? 'bg-emerald-50/50' : 'bg-white'}`}>
-                                                    <div className="text-emerald-500 text-[8px] font-black mb-1.5 italic tracking-widest">{plan.brand}</div>
-                                                    <div className="text-[#0b1210] text-[12px] font-black leading-tight flex flex-col items-center justify-center italic gap-1">
-                                                        <span>{plan.grade}</span>
+                                                <th key={plan.id} className={`py-6 px-1 lg:px-2 text-center align-top transition-all ${plan.isRecommended ? 'bg-emerald-50/50' : 'bg-white'}`}>
+                                                    <div className="text-emerald-500 text-[8px] font-black mb-2 italic tracking-widest leading-none">{plan.brand}</div>
+                                                    <div className="flex justify-center">
+                                                        <div className="text-[#0b1210] text-[9px] lg:text-[10px] font-black leading-tight flex flex-col items-center italic gap-1">
+                                                            {plan.grade.split(' ＋ ').map((part, i) => (
+                                                                <span key={i} className={i === 0 ? "text-xs lg:text-sm text-gray-900 border-b-2 border-emerald-400/40 pb-0.5 mb-1 px-2 text-center" : "text-gray-600 text-center"}>
+                                                                    {i === 0 ? part : `＋ ${part}`}
+                                                                </span>
+                                                            ))}
+                                                        </div>
                                                     </div>
                                                 </th>
                                             ))}
@@ -1958,35 +1970,35 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                     </thead>
                                     <tbody className="divide-y divide-gray-100">
                                         {[
-                                            { label: 'トリプルセンサー', key: 'triple', desc: '衝撃に加えて空圧の変化も検知。' },
-                                            { label: '傾斜センサー', key: 'tilt', desc: 'レッカー移動やホイール盗難を阻止。' },
-                                            { label: 'ボンネットセンサー', key: 'bonnet', desc: 'バッテリー切断等の侵入を阻止。' },
-                                            { label: 'マイクロ波センサー', key: 'microwave', desc: '車両への不審な接近を事前威嚇。' },
-                                            { label: 'バックアップサイレン', key: 'siren', desc: '電源断でも鳴り続ける専用サイレン。' },
-                                            { label: 'スマートキー連動', key: 'algorithm', desc: '純正キー操作にセキュリティが同期。' },
-                                            { label: 'CANガード施工', key: 'canguard', desc: 'デジタル通信を遮断する鉄壁の防御。' }
+                                            { label: 'トリプル', key: 'triple', desc: '衝撃と空圧検知。' },
+                                            { label: '傾斜センサー', key: 'tilt', desc: 'レッカー対策。' },
+                                            { label: 'ボンネット', key: 'bonnet', desc: 'バッテリー切断対策。' },
+                                            { label: 'マイクロ波', key: 'microwave', desc: '不審接近威嚇。' },
+                                            { label: 'バックアップ', key: 'siren', desc: '電源断対応サイレン。' },
+                                            { label: 'スマキー連動', key: 'algorithm', desc: '純正キー同期。' },
+                                            { label: 'CANガード', key: 'canguard', desc: 'デジタル通信遮断。' }
                                         ].map((feature, idx) => (
                                             <tr key={feature.key} className={`hover:bg-neutral-50/50 transition-colors group`}>
-                                                <td className="py-5 px-8">
+                                                <td className="py-5 px-2 lg:px-4">
                                                     <div className="flex flex-col gap-1">
-                                                        <div className="flex items-center gap-3">
-                                                            <div className="w-1.5 h-1.5 rounded-full bg-emerald-500/30 group-hover:bg-emerald-500 transition-colors" />
-                                                            <span className="text-xs font-black text-gray-600 italic uppercase tracking-tighter">{feature.label}</span>
+                                                        <div className="flex items-center gap-2">
+                                                            <div className="w-1.5 h-1.5 rounded-full bg-emerald-500/30 group-hover:bg-emerald-500 transition-colors shrink-0" />
+                                                            <span className="text-[10px] lg:text-xs font-black text-gray-600 italic tracking-tighter leading-none">{feature.label}</span>
                                                         </div>
-                                                        <div className="text-[9px] text-gray-400 font-bold ml-4 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap overflow-hidden h-0 group-hover:h-auto">
+                                                        <div className="text-[8px] text-gray-400 font-bold ml-3.5 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap overflow-hidden h-0 group-hover:h-auto">
                                                             {feature.desc}
                                                         </div>
                                                     </div>
                                                 </td>
                                                 {filteredPlans.map((plan) => (
-                                                    <td key={plan.id} className={`py-5 px-6 text-center ${plan.isRecommended ? 'bg-emerald-50/30' : ''}`}>
+                                                    <td key={plan.id} className={`py-5 px-1 text-center ${plan.isRecommended ? 'bg-emerald-50/30' : ''}`}>
                                                         <div className="flex justify-center">
                                                             {(plan.features as any)[feature.key] ? (
-                                                                <div className="w-7 h-7 bg-emerald-100 rounded-full flex items-center justify-center shadow-inner">
-                                                                    <Check className="w-4 h-4 text-emerald-600 stroke-[3px]" />
+                                                                <div className="w-5 h-5 lg:w-6 lg:h-6 bg-emerald-100 rounded-full flex items-center justify-center shadow-inner">
+                                                                    <Check className="w-3 h-3 lg:w-4 lg:h-4 text-emerald-600 stroke-[3px]" />
                                                                 </div>
                                                             ) : (
-                                                                <div className="w-2 h-2 rounded-full bg-gray-100" />
+                                                                <div className="w-1.5 h-1.5 rounded-full bg-gray-100" />
                                                             )}
                                                         </div>
                                                     </td>
@@ -1994,24 +2006,18 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                             </tr>
                                         ))}
                                         <tr className="bg-neutral-50/30">
-                                            <td className="py-10 px-8">
-                                                <div className="text-[10px] font-black text-[#0b1210] italic tracking-widest uppercase mb-1">Pricing info</div>
-                                                <div className="text-xs font-black text-gray-500 italic">標準パッケージ価格</div>
+                                            <td className="py-8 px-2 lg:px-4">
+                                                <div className="text-[9px] font-black text-[#0b1210] italic tracking-widest uppercase mb-1">Pricing</div>
+                                                <div className="text-[10px] font-black text-gray-500 italic">標準パッケージ価格</div>
                                             </td>
                                             {filteredPlans.map((plan) => (
-                                                <td key={plan.id} className={`py-10 px-6 text-center ${plan.isRecommended ? 'bg-emerald-50/50' : ''}`}>
-                                                    <div className="text-2xl font-black tracking-tighter text-gray-900 italic">
+                                                <td key={plan.id} className={`py-8 px-1 lg:px-2 text-center ${plan.isRecommended ? 'bg-emerald-50/50' : ''}`}>
+                                                    <div className="text-sm lg:text-lg font-black tracking-tighter text-gray-900 italic leading-none">
                                                         ¥{plan.price}
                                                     </div>
-                                                    <div className="text-[9px] text-gray-400 font-bold mt-1 tracking-widest">
-                                                        (税込 ¥{plan.priceTax})
+                                                    <div className="text-[8px] text-gray-400 font-bold mt-1 tracking-widest mb-3">
+                                                        (税込¥{plan.priceTax})
                                                     </div>
-                                                    <button
-                                                        onClick={() => navigate('/contact')}
-                                                        className="mt-6 w-full py-3 bg-[#0b1210] hover:bg-emerald-950 text-white font-black italic text-[10px] rounded-xl transition-all shadow-xl active:scale-95"
-                                                    >
-                                                        FREE CONSULTATION
-                                                    </button>
                                                 </td>
                                             ))}
                                         </tr>
