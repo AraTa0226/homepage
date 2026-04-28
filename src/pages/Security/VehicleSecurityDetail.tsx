@@ -263,7 +263,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '1WAYリモコンモデルにトリプルセンサーを追加。アドブルーリッド対策も対応可。',
             price: '225,800',
             priceTax: '248,380',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: false, canguard: false },
+            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
             category: 'grgo'
         },
         {
@@ -273,18 +273,18 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'アンサーバックリモコンモデル。トリプルセンサーで検知能力を強化。',
             price: '243,800',
             priceTax: '268,180',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: false, canguard: false },
+            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
             category: 'grgo'
         },
         {
             id: 'lc70-grgo-zvt',
             brand: 'Grgo',
-            grade: 'ZVT II 標準パッケージ',
+            grade: 'ZVT II',
             description: '傾斜センサー・1WAYリモコン付属の最上位Grgo。アナログキー車に最適なセッティングで施工。',
             price: '265,800',
             priceTax: '292,380',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: false, canguard: false },
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
             category: 'grgo'
         },
         {
@@ -294,7 +294,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'パンテーラの緻密なアルゴリズムを70に。トリプルセンサーで全方位監視。',
             price: '313,800',
             priceTax: '345,180',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: false, canguard: false },
+            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
             category: 'パンテーラ'
         },
         {
@@ -305,7 +305,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '335,800',
             priceTax: '369,380',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: false, canguard: false },
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
             category: 'パンテーラ'
         },
         {
@@ -315,7 +315,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '接近検知を追加。不審なうろつきや車内覗き込みを未然に防ぎます。',
             price: '387,800',
             priceTax: '426,580',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: false, algorithm: false, canguard: false },
+            features: { triple: true, tilt: true, bonnet: false, microwave: true, siren: false, algorithm: false, canguard: false },
             category: 'パンテーラ'
         },
         {
@@ -325,7 +325,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '全センサー装備の最高峰。70を守り抜くANGのフルスペックパッケージ。',
             price: '425,800',
             priceTax: '468,380',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: false, canguard: false, ir: true },
+            features: { triple: true, tilt: true, bonnet: false, microwave: true, siren: true, algorithm: false, canguard: false, ir: true },
             category: 'パンテーラ'
         }
     ];
