@@ -946,6 +946,16 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             category: 'grgo'
         },
         {
+            id: 'kcar-grgo-zv-smart',
+            brand: 'Grgo',
+            grade: 'ZV II ＋ スマキー連動/スマクロ',
+            description: 'ZV IIにスマートキー連動（スマクロ）を追加。利便性を損なわず、最新の手口から愛車を守ります。',
+            price: '207,800',
+            priceTax: '228,580',
+            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'grgo'
+        },
+        {
             id: 'kcar-grgo-zvt',
             brand: 'Grgo',
             grade: 'ZVT II',
@@ -954,6 +964,16 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             priceTax: '241,780',
             isRecommended: true,
             features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
+            category: 'grgo'
+        },
+        {
+            id: 'kcar-grgo-zvt-smart',
+            brand: 'Grgo',
+            grade: 'ZVT II ＋ スマキー連動/スマクロ',
+            description: '最高位Grgoにスマートキー連動を追加。あらゆる衝撃・傾斜検知に利便性をプラスした究極の軽カープラン。',
+            price: '264,600',
+            priceTax: '291,060',
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
             category: 'grgo'
         },
         {
