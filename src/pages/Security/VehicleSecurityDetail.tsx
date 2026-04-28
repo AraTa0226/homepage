@@ -1398,7 +1398,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'crown-grgo-zv',
             brand: 'Grgo',
-            grade: 'ZV II ＋ CANガード ＋ ボンネット',
+            grade: 'ZV II ＋ CANガード',
             description: '最新のクラウンシリーズに最適。物理CANガードと最新システムを組み合わせ、利便性と防犯を両立。',
             price: '314,600',
             priceTax: '346,060',
@@ -1408,7 +1408,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'crown-grgo-zvt',
             brand: 'Grgo',
-            grade: 'ZVT II ＋ CANガード ＋ ボンネット',
+            grade: 'ZVT II ＋ CANガード',
             description: '傾斜センサーと1WAYリモコンを標準装備。ジャッキアップやレッカー移動にも対応する多重防御プラン。',
             price: '336,600',
             priceTax: '370,260',
