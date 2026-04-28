@@ -1685,7 +1685,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         'special-model': {
             name: 'Other Models / Custom',
             year: 'Consulting Service',
-            image: '/images/Security/vehicle/special-model.png',
+            image: '/images/Security/vehicle/special-model-v2.png',
             description: '輸入車、旧車、希少車、そしてキャンピングカーまで。リストにない車種でも、ANGの確かな技術力で最適な防犯プランをご提案します。オーナー様の不安に寄り添い、一台一台時間をかけて解析・施工いたします。',
             plans: basePlans
         }
@@ -1824,7 +1824,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
 
                                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                                         <button
-                                            onClick={() => navigate('/contact')}
+                                            onClick={() => navigate('/reservation')}
                                             className="w-full sm:w-auto px-10 py-5 bg-emerald-500 hover:bg-emerald-400 text-white font-black italic rounded-2xl transition-all shadow-lg shadow-emerald-500/20 active:scale-95"
                                         >
                                             無料個別相談を予約する
