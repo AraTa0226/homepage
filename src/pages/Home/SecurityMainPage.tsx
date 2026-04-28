@@ -146,10 +146,65 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
     showMegaMenu,
     setShowMegaMenu,
 }) => {
-
     const [isLineupExpanded, setIsLineupExpanded] = useState(false);
     const [showFullAuditionList, setShowFullAuditionList] = useState(false);
-    const theme = 'light'; // Security theme is now light to match the physical store
+
+    // Local SEO & Meta Tags
+    React.useEffect(() => {
+        document.title = "福岡市・大野城のカーセキュリティ専門店 ANG | 九州全域から来店多数のパンテーラ・ゴルゴ正規店";
+
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+            metaDescription.setAttribute('content', "福岡県大野城市・福岡市のカーセキュリティ専門店ANG。最新のCANインベーダーやキーエミュレーター対策に特化。福岡市内はもちろん、佐賀・熊本等、九州各県からも多くのお客様に選ばれています。ランクル・レクサスの盗難対策ならお任せください。");
+        }
+
+        // Structured Data (JSON-LD) for Local SEO
+        const structuredData = {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "カーセキュリティ専門店 ANG",
+            "image": assets.heroImage,
+            "@id": "https://www.sec-ang.com",
+            "url": "https://www.sec-ang.com",
+            "telephone": "092-503-5437",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "御笠川5-4-14",
+                "addressLocality": "大野城市",
+                "addressRegion": "福岡県",
+                "postalCode": "816-0912",
+                "addressCountry": "JP"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 33.545755,
+                "longitude": 130.485122
+            },
+            "openingHoursSpecification": [
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                    "opens": "10:00",
+                    "closes": "19:00"
+                }
+            ],
+            "sameAs": [
+                "https://www.facebook.com/profile.php?id=100063630308258",
+                "https://www.instagram.com/sound_ang_security/"
+            ]
+        };
+
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.text = JSON.stringify(structuredData);
+        document.head.appendChild(script);
+
+        return () => {
+            document.head.removeChild(script);
+        };
+    }, [assets]);
+
+    const theme = 'light';
 
 
 
@@ -860,6 +915,7 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                 <li><a href="#" className="hover:text-emerald-500 transition-colors">Top</a></li>
                                 <li><a href="#services" className="hover:text-white transition-colors">Menu</a></li>
                                 <li><a href="#access" className="hover:text-white transition-colors">Shop Access</a></li>
+                                <li><button onClick={() => navigate('/security/sitemap')} className="hover:text-white transition-colors">Site Map</button></li>
                                 <li><a href="#" className="hover:text-white transition-colors">Latest News</a></li>
                                 <li><a href="https://www.soundang.com/webbrog/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Blog</a></li>
                                 <li><button onClick={() => navigate('/reservation')} className="text-emerald-500 hover:underline">ご来店・ご相談予約</button></li>

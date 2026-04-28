@@ -510,44 +510,19 @@
       "type": "security",
       "items": [
         {
-          "name": "Panthera Z706",
+          "name": "Z706シリーズ",
           "price": "286000",
-          "badge": "フルスペックモデル",
-          "description": "全センサーを標準装備した、Pantheraシリーズ最高位モデル。バックアップサイレンも搭載し、あらゆる手口から愛車を死守します。",
-          "features": [
-            "3ゾーンワイドマイクロ波センサー",
-            "トリプルセンサー",
-            "デジタル傾斜センサー",
-            "IRセンサー",
-            "バックアップサイレン"
-          ],
-          "image": "/images/Security/model/panthera.webp"
+          "badge": "最高峰モデル"
         },
         {
-          "name": "Panthera Z306",
+          "name": "Z306シリーズ",
           "price": "242000",
-          "badge": "ハイスペックモデル",
-          "description": "人気のトリプルセンサーとデジタル傾斜センサーを標準装備。高い検知能力とコストパフォーマンスを両立した上位モデル。",
-          "features": [
-            "トリプルセンサー",
-            "デジタル傾斜センサー",
-            "2ポイントイモビライザー",
-            "アンサーバックリモコン"
-          ],
-          "image": "/images/Security/model/panthera.webp"
+          "badge": "スタンダード"
         },
         {
-          "name": "Panthera Z106",
+          "name": "Z106シリーズ",
           "price": "198000",
-          "badge": "ベーシックモデル",
-          "description": "Pantheraの基本性能を凝縮。ニーズに合わせて後からセンサーを追加可能な、自由度の高いエントリーモデル。",
-          "features": [
-            "ショックセンサー",
-            "2ポイントイモビライザー",
-            "アンサーバックリモコン",
-            "拡張性"
-          ],
-          "image": "/images/Security/model/panthera.webp"
+          "badge": "エントリー"
         }
       ],
       "images": []
@@ -558,56 +533,56 @@
       "type": "security",
       "items": [
         {
-          "name": "Grgo-ZVTⅡ",
-          "price": "214500",
-          "badge": "フルカラー液晶・全センサー",
-          "description": "フルカラーアニメーション表示の液晶リモコンを装備。全センサー標準搭載のGrgoシリーズ最上位モデル。",
-          "features": [
-            "フルカラー液晶リモコン",
-            "トリプルセンサー",
-            "傾斜センサー",
-            "イモビライザー"
-          ],
-          "image": "/images/Security/model/grgo-key.webp"
-        },
-        {
-          "name": "Grgo-ZVⅡ",
+          "name": "ZVⅡ",
           "price": "165000",
           "badge": "人気No.1推奨",
-          "description": "状況に応じたきめ細かな感度設定が可能。高い信頼性を誇るGrgoのスタンダードアンサーバックモデル。",
           "features": [
-            "液晶リモコン",
-            "衝撃センサー",
-            "イモビライザー",
-            "ドア/トランク検知"
+            "2次元フルカラー液晶リモコン",
+            "3ゾーン衝撃センサー",
+            "1ポイントイモビライザー",
+            "ドア/トランク/ボンネット検知"
           ],
-          "image": "/images/Security/model/grgo-key.webp"
+          "image": "/images/Security/model/grgo.webp",
+          "description": "フルカラー液晶リモコン for 車両の状態をリアルタイムに確認可能。高い検知能力と操作性を両立した、Grgoシリーズの核となるモデルです。"
         },
         {
-          "name": "Grgo-1VsⅡ",
+          "name": "ZVTⅡ",
+          "price": "198000",
+          "badge": "最上位フルガード",
+          "features": [
+            "デジタル傾斜センサー標準装備",
+            "トリプルセンサー標準装備",
+            "アンサーバック液晶リモコン",
+            "1WAYスペアリモコン付属"
+          ],
+          "image": "/images/Security/model/grgo.webp",
+          "description": "ZVⅡの機能に加え、レッカー移動対策の傾斜センサーや衝撃検知を強化するトリプルセンサーを標準装備した、物理ガードの決定版。"
+        },
+        {
+          "name": "1VsⅡ",
           "price": "99000",
           "badge": "純正キーレス連動",
-          "description": "純正スマートキーの操作にセキュリティが完全連動。操作性を損なわずに最高峰のガードを導入可能。",
           "features": [
             "純正リモコン連動",
-            "衝撃センサー",
-            "不正アンロック検知",
-            "イモビライザー"
+            "ショックセンサー内蔵",
+            "イモビライザー",
+            "ドア/トランク/ボンネット検知"
           ],
-          "image": "/images/Security/model/grgo-key.webp"
+          "image": "/images/Security/model/grgo.webp",
+          "description": "純正スマートキーの操作に連動してセキュリティを起動. シンプルながらGrgoの高い信頼性を手軽に導入できるモデルです。"
         },
         {
-          "name": "Grgo-5VfⅡ",
+          "name": "5VfⅡ",
           "price": "110000",
           "badge": "実用性重視",
-          "description": "液晶なしのシンプルなリモコンを採用。機能を絞り込みつつ、Grgoならではの確実な警報・警告能力を維持した実用モデル。",
           "features": [
-            "5ボタンリモコン",
-            "衝撃センサー",
-            "ドア検知",
-            "イモビライザー"
+            "5ボタン1WAYリモコン",
+            "ショックセンサー内蔵",
+            "ドア/トランク/ボンネット検知",
+            "車載用リモコンホルダー対応"
           ],
-          "image": "/images/Security/model/grgo-key.webp"
+          "image": "/images/Security/model/grgo.webp",
+          "description": "液晶なしのシンプルなリモコンを採用。機能を絞り込みつつ、Grgoならではの確実な警報・警告能力を維持した実用モデル。"
         }
       ],
       "images": []
@@ -618,100 +593,19 @@
       "type": "security",
       "items": [
         {
-          "name": "VIPER 8818V",
-          "price": "143000",
-          "subType": "main",
-          "badge": "マルチレベル・タフモデル",
-          "description": "コンパクトで頑丈な3ボタンリモコンを採用。電波悪用手口を完封するコードホッピング機能搭載。",
-          "features": [
-            "3ボタンリモコン×2",
-            "2段階衝撃センサー",
-            "コードホッピング",
-            "イモビライザー"
-          ],
-          "image": "/images/Security/model/8818v.webp"
-        },
-        {
-          "name": "VIPER 5305Vi",
-          "price": "132000",
-          "subType": "main",
-          "badge": "液晶アンサーバック",
-          "description": "飛距離500mを誇る液晶リモコンで異常をリアルタイム通知。車内の状況が一目でわかる安心モデル。",
-          "features": [
-            "液晶アンサーバック",
-            "見通し500m",
-            "5系統トリガー",
-            "イモビライザー"
-          ],
-          "image": "/images/Security/model/5305vI.webp"
-        },
-        {
-          "name": "VIPER 5304Vi",
-          "price": "154000",
-          "subType": "main",
-          "badge": "4ボタンスマートリモコン",
-          "description": "飛距離、操作性抜群の4ボタンスマートリモコンを2個標準装備。安定した通信性能。",
-          "features": [
-            "4ボタンリモコン×2",
-            "衝撃センサー",
-            "NPC機能",
-            "イモビライザー"
-          ],
-          "image": "/images/Security/model/5304vI.webp"
-        },
-        {
-          "name": "VIPER 5300Vi",
-          "price": "99000",
-          "subType": "main",
-          "badge": "純正スマートキー連動",
-          "description": "スマートキーのロック/アンロックに連動。専用リモコン不要で世界標準のガードを。",
-          "features": [
-            "純正キー連動",
-            "スマートキー対応",
-            "衝撃センサー",
-            "ドア検知"
-          ],
-          "image": "/images/Security/model/5300vi.webp"
-        },
-        {
-          "name": "VIPER 330V5",
+          "name": "DS4V",
           "price": "110000",
-          "subType": "330v",
-          "badge": "330Vシリーズ・最高峰",
-          "description": "330Vシリーズのアンサーバックモデル。鉄壁の防犯機能とリモコン通知を両立。",
-          "features": [
-            "液晶リモコン",
-            "ショックセンサー",
-            "NPC機能",
-            "イモビライザー"
-          ],
-          "image": "/images/Security/model/330V5.webp"
+          "badge": "最新デジタル"
         },
         {
-          "name": "VIPER 330V4",
-          "price": "99000",
-          "subType": "330v",
-          "badge": "4ボタンスマートリモコン",
-          "description": "飛距離・操作性抜群の4ボタンスマートリモコンを2個装備した高機能モデル。",
-          "features": [
-            "4ボタンリモコン×2",
-            "衝撃センサー",
-            "イモビライザー"
-          ],
-          "image": "/images/Security/model/330V4.webp"
+          "name": "5706V",
+          "price": "132000",
+          "badge": "定番モデル"
         },
         {
-          "name": "VIPER 330V",
+          "name": "330V",
           "price": "77000",
-          "subType": "330v",
-          "badge": "純正スマートキー連動",
-          "description": "純正キーレス連動で、利便性と防犯性を高次元で両立。エントリーに最適。",
-          "features": [
-            "純正キー連動",
-            "衝撃センサー",
-            "イモビライザー"
-          ],
-          "image": "/images/Security/model/330V.webp"
+          "badge": "エントリー"
         }
       ],
       "images": []
@@ -722,99 +616,14 @@
       "type": "security",
       "items": [
         {
-          "name": "IntelliGuard 880J",
-          "price": "242000",
-          "subType": "g6",
-          "badge": "G6シリーズ・フラッグシップ",
-          "description": "クリフォードの代名詞。オムニセンサーとダブルゾーン衝撃センサーで、最高精度の検知を実現。",
-          "features": [
-            "オムニセンサー",
-            "2ポイントイモビ",
-            "ブラックジャック機能",
-            "リモコン2個"
-          ],
-          "image": "/images/Security/model/clifford-880J.webp"
+          "name": "G6シリーズ",
+          "price": "220000",
+          "badge": "世界最高峰"
         },
         {
-          "name": "Concept 480J",
-          "price": "198000",
-          "subType": "g6",
-          "badge": "G6シリーズ・ミドル",
-          "description": "必要な機能を網羅したG6シリーズの中核モデル。信頼のブラックジャック機能を標準搭載。",
-          "features": [
-            "ブラックジャック",
-            "2段階ショックセンサー",
-            "暗唱番号バレー",
-            "イモビライザー"
-          ],
-          "image": "/images/Security/model/clifford-480J.webp"
-        },
-        {
-          "name": "Arrow 6J",
+          "name": "Matrixシリーズ",
           "price": "154000",
-          "subType": "g6",
-          "badge": "G6シリーズ・エントリー",
-          "description": "オンボードシングルイモビライザーを標準装備した、導入しやすいG6エントリーモデル。",
-          "features": [
-            "シングルイモビ",
-            "ショックセンサー",
-            "リモコン2個"
-          ],
-          "image": "/images/Security/model/clifford-Arrow6J.webp"
-        },
-        {
-          "name": "MATRIX 730XJ",
-          "price": "154000",
-          "subType": "matrix",
-          "badge": "液晶アンサーバック",
-          "description": "双方向リモコンで異常を通知。高いコストパフォーマンスを誇るハイパフォーマンスモデル。",
-          "features": [
-            "液晶アンサーバック",
-            "2段階ショックセンサー",
-            "イモビライザー",
-            "リモコン連動"
-          ],
-          "image": "/images/Security/model/CLIFFORD-730XJ.webp"
-        },
-        {
-          "name": "MATRIX 720XJ",
-          "price": "132000",
-          "subType": "matrix",
-          "badge": "LEDアンサーバック",
-          "description": "LED表示と音で異常を通知。確実な操作性を誇る高機能モデル。",
-          "features": [
-            "LEDアンサーバック",
-            "2段階ショックセンサー",
-            "イモビライザー"
-          ],
-          "image": "/images/Security/model/CLIFFORD-720XJ.webp"
-        },
-        {
-          "name": "MATRIX 330X/X3 SP",
-          "price": "110000",
-          "subType": "matrix",
-          "badge": "CAN-BUS / 純正連動",
-          "description": "純正キーレスにフル連動。CAN-BUS採用車に最適な最新リンクモデル。",
-          "features": [
-            "純正キー連動",
-            "CAN-BUS対応",
-            "衝撃センサー"
-          ],
-          "image": "/images/Security/model/CLIFFORD-330X-SP.webp"
-        },
-        {
-          "name": "MATRIX S330",
-          "price": "88000",
-          "subType": "matrix",
-          "badge": "純正キーレス連動",
-          "description": "純正キー操作でクリフォードが作動。スマートに導入可能な高性能セキュリティ。",
-          "features": [
-            "純正キー連動",
-            "衝撃センサー",
-            "イモビライザー",
-            "CAN-BUS対応可能"
-          ],
-          "image": "/images/Security/model/clifford-MATRIX-S330.webp"
+          "badge": "高性能"
         }
       ],
       "images": []
@@ -1128,10 +937,10 @@
       "items": [
         {
           "name": "純正交換タイプ 12型ドラレコミラー\n「車内用リアカメラ」",
-          "slug": "dvr-dm1200a2-ic",
           "price": "0",
           "badge": "NEW 4月下旬発売",
           "image": "/images/Security/d-mirror/dvr-dm1200a2-ic.webp",
+          "slug": "dvr-dm1200a2-ic",
           "features": [
             "12型大画面・高画質液晶",
             "リア370万画素(WQHD)カメラ",
@@ -1192,10 +1001,10 @@
         },
         {
           "name": "純正交換タイプ 12型ドラレコミラー\n「車外用リアカメラ」",
-          "slug": "dvr-dm1200a2-oc",
           "price": "0",
           "badge": "NEW 4月下旬発売",
           "image": "/images/Security/d-mirror/dvr-dm1200a2-oc.webp",
+          "slug": "dvr-dm1200a2-oc",
           "features": [
             "12型大画面・高画質液晶",
             "車外用リアカメラ(WQHD)",
@@ -1256,10 +1065,10 @@
         },
         {
           "name": "純正交換タイプ 10型ドラレコミラー\n「車内用リアカメラ」",
-          "slug": "dvr-dm1000a2-ic",
           "price": "0",
           "badge": "NEW 4月下旬発売",
           "image": "/images/Security/d-mirror/dvr-dm1000a2-ic.webp",
+          "slug": "dvr-dm1000a2-ic",
           "features": [
             "10型大画面・高画質液晶",
             "リア370万画素(WQHD)カメラ",
@@ -1320,10 +1129,10 @@
         },
         {
           "name": "純正交換タイプ 10型ドラレコミラー\n「車外用リアカメラ」",
-          "slug": "dvr-dm1000a2-oc",
           "price": "0",
           "badge": "NEW 4月下旬発売",
           "image": "/images/Security/d-mirror/dvr-dm1000a2-oc.webp",
+          "slug": "dvr-dm1000a2-oc",
           "features": [
             "10型大画面・高画質液晶",
             "車外用リアカメラ(WQHD)",
@@ -1381,134 +1190,6 @@
               "content": "本製品は「本体 ＋ 取付けキット」で取付けできます。車種専用の取付けキットを使用することで、配線を隠し、まるで純正品のような美しく確実な装着を実現します。"
             }
           ]
-        },
-        {
-          "name": "バンド取付けタイプ 10型ドラレコミラー\n「車内用リアカメラ」",
-          "slug": "dvr-dm1000b-ic",
-          "price": "0",
-          "badge": "10型デジタルミラー［バンド取付け］",
-          "image": "/images/Security/d-mirror/dvr-dm1000b-ic.webp",
-          "features": [
-            "10型WXGA・高精細液晶",
-            "前後200万画素(Full HD)",
-            "STARVIS搭載・夜間鮮明",
-            "バンド取付け(簡単設置)",
-            "駐車録画モード標準装備"
-          ],
-          "description": "純正ミラーに被せて固定するバンド取付けタイプの10型デジタルミラー。10型の大画面・高解像度（WXGA）液晶と、ドライブレコーダー機能を一体化。取付が簡単で、幅広い車種にスマートに装着可能です。カメラ独立型により、安全支援センサーへの干渉も回避します。",
-          "specSummary": [
-            {
-              "label": "液晶サイズ",
-              "value": "10型 WXGA液晶",
-              "icon": "Maximize"
-            },
-            {
-              "label": "カメラ解像度",
-              "value": "前後 200万画素",
-              "icon": "Camera"
-            },
-            {
-              "label": "表示解像度",
-              "value": "1280 × 720p",
-              "icon": "Zap"
-            },
-            {
-              "label": "取付方法",
-              "value": "バンド取付け式",
-              "icon": "Shield"
-            },
-            {
-              "label": "記録媒体",
-              "value": "32GB microSD付属",
-              "icon": "Info"
-            }
-          ],
-          "detailedSections": [
-            {
-              "title": "直感的なタッチインターフェース",
-              "content": "右ハンドル車に配慮したボタンレイアウトを採用。画面を上下になぞるとカメラアングル、左右になぞると明るさを直感的に調整可能。設定状況がひと目でわかるアイコン表示で使いやすさを追求しました。"
-            },
-            {
-              "title": "前後200万画素同時録画 / STARVIS搭載",
-              "content": "前後ともに200万画素の高精細カメラを採用。STARVIS搭載により、夜間走行時や暗所でも対象車両をくっきりと捉え、あおり運転などのトラブルも見逃しません。"
-            },
-            {
-              "title": "別売品なしで駐車録画に対応",
-              "content": "製品付属の配線のみで、衝撃検知による駐車録画が可能。オフタイマーや低電圧ブロック機能を内蔵し、バッテリー上がりを防ぎつつ愛車を見守ります。"
-            },
-            {
-              "title": "WXGA高精細フルラミネーションディスプレイ",
-              "content": "1280×720の高解像度液晶とフルラミネーション加工により、光の反射を抑えたクリアな視認性を実現。電源OFF時は通常のルームミラーとしても快適に使用できます。"
-            },
-            {
-              "title": "スモークフィルム・プライバシーガラス対応",
-              "content": "リアガラスの濃さに合わせてカメラの明るさを調整可能。色の濃いフィルム施工車でも、夜間まで明るく鮮明な映像を映し出します。"
-            }
-          ]
-        },
-        {
-          "name": "バンド取付けタイプ 10型ドラレコミラー\n「車外用リアカメラ」",
-          "slug": "dvr-dm1000b-oc",
-          "price": "0",
-          "badge": "10型デジタルミラー［バンド取付け］",
-          "image": "/images/Security/d-mirror/dvr-dm1000b-oc.webp",
-          "features": [
-            "10型WXGA・高精細液晶",
-            "前後200万画素(Full HD)",
-            "STARVIS搭載・夜間鮮明",
-            "バンド取付け(簡単設置)",
-            "駐車録画モード標準装備"
-          ],
-          "description": "純正ミラーに被せて固定するバンド取付けタイプの10型デジタルミラー。車外設置専用の高精細カメラを採用。リアガラスの反射や汚れ、スモークフィルムの影響を受けないダイレクトな視界を確保。WXGA液晶との組み合わせで、あらゆる環境下で鮮明な後方映像を提供します。",
-          "specSummary": [
-            {
-              "label": "液晶サイズ",
-              "value": "10型 WXGA液晶",
-              "icon": "Maximize"
-            },
-            {
-              "label": "カメラ解像度",
-              "value": "前後 200万画素",
-              "icon": "Camera"
-            },
-            {
-              "label": "表示解像度",
-              "value": "1280 × 720p",
-              "icon": "Zap"
-            },
-            {
-              "label": "取付方法",
-              "value": "バンド取付け式",
-              "icon": "Shield"
-            },
-            {
-              "label": "記録媒体",
-              "value": "32GB microSD付属",
-              "icon": "Info"
-            }
-          ],
-          "detailedSections": [
-            {
-              "title": "直感的なタッチインターフェース",
-              "content": "右ハンドル車に配慮したボタンレイアウトを採用。画面を上下になぞるとカメラアングル、左右になぞると明るさを直感的に調整可能。設定状況がひと目でわかるアイコン表示で使いやすさを追求しました。"
-            },
-            {
-              "title": "車外設置専用リアカメラ / STARVIS搭載",
-              "content": "車外設置に特化した防水・高耐久カメラを採用。STARVIS搭載により夜間走行時や暗い場所でも対象車両をくっきりと捉え、雨天時でも安定した視界を確保します。"
-            },
-            {
-              "title": "別売品なしで駐車録画に対応",
-              "content": "製品付属の配線のみで、衝撃検知による駐車録画が可能。オフタイマーや低電圧ブロック機能を内蔵し、バッテリー上がりを防ぎつつ愛車を見守ります。"
-            },
-            {
-              "title": "WXGA高精細フルラミネーションディスプレイ",
-              "content": "1280×720の高解像度液晶とフルラミネーション加工により、透過率と反射率を最適化。映り込みの少ないクリアな視界を実現し、非通電時もルームミラーとして使いやすくなっています。"
-            },
-            {
-              "title": "カメラ独立型でセンサー干渉を回避",
-              "content": "フロントカメラがディスプレイから独立しているため、ミラー周りの安全支援センサーを避けて設置が可能。ミラー角度を変えても録画位置に影響しません。"
-            }
-          ]
         }
       ],
       "images": []
@@ -1519,155 +1200,37 @@
       "type": "others",
       "items": [
         {
-          "name": "Yupiteru ZK2200 (ワンボディ型)",
+          "name": "Yupiteru ZK2200 (2ピースセパレート型)",
           "slug": "zk2200",
-          "price": "44000",
-          "badge": "2026年モデル・指定店モデル",
-          "image": "/images/Security/radar/zk2200.webp",
-          "installImages": [
-            "/images/Security/radar/zk2200-install1.webp",
-            "/images/Security/radar/zk2200-install2.webp"
-          ],
-          "features": [
-            "Kバンド識別強化・誤警報95%カット",
-            "MSSS / JMA-600 完全対応",
-            "生活道路制限速度表示対応",
-            "無線LAN自動データ更新",
-            "みちびき7機体制・全122基受信"
-          ],
-          "description": "SUPER CAT Z Series 最新フラッグシップモデル。Kバンド識別性能をさらに強化し、高感度ながら静粛性を極めた一台。2026年9月の法定速度引き下げに先駆け、一般道の制限速度表示に対応。4.0インチ大画面IPS液晶で見やすさも抜群です。",
-          "specSummary": [
-            {
-              "label": "タイプ",
-              "value": "1ボディ・無線LAN搭載",
-              "icon": "Maximize"
-            },
-            {
-              "label": "液晶サイズ",
-              "value": "4.0インチ IPS液晶",
-              "icon": "Smartphone"
-            },
-            {
-              "label": "対応衛星",
-              "value": "全122基 / みちびき7機",
-              "icon": "Zap"
-            },
-            {
-              "label": "検知機能",
-              "value": "Kパンド識別 / MSSS対応",
-              "icon": "Shield"
-            },
-            {
-              "label": "更新機能",
-              "value": "無線LAN自動更新対応",
-              "icon": "Wifi"
-            }
-          ],
-          "detailedSections": [
-            {
-              "title": "誤警報を最大95％カット",
-              "content": "受信した電波から誤警報源（自販機等）特有の信号を検出し、識別を実現。従来モデルと比較して誤警報を劇的に低減しました。"
-            },
-            {
-              "title": "新機能「セーフティモード」",
-              "content": "走行速度が制限速度内の場合、レーザー・レーダー警報を自動オフ。わずらわしい誤警報に悩まされません。"
-            },
-            {
-              "title": "最新取締機 JMA-600/520/401 対応",
-              "content": "現在国内で稼働しているすべての移動式取締機に対し、業界トップクラスの識別性能と警報を実現しています。"
-            },
-            {
-              "title": "一般道の制限速度表示・生活道路対応",
-              "content": "2026年9月の生活道路30km規制にいち早く対応。標識のない道路でも常に制限速度を確認可能です。"
-            },
-            {
-              "title": "無線LAN搭載で常に最新",
-              "content": "エンジンONで公開取締情報やオービスデータを自動更新。常に最高のパフォーマンスを発揮します。"
-            },
-            {
-              "title": "多彩な待受表示・背景カスタム",
-              "content": "業界最多クラスの表示項目。8種類のプリセット待受（マップ、デジタル時計、フォトフレーム等）からお好みの画面を選択可能。さらに待受背景もお好みの画像にカスタマイズできます。"
-            }
-          ]
-        },
-        {
-          "name": "Yupiteru ZK3200 (セパレート型)",
-          "slug": "zk3200",
-          "price": "0",
-          "badge": "COMING SOON",
+          "price": "49500",
+          "badge": "最新指定店モデル",
           "image": "/images/Top/radar.webp",
-          "description": "2026年 秋 登場。SUPER CAT Z Series 最新セパレートモデル。Kバンド識別性能をさらに進化させ、セパレートならではの自由な設置と最高感度を両立。情報は順次公開予定です。",
           "features": [
-            "2026年 秋 発売予定",
-            "最新型・2ピースセパレート",
-            "詳細情報準備中"
+            "移動型オービスMSSS対応",
+            "第2世代レーザーアンテナ",
+            "無線LAN自動更新対応"
           ]
         },
         {
-          "name": "Yupiteru Z920L (4ピースセパレート型)",
-          "slug": "z920l",
-          "price": "60500",
-          "badge": "2025年モデル・指定店モデル",
-          "image": "/images/Security/radar/z920l.webp",
-          "installImages": [
-            "/images/Security/radar/z920l-install.webp"
-          ],
+          "name": "Yupiteru Z2000 (セパレート型)",
+          "slug": "z2000",
+          "price": "49500",
+          "badge": "指定店モデル",
+          "image": "/images/Top/radar.webp",
           "features": [
-            "2025年無線LAN搭載セパレート",
-            "最新取締機 JMA-520 完全対応",
-            "新機能プリアラート搭載",
-            "3.0インチIPS静電式タッチパネル",
-            "史上最強レーザー探知性能"
-          ],
-          "description": "SUPER CAT Z Series 2025年ハイエンドモデル。ディスプレイ・アンテナ・スピーカー・ジャンクションユニットが独立した4ピースセパレート。最新のJMA-520を含むすべての可搬式取締機に完全対応。新機能プリアラートで、より快適で安全なドライブを実現します。",
-          "specSummary": [
-            {
-              "label": "タイプ",
-              "value": "4ピースセパレート",
-              "icon": "Maximize"
-            },
-            {
-              "label": "液晶サイズ",
-              "value": "3.0インチ IPS液晶",
-              "icon": "Smartphone"
-            },
-            {
-              "label": "対応衛星",
-              "value": "全91基 / みちびき対応",
-              "icon": "Zap"
-            },
-            {
-              "label": "操作方式",
-              "value": "静電式タッチパネル",
-              "icon": "Search"
-            },
-            {
-              "label": "更新機能",
-              "value": "無線LAN自動更新対応",
-              "icon": "Wifi"
-            }
-          ],
-          "detailedSections": [
-            {
-              "title": "最新取締機 JMA-520/MSSS 完全対応",
-              "content": "2025年8月時点で稼働中のすべての可搬式取締機に対応。最新のJMA-520やJMA-401、MSSSの識別と警報を、業界トップクラスの性能で実現しました。"
-            },
-            {
-              "title": "新機能「プリアラート」搭載",
-              "content": "Kバンド受信時に取締機の可能性を予告する新機能を搭載。都道府県ごとの配備状況に応じて自動でON/OFFを切替え、未導入エリアでの不要な警報を抑制します。"
-            },
-            {
-              "title": "誤警報を85％カット",
-              "content": "独自のフィルタリング機能により、自販機や特定車両のセンサーを正確に識別。誤警報を大幅に低減し、同乗者も快適なストレスフリーなドライブをサポートします。"
-            },
-            {
-              "title": "史上最強のレーザー探知性能",
-              "content": "エスフェリックレンズと専用高利得アンプICにより、超広範囲・長距離探知を実現。独自のフィルタと判定システムで、誤警報を抑えつつ微弱な光も逃しません。"
-            },
-            {
-              "title": "4ピースセパレートの自由な取付",
-              "content": "アンテナやスピーカーが別体のため、ディスプレイを好きな場所に、アンテナを最良の受信位置に設置可能。ダッシュボード上だけでなく、吊り下げ設置にも対応しています。"
-            }
+            "レーザー光超高感度受信",
+            "移動オービスMSSS対応"
+          ]
+        },
+        {
+          "name": "Yupiteru Z1100 (ワンボディ型)",
+          "slug": "z1100",
+          "price": "38500",
+          "badge": "指定店モデル",
+          "image": "/images/Top/radar.webp",
+          "features": [
+            "1ボディ最高峰",
+            "MSSS識別警報"
           ]
         }
       ],

@@ -59,6 +59,14 @@ export const RadarPage: React.FC = () => {
         }
     }, [productId, currentCategory]);
 
+    React.useEffect(() => {
+        document.title = "レーダー探知機施工 | 福岡市・大野城の専門店 ANG";
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+            metaDescription.setAttribute('content', "福岡でのレーダー探知機・レーザー探知機取付ならANG。最新の移動オービスMSSS対応モデル等。視界を妨げないスマートな取付。福岡市内はもちろん、九州各県からのご来店も歓迎しております。");
+        }
+    }, []);
+
     // モーダルを閉じる際のナビゲーション
     const handleClose = () => {
         navigate('/security/radar');

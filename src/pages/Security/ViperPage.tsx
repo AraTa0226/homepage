@@ -35,6 +35,15 @@ export const ViperPage: React.FC = () => {
     const navigate = useNavigate();
 
     const viperCategory = plans.find(p => p.id === 'security_viper');
+
+    React.useEffect(() => {
+        document.title = "VIPER（バイパー） | 福岡市・大野城のカーセキュリティ専門店 ANG";
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+            metaDescription.setAttribute('content', "世界シェアNo.1のVIPER（バイパー）。福岡での確かな取付実績。大野城市のANGは、福岡市内はもちろん、九州各県（佐賀・熊本等）からの施工依頼も多く受けている正規認定店です。");
+        }
+    }, []);
+
     const lineUp = (viperCategory?.items || []).map(item => ({
         id: item.name.toLowerCase().replace(/\s+/g, '_'),
         name: item.name,

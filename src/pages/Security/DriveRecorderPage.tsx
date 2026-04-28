@@ -56,6 +56,14 @@ export const DriveRecorderPage: React.FC = () => {
         }
     }, [productId, currentCategory]);
 
+    React.useEffect(() => {
+        document.title = "ドライブレコーダー施工 | 福岡市・大野城の専門店 ANG";
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+            metaDescription.setAttribute('content', "福岡でのドライブレコーダー取付ならANG。最新の3カメラモデルや360度カメラ、駐車監視・セキュリティ連動もお任せください。福岡市内はもちろん、九州各県からのご来店も歓迎しております。");
+        }
+    }, []);
+
     // モーダルを閉じる際のナビゲーション
     const handleClose = () => {
         navigate('/security/drive_recorder');

@@ -31,6 +31,15 @@ export const PantheraPage: React.FC = () => {
     const navigate = useNavigate();
 
     const pantheraCategory = plans.find(p => p.id === 'security_panthera');
+
+    React.useEffect(() => {
+        document.title = "Panthera（パンテーラ） | 福岡市・大野城のカーセキュリティ専門店 ANG";
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+            metaDescription.setAttribute('content', "全センサー標準装備のPanthera Zシリーズ。福岡県大野城市のANGは九州有数の認定取付店として、福岡市内はもちろん佐賀・熊本など県外からも多くのお客様の愛車を盗難から守っています。");
+        }
+    }, []);
+
     const lineUp = (pantheraCategory?.items || []).map(item => ({
         id: item.name.toLowerCase().replace(/\s+/g, '_'),
         name: item.name,

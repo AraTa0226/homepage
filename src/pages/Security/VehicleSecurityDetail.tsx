@@ -1706,11 +1706,11 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
     // Update Document Title for SEO
     useEffect(() => {
         if (currentVehicle) {
-            document.title = `${currentVehicle.name} 専用セキュリティプラン | 名古屋のカーオーディオ＆セキュリティ ANG`;
+            document.title = `${currentVehicle.name}の盗難対策プラン | 福岡市・大野城のANG`;
 
             const metaDescription = document.querySelector('meta[name="description"]');
             if (metaDescription) {
-                metaDescription.setAttribute('content', `${currentVehicle.name}の盗難対策ならANGにお任せください。CANインベーダーやリレーアタックに対応した最新のセキュリティパッケージをご提案。`);
+                metaDescription.setAttribute('content', `${currentVehicle.name}専用のカーセキュリティプラン。最新のCANインベーダーやリレーアタック対策に。福岡市内・大野城市のANGは、佐賀・熊本など九州各県からの施工依頼も多数受けている専門店です。`);
             }
         }
     }, [currentVehicle]);

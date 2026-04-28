@@ -39,6 +39,14 @@ export const DigitalMirrorPage: React.FC = () => {
         }
     }, [productId, currentCategory]);
 
+    useEffect(() => {
+        document.title = "デジタルインナーミラー施工 | 福岡市・大野城の専門店 ANG";
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+            metaDescription.setAttribute('content', "福岡でのデジタルインナーミラー取付ならANG。アルパイン等の純正交換タイプからドラレコ一体型まで。福岡市内・大野城市はもちろん、佐賀・熊本など九州各県からのご来店も歓迎しております。");
+        }
+    }, []);
+
     // モーダルを閉じる際のナビゲーション
     const handleClose = () => {
         navigate('/security/digital_mirror');

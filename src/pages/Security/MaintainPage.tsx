@@ -32,6 +32,13 @@ export const MaintainPage: React.FC = () => {
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 50);
         window.addEventListener('scroll', handleScroll);
+
+        document.title = "セキュリティー点検・診断 | 福岡市・大野城の専門店 ANG";
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+            metaDescription.setAttribute('content', "中古車購入時のセキュリティー設定や動作不良の診断なら、福岡のANGにお任せください。パンテーラ、ゴルゴ、バイパー等の正規品に対応。福岡市内はもちろん九州各県からのご相談も承っております。");
+        }
+
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 

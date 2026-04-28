@@ -29,6 +29,15 @@ export const GrgoPage: React.FC = () => {
     const navigate = useNavigate();
 
     const grgoCategory = plans.find(p => p.id === 'security_grgo');
+
+    React.useEffect(() => {
+        document.title = "Grgo（ゴルゴ） | 福岡市・大野城のカーセキュリティ専門店 ANG";
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+            metaDescription.setAttribute('content', "日本の環境に最適化したGrgo（ゴルゴ）。福岡でのランクルやレクサスの盗難対策に。九州各県（佐賀・長崎・大分・熊本）からの来店も多い、信頼のセキュリティ専門店ANGにお任せください。");
+        }
+    }, []);
+
     const lineUp = (grgoCategory?.items || []).map(item => ({
         id: item.name.toLowerCase().replace(/\s+/g, '_'),
         name: item.name,
