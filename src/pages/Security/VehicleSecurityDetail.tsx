@@ -1898,13 +1898,6 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                                 </div>
                                             ))}
                                         </div>
-
-                                        <button
-                                            onClick={() => navigate('/contact')}
-                                            className="w-full py-4 bg-[#0b1210] hover:bg-emerald-950 text-white font-black italic text-xs rounded-xl transition-all shadow-lg active:scale-95"
-                                        >
-                                            SELECT THIS PLAN & CONSULT
-                                        </button>
                                     </div>
                                 ))}
                             </div>
