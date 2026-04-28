@@ -1932,16 +1932,23 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                             </h4>
                                             <div className="text-[10px] text-slate-400 font-bold uppercase tracking-tighter italic">全プラン共通 標準装備</div>
                                         </div>
-                                        <div className="flex flex-wrap gap-x-6 gap-y-3">
-                                            {[
-                                                'ショックセンサ', 'ドアセンサ', 'トランクセンサ', 'イモビライザ', 'オリジナルLEDプレート',
-                                                'ステータスインジケーター', '2WAYアンサーバックリモコン', '暗証番号式バレースイッチ', 'ハイパワーサイレン', 'ハザードフラッシュ機能'
-                                            ].map((item, i) => (
-                                                <div key={i} className="flex items-center gap-2">
-                                                    <div className="w-1.5 h-1.5 rounded-full bg-white border-2 border-emerald-400 shadow-sm shrink-0" />
-                                                    <span className="text-[10px] md:text-xs font-black text-slate-600 tracking-tight leading-tight">{item}</span>
-                                                </div>
-                                            ))}
+                                        <div className="flex flex-col gap-4 flex-1">
+                                            <div className="flex flex-wrap gap-x-6 gap-y-3">
+                                                {[
+                                                    'ショックセンサ', 'ドアセンサ', 'トランクセンサ', 'イモビライザ', 'オリジナルLEDプレート',
+                                                    'ステータスインジケーター', '2WAYアンサーバックリモコン', '暗証番号式バレースイッチ', 'ハイパワーサイレン', 'ハザードフラッシュ機能'
+                                                ].map((item, i) => (
+                                                    <div key={i} className="flex items-center gap-2">
+                                                        <div className="w-1.5 h-1.5 rounded-full bg-white border-2 border-emerald-400 shadow-sm shrink-0" />
+                                                        <span className="text-[10px] md:text-xs font-black text-slate-600 tracking-tight leading-tight">{item}</span>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                            {(filteredPlans.some(p => p.grade.includes('5Vf II') || p.grade.includes('1V')) || currentVehicle.id === 'kcar-special' || currentVehicle.id === 'toyota-landcruiser-70') && (
+                                                <p className="text-[11px] md:text-xs font-bold text-rose-500">
+                                                    ※注釈: 「5Vf II」は1WAYリモコンモデルとなります。（2WAYアンサーバックリモコンは付属しません）
+                                                </p>
+                                            )}
                                         </div>
                                     </div>
                                 </div>
