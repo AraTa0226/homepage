@@ -1944,9 +1944,14 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                                     </div>
                                                 ))}
                                             </div>
-                                            {(filteredPlans.some(p => p.grade.includes('5Vf II') || p.grade.includes('1V')) || currentVehicle.id === 'kcar-special' || currentVehicle.id === 'toyota-landcruiser-70') && (
+                                            {(filteredPlans.some(p => p.grade.includes('5Vf II')) || currentVehicle.id === 'kcar-special' || currentVehicle.id === 'toyota-landcruiser-70') && (
                                                 <p className="text-[11px] md:text-xs font-bold text-rose-500">
                                                     ※注釈: 「5Vf II」は1WAYリモコンモデルとなります。（2WAYアンサーバックリモコンは付属しません）
+                                                </p>
+                                            )}
+                                            {(filteredPlans.some(p => p.grade.includes('1Vs II'))) && (
+                                                <p className="text-[11px] md:text-xs font-bold text-rose-500 mt-1">
+                                                    ※注釈: 「1Vs II」はリモコンが付属しない純正キー連動モデルとなります。
                                                 </p>
                                             )}
                                         </div>
