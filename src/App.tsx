@@ -41,6 +41,7 @@ const RadarPage = lazy(() => import('./pages/Security/RadarPage').then(m => ({ d
 const DigitalMirrorPage = lazy(() => import('./pages/Security/DigitalMirrorPage').then(m => ({ default: m.DigitalMirrorPage })));
 const OkizariboushiPage = lazy(() => import('./pages/Security/OkizariboushiPage').then(m => ({ default: m.OkizariboushiPage })));
 const MaintainPage = lazy(() => import('./pages/Security/MaintainPage').then(m => ({ default: m.MaintainPage })));
+const FAQPage = lazy(() => import('./pages/Home/FAQPage').then(m => ({ default: m.FAQPage })));
 
 
 const ReservationFormPage = lazy(() => import('./components/Form/ReservationFormPage').then(m => ({ default: m.ReservationFormPage })));
@@ -173,6 +174,7 @@ function AppContent() {
       'Clifford (クリフォード)': '/security/clifford',
       '送迎バス 置き去り防止支援装置': '/security/okizariboushi',
       'セキュリティー診断サービス': '/security/maintain',
+      'よくあるご質問 (FAQ)': '/faq',
       'CAMPit (キャンピット)': 'https://campit.jp/',
       'MobiRest (モビレスト)': 'https://campit.jp/'
     };
@@ -301,6 +303,7 @@ function AppContent() {
           <Route path="/security/clifford" element={<CliffordPage />} />
           <Route path="/security/okizariboushi" element={<OkizariboushiPage />} />
           <Route path="/security/maintain" element={<MaintainPage />} />
+          <Route path="/faq" element={<FAQPage />} />
           <Route path="/security/vehicle/:modelId" element={<VehicleSecurityDetail assets={assets} />} />
           <Route path="/partners" element={<PartnersListPage />} />
 
