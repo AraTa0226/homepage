@@ -730,7 +730,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '傾斜センサーを標準装備した最上位Grgo。スマクロ機能で、より今の時代にあったセキュリティーとして選ばれています。',
             price: '320,800',
             priceTax: '352,880',
-            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: true, algorithm: true, canguard: false },
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
             category: 'grgo'
         },
         {
@@ -741,7 +741,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '316,800',
             priceTax: '348,480',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: true, algorithm: true, canguard: true },
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: true },
             category: 'grgo'
         },
         {
@@ -836,7 +836,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '傾斜センサー含むZVT IIにスマートキー連動をプラス。毎日の使いやすさと安心を両立。',
             price: '294,364',
             priceTax: '323,800',
-            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: true, algorithm: true, canguard: false },
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
             category: 'grgo'
         },
         {
@@ -847,7 +847,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '295,273',
             priceTax: '324,800',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: true, algorithm: true, canguard: true },
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: true },
             category: 'grgo'
         },
         {
@@ -963,7 +963,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '219,800',
             priceTax: '241,780',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: true, algorithm: true, canguard: false },
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
             category: 'grgo'
         },
         {
@@ -973,7 +973,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'フルスペックGrgoにスマクロとボンネットセンサーを追加。強引な侵入やバッテリー切断も防ぐ、K-CAR最強のデジタル対策。',
             price: '264,600',
             priceTax: '291,060',
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: true, algorithm: true, canguard: false },
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
             category: 'grgo'
         },
         {
@@ -1049,7 +1049,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '248,800',
             priceTax: '273,680',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: true, algorithm: true, canguard: false },
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
             category: 'grgo'
         },
         {
@@ -1094,7 +1094,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'ジャッキアップを警告する傾斜センサーやトリプルセンサーを含む、スポーツカーに必須の検知能力を備えたモデル。',
             price: '268,800',
             priceTax: '295,680',
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: true, algorithm: true, canguard: false },
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
             category: 'grgo'
         },
         {
@@ -1105,7 +1105,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '309,800',
             priceTax: '340,780',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: true, algorithm: true, canguard: true },
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
             category: 'grgo'
         },
         {
@@ -1220,7 +1220,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '傾斜・トリプルセンサーを同梱した最上位Grgo。ジャッキアップやホイール盗難も逃さず検知。',
             price: '308,600',
             priceTax: '339,460',
-            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: true, algorithm: true, canguard: false },
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
             category: 'grgo'
         },
         {
@@ -1231,7 +1231,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '304,800',
             priceTax: '335,280',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: true, algorithm: true, canguard: true },
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: true },
             category: 'grgo'
         },
         {
@@ -1337,7 +1337,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '250,800',
             priceTax: '275,880',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: true, algorithm: true, canguard: false },
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
             category: 'grgo'
         },
         {
@@ -1347,7 +1347,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '最高位Grgoにスマキー連動を追加。利便性と鉄壁の防犯、さらにミラー連動の快適性を一台に。',
             price: '293,800',
             priceTax: '323,180',
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: true, algorithm: true, canguard: false },
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
             category: 'grgo'
         },
         {
