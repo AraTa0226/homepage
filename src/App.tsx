@@ -42,6 +42,7 @@ const DigitalMirrorPage = lazy(() => import('./pages/Security/DigitalMirrorPage'
 const OkizariboushiPage = lazy(() => import('./pages/Security/OkizariboushiPage').then(m => ({ default: m.OkizariboushiPage })));
 const MaintainPage = lazy(() => import('./pages/Security/MaintainPage').then(m => ({ default: m.MaintainPage })));
 const FAQPage = lazy(() => import('./pages/Home/FAQPage').then(m => ({ default: m.FAQPage })));
+const SecurityPartnersPage = lazy(() => import('./pages/Security/SecurityPartnersPage').then(m => ({ default: m.SecurityPartnersPage })));
 
 
 const ReservationFormPage = lazy(() => import('./components/Form/ReservationFormPage').then(m => ({ default: m.ReservationFormPage })));
@@ -304,6 +305,7 @@ function AppContent() {
           <Route path="/security/okizariboushi" element={<OkizariboushiPage />} />
           <Route path="/security/maintain" element={<MaintainPage />} />
           <Route path="/faq" element={<FAQPage />} />
+          <Route path="/security/partners" element={<SecurityPartnersPage />} />
           <Route path="/security/vehicle/:modelId" element={<VehicleSecurityDetail assets={assets} />} />
           <Route path="/partners" element={<PartnersListPage />} />
 

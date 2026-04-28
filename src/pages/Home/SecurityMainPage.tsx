@@ -9,6 +9,7 @@ import {
     Menu,
     Megaphone,
     ArrowUpRight,
+    ArrowRight,
     Search,
     Speaker,
     Youtube,
@@ -684,13 +685,7 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                         {[
                             { name: "アーマテック株式会社", brand: "CLIFFORD", url: "http://clifford.co.jp/" },
                             { name: "加藤電機株式会社", brand: "VIPER", url: "https://kato-denki.com/" },
-                            { name: "CAN plus", brand: "アンパイア", url: "http://www.ampire.jp/" },
-                            { name: "クラフトマン", brand: "LOCK音", url: "http://lockon.to/" },
-                            { name: "株式会社ユピテル", brand: "GRGO/パンテーラ/レーダー/ドラレコ", url: "http://www.yupiteru.co.jp/" },
-                            { name: "シーバスリンク", brand: "HID / ライティング", url: "http://www.seabass-link.co.jp/" },
-                            { name: "SMART DIVISION", brand: "HID", url: "http://minkara.carview.co.jp/userid/560861/profile/" },
-                            { name: "BELLOF", brand: "HID / LED", url: "http://www.bellof.co.jp/" },
-                            { name: "クラッツィオ", brand: "シートカバー", url: "http://www.11i.co.jp/" }
+                            { name: "株式会社ユピテル", brand: "GRGO / Panthera", url: "http://www.yupiteru.co.jp/" }
                         ].map((partner, idx) => (
                             <motion.a
                                 key={idx}
@@ -715,10 +710,19 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                         ))}
                     </div>
 
+                    <div className="flex justify-center mb-24">
+                        <button
+                            onClick={() => navigate('/security/partners')}
+                            className="group px-10 py-5 bg-white border border-slate-200 rounded-2xl font-black italic text-sm tracking-widest text-slate-900 hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all flex items-center gap-4 shadow-xl shadow-slate-200/50"
+                        >
+                            すべてのパートナーを見る <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </button>
+                    </div>
+
                     <div className="bg-gray-900 rounded-[3rem] p-10 md:p-16 relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl -mr-48 -mt-48"></div>
                         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
-                            <div className="max-w-md">
+                            <div className="max-w-md text-center md:text-left">
                                 <h3 className="text-3xl font-black text-white mb-4 tracking-tighter italic uppercase">TECHNICAL PARTNERS</h3>
                                 <p className="text-emerald-500 font-bold text-xs uppercase tracking-widest mb-4">技術提携パートナー</p>
                                 <p className="text-gray-400 font-bold text-sm">スペアキー作製からカーフィルム施工まで、愛車のトータルケアをサポートする専門パートナーです。</p>
