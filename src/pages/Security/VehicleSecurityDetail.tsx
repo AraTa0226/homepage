@@ -1012,50 +1012,50 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
     // ジムニー（JB64/JB74/JC74）専用設定データ
     const jimnyPlans = [
         {
-            id: 'jimny-grgo-sm连',
+            id: 'jimny-grgo-1vs',
             brand: 'Grgo',
-            grade: 'スマートキー連動モデル',
+            grade: '1Vs II',
             description: '操作性に優れたスマートキー連動モデル。純正キーの施錠・解錠に連動して警備を開始でき、初めての方でも安心。',
             price: '142,800',
             priceTax: '157,080',
-            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
             category: 'grgo'
         },
         {
-            id: 'jimny-grgo-1way',
+            id: 'jimny-grgo-5vf',
             brand: 'Grgo',
-            grade: '1WAYリモコン付属モデル',
+            grade: '5Vf II',
             description: '薄型1WAYリモコンが付属。状況に応じた設定変更がしやすく、サブのリモコンとしても重宝します。',
             price: '180,800',
             priceTax: '198,880',
-            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: false, canguard: false },
+            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
             category: 'grgo'
         },
         {
-            id: 'jimny-grgo-2way',
+            id: 'jimny-grgo-zv',
             brand: 'Grgo',
-            grade: 'アンサーバックリモコン搭載モデル',
+            grade: 'ZV II',
             description: '2WAYアンサーバックリモコンにより、離れた場所からでも車両の異常をリアルタイムで把握可能。',
             price: '198,800',
             priceTax: '218,680',
-            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
             category: 'grgo'
         },
         {
             id: 'jimny-grgo-zvt',
             brand: 'Grgo',
-            grade: 'Grgo-ZVT II',
+            grade: 'ZVT II',
             description: '傾斜センサーとトリプルセンサーを標準装備。ジャッキアップや車体への衝撃を確実にキャッチする上位モデル。',
             price: '248,800',
             priceTax: '273,680',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
             category: 'grgo'
         },
         {
             id: 'jimny-panthera-z106',
             brand: 'Panthera',
-            grade: 'Panthera-Z106',
+            grade: 'Z106',
             description: 'パンテーラの高精度な検知能力をジムニーに。将来的なセンサー追加にも柔軟に対応できるベースモデル。',
             price: '268,800',
             priceTax: '295,680',
@@ -1065,7 +1065,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'jimny-panthera-z306',
             brand: 'Panthera',
-            grade: 'Panthera-Z306',
+            grade: 'Z306',
             description: 'トリプルセンサーと傾斜センサーが同梱。ジムニーの人気カスタムパーツであるタイヤ・ホイールも死角なくガード。',
             price: '318,800',
             priceTax: '350,680',
@@ -1076,7 +1076,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'jimny-panthera-z706',
             brand: 'Panthera',
-            grade: 'Panthera-Z706',
+            grade: 'Z706',
             description: 'すべてのセンサーを網羅した最高峰フルスペックモデル。ジムニーを愛するオーナー様のための究極の守り。',
             price: '408,800',
             priceTax: '449,680',
