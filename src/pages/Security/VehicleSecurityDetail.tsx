@@ -979,32 +979,32 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'kcar-panthera-z106',
             brand: 'Panthera',
-            grade: 'Z106',
-            description: 'パンテーラの緻密な警備。ハイエンドブランドの安心を。',
+            grade: 'Z106 ＋ スマキー連動/スマクロ',
+            description: 'パンテーラの緻密な警備。スマクロ対応により、純正キーの快適さを維持しながらハイエンドブランドの安心を。',
             price: '293,800',
             priceTax: '323,180',
-            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: false, canguard: false },
+            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
             category: 'パンテーラ'
         },
         {
             id: 'kcar-panthera-z306',
             brand: 'Panthera',
-            grade: 'Z306',
-            description: '人気センサーを網羅したZ306。ホイール盗難からイタズラまで、全方位で車両を監視。',
+            grade: 'Z306 ＋ スマキー連動/スマクロ',
+            description: '人気センサーを網羅したZ306にスマクロを追加。ホイール盗難からイタズラまで、全方位で車両を監視。',
             price: '315,800',
             priceTax: '347,380',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: false, canguard: false },
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
             category: 'パンテーラ'
         },
         {
             id: 'kcar-panthera-z706',
             brand: 'Panthera',
-            grade: 'Z706',
+            grade: 'Z706 ＋ スマキー連動/スマクロ',
             description: '全センサー解放。マイクロ波による接近検知やバックアップサイレンまで備えた、K-CARの防犯を極めるための頂点プラン。',
             price: '395,800',
             priceTax: '435,380',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: false, canguard: false },
+            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: false },
             category: 'パンテーラ'
         }
     ];
