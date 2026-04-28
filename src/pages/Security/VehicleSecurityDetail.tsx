@@ -1174,13 +1174,13 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
     // プリウス（60系）専用設定データ
     const prius60Plans = [
         {
-            id: 'prius-grgo-keyless',
+            id: 'prius-grgo-1vs',
             brand: 'Grgo',
-            grade: '純正キーレス連動モデル ＋ ANGプレート',
+            grade: '1Vs II ＋ ANGプレート',
             description: 'スマートキーに完全連動。リモコンを追加せず、純正の使い勝手そのままに警備を開始できるベーシックセット。',
             price: '191,055',
             priceTax: '210,160',
-            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
             category: 'grgo'
         },
         {
@@ -1190,48 +1190,48 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '薄型1WAYリモコンモデル。オプション追加でスマートキー連動も可能（別途費用）。スマートな運用を求める方に。',
             price: '205,600',
             priceTax: '226,160',
-            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: false, canguard: false },
+            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
             category: 'grgo'
         },
         {
             id: 'prius-grgo-zv-smaclo',
             brand: 'Grgo',
-            grade: 'ZV II ＋ スマクロ ＋ LEDプレート',
+            grade: 'ZV II ＋ スマキー連動/スマクロ ＋ LEDプレート',
             description: 'ZV IIにスマクロ機能を追加。CANインベーダーやリレーアタックに対抗する最新のデジタルセキュリティ。',
             price: '258,600',
             priceTax: '284,460',
-            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
             category: 'grgo'
         },
         {
             id: 'prius-grgo-zv-canguard',
             brand: 'Grgo',
-            grade: 'ZV II ＋ CANガード ＋ スマ連',
+            grade: 'ZV II ＋ CANガード',
             description: '物理的なCANガードを組み合わせた、より強固なパッケージ。デジタル・アナログ両面でプリウスを守ります。',
             price: '254,800',
             priceTax: '280,280',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: true },
             category: 'grgo'
         },
         {
             id: 'prius-grgo-zvt-smaclo',
             brand: 'Grgo',
-            grade: 'ZVT II ＋ スマクロ',
+            grade: 'ZVT II ＋ スマキー連動/スマクロ',
             description: '傾斜・トリプルセンサーを同梱した最上位Grgo。ジャッキアップやホイール盗難も逃さず検知。',
             price: '308,600',
             priceTax: '339,460',
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: true, algorithm: true, canguard: false },
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: true, algorithm: true, canguard: false },
             category: 'grgo'
         },
         {
             id: 'prius-grgo-zvt-canguard',
             brand: 'Grgo',
-            grade: 'ZVT II ＋ CANガード ＋ スマ連',
+            grade: 'ZVT II ＋ CANガード',
             description: 'ZVT IIの高度な検知に、物理CANガードを統合。プリウスに求められる全ての防犯性能を凝縮。',
             price: '304,800',
             priceTax: '335,280',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: true, algorithm: true, canguard: true },
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: true, algorithm: true, canguard: true },
             category: 'grgo'
         },
         {
@@ -1247,7 +1247,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'prius-panthera-z106-smaclo',
             brand: 'Panthera',
-            grade: 'Z106 ＋ スマクロ',
+            grade: 'Z106 ＋ スマキー連動/スマクロ',
             description: 'Z106にスマクロ機能を追加。スマートキーの利便性を保ちつつ、パンテーラの鉄壁なバリアを実現。',
             price: '328,600',
             priceTax: '361,460',
@@ -1267,7 +1267,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'prius-panthera-z306-smaclo',
             brand: 'Panthera',
-            grade: 'Z306 ＋ スマクロ',
+            grade: 'Z306 ＋ スマキー連動/スマクロ',
             description: '全センサーを搭載した人気モデルにスマクロを追加。ホイール盗難からインベーダーまで完全網羅。',
             price: '378,600',
             priceTax: '416,460',
@@ -1282,7 +1282,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '374,800',
             priceTax: '412,280',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
             category: 'パンテーラ'
         },
         {
