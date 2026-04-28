@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin
 Disallow: /staff
 
-Sitemap: https://www.soundang.com/sitemap.xml
+Sitemap: http://www.sec-ang.com/sitemap.xml
