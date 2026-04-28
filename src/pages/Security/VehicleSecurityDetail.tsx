@@ -260,7 +260,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'lc70-grgo-5vf',
             brand: 'Grgo',
             grade: '5Vf II ＋ トリプル',
-            description: '1WAYリモコンモデルにトリプルセンサーを追加。アドブルーリッド対策も対応可。',
+            description: '1WAYリモコンのみ付属のモデル。トリプルセンサーを追加し検知を強化。アドブルーリッド対策も対応可。',
             price: '225,800',
             priceTax: '248,380',
             features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
