@@ -1322,7 +1322,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'hiace-grgo-zv-smart',
             brand: 'Grgo',
-            grade: 'ZV II ＋ スマキー連動 ＋ トリプル ＋ ミラー連動',
+            grade: 'ZV II ＋ スマキー連動/スマクロ ＋ トリプル ＋ ミラー連動',
             description: '最新の窃盗手口に対抗するスマキー連動機能を搭載。アンサーバックで車両状態も手元で把握可能。',
             price: '246,800',
             priceTax: '271,480',
@@ -1343,7 +1343,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'hiace-grgo-zvt-smart',
             brand: 'Grgo',
-            grade: 'ZVT II ＋ スマキー連動 ＋ ミラー連動',
+            grade: 'ZVT II ＋ スマキー連動/スマクロ ＋ ミラー連動',
             description: '最高位Grgoにスマキー連動を追加。利便性と鉄壁の防犯、さらにミラー連動の快適性を一台に。',
             price: '293,800',
             priceTax: '323,180',
@@ -1363,7 +1363,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'hiace-panthera-z106-smart',
             brand: 'Panthera',
-            grade: 'Z106 ＋ スマキー連動 ＋ トリプル ＋ ミラー連動',
+            grade: 'Z106 ＋ スマキー連動/スマクロ ＋ トリプル ＋ ミラー連動',
             description: 'Z106にスマキー連動を追加。純正スマートキーを使いながら、パンテーラの鉄壁バリアを構築。',
             price: '316,800',
             priceTax: '348,480',
@@ -1384,7 +1384,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'hiace-panthera-z306-smart',
             brand: 'Panthera',
-            grade: 'Z306 ＋ スマキー連動 ＋ ミラー連動',
+            grade: 'Z306 ＋ スマキー連動/スマクロ ＋ ミラー連動',
             description: 'Z306の多機能検知にスマキー連動の便利さをプラス。最新のインベーダー対策も網羅したハイエンドプラン。',
             price: '343,800',
             priceTax: '378,180',
