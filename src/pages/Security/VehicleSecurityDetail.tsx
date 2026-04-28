@@ -1398,8 +1398,8 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'crown-grgo-zv',
             brand: 'Grgo',
-            grade: 'ZV II ＋ スマート連動 ＋ CANガード ＋ ボンネット',
-            description: '最新のクラウンシリーズに最適。物理CANガードとスマートキー連動を組み合わせ、利便性と防犯を両立。',
+            grade: 'ZV II ＋ CANガード ＋ ボンネット',
+            description: '最新のクラウンシリーズに最適。物理CANガードと最新システムを組み合わせ、利便性と防犯を両立。',
             price: '314,600',
             priceTax: '346,060',
             features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
@@ -1408,7 +1408,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'crown-grgo-zvt',
             brand: 'Grgo',
-            grade: 'ZVT II ＋ スマート連動 ＋ CANガード ＋ ボンネット',
+            grade: 'ZVT II ＋ CANガード ＋ ボンネット',
             description: '傾斜センサーと1WAYリモコンを標準装備。ジャッキアップやレッカー移動にも対応する多重防御プラン。',
             price: '336,600',
             priceTax: '370,260',
@@ -1419,7 +1419,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'crown-panthera-z106-canguard',
             brand: 'Panthera',
-            grade: 'Z106 ＋ スマート連動 ＋ CANガード ＋ トリプル',
+            grade: 'Z106 ＋ CANガード ＋ トリプル',
             description: '最高品質パンテーラをクラウンに施工。CANインベーダー対策とトリプルセンサーで予兆を確実に検知。',
             price: '374,800',
             priceTax: '412,280',
@@ -1439,7 +1439,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'crown-panthera-z306-canguard',
             brand: 'Panthera',
-            grade: 'Z306 ＋ スマート連動 ＋ CANガード',
+            grade: 'Z306 ＋ CANガード',
             description: '傾斜センサー標準装備の人気モデル。クラウンのあらゆる弱点を補い、誤作動を排した高度な警備を実現。',
             price: '396,800',
             priceTax: '436,480',
@@ -1460,7 +1460,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'crown-panthera-z706-canguard',
             brand: 'Panthera',
-            grade: 'Z706 ＋ スマート連動 ＋ CANガード',
+            grade: 'Z706 ＋ CANガード',
             description: '全センサー＋バックアップサイレン仕様のパンテーラ最上位。クラウンを守り抜く究極の回答。',
             price: '486,800',
             priceTax: '535,480',
