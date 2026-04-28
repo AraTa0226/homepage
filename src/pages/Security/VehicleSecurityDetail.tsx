@@ -138,7 +138,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'rx-panthera-z306-standard',
             brand: 'Panthera',
-            grade: 'Z306 Standard',
+            grade: 'Z306',
             description: '基本的な車両監視を網羅。後からオプション追加も可能です。',
             price: '360,800',
             priceTax: '396,880',
@@ -214,7 +214,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'nx-panthera-z306-standard',
             brand: 'Panthera',
-            grade: 'Z306 Standard',
+            grade: 'Z306',
             description: '充実のセンサー構成。車両の安全をバランスよく監視します。',
             price: '360,800',
             priceTax: '396,880',
@@ -300,7 +300,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lc70-panthera-z306',
             brand: 'Panthera',
-            grade: 'Z306 Standard',
+            grade: 'Z306',
             description: '人気の傾斜センサーを標準装備。70の盗難・レッカー被害を徹底阻止。',
             price: '335,800',
             priceTax: '369,380',
