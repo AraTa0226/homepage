@@ -43,6 +43,7 @@ const OkizariboushiPage = lazy(() => import('./pages/Security/OkizariboushiPage'
 const MaintainPage = lazy(() => import('./pages/Security/MaintainPage').then(m => ({ default: m.MaintainPage })));
 const FAQPage = lazy(() => import('./pages/Home/FAQPage').then(m => ({ default: m.FAQPage })));
 const SecurityPartnersPage = lazy(() => import('./pages/Security/SecurityPartnersPage').then(m => ({ default: m.SecurityPartnersPage })));
+const SecuritySitemapPage = lazy(() => import('./pages/Security/SecuritySitemapPage').then(m => ({ default: m.SecuritySitemapPage })));
 
 
 const ReservationFormPage = lazy(() => import('./components/Form/ReservationFormPage').then(m => ({ default: m.ReservationFormPage })));
@@ -56,6 +57,53 @@ export interface BlogPost {
   link: string;
   image?: string;
 }
+
+const LegacyRedirect = () => {
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const redirects: Record<string, string> = {
+      '/index.html': '/security-home',
+      '/security.html': '/security-home',
+      '/maintain.html': '/security/maintain',
+      '/rader-drrec.html': '/security/drive_recorder',
+      '/shop.html': '/security-home',
+      '/contactus.html': '/reservation',
+      '/link.html': '/security/partners',
+      '/reservation.html': '/reservation',
+      '/sec-sample.html': '/security-home',
+      '/silent-sec.html': '/security-home',
+      '/civicfl5-security.html': '/security/vehicle/honda-civic-typer',
+      '/harrier-security.html': '/security/vehicle/toyota-harrier',
+      '/prius-security.html': '/security/vehicle/toyota-prius',
+      '/arver-security.html': '/security/vehicle/toyota-alphard-vellfire',
+      '/hiace-security.html': '/security/vehicle/toyota-hiace',
+      '/keicar-security.html': '/security/vehicle/kcar-special',
+      '/landcruiser300-security.html': '/security/vehicle/toyota-landcruiser-300',
+      '/landcruiser70-security.html': '/security/vehicle/toyota-landcruiser-70',
+      '/landcruiser-security.html': '/security/vehicle/toyota-landcruiser-prado-150-200',
+      '/landcruiser250-security.html': '/security/vehicle/toyota-landcruiser-250',
+      '/LX600-security.html': '/security/vehicle/lexus-lx',
+      '/RX-security.html': '/security/vehicle/lexus-rx',
+      '/NX-security.html': '/security/vehicle/lexus-nx',
+      '/jimny-security.html': '/security/vehicle/suzuki-jimny',
+      '/okizariboushi.html': '/security/okizariboushi',
+      '/okizari-k.html': '/security/okizariboushi',
+      '/okizari-p.html': '/security/okizariboushi',
+      '/camp-eventINFO.html': '/security-home'
+    };
+
+    const cleanPath = pathname.endsWith('/') ? pathname.slice(0, -1) : pathname;
+    const target = redirects[cleanPath] || redirects[pathname];
+
+    if (target) {
+      navigate(target, { replace: true });
+    }
+  }, [pathname, navigate]);
+
+  return null;
+};
 
 export default function App() {
   return (
@@ -239,6 +287,7 @@ function AppContent() {
 
   return (
     <div className="min-h-screen bg-white">
+      <LegacyRedirect />
       <Suspense fallback={
         <div className="fixed inset-0 bg-white flex items-center justify-center z-[9999]">
           <motion.div
@@ -306,6 +355,7 @@ function AppContent() {
           <Route path="/security/maintain" element={<MaintainPage />} />
           <Route path="/faq" element={<FAQPage />} />
           <Route path="/security/partners" element={<SecurityPartnersPage />} />
+          <Route path="/security/sitemap" element={<SecuritySitemapPage />} />
           <Route path="/security/vehicle/:modelId" element={<VehicleSecurityDetail assets={assets} />} />
           <Route path="/partners" element={<PartnersListPage />} />
 
