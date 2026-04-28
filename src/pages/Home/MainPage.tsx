@@ -723,15 +723,15 @@ export const MainPage: React.FC<MainPageProps> = ({
                         </div>
 
                         <div>
-                            <h4 className="text-white font-black text-xs tracking-widest uppercase mb-8">Quick Links</h4>
+                            <h4 className="text-white font-black text-xs tracking-widest uppercase mb-8">Quick Navigation</h4>
                             <ul className="space-y-4 text-sm font-bold">
                                 <li><a href="#" className="hover:text-blue-500 transition-colors">Home</a></li>
                                 <li><a href="#blog" className="hover:text-white transition-colors">BLOG</a></li>
-                                <li><a href="#blog" className="hover:text-white transition-colors">Event Archive</a></li>
+
                                 <li><a href="#blog" className="hover:text-white transition-colors">Latest News</a></li>
                                 <li><a href="#services" className="hover:text-white transition-colors">Audio Menu</a></li>
                                 <li><a href="#options" className="hover:text-white transition-colors">Audition Room</a></li>
-                                <li><button onClick={() => navigate('/reservation')} className="text-blue-500 hover:underline">Reservation Center</button></li>
+                                <li><button onClick={() => navigate('/reservation')} className="text-blue-500 hover:underline">ご来店・ご相談予約</button></li>
                             </ul>
                         </div>
 

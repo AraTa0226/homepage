@@ -380,7 +380,7 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
             <section className="relative pt-20 h-screen min-h-[700px] flex items-center">
                 <div className="absolute inset-0 overflow-hidden">
                     <SafeImage
-                        src={assets.securityMenuImage}
+                        src="/images/Top/tenpo2.webp"
                         alt="Security Guard Image"
                         className="w-full h-full object-cover"
                         loading="eager"
@@ -474,8 +474,8 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                 </p>
                                 <div className="relative rounded-[2.5rem] overflow-hidden border border-white/10 group aspect-square lg:aspect-auto lg:h-[400px]">
                                     <SafeImage
-                                        src={assets.pitImage}
-                                        alt="Professional Installation"
+                                        src="/images/Security/snapon.webp"
+                                        alt="Professional Installation Tools"
                                         className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
@@ -856,8 +856,9 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                 <li><a href="#" className="hover:text-emerald-500 transition-colors">Top</a></li>
                                 <li><a href="#services" className="hover:text-white transition-colors">Menu</a></li>
                                 <li><a href="#access" className="hover:text-white transition-colors">Shop Access</a></li>
+                                <li><a href="#" className="hover:text-white transition-colors">Latest News</a></li>
                                 <li><a href="https://www.soundang.com/webbrog/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Blog</a></li>
-                                <li><button onClick={() => navigate('/reservation')} className="text-emerald-500 hover:underline">Consultation Booking</button></li>
+                                <li><button onClick={() => navigate('/reservation')} className="text-emerald-500 hover:underline">ご来店・ご相談予約</button></li>
                             </ul>
                         </div>
 
