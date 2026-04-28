@@ -2150,7 +2150,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                 </p>
                             </div>
                             <button
-                                onClick={() => navigate('/contact')}
+                                onClick={() => navigate('/reservation')}
                                 className="px-10 py-5 bg-white text-[#0b1210] font-black italic rounded-2xl transition-all hover:bg-emerald-500 hover:text-white active:scale-95 shadow-xl shadow-black/40"
                             >
                                 プランの相談を予約する
