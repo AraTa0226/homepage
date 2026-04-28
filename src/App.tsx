@@ -58,53 +58,6 @@ export interface BlogPost {
   image?: string;
 }
 
-const LegacyRedirect = () => {
-  const { pathname } = useLocation();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const redirects: Record<string, string> = {
-      '/index.html': '/security-home',
-      '/security.html': '/security-home',
-      '/maintain.html': '/security/maintain',
-      '/rader-drrec.html': '/security/drive_recorder',
-      '/shop.html': '/security-home',
-      '/contactus.html': '/reservation',
-      '/link.html': '/security/partners',
-      '/reservation.html': '/reservation',
-      '/sec-sample.html': '/security-home',
-      '/silent-sec.html': '/security-home',
-      '/civicfl5-security.html': '/security/vehicle/honda-civic-typer',
-      '/harrier-security.html': '/security/vehicle/toyota-harrier',
-      '/prius-security.html': '/security/vehicle/toyota-prius',
-      '/arver-security.html': '/security/vehicle/toyota-alphard-vellfire',
-      '/hiace-security.html': '/security/vehicle/toyota-hiace',
-      '/keicar-security.html': '/security/vehicle/kcar-special',
-      '/landcruiser300-security.html': '/security/vehicle/toyota-landcruiser-300',
-      '/landcruiser70-security.html': '/security/vehicle/toyota-landcruiser-70',
-      '/landcruiser-security.html': '/security/vehicle/toyota-landcruiser-prado-150-200',
-      '/landcruiser250-security.html': '/security/vehicle/toyota-landcruiser-250',
-      '/LX600-security.html': '/security/vehicle/lexus-lx',
-      '/RX-security.html': '/security/vehicle/lexus-rx',
-      '/NX-security.html': '/security/vehicle/lexus-nx',
-      '/jimny-security.html': '/security/vehicle/suzuki-jimny',
-      '/okizariboushi.html': '/security/okizariboushi',
-      '/okizari-k.html': '/security/okizariboushi',
-      '/okizari-p.html': '/security/okizariboushi',
-      '/camp-eventINFO.html': '/security-home'
-    };
-
-    const cleanPath = pathname.endsWith('/') ? pathname.slice(0, -1) : pathname;
-    const target = redirects[cleanPath] || redirects[pathname];
-
-    if (target) {
-      navigate(target, { replace: true });
-    }
-  }, [pathname, navigate]);
-
-  return null;
-};
-
 export default function App() {
   return (
     <BrowserRouter>
@@ -287,7 +240,6 @@ function AppContent() {
 
   return (
     <div className="min-h-screen bg-white">
-      <LegacyRedirect />
       <Suspense fallback={
         <div className="fixed inset-0 bg-white flex items-center justify-center z-[9999]">
           <motion.div
@@ -358,6 +310,39 @@ function AppContent() {
           <Route path="/security/sitemap" element={<SecuritySitemapPage />} />
           <Route path="/security/vehicle/:modelId" element={<VehicleSecurityDetail assets={assets} />} />
           <Route path="/partners" element={<PartnersListPage />} />
+
+          {/* Legacy .html Redirects */}
+          <Route path="/index.html" element={<Navigate to="/security-home" replace />} />
+          <Route path="/security.html" element={<Navigate to="/security-home" replace />} />
+          <Route path="/maintain.html" element={<Navigate to="/security/maintain" replace />} />
+          <Route path="/rader-drrec.html" element={<Navigate to="/security/drive_recorder" replace />} />
+          <Route path="/shop.html" element={<Navigate to="/security-home" replace />} />
+          <Route path="/contactus.html" element={<Navigate to="/reservation" replace />} />
+          <Route path="/link.html" element={<Navigate to="/security/partners" replace />} />
+          <Route path="/reservation.html" element={<Navigate to="/reservation" replace />} />
+          <Route path="/sec-sample.html" element={<Navigate to="/security-home" replace />} />
+          <Route path="/silent-sec.html" element={<Navigate to="/security-home" replace />} />
+          <Route path="/civicfl5-security.html" element={<Navigate to="/security/vehicle/honda-civic-typer" replace />} />
+          <Route path="/harrier-security.html" element={<Navigate to="/security/vehicle/toyota-harrier" replace />} />
+          <Route path="/prius-security.html" element={<Navigate to="/security/vehicle/toyota-prius" replace />} />
+          <Route path="/arver-security.html" element={<Navigate to="/security/vehicle/toyota-alphard-vellfire" replace />} />
+          <Route path="/hiace-security.html" element={<Navigate to="/security/vehicle/toyota-hiace" replace />} />
+          <Route path="/keicar-security.html" element={<Navigate to="/security/vehicle/kcar-special" replace />} />
+          <Route path="/landcruiser300-security.html" element={<Navigate to="/security/vehicle/toyota-landcruiser-300" replace />} />
+          <Route path="/landcruiser70-security.html" element={<Navigate to="/security/vehicle/toyota-landcruiser-70" replace />} />
+          <Route path="/landcruiser-security.html" element={<Navigate to="/security/vehicle/toyota-landcruiser-prado-150-200" replace />} />
+          <Route path="/landcruiser250-security.html" element={<Navigate to="/security/vehicle/toyota-landcruiser-250" replace />} />
+          <Route path="/LX600-security.html" element={<Navigate to="/security/vehicle/lexus-lx" replace />} />
+          <Route path="/lx600-security.html" element={<Navigate to="/security/vehicle/lexus-lx" replace />} />
+          <Route path="/RX-security.html" element={<Navigate to="/security/vehicle/lexus-rx" replace />} />
+          <Route path="/rx-security.html" element={<Navigate to="/security/vehicle/lexus-rx" replace />} />
+          <Route path="/NX-security.html" element={<Navigate to="/security/vehicle/lexus-nx" replace />} />
+          <Route path="/nx-security.html" element={<Navigate to="/security/vehicle/lexus-nx" replace />} />
+          <Route path="/jimny-security.html" element={<Navigate to="/security/vehicle/suzuki-jimny" replace />} />
+          <Route path="/okizariboushi.html" element={<Navigate to="/security/okizariboushi" replace />} />
+          <Route path="/okizari-k.html" element={<Navigate to="/security/okizariboushi" replace />} />
+          <Route path="/okizari-p.html" element={<Navigate to="/security/okizariboushi" replace />} />
+          <Route path="/camp-eventINFO.html" element={<Navigate to="/security-home" replace />} />
 
           <Route path="/reservation" element={<ReservationFormPage onBack={() => navigate('/')} />} />
           <Route path="/legal" element={<LegalInfoPage onBack={() => navigate('/')} />} />
