@@ -456,7 +456,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lbx-grgo-zv',
             brand: 'Grgo',
-            grade: 'ZV II ＋ CANガード ＋ ボンネット',
+            grade: 'ZV II ＋ CANガード',
             description: 'LBX必須のボンネットセンサーとCANガードを含む基本パッケージ。',
             price: '302,800',
             priceTax: '333,080',
@@ -466,7 +466,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lbx-grgo-zvt',
             brand: 'Grgo',
-            grade: 'ZVT II ＋ CANガード ＋ ボンネット',
+            grade: 'ZVT II ＋ CANガード',
             description: '感度良好な傾斜センサーを搭載。LBXに最高水準の守りを。',
             price: '334,600',
             priceTax: '368,060',
@@ -522,7 +522,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lc250-grgo-zv',
             brand: 'Grgo',
-            grade: 'ZV II ＋ CANガード ＋ トリプル ＋ ボンネット',
+            grade: 'ZV II ＋ CANガード ＋ トリプル',
             description: '新型250に必須のボンネット保護とCANガードを融合。',
             price: '314,600',
             priceTax: '346,060',
@@ -532,7 +532,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lc250-grgo-zvt',
             brand: 'Grgo',
-            grade: 'ZVT II ＋ CANガード ＋ ボンネット',
+            grade: 'ZVT II ＋ CANガード',
             description: '傾斜センサーと1WAYリモコン付属。多重防御のANG推奨プラン。',
             price: '336,600',
             priceTax: '370,260',
@@ -543,7 +543,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lc250-panthera-z106',
             brand: 'Panthera',
-            grade: 'Z106 ＋ CANガード ＋ トリプル ＋ ボンネット',
+            grade: 'Z106 ＋ CANガード ＋ トリプル',
             description: 'パンテーラの緻密な感度調整で、新型250を誤報なく守る。',
             price: '374,800',
             priceTax: '412,280',
@@ -553,7 +553,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lc250-panthera-z106-microwave',
             brand: 'Panthera',
-            grade: 'Z106 ＋ CANガード ＋ トリプル ＋ ボンネット ＋ マイクロ波',
+            grade: 'Z106 ＋ CANガード ＋ トリプル ＋ マイクロ波',
             description: '接近検知のマイクロ波を追加。不審なうろつきを未然に排除。',
             price: '426,800',
             priceTax: '469,480',
@@ -563,7 +563,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lc250-panthera-z306',
             brand: 'Panthera',
-            grade: 'Z306 ＋ CANガード ＋ ボンネット',
+            grade: 'Z306 ＋ CANガード',
             description: '全センサー構成のZ306に最先端のデジタル対策を統合。',
             price: '396,800',
             priceTax: '436,480',
@@ -573,7 +573,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lc250-panthera-z306-microwave',
             brand: 'Panthera',
-            grade: 'Z306 ＋ CANガード ＋ ボンネット ＋ マイクロ波',
+            grade: 'Z306 ＋ CANガード ＋ マイクロ波',
             description: 'センサー満載のフルガード。250の安全をあらゆる角度から監視。',
             price: '448,800',
             priceTax: '493,680',
@@ -583,7 +583,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lc250-panthera-z706-full',
             brand: 'Panthera',
-            grade: 'Z706 ＋ CANガード ＋ ボンネット',
+            grade: 'Z706 ＋ CANガード',
             description: '全センサー＋バックアップサイレン。250を守り抜く究極の回答。',
             price: '486,800',
             priceTax: '535,480',
@@ -600,7 +600,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lc150-grgo-zv-canguard',
             brand: 'Grgo',
-            grade: 'ZV II ＋ CANガード ＋ トリプル ＋ ボンネット',
+            grade: 'ZV II ＋ CANガード ＋ トリプル',
             description: '信頼のZV IIにCANインベーダー対策ユニットを物理追加した鉄壁プラン。',
             price: '314,600',
             priceTax: '346,060',
@@ -610,7 +610,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lc150-grgo-zvt-canguard',
             brand: 'Grgo',
-            grade: 'ZVT II ＋ CANガード ＋ ボンネット',
+            grade: 'ZVT II ＋ CANガード',
             description: '傾斜センサー含むフルセンサー構成にCANガードを統合した最良バランスの一台。',
             price: '336,600',
             priceTax: '370,260',
@@ -621,7 +621,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lc150-panthera-z106-canguard',
             brand: 'Panthera',
-            grade: 'Z106 ＋ CANガード ＋ トリプル ＋ ボンネット',
+            grade: 'Z106 ＋ CANガード ＋ トリプル',
             description: 'パンテーラに独自のCANガードを施工。デジタルとアナログの高度な融合。',
             price: '374,800',
             priceTax: '412,280',
@@ -631,7 +631,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lc150-panthera-z306-canguard',
             brand: 'Panthera',
-            grade: 'Z306 ＋ CANガード ＋ ボンネット',
+            grade: 'Z306 ＋ CANガード',
             description: '不動の人気Z306にCANガードをプラス。圧倒的な防犯性能と安心を提供。',
             price: '396,800',
             priceTax: '436,480',
@@ -641,7 +641,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lc150-panthera-z706-canguard',
             brand: 'Panthera',
-            grade: 'Z706 ＋ CANガード ＋ ボンネット',
+            grade: 'Z706 ＋ CANガード',
             description: 'ANG最強の組み合わせ。バックアップサイレン、全センサー、物理CAN対策の集大成。',
             price: '486,800',
             priceTax: '535,480',
@@ -1373,7 +1373,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lc300-grgo-zv',
             brand: 'Grgo',
-            grade: 'ZV II ＋ CANガード ＋ トリプル ＋ ボンネット',
+            grade: 'ZV II ＋ CANガード ＋ トリプル',
             description: '最も狙われる300必須のアナログ防御と電子対策をパッケージ。',
             price: '314,600',
             priceTax: '346,060',
@@ -1383,7 +1383,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lc300-grgo-zvt',
             brand: 'Grgo',
-            grade: 'ZVT II ＋ CANガード ＋ ボンネット',
+            grade: 'ZVT II ＋ CANガード',
             description: '高精度な傾斜センサーが、300のパーツ盗難やレッカーを阻止。',
             price: '336,600',
             priceTax: '370,260',
@@ -1394,7 +1394,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lc300-grgo-zvt-microwave',
             brand: 'Grgo',
-            grade: 'ZVT II ＋ CANガード ＋ ボンネット ＋ マイクロ波',
+            grade: 'ZVT II ＋ CANガード ＋ マイクロ波',
             description: '車外への接近検知を追加。300への干渉を未然に威嚇。',
             price: '388,600',
             priceTax: '427,460',
@@ -1404,7 +1404,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lc300-panthera-z106',
             brand: 'Panthera',
-            grade: 'Z106 ＋ CANガード ＋ トリプル ＋ ボンネット',
+            grade: 'Z106 ＋ CANガード ＋ トリプル',
             description: '世界最強クラスのパンテーラで、300への不正信号を遮断。',
             price: '374,800',
             priceTax: '412,280',
@@ -1414,7 +1414,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lc300-panthera-z106-microwave',
             brand: 'Panthera',
-            grade: 'Z106 ＋ CANガード ＋ トリプル ＋ ボンネット ＋ マイクロ波',
+            grade: 'Z106 ＋ CANガード ＋ トリプル ＋ マイクロ波',
             description: '高感度検知を活かし、不審車の接近もうろつきも逃さない。',
             price: '426,800',
             priceTax: '469,480',
@@ -1424,7 +1424,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lc300-panthera-z306',
             brand: 'Panthera',
-            grade: 'Z306 ＋ CANガード ＋ ボンネット',
+            grade: 'Z306 ＋ CANガード',
             description: '充実のセンサー群で全方位監視。300を鉄壁の守りへ。',
             price: '396,800',
             priceTax: '436,480',
@@ -1434,7 +1434,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lc300-panthera-z306-microwave',
             brand: 'Panthera',
-            grade: 'Z306 ＋ CANガード ＋ ボンネット ＋ マイクロ波',
+            grade: 'Z306 ＋ CANガード ＋ マイクロ波',
             description: 'マイクロ波を含むフルセンサー構成。300防衛の最高峰。',
             price: '448,800',
             priceTax: '493,680',
@@ -1444,7 +1444,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lc300-panthera-z706-full',
             brand: 'Panthera',
-            grade: 'Z706 ＋ CANガード ＋ ボンネット',
+            grade: 'Z706 ＋ CANガード',
             description: 'ANGノウハウを結集。300を守るためのバックアップサイレン付最終回答。',
             price: '486,800',
             priceTax: '535,480',
