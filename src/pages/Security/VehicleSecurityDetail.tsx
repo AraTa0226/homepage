@@ -1852,13 +1852,13 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                 ※表にチェックが入っていないセンサー類も、オプションとして追加取り付けが可能です。お気軽にご相談ください。
                             </p>
                             {/* Mobile View: Card Stack */}
-                            <div className="md:hidden divide-y divide-gray-100">
+                            <div className="md:hidden divide-y-[2px] divide-dashed divide-gray-200">
                                 {filteredPlans.map((plan) => (
                                     <div
                                         key={plan.id}
-                                        className={`p-6 ${plan.isRecommended ? 'bg-emerald-50/30' : ''}`}
+                                        className={`py-8 ${plan.isRecommended ? 'bg-emerald-50/30 -mx-6 px-6' : ''}`}
                                     >
-                                        <div className="flex justify-between items-start mb-4">
+                                        <div className="flex justify-between items-start mb-6">
                                             <div>
                                                 <div className="flex items-center gap-2 mb-1">
                                                     <span className="text-xs font-black text-emerald-500 uppercase tracking-widest">{plan.brand}</span>
@@ -1880,7 +1880,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                             </div>
                                         </div>
 
-                                        <div className="grid grid-cols-2 gap-x-4 gap-y-2 mb-6">
+                                        <div className="grid grid-cols-2 gap-x-4 gap-y-3">
                                             {[
                                                 { label: 'トリプルセンサー', active: plan.features.triple },
                                                 { label: '傾斜センサー', active: plan.features.tilt },
