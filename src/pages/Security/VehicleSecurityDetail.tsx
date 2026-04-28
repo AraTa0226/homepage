@@ -1090,7 +1090,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'fl5-grgo-zvt',
             brand: 'Grgo',
-            grade: 'ZVT II ＋ スマキー連動/スマクロ',
+            grade: 'ZVT II',
             description: 'ジャッキアップを警告する傾斜センサーやトリプルセンサーを含む、スポーツカーに必須の検知能力を備えたモデル。',
             price: '268,800',
             priceTax: '295,680',
@@ -1111,7 +1111,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'fl5-panthera-z106',
             brand: 'Panthera',
-            grade: 'Z106 ＋ スマキー連動/スマクロ',
+            grade: 'Z106',
             description: 'パンテーラの緻密な警備アルゴリズム。ベースモデルながらスポーツカーの盗難リスクを大幅に低減。',
             price: '288,800',
             priceTax: '317,680',
@@ -1131,7 +1131,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'fl5-panthera-z306',
             brand: 'Panthera',
-            grade: 'Z306 ＋ スマキー連動/スマクロ',
+            grade: 'Z306',
             description: '傾斜センサーとトリプルセンサーを標準装備。あらゆる角度からの侵入・いたずら・移動を即座に検知。',
             price: '338,800',
             priceTax: '372,680',
@@ -1152,7 +1152,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'fl5-panthera-z706',
             brand: 'Panthera',
-            grade: 'Z706 ＋ スマキー連動/スマクロ',
+            grade: 'Z706',
             description: '全センサーを搭載したパンテーラ最高峰。マイクロ波による接近検知やバックアップサイレンを備えた頂点の守り。',
             price: '428,000',
             priceTax: '470,800',
