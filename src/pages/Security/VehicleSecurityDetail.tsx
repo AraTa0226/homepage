@@ -1820,22 +1820,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                 <div className="bg-[#0b1210] rounded-[2.5rem] p-10 text-center relative overflow-hidden group">
                                     <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                                     <h3 className="text-white text-xl md:text-2xl font-black italic mb-2 tracking-tight">まずは、愛車とお越しください。</h3>
-                                    <p className="text-emerald-400/80 text-sm font-bold mb-10 italic">私たちは、お車に触れることから「本当の守り」を始めます。</p>
-
-                                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                                        <button
-                                            onClick={() => navigate('/reservation')}
-                                            className="w-full sm:w-auto px-10 py-5 bg-emerald-500 hover:bg-emerald-400 text-white font-black italic rounded-2xl transition-all shadow-lg shadow-emerald-500/20 active:scale-95"
-                                        >
-                                            無料個別相談を予約する
-                                        </button>
-                                        <button
-                                            onClick={() => navigate('/access')}
-                                            className="w-full sm:w-auto px-10 py-5 bg-white/10 hover:bg-white/20 text-white font-black italic rounded-2xl transition-all border border-white/20"
-                                        >
-                                            店舗案内はこちら
-                                        </button>
-                                    </div>
+                                    <p className="text-emerald-400/80 text-sm font-bold italic">私たちは、お車に触れることから「本当の守り」を始めます。</p>
                                 </div>
                             </div>
                         </div>
