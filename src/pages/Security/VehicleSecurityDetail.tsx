@@ -810,54 +810,105 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
     // 40系アルファード・ヴェルファイア専用設定データ
     const alphardVellfire40Plans = [
         {
+            id: 'av40-grgo-zv-keyless',
+            brand: 'Grgo',
+            grade: 'ZV II ＋ スマキー連動/スマクロ ＋ トリプル',
+            description: 'スマートキー連動で利便性を高めつつ、トリプルセンサーで愛車をしっかり保護します。',
+            price: '292,959',
+            priceTax: '322,255',
+            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'grgo'
+        },
+        {
             id: 'av40-grgo-zv-canguard',
             brand: 'Grgo',
-            grade: 'ZV II ＋ CANガード ＋ スマ連 ＋ トリプル',
-            description: '物理的なCANガードとスマートキー連動を組み合わせた実戦的パッケージ。アンサーバックで車両状態も手元で把握可能。',
+            grade: 'ZV II ＋ CANガード ＋ トリプル',
+            description: '物理的なCANインベーダー対策とトリプルセンサーを組み合わせた実戦的パッケージ。',
             price: '270,728',
             priceTax: '297,800',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: true },
+            category: 'grgo'
+        },
+        {
+            id: 'av40-grgo-zvt-keyless',
+            brand: 'Grgo',
+            grade: 'ZVT II ＋ スマキー連動/スマクロ',
+            description: '傾斜センサー含むZVT IIにスマートキー連動をプラス。毎日の使いやすさと安心を両立。',
+            price: '294,364',
+            priceTax: '323,800',
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: true, algorithm: true, canguard: false },
             category: 'grgo'
         },
         {
             id: 'av40-grgo-zvt-canguard',
             brand: 'Grgo',
-            grade: 'ZVT II ＋ CANガード ＋ スマ連',
-            description: 'ZVT IIをベースに、物理CAN対策とスマートキー連動を両立。多重のセンサーと物理防御で40系を全方位からガード。',
+            grade: 'ZVT II ＋ CANガード',
+            description: 'ZVT IIをベースに、物理CAN対策を統合。多重のセンサーと物理防御で40系をガード。',
             price: '295,273',
             priceTax: '324,800',
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: true, algorithm: true, canguard: true },
+            isRecommended: true,
+            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: true, algorithm: true, canguard: true },
             category: 'grgo'
+        },
+        {
+            id: 'av40-panthera-z106-keyless',
+            brand: 'Panthera',
+            grade: 'Z106 ＋ スマキー連動/スマクロ ＋ トリプル',
+            description: 'パンテーラの緻密なアルゴリズムにスマートキー連動を統合し、実用性を極めたプラン。',
+            price: '333,455',
+            priceTax: '366,800',
+            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'パンテーラ'
         },
         {
             id: 'av40-panthera-z106-canguard',
             brand: 'Panthera',
             grade: 'Z106 ＋ CANガード ＋ トリプル',
-            description: 'パンテーラの基本性能に物理CANガードをプラス。デジタルとアナログ両面からエンジンの不正始動を阻止。',
+            description: 'パンテーラの基本性能に物理CANガードをプラス。デジタルとアナログ両面から阻止。',
             price: '315,545',
             priceTax: '347,100',
             features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
             category: 'パンテーラ'
         },
         {
+            id: 'av40-panthera-z306-keyless',
+            brand: 'Panthera',
+            grade: 'Z306 ＋ スマキー連動/スマクロ',
+            description: '多重センサーのZ306とスマートキー連動で、隙のない防犯体制とスムーズな操作を実現。',
+            price: '358,000',
+            priceTax: '393,800',
+            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            category: 'パンテーラ'
+        },
+        {
             id: 'av40-panthera-z306-canguard',
             brand: 'Panthera',
             grade: 'Z306 ＋ CANガード',
-            description: 'Z306の多重センサーに物理CAN対策を統合。レッカー盗難もCANインベーダーも、どちらも妥協なく防ぎます。',
+            description: 'Z306の多重センサーに物理CAN対策を統合。レッカー盗難もCANインベーダーも防ぎます。',
             price: '358,909',
             priceTax: '394,800',
             features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
             category: 'パンテーラ'
         },
         {
+            id: 'av40-panthera-z706-keyless',
+            brand: 'Panthera',
+            grade: 'Z706 ＋ スマキー連動/スマクロ',
+            description: 'フルスペックパンテーラにスマートキー連動をプラス。究極の防犯と快適さの到達点。',
+            price: '439,818',
+            priceTax: '483,800',
+            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: false, ir: true },
+            category: 'パンテーラ'
+        },
+        {
             id: 'av40-panthera-z706-canguard',
             brand: 'Panthera',
             grade: 'Z706 ＋ CANガード',
-            description: 'ANGが提案する究極の40系防衛プラン。フルスペックパンテーラに物理CANガードを添えた、正真正銘の鉄壁。',
+            description: 'ANGが提案する究極の40系防衛プラン。フルスペックパンテーラと物理CANガードの正真正銘の鉄壁。',
             price: '440,727',
             priceTax: '484,800',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: true },
+            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: true, ir: true },
             category: 'パンテーラ'
         }
     ];
