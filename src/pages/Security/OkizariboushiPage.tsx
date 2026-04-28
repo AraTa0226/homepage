@@ -130,7 +130,7 @@ export const OkizariboushiPage: React.FC = () => {
                     <div className="bg-white rounded-[4rem] overflow-hidden shadow-3xl border border-slate-100 grid md:grid-cols-12 items-center">
                         <div className="md:col-span-5 aspect-square md:aspect-auto h-full relative overflow-hidden bg-slate-50">
                             <SafeImage
-                                src="/images/Top/dorareko.webp"
+                                src="/images/Security/model/bs700c.webp"
                                 alt="HORNET BS-700C"
                                 className="w-full h-full object-contain p-12"
                             />
