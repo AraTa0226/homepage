@@ -14,7 +14,7 @@ import {
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-export const SecurityPartnersPage: React.FC = () => {
+const SecurityPartnersPage: React.FC = () => {
     const navigate = useNavigate();
     const [scrolled, setScrolled] = useState(false);
 
@@ -180,3 +180,5 @@ export const SecurityPartnersPage: React.FC = () => {
         </div>
     );
 };
+
+export default SecurityPartnersPage;

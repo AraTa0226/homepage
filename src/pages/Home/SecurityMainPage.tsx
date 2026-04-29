@@ -34,6 +34,8 @@ import { SafeImage } from '../../components/ui/SafeImage';
 import { BusinessCalendar } from '../../components/Calendar/BusinessCalendar';
 import { VaultGrid } from '../../components/VaultGrid';
 
+import { usePrices } from '../../contexts/PriceContext';
+
 interface SecurityMainPageProps {
     assets: any;
     emergencyAnnouncement: any;
@@ -134,7 +136,7 @@ const MegaMenu = ({ show, categories, theme, onClose, navigate, handleMenuClick 
     );
 };
 
-export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
+const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
     assets,
     emergencyAnnouncement,
     facilities,
@@ -146,6 +148,7 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
     showMegaMenu,
     setShowMegaMenu,
 }) => {
+    const { heroAlert, recruitment } = usePrices();
     const [isLineupExpanded, setIsLineupExpanded] = useState(false);
     const [showFullAuditionList, setShowFullAuditionList] = useState(false);
 
@@ -403,7 +406,7 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                 </div>
             </header>
 
-            {emergencyAnnouncement.active && emergencyAnnouncement.text && (
+            {emergencyAnnouncement?.active && emergencyAnnouncement?.text && (
                 <div className="max-w-7xl mx-auto px-4 pt-24 -mb-16 relative z-30">
                     <motion.div
                         initial={{ opacity: 0, y: -20 }}
@@ -443,13 +446,30 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                         fetchPriority="high"
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent"></div>
-                    {/* Security Scan Grid Overlay */}
                     <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#10b981 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
                 </div>
 
                 <div className="relative max-w-7xl mx-auto px-4 w-full">
                     <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }}>
                         <div className="flex flex-col gap-4 mb-10">
+                            {heroAlert?.active && (
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.5 }}
+                                    className="mb-8 p-1.5 bg-white/10 backdrop-blur-3xl rounded-2xl border border-white/20 w-fit group cursor-pointer shadow-xl shadow-emerald-500/5 hover:shadow-emerald-500/10 transition-all"
+                                    onClick={() => heroAlert.link && navigate(heroAlert.link)}
+                                >
+                                    <div className="flex items-center gap-4 pr-6">
+                                        <div className="bg-emerald-500 text-black text-[9px] font-black px-3 py-1 rounded-lg uppercase tracking-tighter shadow-lg shadow-emerald-500/20">
+                                            {heroAlert.badge || 'NEW'}
+                                        </div>
+                                        <span className="text-gray-900 font-bold text-xs md:text-sm tracking-tight">{heroAlert.text}</span>
+                                        <ArrowRight className="w-3.5 h-3.5 text-emerald-600 group-hover:translate-x-1 transition-transform" />
+                                    </div>
+                                </motion.div>
+                            )}
+
                             <div className="inline-flex items-center gap-3 w-fit px-6 py-2.5 bg-emerald-600 text-white rounded-full shadow-lg shadow-emerald-500/20">
                                 <Lock className="w-3.5 h-3.5" />
                                 <span className="text-xs md:text-sm font-black uppercase tracking-[0.15em] whitespace-nowrap">
@@ -509,15 +529,13 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                 </div>
             </section>
 
-            {/* Professional Standards & Certifications Section */}
+            {/* Professional Standards Section */}
             <section className="py-32 relative overflow-hidden bg-[#0c1412]">
                 <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-500/20 to-transparent"></div>
-                {/* Security Data Grid Overlay */}
                 <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'linear-gradient(#10b981 1px, transparent 1px), linear-gradient(90deg, #10b981 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
 
                 <div className="max-w-7xl mx-auto px-4 relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
-                        {/* Left Side: Sticky Image / Brand Identity */}
                         <div className="lg:col-span-5 lg:sticky lg:top-32">
                             <div className="space-y-8">
                                 <span className="text-emerald-500 font-black tracking-[0.5em] uppercase text-[10px] block">The Protocol of Trust</span>
@@ -539,9 +557,7 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                             </div>
                         </div>
 
-                        {/* Right Side: Editorial Flow */}
                         <div className="lg:col-span-7 space-y-20">
-                            {/* Point 01: SPS */}
                             <div className="relative pl-12">
                                 <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-emerald-500 via-emerald-500/10 to-transparent"></div>
                                 <div className="absolute left-[-4px] top-0 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.8)]"></div>
@@ -559,7 +575,6 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                 </div>
                             </div>
 
-                            {/* Point 02: VIPER */}
                             <div className="relative pl-12">
                                 <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-blue-500 via-blue-500/20 to-transparent"></div>
                                 <div className="absolute left-[-4px] top-0 w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,1)]"></div>
@@ -569,30 +584,12 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                         <span className="text-blue-500 font-black text-[10px] tracking-widest uppercase italic">02 / Official Partnership</span>
                                     </div>
                                     <h3 className="text-3xl font-black text-white tracking-tight">VIPER プレミアムディーラー</h3>
-                                    <div className="space-y-6">
-                                        <p className="text-gray-400 font-bold leading-relaxed text-sm">
-                                            VIPER製品の取り扱いに精通したマイスター店として、正規販売から、高度な取付技術が必要となる車両への施工、万全のアフターサポートまで対応。
-                                        </p>
-                                        <div className="flex flex-col gap-3">
-                                            {[
-                                                { label: 'VIPER プレミアムディーラー', desc: 'マイスター認定を受けた上位店舗' },
-                                                { label: 'VIPER 取付実績表彰', desc: '豊富な施工実績に基づく確かな経験値' },
-                                                { label: '正規販売・取付店', desc: '正規品の保証とサポートを完全準拠' }
-                                            ].map((item, i) => (
-                                                <div key={i} className="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/5">
-                                                    <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-1.5"></div>
-                                                    <div>
-                                                        <p className="text-white font-black text-xs leading-none mb-1">{item.label}</p>
-                                                        <p className="text-gray-500 text-[10px] font-bold">{item.desc}</p>
-                                                    </div>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
+                                    <p className="text-gray-400 font-bold leading-relaxed text-sm">
+                                        VIPER製品の取り扱いに精通したマイスター店として、正規販売から、高度な取付技術が必要となる車両への施工、万全のアフターサポートまで対応。
+                                    </p>
                                 </div>
                             </div>
 
-                            {/* Point 03: Snap-on */}
                             <div className="relative pl-12">
                                 <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-white via-white/10 to-transparent"></div>
                                 <div className="absolute left-[-4px] top-0 w-2 h-2 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,1)]"></div>
@@ -603,14 +600,8 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                     </div>
                                     <h3 className="text-3xl font-black text-white tracking-tight italic">Snap-on Diagnostic Standard</h3>
                                     <p className="text-gray-400 font-bold leading-relaxed text-sm">
-                                        最新車両の電子制御システムとセキュリティーの融合を高次元で成立させるため、施工後の最終診断には <span className="text-white font-black underline decoration-white/30 decoration-2 underline-offset-4">Snap-on社製車両診断テスター</span> を使用。
-                                        <br /><br />
-                                        ジャッキやバッテリー充電器、お客様の大切な愛車に触れる資機材において、信頼のおけるSnap-on社製を採用し、最善のメンテナンスと品質管理を徹底しています。
+                                        最旬車両の制御システムとセキュリティーの融合を成立させるため、最終診断には Snap-on社製車両診断テスターを使用しています。
                                     </p>
-                                    <div className="pt-6 flex gap-4">
-                                        <div className="px-6 py-2 rounded-full border border-white/20 text-[9px] font-black text-white/40 uppercase tracking-widest">Digital Diagnosis</div>
-                                        <div className="px-6 py-2 rounded-full border border-white/20 text-[9px] font-black text-white/40 uppercase tracking-widest">Pro-grade Maintenance</div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -636,7 +627,7 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
             </section>
 
             {/* Partnership Solutions Section */}
-            <section className="py-32 bg-gray-50 relative overflow-hidden">
+            < section className="py-32 bg-gray-50 relative overflow-hidden" >
                 <div className="max-w-7xl mx-auto px-4 relative z-10">
                     <div className="mb-20 flex flex-col md:flex-row items-end justify-between gap-8">
                         <div className="space-y-4">
@@ -723,7 +714,7 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                 </div>
                 {/* Visual Accent */}
                 <div className="absolute bottom-0 left-0 w-full h-1/2 bg-white -z-10 skew-y-3 origin-right"></div>
-            </section>
+            </section >
 
 
             <BusinessCalendar theme="light" />
@@ -792,13 +783,10 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                         href={site.url}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="min-w-[200px] p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-emerald-500/50 transition-all group flex flex-col gap-2"
+                                        className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group/p"
                                     >
-                                        <span className="text-white font-black text-lg tracking-tight">{site.name}</span>
-                                        <div className="flex items-center justify-between">
-                                            <span className="text-emerald-500 text-[10px] font-black uppercase tracking-widest">{site.desc}</span>
-                                            <ExternalLink className="w-4 h-4 text-white/20 group-hover:text-emerald-500 transition-colors" />
-                                        </div>
+                                        <p className="text-white font-black text-sm group-hover/p:text-emerald-500 transition-colors">{site.name}</p>
+                                        <p className="text-gray-500 text-[10px] font-bold mt-1 uppercase tracking-widest">{site.desc}</p>
                                     </a>
                                 ))}
                             </div>
@@ -806,6 +794,31 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                     </div>
                 </div>
             </section>
+
+            {/* Recruitment Section */}
+            {recruitment?.active && (
+                <section className="py-12 bg-white overflow-hidden" id="recruitment">
+                    <div className="max-w-5xl mx-auto px-4">
+                        <motion.div 
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="bg-[#0c1412] rounded-[2.5rem] p-8 md:p-12 overflow-hidden relative group border border-emerald-500/20 shadow-2xl"
+                        >
+                            <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#10b981 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
+                            <div className="flex flex-col items-center text-center relative z-10">
+                                <span className="text-emerald-500 font-black tracking-[0.4em] uppercase text-[9px] mb-2 block">Join Our Team</span>
+                                <h2 className="text-2xl md:text-3xl font-black text-white leading-tight tracking-tighter mb-4 italic">
+                                    {recruitment.title}
+                                </h2>
+                                <p className="text-gray-400 font-bold text-sm leading-relaxed max-w-2xl">
+                                    {recruitment.message || recruitment.description}
+                                </p>
+                            </div>
+                        </motion.div>
+                    </div>
+                </section>
+            )}
 
             {/* Access Section */}
             <section id="access" className="py-24 md:py-32 bg-[#0c1412] relative overflow-hidden">
@@ -823,14 +836,12 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                             </div>
 
                             <div className="grid grid-cols-2 gap-4">
-                                {/* First large image (Exterior) */}
                                 <div className="col-span-2 group relative aspect-video rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-white/5">
                                     <SafeImage src={assets.heroImage} alt="Sound ANG 店舗外観" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 via-transparent to-transparent flex items-end p-6">
                                         <span className="text-white font-black text-sm tracking-widest uppercase">Shop Exterior</span>
                                     </div>
                                 </div>
-                                {/* Remaining facilities */}
                                 {facilities.map((fac, idx) => (
                                     <div key={idx} className="group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-white/10 bg-white/5">
                                         <SafeImage src={fac.image} alt={fac.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
@@ -846,7 +857,7 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                             <div className="relative aspect-square rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/10 hover:border-emerald-500/30 transition-all duration-700">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.293409151244!2d130.4851219762696!3d33.54575497335133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541908696b9963f%3A0x6b976696b9963f!2zU291bmQgQU5H!5e0!3m2!1sja!2sjp!4v1712288000000!5m2!1sja!2sjp"
-                                    className="w-full h-full"
+                                    className="w-full h-full border-0"
                                     loading="lazy"
                                 />
                             </div>
@@ -1104,6 +1115,8 @@ export const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                     </>
                 )}
             </AnimatePresence>
-        </div >
+        </div>
     );
 };
+
+export default SecurityMainPage;

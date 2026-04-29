@@ -23,7 +23,7 @@ import {
 import { SafeImage } from '../../components/ui/SafeImage';
 import { useNavigate } from 'react-router-dom';
 
-export const OkizariboushiPage: React.FC = () => {
+const OkizariboushiPage: React.FC = () => {
     const navigate = useNavigate();
     const [scrolled, setScrolled] = useState(false);
 
@@ -340,3 +340,5 @@ export const OkizariboushiPage: React.FC = () => {
         </div>
     );
 };
+
+export default OkizariboushiPage;

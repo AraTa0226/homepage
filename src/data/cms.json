@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-04-22T09:52:00Z",
-  "cacheVersion": "65",
+  "lastUpdated": "2026-04-28T23:10:00Z",
+  "cacheVersion": "66",
+  "heroAlert": {
+    "active": true,
+    "text": "【新商品案内】最新のレーザー探知機「Z1200」の取り扱いを開始しました。店舗にて展示中！",
+    "link": "/security/radar/z1200",
+    "badge": "NEW RELEASE"
+  },
+  "recruitment": {
+    "visible": true,
+    "title": "採用情報",
+    "message": "カーセキュリティー取り付け・販売スタッフ募集中です。詳しくはお電話ください。092-503-5437担当：塚元 or 村上",
+    "requirements": [
+      ""
+    ],
+    "salary": "",
+    "contactInfo": "お電話にてお問い合わせください"
+  },
+  "theftMethods": [
+    {
+      "id": "relay-attack",
+      "title": "リレーアタック",
+      "description": "スマートキーから漏れる微弱な電波を増幅し、一瞬で解錠・始動する手口。",
+      "link": "/security/relay-attack"
+    },
+    {
+      "id": "can-invader",
+      "title": "CANインベーダー",
+      "description": "車両の通信網(CAN)に直接侵入し、解錠からエンジンの始動まで行う最新の盗難技術。",
+      "link": "/security/can-invader"
+    },
+    {
+      "id": "key-emulator",
+      "title": "キーエミュレーター",
+      "description": "特殊なデバイスでスマートキーのスペアを疑似的にその場で作成する、最凶の次世代手口。",
+      "link": "/security/key-emulator"
+    }
+  ],
   "plans": [
     {
       "id": "speaker_package",
@@ -1261,6 +1297,579 @@
         }
       ],
       "images": []
+    },
+    {
+      "id": "land_cruiser_300",
+      "createdAt": "2026-04-28T23:53:31.433Z",
+      "updatedAt": "2026-04-29T21:12:38.943Z",
+      "publishedAt": "2026-04-28T23:53:31.433Z",
+      "revisedAt": "2026-04-29T21:12:38.943Z",
+      "category": "LAND CRUISER 300 専用パッケージ",
+      "type": [
+        "security"
+      ],
+      "description": "<p>世界的に需要が高く、最も警戒が必要な一台。CANインベーダー、リレーアタック、指紋認証回避など、あらゆる手口を想定した最強の布陣を推奨します。</p>",
+      "items": [
+        {
+          "fieldId": "item",
+          "name": "Grgo ZV II ＋ CANガード ＋ トリプル",
+          "price": "314,600",
+          "description": "最も狙われる300必須のアナログ防御と電子対策をパッケージ。",
+          "triple": true,
+          "tilt": false,
+          "bonnet": true,
+          "microwave": false,
+          "siren": false,
+          "algorithm": true,
+          "canguard": true,
+          "image": ""
+        },
+        {
+          "fieldId": "item",
+          "name": "Grgo ZVT II ＋ CANガード",
+          "price": "336,600",
+          "badge": "おすすめ",
+          "description": "高精度な傾斜センサーが、300のパーツ盗難やレッカーを阻止。",
+          "triple": true,
+          "tilt": true,
+          "bonnet": true,
+          "microwave": false,
+          "siren": false,
+          "algorithm": true,
+          "canguard": true,
+          "image": ""
+        },
+        {
+          "fieldId": "item",
+          "name": "Panthera Z706 ＋ CANガード",
+          "price": "486,800",
+          "badge": "最強プラン",
+          "description": "ANGノウハウを結集。300を守るためのバックアップサイレン付最終回答。",
+          "triple": true,
+          "tilt": true,
+          "bonnet": true,
+          "microwave": true,
+          "siren": true,
+          "algorithm": true,
+          "canguard": true,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "lexus_gx550",
+      "createdAt": "2026-04-29T11:07:24.333Z",
+      "updatedAt": "2026-04-29T21:12:42.279Z",
+      "publishedAt": "2026-04-29T11:07:24.333Z",
+      "revisedAt": "2026-04-29T21:12:42.279Z",
+      "category": "LEXUS GX550 専用パッケージ",
+      "type": [
+        "security"
+      ],
+      "description": "<p>最新鋭のオフローダー。CANインベーダーやゲームボーイといった最新手口への完全対策が必須です。</p>",
+      "items": [
+        {
+          "fieldId": "item",
+          "name": "Grgo ZVT II ＋ CANガード",
+          "price": "336,600",
+          "badge": "おすすめ",
+          "description": "傾斜センサー標準装備。CANガードと1WAYリモコンも付属。",
+          "triple": true,
+          "tilt": true,
+          "bonnet": true,
+          "microwave": false,
+          "siren": false,
+          "algorithm": true,
+          "canguard": true,
+          "image": ""
+        },
+        {
+          "fieldId": "item",
+          "name": "Panthera Z306 ＋ CANガード",
+          "price": "396,800",
+          "badge": "推奨構成",
+          "description": "全方位検知のZ306に最新のCANガードを融合。",
+          "triple": true,
+          "tilt": true,
+          "bonnet": true,
+          "microwave": false,
+          "siren": false,
+          "algorithm": true,
+          "canguard": true,
+          "image": ""
+        },
+        {
+          "fieldId": "item",
+          "name": "Panthera Z706 ＋ CANガード",
+          "price": "486,800",
+          "badge": "最強プラン",
+          "description": "すべてのセンサーを装備した究極の多重防御モデル。",
+          "triple": true,
+          "tilt": true,
+          "bonnet": true,
+          "microwave": true,
+          "siren": true,
+          "algorithm": true,
+          "canguard": true,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "lexus_rx",
+      "createdAt": "2026-04-29T11:07:23.545Z",
+      "updatedAt": "2026-04-29T21:12:41.478Z",
+      "publishedAt": "2026-04-29T11:07:23.545Z",
+      "revisedAt": "2026-04-29T21:12:41.478Z",
+      "category": "LEXUS RX 専用パッケージ",
+      "type": [
+        "security"
+      ],
+      "description": "<p>高い人気を誇るラグジュアリーSUV。スマートキーの利便性を活かしつつ、CANガード等で最新の盗難手口から死角なく守ります。</p>",
+      "items": [
+        {
+          "fieldId": "item",
+          "name": "Grgo ZVT II ＋ CANガード",
+          "price": "336,600",
+          "badge": "おすすめ",
+          "description": "傾斜センサーとCANガード。1WAYリモコンも付属した上位モデル。",
+          "triple": true,
+          "tilt": true,
+          "bonnet": true,
+          "microwave": false,
+          "siren": false,
+          "algorithm": true,
+          "canguard": true,
+          "image": ""
+        },
+        {
+          "fieldId": "item",
+          "name": "Panthera Z306 ＋ CANガード",
+          "price": "396,800",
+          "badge": "推奨構成",
+          "description": "Z306の多機能にデジタル対策のCANガードを完全統合。",
+          "triple": true,
+          "tilt": true,
+          "bonnet": true,
+          "microwave": false,
+          "siren": false,
+          "algorithm": true,
+          "canguard": true,
+          "image": ""
+        },
+        {
+          "fieldId": "item",
+          "name": "Panthera Z706 ＋ CANガード",
+          "price": "486,800",
+          "badge": "最強プラン",
+          "description": "あらゆる手口から車を守る、ANGノウハウの結晶プラン。",
+          "triple": true,
+          "tilt": true,
+          "bonnet": true,
+          "microwave": true,
+          "siren": true,
+          "algorithm": true,
+          "canguard": true,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "land_cruiser_prado",
+      "createdAt": "2026-04-29T11:07:22.684Z",
+      "updatedAt": "2026-04-29T21:12:40.632Z",
+      "publishedAt": "2026-04-29T11:07:22.684Z",
+      "revisedAt": "2026-04-29T21:12:40.632Z",
+      "category": "LAND CRUISER PRADO (150系) 専用パッケージ",
+      "type": [
+        "security"
+      ],
+      "description": "<p>今なお狙われ続ける150系。スマートキー連動による最新の窃盗対策や、物理的なCANガードなど、年式に応じた最適な対策をご提案します。</p>",
+      "items": [
+        {
+          "fieldId": "item",
+          "name": "Grgo ZVT II ＋ スマキー連動/スマクロ",
+          "price": "299,600",
+          "badge": "おすすめ",
+          "description": "傾斜センサー含むフルセンサー構成にスマートキー連動をプラスし、利便性を高めた一台。",
+          "triple": true,
+          "tilt": true,
+          "bonnet": true,
+          "microwave": false,
+          "siren": false,
+          "algorithm": true,
+          "canguard": false,
+          "image": ""
+        },
+        {
+          "fieldId": "item",
+          "name": "Grgo ZVT II ＋ CANガード",
+          "price": "310,827",
+          "description": "傾斜センサー含むフルセンサー構成にCANガードを統合した最良バランスの一台。",
+          "triple": true,
+          "tilt": true,
+          "bonnet": true,
+          "microwave": false,
+          "siren": false,
+          "algorithm": true,
+          "canguard": true,
+          "image": ""
+        },
+        {
+          "fieldId": "item",
+          "name": "Panthera Z706 ＋ CANガード",
+          "price": "449,800",
+          "badge": "最強プラン",
+          "description": "ANG最強の組み合わせ。バックアップサイレン、全センサー、物理CAN対策の集大成。",
+          "triple": true,
+          "tilt": true,
+          "bonnet": true,
+          "microwave": true,
+          "siren": true,
+          "algorithm": true,
+          "canguard": true,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "alphard_40_30",
+      "createdAt": "2026-04-29T04:14:58.259Z",
+      "updatedAt": "2026-04-29T04:28:01.008Z",
+      "publishedAt": "2026-04-29T04:28:01.008Z",
+      "revisedAt": "2026-04-29T04:28:01.008Z",
+      "category": "ALPHARD / VELLFIRE (40)  ",
+      "type": [
+        "security"
+      ],
+      "description": "<p>最新の40系。CANインベーダーや最新手口に対し、スマートキー連動や物理CANガードを組み合わせた鉄壁の布陣をご提案します。</p>",
+      "items": [
+        {
+          "fieldId": "item",
+          "triple": false,
+          "tilt": false,
+          "bonnet": false,
+          "microwave": false,
+          "siren": false,
+          "algorithm": false,
+          "canguard": false,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "land_cruiser_250",
+      "createdAt": "2026-04-29T04:02:35.990Z",
+      "updatedAt": "2026-04-29T21:12:39.812Z",
+      "publishedAt": "2026-04-29T04:27:31.952Z",
+      "revisedAt": "2026-04-29T21:12:39.812Z",
+      "category": "LAND CRUISER 250 専用パッケージ",
+      "type": [
+        "security"
+      ],
+      "description": "<p>プラドの後継として登場した注目の新型モデル。伝統の信頼性に加え、最新のデジタルセキュリティを融合させた最強の防犯対策をご提案します。</p>",
+      "items": [
+        {
+          "fieldId": "item",
+          "name": "Grgo ZVT II ＋ CANガード",
+          "price": "336,600",
+          "badge": "おすすめ",
+          "description": "傾斜センサーと1WAYリモコン付属。多重防御のANG推奨プラン。",
+          "triple": true,
+          "tilt": true,
+          "bonnet": true,
+          "microwave": false,
+          "siren": false,
+          "algorithm": true,
+          "canguard": true,
+          "image": ""
+        },
+        {
+          "fieldId": "item",
+          "name": "Panthera Z706 ＋ CANガード",
+          "price": "486,800",
+          "badge": "最強プラン",
+          "description": "全センサー＋バックアップサイレン。250を守り抜く究極の回答。",
+          "triple": true,
+          "tilt": true,
+          "bonnet": true,
+          "microwave": true,
+          "siren": true,
+          "algorithm": true,
+          "canguard": true,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "civic_fl5",
+      "createdAt": "2026-04-29T21:12:46.258Z",
+      "updatedAt": "2026-04-29T21:12:46.258Z",
+      "publishedAt": "2026-04-29T21:12:46.258Z",
+      "revisedAt": "2026-04-29T21:12:46.258Z",
+      "category": "CIVIC TYPE-R (FL5) 専用パッケージ",
+      "type": [],
+      "description": "<p>究極のFFスポーツ性能を誇るFL5。最新のCANインベーダー対策を含めた、実戦的な多重防御をご提案します。</p>",
+      "items": [
+        {
+          "fieldId": "item",
+          "name": "Grgo ZVT II ＋ CANガード",
+          "price": "309,800",
+          "badge": "おすすめ",
+          "description": "最上位ZVT IIにスマートキー連動と物理CANガードを追加。利便性と鉄壁の防犯性能を両立した推奨パッケージ。",
+          "triple": true,
+          "tilt": true,
+          "bonnet": false,
+          "microwave": false,
+          "siren": false,
+          "algorithm": true,
+          "canguard": true,
+          "image": ""
+        },
+        {
+          "fieldId": "item",
+          "name": "Panthera Z306 ＋ CANガード",
+          "price": "379,800",
+          "badge": "推奨構成",
+          "description": "充実のセンサー構成に多重の盗難防止策を上乗せ。FL5オーナーに一番支持される、隙のない最強構成。",
+          "triple": true,
+          "tilt": true,
+          "bonnet": true,
+          "microwave": false,
+          "siren": false,
+          "algorithm": true,
+          "canguard": true,
+          "image": ""
+        },
+        {
+          "fieldId": "item",
+          "name": "Panthera Z706 ＋ CANガード",
+          "price": "469,800",
+          "badge": "最強プラン",
+          "description": "ANGのノウハウを全て投入。フルスペックパンテーラに物理CAN対策を加えた、TYPE-Rを守り抜くための最終結論。",
+          "triple": true,
+          "tilt": true,
+          "bonnet": true,
+          "microwave": true,
+          "siren": true,
+          "algorithm": true,
+          "canguard": true,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "prius_60",
+      "createdAt": "2026-04-29T21:12:45.402Z",
+      "updatedAt": "2026-04-29T21:12:45.402Z",
+      "publishedAt": "2026-04-29T21:12:45.402Z",
+      "revisedAt": "2026-04-29T21:12:45.402Z",
+      "category": "PRIUS (60系) 専用パッケージ",
+      "type": [],
+      "description": "<p>洗練されたデザインと高い防犯性能の両立。最新の60系プリウスに対し、CANガードやパンテーラを組み合わせた、都市部でも安心のパッケージをご提案します。</p>",
+      "items": [
+        {
+          "fieldId": "item",
+          "name": "Grgo ZVT II ＋ CANガード",
+          "price": "304,800",
+          "badge": "おすすめ",
+          "description": "ZVT IIの高度な検知に、物理CANガードを統合。プリウスに求められる全ての防犯性能を凝縮。",
+          "triple": true,
+          "tilt": true,
+          "bonnet": false,
+          "microwave": false,
+          "siren": false,
+          "algorithm": true,
+          "canguard": true,
+          "image": ""
+        },
+        {
+          "fieldId": "item",
+          "name": "Panthera Z306 ＋ CANガード",
+          "price": "374,800",
+          "badge": "推奨構成",
+          "description": "多重センサー警備のZ306に、物理CAN対策をプラス。プリウスオーナーに一番支持される最強の一台。",
+          "triple": true,
+          "tilt": true,
+          "bonnet": true,
+          "microwave": false,
+          "siren": false,
+          "algorithm": true,
+          "canguard": true,
+          "image": ""
+        },
+        {
+          "fieldId": "item",
+          "name": "Panthera Z706 ＋ CANガード",
+          "price": "464,800",
+          "badge": "最強プラン",
+          "description": "パンテーラ最高峰。全機能と全センサーを解放し、物理的なデジタル対策も完備した頂点モデル。",
+          "triple": true,
+          "tilt": true,
+          "bonnet": true,
+          "microwave": true,
+          "siren": true,
+          "algorithm": true,
+          "canguard": true,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "hiace_200",
+      "createdAt": "2026-04-29T21:12:44.538Z",
+      "updatedAt": "2026-04-29T21:12:44.538Z",
+      "publishedAt": "2026-04-29T21:12:44.538Z",
+      "revisedAt": "2026-04-29T21:12:44.538Z",
+      "category": "HIACE (200系) 専用パッケージ",
+      "type": [],
+      "description": "<p>仕事からレジャーまで幅広く活躍するハイエース。狙われやすい車種だからこそ、センサー感度の追求と利便性を両立した専用プランをご用意しました。</p>",
+      "items": [
+        {
+          "fieldId": "item",
+          "name": "Grgo ZVT II ＋ ミラー連動",
+          "price": "250,800",
+          "badge": "おすすめ",
+          "description": "傾斜・トリプルセンサーを同梱した上位モデル。ハイエースのレッカー盗難も確実に検知。",
+          "triple": true,
+          "tilt": true,
+          "bonnet": true,
+          "microwave": false,
+          "siren": false,
+          "algorithm": true,
+          "canguard": false,
+          "image": ""
+        },
+        {
+          "fieldId": "item",
+          "name": "Panthera Z306 ＋ ミラー連動",
+          "price": "320,800",
+          "badge": "推奨構成",
+          "description": "全センサー標準装備。ハイエースオーナーに最も支持される、高性能とお買得感を両立したプラン。",
+          "triple": true,
+          "tilt": true,
+          "bonnet": true,
+          "microwave": false,
+          "siren": false,
+          "algorithm": true,
+          "canguard": false,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "jimny_jb64",
+      "createdAt": "2026-04-29T21:12:43.835Z",
+      "updatedAt": "2026-04-29T21:12:43.835Z",
+      "publishedAt": "2026-04-29T21:12:43.835Z",
+      "revisedAt": "2026-04-29T21:12:43.835Z",
+      "category": "JIMNY / SIERRA (JB64/74) 専用パッケージ",
+      "type": [],
+      "description": "<p>絶大な人気を誇るジムニーシリーズ。車上荒らしや盗難のリスクが高いため、GrgoやPantheraによる確実なガードを推奨します。</p>",
+      "items": [
+        {
+          "fieldId": "item",
+          "name": "Grgo ZVT II",
+          "price": "248,800",
+          "badge": "おすすめ",
+          "description": "傾斜センサーとトリプルセンサーを標準装備。ジャッキアップや車体への衝撃を確実にキャッチする上位モデル。",
+          "triple": true,
+          "tilt": true,
+          "bonnet": false,
+          "microwave": false,
+          "siren": false,
+          "algorithm": false,
+          "canguard": false,
+          "image": ""
+        },
+        {
+          "fieldId": "item",
+          "name": "Panthera Z306",
+          "price": "318,800",
+          "badge": "推奨構成",
+          "description": "トリプルセンサーと傾斜センサーが同梱。ジムニーの人気カスタムパーツであるタイヤ・ホイールも死角なくガード。",
+          "triple": true,
+          "tilt": true,
+          "bonnet": true,
+          "microwave": false,
+          "siren": false,
+          "algorithm": false,
+          "canguard": false,
+          "image": ""
+        },
+        {
+          "fieldId": "item",
+          "name": "Panthera Z706",
+          "price": "408,800",
+          "badge": "最強プラン",
+          "description": "すべてのセンサーを網羅した最高峰フルスペックモデル。ジムニーを愛するオーナー様のための究極の守り。",
+          "triple": true,
+          "tilt": true,
+          "bonnet": true,
+          "microwave": true,
+          "siren": true,
+          "algorithm": false,
+          "canguard": false,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "harrier_80",
+      "createdAt": "2026-04-29T21:12:43.111Z",
+      "updatedAt": "2026-04-29T21:12:43.111Z",
+      "publishedAt": "2026-04-29T21:12:43.111Z",
+      "revisedAt": "2026-04-29T21:12:43.111Z",
+      "category": "HARRIER (80系) 専用パッケージ",
+      "type": [],
+      "description": "<p>高い人気を誇るSUV。最新の盗難手口に対し、スマクロ機能や物理CANガードを組み合わせた、都市部でも安心のセキュリティをご提供します。</p>",
+      "items": [
+        {
+          "fieldId": "item",
+          "name": "Grgo ZVT II ＋ CANガード",
+          "price": "316,800",
+          "badge": "おすすめ",
+          "description": "ZVT IIの高度な検知能力に、物理CANガードを統合。ハリアーの盗難・部品盗を徹底阻止。",
+          "triple": true,
+          "tilt": true,
+          "bonnet": false,
+          "microwave": false,
+          "siren": false,
+          "algorithm": true,
+          "canguard": true,
+          "image": ""
+        },
+        {
+          "fieldId": "item",
+          "name": "Panthera Z306 ＋ CANガード",
+          "price": "386,800",
+          "badge": "推奨構成",
+          "description": "Z306の多機能検知に物理CAN対策をプラス。レッカー盗難もインベーダーも、どちらも妥協なく防ぎます。",
+          "triple": true,
+          "tilt": true,
+          "bonnet": true,
+          "microwave": false,
+          "siren": false,
+          "algorithm": true,
+          "canguard": true,
+          "image": ""
+        },
+        {
+          "fieldId": "item",
+          "name": "Panthera Z706 ＋ CANガード",
+          "price": "476,800",
+          "badge": "最強プラン",
+          "description": "ANG最強のハリアー防衛プラン。フルスペックパンテーラ＋物理CANガードの、正真正銘の鉄壁モデル。",
+          "triple": true,
+          "tilt": true,
+          "bonnet": true,
+          "microwave": true,
+          "siren": true,
+          "algorithm": true,
+          "canguard": true,
+          "image": ""
+        }
+      ]
     }
   ],
   "images": [],
@@ -1652,16 +2261,6 @@
     "2026-9": [],
     "2026-10": [],
     "2026-11": []
-  },
-  "recruitment": {
-    "visible": true,
-    "title": "採用情報",
-    "message": "カーセキュリティー取り付け・販売スタッフ募集中です。詳しくはお電話ください。092-503-5437担当：塚元 or 村上",
-    "requirements": [
-      ""
-    ],
-    "salary": "",
-    "contactInfo": "お電話にてお問い合わせください"
   },
   "securityRecruitment": {
     "visible": true,

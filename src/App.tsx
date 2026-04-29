@@ -24,7 +24,7 @@ import { VaultGrid } from './components/VaultGrid';
 
 // Lazy Pages (Architectural Split for Lighthouse 100)
 const MainPage = lazy(() => import('./pages/Home/MainPage').then(m => ({ default: m.MainPage })));
-const SecurityMainPage = lazy(() => import('./pages/Home/SecurityMainPage').then(m => ({ default: m.SecurityMainPage })));
+const SecurityMainPage = lazy(() => import('./pages/Home/SecurityMainPage'));
 const VehicleSecurityDetail = lazy(() => import('./pages/Security/VehicleSecurityDetail'));
 const AudioMenuDetail = lazy(() => import('./components/Menu/AudioMenuDetail').then(m => ({ default: m.AudioMenuDetail })));
 const PantheraPage = lazy(() => import('./pages/Security/PantheraPage').then(m => ({ default: m.PantheraPage })));
@@ -39,11 +39,11 @@ const CanInvaderPage = lazy(() => import('./pages/Security/CanInvaderPage').then
 const KeyEmulatorPage = lazy(() => import('./pages/Security/KeyEmulatorPage').then(m => ({ default: m.KeyEmulatorPage })));
 const RadarPage = lazy(() => import('./pages/Security/RadarPage').then(m => ({ default: m.RadarPage })));
 const DigitalMirrorPage = lazy(() => import('./pages/Security/DigitalMirrorPage').then(m => ({ default: m.DigitalMirrorPage })));
-const OkizariboushiPage = lazy(() => import('./pages/Security/OkizariboushiPage').then(m => ({ default: m.OkizariboushiPage })));
-const MaintainPage = lazy(() => import('./pages/Security/MaintainPage').then(m => ({ default: m.MaintainPage })));
-const FAQPage = lazy(() => import('./pages/Home/FAQPage').then(m => ({ default: m.FAQPage })));
-const SecurityPartnersPage = lazy(() => import('./pages/Security/SecurityPartnersPage').then(m => ({ default: m.SecurityPartnersPage })));
-const SecuritySitemapPage = lazy(() => import('./pages/Security/SecuritySitemapPage').then(m => ({ default: m.SecuritySitemapPage })));
+const OkizariboushiPage = lazy(() => import('./pages/Security/OkizariboushiPage'));
+const MaintainPage = lazy(() => import('./pages/Security/MaintainPage'));
+const FAQPage = lazy(() => import('./pages/Home/FAQPage'));
+const SecurityPartnersPage = lazy(() => import('./pages/Security/SecurityPartnersPage'));
+const SecuritySitemapPage = lazy(() => import('./pages/Security/SecuritySitemapPage'));
 
 
 const ReservationFormPage = lazy(() => import('./components/Form/ReservationFormPage').then(m => ({ default: m.ReservationFormPage })));

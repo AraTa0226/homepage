@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'motion/react';
+import { usePrices } from '../../contexts/PriceContext';
 import {
     ShieldCheck,
     ShieldAlert,
@@ -26,6 +27,7 @@ interface VehicleSecurityDetailProps {
 const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets }) => {
     const { modelId } = useParams();
     const navigate = useNavigate();
+    const { plans } = usePrices();
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -1692,15 +1694,71 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
     };
 
 
-    // 現在の車種設定を取得（見つからない場合はGX550をデフォルトに）
-    const currentVehicle = vehicleConfigs[modelId || 'lexus-gx550'] || vehicleConfigs['lexus-gx550'];
+    const currentModelId = modelId || 'lexus-gx550';
+    const currentVehicle = vehicleConfigs[currentModelId] || vehicleConfigs['lexus-gx550'];
 
+    // microCMSデータの安全な取得
+    let rawPlans = currentVehicle?.plans || basePlans || [];
+    
+    try {
+        if (plans && plans.length > 0) {
+            const idMapping: Record<string, string> = {
+                'toyota-landcruiser-300': 'land_cruiser_300',
+                'toyota-landcruiser-250': 'land_cruiser_250',
+                'toyota-landcruiser-prado-150-200': 'land_cruiser_prado',
+                'toyota-landcruiser-70': 'land_cruiser_70',
+                'toyota-alphard-vellfire': 'alphard_40_30',
+                'lexus-lx': 'lexus_lx',
+                'lexus-rx': 'lexus_rx',
+                'lexus-nx': 'lexus_nx',
+                'lexus-gx550': 'lexus_gx550',
+                'lexus-lbx': 'lexus_lbx',
+                'toyota-harrier': 'harrier_80',
+                'honda-civic-typer': 'civic_fl5',
+                'suzuki-jimny': 'jimny_jb64',
+                'toyota-hiace': 'hiace_200',
+                'toyota-prius': 'prius_60',
+                'toyota-crown': 'crown_2024',
+                'kcar-special': 'kcar_special'
+            };
+            const cmsId = idMapping[currentModelId] || currentModelId.replace(/-/g, '_');
+            const cmsPlan = plans.find(p => p.id === cmsId);
+            
+            if (cmsPlan && cmsPlan.items && cmsPlan.items.length > 0) {
+                rawPlans = cmsPlan.items.map((item: any, idx: number) => ({
+                    id: `cms-${idx}`,
+                    brand: (item.name || '').split(/[\s　]/)[0] || 'Unknown',
+                    grade: item.name || '',
+                    price: item.price || '0',
+                    priceTax: '',
+                    description: item.description || '',
+                    badge: item.badge || '',
+                    image: item.image || '',
+                    isRecommended: !!(item.badge && (item.badge === 'おすすめ' || item.badge === '推奨構成')),
+                    category: (item.name || '').toLowerCase().includes('grgo') ? 'grgo' : 'パンテーラ',
+                    features: {
+                        triple: item.triple ?? false,
+                        tilt: item.tilt ?? false,
+                        bonnet: item.bonnet ?? false,
+                        microwave: item.microwave ?? false,
+                        siren: item.siren ?? false,
+                        algorithm: item.algorithm ?? false,
+                        canguard: item.canguard ?? false,
+                    }
+                }));
+            }
+        }
+    } catch (e) {
+        console.error("CMS Data Error:", e);
+    }
 
-    const activePlans = currentVehicle.plans || basePlans;
-    const filteredPlans = activePlans.filter(p => {
+    const filteredPlans = rawPlans.filter((p: any) => {
+        if (!p) return false;
         if (filter === 'all') return true;
-        if (filter === 'microwave') return p.features.microwave;
-        return p.category === filter;
+        if (filter === 'microwave') return p.features?.microwave;
+        const categoryMatch = p.category && p.category.includes(filter);
+        const brandMatch = p.brand && p.brand.toLowerCase().includes(filter.toLowerCase());
+        return categoryMatch || brandMatch;
     });
 
     // Update Document Title for SEO

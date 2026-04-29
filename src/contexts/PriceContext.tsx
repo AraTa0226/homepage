@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 import cmsData from '../data/cms.json';
+import { client } from '../lib/microcms';
 
 // ────────────────────────────────────────────────────────
 // LocalStorage バージョン管理
@@ -142,17 +143,23 @@ interface PriceContextType {
   auditionSpeakers: AuditionBrand[];
   setAuditionSpeakers: (speakers: AuditionBrand[]) => void;
   saveSiteData: (updates: any) => void;
+  heroAlert: HeroAlert;
+  setHeroAlert: (alert: HeroAlert) => void;
 }
 
 export interface RecruitmentInfo {
-  visible: boolean;
+  active: boolean;
   title: string;
-  message: string;
-  requirements: string[];
-  showRequirements: boolean;
-  salary: string;
-  showSalary: boolean;
-  contactInfo: string;
+  description: string;
+  link: string;
+  image?: string;
+}
+
+export interface HeroAlert {
+  active: boolean;
+  text: string;
+  link?: string;
+  badge?: string;
 }
 
 export interface EmergencyAnnouncement {
@@ -163,14 +170,10 @@ export interface EmergencyAnnouncement {
 }
 
 const initialRecruitment: RecruitmentInfo = {
-  visible: false,
+  active: false,
   title: "採用情報",
-  message: "一緒にカーオーディオの世界を盛り上げませんか？経験者優遇・未経験歓迎",
-  requirements: ["車が好きな方", "元気で明るい方", "要普通免許"],
-  showRequirements: true,
-  salary: "基本給 応相談（経験・能力を考慮の上決定）",
-  showSalary: true,
-  contactInfo: "お電話にてお問い合わせください"
+  description: "共に「安心」を創る、インストーラー・スタッフを募集しています。未経験者歓迎。",
+  link: "/reservation"
 };
 
 const initialGuides: KnowledgeGuide[] = [
@@ -1657,8 +1660,7 @@ export const PriceProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   const initialData = (cmsData as any) || {};
 
   const [recruitment, setRecruitmentState] = useState<RecruitmentInfo>(initialData.recruitment || initialRecruitment);
-  const [audioRecruitment, setAudioRecruitmentState] = useState<RecruitmentInfo>(initialData.audioRecruitment || initialRecruitment);
-  const [securityRecruitment, setSecurityRecruitmentState] = useState<RecruitmentInfo>(initialData.securityRecruitment || initialRecruitment);
+  const [heroAlert, setHeroAlertState] = useState<HeroAlert>(initialData.heroAlert || { active: false, text: "" });
   const [auditionSpeakers, setAuditionSpeakersState] = useState<AuditionBrand[]>(() => {
     return (cmsData as any).auditionSpeakers || [];
   });
@@ -1675,22 +1677,10 @@ export const PriceProvider: React.FC<{ children: ReactNode }> = ({ children }) =
     }
   };
 
-  const setRecruitment = (info: RecruitmentInfo) => {
-    setRecruitmentState(info);
-    localStorage.setItem('ang_recruitment', JSON.stringify(info));
-    saveSiteData({ recruitment: info });
-  };
-
-  const setAudioRecruitment = (info: RecruitmentInfo) => {
-    setAudioRecruitmentState(info);
-    localStorage.setItem('ang_audio_recruitment', JSON.stringify(info));
-    saveSiteData({ audioRecruitment: info });
-  };
-
-  const setSecurityRecruitment = (info: RecruitmentInfo) => {
-    setSecurityRecruitmentState(info);
-    localStorage.setItem('ang_security_recruitment', JSON.stringify(info));
-    saveSiteData({ securityRecruitment: info });
+  const setHeroAlert = (alert: HeroAlert) => {
+    setHeroAlertState(alert);
+    localStorage.setItem('ang_hero_alert', JSON.stringify(alert));
+    saveSiteData({ heroAlert: alert });
   };
 
   const [isMounted, setIsMounted] = React.useState(false);
@@ -1711,6 +1701,69 @@ export const PriceProvider: React.FC<{ children: ReactNode }> = ({ children }) =
         .catch(console.error);
     }
     setIsMounted(true);
+  }, []);
+
+  // microCMS Connect
+  React.useEffect(() => {
+    const fetchCMSData = async () => {
+      try {
+        const [heroRes, recruitRes, plansRes] = await Promise.all([
+          client.get({ endpoint: 'hero-alert' }).catch(() => null),
+          client.get({ endpoint: 'recruitment' }).catch(() => null),
+          client.get({ endpoint: 'plans', queries: { limit: 100 } }).catch(() => null)
+        ]);
+
+        if (heroRes) {
+          setHeroAlertState({
+            active: heroRes.active,
+            text: heroRes.text,
+            link: heroRes.link,
+            badge: heroRes.badge
+          });
+        }
+        
+        if (recruitRes) {
+          setRecruitmentState({
+            active: recruitRes.visible ?? recruitRes.active ?? true,
+            visible: recruitRes.visible ?? recruitRes.active ?? true,
+            title: recruitRes.title || "採用情報",
+            message: recruitRes.message || "",
+            requirements: recruitRes.requirements || [""],
+            salary: recruitRes.salary || "",
+            contactInfo: recruitRes.contactInfo || "お電話にてお問い合わせください"
+          });
+        }
+
+        if (plansRes && plansRes.contents && plansRes.contents.length > 0) {
+          // microCMSのデータ構造を正規化
+          const cmsPlans = plansRes.contents.map((category: any) => ({
+            ...category,
+            items: (category.items || []).map((item: any) => ({
+              ...item,
+              image: item.image?.url || item.image || ""
+            }))
+          }));
+
+          // ローカルデータとマージ（microCMS側に同じIDがあれば上書き、なければローカルを維持）
+          setPlans((prevPlans: PlanCategory[]) => {
+            const merged = [...prevPlans];
+            cmsPlans.forEach((newPlan: any) => {
+              const index = merged.findIndex(p => p.id === newPlan.id);
+              if (index !== -1) {
+                merged[index] = newPlan;
+              } else {
+                merged.push(newPlan);
+              }
+            });
+            return merged;
+          });
+        }
+      } catch (err) {
+        console.warn('microCMS sync failed, using local/cached data:', err);
+      }
+    };
+
+    fetchCMSData();
   }, []);
 
   React.useEffect(() => {
@@ -1860,11 +1913,13 @@ export const PriceProvider: React.FC<{ children: ReactNode }> = ({ children }) =
       emergencyAnnouncement,
       setEmergencyAnnouncement,
       recruitment,
-      setRecruitment,
-      audioRecruitment,
-      setAudioRecruitment,
-      securityRecruitment,
-      setSecurityRecruitment,
+      setRecruitment: (info: RecruitmentInfo) => {
+        setRecruitmentState(info);
+        localStorage.setItem('ang_recruitment', JSON.stringify(info));
+        saveSiteData({ recruitment: info });
+      },
+      heroAlert,
+      setHeroAlert,
       auditionSpeakers,
       setAuditionSpeakers,
       saveSiteData

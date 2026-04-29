@@ -19,7 +19,7 @@ import {
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-export const SecuritySitemapPage: React.FC = () => {
+const SecuritySitemapPage: React.FC = () => {
     const navigate = useNavigate();
     const [scrolled, setScrolled] = useState(false);
 
@@ -246,3 +246,5 @@ export const SecuritySitemapPage: React.FC = () => {
         </div>
     );
 };
+
+export default SecuritySitemapPage;

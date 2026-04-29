@@ -25,7 +25,7 @@ import {
 import { SafeImage } from '../../components/ui/SafeImage';
 import { useNavigate } from 'react-router-dom';
 
-export const MaintainPage: React.FC = () => {
+const MaintainPage: React.FC = () => {
     const navigate = useNavigate();
     const [scrolled, setScrolled] = useState(false);
 
@@ -293,3 +293,5 @@ export const MaintainPage: React.FC = () => {
         </div>
     );
 };
+
+export default MaintainPage;

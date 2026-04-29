@@ -24,7 +24,7 @@ interface FAQ {
     category: string;
 }
 
-export const FAQPage: React.FC = () => {
+const FAQPage: React.FC = () => {
     const navigate = useNavigate();
     const [scrolled, setScrolled] = useState(false);
     const [activeTab, setActiveTab] = useState('すべて');
@@ -247,3 +247,5 @@ export const FAQPage: React.FC = () => {
         </div>
     );
 };
+
+export default FAQPage;
