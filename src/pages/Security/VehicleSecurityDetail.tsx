@@ -1707,19 +1707,20 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                 'toyota-landcruiser-250': 'land_cruiser_250',
                 'toyota-landcruiser-prado-150-200': 'land_cruiser_prado',
                 'toyota-landcruiser-70': 'land_cruiser_70',
-                'toyota-alphard-vellfire': 'alphard_40_30',
+                'toyota-alphard-vellfire': 'alphard_40',
                 'lexus-lx': 'lexus_lx',
                 'lexus-rx': 'lexus_rx',
                 'lexus-nx': 'lexus_nx',
                 'lexus-gx550': 'lexus_gx550',
                 'lexus-lbx': 'lexus_lbx',
+                'lexus-lm': 'lexus_lx',
                 'toyota-harrier': 'harrier_80',
                 'honda-civic-typer': 'civic_fl5',
                 'suzuki-jimny': 'jimny_jb64',
-                'toyota-hiace': 'hiace_200',
+                'toyota-hiace': 'hiace_200_full',
                 'toyota-prius': 'prius_60',
                 'toyota-crown': 'crown_2024',
-                'kcar-special': 'kcar_special'
+                'kcar-special': 'kcar_special',
             };
             const cmsId = idMapping[currentModelId] || currentModelId.replace(/-/g, '_');
             const cmsPlan = plans.find(p => p.id === cmsId);
