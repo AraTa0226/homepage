@@ -1916,7 +1916,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                         </div>
                                         <div>
                                             <h3 className="text-xl md:text-2xl font-black tracking-tight italic uppercase text-slate-800 leading-none">
-                                                ANG Original Package <span className="text-emerald-600 font-black ml-1">{isAnalogKey ? 'Analog Protection' : 'CANガード'}</span>
+                                                エナジー <span className="text-emerald-600 font-black ml-1">{isAnalogKey ? 'Analog Protection' : 'CANインベーダー対策パッケージ'}</span>
                                             </h3>
                                             <div className="h-1 w-20 bg-emerald-500/20 mt-2 rounded-full" />
                                         </div>
