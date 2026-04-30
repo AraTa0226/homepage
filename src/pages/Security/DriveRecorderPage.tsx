@@ -35,6 +35,8 @@ import { SafeImage } from '../../components/ui/SafeImage';
 
 // microCMS商品データをcms.json形式に変換するヘルパー
 function convertCmsProduct(p: DashcamProduct): any {
+    // microCMSに画像未アップロードの場合はslugからローカルパスを推定
+    const localImagePath = `/images/Security/drive_recorder/${p.slug}.webp`;
     return {
         name: p.name,
         price: p.price.replace(/[^0-9]/g, ''), // 数字のみ抽出
@@ -43,7 +45,7 @@ function convertCmsProduct(p: DashcamProduct): any {
         description: p.description || '',
         link: p.link || '',
         youtubeId: p.youtubeId || '',
-        image: p.image?.url || '',
+        image: p.image?.url || localImagePath,
         featureImage: p.featureImage?.url || '',
         // 改行区切りテキスト → 配列に変換
         features: p.features ? p.features.split('\n').filter(Boolean) : [],
