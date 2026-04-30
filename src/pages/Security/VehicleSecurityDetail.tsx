@@ -1726,27 +1726,31 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             const cmsPlan = plans.find(p => p.id === cmsId);
             
             if (cmsPlan && cmsPlan.items && cmsPlan.items.length > 0) {
-                rawPlans = cmsPlan.items.map((item: any, idx: number) => ({
-                    id: `cms-${idx}`,
-                    brand: (item.name || '').split(/[\s　]/)[0] || 'Unknown',
-                    grade: item.name || '',
-                    price: item.price || '0',
-                    priceTax: '',
-                    description: item.description || '',
-                    badge: item.badge || '',
-                    image: item.image || '',
-                    isRecommended: !!(item.badge && (item.badge === 'おすすめ' || item.badge === '推奨構成')),
-                    category: (item.name || '').toLowerCase().includes('grgo') ? 'grgo' : 'パンテーラ',
-                    features: {
-                        triple: item.triple ?? false,
-                        tilt: item.tilt ?? false,
-                        bonnet: item.bonnet ?? false,
-                        microwave: item.microwave ?? false,
-                        siren: item.siren ?? false,
-                        algorithm: item.algorithm ?? false,
-                        canguard: item.canguard ?? false,
-                    }
-                }));
+                rawPlans = cmsPlan.items.map((item: any, idx: number) => {
+                    const basePrice = parseInt((item.price || '0').replace(/,/g, ''), 10);
+                    const taxPrice = Math.floor(basePrice * 1.1);
+                    return {
+                        id: `cms-${idx}`,
+                        brand: (item.name || '').split(/[\s　]/)[0] || 'Unknown',
+                        grade: item.name || '',
+                        price: item.price || '0',
+                        priceTax: taxPrice.toLocaleString(),
+                        description: item.description || '',
+                        badge: item.badge || '',
+                        image: item.image || '',
+                        isRecommended: !!(item.badge && (item.badge === 'おすすめ' || item.badge === '推奨構成')),
+                        category: (item.name || '').toLowerCase().includes('grgo') ? 'grgo' : 'パンテーラ',
+                        features: {
+                            triple: item.triple ?? false,
+                            tilt: item.tilt ?? false,
+                            bonnet: item.bonnet ?? false,
+                            microwave: item.microwave ?? false,
+                            siren: item.siren ?? false,
+                            algorithm: item.algorithm ?? false,
+                            canguard: item.canguard ?? false,
+                        }
+                    };
+                });
             }
         }
     } catch (e) {
