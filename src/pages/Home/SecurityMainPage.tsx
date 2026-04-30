@@ -70,7 +70,12 @@ const MegaMenu = ({ show, categories, theme, onClose, navigate, handleMenuClick 
                                             if (cat.items && cat.isExternal) {
                                                 window.open(cat.path, '_blank');
                                             } else {
-                                                navigate(cat.path);
+                                                const element = document.getElementById(cat.id);
+                                                if (element) {
+                                                    element.scrollIntoView({ behavior: 'smooth' });
+                                                } else {
+                                                    navigate(cat.path);
+                                                }
                                             }
                                         }}
                                         className="flex flex-col gap-1 border-b border-emerald-500/10 pb-3 group/header cursor-pointer"
@@ -1037,7 +1042,7 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                                                     <div key={catIdx} className="p-5 border-b border-gray-100 last:border-0">
                                                                         <div className="flex flex-col gap-1 mb-4 select-none border-l-2 border-emerald-500 pl-4">
                                                                             <span className="text-[9px] font-black tracking-[0.2em] text-emerald-500 uppercase">{cat.subtitle}</span>
-                                                                            <span className={`text-xs font-black tracking-tight text-gray-900 transition-colors ${cat.id !== 'security_full' ? 'cursor-pointer hover:text-emerald-600' : ''}`} onClick={() => { if (cat.id !== 'security_full') { setIsMobileMenuOpen(false); navigate(cat.path); } }}>
+                                                                             <span className="text-xs font-black tracking-tight text-gray-900 transition-colors cursor-pointer hover:text-emerald-600" onClick={() => { setIsMobileMenuOpen(false); const element = document.getElementById(cat.id); if (element) { element.scrollIntoView({ behavior: 'smooth' }); } else { navigate(cat.path); } }}>
                                                                                 {cat.title}
                                                                             </span>
                                                                         </div>
