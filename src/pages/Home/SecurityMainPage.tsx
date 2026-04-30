@@ -1103,13 +1103,21 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                             </div>
 
                             <div className="p-6 border-t border-gray-100 space-y-3">
-                                <a href="tel:0925035437" className="flex items-center justify-center gap-3 w-full bg-emerald-600 text-white py-4 rounded-2xl font-black text-sm tracking-widest shadow-xl shadow-emerald-500/10">
-                                    <Phone className="w-5 h-5" />
-                                    CALL 092-503-5437
+                                <a 
+                                    href="https://page.line.me/312qjhsq?openQrModal=true" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="flex items-center justify-center gap-3 w-full bg-[#06C755] text-white py-4 rounded-2xl font-black text-sm tracking-widest shadow-xl shadow-green-500/10"
+                                >
+                                    <MessageSquare className="w-5 h-5" />
+                                    LINEで相談
                                 </a>
-                                <button onClick={() => { setIsMobileMenuOpen(false); navigate('/reservation'); }} className="flex items-center justify-center gap-3 w-full bg-gray-100 text-gray-900 py-4 rounded-2xl font-black text-sm tracking-widest border border-gray-100">
-                                    <CalendarIcon className="w-5 h-5" />
-                                    RESERVATION
+                                <button 
+                                    onClick={() => { setIsMobileMenuOpen(false); navigate('/reservation'); }} 
+                                    className="flex items-center justify-center gap-3 w-full bg-gray-100 text-gray-900 py-4 rounded-2xl font-black text-sm tracking-widest border border-gray-100"
+                                >
+                                    <Mail className="w-5 h-5" />
+                                    メールで問い合わせ
                                 </button>
                             </div>
                         </motion.div>
