@@ -20,8 +20,8 @@ export const VaultGrid: React.FC<VaultGridProps> = ({ categories, onCategoryClic
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.1 }}
-                    onClick={() => onCategoryClick(cat)}
-                    className={`group relative rounded-[2.5rem] overflow-hidden cursor-pointer shadow-2xl border border-white/10 w-full transition-all duration-500 ${cat.gridClass || "col-span-1"
+                    onClick={() => cat.id !== 'security_full' && onCategoryClick(cat)}
+                    className={`group relative rounded-[2.5rem] overflow-hidden ${cat.id !== 'security_full' ? 'cursor-pointer' : ''} shadow-2xl border border-white/10 w-full transition-all duration-500 ${cat.gridClass || "col-span-1"
                         } h-full min-h-[320px]`}
                 >
                     {/* Background Image */}
@@ -117,6 +117,7 @@ export const VaultGrid: React.FC<VaultGridProps> = ({ categories, onCategoryClic
                                                     "ドライブレコーダー": { id: "dashcam" },
                                                     "レーダー探知機": { id: "security_radar" },
                                                     "デジタルインナーミラー": { id: "digital_mirror", path: "/security/digital_mirror" },
+                                                    "送迎バス 置き去り防止支援装置": { id: "security_okizariboushi", path: "/security/okizariboushi" },
                                                     "店内の常時試聴ユニット": { id: "audition-showcase", isAnchor: true },
                                                     "施工ブログ / 店舗詳細": { id: "contact", isAnchor: true }
                                                 };
