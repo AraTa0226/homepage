@@ -37,3 +37,59 @@ export async function fetchDashcamProducts(): Promise<DashcamProduct[]> {
         return [];
     }
 }
+
+// レーダー探知機商品の型定義
+export interface RadarProduct {
+    id: string;
+    name: string;
+    price: string;
+    badge: string;
+    slug: string;
+    description?: string;
+    link?: string;
+    features?: string; // 改行区切りのテキスト
+    image?: { url: string };
+    featureImage?: { url: string };
+}
+
+// レーダー探知機商品一覧取得
+export async function fetchRadarProducts(): Promise<RadarProduct[]> {
+    try {
+        const response = await client.getList<RadarProduct>({
+            endpoint: 'radar',
+            queries: { limit: 50 },
+        });
+        return response.contents;
+    } catch (error) {
+        console.error('[microCMS] Failed to fetch radar products:', error);
+        return [];
+    }
+}
+
+// デジタルインナーミラー商品の型定義
+export interface DigitalMirrorProduct {
+    id: string;
+    name: string;
+    price: string;
+    badge: string;
+    slug: string;
+    description?: string;
+    link?: string;
+    features?: string; // 改行区切りのテキスト
+    image?: { url: string };
+    featureImage?: { url: string };
+}
+
+// デジタルインナーミラー商品一覧取得
+export async function fetchDigitalMirrorProducts(): Promise<DigitalMirrorProduct[]> {
+    try {
+        const response = await client.getList<DigitalMirrorProduct>({
+            endpoint: 'digital_mirror',
+            queries: { limit: 50 },
+        });
+        return response.contents;
+    } catch (error) {
+        console.error('[microCMS] Failed to fetch digital mirror products:', error);
+        return [];
+    }
+}

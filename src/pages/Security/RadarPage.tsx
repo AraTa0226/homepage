@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { usePrices, formatPrice } from '../../contexts/PriceContext';
@@ -21,6 +21,25 @@ import {
     Video
 } from 'lucide-react';
 import { SafeImage } from '../../components/ui/SafeImage';
+import { fetchRadarProducts, RadarProduct } from '../../lib/microcms';
+
+// microCMS商品データをcms.json形式に変換するヘルパー
+function convertCmsProduct(p: RadarProduct): any {
+    // microCMSに画像未アップロードの場合はslugからローカルパスを推定
+    const localImagePath = `/images/Security/radar/${p.slug}.webp`;
+
+    return {
+        name: p.name,
+        price: p.price.replace(/[^0-9]/g, ''), // 数字のみ抽出
+        badge: p.badge,
+        slug: p.slug,
+        description: p.description,
+        link: p.link,
+        image: p.image?.url || localImagePath,
+        featureImage: p.featureImage?.url || undefined,
+        features: p.features ? p.features.split('\n').filter(Boolean) : [],
+    };
+}
 
 // アイコンマッピングの定義
 const iconMap: Record<string, any> = {
@@ -41,14 +60,33 @@ export const RadarPage: React.FC = () => {
     const navigate = useNavigate();
     const { productId } = useParams();
     const [selectedItem, setSelectedItem] = useState<any | null>(null);
+    const [cmsProducts, setCmsProducts] = useState<any[]>([]);
 
     const categoryId = 'radar';
     const currentCategory = plans.find(p => p.id === categoryId);
 
+    // microCMSからデータを取得
+    useEffect(() => {
+        let isMounted = true;
+        const loadCmsData = async () => {
+            const products = await fetchRadarProducts();
+            if (isMounted && products.length > 0) {
+                // cms.json形式に変換
+                const converted = products.map(convertCmsProduct);
+                setCmsProducts(converted);
+            }
+        };
+        loadCmsData();
+        return () => { isMounted = false; };
+    }, []);
+
+    // 表示する商品のリスト（CMS優先、なければローカル）
+    const displayItems = cmsProducts.length > 0 ? cmsProducts : (currentCategory?.items || []);
+
     // URLのproductIdに基づいてselectedItemを同期
     React.useEffect(() => {
-        if (productId && currentCategory) {
-            const item = currentCategory.items.find((i: any) => i.slug === productId);
+        if (productId) {
+            const item = displayItems.find((i: any) => i.slug === productId);
             if (item) {
                 setSelectedItem(item);
             } else {
@@ -57,7 +95,7 @@ export const RadarPage: React.FC = () => {
         } else {
             setSelectedItem(null);
         }
-    }, [productId, currentCategory]);
+    }, [productId, displayItems]);
 
     React.useEffect(() => {
         document.title = "レーダー探知機施工 | 福岡市・大野城の専門店 ANG";
@@ -177,7 +215,7 @@ export const RadarPage: React.FC = () => {
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {currentCategory?.items.map((item, i) => (
+                        {displayItems.map((item, i) => (
                             <motion.div
                                 key={i}
                                 initial={{ opacity: 0, y: 20 }}
