@@ -2169,9 +2169,10 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                         </div>
                         <div className="shrink-0">
                             <button
-                                onClick={() => navigate('/reservation')}
-                                className="w-full md:w-auto px-8 py-4 bg-slate-900 text-white font-black italic rounded-xl transition-all hover:bg-emerald-600 shadow-lg shadow-slate-900/10 active:scale-95">
-                                別プランを相談する
+                                onClick={() => window.open('https://page.line.me/312qjhsq?openQrModal=true', '_blank')}
+                                className="w-full md:w-auto px-8 py-4 bg-transparent border-2 border-slate-200 text-slate-900 font-black italic rounded-xl transition-all hover:bg-slate-900 hover:text-white hover:border-slate-900 flex items-center justify-center gap-2"
+                            >
+                                <MessageSquare className="w-4 h-4" /> V2プランをLINEで聞く
                             </button>
                         </div>
                     </div>
