@@ -110,7 +110,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'rx-grgo-zv-full',
             brand: 'Grgo',
             grade: 'ZV II ＋ CANガード ＋ トリプル',
-            description: 'スマート連動とトリプルセンサーを含むANG推奨パッケージ。',
+            description: '純正ロック連動とトリプルセンサーを含むANG推奨パッケージ。',
             price: '314,600',
             priceTax: '346,060',
             features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
@@ -186,7 +186,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'nx-grgo-zv-full',
             brand: 'Grgo',
             grade: 'ZV II ＋ CANガード ＋ トリプル',
-            description: 'スマート連動とトリプルセンサー。NXオーナーに一番支持される構成。',
+            description: '純正ロック連動とトリプルセンサー。NXオーナーに一番支持される構成。',
             price: '314,600',
             priceTax: '346,060',
             features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
@@ -602,8 +602,8 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lc150-grgo-zv-keyless',
             brand: 'Grgo',
-            grade: 'ZV II ＋ スマキー連動/スマクロ ＋ トリプル',
-            description: 'スマートキーに連動し、日常の利便性を損なわず愛車を守る基本パッケージ。',
+            grade: 'ZV II ＋ 純正ロック連動/スマクロ ＋ トリプル',
+            description: '純正ロックに連動し、日常の利便性を損なわず愛車を守る基本パッケージ。',
             price: '260,855',
             priceTax: '286,940',
             features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
@@ -622,8 +622,8 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lc150-grgo-zvt-keyless',
             brand: 'Grgo',
-            grade: 'ZVT II ＋ スマキー連動/スマクロ',
-            description: '傾斜センサー含むフルセンサー構成にスマートキー連動をプラスし、利便性を高めた一台。',
+            grade: 'ZVT II ＋ 純正ロック連動/スマクロ',
+            description: '傾斜センサー含むフルセンサー構成に純正ロック連動をプラスし、利便性を高めた一台。',
             price: '299,600',
             priceTax: '329,560',
             isRecommended: true,
@@ -643,8 +643,8 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lc150-panthera-z106-keyless',
             brand: 'Panthera',
-            grade: 'Z106 ＋ スマキー連動/スマクロ ＋ トリプル',
-            description: 'パンテーラの緻密な感度はそのままに、スマートキーに連動し日常の利便性を確保。',
+            grade: 'Z106 ＋ 純正ロック連動/スマクロ ＋ トリプル',
+            description: 'パンテーラの緻密な感度はそのままに、純正ロックに連動し日常の利便性を確保。',
             price: '321,300',
             priceTax: '353,430',
             features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
@@ -663,8 +663,8 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lc150-panthera-z306-keyless',
             brand: 'Panthera',
-            grade: 'Z306 ＋ スマキー連動/スマクロ',
-            description: '不動の人気Z306にスマートキー連動をプラス。高い防犯性能と使いやすさを両立。',
+            grade: 'Z306 ＋ 純正ロック連動/スマクロ',
+            description: '不動の人気Z306に純正ロック連動をプラス。高い防犯性能と使いやすさを両立。',
             price: '348,300',
             priceTax: '383,130',
             features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
@@ -683,8 +683,8 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'lc150-panthera-z706-keyless',
             brand: 'Panthera',
-            grade: 'Z706 ＋ スマキー連動/スマクロ',
-            description: 'ANG最強の組み合わせにスマートキー連動をプラス。利便性を極めた最上位パッケージ。',
+            grade: 'Z706 ＋ 純正ロック連動/スマクロ',
+            description: 'ANG最強の組み合わせに純正ロック連動をプラス。利便性を極めた最上位パッケージ。',
             price: '438,300',
             priceTax: '482,130',
             features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: false, ir: true },
@@ -708,8 +708,8 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'harrier-grgo-zv-smaclo',
             brand: 'Grgo',
-            grade: 'ZV II ＋ スマキー連動/スマクロ ＋ トリプル',
-            description: '信頼のZV IIにスマートキー連動（スマクロ）を追加。利便性を損なわず最新の盗難手口からガード。',
+            grade: 'ZV II ＋ 純正ロック連動/スマクロ ＋ トリプル',
+            description: '信頼のZV IIに純正ロック連動（スマクロ）を追加。利便性を損なわず最新の盗難手口からガード。',
             price: '293,800',
             priceTax: '323,180',
             features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
@@ -728,7 +728,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'harrier-grgo-zvt-smaclo',
             brand: 'Grgo',
-            grade: 'ZVT II ＋ スマキー連動/スマクロ',
+            grade: 'ZVT II ＋ 純正ロック連動/スマクロ',
             description: '傾斜センサーを標準装備した最上位Grgo。スマクロ機能で、より今の時代にあったセキュリティーとして選ばれています。',
             price: '320,800',
             priceTax: '352,880',
@@ -749,7 +749,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'harrier-panthera-z106-smaclo',
             brand: 'Panthera',
-            grade: 'Z106 ＋ スマキー連動/スマクロ ＋ トリプル',
+            grade: 'Z106 ＋ 純正ロック連動/スマクロ ＋ トリプル',
             description: 'パンテーラの緻密なアルゴリズムと、スマクロの利便性を融合。大きな車体のハリアーに最適なパッケージ。',
             price: '363,800',
             priceTax: '400,180',
@@ -769,7 +769,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'harrier-panthera-z306-smaclo',
             brand: 'Panthera',
-            grade: 'Z306 ＋ スマキー連動/スマクロ',
+            grade: 'Z306 ＋ 純正ロック連動/スマクロ',
             description: '人気の傾斜センサーを標準装備したZ306。最新のスマクロ機能を加え、最新手口への対策と使い勝手を両立。',
             price: '390,800',
             priceTax: '429,880',
@@ -790,7 +790,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'harrier-panthera-z706-smaclo',
             brand: 'Panthera',
-            grade: 'Z706 ＋ スマキー連動/スマクロ',
+            grade: 'Z706 ＋ 純正ロック連動/スマクロ',
             description: 'パンテーラ最高峰。全センサー、バックアップサイレンのフルスペックに、スマクロの最新CAN対策を統合。',
             price: '480,800',
             priceTax: '528,880',
@@ -814,8 +814,8 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'av40-grgo-zv-keyless',
             brand: 'Grgo',
-            grade: 'ZV II ＋ スマキー連動/スマクロ ＋ トリプル',
-            description: 'スマートキー連動で利便性を高めつつ、トリプルセンサーで愛車をしっかり保護します。',
+            grade: 'ZV II ＋ 純正ロック連動/スマクロ ＋ トリプル',
+            description: '純正ロック連動で利便性を高めつつ、トリプルセンサーで愛車をしっかり保護します。',
             price: '292,959',
             priceTax: '322,255',
             features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
@@ -834,8 +834,8 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'av40-grgo-zvt-keyless',
             brand: 'Grgo',
-            grade: 'ZVT II ＋ スマキー連動/スマクロ',
-            description: '傾斜センサー含むZVT IIにスマートキー連動をプラス。毎日の使いやすさと安心を両立。',
+            grade: 'ZVT II ＋ 純正ロック連動/スマクロ',
+            description: '傾斜センサー含むZVT IIに純正ロック連動をプラス。毎日の使いやすさと安心を両立。',
             price: '294,364',
             priceTax: '323,800',
             features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
@@ -855,8 +855,8 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'av40-panthera-z106-keyless',
             brand: 'Panthera',
-            grade: 'Z106 ＋ スマキー連動/スマクロ ＋ トリプル',
-            description: 'パンテーラの緻密なアルゴリズムにスマートキー連動を統合し、実用性を極めたプラン。',
+            grade: 'Z106 ＋ 純正ロック連動/スマクロ ＋ トリプル',
+            description: 'パンテーラの緻密なアルゴリズムに純正ロック連動を統合し、実用性を極めたプラン。',
             price: '333,455',
             priceTax: '366,800',
             features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
@@ -875,8 +875,8 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'av40-panthera-z306-keyless',
             brand: 'Panthera',
-            grade: 'Z306 ＋ スマキー連動/スマクロ',
-            description: '多重センサーのZ306とスマートキー連動で、隙のない防犯体制とスムーズな操作を実現。',
+            grade: 'Z306 ＋ 純正ロック連動/スマクロ',
+            description: '多重センサーのZ306と純正ロック連動で、隙のない防犯体制とスムーズな操作を実現。',
             price: '358,000',
             priceTax: '393,800',
             features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
@@ -895,8 +895,8 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'av40-panthera-z706-keyless',
             brand: 'Panthera',
-            grade: 'Z706 ＋ スマキー連動/スマクロ',
-            description: 'フルスペックパンテーラにスマートキー連動をプラス。究極の防犯と快適さの到達点。',
+            grade: 'Z706 ＋ 純正ロック連動/スマクロ',
+            description: 'フルスペックパンテーラに純正ロック連動をプラス。究極の防犯と快適さの到達点。',
             price: '439,818',
             priceTax: '483,800',
             features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: false, ir: true },
@@ -950,8 +950,8 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'kcar-grgo-zv-smart',
             brand: 'Grgo',
-            grade: 'ZV II ＋ スマキー連動/スマクロ',
-            description: 'ZV IIにスマートキー連動（スマクロ）を追加。利便性を損なわず、最新の手口から愛車を守ります。',
+            grade: 'ZV II ＋ 純正ロック連動/スマクロ',
+            description: 'ZV IIに純正ロック連動（スマクロ）を追加。利便性を損なわず、最新の手口から愛車を守ります。',
             price: '207,800',
             priceTax: '228,580',
             features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
@@ -971,8 +971,8 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'kcar-grgo-zvt-smart',
             brand: 'Grgo',
-            grade: 'ZVT II ＋ スマキー連動/スマクロ',
-            description: '最高位Grgoにスマートキー連動を追加。あらゆる衝撃・傾斜検知に利便性をプラスした究極の軽カープラン。',
+            grade: 'ZVT II ＋ 純正ロック連動/スマクロ',
+            description: '最高位Grgoに純正ロック連動を追加。あらゆる衝撃・傾斜検知に利便性をプラスした究極の軽カープラン。',
             price: '264,600',
             priceTax: '291,060',
             features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
@@ -981,7 +981,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'kcar-panthera-z106',
             brand: 'Panthera',
-            grade: 'Z106 ＋ スマキー連動/スマクロ',
+            grade: 'Z106 ＋ 純正ロック連動/スマクロ',
             description: 'パンテーラの緻密な警備。スマクロ対応により、純正キーの快適さを維持しながらハイエンドブランドの安心を。',
             price: '293,800',
             priceTax: '323,180',
@@ -991,7 +991,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'kcar-panthera-z306',
             brand: 'Panthera',
-            grade: 'Z306 ＋ スマキー連動/スマクロ',
+            grade: 'Z306 ＋ 純正ロック連動/スマクロ',
             description: '人気センサーを網羅したZ306にスマクロを追加。ホイール盗難からイタズラまで、全方位で車両を監視。',
             price: '315,800',
             priceTax: '347,380',
@@ -1002,7 +1002,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'kcar-panthera-z706',
             brand: 'Panthera',
-            grade: 'Z706 ＋ スマキー連動/スマクロ',
+            grade: 'Z706 ＋ 純正ロック連動/スマクロ',
             description: '全センサー解放。マイクロ波による接近検知やバックアップサイレンまで備えた、K-CARの防犯を極めるための頂点プラン。',
             price: '395,800',
             priceTax: '435,380',
@@ -1017,7 +1017,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'jimny-grgo-1vs',
             brand: 'Grgo',
             grade: '1Vs II',
-            description: '操作性に優れたスマートキー連動モデル。純正キーの施錠・解錠に連動して警備を開始でき、初めての方でも安心。',
+            description: '操作性に優れた純正ロック連動モデル。純正キーの施錠・解錠に連動して警備を開始でき、初めての方でも安心。',
             price: '142,800',
             priceTax: '157,080',
             features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
@@ -1103,7 +1103,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'fl5-grgo-zvt-full',
             brand: 'Grgo',
             grade: 'ZVT II ＋ CANガード',
-            description: '最上位ZVT IIにスマートキー連動と物理CANガードを追加。利便性と鉄壁の防犯性能を両立した推奨パッケージ。',
+            description: '最上位ZVT IIに純正ロック連動と物理CANガードを追加。利便性と鉄壁の防犯性能を両立した推奨パッケージ。',
             price: '309,800',
             priceTax: '340,780',
             isRecommended: true,
@@ -1189,7 +1189,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             id: 'prius-grgo-5vf',
             brand: 'Grgo',
             grade: '5Vf II',
-            description: '薄型1WAYリモコンモデル。オプション追加でスマートキー連動も可能（別途費用）。スマートな運用を求める方に。',
+            description: '薄型1WAYリモコンモデル。オプション追加で純正ロック連動も可能（別途費用）。スマートな運用を求める方に。',
             price: '205,600',
             priceTax: '226,160',
             features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
@@ -1198,7 +1198,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'prius-grgo-zv-smaclo',
             brand: 'Grgo',
-            grade: 'ZV II ＋ スマキー連動/スマクロ',
+            grade: 'ZV II ＋ 純正ロック連動/スマクロ',
             description: 'ZV IIにスマクロ機能を追加。CANインベーダーやリレーアタックに対抗する最新のデジタルセキュリティ。',
             price: '258,600',
             priceTax: '284,460',
@@ -1218,7 +1218,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'prius-grgo-zvt-smaclo',
             brand: 'Grgo',
-            grade: 'ZVT II ＋ スマキー連動/スマクロ',
+            grade: 'ZVT II ＋ 純正ロック連動/スマクロ',
             description: '傾斜・トリプルセンサーを同梱した最上位Grgo。ジャッキアップやホイール盗難も逃さず検知。',
             price: '308,600',
             priceTax: '339,460',
@@ -1249,7 +1249,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'prius-panthera-z106-smaclo',
             brand: 'Panthera',
-            grade: 'Z106 ＋ スマキー連動/スマクロ',
+            grade: 'Z106 ＋ 純正ロック連動/スマクロ',
             description: 'Z106にスマクロ機能を追加。スマートキーの利便性を保ちつつ、パンテーラの鉄壁なバリアを実現。',
             price: '328,600',
             priceTax: '361,460',
@@ -1269,7 +1269,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'prius-panthera-z306-smaclo',
             brand: 'Panthera',
-            grade: 'Z306 ＋ スマキー連動/スマクロ',
+            grade: 'Z306 ＋ 純正ロック連動/スマクロ',
             description: '全センサーを搭載した人気モデルにスマクロを追加。ホイール盗難からインベーダーまで完全網羅。',
             price: '378,600',
             priceTax: '416,460',
@@ -1324,8 +1324,8 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'hiace-grgo-zv-smart',
             brand: 'Grgo',
-            grade: 'ZV II ＋ スマキー連動/スマクロ ＋ トリプル ＋ ミラー連動',
-            description: '最新の窃盗手口に対抗するスマキー連動機能を搭載。アンサーバックで車両状態も手元で把握可能。',
+            grade: 'ZV II ＋ 純正ロック連動/スマクロ ＋ トリプル ＋ ミラー連動',
+            description: '最新の窃盗手口に対抗する純正ロック連動機能を搭載。アンサーバックで車両状態も手元で把握可能。',
             price: '246,800',
             priceTax: '271,480',
             features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
@@ -1345,8 +1345,8 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'hiace-grgo-zvt-smart',
             brand: 'Grgo',
-            grade: 'ZVT II ＋ スマキー連動/スマクロ ＋ ミラー連動',
-            description: '最高位Grgoにスマキー連動を追加。利便性と鉄壁の防犯、さらにミラー連動の快適性を一台に。',
+            grade: 'ZVT II ＋ 純正ロック連動/スマクロ ＋ ミラー連動',
+            description: '最高位Grgoに純正ロック連動を追加。利便性と鉄壁の防犯、さらにミラー連動の快適性を一台に。',
             price: '293,800',
             priceTax: '323,180',
             features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
@@ -1365,8 +1365,8 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'hiace-panthera-z106-smart',
             brand: 'Panthera',
-            grade: 'Z106 ＋ スマキー連動/スマクロ ＋ トリプル ＋ ミラー連動',
-            description: 'Z106にスマキー連動を追加。純正スマートキーを使いながら、パンテーラの鉄壁バリアを構築。',
+            grade: 'Z106 ＋ 純正ロック連動/スマクロ ＋ トリプル ＋ ミラー連動',
+            description: 'Z106に純正ロック連動を追加。純正スマートキーを使いながら、パンテーラの鉄壁バリアを構築。',
             price: '316,800',
             priceTax: '348,480',
             features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
@@ -1386,8 +1386,8 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
         {
             id: 'hiace-panthera-z306-smart',
             brand: 'Panthera',
-            grade: 'Z306 ＋ スマキー連動/スマクロ ＋ ミラー連動',
-            description: 'Z306の多機能検知にスマキー連動の便利さをプラス。最新のインベーダー対策も網羅したハイエンドプラン。',
+            grade: 'Z306 ＋ 純正ロック連動/スマクロ ＋ ミラー連動',
+            description: 'Z306の多機能検知に純正ロック連動の便利さをプラス。最新のインベーダー対策も網羅したハイエンドプラン。',
             price: '343,800',
             priceTax: '378,180',
             features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
@@ -1612,7 +1612,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             name: 'Alphard / Vellfire (40)',
             year: '2023-',
             image: '/images/Security/vehicle/al,vel.webp',
-            description: '最新の40系。CANインベーダーや最新手口に対し、スマートキー連動や物理CANガードを組み合わせた鉄壁の布陣をご提案します。',
+            description: '最新の40系。CANインベーダーや最新手口に対し、純正ロック連動や物理CANガードを組み合わせた鉄壁の布陣をご提案します。',
             plans: alphardVellfire40Plans
         },
         'toyota-landcruiser-250': {
@@ -1674,7 +1674,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             name: 'Land Cruiser Prado',
             year: '2009-2023',
             image: '/images/Security/vehicle/prado.webp',
-            description: 'スマートキー連動による最新の窃盗対策や、物理的なCANガードなど、年式に応じた最適な対策をご提案します。',
+            description: '純正ロック連動による最新の窃盗対策や、物理的なCANガードなど、年式に応じた最適な対策をご提案します。',
             plans: landcruiser150Plans
         },
         'kcar-special': {
@@ -2044,7 +2044,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                                 { label: 'ボンネットセンサー', active: plan.features.bonnet },
                                                 { label: 'マイクロ波', active: plan.features.microwave },
                                                 { label: 'バックアップサイレン', active: plan.features.siren },
-                                                { label: 'スマートキー連動', active: plan.features.algorithm },
+                                                { label: '純正ロック連動', active: plan.features.algorithm },
                                                 { label: 'CANガード', active: plan.features.canguard }
                                             ].map((f, i) => (
                                                 <div key={i} className={`flex items-center gap-2 ${f.active ? 'opacity-100' : 'opacity-20'}`}>
@@ -2094,7 +2094,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                             { label: 'ボンネット', key: 'bonnet', desc: 'バッテリー切断対策。' },
                                             { label: 'マイクロ波', key: 'microwave', desc: '不審接近威嚇。' },
                                             { label: 'バックアップ', key: 'siren', desc: '電源断対応サイレン。' },
-                                            { label: 'スマキー連動', key: 'algorithm', desc: '純正キー同期。' },
+                                            { label: '純正ロック連動', key: 'algorithm', desc: '純正キー同期。' },
                                             { label: 'CANガード', key: 'canguard', desc: 'デジタル通信遮断。' }
                                         ].map((feature, idx) => (
                                             <tr key={feature.key} className={`hover:bg-neutral-50/50 transition-colors group`}>

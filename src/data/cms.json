@@ -723,7 +723,7 @@
           "badge": "絶対防衛",
           "features": [
             "ダブルイモビライザー必須",
-            "スマートキー連動",
+            "純正ロック連動",
             "Can-Invader対策"
           ]
         },
@@ -762,7 +762,7 @@
           "price": "242000",
           "badge": "人気SUV",
           "features": [
-            "スマートキー連動",
+            "純正ロック連動",
             "リレーアタック対策"
           ]
         },
@@ -811,7 +811,7 @@
           "features": [
             "車上荒らし対策",
             "イタズラ対策",
-            "スマート連動"
+            "純正ロック連動"
           ]
         }
       ],
@@ -1555,14 +1555,14 @@
       "type": [
         "security"
       ],
-      "description": "<p>今なお狙われ続ける150系。スマートキー連動による最新の窃盗対策や、物理的なCANガードなど、年式に応じた最適な対策をご提案します。</p>",
+      "description": "<p>今なお狙われ続ける150系。純正ロック連動による最新の窃盗対策や、物理的なCANガードなど、年式に応じた最適な対策をご提案します。</p>",
       "items": [
         {
           "fieldId": "item",
-          "name": "Grgo ZVT II ＋ スマキー連動/スマクロ",
+          "name": "Grgo ZVT II ＋ 純正ロック連動/スマクロ",
           "price": "299,600",
           "badge": "おすすめ",
-          "description": "傾斜センサー含むフルセンサー構成にスマートキー連動をプラスし、利便性を高めた一台。",
+          "description": "傾斜センサー含むフルセンサー構成に純正ロック連動をプラスし、利便性を高めた一台。",
           "triple": true,
           "tilt": true,
           "bonnet": true,
@@ -1613,7 +1613,7 @@
       "type": [
         "security"
       ],
-      "description": "<p>最新の40系。CANインベーダーや最新手口に対し、スマートキー連動や物理CANガードを組み合わせた鉄壁の布陣をご提案します。</p>",
+      "description": "<p>最新の40系。CANインベーダーや最新手口に対し、純正ロック連動や物理CANガードを組み合わせた鉄壁の布陣をご提案します。</p>",
       "items": [
         {
           "fieldId": "item",
@@ -1699,9 +1699,9 @@
         },
         {
           "fieldId": "item",
-          "name": "Grgo ZVT II ＋ スマキー連動/スマクロ ＋ ミラー連動",
+          "name": "Grgo ZVT II ＋ 純正ロック連動/スマクロ ＋ ミラー連動",
           "price": "293,800",
-          "description": "最高位Grgoにスマキー連動を追加。利便性と鉄壁の防犯、さらにミラー連動の快適性を一台に。",
+          "description": "最高位Grgoに純正ロック連動を追加。利便性と鉄壁の防犯、さらにミラー連動の快適性を一台に。",
           "triple": true,
           "tilt": true,
           "bonnet": true,
@@ -1728,9 +1728,9 @@
         },
         {
           "fieldId": "item",
-          "name": "Panthera Z306 ＋ スマキー連動/スマクロ ＋ ミラー連動",
+          "name": "Panthera Z306 ＋ 純正ロック連動/スマクロ ＋ ミラー連動",
           "price": "343,800",
-          "description": "Z306の多機能検知にスマキー連動の便利さをプラス。最新のインベーダー対策も網羅したハイエンドプラン。",
+          "description": "Z306の多機能検知に純正ロック連動の便利さをプラス。最新のインベーダー対策も網羅したハイエンドプラン。",
           "triple": true,
           "tilt": true,
           "bonnet": true,
@@ -1768,9 +1768,9 @@
         },
         {
           "fieldId": "item",
-          "name": "Grgo ZV II ＋ スマキー連動/スマクロ",
+          "name": "Grgo ZV II ＋ 純正ロック連動/スマクロ",
           "price": "207,800",
-          "description": "ZV IIにスマートキー連動（スマクロ）を追加。利便性を損なわず、最新の手口から愛車を守ります。",
+          "description": "ZV IIに純正ロック連動（スマクロ）を追加。利便性を損なわず、最新の手口から愛車を守ります。",
           "triple": false,
           "tilt": false,
           "bonnet": false,
@@ -1797,9 +1797,9 @@
         },
         {
           "fieldId": "item",
-          "name": "Grgo ZVT II ＋ スマキー連動/スマクロ",
+          "name": "Grgo ZVT II ＋ 純正ロック連動/スマクロ",
           "price": "264,600",
-          "description": "最高位Grgoにスマートキー連動を追加。あらゆる衝撃・傾斜検知に利便性をプラスした究極の軽カープラン。",
+          "description": "最高位Grgoに純正ロック連動を追加。あらゆる衝撃・傾斜検知に利便性をプラスした究極の軽カープラン。",
           "triple": true,
           "tilt": true,
           "bonnet": false,
@@ -1811,7 +1811,7 @@
         },
         {
           "fieldId": "item",
-          "name": "Panthera Z306 ＋ スマキー連動/スマクロ",
+          "name": "Panthera Z306 ＋ 純正ロック連動/スマクロ",
           "price": "315,800",
           "badge": "推奨構成",
           "description": "人気センサーを網羅したZ306にスマクロを追加。ホイール盗難からイタズラまで、全方位で車両を監視。",
@@ -1826,7 +1826,7 @@
         },
         {
           "fieldId": "item",
-          "name": "Panthera Z706 ＋ スマキー連動/スマクロ",
+          "name": "Panthera Z706 ＋ 純正ロック連動/スマクロ",
           "price": "395,800",
           "badge": "最強プラン",
           "description": "全センサー解放。マイクロ波による接近検知やバックアップサイレンまで備えた、K-CARの防犯を極めるための頂点プラン。",
@@ -2019,7 +2019,7 @@
       "revisedAt": "2026-04-29T21:58:15.785Z",
       "category": "ALPHARD / VELLFIRE (40系) 専用パッケージ",
       "type": [],
-      "description": "<p>最新の40系。CANインベーダーや最新手口に対し、スマートキー連動や物理CANガードを組み合わせた鉄壁の布陣をご提案します。</p>",
+      "description": "<p>最新の40系。CANインベーダーや最新手口に対し、純正ロック連動や物理CANガードを組み合わせた鉄壁の布陣をご提案します。</p>",
       "items": [
         {
           "fieldId": "item",
@@ -2266,7 +2266,7 @@
           "fieldId": "item",
           "name": "Grgo ZV II ＋ CANガード ＋ トリプル",
           "price": "314,600",
-          "description": "スマート連動とトリプルセンサー。NXオーナーに一番支持される構成。",
+          "description": "純正ロック連動とトリプルセンサー。NXオーナーに一番支持される構成。",
           "triple": true,
           "tilt": false,
           "bonnet": true,
@@ -2338,7 +2338,7 @@
           "name": "Grgo ZVT II ＋ CANガード",
           "price": "309,800",
           "badge": "おすすめ",
-          "description": "最上位ZVT IIにスマートキー連動と物理CANガードを追加。利便性と鉄壁の防犯性能を両立した推奨パッケージ。",
+          "description": "最上位ZVT IIに純正ロック連動と物理CANガードを追加。利便性と鉄壁の防犯性能を両立した推奨パッケージ。",
           "triple": true,
           "tilt": true,
           "bonnet": false,
