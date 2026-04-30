@@ -2083,7 +2083,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                                         <div className="text-[#0b1210] text-[9px] lg:text-[10px] font-black leading-tight flex flex-col items-center italic gap-1">
                                                             {plan.grade.split(' ＋ ').map((part, i) => (
                                                                 <span key={i} className={i === 0 ? "text-xs lg:text-sm text-gray-900 border-b-2 border-emerald-400/40 pb-0.5 mb-1 px-2 text-center" : "text-gray-600 text-center"}>
-                                                                    {i === 0 ? part : `＋ ${part}`}
+                                                                    {i === 0 ? part.replace(plan.brand, '').trim() : `＋ ${part}`}
                                                                 </span>
                                                             ))}
                                                         </div>
