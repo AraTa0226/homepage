@@ -2029,7 +2029,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                                     )}
                                                 </div>
                                                 <h3 className="text-xl font-black text-gray-900 tracking-tight leading-tight">
-                                                    {plan.grade.split(' ＋ ').map((part, i) => (
+                                                    {plan.grade.split(/[\s　]*[＋+][\s　]*/).map((part, i) => (
                                                         <span key={i} className="block">
                                                             {i === 0 ? part : <span className="text-base text-gray-600">＋ {part}</span>}
                                                         </span>
@@ -2081,7 +2081,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                                     <div className="text-emerald-500 text-[8px] font-black mb-2 italic tracking-widest leading-none">{plan.brand}</div>
                                                     <div className="flex justify-center">
                                                         <div className="text-[#0b1210] text-[9px] lg:text-[10px] font-black leading-tight flex flex-col items-center italic gap-1">
-                                                            {plan.grade.split(' ＋ ').map((part, i) => (
+                                                            {plan.grade.split(/[\s　]*[＋+][\s　]*/).map((part, i) => (
                                                                 <span key={i} className={i === 0 ? "text-xs lg:text-sm text-gray-900 border-b-2 border-emerald-400/40 pb-0.5 mb-1 px-2 text-center" : "text-gray-600 text-center"}>
                                                                     {i === 0 ? part.replace(plan.brand, '').trim() : `＋ ${part}`}
                                                                 </span>
