@@ -2153,6 +2153,30 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                     </>
                 )}
 
+                {/* Alternative Options Section */}
+                <div className="mt-16 bg-white rounded-[2.5rem] p-8 md:p-12 border border-slate-100 shadow-sm relative overflow-hidden">
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
+                        <div>
+                            <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-50 rounded-full text-slate-500 text-[10px] font-black tracking-widest uppercase mb-4 italic border border-slate-100">
+                                Alternative Options
+                            </div>
+                            <h3 className="text-xl md:text-2xl font-black italic tracking-tighter text-slate-900 mb-4">
+                                ご予算に合わせた基本プラン
+                            </h3>
+                            <p className="text-sm text-slate-500 font-bold leading-relaxed max-w-2xl">
+                                上記メインプランの他、基本性能を凝縮した「Grgo V2」ベースのプラン等、ご予算に応じた柔軟な構成も可能です。「まずは最低限の守りを固めたい」という方も、取りこぼしのない防犯対策をご提案いたしますので、お気軽にご相談ください。
+                            </p>
+                        </div>
+                        <div className="shrink-0">
+                            <button
+                                onClick={() => navigate('/reservation')}
+                                className="w-full md:w-auto px-8 py-4 bg-slate-900 text-white font-black italic rounded-xl transition-all hover:bg-emerald-600 shadow-lg shadow-slate-900/10 active:scale-95">
+                                別プランを相談する
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
                 {/* Trust & Commitment Section */}
                 <div className="mt-16 bg-[#0b1210] rounded-[3rem] p-8 md:p-16 text-white relative overflow-hidden shadow-3xl">
                     <div className="absolute top-0 right-0 w-1/2 h-full bg-emerald-500/5 -skew-x-12 translate-x-1/4" />
