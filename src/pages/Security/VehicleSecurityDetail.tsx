@@ -1934,7 +1934,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                     <div className="flex flex-wrap gap-2 mb-8">
                                         {(isAnalogKey
                                             ? ['Anti-プロ窃盗集団', 'Anti-自走盗難', 'Anti-部品盗難']
-                                            : ['Anti-リレーアタック', 'Anti-CANインベーダー', 'Anti-コードグラバー']
+                                            : ['Anti-リレーアタック', 'Anti-CANインベーダー', 'Anti-コードグラバー', 'Anti-ゲームボーイ']
                                         ).map((threat) => (
                                             <span key={threat} className="px-4 py-1.5 bg-white rounded-lg text-[10px] font-black tracking-[0.2em] text-emerald-700 uppercase border border-emerald-100 shadow-sm">
                                                 {threat}
