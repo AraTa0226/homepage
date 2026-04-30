@@ -28,7 +28,8 @@ export const GrgoPage: React.FC = () => {
     const { plans } = usePrices();
     const navigate = useNavigate();
 
-    const grgoCategory = plans.find(p => p.id === 'security_grgo');
+    const grgoV7Category = plans.find(p => p.id === 'security_grgo');
+    const grgoV2Category = plans.find(p => p.id === 'security_grgo_v2');
 
     React.useEffect(() => {
         document.title = "Grgo（ゴルゴ） | 福岡市・大野城のカーセキュリティ専門店 ANG";
@@ -38,7 +39,15 @@ export const GrgoPage: React.FC = () => {
         }
     }, []);
 
-    const lineUp = (grgoCategory?.items || []).map(item => ({
+    const lineUpV7 = (grgoV7Category?.items || []).map(item => ({
+        id: item.name.toLowerCase().replace(/\s+/g, '_'),
+        name: item.name,
+        type: item.badge,
+        desc: item.description,
+        image: item.image
+    }));
+
+    const lineUpV2 = (grgoV2Category?.items || []).map(item => ({
         id: item.name.toLowerCase().replace(/\s+/g, '_'),
         name: item.name,
         type: item.badge,
@@ -140,7 +149,7 @@ export const GrgoPage: React.FC = () => {
                         </div>
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                            {lineUp.map((item) => (
+                            {lineUpV7.map((item) => (
                                 <div key={item.id} className="group relative bg-[#0c1218] border border-white/5 rounded-[3rem] p-10 hover:border-blue-500/30 transition-all overflow-hidden flex flex-col justify-between">
                                     <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/5 blur-[60px] group-hover:bg-blue-600/10 transition-all"></div>
                                     <div className="space-y-6 relative z-10">

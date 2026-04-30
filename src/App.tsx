@@ -165,6 +165,7 @@ function AppContent() {
     const labelPathMap: Record<string, string> = {
       'Panthera (パンテーラ) Z-Series': '/security/panthera',
       'Grgo (ゴルゴ) VⅡ': '/security/grgo',
+      'Grgo (ゴルゴ) V2': '/security/grgo-v2',
       '一瞬で盗まれる『リレーアタック』の手口': '/security/relay-attack',
       '最新手口『CANインベーダー』': '/security/can-invader',
       'CANインベーダー対策': '/security/can-invader',

@@ -258,6 +258,7 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
             items: [
                 'Panthera (パンテーラ) Z-Series',
                 'Grgo (ゴルゴ) VⅡ',
+                'Grgo (ゴルゴ) V2',
                 'Viper (バイパー)',
                 'Clifford (クリフォード)',
                 '送迎バス 置き去り防止支援装置'

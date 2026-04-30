@@ -1428,6 +1428,40 @@ const initialPlans: PlanCategory[] = [
     ],
   },
   {
+    id: 'security_grgo_v2',
+    category: "Grgo (ゴルゴ) V2",
+    type: 'security',
+    items: [
+      {
+        name: "Grgo V2 ベーシック",
+        price: "110000",
+        badge: "最新・盗難特化",
+        features: [
+          "デジタル・イモビライザー",
+          "キーエミュレーター対向",
+          "車両システム独立ガード",
+          "※サイレン、衝撃センサー別売"
+        ],
+        image: "/images/Security/model/grgov2.webp",
+        description: "機能を盗難対策（自走防止）に特化させることで、レクサス・ランクル等のハイリスク車にも安心の防衛力を低価格で提供。※サイレンおよび衝撃センサーはオプションとなります。"
+      },
+      {
+        name: "Grgo V2 + ショックセンサー + サイレン",
+        price: "137500",
+        badge: "推奨パッケージ",
+        features: [
+          "デジタル・イモビライザー",
+          "ハイパワーサイレン内蔵",
+          "2段階衝撃センサー内蔵",
+          "キーエミュレーター対向",
+          "車両システム独立防衛"
+        ],
+        image: "/images/Security/model/grgov2.webp",
+        description: "V2ベーシックに「サイレン」と「衝撃センサー」を追加した当店一番人気の推奨パッケージ. 音と衝撃検知により、自走盗難だけでなく車上荒らしや悪戯からも愛車を守ります。"
+      }
+    ],
+  },
+  {
     id: 'security_panthera',
     category: "Panthera (パンテーラ) Z-Series",
     type: 'security',

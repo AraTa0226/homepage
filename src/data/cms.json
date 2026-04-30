@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-04-28T23:10:00Z",
-  "cacheVersion": "66",
+  "cacheVersion": "67",
   "heroAlert": {
     "active": true,
     "text": "【新商品案内】最新のレーザー探知機「Z1200」の取り扱いを開始しました。店舗にて展示中！",
@@ -619,6 +619,41 @@
           ],
           "image": "/images/Security/model/grgo.webp",
           "description": "液晶なしのシンプルなリモコンを採用。機能を絞り込みつつ、Grgoならではの確実な警報・警告能力を維持した実用モデル。"
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "security_grgo_v2",
+      "category": "Grgo (ゴルゴ) V2",
+      "type": "security",
+      "items": [
+        {
+          "name": "Grgo V2 ベーシック",
+          "price": "110000",
+          "badge": "最新・盗難特化",
+          "features": [
+            "デジタル・イモビライザー",
+            "キーエミュレーター対向",
+            "車両システム独立ガード",
+            "※サイレン、衝撃センサー別売"
+          ],
+          "image": "/images/Security/model/grgov2.webp",
+          "description": "機能を盗難対策（自走防止）に特化させることで、レクサス・ランクル等のハイリスク車にも安心の防衛力を低価格で提供。※サイレンおよび衝撃センサーはオプションとなります。"
+        },
+        {
+          "name": "Grgo V2 + ショックセンサー + サイレン",
+          "price": "137500",
+          "badge": "推奨パッケージ",
+          "features": [
+            "デジタル・イモビライザー",
+            "ハイパワーサイレン内蔵",
+            "2段階衝撃センサー内蔵",
+            "キーエミュレーター対向",
+            "車両システム独立防衛"
+          ],
+          "image": "/images/Security/model/grgov2.webp",
+          "description": "V2ベーシックに「サイレン」と「衝撃センサー」を追加した当店一番人気の推奨パッケージ。音と衝撃検知により、自走盗難だけでなく車上荒らしや悪戯からも愛車を守ります。"
         }
       ],
       "images": []
@@ -1359,9 +1394,9 @@
     {
       "id": "lexus_gx550",
       "createdAt": "2026-04-29T11:07:24.333Z",
-      "updatedAt": "2026-04-29T21:12:42.279Z",
+      "updatedAt": "2026-04-30T07:12:50.660Z",
       "publishedAt": "2026-04-29T11:07:24.333Z",
-      "revisedAt": "2026-04-29T21:12:42.279Z",
+      "revisedAt": "2026-04-30T07:12:50.660Z",
       "category": "LEXUS GX550 専用パッケージ",
       "type": [
         "security"
@@ -1370,10 +1405,9 @@
       "items": [
         {
           "fieldId": "item",
-          "name": "Grgo ZVT II ＋ CANガード",
-          "price": "336,600",
-          "badge": "おすすめ",
-          "description": "傾斜センサー標準装備。CANガードと1WAYリモコンも付属。",
+          "name": "Grgo ZVT II ＋ CANガード＋ ボンネット",
+          "price": "321,800",
+          "description": "傾斜・トリプルセンサー標準装備。CANガードと1WAYリモコンも付属。",
           "triple": true,
           "tilt": true,
           "bonnet": true,
@@ -1385,10 +1419,36 @@
         },
         {
           "fieldId": "item",
-          "name": "Panthera Z306 ＋ CANガード",
-          "price": "396,800",
-          "badge": "推奨構成",
-          "description": "全方位検知のZ306に最新のCANガードを融合。",
+          "name": "Grgo ZVT II ＋ CANガード ＋ マイクロ波 ＋ ボンネット",
+          "price": "373,800",
+          "description": "傾斜・トリプルセンサー標準装備モデルにマイクロ波を追加しました。。CANガードと1WAYリモコンも付属。",
+          "triple": true,
+          "tilt": true,
+          "bonnet": true,
+          "microwave": true,
+          "siren": false,
+          "algorithm": true,
+          "canguard": true,
+          "image": ""
+        },
+        {
+          "fieldId": "item",
+          "name": "Panthera Z106 ＋ CANガード ＋ マイクロ波 ＋ トリプル",
+          "price": "412,000",
+          "description": "最高峰のセキュリティーパンテーラのスタートモデルに、マイクロ波、トリプルを追加したプランです。",
+          "triple": true,
+          "tilt": false,
+          "bonnet": true,
+          "microwave": true,
+          "siren": false,
+          "algorithm": true,
+          "canguard": true,
+          "image": ""
+        },
+        {
+          "fieldId": "item",
+          "name": "Panthera Z306 ＋ CANガード ",
+          "price": "382,000",
           "triple": true,
           "tilt": true,
           "bonnet": true,
@@ -1400,10 +1460,21 @@
         },
         {
           "fieldId": "item",
-          "name": "Panthera Z706 ＋ CANガード",
-          "price": "486,800",
-          "badge": "最強プラン",
-          "description": "すべてのセンサーを装備した究極の多重防御モデル。",
+          "name": "Panthera Z306 ＋ CANガード ＋ マイクロ波 ",
+          "price": "382,000",
+          "triple": true,
+          "tilt": true,
+          "bonnet": true,
+          "microwave": true,
+          "siren": false,
+          "algorithm": true,
+          "canguard": true,
+          "image": ""
+        },
+        {
+          "fieldId": "item",
+          "name": "Panthera Z706 ＋ CANガード ",
+          "price": "472,000",
           "triple": true,
           "tilt": true,
           "bonnet": true,

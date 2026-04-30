@@ -25,11 +25,23 @@ import {
     Camera,
     MessageSquare
 } from 'lucide-react';
+import { usePrices } from '../../contexts/PriceContext';
 import { SafeImage } from '../../components/ui/SafeImage';
 
 export const GrgoV2Page: React.FC = () => {
     const { assets } = useSite();
+    const { plans } = usePrices();
     const navigate = useNavigate();
+
+    const grgoV2Category = plans.find(p => p.id === 'security_grgo_v2');
+    const lineUp = (grgoV2Category?.items || []).map(item => ({
+        id: item.name.toLowerCase().replace(/\s+/g, '_'),
+        name: item.name,
+        price: item.price,
+        type: item.badge,
+        desc: item.description,
+        features: item.features
+    }));
 
     const remoteButtons = [
         { id: 1, icon: Power, label: 'Powerボタン', desc: 'リモコン電源のON/OFFなどに使用。' },
@@ -207,6 +219,57 @@ export const GrgoV2Page: React.FC = () => {
                                 </div>
                             ))}
                         </div>
+                    </div>
+                </motion.div>
+
+                {/* Product Lineup Section */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="space-y-24"
+                >
+                    <div className="text-center space-y-6">
+                        <span className="text-blue-500 font-black tracking-[0.4em] uppercase text-[10px]">Price & Packages</span>
+                        <h3 className="text-4xl md:text-6xl font-black text-white italic tracking-tighter">選べる防衛プラン。</h3>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                        {lineUp.map((item) => (
+                            <div key={item.id} className="group relative bg-[#0c1218] border border-white/5 rounded-[3rem] p-12 hover:border-blue-500/30 transition-all overflow-hidden flex flex-col justify-between">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/5 blur-[60px] group-hover:bg-blue-600/10 transition-all"></div>
+                                <div className="space-y-8 relative z-10">
+                                    <div className="flex justify-between items-start">
+                                        <div className="space-y-2">
+                                            <span className="text-[10px] font-black text-blue-500 uppercase tracking-widest">{item.type}</span>
+                                            <h4 className="text-3xl font-black italic tracking-tighter text-white">{item.name}</h4>
+                                        </div>
+                                        <div className="text-right">
+                                            <div className="text-[10px] text-gray-500 font-black uppercase mb-1">Standard Price</div>
+                                            <div className="text-2xl font-black text-white italic tracking-tighter">
+                                                ¥{Number(item.price).toLocaleString()}<span className="text-xs opacity-40 ml-1">~</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <p className="text-sm text-gray-400 font-bold leading-relaxed">{item.desc}</p>
+                                    
+                                    <div className="space-y-3">
+                                        {item.features.map((f, idx) => (
+                                            <div key={idx} className="flex items-center gap-3 text-xs font-black text-gray-300">
+                                                <CheckCircle2 className="w-4 h-4 text-blue-600 shrink-0" />
+                                                {f}
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                                <div className="pt-12 relative z-10">
+                                    <div className="w-full py-4 rounded-2xl bg-white/5 border border-white/5 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all text-gray-500 font-black text-[10px] tracking-widest uppercase">
+                                        Plan Details
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </motion.div>
 
