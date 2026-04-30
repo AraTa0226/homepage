@@ -1979,7 +1979,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                         <div className="flex flex-col gap-4 flex-1">
                                             <div className="flex flex-wrap gap-x-6 gap-y-3">
                                                 {[
-                                                    'ショックセンサ', 'ドアセンサ', 'トランクセンサ', 'イモビライザ',
+                                                    'ショックセンサ', 'ドアセンサ', 'トランクセンサ', 'イモビライザ', 'オリジナルLEDプレート',
                                                     'ステータスインジケーター', '2WAYアンサーバックリモコン', '暗証番号式バレースイッチ', 'ハイパワーサイレン', 'ハザードフラッシュ機能'
                                                 ].map((item, i) => (
                                                     <div key={i} className="flex items-center gap-2">
