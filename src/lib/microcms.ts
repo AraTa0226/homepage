@@ -4,10 +4,12 @@ if (!import.meta.env.VITE_MICROCMS_SERVICE_DOMAIN) {
     console.warn('microCMS Service Domain is not defined. CMS integration will not work.');
 }
 
-export const client = createClient({
-    serviceDomain: import.meta.env.VITE_MICROCMS_SERVICE_DOMAIN || '',
-    apiKey: import.meta.env.VITE_MICROCMS_API_KEY || '',
-});
+export const client = (import.meta.env.VITE_MICROCMS_SERVICE_DOMAIN && import.meta.env.VITE_MICROCMS_API_KEY)
+    ? createClient({
+        serviceDomain: import.meta.env.VITE_MICROCMS_SERVICE_DOMAIN,
+        apiKey: import.meta.env.VITE_MICROCMS_API_KEY,
+    })
+    : null;
 
 // ドライブレコーダー商品の型定義
 export interface DashcamProduct {
@@ -27,6 +29,7 @@ export interface DashcamProduct {
 // ドライブレコーダー商品一覧取得
 export async function fetchDashcamProducts(): Promise<DashcamProduct[]> {
     try {
+        if (!client) return [];
         const response = await client.getList<DashcamProduct>({
             endpoint: 'dashcam',
             queries: { limit: 50 },
@@ -55,6 +58,7 @@ export interface RadarProduct {
 // レーダー探知機商品一覧取得
 export async function fetchRadarProducts(): Promise<RadarProduct[]> {
     try {
+        if (!client) return [];
         const response = await client.getList<RadarProduct>({
             endpoint: 'radar',
             queries: { limit: 50 },
@@ -83,6 +87,7 @@ export interface DigitalMirrorProduct {
 // デジタルインナーミラー商品一覧取得
 export async function fetchDigitalMirrorProducts(): Promise<DigitalMirrorProduct[]> {
     try {
+        if (!client) return [];
         const response = await client.getList<DigitalMirrorProduct>({
             endpoint: 'digital_mirror',
             queries: { limit: 50 },
