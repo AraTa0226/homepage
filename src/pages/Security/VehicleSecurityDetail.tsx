@@ -43,7 +43,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             grade: 'ZVT II',
             price: '336,600',
             priceTax: '370,260',
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -53,7 +53,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             isRecommended: true,
             price: '388,600',
             priceTax: '427,460',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -62,7 +62,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             grade: 'Z106',
             price: '374,800',
             priceTax: '412,280',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -71,7 +71,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             grade: 'Z106 + マイクロ波',
             price: '426,800',
             priceTax: '469,480',
-            features: { triple: true, tilt: false, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -80,7 +80,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             grade: 'Z306',
             price: '396,800',
             priceTax: '436,480',
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -90,7 +90,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             isRecommended: true,
             price: '448,800',
             priceTax: '493,680',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -99,7 +99,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             grade: 'Z706',
             price: '486,800',
             priceTax: '535,480',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: true, ir: true },
+            features: { , led: true },
             category: 'パンテーラ'
         }
     ];
@@ -113,7 +113,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '純正ロック連動とトリプルセンサーを含むANG推奨パッケージ。',
             price: '314,600',
             priceTax: '346,060',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -124,7 +124,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '336,600',
             priceTax: '370,260',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -134,7 +134,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'パンテーラの高精度な検知能力を最大限に活かしたフルガード。',
             price: '374,800',
             priceTax: '412,280',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -144,7 +144,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '基本的な車両監視を網羅。後からオプション追加も可能です。',
             price: '360,800',
             priceTax: '396,880',
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: false, canguard: false },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -155,7 +155,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '396,800',
             priceTax: '436,480',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -165,7 +165,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '接近検知を追加し、愛車へのうろつきも許さない最強布陣。',
             price: '448,800',
             priceTax: '493,680',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -175,7 +175,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'あらゆる手口から車を守る、ANGノウハウの結晶プラン。',
             price: '486,800',
             priceTax: '535,480',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: true, ir: true },
+            features: { , led: true },
             category: 'パンテーラ'
         }
     ];
@@ -189,7 +189,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '純正ロック連動とトリプルセンサー。NXオーナーに一番支持される構成。',
             price: '314,600',
             priceTax: '346,060',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -200,7 +200,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '331,600',
             priceTax: '364,760',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -210,7 +210,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'パンテーラの高度な検知能力と操作性を追求したパッケージ。',
             price: '369,800',
             priceTax: '406,780',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -220,7 +220,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '充実のセンサー構成。車両の安全をバランスよく監視します。',
             price: '360,800',
             priceTax: '396,880',
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: false, canguard: false },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -231,7 +231,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '391,800',
             priceTax: '430,980',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -241,7 +241,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '車外への威嚇を強化し、不審な接近を未然に警告。',
             price: '443,800',
             priceTax: '488,180',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -251,7 +251,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '全機能を解放。NXを守るためのANGフラッグシッププラン。',
             price: '481,800',
             priceTax: '529,980',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: true, ir: true },
+            features: { , led: true },
             category: 'パンテーラ'
         }
     ];
@@ -265,7 +265,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '1WAYリモコンのみ付属のモデル。トリプルセンサーを追加し検知を強化。アドブルーリッド対策も対応可。',
             price: '225,800',
             priceTax: '248,380',
-            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -275,7 +275,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'アンサーバックリモコンモデル。トリプルセンサーで検知能力を強化。',
             price: '243,800',
             priceTax: '268,180',
-            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -286,7 +286,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '265,800',
             priceTax: '292,380',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -296,7 +296,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'パンテーラの緻密なアルゴリズムを70に。トリプルセンサーで全方位監視。',
             price: '313,800',
             priceTax: '345,180',
-            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -307,7 +307,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '335,800',
             priceTax: '369,380',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -317,7 +317,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '接近検知を追加。不審なうろつきや車内覗き込みを未然に防ぎます。',
             price: '387,800',
             priceTax: '426,580',
-            features: { triple: true, tilt: true, bonnet: false, microwave: true, siren: false, algorithm: false, canguard: false },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -327,7 +327,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '全センサー装備の最高峰。70を守り抜くANGのフルスペックパッケージ。',
             price: '425,800',
             priceTax: '468,380',
-            features: { triple: true, tilt: true, bonnet: false, microwave: true, siren: true, algorithm: false, canguard: false, ir: true },
+            features: { , led: true },
             category: 'パンテーラ'
         }
     ];
@@ -342,7 +342,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '336,600',
             priceTax: '370,260',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -352,7 +352,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'ZVT IIに車外接近検知（うろつき対策）を追加。',
             price: '388,600',
             priceTax: '427,460',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -362,7 +362,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'パンテーラの緻密な感度調整を活かす実戦的パッケージ。',
             price: '374,800',
             priceTax: '412,280',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -372,7 +372,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'Z106パッケージに接近検知のマイクロ波をプラス。',
             price: '426,800',
             priceTax: '469,480',
-            features: { triple: true, tilt: false, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -383,7 +383,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '396,800',
             priceTax: '436,480',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -393,7 +393,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '全方位検知のZ306に、接近検知のマイクロ波をプラス。',
             price: '448,800',
             priceTax: '493,680',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -403,7 +403,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'すべてのセンサーを装備した究極の多重防御モデル。',
             price: '486,800',
             priceTax: '535,480',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: true, ir: true },
+            features: { , led: true },
             category: 'パンテーラ'
         }
     ];
@@ -417,7 +417,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'パンテーラの緻密なアルゴリズムで誤報を排し鉄壁の護り。',
             price: '384,800',
             priceTax: '423,280',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -428,7 +428,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '406,800',
             priceTax: '447,480',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -438,7 +438,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '多機能検知パッケージに、事前検知のマイクロ波をプラス。',
             price: '458,800',
             priceTax: '504,680',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -448,7 +448,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '全センサー装備の最高峰。LXを守り抜く最強の選択肢。',
             price: '496,800',
             priceTax: '546,480',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: true, ir: true },
+            features: { , led: true },
             category: 'パンテーラ'
         }
     ];
@@ -462,7 +462,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'LBX必須のボンネットセンサーとCANガードを含む基本パッケージ。',
             price: '302,800',
             priceTax: '333,080',
-            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -473,7 +473,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '334,600',
             priceTax: '368,060',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -483,7 +483,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'パンテーラの緻密な警備を。小回りの利くLBXにも最適な布陣。',
             price: '372,800',
             priceTax: '410,080',
-            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -493,7 +493,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '充実のセンサー群で死角なし。デジタル盗難手口も完全ブロック。',
             price: '394,800',
             priceTax: '434,280',
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -504,7 +504,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '446,800',
             priceTax: '491,480',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -514,7 +514,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'すべてのセンサーを纏った、LBXのための最強仕様。',
             price: '484,800',
             priceTax: '533,280',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: true, ir: true },
+            features: { , led: true },
             category: 'パンテーラ'
         }
     ];
@@ -528,7 +528,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '新型250に必須のボンネット保護とCANガードを融合。',
             price: '314,600',
             priceTax: '346,060',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -539,7 +539,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '336,600',
             priceTax: '370,260',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -549,7 +549,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'パンテーラの緻密な感度調整で、新型250を誤報なく守る。',
             price: '374,800',
             priceTax: '412,280',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -559,7 +559,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '接近検知のマイクロ波を追加。不審なうろつきを未然に排除。',
             price: '426,800',
             priceTax: '469,480',
-            features: { triple: true, tilt: false, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -569,7 +569,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '全センサー構成のZ306に最先端のデジタル対策を統合。',
             price: '396,800',
             priceTax: '436,480',
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -579,7 +579,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'センサー満載のフルガード。250の安全をあらゆる角度から監視。',
             price: '448,800',
             priceTax: '493,680',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -590,7 +590,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '486,800',
             priceTax: '535,480',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: true, ir: true },
+            features: { , led: true },
             category: 'パンテーラ'
         }
     ];
@@ -606,7 +606,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '純正ロックに連動し、日常の利便性を損なわず愛車を守る基本パッケージ。',
             price: '260,855',
             priceTax: '286,940',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -616,7 +616,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '信頼のZV IIにCANインベーダー対策ユニットを物理追加した鉄壁プラン。',
             price: '272,600',
             priceTax: '299,860',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -627,7 +627,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '299,600',
             priceTax: '329,560',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -637,7 +637,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '傾斜センサー含むフルセンサー構成にCANガードを統合した最良バランスの一台。',
             price: '310,827',
             priceTax: '341,909',
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -647,7 +647,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'パンテーラの緻密な感度はそのままに、純正ロックに連動し日常の利便性を確保。',
             price: '321,300',
             priceTax: '353,430',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -657,7 +657,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'パンテーラに独自のCANガードを施工。デジタルとアナログの高度な融合。',
             price: '332,800',
             priceTax: '366,080',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -667,7 +667,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '不動の人気Z306に純正ロック連動をプラス。高い防犯性能と使いやすさを両立。',
             price: '348,300',
             priceTax: '383,130',
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -677,7 +677,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '不動の人気Z306にCANガードをプラス。圧倒的な防犯性能と安心を提供。',
             price: '359,800',
             priceTax: '395,780',
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -687,7 +687,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'ANG最強の組み合わせに純正ロック連動をプラス。利便性を極めた最上位パッケージ。',
             price: '438,300',
             priceTax: '482,130',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: false, ir: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -698,7 +698,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '449,800',
             priceTax: '494,780',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: true, ir: true },
+            features: { , led: true },
             category: 'パンテーラ'
         }
     ];
@@ -712,7 +712,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '信頼のZV IIに純正ロック連動（スマクロ）を追加。利便性を損なわず最新の盗難手口からガード。',
             price: '293,800',
             priceTax: '323,180',
-            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -722,7 +722,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'ZV IIをベースに、物理的なCANガードを施工。デジタルとアナログの多重防御でハリアーを守ります。',
             price: '289,800',
             priceTax: '318,780',
-            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -732,7 +732,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '傾斜センサーを標準装備した最上位Grgo。スマクロ機能で、より今の時代にあったセキュリティーとして選ばれています。',
             price: '320,800',
             priceTax: '352,880',
-            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -743,7 +743,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '316,800',
             priceTax: '348,480',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -753,7 +753,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'パンテーラの緻密なアルゴリズムと、スマクロの利便性を融合。大きな車体のハリアーに最適なパッケージ。',
             price: '363,800',
             priceTax: '400,180',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -763,7 +763,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'Z106をベースに、物理CANガードを追加。あらゆる角度から狙われるハリアーを鉄壁に護ります。',
             price: '359,800',
             priceTax: '395,780',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -773,7 +773,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '人気の傾斜センサーを標準装備したZ306。最新のスマクロ機能を加え、最新手口への対策と使い勝手を両立。',
             price: '390,800',
             priceTax: '429,880',
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -784,7 +784,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '386,800',
             priceTax: '425,480',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -794,7 +794,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'パンテーラ最高峰。全センサー、バックアップサイレンのフルスペックに、スマクロの最新CAN対策を統合。',
             price: '480,800',
             priceTax: '528,880',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -804,7 +804,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'ANG最強のハリアー防衛プラン。フルスペックパンテーラ＋物理CANガードの、正真正銘の鉄壁モデル。',
             price: '476,800',
             priceTax: '524,480',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         }
     ];
@@ -818,7 +818,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '純正ロック連動で利便性を高めつつ、トリプルセンサーで愛車をしっかり保護します。',
             price: '292,959',
             priceTax: '322,255',
-            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -828,7 +828,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '物理的なCANインベーダー対策とトリプルセンサーを組み合わせた実戦的パッケージ。',
             price: '270,728',
             priceTax: '297,800',
-            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -838,7 +838,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '傾斜センサー含むZVT IIに純正ロック連動をプラス。毎日の使いやすさと安心を両立。',
             price: '294,364',
             priceTax: '323,800',
-            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -849,7 +849,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '295,273',
             priceTax: '324,800',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -859,7 +859,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'パンテーラの緻密なアルゴリズムに純正ロック連動を統合し、実用性を極めたプラン。',
             price: '333,455',
             priceTax: '366,800',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -869,7 +869,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'パンテーラの基本性能に物理CANガードをプラス。デジタルとアナログ両面から阻止。',
             price: '315,545',
             priceTax: '347,100',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -879,7 +879,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '多重センサーのZ306と純正ロック連動で、隙のない防犯体制とスムーズな操作を実現。',
             price: '358,000',
             priceTax: '393,800',
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -889,7 +889,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'Z306の多重センサーに物理CAN対策を統合。レッカー盗難もCANインベーダーも防ぎます。',
             price: '358,909',
             priceTax: '394,800',
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -899,7 +899,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'フルスペックパンテーラに純正ロック連動をプラス。究極の防犯と快適さの到達点。',
             price: '439,818',
             priceTax: '483,800',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: false, ir: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -910,7 +910,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '440,727',
             priceTax: '484,800',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: true, ir: true },
+            features: { , led: true },
             category: 'パンテーラ'
         }
     ];
@@ -924,7 +924,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '難しい操作は一切不要。純正キーのロック・アンロックに連動して警備を開始する、K-CARオーナーに一番人気のパッケージ。',
             price: '124,800',
             priceTax: '137,280',
-            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -934,7 +934,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '薄型1WAYリモコン付属。スマートな見た目と確かな防犯性能を両立したスタンダードモデル。',
             price: '156,800',
             priceTax: '172,480',
-            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -944,7 +944,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '日本語表示可能なアンサーバックリモコンで操作性抜群。離れた場所からでも異常を感知し、手元のリモコンへ通知。',
             price: '172,800',
             priceTax: '190,080',
-            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -954,7 +954,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'ZV IIに純正ロック連動（スマクロ）を追加。利便性を損なわず、最新の手口から愛車を守ります。',
             price: '207,800',
             priceTax: '228,580',
-            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -965,7 +965,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '219,800',
             priceTax: '241,780',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -975,7 +975,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '最高位Grgoに純正ロック連動を追加。あらゆる衝撃・傾斜検知に利便性をプラスした究極の軽カープラン。',
             price: '264,600',
             priceTax: '291,060',
-            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -985,7 +985,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'パンテーラの緻密な警備。スマクロ対応により、純正キーの快適さを維持しながらハイエンドブランドの安心を。',
             price: '293,800',
             priceTax: '323,180',
-            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -996,7 +996,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '315,800',
             priceTax: '347,380',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -1006,7 +1006,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '全センサー解放。マイクロ波による接近検知やバックアップサイレンまで備えた、K-CARの防犯を極めるための頂点プラン。',
             price: '395,800',
             priceTax: '435,380',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'パンテーラ'
         }
     ];
@@ -1020,7 +1020,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '操作性に優れた純正ロック連動モデル。純正キーの施錠・解錠に連動して警備を開始でき、初めての方でも安心。',
             price: '142,800',
             priceTax: '157,080',
-            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -1030,7 +1030,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '薄型1WAYリモコンが付属。状況に応じた設定変更がしやすく、サブのリモコンとしても重宝します。',
             price: '180,800',
             priceTax: '198,880',
-            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -1040,7 +1040,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '2WAYアンサーバックリモコンにより、離れた場所からでも車両の異常をリアルタイムで把握可能。',
             price: '198,800',
             priceTax: '218,680',
-            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -1051,7 +1051,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '248,800',
             priceTax: '273,680',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -1061,7 +1061,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'パンテーラの高精度な検知能力をジムニーに。将来的なセンサー追加にも柔軟に対応できるベースモデル。',
             price: '268,800',
             priceTax: '295,680',
-            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: false, canguard: false },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -1072,7 +1072,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '318,800',
             priceTax: '350,680',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: false, canguard: false },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -1082,7 +1082,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'すべてのセンサーを網羅した最高峰フルスペックモデル。ジムニーを愛するオーナー様のための究極の守り。',
             price: '408,800',
             priceTax: '449,680',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: false, canguard: false },
+            features: { , led: true },
             category: 'パンテーラ'
         }
     ];
@@ -1096,7 +1096,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'ジャッキアップを警告する傾斜センサーやトリプルセンサーを含む、スポーツカーに必須の検知能力を備えたモデル。',
             price: '268,800',
             priceTax: '295,680',
-            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -1107,7 +1107,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '309,800',
             priceTax: '340,780',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -1117,7 +1117,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'パンテーラの緻密な警備アルゴリズム。ベースモデルながらスポーツカーの盗難リスクを大幅に低減。',
             price: '288,800',
             priceTax: '317,680',
-            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: false, canguard: false },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -1127,7 +1127,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'Z106に最新のCANインベーダー対策を統合。物理的な盾を設けることで、不正なエンジン始動を阻止。',
             price: '329,800',
             priceTax: '362,780',
-            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -1137,7 +1137,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '傾斜センサーとトリプルセンサーを標準装備。あらゆる角度からの侵入・いたずら・移動を即座に検知。',
             price: '338,800',
             priceTax: '372,680',
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: false, canguard: false },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -1148,7 +1148,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '379,800',
             priceTax: '417,780',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -1158,7 +1158,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '全センサーを搭載したパンテーラ最高峰。マイクロ波による接近検知やバックアップサイレンを備えた頂点の守り。',
             price: '428,000',
             priceTax: '470,800',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: false, canguard: false },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -1168,7 +1168,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'ANGのノウハウを全て投入。フルスペックパンテーラに物理CAN対策を加えた、TYPE-Rを守り抜くための最終結論。',
             price: '469,800',
             priceTax: '516,780',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         }
     ];
@@ -1182,7 +1182,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'スマートキーに完全連動。リモコンを追加せず、純正の使い勝手そのままに警備を開始できるベーシックセット。',
             price: '191,055',
             priceTax: '210,160',
-            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -1192,7 +1192,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '薄型1WAYリモコンモデル。オプション追加で純正ロック連動も可能（別途費用）。スマートな運用を求める方に。',
             price: '205,600',
             priceTax: '226,160',
-            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: false, canguard: false },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -1202,7 +1202,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'ZV IIにスマクロ機能を追加。CANインベーダーやリレーアタックに対抗する最新のデジタルセキュリティ。',
             price: '258,600',
             priceTax: '284,460',
-            features: { triple: false, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -1212,7 +1212,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '物理的なCANガードを組み合わせた、より強固なパッケージ。デジタル・アナログ両面でプリウスを守ります。',
             price: '254,800',
             priceTax: '280,280',
-            features: { triple: true, tilt: false, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -1222,7 +1222,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '傾斜・トリプルセンサーを同梱した最上位Grgo。ジャッキアップやホイール盗難も逃さず検知。',
             price: '308,600',
             priceTax: '339,460',
-            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -1233,7 +1233,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '304,800',
             priceTax: '335,280',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: false, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -1243,7 +1243,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'パンテーラの緻密な感度調整がプリウスに。パンテーラリモコンによるドアロック開閉で高い防犯性を発揮。',
             price: '293,600',
             priceTax: '322,960',
-            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -1253,7 +1253,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'Z106にスマクロ機能を追加。スマートキーの利便性を保ちつつ、パンテーラの鉄壁なバリアを実現。',
             price: '328,600',
             priceTax: '361,460',
-            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -1263,7 +1263,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '最高品質のパンテーラに、ANG独自の物理CANガードを施工。二重の盾でエンジンの不正始動を阻止。',
             price: '324,800',
             priceTax: '357,280',
-            features: { triple: false, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -1273,7 +1273,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '全センサーを搭載した人気モデルにスマクロを追加。ホイール盗難からインベーダーまで完全網羅。',
             price: '378,600',
             priceTax: '416,460',
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -1284,7 +1284,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '374,800',
             priceTax: '412,280',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -1294,7 +1294,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'パンテーラ最高峰。全機能と全センサーを解放し、物理的なデジタル対策も完備した頂点モデル。',
             price: '464,800',
             priceTax: '511,280',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         }
     ];
@@ -1308,7 +1308,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '薄型1WAYリモコンでスマートに運用。トリプルセンサーで感度を高め、ミラー連動で利便性も向上。',
             price: '191,000',
             priceTax: '210,100',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: false, canguard: false },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -1318,7 +1318,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'リモコンでドアロックと警備を同時操作し、高い防犯効果を実現。実用的なミラー連動も標準装備。',
             price: '223,800',
             priceTax: '246,180',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -1328,7 +1328,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '最新の窃盗手口に対抗する純正ロック連動機能を搭載。アンサーバックで車両状態も手元で把握可能。',
             price: '246,800',
             priceTax: '271,480',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -1339,7 +1339,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '250,800',
             priceTax: '275,880',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -1349,7 +1349,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '最高位Grgoに純正ロック連動を追加。利便性と鉄壁の防犯、さらにミラー連動の快適性を一台に。',
             price: '293,800',
             priceTax: '323,180',
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -1359,7 +1359,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'パンテーラの緻密な警備。ドアロック開閉をパンテーラリモコンで行うことで防犯性能を最大化。',
             price: '293,800',
             priceTax: '323,180',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -1369,7 +1369,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'Z106に純正ロック連動を追加。純正スマートキーを使いながら、パンテーラの鉄壁バリアを構築。',
             price: '316,800',
             priceTax: '348,480',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -1380,7 +1380,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '320,800',
             priceTax: '352,880',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -1390,7 +1390,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'Z306の多機能検知に純正ロック連動の便利さをプラス。最新のインベーダー対策も網羅したハイエンドプラン。',
             price: '343,800',
             priceTax: '378,180',
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: false },
+            features: { , led: true },
             category: 'パンテーラ'
         }
     ];
@@ -1404,7 +1404,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '最新のクラウンシリーズに最適。物理CANガードと最新システムを組み合わせ、利便性と防犯を両立。',
             price: '314,600',
             priceTax: '346,060',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -1415,7 +1415,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '336,600',
             priceTax: '370,260',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -1425,7 +1425,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '最高品質パンテーラをクラウンに施工。CANインベーダー対策とトリプルセンサーで予兆を確実に検知。',
             price: '374,800',
             priceTax: '412,280',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -1435,7 +1435,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'Z106に覗き込み対策のマイクロ波センサーを追加。不審なうろつきを未然に威嚇、排除します。',
             price: '426,800',
             priceTax: '469,480',
-            features: { triple: true, tilt: false, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -1446,7 +1446,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '396,800',
             priceTax: '436,480',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -1456,7 +1456,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'センサー満載のフルガードパッケージ。うろつき検知を追加し、高級車クラウンを全方位から監視。',
             price: '448,800',
             priceTax: '493,680',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -1466,7 +1466,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '全センサー＋バックアップサイレン仕様のパンテーラ最上位。クラウンを守り抜く究極の回答。',
             price: '486,800',
             priceTax: '535,480',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         }
     ];
@@ -1480,7 +1480,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '最も狙われる300必須のアナログ防御と電子対策をパッケージ。',
             price: '314,600',
             priceTax: '346,060',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -1491,7 +1491,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '336,600',
             priceTax: '370,260',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -1501,7 +1501,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '車外への接近検知を追加。300への干渉を未然に威嚇。',
             price: '388,600',
             priceTax: '427,460',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'grgo'
         },
         {
@@ -1511,7 +1511,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '世界最強クラスのパンテーラで、300への不正信号を遮断。',
             price: '374,800',
             priceTax: '412,280',
-            features: { triple: true, tilt: false, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -1521,7 +1521,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '高感度検知を活かし、不審車の接近もうろつきも逃さない。',
             price: '426,800',
             priceTax: '469,480',
-            features: { triple: true, tilt: false, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -1531,7 +1531,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: '充実のセンサー群で全方位監視。300を鉄壁の守りへ。',
             price: '396,800',
             priceTax: '436,480',
-            features: { triple: true, tilt: true, bonnet: true, microwave: false, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -1541,7 +1541,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             description: 'マイクロ波を含むフルセンサー構成。300防衛の最高峰。',
             price: '448,800',
             priceTax: '493,680',
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: false, algorithm: true, canguard: true },
+            features: { , led: true },
             category: 'パンテーラ'
         },
         {
@@ -1552,7 +1552,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             price: '486,800',
             priceTax: '535,480',
             isRecommended: true,
-            features: { triple: true, tilt: true, bonnet: true, microwave: true, siren: true, algorithm: true, canguard: true, ir: true },
+            features: { , led: true },
             category: 'パンテーラ'
         }
     ];
@@ -1748,6 +1748,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                             siren: item.siren ?? false,
                             algorithm: item.algorithm ?? false,
                             canguard: item.canguard ?? false,
+                            led: item.led ?? false,
                         }
                     };
                 });
@@ -2099,7 +2100,8 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                             { label: 'マイクロ波', key: 'microwave', desc: '不審接近威嚇。' },
                                             { label: 'バックアップ', key: 'siren', desc: '電源断対応サイレン。' },
                                             { label: '純正ロック連動', key: 'algorithm', desc: '純正キー同期。' },
-                                            { label: 'CANガード', key: 'canguard', desc: 'デジタル通信遮断。' }
+                                            { label: 'CANガード', key: 'canguard', desc: 'デジタル通信遮断。' },
+                                             { label: 'LEDプレート', key: 'led', desc: '視覚的威嚇効果。' }
                                         ].map((feature, idx) => (
                                             <tr key={feature.key} className={`hover:bg-neutral-50/50 transition-colors group`}>
                                                 <td className="py-5 px-2 lg:px-4">
