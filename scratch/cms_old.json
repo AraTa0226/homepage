@@ -1,42 +1,6 @@
 {
-  "lastUpdated": "2026-04-28T23:10:00Z",
-  "cacheVersion": "72",
-  "heroAlert": {
-    "active": true,
-    "text": "【新商品案内】最新のレーザー探知機「Z1200」の取り扱いを開始しました。店舗にて展示中！",
-    "link": "/security/radar/z1200",
-    "badge": "NEW RELEASE"
-  },
-  "recruitment": {
-    "visible": true,
-    "title": "採用情報",
-    "message": "カーセキュリティー取り付け・販売スタッフ募集中です。詳しくはお電話ください。092-503-5437担当：塚元 or 村上",
-    "requirements": [
-      ""
-    ],
-    "salary": "",
-    "contactInfo": "お電話にてお問い合わせください"
-  },
-  "theftMethods": [
-    {
-      "id": "relay-attack",
-      "title": "リレーアタック",
-      "description": "スマートキーから漏れる微弱な電波を増幅し、一瞬で解錠・始動する手口。",
-      "link": "/security/relay-attack"
-    },
-    {
-      "id": "can-invader",
-      "title": "CANインベーダー",
-      "description": "車両の通信網(CAN)に直接侵入し、解錠からエンジンの始動まで行う最新の盗難技術。",
-      "link": "/security/can-invader"
-    },
-    {
-      "id": "key-emulator",
-      "title": "キーエミュレーター",
-      "description": "特殊なデバイスでスマートキーのスペアを疑似的にその場で作成する、最凶の次世代手口。",
-      "link": "/security/key-emulator"
-    }
-  ],
+  "lastUpdated": "2026-04-22T09:52:00Z",
+  "cacheVersion": "21",
   "plans": [
     {
       "id": "speaker_package",
@@ -565,63 +529,113 @@
     },
     {
       "id": "security_grgo",
-      "category": "Grgo (ゴルゴ) VⅡ",
+      "category": "Grgo (ゴルゴ)",
       "type": "security",
       "items": [
         {
-          "name": "ZVⅡ",
+          "name": "ZVシリーズ",
           "price": "165000",
-          "badge": "人気No.1推奨",
-          "features": [
-            "2次元フルカラー液晶リモコン",
-            "3ゾーン衝撃センサー",
-            "1ポイントイモビライザー",
-            "ドア/トランク/ボンネット検知"
-          ],
-          "image": "/images/Security/model/grgo.webp",
-          "description": "フルカラー液晶リモコン for 車両の状態をリアルタイムに確認可能。高い検知能力と操作性を両立した、Grgoシリーズの核となるモデルです。"
+          "badge": "人気No.1"
         },
         {
-          "name": "ZVTⅡ",
-          "price": "198000",
-          "badge": "最上位フルガード",
-          "features": [
-            "デジタル傾斜センサー標準装備",
-            "トリプルセンサー標準装備",
-            "アンサーバック液晶リモコン",
-            "1WAYスペアリモコン付属"
-          ],
-          "image": "/images/Security/model/grgo.webp",
-          "description": "ZVⅡの機能に加え、レッカー移動対策の傾斜センサーや衝撃検知を強化するトリプルセンサーを標準装備した、物理ガードの決定版。"
+          "name": "Vシリーズ",
+          "price": "132000",
+          "badge": "コスパ重視"
         },
         {
-          "name": "1VsⅡ",
+          "name": "1/0シリーズ",
           "price": "99000",
-          "badge": "純正キーレス連動",
-          "features": [
-            "純正リモコン連動",
-            "ショックセンサー内蔵",
-            "イモビライザー",
-            "ドア/トランク/ボンネット検知"
-          ],
-          "image": "/images/Security/model/grgo.webp",
-          "description": "純正スマートキーの操作に連動してセキュリティを起動. シンプルながらGrgoの高い信頼性を手軽に導入できるモデルです。"
-        },
-        {
-          "name": "5VfⅡ",
-          "price": "110000",
-          "badge": "実用性重視",
-          "features": [
-            "5ボタン1WAYリモコン",
-            "ショックセンサー内蔵",
-            "ドア/トランク/ボンネット検知",
-            "車載用リモコンホルダー対応"
-          ],
-          "image": "/images/Security/model/grgo.webp",
-          "description": "液晶なしのシンプルなリモコンを採用。機能を絞り込みつつ、Grgoならではの確実な警報・警告能力を維持した実用モデル。"
+          "badge": "スマート施工"
         }
       ],
       "images": []
+    },
+    {
+      "id": "security_panthera",
+      "category": "Panthera (パンテーラ) Z-Series",
+      "type": "security",
+      "items": [
+        {
+          "name": "Z706",
+          "price": "385000",
+          "badge": "フルスペックモデル",
+          "features": [
+            "全センサー装備",
+            "トリプル/傾斜/マイクロ波/IR",
+            "バックアップサイレン標準",
+            "2ポイントイモビライザー"
+          ],
+          "image": "/images/Security/model/panthera.webp",
+          "description": "Panthera Zシリーズ最高位モデル。4つのセンサー（32段階設定）をアルゴリズムに組み合わせ、確実な警告・警報を出します。バックアップサイレンも標準装備。"
+        },
+        {
+          "name": "Z306",
+          "price": "275000",
+          "badge": "ハイスペックモデル",
+          "features": [
+            "トリプルセンサー標準",
+            "デジタル傾斜センサー標準",
+            "ハイパワーサイレン",
+            "2ポイントイモビライザー"
+          ],
+          "image": "/images/Security/model/pantheraz.webp",
+          "description": "Z106の警戒機能に加え、人気ユニットのトリプルセンサー・デジタル傾斜センサーを標準装備したハイスペックモデル。"
+        },
+        {
+          "name": "Z106",
+          "price": "198000",
+          "badge": "ベーシックモデル",
+          "features": [
+            "3ゾーンショックセンサー",
+            "2ポイントイモビライザー",
+            "ハイパワーサイレン",
+            "ドラレコ連携録画"
+          ],
+          "image": "/images/Security/model/pantheraz.webp",
+          "description": "ドア/ボンネット/トランク全開放検知。Pantheraの高度なアルゴリズムを凝縮したベーシックモデル。"
+        }
+      ],
+      "images": [
+        "/images/Security/model/panthera.webp",
+        "/images/Security/model/panthera-key.webp"
+      ]
+    },
+    {
+      "id": "security_grgo_v2",
+      "category": "最新セキュリティー (Grgo V2)",
+      "type": "security",
+      "items": [
+        {
+          "name": "Grgo V2 ベーシック",
+          "price": "110000",
+          "badge": "最新・盗難特化",
+          "features": [
+            "デジタル・イモビライザー",
+            "キーエミュレーター対向",
+            "車両システム独立ガード",
+            "※サイレン、衝撃センサー別売"
+          ],
+          "image": "/images/Security/model/grgov2.webp",
+          "description": "機能を盗難対策（自走防止）に特化させることで、レクサス・ランクル等のハイリスク車にも安心の防衛力を低価格で提供。※サイレンおよび衝撃センサーはオプションとなります。"
+        },
+        {
+          "name": "Grgo V2 + ショックセンサー + サイレン",
+          "price": "137500",
+          "badge": "推奨パッケージ",
+          "features": [
+            "デジタル・イモビライザー",
+            "ハイパワーサイレン内蔵",
+            "2段階衝撃センサー内蔵",
+            "キーエミュレーター対向",
+            "車両システム独立防衛"
+          ],
+          "image": "/images/Security/model/grgov2.webp",
+          "description": "V2ベーシックに「サイレン」と「衝撃センサー」を追加した当店一番人気の推奨パッケージ。音と衝撃検知により、自走盗難だけでなく車上荒らしや悪戯からも愛車を守ります。"
+        }
+      ],
+      "images": [
+        "/images/Security/model/grgov2-key.webp"
+      ]
     },
     {
       "id": "security_viper",
@@ -688,7 +702,7 @@
           "badge": "絶対防衛",
           "features": [
             "ダブルイモビライザー必須",
-            "純正ロック連動",
+            "スマートキー連動",
             "Can-Invader対策"
           ]
         },
@@ -727,7 +741,7 @@
           "price": "242000",
           "badge": "人気SUV",
           "features": [
-            "純正ロック連動",
+            "スマートキー連動",
             "リレーアタック対策"
           ]
         },
@@ -776,7 +790,7 @@
           "features": [
             "車上荒らし対策",
             "イタズラ対策",
-            "純正ロック連動"
+            "スマート連動"
           ]
         }
       ],
@@ -788,183 +802,12 @@
       "type": "others",
       "items": [
         {
-          "name": "Yupiteru Z-330",
-          "price": "46200",
-          "badge": "3カメラ・最上位",
-          "image": "/images/Security/drive_recorder/z-330.webp",
-          "youtubeId": "yfkHQGr6VQQ",
-          "features": [
-            "3カメラ(フロント+リアデュアル)",
-            "STARVIS 2搭載",
-            "駐車監視標準装備",
-            "SDフォーマット不要"
-          ],
-          "description": "フロント+リア席側+リア後方の3つのカメラで死角をカバー。後方から見渡すように前方状況を記録でき、車内プライバシーにも配慮された最新モデル。電源監視ユニット標準装備で自動駐車監視切り替えが可能です。",
-          "link": "https://www.yupiteru.co.jp/products/drive_recorder/z-330/",
-          "slug": "z-330",
-          "specSummary": [
-            {
-              "label": "カメラ構成",
-              "value": "3カメラ (前・後×2)",
-              "icon": "Camera"
-            },
-            {
-              "label": "記録解像度",
-              "value": "200万画素 Full HD",
-              "icon": "Layers"
-            },
-            {
-              "label": "夜間センサー",
-              "value": "STARVIS 2 (全カメラ)",
-              "icon": "Zap"
-            },
-            {
-              "label": "駐車監視",
-              "value": "標準装備 (電圧監視)",
-              "icon": "Shield"
-            },
-            {
-              "label": "SDカード",
-              "value": "64GB / フォーマット不要",
-              "icon": "HardDrive"
-            },
-            {
-              "label": "追加機能",
-              "value": "ADAS (安全運転支援)",
-              "icon": "Info"
-            }
-          ],
-          "detailedSections": [
-            {
-              "title": "3つのカメラで全方面記録",
-              "content": "フロントとリアデュアル（後方+車内）の3枚のレンズで、前後・左右・車内の全方面を記録。"
-            },
-            {
-              "title": "夜間記録「STARVIS 2」& HDR",
-              "content": "全カメラに高感度センサー『STARVIS 2』を搭載。"
-            },
-            {
-              "title": "駐車監視機能 標準装備",
-              "content": "従来は別売りだった電源直結コードを標準装備。"
-            }
-          ]
-        },
-        {
-          "name": "Yupiteru ZQ-60ai",
-          "price": "46200",
-          "badge": "全周囲360°+AI",
-          "image": "/images/Security/drive_recorder/zq-60ai.webp",
-          "youtubeId": "zPQXFBSEsRc",
-          "features": [
-            "全周囲360°+リアカメラ",
-            "人検知A.I.搭載",
-            "駐車監視 標準装備",
-            "3年保証"
-          ],
-          "slug": "zq-60ai",
-          "specSummary": [
-            {
-              "label": "カメラ構成",
-              "value": "360°+リアカメラ",
-              "icon": "Camera"
-            },
-            {
-              "label": "AI機能",
-              "value": "人検知・警告通知",
-              "icon": "Zap"
-            },
-            {
-              "label": "保証期間",
-              "value": "3年間保証",
-              "icon": "Info"
-            }
-          ]
-        },
-        {
-          "name": "Yupiteru ZQ-40si",
-          "price": "47300",
-          "badge": "360°+スマホ連動",
-          "image": "/images/Security/drive_recorder/zq-40si.webp",
-          "youtubeId": "-tw86afGHRY",
-          "features": [
-            "全周囲360°+リアカメラ",
-            "スマホアプリ連動機能",
-            "自動駐車モード切替"
-          ],
-          "slug": "zq-40si"
-        },
-        {
-          "name": "Yupiteru ZQ-50AI",
-          "price": "41800",
-          "badge": "360°+AI・ADAS",
-          "image": "/images/Security/drive_recorder/zq-50ai.webp",
-          "youtubeId": "GDVFZoNu4qQ",
-          "features": [
-            "全周囲360°録画",
-            "人検知A.I.搭載",
-            "安全運転サポート(ADAS)"
-          ],
-          "slug": "zq-50ai"
-        },
-        {
-          "name": "Yupiteru ZQ-21",
-          "price": "27500",
-          "badge": "360°・エントリー",
-          "image": "/images/Security/drive_recorder/zq-21.webp",
-          "features": [
-            "全周囲360°録画",
-            "SDフォーマット不要"
-          ],
-          "slug": "zq-21"
-        },
-        {
-          "name": "Yupiteru ZQ-25",
-          "price": "29700",
-          "badge": "360°+スマホ連動",
-          "image": "/images/Security/drive_recorder/zq-25.webp",
-          "features": [
-            "全周囲360°録画",
-            "無線LAN搭載・スマホ連動"
-          ],
-          "slug": "zq-25"
-        },
-        {
-          "name": "Yupiteru Q-03",
-          "price": "38500",
-          "badge": "全天球720°記録",
-          "image": "/images/Security/drive_recorder/q-03.webp",
-          "features": [
-            "全方位720°録画",
-            "STARVIS搭載・夜間鮮明"
-          ],
-          "slug": "q-03"
-        },
-        {
-          "name": "Yupiteru SN-TW88d",
-          "price": "36300",
-          "badge": "前後STARVIS・駐車監視標準",
-          "image": "/images/Security/drive_recorder/sn-tw88d.webp",
-          "features": [
-            "前後STARVIS搭載・夜間鮮明",
-            "駐車監視機能 標準装備"
-          ],
-          "slug": "sn-tw88d"
-        },
-        {
-          "name": "Yupiteru SN-R13d",
-          "price": "19250",
-          "badge": "リア専用",
-          "image": "/images/Security/drive_recorder/sn-r13d.webp",
-          "features": [
-            "リア専用追加モデル",
-            "STARVIS搭載",
-            "スモーク対応"
-          ],
-          "slug": "sn-r13d"
+          "name": "前後2カメラモデル",
+          "price": "44000",
+          "badge": "定番人気"
         }
       ],
-      "images": [],
-      "description": "最近テレビでよく見かけるようになったドライブレコーダーの動画。事故が起きた時には決定的な証拠能力ともなり得る存在です。選ぶポイントとしてお客様が気にされているのが”本体の大きさ””画面サイズ””GPSやGセンサーの有無”そしてもちろん”価格”などです。世の中に出回っている商品の中にはLED信号をうまく映せないような機種もありますので要注意です。"
+      "images": []
     },
     {
       "id": "digital_mirror",
@@ -972,260 +815,9 @@
       "type": "others",
       "items": [
         {
-          "name": "純正交換タイプ 12型ドラレコミラー\n「車内用リアカメラ」",
-          "price": "0",
-          "badge": "NEW 4月下旬発売",
-          "image": "/images/Security/d-mirror/dvr-dm1200a2-ic.webp",
-          "slug": "dvr-dm1200a2-ic",
-          "features": [
-            "12型大画面・高画質液晶",
-            "リア370万画素(WQHD)カメラ",
-            "STARVIS 2搭載・夜間鮮明",
-            "純正ミラー交換タイプ",
-            "駐車録画モード標準装備"
-          ],
-          "description": "後方視界を確実に映すアルパインの最新フラッグシップデジタルミラー。12型の大画面・高画質液晶と、リア370万画素（WQHD）の高画質カメラを採用。STARVIS 2搭載により昼夜を問わず自然で鮮明な映像を実現します。純正ミラー交換タイプで車内に美しく調和します。",
-          "specSummary": [
-            {
-              "label": "液晶サイズ",
-              "value": "12型 IPS液晶",
-              "icon": "Maximize"
-            },
-            {
-              "label": "カメラ解像度",
-              "value": "F:200万 / R:370万画素",
-              "icon": "Camera"
-            },
-            {
-              "label": "夜間センサー",
-              "value": "STARVIS 2 (前後)",
-              "icon": "Zap"
-            },
-            {
-              "label": "取付方法",
-              "value": "純正ミラー交換式",
-              "icon": "Shield"
-            },
-            {
-              "label": "記録媒体",
-              "value": "64GB microSD付属",
-              "icon": "Info"
-            }
-          ],
-          "detailedSections": [
-            {
-              "title": "リア370万画素 WQHDカメラ採用",
-              "content": "リアカメラには高精細370万画素センサーを搭載。従来のフルHDを超える解像度により、後方の細かな状況まで鮮明に記録します。"
-            },
-            {
-              "title": "最新センサー STARVIS 2 搭載",
-              "content": "前後カメラに低照度特性に優れたSTARVIS 2を搭載。夜間走行や暗い駐車場でも黒つぶれを抑えた明るい映像を提供します。"
-            },
-            {
-              "title": "別売品なしで駐車録画に対応",
-              "content": "標準で駐車監視機能を搭載。オフタイマーや低電圧ブロック機能を備え、バッテリー負荷を抑えながら長時間の監視が可能です。"
-            },
-            {
-              "title": "フルラミネーションディスプレイ",
-              "content": "液晶パネルとカバーガラスの空隙をなくすことで光の反射を抑制。色の再現性と視認性を飛躍的に高めました。"
-            },
-            {
-              "title": "純正ミラー交換式・車種専用取付",
-              "content": "本製品は「本体 ＋ 取付けキット」で取付けできます。車種専用の取付けキットを使用することで、配線を隠し、まるで純正品のような美しく確実な装着を実現します。"
-            }
-          ]
-        },
-        {
-          "name": "純正交換タイプ 12型ドラレコミラー\n「車外用リアカメラ」",
-          "price": "0",
-          "badge": "NEW 4月下旬発売",
-          "image": "/images/Security/d-mirror/dvr-dm1200a2-oc.webp",
-          "slug": "dvr-dm1200a2-oc",
-          "features": [
-            "12型大画面・高画質液晶",
-            "車外用リアカメラ(WQHD)",
-            "STARVIS 2搭載・夜間鮮明",
-            "純正ミラー交換タイプ",
-            "駐車録画モード標準装備"
-          ],
-          "description": "後方視界を確実に映すアルパインの最新フラッグシップデジタルミラー。車外設置専用のWQHD（370万画素）カメラを採用。雨天時や夜間のスモークガラス越しでは困難な視認性も、車外カメラなら常にクリアに確保。STARVIS 2搭載により、あらゆる環境下で自然で鮮明な映像を提供します。",
-          "specSummary": [
-            {
-              "label": "液晶サイズ",
-              "value": "12型 IPS液晶",
-              "icon": "Maximize"
-            },
-            {
-              "label": "リア解像度",
-              "value": "370万画素 WQHD",
-              "icon": "Camera"
-            },
-            {
-              "label": "夜間センサー",
-              "value": "STARVIS 2 (前後)",
-              "icon": "Zap"
-            },
-            {
-              "label": "取付方法",
-              "value": "純正ミラー交換式",
-              "icon": "Shield"
-            },
-            {
-              "label": "記録媒体",
-              "value": "64GB microSD付属",
-              "icon": "Info"
-            }
-          ],
-          "detailedSections": [
-            {
-              "title": "車外設置専用 WQHDリアカメラ",
-              "content": "リアカメラは車外設置に特化した370万画素の高精細仕様。リアガラスの汚れや反射の影響を受けず、後方の状況をダイレクトかつ鮮明に捉えます。"
-            },
-            {
-              "title": "最新センサー STARVIS 2 搭載",
-              "content": "前後カメラに低照度特性に優れたSTARVIS 2を搭載。夜間走行や暗い場所でも黒つぶれを抑え、対象車両や状況をくっきりと映し出します。"
-            },
-            {
-              "title": "5つの録画モードで駐車時も安心",
-              "content": "常時・衝撃・手動に加え駐車録画にも対応。オフタイマーや低電圧ブロック機能を内蔵しており、バッテリー負荷を抑えながら確実に記録します。"
-            },
-            {
-              "title": "フルラミネーションディスプレイ",
-              "content": "カバーガラスと液晶の間の隙間をなくす加工により、光の乱反射を抑制。色の再現性が向上し、映り込みの少ないクリアな視界を実現しました。"
-            },
-            {
-              "title": "純正ミラー交換式・車種専用取付",
-              "content": "本製品は「本体 ＋ 取付けキット」で取付けできます。車種専用の取付けキットを使用することで、配線を隠し、まるで純正品のような美しく確実な装着を実現します。"
-            }
-          ]
-        },
-        {
-          "name": "純正交換タイプ 10型ドラレコミラー\n「車内用リアカメラ」",
-          "price": "0",
-          "badge": "NEW 4月下旬発売",
-          "image": "/images/Security/d-mirror/dvr-dm1000a2-ic.webp",
-          "slug": "dvr-dm1000a2-ic",
-          "features": [
-            "10型大画面・高画質液晶",
-            "リア370万画素(WQHD)カメラ",
-            "STARVIS 2搭載・夜間鮮明",
-            "純正ミラー交換タイプ",
-            "駐車録画モード標準装備"
-          ],
-          "description": "後方視界を確実に映すアルパインの最新10型デジタルミラー。コンパクトな車室内にも圧迫感なくフィットする10型液晶を採用。リア370万画素（WQHD）カメラとSTARVIS 2を搭載し、昼夜を問わず圧倒的な鮮明さで安全運転をサポートします。純正ミラー交換タイプで美しく装着可能です。",
-          "specSummary": [
-            {
-              "label": "液晶サイズ",
-              "value": "10型 IPS液晶",
-              "icon": "Maximize"
-            },
-            {
-              "label": "カメラ解像度",
-              "value": "F:200万 / R:370万画素",
-              "icon": "Camera"
-            },
-            {
-              "label": "夜間センサー",
-              "value": "STARVIS 2 (前後)",
-              "icon": "Zap"
-            },
-            {
-              "label": "取付方法",
-              "value": "純正ミラー交換式",
-              "icon": "Shield"
-            },
-            {
-              "label": "記録媒体",
-              "value": "64GB microSD付属",
-              "icon": "Info"
-            }
-          ],
-          "detailedSections": [
-            {
-              "title": "リア370万画素 WQHDカメラ採用",
-              "content": "リアカメラには高精細370万画素センサーを搭載。従来のフルHDを超える解像度により、後方の細かな状況やナンバーまで鮮明に記録・表示します。"
-            },
-            {
-              "title": "最新センサー STARVIS 2 搭載",
-              "content": "前後カメラに低照度特性に優れたSTARVIS 2を搭載。夜間走行や暗い駐車場でも黒つぶれを抑え、昼間のように明るい映像を提供します。"
-            },
-            {
-              "title": "5つの録画モードで駐車時も安心",
-              "content": "駐車録画モードを標準搭載。オフタイマーや低電圧ブロック機能を備え、バッテリー負荷を抑えながら長時間の確実な録画が可能です。"
-            },
-            {
-              "title": "フルラミネーションディスプレイ",
-              "content": "液晶パネルとカバーガラスの間の隙間をなくすフルラミネーション加工により、光の乱反射を抑制。映り込みが少なく見やすい視界を実現しました。"
-            },
-            {
-              "title": "純正ミラー交換式・車種専用取付",
-              "content": "本製品は「本体 ＋ 取付けキット」で取付けできます。車種専用の取付けキットを使用することで、配線を隠し、まるで純正品のような美しく確実な装着を実現します。"
-            }
-          ]
-        },
-        {
-          "name": "純正交換タイプ 10型ドラレコミラー\n「車外用リアカメラ」",
-          "price": "0",
-          "badge": "NEW 4月下旬発売",
-          "image": "/images/Security/d-mirror/dvr-dm1000a2-oc.webp",
-          "slug": "dvr-dm1000a2-oc",
-          "features": [
-            "10型大画面・高画質液晶",
-            "車外用リアカメラ(WQHD)",
-            "STARVIS 2搭載・夜間鮮明",
-            "純正ミラー交換タイプ",
-            "駐車録画モード標準装備"
-          ],
-          "description": "後方視界を確実に映すアルパインの最新10型デジタルミラー。車外設置専用のWQHD（370万画素）カメラを採用。雨天時や夜間のスモークガラス越しでは困難な視認性も、車外カメラなら常にクリアに確保。STARVIS 2搭載により、あらゆる環境下で自然で鮮明な映像を提供します。",
-          "specSummary": [
-            {
-              "label": "液晶サイズ",
-              "value": "10型 IPS液晶",
-              "icon": "Maximize"
-            },
-            {
-              "label": "リア解像度",
-              "value": "370万画素 WQHD",
-              "icon": "Camera"
-            },
-            {
-              "label": "夜間センサー",
-              "value": "STARVIS 2 (前後)",
-              "icon": "Zap"
-            },
-            {
-              "label": "取付方法",
-              "value": "純正ミラー交換式",
-              "icon": "Shield"
-            },
-            {
-              "label": "記録媒体",
-              "value": "64GB microSD付属",
-              "icon": "Info"
-            }
-          ],
-          "detailedSections": [
-            {
-              "title": "車外設置専用 WQHDリアカメラ",
-              "content": "リアカメラは車外設置に特化した370万画素の高精細仕様。リアガラスの汚れや反射の影響を受けず、後方の状況をダイレクトかつ鮮明に捉えます。"
-            },
-            {
-              "title": "最新センサー STARVIS 2 搭載",
-              "content": "前後カメラに低照度特性に優れたSTARVIS 2を搭載。夜間走行や暗い場所でも黒つぶれを抑え、対象車両や状況くっきりと映し出します。"
-            },
-            {
-              "title": "5つの録画モードで駐車時も安心",
-              "content": "常時・衝撃・手動に加え駐車録画にも対応。オフタイマーや低電圧ブロック機能を内蔵しており、バッテリー負荷を抑えながら確実に記録します。"
-            },
-            {
-              "title": "フルラミネーションディスプレイ",
-              "content": "カバーガラスと液晶の間の隙間をなくす加工により、光の乱反射を抑制。色の再現性が向上し、映り込みの少ないクリアな視界を実現しました。"
-            },
-            {
-              "title": "純正ミラー交換式・車種専用取付",
-              "content": "本製品は「本体 ＋ 取付けキット」で取付けできます。車種専用の取付けキットを使用することで、配線を隠し、まるで純正品のような美しく確実な装着を実現します。"
-            }
-          ]
+          "name": "純正交換型",
+          "price": "77000",
+          "badge": "視界クリア"
         }
       ],
       "images": []
@@ -1236,38 +828,9 @@
       "type": "others",
       "items": [
         {
-          "name": "Yupiteru ZK2200 (2ピースセパレート型)",
-          "slug": "zk2200",
+          "name": "セパレート型レーダー",
           "price": "49500",
-          "badge": "最新指定店モデル",
-          "image": "/images/Top/radar.webp",
-          "features": [
-            "移動型オービスMSSS対応",
-            "第2世代レーザーアンテナ",
-            "無線LAN自動更新対応"
-          ]
-        },
-        {
-          "name": "Yupiteru Z2000 (セパレート型)",
-          "slug": "z2000",
-          "price": "49500",
-          "badge": "指定店モデル",
-          "image": "/images/Top/radar.webp",
-          "features": [
-            "レーザー光超高感度受信",
-            "移動オービスMSSS対応"
-          ]
-        },
-        {
-          "name": "Yupiteru Z1100 (ワンボディ型)",
-          "slug": "z1100",
-          "price": "38500",
-          "badge": "指定店モデル",
-          "image": "/images/Top/radar.webp",
-          "features": [
-            "1ボディ最高峰",
-            "MSSS識別警報"
-          ]
+          "badge": "最強感度"
         }
       ],
       "images": []
@@ -1297,1312 +860,6 @@
         }
       ],
       "images": []
-    },
-    {
-      "id": "hiace_200_full",
-      "createdAt": "2026-04-29T21:58:18.755Z",
-      "updatedAt": "2026-04-29T21:58:18.755Z",
-      "publishedAt": "2026-04-29T21:58:18.755Z",
-      "revisedAt": "2026-04-29T21:58:18.755Z",
-      "category": "HIACE (200系) フルラインナップ",
-      "type": [],
-      "description": "<p>仕事からレジャーまで幅広く活躍するハイエース。狙われやすい車種だからこそ、センサー感度の追求と利便性を両立した専用プランをご用意しました。</p>",
-      "items": [
-        {
-          "fieldId": "item",
-          "name": "Grgo ZVT II ＋ ミラー連動",
-          "price": "250,800",
-          "badge": "おすすめ",
-          "description": "傾斜・トリプルセンサーを同梱した上位モデル。ハイエースのレッカー盗難も確実に検知。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": false,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Grgo ZVT II ＋ スマキー連動/スマクロ ＋ ミラー連動",
-          "price": "293,800",
-          "description": "最高位Grgoにスマキー連動を追加。利便性と鉄壁の防犯、さらにミラー連動の快適性を一台に。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": false,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z306 ＋ ミラー連動",
-          "price": "320,800",
-          "badge": "推奨構成",
-          "description": "全センサー標準装備。ハイエースオーナーに最も支持される、高性能とお買得感を両立したプラン。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": false,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z306 ＋ スマキー連動/スマクロ ＋ ミラー連動",
-          "price": "343,800",
-          "description": "Z306の多機能検知にスマキー連動の便利さをプラス。最新のインベーダー対策も網羅したハイエンドプラン。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": false,
-          "image": ""
-        }
-      ],
-      "showV2Option": false
-    },
-    {
-      "id": "kcar_special",
-      "createdAt": "2026-04-29T21:58:18.026Z",
-      "updatedAt": "2026-04-29T21:58:18.026Z",
-      "publishedAt": "2026-04-29T21:58:18.026Z",
-      "revisedAt": "2026-04-29T21:58:18.026Z",
-      "category": "K-CAR 専用パッケージ",
-      "type": [],
-      "description": "<p>軽自動車だからこそ、センサー感度の追求と利便性を両立。車上荒らしやイタズラから愛車を守る、K-CAR専用の最適パッケージをご提案します。</p>",
-      "items": [
-        {
-          "fieldId": "item",
-          "name": "Grgo 1Vs II",
-          "price": "124,800",
-          "description": "難しい操作は一切不要。純正キーのロック・アンロックに連動して警備を開始する、K-CARオーナーに一番人気のパッケージ。",
-          "triple": false,
-          "tilt": false,
-          "bonnet": false,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": false,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Grgo ZV II ＋ スマキー連動/スマクロ",
-          "price": "207,800",
-          "description": "ZV IIにスマートキー連動（スマクロ）を追加。利便性を損なわず、最新の手口から愛車を守ります。",
-          "triple": false,
-          "tilt": false,
-          "bonnet": false,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": false,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Grgo ZVT II",
-          "price": "219,800",
-          "badge": "おすすめ",
-          "description": "傾斜・トリプルセンサーを同梱。ジャッキアップや車体へのあらゆる衝撃を逃さず検知する、Grgo最上位構成。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": false,
-          "microwave": false,
-          "siren": false,
-          "algorithm": false,
-          "canguard": false,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Grgo ZVT II ＋ スマキー連動/スマクロ",
-          "price": "264,600",
-          "description": "最高位Grgoにスマートキー連動を追加。あらゆる衝撃・傾斜検知に利便性をプラスした究極の軽カープラン。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": false,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": false,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z306 ＋ スマキー連動/スマクロ",
-          "price": "315,800",
-          "badge": "推奨構成",
-          "description": "人気センサーを網羅したZ306にスマクロを追加。ホイール盗難からイタズラまで、全方位で車両を監視。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": false,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z706 ＋ スマキー連動/スマクロ",
-          "price": "395,800",
-          "badge": "最強プラン",
-          "description": "全センサー解放。マイクロ波による接近検知やバックアップサイレンまで備えた、K-CARの防犯を極めるための頂点プラン。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": true,
-          "siren": true,
-          "algorithm": true,
-          "canguard": false,
-          "image": ""
-        }
-      ],
-      "showV2Option": false
-    },
-    {
-      "id": "crown_2024",
-      "createdAt": "2026-04-29T21:58:17.289Z",
-      "updatedAt": "2026-04-29T21:58:17.289Z",
-      "publishedAt": "2026-04-29T21:58:17.289Z",
-      "revisedAt": "2026-04-29T21:58:17.289Z",
-      "category": "CROWN 専用パッケージ",
-      "type": [],
-      "description": "<p>スポーツ、クロスオーバー、セダン、エステート。最新のクラウンシリーズに対し、CANガードやパンテーラを組み合わせた最適な防犯対策をご提案します。</p>",
-      "items": [
-        {
-          "fieldId": "item",
-          "name": "Grgo ZV II ＋ CANガード",
-          "price": "314,600",
-          "description": "最新のクラウンシリーズに最適。物理CANガードと最新システムを組み合わせ、利便性と防犯を両立。",
-          "triple": true,
-          "tilt": false,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Grgo ZVT II ＋ CANガード",
-          "price": "336,600",
-          "badge": "おすすめ",
-          "description": "傾斜センサーと1WAYリモコンを標準装備。ジャッキアップやレッカー移動にも対応する多重防御プラン。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z306 ＋ CANガード",
-          "price": "396,800",
-          "badge": "推奨構成",
-          "description": "傾斜センサー標準装備の人気モデル。クラウンのあらゆる弱点を補い、誤作動を排した高度な警備を実現。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z306 ＋ CANガード ＋ マイクロ波",
-          "price": "448,800",
-          "description": "センサー満載のフルガードパッケージ。うろつき検知を追加し、高級車クラウンを全方位から監視。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": true,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z706 ＋ CANガード",
-          "price": "486,800",
-          "badge": "最強プラン",
-          "description": "全センサー＋バックアップサイレン仕様のパンテーラ最上位。クラウンを守り抜く究極の回答。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": true,
-          "siren": true,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        }
-      ],
-      "showV2Option": false
-    },
-    {
-      "id": "land_cruiser_70",
-      "createdAt": "2026-04-29T21:58:16.561Z",
-      "updatedAt": "2026-04-29T21:58:16.561Z",
-      "publishedAt": "2026-04-29T21:58:16.561Z",
-      "revisedAt": "2026-04-29T21:58:16.561Z",
-      "category": "LAND CRUISER 70 専用パッケージ",
-      "type": [],
-      "description": "<p>不変の信頼性を誇る本格オフローダー。最新モデルでは盗難リスクも高まっており、伝統的な物理防御と最新システムの融合が必要です。</p>",
-      "items": [
-        {
-          "fieldId": "item",
-          "name": "Grgo 5Vf II ＋ トリプル",
-          "price": "225,800",
-          "description": "1WAYリモコンのみ付属のモデル。トリプルセンサーを追加し検知を強化。アドブルーリッド対策も対応可。",
-          "triple": true,
-          "tilt": false,
-          "bonnet": false,
-          "microwave": false,
-          "siren": false,
-          "algorithm": false,
-          "canguard": false,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Grgo ZV II ＋ トリプル",
-          "price": "243,800",
-          "description": "アンサーバックリモコンモデル。トリプルセンサーで検知能力を強化。",
-          "triple": true,
-          "tilt": false,
-          "bonnet": false,
-          "microwave": false,
-          "siren": false,
-          "algorithm": false,
-          "canguard": false,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Grgo ZVT II",
-          "price": "265,800",
-          "badge": "おすすめ",
-          "description": "傾斜センサー・1WAYリモコン付属の最上位Grgo。アナログキー車に最適なセッティングで施工。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": false,
-          "microwave": false,
-          "siren": false,
-          "algorithm": false,
-          "canguard": false,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z306",
-          "price": "335,800",
-          "badge": "推奨構成",
-          "description": "人気の傾斜センサーを標準装備。70の盗難・レッカー被害を徹底阻止。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": false,
-          "microwave": false,
-          "siren": false,
-          "algorithm": false,
-          "canguard": false,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z706",
-          "price": "425,800",
-          "badge": "最強プラン",
-          "description": "全センサー装備の最高峰。70を守り抜くANGのフルスペックパッケージ。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": false,
-          "microwave": true,
-          "siren": true,
-          "algorithm": false,
-          "canguard": false,
-          "image": ""
-        }
-      ],
-      "showV2Option": false
-    },
-    {
-      "id": "alphard_40",
-      "createdAt": "2026-04-29T21:58:15.785Z",
-      "updatedAt": "2026-04-29T21:58:15.785Z",
-      "publishedAt": "2026-04-29T21:58:15.785Z",
-      "revisedAt": "2026-04-29T21:58:15.785Z",
-      "category": "ALPHARD / VELLFIRE (40系) 専用パッケージ",
-      "type": [],
-      "description": "<p>最新の40系。CANインベーダーや最新手口に対し、スマートキー連動や物理CANガードを組み合わせた鉄壁の布陣をご提案します。</p>",
-      "items": [
-        {
-          "fieldId": "item",
-          "name": "Grgo ZV II ＋ CANガード ＋ トリプル",
-          "price": "270,728",
-          "description": "物理的なCANインベーダー対策とトリプルセンサーを組み合わせた実戦的パッケージ。",
-          "triple": true,
-          "tilt": false,
-          "bonnet": false,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Grgo ZVT II ＋ CANガード",
-          "price": "295,273",
-          "badge": "おすすめ",
-          "description": "ZVT IIをベースに、物理CAN対策を統合。多重のセンサーと物理防御で40系をガード。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": false,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z106 ＋ CANガード ＋ トリプル",
-          "price": "315,545",
-          "description": "パンテーラの基本性能に物理CANガードをプラス。デジタルとアナログ両面から阻止。",
-          "triple": true,
-          "tilt": false,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z306 ＋ CANガード",
-          "price": "358,909",
-          "badge": "推奨構成",
-          "description": "Z306の多重センサーに物理CAN対策を統合。レッカー盗難もCANインベーダーも防ぎます。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z706 ＋ CANガード",
-          "price": "440,727",
-          "badge": "最強プラン",
-          "description": "ANGが提案する究極の40系防衛プラン。フルスペックパンテーラと物理CANガードの正真正銘の鉄壁。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": true,
-          "siren": true,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        }
-      ],
-      "showV2Option": false
-    },
-    {
-      "id": "lexus_lbx",
-      "createdAt": "2026-04-29T21:58:14.950Z",
-      "updatedAt": "2026-04-29T21:58:14.950Z",
-      "publishedAt": "2026-04-29T21:58:14.950Z",
-      "revisedAt": "2026-04-29T21:58:14.950Z",
-      "category": "LEXUS LBX 専用パッケージ",
-      "type": [],
-      "description": "<p>「高級車の概念を変える」コンパクトSUV。小型車ながら狙われやすいため、確実なデジタル対策が必要です。</p>",
-      "items": [
-        {
-          "fieldId": "item",
-          "name": "Grgo ZV II ＋ CANガード",
-          "price": "302,800",
-          "description": "LBX必須のボンネットセンサーとCANガードを含む基本パッケージ。",
-          "triple": false,
-          "tilt": false,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Grgo ZVT II ＋ CANガード",
-          "price": "334,600",
-          "badge": "おすすめ",
-          "description": "感度良好な傾斜センサーを搭載。LBXに最高水準の守りを。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z306 ＋ CANガード",
-          "price": "394,800",
-          "badge": "推奨構成",
-          "description": "充実のセンサー群で死角なし。デジタル盗難手口も完全ブロック。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z306 ＋ CANガード ＋ マイクロ波",
-          "price": "446,800",
-          "description": "車外検知を追加し、高級コンパクトLBXの価値を徹底防衛。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": true,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z706 ＋ CANガード",
-          "price": "484,800",
-          "badge": "最強プラン",
-          "description": "すべてのセンサーを纏った、LBXのための最強仕様。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": true,
-          "siren": true,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        }
-      ],
-      "showV2Option": false
-    },
-    {
-      "id": "lexus_lx",
-      "createdAt": "2026-04-29T21:58:14.144Z",
-      "updatedAt": "2026-04-30T07:29:55.047Z",
-      "publishedAt": "2026-04-29T21:58:14.144Z",
-      "revisedAt": "2026-04-30T07:29:55.047Z",
-      "category": "LEXUS LX600 専用パッケージ",
-      "type": [
-        "security"
-      ],
-      "description": "<p>レクサスのフラッグシップSUV。最新のデジタル窃盗手口への完全対策が必須であり、Pantheraを中心とした最強の多重防御を推奨します。</p>",
-      "items": [
-        {
-          "fieldId": "item",
-          "name": "Grgo ZVTⅡ ＋ CANガード＋ ボンネット",
-          "price": "321,800",
-          "description": "パンテーラの緻密なアルゴリズムで誤報を排し鉄壁の護り。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Grgo ZVTⅡ ＋ CANガード＋マイクロ波 ＋ボンネット ",
-          "price": "373,800",
-          "badge": "おすすめ",
-          "description": "フラッグシップSUVに相応しい多機能検知パッケージ。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": true,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z106 ＋ CANガード ＋ マイクロ波＋ トリプル",
-          "price": "412,000",
-          "badge": "推奨構成",
-          "description": "多機能検知パッケージに、事前検知のマイクロ波をプラス。",
-          "triple": true,
-          "tilt": false,
-          "bonnet": true,
-          "microwave": true,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z306 ＋ CANガード",
-          "price": "382,000",
-          "description": "全センサー装備の最高峰。LXを守り抜く最強の選択肢。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z306 ＋ CANガード＋ マイクロ波",
-          "price": "434,000",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": true,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z706 ＋ CANガード",
-          "price": "472,000",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": true,
-          "siren": true,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        }
-      ],
-      "showV2Option": false
-    },
-    {
-      "id": "lexus_nx",
-      "createdAt": "2026-04-29T21:58:13.340Z",
-      "updatedAt": "2026-04-29T21:58:13.340Z",
-      "publishedAt": "2026-04-29T21:58:13.340Z",
-      "revisedAt": "2026-04-29T21:58:13.340Z",
-      "category": "LEXUS NX 専用パッケージ",
-      "type": [],
-      "description": "<p>都会派SUVとして高い支持。利便性を損なわず、かつ強力な防犯性能を両立させます。</p>",
-      "items": [
-        {
-          "fieldId": "item",
-          "name": "Grgo ZV II ＋ CANガード ＋ トリプル",
-          "price": "314,600",
-          "description": "スマート連動とトリプルセンサー。NXオーナーに一番支持される構成。",
-          "triple": true,
-          "tilt": false,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Grgo ZVT II ＋ CANガード",
-          "price": "331,600",
-          "badge": "おすすめ",
-          "description": "傾斜センサーとCANガード、1WAYリモコン。安心をワンランク上げるプラン。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z306 ＋ CANガード",
-          "price": "391,800",
-          "badge": "推奨構成",
-          "description": "全方位監視とCANインベーダー対策を完全に両立させたプラン。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z706 ＋ CANガード",
-          "price": "481,800",
-          "badge": "最強プラン",
-          "description": "全機能を解放。NXを守るためのANGフラッグシッププラン。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": true,
-          "siren": true,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        }
-      ],
-      "showV2Option": false
-    },
-    {
-      "id": "civic_fl5",
-      "createdAt": "2026-04-29T21:12:46.258Z",
-      "updatedAt": "2026-04-29T21:12:46.258Z",
-      "publishedAt": "2026-04-29T21:12:46.258Z",
-      "revisedAt": "2026-04-29T21:12:46.258Z",
-      "category": "CIVIC TYPE-R (FL5) 専用パッケージ",
-      "type": [],
-      "description": "<p>究極のFFスポーツ性能を誇るFL5。最新のCANインベーダー対策を含めた、実戦的な多重防御をご提案します。</p>",
-      "items": [
-        {
-          "fieldId": "item",
-          "name": "Grgo ZVT II ＋ CANガード",
-          "price": "309,800",
-          "badge": "おすすめ",
-          "description": "最上位ZVT IIにスマートキー連動と物理CANガードを追加。利便性と鉄壁の防犯性能を両立した推奨パッケージ。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": false,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z306 ＋ CANガード",
-          "price": "379,800",
-          "badge": "推奨構成",
-          "description": "充実のセンサー構成に多重の盗難防止策を上乗せ。FL5オーナーに一番支持される、隙のない最強構成。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z706 ＋ CANガード",
-          "price": "469,800",
-          "badge": "最強プラン",
-          "description": "ANGのノウハウを全て投入。フルスペックパンテーラに物理CAN対策を加えた、TYPE-Rを守り抜くための最終結論。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": true,
-          "siren": true,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        }
-      ],
-      "showV2Option": false
-    },
-    {
-      "id": "prius_60",
-      "createdAt": "2026-04-29T21:12:45.402Z",
-      "updatedAt": "2026-04-29T21:12:45.402Z",
-      "publishedAt": "2026-04-29T21:12:45.402Z",
-      "revisedAt": "2026-04-29T21:12:45.402Z",
-      "category": "PRIUS (60系) 専用パッケージ",
-      "type": [],
-      "description": "<p>洗練されたデザインと高い防犯性能の両立。最新の60系プリウスに対し、CANガードやパンテーラを組み合わせた、都市部でも安心のパッケージをご提案します。</p>",
-      "items": [
-        {
-          "fieldId": "item",
-          "name": "Grgo ZVT II ＋ CANガード",
-          "price": "304,800",
-          "badge": "おすすめ",
-          "description": "ZVT IIの高度な検知に、物理CANガードを統合。プリウスに求められる全ての防犯性能を凝縮。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": false,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z306 ＋ CANガード",
-          "price": "374,800",
-          "badge": "推奨構成",
-          "description": "多重センサー警備のZ306に、物理CAN対策をプラス。プリウスオーナーに一番支持される最強の一台。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z706 ＋ CANガード",
-          "price": "464,800",
-          "badge": "最強プラン",
-          "description": "パンテーラ最高峰。全機能と全センサーを解放し、物理的なデジタル対策も完備した頂点モデル。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": true,
-          "siren": true,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        }
-      ],
-      "showV2Option": false
-    },
-    {
-      "id": "hiace_200",
-      "createdAt": "2026-04-29T21:12:44.538Z",
-      "updatedAt": "2026-04-29T21:12:44.538Z",
-      "publishedAt": "2026-04-29T21:12:44.538Z",
-      "revisedAt": "2026-04-29T21:12:44.538Z",
-      "category": "HIACE (200系) 専用パッケージ",
-      "type": [],
-      "description": "<p>仕事からレジャーまで幅広く活躍するハイエース。狙われやすい車種だからこそ、センサー感度の追求と利便性を両立した専用プランをご用意しました。</p>",
-      "items": [
-        {
-          "fieldId": "item",
-          "name": "Grgo ZVT II ＋ ミラー連動",
-          "price": "250,800",
-          "badge": "おすすめ",
-          "description": "傾斜・トリプルセンサーを同梱した上位モデル。ハイエースのレッカー盗難も確実に検知。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": false,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z306 ＋ ミラー連動",
-          "price": "320,800",
-          "badge": "推奨構成",
-          "description": "全センサー標準装備。ハイエースオーナーに最も支持される、高性能とお買得感を両立したプラン。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": false,
-          "image": ""
-        }
-      ],
-      "showV2Option": false
-    },
-    {
-      "id": "jimny_jb64",
-      "createdAt": "2026-04-29T21:12:43.835Z",
-      "updatedAt": "2026-04-29T21:12:43.835Z",
-      "publishedAt": "2026-04-29T21:12:43.835Z",
-      "revisedAt": "2026-04-29T21:12:43.835Z",
-      "category": "JIMNY / SIERRA (JB64/74) 専用パッケージ",
-      "type": [],
-      "description": "<p>絶大な人気を誇るジムニーシリーズ。車上荒らしや盗難のリスクが高いため、GrgoやPantheraによる確実なガードを推奨します。</p>",
-      "items": [
-        {
-          "fieldId": "item",
-          "name": "Grgo ZVT II",
-          "price": "248,800",
-          "badge": "おすすめ",
-          "description": "傾斜センサーとトリプルセンサーを標準装備。ジャッキアップや車体への衝撃を確実にキャッチする上位モデル。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": false,
-          "microwave": false,
-          "siren": false,
-          "algorithm": false,
-          "canguard": false,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z306",
-          "price": "318,800",
-          "badge": "推奨構成",
-          "description": "トリプルセンサーと傾斜センサーが同梱。ジムニーの人気カスタムパーツであるタイヤ・ホイールも死角なくガード。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": false,
-          "canguard": false,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z706",
-          "price": "408,800",
-          "badge": "最強プラン",
-          "description": "すべてのセンサーを網羅した最高峰フルスペックモデル。ジムニーを愛するオーナー様のための究極の守り。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": true,
-          "siren": true,
-          "algorithm": false,
-          "canguard": false,
-          "image": ""
-        }
-      ],
-      "showV2Option": false
-    },
-    {
-      "id": "harrier_80",
-      "createdAt": "2026-04-29T21:12:43.111Z",
-      "updatedAt": "2026-04-29T21:12:43.111Z",
-      "publishedAt": "2026-04-29T21:12:43.111Z",
-      "revisedAt": "2026-04-29T21:12:43.111Z",
-      "category": "HARRIER (80系) 専用パッケージ",
-      "type": [],
-      "description": "<p>高い人気を誇るSUV。最新の盗難手口に対し、スマクロ機能や物理CANガードを組み合わせた、都市部でも安心のセキュリティをご提供します。</p>",
-      "items": [
-        {
-          "fieldId": "item",
-          "name": "Grgo ZVT II ＋ CANガード",
-          "price": "316,800",
-          "badge": "おすすめ",
-          "description": "ZVT IIの高度な検知能力に、物理CANガードを統合。ハリアーの盗難・部品盗を徹底阻止。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": false,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z306 ＋ CANガード",
-          "price": "386,800",
-          "badge": "推奨構成",
-          "description": "Z306の多機能検知に物理CAN対策をプラス。レッカー盗難もインベーダーも、どちらも妥協なく防ぎます。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z706 ＋ CANガード",
-          "price": "476,800",
-          "badge": "最強プラン",
-          "description": "ANG最強のハリアー防衛プラン。フルスペックパンテーラ＋物理CANガードの、正真正銘の鉄壁モデル。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": true,
-          "siren": true,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        }
-      ],
-      "showV2Option": false
-    },
-    {
-      "id": "lexus_gx550",
-      "createdAt": "2026-04-29T11:07:24.333Z",
-      "updatedAt": "2026-04-30T07:12:50.660Z",
-      "publishedAt": "2026-04-29T11:07:24.333Z",
-      "revisedAt": "2026-04-30T07:12:50.660Z",
-      "category": "LEXUS GX550 専用パッケージ",
-      "type": [
-        "security"
-      ],
-      "description": "<p>最新鋭のオフローダー。CANインベーダーやゲームボーイといった最新手口への完全対策が必須です。</p>",
-      "items": [
-        {
-          "fieldId": "item",
-          "name": "Grgo ZVT II ＋ CANガード＋ ボンネット",
-          "price": "321,800",
-          "description": "傾斜・トリプルセンサー標準装備。CANガードと1WAYリモコンも付属。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Grgo ZVT II ＋ CANガード ＋ マイクロ波 ＋ ボンネット",
-          "price": "373,800",
-          "description": "傾斜・トリプルセンサー標準装備モデルにマイクロ波を追加しました。。CANガードと1WAYリモコンも付属。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": true,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z106 ＋ CANガード ＋ マイクロ波 ＋ トリプル",
-          "price": "412,000",
-          "description": "最高峰のセキュリティーパンテーラのスタートモデルに、マイクロ波、トリプルを追加したプランです。",
-          "triple": true,
-          "tilt": false,
-          "bonnet": true,
-          "microwave": true,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z306 ＋ CANガード ",
-          "price": "382,000",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z306 ＋ CANガード ＋ マイクロ波 ",
-          "price": "382,000",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": true,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z706 ＋ CANガード ",
-          "price": "472,000",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": true,
-          "siren": true,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        }
-      ],
-      "showV2Option": false
-    },
-    {
-      "id": "lexus_rx",
-      "createdAt": "2026-04-29T11:07:23.545Z",
-      "updatedAt": "2026-04-29T21:12:41.478Z",
-      "publishedAt": "2026-04-29T11:07:23.545Z",
-      "revisedAt": "2026-04-29T21:12:41.478Z",
-      "category": "LEXUS RX 専用パッケージ",
-      "type": [
-        "security"
-      ],
-      "description": "<p>高い人気を誇るラグジュアリーSUV。スマートキーの利便性を活かしつつ、CANガード等で最新の盗難手口から死角なく守ります。</p>",
-      "items": [
-        {
-          "fieldId": "item",
-          "name": "Grgo ZVT II ＋ CANガード",
-          "price": "336,600",
-          "badge": "おすすめ",
-          "description": "傾斜センサーとCANガード。1WAYリモコンも付属した上位モデル。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z306 ＋ CANガード",
-          "price": "396,800",
-          "badge": "推奨構成",
-          "description": "Z306の多機能にデジタル対策のCANガードを完全統合。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z706 ＋ CANガード",
-          "price": "486,800",
-          "badge": "最強プラン",
-          "description": "あらゆる手口から車を守る、ANGノウハウの結晶プラン。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": true,
-          "siren": true,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        }
-      ],
-      "showV2Option": false
-    },
-    {
-      "id": "land_cruiser_prado",
-      "createdAt": "2026-04-29T11:07:22.684Z",
-      "updatedAt": "2026-04-29T21:12:40.632Z",
-      "publishedAt": "2026-04-29T11:07:22.684Z",
-      "revisedAt": "2026-04-29T21:12:40.632Z",
-      "category": "LAND CRUISER PRADO (150系) 専用パッケージ",
-      "type": [
-        "security"
-      ],
-      "description": "<p>今なお狙われ続ける150系。スマートキー連動による最新の窃盗対策や、物理的なCANガードなど、年式に応じた最適な対策をご提案します。</p>",
-      "items": [
-        {
-          "fieldId": "item",
-          "name": "Grgo ZVT II ＋ スマキー連動/スマクロ",
-          "price": "299,600",
-          "badge": "おすすめ",
-          "description": "傾斜センサー含むフルセンサー構成にスマートキー連動をプラスし、利便性を高めた一台。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": false,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Grgo ZVT II ＋ CANガード",
-          "price": "310,827",
-          "description": "傾斜センサー含むフルセンサー構成にCANガードを統合した最良バランスの一台。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z706 ＋ CANガード",
-          "price": "449,800",
-          "badge": "最強プラン",
-          "description": "ANG最強の組み合わせ。バックアップサイレン、全センサー、物理CAN対策の集大成。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": true,
-          "siren": true,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        }
-      ],
-      "showV2Option": false
-    },
-    {
-      "id": "alphard_40_30",
-      "createdAt": "2026-04-29T04:14:58.259Z",
-      "updatedAt": "2026-04-29T04:28:01.008Z",
-      "publishedAt": "2026-04-29T04:28:01.008Z",
-      "revisedAt": "2026-04-29T04:28:01.008Z",
-      "category": "ALPHARD / VELLFIRE (40)  ",
-      "type": [
-        "security"
-      ],
-      "description": "<p>最新の40系。CANインベーダーや最新手口に対���、スマートキー連動や物理CANガードを組み合わせた鉄壁の布陣をご提案します。</p>",
-      "items": [
-        {
-          "fieldId": "item",
-          "triple": false,
-          "tilt": false,
-          "bonnet": false,
-          "microwave": false,
-          "siren": false,
-          "algorithm": false,
-          "canguard": false,
-          "image": ""
-        }
-      ],
-      "showV2Option": false
-    },
-    {
-      "id": "land_cruiser_250",
-      "createdAt": "2026-04-29T04:02:35.990Z",
-      "updatedAt": "2026-04-29T21:12:39.812Z",
-      "publishedAt": "2026-04-29T04:27:31.952Z",
-      "revisedAt": "2026-04-29T21:12:39.812Z",
-      "category": "LAND CRUISER 250 専用パッケージ",
-      "type": [
-        "security"
-      ],
-      "description": "<p>プラドの後継として登場した注目の新型モデル。伝統の信頼性に加え、最新のデジタルセキュリティを融合させた最強の防犯対策をご提案します。</p>",
-      "items": [
-        {
-          "fieldId": "item",
-          "name": "Grgo ZVT II ＋ CANガード",
-          "price": "336,600",
-          "badge": "おすすめ",
-          "description": "傾斜センサーと1WAYリモコン付属。多重防御のANG推奨プラン。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z706 ＋ CANガード",
-          "price": "486,800",
-          "badge": "最強プラン",
-          "description": "全センサー＋バックアップサイレン。250を守り抜く究極の回答。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": true,
-          "siren": true,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        }
-      ],
-      "showV2Option": false
-    },
-    {
-      "id": "land_cruiser_300",
-      "createdAt": "2026-04-28T23:53:31.433Z",
-      "updatedAt": "2026-04-29T21:12:38.943Z",
-      "publishedAt": "2026-04-28T23:53:31.433Z",
-      "revisedAt": "2026-04-29T21:12:38.943Z",
-      "category": "LAND CRUISER 300 専用パッケージ",
-      "type": [
-        "security"
-      ],
-      "description": "<p>世界的に需要が高く、最も警戒が必要な一台。CANインベーダー、リレーアタック、指紋認証回避など、あらゆる手口を想定した最強の布陣を推奨します。</p>",
-      "items": [
-        {
-          "fieldId": "item",
-          "name": "Grgo ZV II ＋ CANガード ＋ トリプル",
-          "price": "314,600",
-          "description": "最も狙われる300必須のアナログ防御と電子対策をパッケージ。",
-          "triple": true,
-          "tilt": false,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Grgo ZVT II ＋ CANガード",
-          "price": "336,600",
-          "badge": "おすすめ",
-          "description": "高精度な傾斜センサーが、300のパーツ盗難やレッカーを阻止。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": false,
-          "siren": false,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        },
-        {
-          "fieldId": "item",
-          "name": "Panthera Z706 ＋ CANガード",
-          "price": "486,800",
-          "badge": "最強プラン",
-          "description": "ANGノウハウを結集。300を守るためのバックアップサイレン付最終回答。",
-          "triple": true,
-          "tilt": true,
-          "bonnet": true,
-          "microwave": true,
-          "siren": true,
-          "algorithm": true,
-          "canguard": true,
-          "image": ""
-        }
-      ],
-      "showV2Option": false
     }
   ],
   "images": [],
@@ -2768,7 +1025,7 @@
             "icon": "Activity"
           },
           {
-            "title": "ドアスピーカー���付",
+            "title": "ドアスピーカー取付",
             "description": "抜けを良くする アウターバッフルや強固なバッフル製作",
             "icon": "Wrench"
           },
@@ -2994,6 +1251,16 @@
     "2026-9": [],
     "2026-10": [],
     "2026-11": []
+  },
+  "recruitment": {
+    "visible": true,
+    "title": "採用情報",
+    "message": "カーセキュリティー取り付け・販売スタッフ募集中です。詳しくはお電話ください。092-503-5437担当：塚元 or 村上",
+    "requirements": [
+      ""
+    ],
+    "salary": "",
+    "contactInfo": "お電話にてお問い合わせください"
   },
   "securityRecruitment": {
     "visible": true,

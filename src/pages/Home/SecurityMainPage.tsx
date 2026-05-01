@@ -362,14 +362,14 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                             />
                         </div>
 
-                        <a href="#access" className="flex flex-col items-center group/item transition-colors">
-                            <span className="text-sm font-black tracking-widest group-hover/item:text-emerald-500">ACCESS</span>
-                            <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">店舗案内</span>
-                        </a>
-
                         <a href="https://www.soundang.com/webbrog/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center group/item transition-colors">
                             <span className="text-sm font-black tracking-widest group-hover/item:text-emerald-500">BLOG</span>
                             <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">ブログ</span>
+                        </a>
+
+                        <a href="#access" className="flex flex-col items-center group/item transition-colors">
+                            <span className="text-sm font-black tracking-widest group-hover/item:text-emerald-500">ACCESS</span>
+                            <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">店舗案内</span>
                         </a>
                         <button
                             onClick={() => navigate('/')}
@@ -999,8 +999,8 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                     {[
                                         { href: "#", en: "HOME", jp: "ホーム" },
                                         { href: "#services", en: "MENU", jp: "メニュー", isExpandable: true },
-                                        { href: "#access", en: "ACCESS", jp: "店舗案内" },
                                         { href: "https://www.soundang.com/webbrog/", en: "BLOG", jp: "ブログ", isExternal: true },
+                                        { href: "#access", en: "ACCESS", jp: "店舗案内" },
                                     ].map((link, i) => {
                                         const isExpandable = link.isExpandable;
                                         return (
