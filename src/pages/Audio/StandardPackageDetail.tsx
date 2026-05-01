@@ -2,39 +2,21 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
-    ChevronRight, 
     MessageSquare, 
     Calendar as CalendarIcon, 
     ArrowLeft, 
-    CheckCircle2, 
     Printer, 
-    Zap, 
-    Music, 
     Youtube, 
-    ShieldCheck,
-    Layers,
-    Wrench,
-    ArrowRight,
-    Info,
-    Car,
-    Clock,
     Volume2,
     Menu,
     X,
-    ChevronDown
+    Clock,
+    Car
 } from 'lucide-react';
 import { SafeImage } from '../../components/ui/SafeImage';
 
 // QR Code utility using Google Charts API
 const getQRCodeUrl = (url: string) => `https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=${encodeURIComponent(url)}`;
-
-// Plan categories for navigation
-const planCategories = [
-    { id: 'basic', label: 'BASIC LINE', path: '/audio/plan/basic-coaxial', active: false },
-    { id: 'standard', label: 'STANDARD LINE', path: '/audio/plan/standard-line', active: true },
-    { id: 'premium', label: 'PREMIUM LINE', path: '/audio/plan/premium-line', active: false },
-    { id: 'high-end', label: 'HIGH-END LINE', path: '/audio/plan/front-3way', active: false }
-];
 
 interface Product {
     id: string;
@@ -59,107 +41,42 @@ const standardProducts: Product[] = [
 const StandardPackageDetail: React.FC = () => {
     const navigate = useNavigate();
     const [view, setView] = useState<'lp' | 'catalog'>('lp');
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
         window.scrollTo(0, 0);
         document.title = "STANDARD LINE | スピーカー交換パッケージ | Sound ANG";
-    }, [view]);
+    }, []);
 
     return (
         <div className="min-h-screen bg-white text-gray-900 selection:bg-blue-100">
-            {/* Header */}
+            {/* Standard Global Header (Replicating Top Page Header) */}
             <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 print:hidden">
                 <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
-                    <button onClick={() => navigate(-1)} className="flex items-center gap-2 text-gray-500 hover:text-blue-600 transition-all group">
-                        <ArrowLeft className="w-5 h-5" />
-                        <span className="text-xs font-black tracking-widest uppercase">Back</span>
-                    </button>
-                    
-                    <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-xl bg-gray-900 flex items-center justify-center text-white font-black italic">S</div>
-                        <span className="font-black tracking-tighter text-xl">Sound ANG</span>
+                    <div className="flex items-center gap-8">
+                        <button onClick={() => navigate('/')} className="flex items-center gap-3 group">
+                            <div className="w-10 h-10 rounded-xl bg-gray-900 flex items-center justify-center text-white font-black italic transition-transform group-hover:scale-110">S</div>
+                            <span className="font-black tracking-tighter text-xl">Sound ANG</span>
+                        </button>
                     </div>
 
                     <div className="flex items-center gap-4">
+                        <button onClick={() => window.print()} className="hidden md:flex items-center gap-2 px-4 py-2 text-gray-500 hover:text-blue-600 transition-all font-black text-[10px] tracking-widest uppercase">
+                            <Printer className="w-4 h-4" /> PRINT
+                        </button>
                         <button 
-                            onClick={() => setIsMenuOpen(!isMenuOpen)}
-                            className="flex items-center gap-2 px-4 py-2 bg-gray-50 hover:bg-gray-100 rounded-xl transition-all font-black text-[10px] tracking-widest uppercase border border-gray-100"
+                            onClick={() => navigate('/')}
+                            className="flex items-center gap-2 px-6 py-2.5 bg-gray-900 text-white rounded-full font-black text-xs tracking-widest uppercase hover:bg-blue-600 transition-all shadow-lg shadow-gray-200"
                         >
-                            {isMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
-                            PLAN MENU
+                            <Menu className="w-4 h-4" /> MENU
                         </button>
-                        <button onClick={() => window.print()} className="hidden md:flex items-center gap-2 px-5 py-2 bg-blue-600 text-white rounded-xl font-black text-[10px] tracking-widest uppercase shadow-lg shadow-blue-200">
-                            <Printer className="w-4 h-4" /> 印刷
-                        </button>
-                    </div>
-                </div>
-
-                {/* Sub-Navigation for Plans */}
-                <div className="bg-white border-b border-gray-100 overflow-x-auto">
-                    <div className="max-w-7xl mx-auto px-4 flex">
-                        {planCategories.map((plan) => (
-                            <button
-                                key={plan.id}
-                                onClick={() => navigate(plan.path)}
-                                className={`px-6 py-3 text-[10px] font-black tracking-widest uppercase whitespace-nowrap border-b-2 transition-all ${
-                                    plan.active 
-                                    ? 'border-blue-600 text-blue-600 bg-blue-50/50' 
-                                    : 'border-transparent text-gray-400 hover:text-gray-900 hover:bg-gray-50'
-                                }`}
-                            >
-                                {plan.label}
-                            </button>
-                        ))}
                     </div>
                 </div>
             </header>
 
-            {/* Mega Menu Overlay */}
-            <AnimatePresence>
-                {isMenuOpen && (
-                    <>
-                        <motion.div 
-                            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-                            onClick={() => setIsMenuOpen(false)}
-                            className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40"
-                        />
-                        <motion.div 
-                            initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}
-                            className="fixed top-32 left-1/2 -translate-x-1/2 w-[90vw] max-w-4xl bg-white rounded-[2.5rem] shadow-2xl z-50 border border-gray-100 p-8 overflow-hidden"
-                        >
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                                <div>
-                                    <h4 className="text-[10px] font-black text-blue-600 tracking-widest uppercase mb-4 border-b pb-2">Entry Plans</h4>
-                                    <div className="space-y-3">
-                                        <button onClick={() => navigate('/audio/plan/basic-coaxial')} className="block text-sm font-bold hover:text-blue-600 transition-all">BASIC LINE (Coaxial)</button>
-                                        <button onClick={() => navigate('/audio/plan/basic-separate')} className="block text-sm font-bold hover:text-blue-600 transition-all">BASIC LINE (Separate)</button>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h4 className="text-[10px] font-black text-blue-600 tracking-widest uppercase mb-4 border-b pb-2">Core Packages</h4>
-                                    <div className="space-y-3">
-                                        <button onClick={() => navigate('/audio/plan/standard-line')} className="block text-sm font-black text-blue-600">STANDARD LINE (Best Value)</button>
-                                        <button onClick={() => navigate('/audio/plan/premium-line')} className="block text-sm font-bold hover:text-blue-600 transition-all">PREMIUM LINE</button>
-                                        <button onClick={() => navigate('/audio/plan/front-3way')} className="block text-sm font-bold hover:text-blue-600 transition-all">Front 3-Way Special</button>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h4 className="text-[10px] font-black text-blue-600 tracking-widest uppercase mb-4 border-b pb-2">Vehicle Specific</h4>
-                                    <div className="space-y-3">
-                                        <button onClick={() => navigate('/audio/plan/bmw-package')} className="block text-sm font-bold hover:text-blue-600 transition-all">BMW Package</button>
-                                        <button onClick={() => navigate('/audio/plan/mercedes-package')} className="block text-sm font-bold hover:text-blue-600 transition-all">Mercedes Benz Package</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
-                    </>
-                )}
-            </AnimatePresence>
-
-            <div className="pt-32">
-                {/* 1. LP Section (Page 1) */}
+            <div className="pt-20">
+                {/* 1. LP Section (Page 1 in Print) */}
                 <div className={`${view === 'lp' ? 'block' : 'hidden'} print:block print:pt-0`}>
+                    {/* Hero */}
                     <section className="relative min-h-[55vh] flex items-center print:min-h-0 print:py-6 print:border-b-4 print:border-gray-900">
                         <div className="absolute inset-0 z-0 print:hidden">
                             <SafeImage src="/audio_standard_package_hero_1777648073560.png" className="w-full h-full object-cover opacity-50" />
@@ -183,40 +100,37 @@ const StandardPackageDetail: React.FC = () => {
 
                     {/* Pricing Detail */}
                     <section className="py-12 bg-white print:py-2">
-                        <div className="max-w-7xl mx-auto px-4">
-                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                                <div className="space-y-2 print:space-y-0.5">
-                                    <h2 className="text-xl font-black print:text-sm">パッケージ基本構成内容</h2>
-                                    <div className="space-y-1">
-                                        {[
-                                            { label: "17cmモデル2WAYスピーカー", val: "最大10万円まで" },
-                                            { label: "ドアチューニングBコース", val: "¥27,500相当" },
-                                            { label: "カスタムインナーバッフル", val: "¥11,000相当" },
-                                            { label: "ANGオリジナルケーブル(10m)", val: "¥16,500相当" },
-                                            { label: "プロの取付・ワイヤリング・調整", val: "¥22,000相当" }
-                                        ].map((item, i) => (
-                                            <div key={i} className="flex justify-between py-3 border-b border-gray-100 print:py-1 print:text-[9px]">
-                                                <span className="font-bold text-gray-500">{item.label}</span>
-                                                <span className="font-black">{item.val}</span>
-                                            </div>
-                                        ))}
+                        <div className="max-w-7xl mx-auto px-4 text-center mb-12 print:mb-4">
+                            <p className="text-gray-400 font-bold mb-2 print:text-[8px] print:mb-0">通常合計 ¥117,700 のところ</p>
+                            <div className="flex items-baseline justify-center gap-2 mb-4 print:mb-1">
+                                <span className="text-7xl md:text-8xl font-black text-blue-600 print:text-4xl tracking-tighter">¥81,840</span>
+                                <span className="text-2xl font-bold print:text-[12px]">〜 (税込)</span>
+                            </div>
+                            <div className="inline-block bg-gray-900 text-white px-8 py-3 rounded-2xl font-black text-xl print:text-sm print:px-4 print:py-1">
+                                ¥35,860 おトク！
+                            </div>
+                        </div>
+
+                        <div className="max-w-3xl mx-auto px-4">
+                            <h3 className="text-lg font-black mb-6 border-b pb-2 print:text-xs print:mb-2">パッケージ基本構成</h3>
+                            <div className="space-y-1">
+                                {[
+                                    { label: "17cmモデル2WAYスピーカー", val: "最大10万円まで" },
+                                    { label: "ドアチューニングBコース", val: "¥27,500相当" },
+                                    { label: "カスタムインナーバッフル", val: "¥11,000相当" },
+                                    { label: "ANGオリジナルケーブル(10m)", val: "¥16,500相当" },
+                                    { label: "プロの取付・ワイヤリング・調整", val: "¥22,000相当" }
+                                ].map((item, i) => (
+                                    <div key={i} className="flex justify-between py-3 border-b border-gray-50 print:py-1 print:text-[9px]">
+                                        <span className="font-bold text-gray-400">{item.label}</span>
+                                        <span className="font-black">{item.val}</span>
                                     </div>
-                                </div>
-                                <div className="bg-gray-900 text-white p-10 rounded-[3rem] text-center print:bg-gray-100 print:text-gray-900 print:p-4 print:rounded-2xl">
-                                    <p className="text-[10px] font-black tracking-widest uppercase opacity-40 mb-2">Standard Line Special Price</p>
-                                    <div className="flex items-baseline justify-center gap-2 mb-2">
-                                        <span className="text-6xl font-black text-blue-400 print:text-3xl tracking-tighter">¥81,840</span>
-                                        <span className="text-xl font-bold print:text-[10px]">〜 (税込)</span>
-                                    </div>
-                                    <div className="inline-block bg-blue-600 text-white px-8 py-3 rounded-2xl font-black text-xl mb-4 print:text-sm print:px-4 print:py-1">
-                                        通常より ¥35,860 おトク！
-                                    </div>
-                                </div>
+                                ))}
                             </div>
                         </div>
                     </section>
 
-                    {/* Services with Descriptions */}
+                    {/* Services */}
                     <section className="py-16 bg-gray-50 print:bg-white print:py-4">
                         <div className="max-w-7xl mx-auto px-4">
                             <h2 className="text-2xl font-black mb-10 text-center print:text-sm print:mb-4">パッケージに含まれる標準施工の詳細</h2>
@@ -241,7 +155,7 @@ const StandardPackageDetail: React.FC = () => {
                         </div>
                     </section>
 
-                    {/* Upgrades Page 1 */}
+                    {/* Upgrades */}
                     <section className="py-16 print:py-4 print:break-after-page">
                         <div className="max-w-7xl mx-auto px-4">
                             <h2 className="text-2xl font-black mb-8 flex items-center gap-3 print:text-lg print:mb-2">
@@ -276,7 +190,7 @@ const StandardPackageDetail: React.FC = () => {
                     </section>
                 </div>
 
-                {/* 2. Catalog Section */}
+                {/* 2. Catalog Section (Page 2 in Print) */}
                 <div className={`${view === 'catalog' ? 'block' : 'hidden'} print:block print:pt-4`}>
                     <div className="hidden print:block mb-6 text-center">
                         <h1 className="text-2xl font-black">STANDARD LINE LINEUP</h1>
@@ -315,6 +229,22 @@ const StandardPackageDetail: React.FC = () => {
                     <div className="hidden print:block mt-12 text-center border-t pt-8">
                         <p className="text-[10px] font-black italic text-gray-400">Sound ANG | サウンドエナジー | 大阪府和泉市葛の葉町3丁目3-50 | https://sound-ang.com</p>
                     </div>
+                </div>
+
+                {/* View Switcher (Web only) */}
+                <div className="max-w-7xl mx-auto px-4 py-12 flex justify-center gap-4 print:hidden">
+                    <button 
+                        onClick={() => setView('lp')}
+                        className={`px-8 py-4 rounded-2xl font-black text-sm tracking-widest transition-all ${view === 'lp' ? 'bg-gray-900 text-white shadow-xl' : 'bg-gray-100 text-gray-400 hover:bg-gray-200'}`}
+                    >
+                        PACKAGE DETAIL
+                    </button>
+                    <button 
+                        onClick={() => setView('catalog')}
+                        className={`px-8 py-4 rounded-2xl font-black text-sm tracking-widest transition-all ${view === 'catalog' ? 'bg-gray-900 text-white shadow-xl' : 'bg-gray-100 text-gray-400 hover:bg-gray-200'}`}
+                    >
+                        SPEAKER LINEUP
+                    </button>
                 </div>
             </div>
 
