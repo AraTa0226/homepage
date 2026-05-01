@@ -26,35 +26,70 @@ import { SafeImage } from '../../components/ui/SafeImage';
 // QR Code utility
 const getQRCodeUrl = (url: string) => `https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=${encodeURIComponent(url || 'https://sound-ang.com')}`;
 
-const MegaMenu = ({ show, onClose, navigate }: any) => {
-    const megaMenuCategories = [
-        { id: 'speaker_package', title: 'スピーカー交換パッケージ', subtitle: 'Speaker Package', items: ['BASIC line (コアキシャル)', 'BASIC line (セパレート)', 'STANDARD line (10万円まで)', 'PREMIUM line (10万円以上)'] },
-        { id: 'digital_source', title: 'DSP・アンプ・ソース', subtitle: 'Electronics', items: ['AMP内蔵DSPパッケージ', 'AMPレスDSPパッケージ', '小型アンプパッケージ'] },
-        { id: 'security', title: 'カーセキュリティー', subtitle: 'Car Security', items: ['Panthera (パンテーラ)', 'Grgo (ゴルゴ)', 'Viper (バイパー)', 'Clifford (クリフォード)'] }
-    ];
+const MegaMenu = ({ show, onClose, navigate, plans }: any) => {
+    // Group plans by type or use the categories directly
+    const audioPlans = plans.filter((p: any) => p.type === 'audio');
+    const securityPlans = plans.filter((p: any) => p.type === 'security');
 
     return (
         <AnimatePresence>
             {show && (
                 <>
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={onClose} className="fixed inset-0 bg-black/40 backdrop-blur-md z-[60]" />
-                    <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="fixed top-24 left-1/2 -translate-x-1/2 w-[95vw] max-w-6xl bg-white rounded-[3rem] shadow-2xl z-[70] border border-gray-100 p-12 overflow-hidden">
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-                            {megaMenuCategories.map((cat) => (
+                    <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="fixed top-24 left-1/2 -translate-x-1/2 w-[95vw] max-w-6xl bg-white rounded-[3rem] shadow-2xl z-[70] border border-gray-100 p-12 overflow-hidden max-h-[85vh] overflow-y-auto">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                            {/* Audio Section */}
+                            {audioPlans.map((cat: any) => (
                                 <div key={cat.id} className="space-y-6">
-                                    <div className="border-b border-gray-100 pb-4"><span className="text-[10px] font-black tracking-[0.3em] text-blue-600 uppercase block mb-1">{cat.subtitle}</span><h4 className="text-lg font-black text-gray-900">{cat.title}</h4></div>
+                                    <div className="border-b border-gray-100 pb-4">
+                                        <span className="text-[10px] font-black tracking-[0.3em] text-blue-600 uppercase block mb-1">Audio Plan</span>
+                                        <h4 className="text-lg font-black text-gray-900">{cat.category}</h4>
+                                    </div>
                                     <div className="flex flex-col gap-3">
-                                        {cat.items.map((item, idx) => (
-                                            <button key={idx} onClick={() => {
-                                                const pathMap: Record<string, string> = {
-                                                    'STANDARD line (10万円まで)': '/audio/plan/standard-line',
-                                                    'BASIC line (コアキシャル)': '/audio/plan/basic-coaxial',
-                                                    'BASIC line (セパレート)': '/audio/plan/basic-separate',
-                                                    'PREMIUM line (10万円以上)': '/audio/plan/premium-line'
-                                                };
-                                                onClose();
-                                                navigate(pathMap[item] || '/');
-                                            }} className="text-sm font-bold text-gray-500 hover:text-blue-600 transition-all hover:translate-x-1 flex items-center gap-2 group"><div className="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-blue-400" />{item}</button>
+                                        {cat.items.map((item: any, idx: number) => (
+                                            <button 
+                                                key={idx} 
+                                                onClick={() => {
+                                                    onClose();
+                                                    navigate(`/audio/plan/${encodeURIComponent(item.id || item.name)}`);
+                                                }} 
+                                                className="text-sm font-bold text-gray-500 hover:text-blue-600 transition-all hover:translate-x-1 flex items-center gap-2 group text-left"
+                                            >
+                                                <div className="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-blue-400 shrink-0" />
+                                                <span className="truncate">{item.name}</span>
+                                            </button>
+                                        ))}
+                                    </div>
+                                </div>
+                            ))}
+
+                            {/* Security Section */}
+                            {securityPlans.map((cat: any) => (
+                                <div key={cat.id} className="space-y-6">
+                                    <div className="border-b border-gray-100 pb-4">
+                                        <span className="text-[10px] font-black tracking-[0.3em] text-emerald-600 uppercase block mb-1">Security</span>
+                                        <h4 className="text-lg font-black text-gray-900">{cat.category}</h4>
+                                    </div>
+                                    <div className="flex flex-col gap-3">
+                                        {cat.items.map((item: any, idx: number) => (
+                                            <button 
+                                                key={idx} 
+                                                onClick={() => {
+                                                    onClose();
+                                                    // Mapping for security paths if needed, otherwise generic
+                                                    const pathMap: Record<string, string> = {
+                                                        'Panthera (パンテーラ) Z-Series': '/security/panthera',
+                                                        'Grgo (ゴルゴ) VⅡ': '/security/grgo',
+                                                        'Viper (バイパー)': '/security/viper',
+                                                        'Clifford (クリフォード)': '/security/clifford'
+                                                    };
+                                                    navigate(pathMap[item.name] || '/security-home');
+                                                }} 
+                                                className="text-sm font-bold text-gray-500 hover:text-emerald-600 transition-all hover:translate-x-1 flex items-center gap-2 group text-left"
+                                            >
+                                                <div className="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-emerald-400 shrink-0" />
+                                                <span className="truncate">{item.name}</span>
+                                            </button>
                                         ))}
                                     </div>
                                 </div>
@@ -93,7 +128,8 @@ const AudioPlanDetail: React.FC = () => {
 
     return (
         <div className="min-h-screen bg-white text-gray-900 selection:bg-blue-100">
-            <MegaMenu show={isMenuOpen} onClose={() => setIsMenuOpen(false)} navigate={navigate} />
+            {/* Mega Menu Overlay */}
+            <MegaMenu show={isMenuOpen} onClose={() => setIsMenuOpen(false)} navigate={navigate} plans={plans} />
 
             <header className="fixed top-0 left-0 right-0 z-[100] bg-white/90 backdrop-blur-md border-b border-gray-100 print:hidden">
                 <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
