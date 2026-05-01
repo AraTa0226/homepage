@@ -135,7 +135,7 @@ export const MainPage: React.FC<MainPageProps> = ({
 
     const audioCategories = [
         {
-            id: 'speaker',
+            id: 'speaker_package',
             title: 'スピーカー・パッケージ',
             subtitle: 'ACOUSTICS',
             image: assets.audioMenuImage,
@@ -154,7 +154,7 @@ export const MainPage: React.FC<MainPageProps> = ({
             path: '/audio/sp-package'
         },
         {
-            id: 'amp',
+            id: 'bass_power',
             title: 'DSP / アンプ / ウーファー',
             subtitle: 'ELECTRONICS',
             image: assets.auditionRoomImage,
@@ -170,7 +170,7 @@ export const MainPage: React.FC<MainPageProps> = ({
             path: '/audio/amp-dsp'
         },
         {
-            id: 'custom',
+            id: 'custom_install',
             title: '施工・カスタム',
             subtitle: 'EXPERT CUSTOM',
             image: assets.workspaceImage,
@@ -184,7 +184,7 @@ export const MainPage: React.FC<MainPageProps> = ({
             path: '/audio/custom'
         },
         {
-            id: 'tech',
+            id: 'digital_source',
             title: 'ハイレゾ・デジタル',
             subtitle: 'TECH & DIGITAL',
             image: assets.showroomImage,
@@ -196,7 +196,7 @@ export const MainPage: React.FC<MainPageProps> = ({
             path: '/audio/digital-source'
         },
         {
-            id: 'deadening',
+            id: 'install_tuning',
             title: 'デッドニング・音響パーツ',
             subtitle: 'DEADENING',
             image: assets.pitImage,
