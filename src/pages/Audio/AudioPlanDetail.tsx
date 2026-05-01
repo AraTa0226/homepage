@@ -27,9 +27,7 @@ import { SafeImage } from '../../components/ui/SafeImage';
 const getQRCodeUrl = (url: string) => `https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=${encodeURIComponent(url || 'https://sound-ang.com')}`;
 
 const MegaMenu = ({ show, onClose, navigate, plans }: any) => {
-    // Group plans by type or use the categories directly
     const audioPlans = plans.filter((p: any) => p.type === 'audio');
-    const securityPlans = plans.filter((p: any) => p.type === 'security');
 
     return (
         <AnimatePresence>
@@ -38,7 +36,6 @@ const MegaMenu = ({ show, onClose, navigate, plans }: any) => {
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={onClose} className="fixed inset-0 bg-black/40 backdrop-blur-md z-[60]" />
                     <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="fixed top-24 left-1/2 -translate-x-1/2 w-[95vw] max-w-6xl bg-white rounded-[3rem] shadow-2xl z-[70] border border-gray-100 p-12 overflow-hidden max-h-[85vh] overflow-y-auto">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                            {/* Audio Section Only */}
                             {audioPlans.map((cat: any) => (
                                 <div key={cat.id} className="space-y-6">
                                     <div className="border-b border-gray-100 pb-4">
@@ -47,14 +44,10 @@ const MegaMenu = ({ show, onClose, navigate, plans }: any) => {
                                     </div>
                                     <div className="flex flex-col gap-3">
                                         {cat.items.map((item: any, idx: number) => (
-                                            <button 
-                                                key={idx} 
-                                                onClick={() => {
-                                                    onClose();
-                                                    navigate(`/audio/plan/${encodeURIComponent(item.id || item.name)}`);
-                                                }} 
-                                                className="text-sm font-bold text-gray-500 hover:text-blue-600 transition-all hover:translate-x-1 flex items-center gap-2 group text-left"
-                                            >
+                                            <button key={idx} onClick={() => {
+                                                onClose();
+                                                navigate(`/audio/plan/${encodeURIComponent(item.id || item.name)}`);
+                                            }} className="text-sm font-bold text-gray-500 hover:text-blue-600 transition-all hover:translate-x-1 flex items-center gap-2 group text-left">
                                                 <div className="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-blue-400 shrink-0" />
                                                 <span className="truncate">{item.name}</span>
                                             </button>
@@ -96,19 +89,13 @@ const AudioPlanDetail: React.FC = () => {
 
     return (
         <div className="min-h-screen bg-white text-gray-900 selection:bg-blue-100">
-            {/* Mega Menu Overlay */}
             <MegaMenu show={isMenuOpen} onClose={() => setIsMenuOpen(false)} navigate={navigate} plans={plans} />
 
             <header className="fixed top-0 left-0 right-0 z-[100] bg-white/90 backdrop-blur-md border-b border-gray-100 print:hidden">
                 <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
                     <div className="flex items-center gap-6">
-                        <button 
-                            onClick={() => navigate(-1)}
-                            className="flex items-center gap-2 text-gray-400 hover:text-blue-600 transition-all group"
-                        >
-                            <div className="w-8 h-8 rounded-full border border-gray-100 flex items-center justify-center group-hover:bg-blue-50 group-hover:border-blue-100">
-                                <ArrowLeft className="w-4 h-4" />
-                            </div>
+                        <button onClick={() => navigate(-1)} className="flex items-center gap-2 text-gray-400 hover:text-blue-600 transition-all group">
+                            <div className="w-8 h-8 rounded-full border border-gray-100 flex items-center justify-center group-hover:bg-blue-50 group-hover:border-blue-100"><ArrowLeft className="w-4 h-4" /></div>
                             <span className="text-[10px] font-black tracking-widest uppercase hidden sm:block">Back</span>
                         </button>
                         <button onClick={() => navigate('/')} className="flex items-center gap-3 group">
@@ -157,7 +144,7 @@ const AudioPlanDetail: React.FC = () => {
                         </div>
 
                         {details && (
-                            <div className="max-w-3xl mx-auto px-4">
+                            <div className="max-w-3xl mx-auto px-4 mb-16 print:mb-4">
                                 <h3 className="text-lg font-black mb-6 border-b pb-2 print:text-xs print:mb-2">パッケージ構成内容</h3>
                                 <div className="space-y-1">
                                     {details.contents.map((item: any, i: number) => (
@@ -171,22 +158,23 @@ const AudioPlanDetail: React.FC = () => {
                         )}
                     </section>
 
+                    {/* Service Quality with Images */}
                     <section className="py-16 bg-gray-50 print:bg-white print:py-4">
                         <div className="max-w-7xl mx-auto px-4">
                             <h2 className="text-2xl font-black mb-10 text-center print:text-sm print:mb-4">サウンドエナジーが約束する施工品質</h2>
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 print:gap-4">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 print:gap-4 print:grid-cols-2">
                                 {[
-                                    { title: "ドアチューニング", icon: <Zap />, desc: "不要な共鳴を抑え、スピーカーのポテンシャルを解放。" },
-                                    { title: "高剛性バッフル", icon: <Layers />, desc: "強固な土台が音のキレとエネルギー感を生み出します。" },
-                                    { title: "高品質ケーブル", icon: <Music />, desc: "信号ロスを最小限に抑えるプロ用ワイヤリング。" },
-                                    { title: "精密チューニング", icon: <Wrench />, desc: "経験豊かなプロの耳による最終音響調整。" }
+                                    { title: "ドアチューニング", img: "/.tempmediaStorage/input_file_0.png", desc: "不要な共鳴を抑え、スピーカーのポテンシャルを解放。" },
+                                    { title: "高剛性バッフル", img: "/.tempmediaStorage/input_file_1.png", desc: "強固な土台が音のキレとエネルギー感を生み出します。" },
+                                    { title: "高品質ケーブル", img: "/.tempmediaStorage/input_file_2.png", desc: "信号ロスを最小限に抑えるプロ用ワイヤリング。" },
+                                    { title: "精密チューニング", img: "/.tempmediaStorage/input_file_3.png", desc: "経験豊かなプロの耳による最終音響調整。" }
                                 ].map((item, i) => (
-                                    <div key={i} className="text-center print:text-left print:flex print:items-start print:gap-2">
-                                        <div className="w-16 h-16 mx-auto mb-4 bg-white rounded-2xl flex items-center justify-center text-blue-600 shadow-sm print:w-6 print:h-6 print:m-0">{item.icon}</div>
-                                        <div>
-                                            <h4 className="font-black text-sm mb-2 print:text-[9px] print:mb-0 leading-tight">{item.title}</h4>
-                                            <p className="text-xs text-gray-400 font-bold leading-tight print:text-[7px]">{item.desc}</p>
+                                    <div key={i} className="bg-white p-6 rounded-[2.5rem] border border-gray-100 shadow-sm print:p-2 print:rounded-xl print:border-gray-200">
+                                        <div className="aspect-square rounded-2xl overflow-hidden mb-6 print:mb-2 print:rounded-lg">
+                                            <SafeImage src={item.img} className="w-full h-full object-cover transition-transform hover:scale-110 duration-700" />
                                         </div>
+                                        <h4 className="font-black text-lg mb-2 print:text-[10px] print:mb-0 leading-tight">{item.title}</h4>
+                                        <p className="text-xs text-gray-400 font-bold leading-relaxed print:text-[7px] print:leading-tight">{item.desc}</p>
                                     </div>
                                 ))}
                             </div>
@@ -194,7 +182,7 @@ const AudioPlanDetail: React.FC = () => {
                     </section>
 
                     {/* Upgrades Section */}
-                    {details.upgrades && details.upgrades.length > 0 && (
+                    {details && details.upgrades && details.upgrades.length > 0 && (
                         <section className="py-16 print:py-4">
                             <div className="max-w-7xl mx-auto px-4">
                                 <h2 className="text-2xl font-black mb-8 flex items-center gap-3 print:text-lg print:mb-2">
@@ -214,9 +202,9 @@ const AudioPlanDetail: React.FC = () => {
                                         ))}
                                     </div>
                                     <div className="space-y-4">
-                                        <div className="p-6 bg-emerald-50 rounded-3xl print:p-3 print:rounded-xl">
-                                            <h4 className="font-black text-sm text-emerald-700 mb-2 print:text-[9px] print:mb-1 text-left">メタルバッフルへの変更</h4>
-                                            <p className="text-xs font-bold text-gray-600 leading-relaxed print:text-[8px] print:leading-tight text-left">同時施工で定価より<span className="font-black">20%OFF</span>。よりタイトでキレのある再生へ。</p>
+                                        <div className="p-6 bg-emerald-50 rounded-3xl print:p-3 print:rounded-xl text-left">
+                                            <h4 className="font-black text-sm text-emerald-700 mb-2 print:text-[9px] print:mb-1">メタルバッフルへの変更</h4>
+                                            <p className="text-xs font-bold text-gray-600 leading-relaxed print:text-[8px] print:leading-tight">同時施工で定価より<span className="font-black">20%OFF</span>。よりタイトでキレのある再生へ。</p>
                                         </div>
                                         <div className="p-6 bg-amber-50 rounded-3xl print:p-3 print:rounded-xl text-left">
                                             <h4 className="font-black text-sm text-amber-700 mb-2 print:text-[9px] print:mb-1">ツィーター埋め込み加工</h4>
