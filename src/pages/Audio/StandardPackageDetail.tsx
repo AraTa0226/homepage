@@ -11,12 +11,107 @@ import {
     Menu,
     X,
     Clock,
-    Car
+    Car,
+    ChevronRight
 } from 'lucide-react';
 import { SafeImage } from '../../components/ui/SafeImage';
 
 // QR Code utility using Google Charts API
 const getQRCodeUrl = (url: string) => `https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=${encodeURIComponent(url)}`;
+
+// Plan categories for MegaMenu
+const megaMenuCategories = [
+    {
+        id: 'speaker_package',
+        title: 'スピーカー交換パッケージ',
+        subtitle: 'Speaker Package',
+        items: [
+            'BASIC line (コアキシャル)',
+            'BASIC line (セパレート)',
+            'STANDARD line (10万円まで)',
+            'PREMIUM line (10万円以上)',
+            'フロント3WAYセット',
+            'BMW専用パッケージ',
+            'Mercedes Benz専用パッケージ'
+        ]
+    },
+    {
+        id: 'digital_source',
+        title: 'DSP・アンプ・ソース',
+        subtitle: 'Digital & Amp',
+        items: [
+            'AMP内蔵DSPパッケージ',
+            'AMPレスDSPパッケージ',
+            'デジタルプレーヤー (DAP)',
+            'ハイレゾインターフェース'
+        ]
+    },
+    {
+        id: 'security',
+        title: 'カーセキュリティー',
+        subtitle: 'Car Security',
+        items: [
+            'Panthera (パンテーラ)',
+            'Grgo (ゴルゴ)',
+            'Viper (バイパー)',
+            'Clifford (クリフォード)',
+            '最新盗難手口と対策'
+        ]
+    }
+];
+
+const MegaMenuOverlay = ({ show, onClose, navigate }: any) => {
+    return (
+        <AnimatePresence>
+            {show && (
+                <>
+                    <motion.div 
+                        initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+                        onClick={onClose}
+                        className="fixed inset-0 bg-black/40 backdrop-blur-md z-[60] print:hidden"
+                    />
+                    <motion.div 
+                        initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}
+                        className="fixed top-24 left-1/2 -translate-x-1/2 w-[95vw] max-w-6xl bg-white rounded-[3rem] shadow-2xl z-[70] border border-gray-100 p-12 overflow-hidden print:hidden"
+                    >
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                            {megaMenuCategories.map((cat) => (
+                                <div key={cat.id} className="space-y-6">
+                                    <div className="border-b border-gray-100 pb-4">
+                                        <span className="text-[10px] font-black tracking-[0.3em] text-blue-600 uppercase block mb-1">{cat.subtitle}</span>
+                                        <h4 className="text-lg font-black text-gray-900">{cat.title}</h4>
+                                    </div>
+                                    <div className="flex flex-col gap-3">
+                                        {cat.items.map((item, idx) => (
+                                            <button
+                                                key={idx}
+                                                onClick={() => {
+                                                    onClose();
+                                                    // Map item name to route (Simplified mapping for this component)
+                                                    const pathMap: Record<string, string> = {
+                                                        'STANDARD line (10万円まで)': '/audio/plan/standard-line',
+                                                        'BASIC line (コアキシャル)': '/audio/plan/basic-coaxial',
+                                                        'BASIC line (セパレート)': '/audio/plan/basic-separate',
+                                                        'PREMIUM line (10万円以上)': '/audio/plan/premium-line'
+                                                    };
+                                                    navigate(pathMap[item] || '/');
+                                                }}
+                                                className="text-sm font-bold text-gray-500 hover:text-blue-600 transition-all hover:translate-x-1 flex items-center gap-2 group"
+                                            >
+                                                <div className="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-blue-400" />
+                                                {item}
+                                            </button>
+                                        ))}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </motion.div>
+                </>
+            )}
+        </AnimatePresence>
+    );
+};
 
 interface Product {
     id: string;
@@ -41,6 +136,7 @@ const standardProducts: Product[] = [
 const StandardPackageDetail: React.FC = () => {
     const navigate = useNavigate();
     const [view, setView] = useState<'lp' | 'catalog'>('lp');
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -49,8 +145,11 @@ const StandardPackageDetail: React.FC = () => {
 
     return (
         <div className="min-h-screen bg-white text-gray-900 selection:bg-blue-100">
-            {/* Standard Global Header (Replicating Top Page Header) */}
-            <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 print:hidden">
+            {/* Mega Menu Overlay */}
+            <MegaMenuOverlay show={isMenuOpen} onClose={() => setIsMenuOpen(false)} navigate={navigate} />
+
+            {/* Standard Global Header */}
+            <header className="fixed top-0 left-0 right-0 z-[100] bg-white/90 backdrop-blur-md border-b border-gray-100 print:hidden">
                 <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
                     <div className="flex items-center gap-8">
                         <button onClick={() => navigate('/')} className="flex items-center gap-3 group">
@@ -64,10 +163,11 @@ const StandardPackageDetail: React.FC = () => {
                             <Printer className="w-4 h-4" /> PRINT
                         </button>
                         <button 
-                            onClick={() => navigate('/')}
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
                             className="flex items-center gap-2 px-6 py-2.5 bg-gray-900 text-white rounded-full font-black text-xs tracking-widest uppercase hover:bg-blue-600 transition-all shadow-lg shadow-gray-200"
                         >
-                            <Menu className="w-4 h-4" /> MENU
+                            {isMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
+                            {isMenuOpen ? 'CLOSE' : 'MENU'}
                         </button>
                     </div>
                 </div>
