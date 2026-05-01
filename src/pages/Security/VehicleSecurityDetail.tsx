@@ -2165,7 +2165,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                 ご予算に合わせた基本プラン
                             </h3>
                             <p className="text-sm text-slate-500 font-bold leading-relaxed max-w-2xl">
-                                上記メインプランの他、基本性能を凝縮した「Grgo V2」ベースのプラン等、ご予算に応じた柔軟な構成も可能です。「まずは最低限の守りを固めたい」という方も、取りこぼしのない防犯対策をご提案いたしますので、お気軽にご相談ください。
+                                上記メインプランの他、基本性能を凝縮した「Grgo V2」ベースのプラン等、ご予算に応じた柔軟な構成も可能です。「まずは最低限の守りを固めたい」という方も、最適な防犯対策をご提案いたしますので、お気軽にご相談ください。
                             </p>
                         </div>
                         </div>
