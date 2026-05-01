@@ -11,6 +11,7 @@ import {
     ChevronRight,
     ArrowLeft,
     MessageSquare,
+    Mail,
     Check,
     HardDrive,
     Eye,
@@ -2216,7 +2217,6 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                     ブログにて多数の{currentVehicle.name} 施工車両ログを公開中。<br className="hidden md:block" />
                                     数多くの実績が、何よりの信頼の証です。
                                 </p>
-                            </div>
                             </div>
                         </div>
                     </div>
