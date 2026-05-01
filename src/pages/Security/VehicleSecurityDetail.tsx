@@ -2220,7 +2220,6 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                         </div>
                     </div>
                 </div>
-                </div>
             </main>
 
             <div className="fixed bottom-0 left-0 right-0 z-[60] bg-[#0c1311] border-t border-white/5 p-5 shadow-[0_-20px_50px_rgba(0,0,0,0.3)]">
