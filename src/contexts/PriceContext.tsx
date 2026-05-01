@@ -145,6 +145,10 @@ interface PriceContextType {
   saveSiteData: (updates: any) => void;
   heroAlert: HeroAlert;
   setHeroAlert: (alert: HeroAlert) => void;
+  selectedPlan: PlanItem | null;
+  setSelectedPlan: (plan: PlanItem | null) => void;
+  selectedCategory: PlanCategory | null;
+  setSelectedCategory: (category: PlanCategory | null) => void;
 }
 
 export interface RecruitmentInfo {
@@ -1699,6 +1703,9 @@ export const PriceProvider: React.FC<{ children: ReactNode }> = ({ children }) =
     return (cmsData as any).auditionSpeakers || [];
   });
 
+  const [selectedPlan, setSelectedPlan] = useState<PlanItem | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<PlanCategory | null>(null);
+
   const saveSiteData = (updates: any) => {
     if (import.meta.env.DEV) {
       fetch('/api/save-cms', {
@@ -1956,6 +1963,10 @@ export const PriceProvider: React.FC<{ children: ReactNode }> = ({ children }) =
       setHeroAlert,
       auditionSpeakers,
       setAuditionSpeakers,
+      selectedPlan,
+      setSelectedPlan,
+      selectedCategory,
+      setSelectedCategory,
       saveSiteData
     }}>
       {children}
