@@ -1701,6 +1701,8 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
     // microCMSデータの安全な取得
     let rawPlans = currentVehicle?.plans || basePlans || [];
     
+    let showV2 = true;
+    
     try {
         if (plans && plans.length > 0) {
             const idMapping: Record<string, string> = {
@@ -1726,7 +1728,9 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
             const cmsId = idMapping[currentModelId] || currentModelId.replace(/-/g, '_');
             const cmsPlan = plans.find(p => p.id === cmsId);
             
-            if (cmsPlan && cmsPlan.items && cmsPlan.items.length > 0) {
+            if (cmsPlan) {
+                showV2 = cmsPlan.showV2Option ?? true;
+                if (cmsPlan.items && cmsPlan.items.length > 0) {
                 rawPlans = cmsPlan.items.map((item: any, idx: number) => {
                     const basePrice = parseInt((item.price || '0').replace(/,/g, ''), 10);
                     const taxPrice = Math.floor(basePrice * 1.1);
@@ -1753,6 +1757,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                         }
                     };
                 });
+                }
             }
         }
     } catch (e) {
@@ -2155,21 +2160,23 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                 )}
 
                 {/* Alternative Options Section */}
-                <div className="mt-16 bg-white rounded-[2.5rem] p-8 md:p-12 border border-slate-100 shadow-sm relative overflow-hidden">
-                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
-                        <div>
-                            <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-50 rounded-full text-slate-500 text-[10px] font-black tracking-widest uppercase mb-4 italic border border-slate-100">
-                                Alternative Options
+                {showV2 && (
+                    <div className="mt-16 bg-white rounded-[2.5rem] p-8 md:p-12 border border-slate-100 shadow-sm relative overflow-hidden">
+                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
+                            <div>
+                                <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-50 rounded-full text-slate-500 text-[10px] font-black tracking-widest uppercase mb-4 italic border border-slate-100">
+                                    Alternative Options
+                                </div>
+                                <h3 className="text-xl md:text-2xl font-black italic tracking-tighter text-slate-900 mb-4">
+                                    ご予算に合わせた基本プラン
+                                </h3>
+                                <p className="text-sm text-slate-500 font-bold leading-relaxed max-w-2xl">
+                                    上記メインプランの他、基本性能を凝縮した「Grgo V2」ベースのプラン等、ご予算に応じた柔軟な構成も可能です。「まずは最低限の守りを固めたい」という方も、最適な防犯対策をご提案いたしますので、お気軽にご相談ください。
+                                </p>
                             </div>
-                            <h3 className="text-xl md:text-2xl font-black italic tracking-tighter text-slate-900 mb-4">
-                                ご予算に合わせた基本プラン
-                            </h3>
-                            <p className="text-sm text-slate-500 font-bold leading-relaxed max-w-2xl">
-                                上記メインプランの他、基本性能を凝縮した「Grgo V2」ベースのプラン等、ご予算に応じた柔軟な構成も可能です。「まずは最低限の守りを固めたい」という方も、最適な防犯対策をご提案いたしますので、お気軽にご相談ください。
-                            </p>
-                        </div>
                         </div>
                     </div>
+                )}
 
                 {/* Trust & Commitment Section */}
                 <div className="mt-16 bg-[#0b1210] rounded-[3rem] p-8 md:p-16 text-white relative overflow-hidden shadow-3xl">
