@@ -2170,7 +2170,6 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                         </div>
                         </div>
                     </div>
-                </div>
 
                 {/* Trust & Commitment Section */}
                 <div className="mt-16 bg-[#0b1210] rounded-[3rem] p-8 md:p-16 text-white relative overflow-hidden shadow-3xl">
@@ -2220,6 +2219,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
             </main>
 
