@@ -115,15 +115,15 @@ const AudioPlanDetail: React.FC = () => {
             <div className="pt-20">
                 {/* 1. LP Section */}
                 <div className={`${view === 'lp' ? 'block' : 'hidden'} print:block`}>
-                    <section className="relative min-h-[50vh] flex items-center print:min-h-0 print:py-6 print:border-b-4 print:border-gray-900">
+                    <section className="relative min-h-[50vh] flex items-center print:min-h-0 print:py-2 print:border-b-2 print:border-gray-900">
                         <div className="absolute inset-0 z-0 print:hidden">
                             <SafeImage src={plan.image || "/images/Audio/speaker_default.webp"} className="w-full h-full object-cover opacity-30 grayscale" />
                             <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-white to-white" />
                         </div>
                         <div className="max-w-7xl mx-auto px-4 relative z-10 w-full text-center">
-                            <div className="inline-block px-4 py-1.5 bg-blue-600 text-white rounded-full text-[10px] font-black tracking-[0.3em] uppercase mb-6 print:bg-black">AUDIO PACKAGE PLAN</div>
-                            <h1 className="text-5xl md:text-8xl font-black text-gray-900 mb-6 tracking-tighter leading-none print:text-4xl">{plan.name.replace('スピーカー交換', '')}</h1>
-                            <p className="text-xl font-black text-gray-400 print:text-sm">専門店が認める、最高基準のインストールパッケージ</p>
+                            <div className="inline-block px-4 py-1.5 bg-blue-600 text-white rounded-full text-[10px] font-black tracking-[0.3em] uppercase mb-4 print:mb-1 print:bg-black print:text-[8px] print:px-2 print:py-0.5">AUDIO PACKAGE PLAN</div>
+                            <h1 className="text-5xl md:text-8xl font-black text-gray-900 mb-6 tracking-tighter leading-none print:text-3xl print:mb-1">{plan.name.replace('スピーカー交換', '')}</h1>
+                            <p className="text-xl font-black text-gray-400 print:text-[10px] print:leading-tight">専門店が認める、最高基準のインストールパッケージ</p>
                         </div>
                     </section>
 
