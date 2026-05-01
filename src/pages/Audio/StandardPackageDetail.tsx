@@ -114,328 +114,183 @@ const StandardPackageDetail: React.FC = () => {
                 </div>
             </header>
 
-            <AnimatePresence mode="wait">
-                {view === 'lp' ? (
-                    <motion.div
-                        key="lp"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        className="pt-20"
-                    >
-                        {/* 1. Hero Header */}
-                        <section className="relative min-h-[85vh] flex items-center overflow-hidden">
-                            <div className="absolute inset-0 z-0">
-                                <SafeImage 
-                                    src="/audio_standard_package_hero_1777648073560.png" 
-                                    className="w-full h-full object-cover"
-                                    alt="Hero Background"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
-                            </div>
+            <div className="pt-20">
+                {/* 1. LP Section (Page 1 in Print) */}
+                <div className={`${view === 'lp' ? 'block' : 'hidden'} print:block print:pt-0`}>
+                    <section className="relative min-h-[85vh] flex items-center overflow-hidden print:min-h-0 print:py-8">
+                        <div className="absolute inset-0 z-0 print:hidden">
+                            <SafeImage 
+                                src="/audio_standard_package_hero_1777648073560.png" 
+                                className="w-full h-full object-cover"
+                                alt="Hero Background"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
+                        </div>
 
-                            <div className="max-w-7xl mx-auto px-4 relative z-10 w-full">
-                                <motion.div 
-                                    initial={{ opacity: 0, x: -50 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    transition={{ delay: 0.2 }}
-                                    className="max-w-2xl"
-                                >
-                                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-full mb-6 text-[10px] font-black tracking-widest uppercase">
-                                        Standard Package Plan
-                                    </div>
-                                    <h1 className="text-4xl md:text-7xl font-black text-gray-900 mb-8 leading-[1.1] tracking-tighter">
-                                        いつものドライブが、<br />
-                                        <span className="text-blue-600">最高のリスニングルーム</span>へ。
-                                    </h1>
-                                    <p className="text-lg md:text-xl font-bold text-gray-600 mb-10 leading-relaxed">
-                                        10万円以内で叶える、プロのスピーカー交換パッケージ。<br />
-                                        ただのパーツ交換ではない、「音作り」をあなたに。
-                                    </p>
-                                    <button 
-                                        onClick={() => setView('catalog')}
-                                        className="group flex items-center gap-4 bg-gray-900 text-white px-10 py-6 rounded-2xl font-black text-sm tracking-widest shadow-2xl shadow-gray-900/20 hover:scale-105 transition-all"
-                                    >
-                                        選べるスピーカー一覧はこちら
-                                        <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                                    </button>
-                                </motion.div>
-                            </div>
-                        </section>
-
-                        {/* 2. Concept Section */}
-                        <section className="py-24 bg-gray-50">
-                            <div className="max-w-7xl mx-auto px-4">
-                                <div className="text-center mb-16">
-                                    <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-6 tracking-tighter">なぜ「パッケージ」がお得で安心なのか？</h2>
-                                    <p className="text-gray-500 font-bold">専門店だからできる、トータルバランスの追求</p>
+                        <div className="max-w-7xl mx-auto px-4 relative z-10 w-full">
+                            <div className="max-w-2xl">
+                                <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-full mb-6 text-[10px] font-black tracking-widest uppercase print:bg-black">
+                                    Standard Package Plan
                                 </div>
-
-                                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                                    <div className="bg-white p-10 rounded-[3rem] shadow-xl border border-gray-100">
-                                        <div className="space-y-8">
-                                            <div className="flex gap-6">
-                                                <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center shrink-0">
-                                                    <Zap className="w-8 h-8 text-blue-600" />
-                                                </div>
-                                                <div>
-                                                    <h3 className="text-xl font-black mb-2">総額13万円相当の施工が10万円以内</h3>
-                                                    <p className="text-gray-500 font-bold text-sm leading-relaxed">単品でご依頼いただくよりも約3万円以上お得。必要な施工が全て含まれています。</p>
-                                                </div>
-                                            </div>
-                                            <div className="flex gap-6">
-                                                <div className="w-16 h-16 rounded-2xl bg-emerald-50 flex items-center justify-center shrink-0">
-                                                    <CheckCircle2 className="w-8 h-8 text-emerald-600" />
-                                                </div>
-                                                <div>
-                                                    <h3 className="text-xl font-black mb-2">プロが厳選した組み合わせ</h3>
-                                                    <p className="text-gray-500 font-bold text-sm leading-relaxed">スピーカーのポテンシャルを最大限に引き出すパーツと施工をセットにしました。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="relative">
-                                        <div className="bg-blue-600 text-white p-12 rounded-[3rem] shadow-2xl relative overflow-hidden">
-                                            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 blur-3xl rounded-full -translate-y-1/2 translate-x-1/2"></div>
-                                            <h4 className="text-sm font-black tracking-widest uppercase mb-4 opacity-80">Professional View</h4>
-                                            <p className="text-2xl font-black leading-tight mb-8">
-                                                「スピーカーだけを変えても、車の音は半分しか改善されません。」
-                                            </p>
-                                            <p className="text-sm font-bold opacity-90 leading-relaxed mb-8">
-                                                車のドアは本来「鉄板の箱」であり、音を出すのに適した環境ではありません。
-                                                当パッケージでは、デッドニングや専用バッフル施工を標準化することで、初めて「本来の音」を奏でることが可能になります。
-                                            </p>
-                                            <div className="flex items-center gap-2 font-black text-xl">
-                                                <span className="text-blue-200">TOTAL SOLUTION</span>
-                                                <ArrowRight className="w-6 h-6" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        {/* 3. 4 Base Services */}
-                        <section className="py-24">
-                            <div className="max-w-7xl mx-auto px-4">
-                                <div className="text-center mb-20">
-                                    <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-6 tracking-tighter">パッケージに含まれる4つの基本施工</h2>
-                                    <p className="text-gray-500 font-bold">一切の妥協なし。サウンドエナジーが誇る標準品質。</p>
-                                </div>
-
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                    {[
-                                        { title: "スピーカー本体", desc: "国内外のブランドから、予算内で最も音質の良いユニットをプロが厳選。", icon: Music, color: "bg-blue-50 text-blue-600" },
-                                        { title: "ドアチューニングBコース", desc: "制振材を使用し、ドアを「スピーカーボックス」として最適化。低音の締まりが劇的に変わります。", icon: Layers, color: "bg-purple-50 text-purple-600" },
-                                        { title: "カスタムインナーバッフル", desc: "車種に合わせて1台ずつワンオフ製作。スピーカーを強固に固定し、不要な共振を排除します。", icon: ShieldCheck, color: "bg-emerald-50 text-emerald-600" },
-                                        { title: "プロの取付・調整", desc: "位相チェックからイコライジングまで、熟練のインストーラーが責任を持って仕上げます。", icon: Wrench, color: "bg-amber-50 text-amber-600" }
-                                    ].map((item, i) => (
-                                        <div key={i} className="p-10 bg-white border border-gray-100 rounded-[2.5rem] hover:shadow-xl transition-all group">
-                                            <div className={`w-16 h-16 ${item.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                                                <item.icon className="w-8 h-8" />
-                                            </div>
-                                            <h3 className="text-2xl font-black text-gray-900 mb-4">{item.title}</h3>
-                                            <p className="text-gray-500 font-bold leading-relaxed">{item.desc}</p>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </section>
-
-                        {/* 4. Options */}
-                        <section className="py-24 bg-gray-900 text-white rounded-[4rem] mx-4 my-24 overflow-hidden relative">
-                            <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/20 blur-[100px] rounded-full"></div>
-                            <div className="max-w-7xl mx-auto px-12 relative z-10">
-                                <div className="max-w-2xl">
-                                    <h2 className="text-3xl md:text-5xl font-black mb-12 tracking-tighter">さらにこだわる方へ（オプション）</h2>
-                                    <div className="space-y-6">
-                                        {[
-                                            { name: "デッドニングAコースへアップグレード", price: "+¥11,000〜" },
-                                            { name: "ツィーターAピラー埋め込み加工", price: "+¥44,000〜" },
-                                            { name: "メタルインナーバッフルへの変更", price: "+¥13,200〜" },
-                                            { name: "スピーカーケーブル引き直し", price: "+¥22,000〜" }
-                                        ].map((opt, i) => (
-                                            <div key={i} className="flex items-center justify-between py-6 border-b border-white/10 group cursor-pointer">
-                                                <span className="text-lg font-bold group-hover:text-blue-400 transition-colors">{opt.name}</span>
-                                                <span className="text-xl font-black text-blue-500 tracking-tighter">{opt.price}</span>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        {/* 5. Flow */}
-                        <section className="py-24">
-                            <div className="max-w-7xl mx-auto px-4">
-                                <div className="text-center mb-20">
-                                    <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-6 tracking-tighter">施工完了までのステップ</h2>
-                                    <p className="text-gray-500 font-bold">1日でお車が見違える空間に変わります。</p>
-                                </div>
-
-                                <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                                    {[
-                                        { step: "01", title: "ご相談・試聴", desc: "店内のデモボードで実際に音を聴き比べていただけます。" },
-                                        { step: "02", title: "お見積り・予約", desc: "車種に合わせた詳細なお見積りを作成し、施工日を決定。" },
-                                        { step: "03", title: "お預かり・施工", desc: "朝のお預かりで、夕方には完成。代車も無料です。" },
-                                        { step: "04", title: "納車", desc: "お客様の好みに合わせた最終セッティングを行い、納車いたします。" }
-                                    ].map((step, i) => (
-                                        <div key={i} className="relative p-8 bg-gray-50 rounded-3xl">
-                                            <span className="text-5xl font-black text-blue-600/10 absolute top-4 right-6">{step.step}</span>
-                                            <h3 className="text-xl font-black text-gray-900 mb-4 relative z-10">{step.title}</h3>
-                                            <p className="text-gray-500 font-bold text-sm leading-relaxed relative z-10">{step.desc}</p>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </section>
-
-                        {/* 6. Footer CTA */}
-                        <section className="py-32 bg-blue-600 text-white text-center">
-                            <div className="max-w-4xl mx-auto px-4">
-                                <h2 className="text-4xl md:text-6xl font-black mb-12 tracking-tighter leading-tight">
-                                    さあ、あなたにぴったりの<br />スピーカーを見つけましょう。
-                                </h2>
+                                <h1 className="text-4xl md:text-7xl font-black text-gray-900 mb-8 leading-[1.1] tracking-tighter print:text-4xl print:mb-4">
+                                    いつものドライブが、<br />
+                                    <span className="text-blue-600 print:text-black">最高のリスニングルーム</span>へ。
+                                </h1>
+                                <p className="text-lg md:text-xl font-bold text-gray-600 mb-10 leading-relaxed print:text-sm print:mb-6">
+                                    10万円以内で叶える、プロのスピーカー交換パッケージ。<br />
+                                    ただのパーツ交換ではない、「音作り」をあなたに。
+                                </p>
                                 <button 
                                     onClick={() => setView('catalog')}
-                                    className="bg-white text-blue-600 px-12 py-8 rounded-[2rem] font-black text-lg tracking-widest shadow-2xl hover:scale-105 transition-all inline-flex items-center gap-4"
+                                    className="group flex items-center gap-4 bg-gray-900 text-white px-10 py-6 rounded-2xl font-black text-sm tracking-widest shadow-2xl shadow-gray-900/20 hover:scale-105 transition-all print:hidden"
                                 >
-                                    取扱いラインナップを見る
-                                    <ArrowRight className="w-6 h-6" />
+                                    選べるスピーカー一覧はこちら
+                                    <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                 </button>
                             </div>
-                        </section>
-                    </motion.div>
-                ) : (
-                    <motion.div
-                        key="catalog"
-                        initial={{ opacity: 0, scale: 0.98 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0.98 }}
-                        className="pt-20 pb-24"
-                    >
-                        {/* 1. Catalog Hero */}
-                        <section className="py-20 bg-gray-900 text-white overflow-hidden relative print:hidden">
-                            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/30 blur-[150px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
-                            <div className="max-w-7xl mx-auto px-4 relative z-10">
-                                <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-                                    <h1 className="text-4xl md:text-7xl font-black mb-6 tracking-tighter leading-none">
-                                        STANDARD LINE<br />
-                                        <span className="text-blue-500">LINEUP</span>
-                                    </h1>
-                                    <p className="text-gray-400 font-bold text-lg max-w-xl">
-                                        厳選されたブランドと、プロが推奨する銘機たち。
-                                        あなたの感性に響く一台をお選びください。
-                                    </p>
-                                </motion.div>
-                            </div>
-                        </section>
-
-                        {/* Print Only Header */}
-                        <div className="hidden print:block mb-8 text-center">
-                            <h1 className="text-3xl font-black">STANDARD LINE 取扱いラインナップ</h1>
-                            <p className="text-gray-500">Sound ANG / サウンドエナジー おすすめのスピーカー交換パッケージ</p>
-                            <div className="mt-4 border-b-2 border-gray-900 w-full"></div>
                         </div>
+                    </section>
 
-                        {/* 2. Filter (Placeholder) */}
-                        <div className="max-w-7xl mx-auto px-4 mt-12 mb-16 print:hidden">
-                            <div className="flex flex-wrap gap-4 items-center">
-                                <span className="text-xs font-black tracking-widest uppercase text-gray-400">Filter By:</span>
-                                {['ALL', 'FOCAL', 'KICKER', 'MOREL', 'BLAM'].map((brand) => (
-                                    <button 
-                                        key={brand}
-                                        className={`px-6 py-3 rounded-xl font-bold text-xs tracking-widest transition-all ${
-                                            brand === 'ALL' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
-                                        }`}
-                                    >
-                                        {brand}
-                                    </button>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* 3. Product List */}
+                    <section className="py-24 bg-gray-50 print:bg-white print:py-8">
                         <div className="max-w-7xl mx-auto px-4">
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 print:grid-cols-2">
-                                {standardProducts.map((product) => (
-                                    <motion.div 
-                                        key={product.id}
-                                        whileHover={{ y: -5 }}
-                                        className="bg-white border border-gray-100 rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all group print:shadow-none print:border-gray-200 print:rounded-2xl"
-                                    >
-                                        {/* Product Image */}
-                                        <div className="aspect-[4/3] relative overflow-hidden bg-gray-50">
-                                            <SafeImage 
-                                                src={product.image}
-                                                alt={product.model}
-                                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                            />
-                                            <div className="absolute top-6 left-6 flex flex-wrap gap-2">
-                                                {product.features.map(f => (
-                                                    <span key={f} className="px-3 py-1 bg-white/90 backdrop-blur shadow-sm rounded-full text-[9px] font-black text-gray-900 uppercase">
-                                                        {f}
-                                                    </span>
-                                                ))}
+                            <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-12 tracking-tighter print:text-2xl print:mb-6">なぜ「パッケージ」がお得で安心なのか？</h2>
+                            
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center print:grid-cols-2 print:gap-8">
+                                <div className="bg-white p-10 rounded-[3rem] shadow-xl border border-gray-100 print:shadow-none print:p-6 print:rounded-2xl print:border-gray-200">
+                                    <div className="space-y-8 print:space-y-4">
+                                        <div className="flex gap-6">
+                                            <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center shrink-0 print:w-10 print:h-10">
+                                                <Zap className="w-8 h-8 text-blue-600 print:w-5 print:h-5" />
+                                            </div>
+                                            <div>
+                                                <h3 className="text-xl font-black mb-2 print:text-lg">総額13万円相当が10万円以内</h3>
+                                                <p className="text-gray-500 font-bold text-sm print:text-xs leading-tight">単品依頼より約3万円以上お得。必要な施工が全て含まれています。</p>
                                             </div>
                                         </div>
-
-                                        {/* Product Info */}
-                                        <div className="p-8">
-                                            <div className="flex items-center justify-between mb-4">
-                                                <span className="text-[10px] font-black tracking-[0.2em] text-blue-600 uppercase">{product.brand}</span>
-                                                <span className="text-xs font-bold text-gray-400 print:hidden">¥{product.price.toLocaleString()}〜</span>
+                                        <div className="flex gap-6">
+                                            <div className="w-16 h-16 rounded-2xl bg-emerald-50 flex items-center justify-center shrink-0 print:w-10 print:h-10">
+                                                <CheckCircle2 className="w-8 h-8 text-emerald-600 print:w-5 print:h-5" />
                                             </div>
-                                            <h3 className="text-2xl font-black text-gray-900 mb-6 tracking-tight leading-none">{product.model}</h3>
-                                            
-                                            <div className="p-4 bg-gray-50 rounded-2xl mb-8 print:bg-transparent print:p-0">
-                                                <p className="text-xs text-gray-500 font-bold leading-relaxed italic">
-                                                    「{product.comment}」
-                                                </p>
-                                            </div>
-
-                                            <div className="flex items-center justify-between">
-                                                <div className="flex flex-col">
-                                                    <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Package Total</span>
-                                                    <span className="text-2xl font-black text-gray-900 tracking-tighter">
-                                                        ¥{product.price.toLocaleString()}
-                                                        <span className="text-[10px] ml-1 opacity-40">税込</span>
-                                                    </span>
-                                                </div>
-
-                                                {/* Print Only QR Code */}
-                                                <div className="hidden print:block text-right">
-                                                    <img src={getQRCodeUrl(product.youtubeUrl)} alt="QR Code" className="w-16 h-16" />
-                                                    <span className="text-[8px] font-bold block mt-1">動画で試聴</span>
-                                                </div>
-
-                                                {/* Web Only Buttons */}
-                                                <div className="flex gap-2 print:hidden">
-                                                    <a 
-                                                        href={product.youtubeUrl}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        className="w-12 h-12 bg-red-50 text-red-600 rounded-xl flex items-center justify-center hover:bg-red-600 hover:text-white transition-all shadow-sm"
-                                                        title="YouTubeで試聴"
-                                                    >
-                                                        <Youtube className="w-5 h-5" />
-                                                    </a>
-                                                </div>
+                                            <div>
+                                                <h3 className="text-xl font-black mb-2 print:text-lg">プロが厳選した組み合わせ</h3>
+                                                <p className="text-gray-500 font-bold text-sm print:text-xs leading-tight">スピーカーの力を最大限に引き出すパーツと施工をセットにしました。</p>
                                             </div>
                                         </div>
-                                    </motion.div>
+                                    </div>
+                                </div>
+
+                                <div className="bg-blue-600 text-white p-12 rounded-[3rem] print:bg-gray-100 print:text-gray-900 print:p-6 print:rounded-2xl print:shadow-none">
+                                    <p className="text-2xl font-black leading-tight mb-6 print:text-lg print:mb-2 text-white print:text-gray-900">
+                                        「スピーカーだけを変えても、音は半分しか改善されません。」
+                                    </p>
+                                    <p className="text-sm font-bold opacity-90 leading-relaxed print:text-xs text-white/90 print:text-gray-600">
+                                        当パッケージでは、デッドニングや専用バッフル施工を標準化することで、初めて「本来の音」を奏でることが可能になります。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section className="py-24 print:py-8 print:break-after-page">
+                        <div className="max-w-7xl mx-auto px-4">
+                            <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-12 tracking-tighter print:text-2xl print:mb-6">パッケージに含まれる4つの基本施工</h2>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 print:grid-cols-2 print:gap-4">
+                                {[
+                                    { title: "スピーカー本体", desc: "予算内で最高のユニットをプロが厳選。", icon: Music },
+                                    { title: "ドアチューニングBコース", desc: "制振材でドアをスピーカーボックスとして最適化。", icon: Layers },
+                                    { title: "カスタムインナーバッフル", desc: "車種に合わせて1台ずつワンオフ製作。", icon: ShieldCheck },
+                                    { title: "プロの取付・調整", desc: "熟練のインストーラーが責任を持って仕上げます。", icon: Wrench }
+                                ].map((item, i) => (
+                                    <div key={i} className="p-8 bg-white border border-gray-100 rounded-[2rem] flex items-start gap-6 print:p-4 print:rounded-xl print:border-gray-200">
+                                        <item.icon className="w-8 h-8 text-blue-600 shrink-0 print:w-6 print:h-6" />
+                                        <div>
+                                            <h3 className="text-lg font-black text-gray-900 mb-1 print:text-sm">{item.title}</h3>
+                                            <p className="text-gray-500 font-bold text-sm leading-tight print:text-[10px]">{item.desc}</p>
+                                        </div>
+                                    </div>
                                 ))}
                             </div>
                         </div>
+                    </section>
+                </div>
 
-                        {/* Print Only Footer */}
-                        <div className="hidden print:block mt-12 text-center border-t pt-8">
-                            <p className="text-xs font-bold">お問い合わせはSound ANGまでお気軽にどうぞ。 【LINE ID: @312qjhsq】</p>
+                {/* 2. Catalog Section (Page 2 in Print) */}
+                <div className={`${view === 'catalog' ? 'block' : 'hidden'} print:block print:pt-8`}>
+                    <section className="py-20 bg-gray-900 text-white overflow-hidden relative print:hidden">
+                        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/30 blur-[150px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                        <div className="max-w-7xl mx-auto px-4 relative z-10">
+                            <h1 className="text-4xl md:text-7xl font-black mb-6 tracking-tighter leading-none">
+                                STANDARD LINE<br />
+                                <span className="text-blue-500">LINEUP</span>
+                            </h1>
                         </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
+                    </section>
+
+                    <div className="hidden print:block mb-8 text-center">
+                        <h1 className="text-3xl font-black">STANDARD LINE 取扱いラインナップ</h1>
+                        <p className="text-gray-500 text-sm">Sound ANG / サウンドエナジー おすすめのスピーカー交換パッケージ</p>
+                        <div className="mt-4 border-b-2 border-gray-900 w-full"></div>
+                    </div>
+
+                    <div className="max-w-7xl mx-auto px-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 print:grid-cols-2 print:gap-4">
+                            {standardProducts.map((product) => (
+                                <div 
+                                    key={product.id}
+                                    className="bg-white border border-gray-100 rounded-[2.5rem] overflow-hidden shadow-sm transition-all group print:shadow-none print:border-gray-200 print:rounded-2xl"
+                                >
+                                    <div className="aspect-[16/10] relative overflow-hidden bg-gray-50 print:aspect-[16/9]">
+                                        <SafeImage 
+                                            src={product.image}
+                                            alt={product.model}
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
+
+                                    <div className="p-8 print:p-4">
+                                        <div className="flex items-center justify-between mb-2">
+                                            <span className="text-[10px] font-black tracking-[0.2em] text-blue-600 uppercase print:text-[8px]">{product.brand}</span>
+                                            <span className="text-2xl font-black text-gray-900 tracking-tighter print:text-xl">
+                                                ¥{product.price.toLocaleString()}
+                                                <span className="text-[10px] ml-1 opacity-40">税込</span>
+                                            </span>
+                                        </div>
+                                        <h3 className="text-2xl font-black text-gray-900 mb-4 tracking-tight print:text-lg print:mb-2">{product.model}</h3>
+                                        
+                                        <div className="p-4 bg-gray-50 rounded-2xl mb-6 print:bg-transparent print:p-0 print:mb-2">
+                                            <p className="text-xs text-gray-500 font-bold leading-tight print:text-[10px]">
+                                                「{product.comment}」
+                                            </p>
+                                        </div>
+
+                                        <div className="flex items-center justify-between print:mt-2">
+                                            <div className="hidden print:flex items-center gap-3">
+                                                <img src={getQRCodeUrl(product.youtubeUrl)} alt="QR Code" className="w-12 h-12" />
+                                                <span className="text-[8px] font-bold leading-tight">動画で試聴する<br />(QRをスキャン)</span>
+                                            </div>
+
+                                            <div className="flex gap-2 print:hidden">
+                                                <a 
+                                                    href={product.youtubeUrl}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="w-12 h-12 bg-red-50 text-red-600 rounded-xl flex items-center justify-center hover:bg-red-600 hover:text-white transition-all shadow-sm"
+                                                >
+                                                    <Youtube className="w-5 h-5" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="hidden print:block mt-8 text-center border-t pt-4">
+                        <p className="text-[10px] font-bold italic">Sound ANG | サウンドエナジー 【LINE ID: @312qjhsq】 | https://sound-ang.com</p>
+                    </div>
+                </div>
+            </div>
 
             {/* Floating Contact - Web Only */}
             <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-40 print:hidden">
