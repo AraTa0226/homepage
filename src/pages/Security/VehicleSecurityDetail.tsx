@@ -2167,13 +2167,6 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                 上記メインプランの他、基本性能を凝縮した「Grgo V2」ベースのプラン等、ご予算に応じた柔軟な構成も可能です。「まずは最低限の守りを固めたい」という方も、取りこぼしのない防犯対策をご提案いたしますので、お気軽にご相談ください。
                             </p>
                         </div>
-                        <div className="shrink-0">
-                            <button
-                                onClick={() => window.open('https://page.line.me/312qjhsq?openQrModal=true', '_blank')}
-                                className="w-full md:w-auto px-8 py-4 bg-transparent border-2 border-slate-200 text-slate-900 font-black italic rounded-xl transition-all hover:bg-slate-900 hover:text-white hover:border-slate-900 flex items-center justify-center gap-2"
-                            >
-                                <MessageSquare className="w-4 h-4" /> V2プランをLINEで聞く
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -2224,12 +2217,7 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                     数多くの実績が、何よりの信頼の証です。
                                 </p>
                             </div>
-                            <button
-                                onClick={() => navigate('/reservation')}
-                                className="px-10 py-5 bg-white text-[#0b1210] font-black italic rounded-2xl transition-all hover:bg-emerald-500 hover:text-white active:scale-95 shadow-xl shadow-black/40"
-                            >
-                                プランの相談を予約する
-                            </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -2243,15 +2231,24 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                             無料相談・お見積もり
                         </div>
                     </div>
-                    <a
-                        href="https://page.line.me/312qjhsq?openQrModal=true"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-grow md:flex-grow-0 bg-emerald-500 hover:bg-emerald-400 text-[#0c1311] px-10 py-4 rounded-2xl font-black text-sm flex items-center justify-center gap-3 transition-all transform hover:scale-105 active:scale-95 shadow-xl shadow-emerald-500/20"
-                    >
-                        <span>LINEで相談する</span>
-                        <ChevronRight className="w-4 h-4 stroke-[3]" />
-                    </a>
+                    <div className="flex-grow flex items-center gap-3">
+                        <a
+                            href="https://page.line.me/312qjhsq?openQrModal=true"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-1 bg-[#06C755] hover:bg-[#05b34c] text-white px-4 py-4 rounded-2xl font-black text-[11px] md:text-sm flex items-center justify-center gap-2 transition-all shadow-xl shadow-green-500/10"
+                        >
+                            <MessageSquare className="w-4 h-4" />
+                            <span>LINE相談</span>
+                        </a>
+                        <button
+                            onClick={() => navigate('/reservation')}
+                            className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-4 rounded-2xl font-black text-[11px] md:text-sm flex items-center justify-center gap-2 transition-all shadow-xl shadow-emerald-500/10"
+                        >
+                            <Mail className="w-4 h-4" />
+                            <span>メール予約</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div >
