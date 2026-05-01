@@ -38,7 +38,7 @@ const MegaMenu = ({ show, onClose, navigate, plans }: any) => {
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={onClose} className="fixed inset-0 bg-black/40 backdrop-blur-md z-[60]" />
                     <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="fixed top-24 left-1/2 -translate-x-1/2 w-[95vw] max-w-6xl bg-white rounded-[3rem] shadow-2xl z-[70] border border-gray-100 p-12 overflow-hidden max-h-[85vh] overflow-y-auto">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                            {/* Audio Section */}
+                            {/* Audio Section Only */}
                             {audioPlans.map((cat: any) => (
                                 <div key={cat.id} className="space-y-6">
                                     <div className="border-b border-gray-100 pb-4">
@@ -56,38 +56,6 @@ const MegaMenu = ({ show, onClose, navigate, plans }: any) => {
                                                 className="text-sm font-bold text-gray-500 hover:text-blue-600 transition-all hover:translate-x-1 flex items-center gap-2 group text-left"
                                             >
                                                 <div className="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-blue-400 shrink-0" />
-                                                <span className="truncate">{item.name}</span>
-                                            </button>
-                                        ))}
-                                    </div>
-                                </div>
-                            ))}
-
-                            {/* Security Section */}
-                            {securityPlans.map((cat: any) => (
-                                <div key={cat.id} className="space-y-6">
-                                    <div className="border-b border-gray-100 pb-4">
-                                        <span className="text-[10px] font-black tracking-[0.3em] text-emerald-600 uppercase block mb-1">Security</span>
-                                        <h4 className="text-lg font-black text-gray-900">{cat.category}</h4>
-                                    </div>
-                                    <div className="flex flex-col gap-3">
-                                        {cat.items.map((item: any, idx: number) => (
-                                            <button 
-                                                key={idx} 
-                                                onClick={() => {
-                                                    onClose();
-                                                    // Mapping for security paths if needed, otherwise generic
-                                                    const pathMap: Record<string, string> = {
-                                                        'Panthera (パンテーラ) Z-Series': '/security/panthera',
-                                                        'Grgo (ゴルゴ) VⅡ': '/security/grgo',
-                                                        'Viper (バイパー)': '/security/viper',
-                                                        'Clifford (クリフォード)': '/security/clifford'
-                                                    };
-                                                    navigate(pathMap[item.name] || '/security-home');
-                                                }} 
-                                                className="text-sm font-bold text-gray-500 hover:text-emerald-600 transition-all hover:translate-x-1 flex items-center gap-2 group text-left"
-                                            >
-                                                <div className="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-emerald-400 shrink-0" />
                                                 <span className="truncate">{item.name}</span>
                                             </button>
                                         ))}
