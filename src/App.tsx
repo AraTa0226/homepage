@@ -202,13 +202,13 @@ function AppContent() {
     if (category) {
       setSelectedCategory(category);
 
-      if (item.planName || item.name) {
-        const targetName = item.planName || item.name;
-        const planItem = category.items.find(i => i.name === targetName);
+      if (item.planId || item.planName || item.name) {
+        const targetId = item.planId || item.planName || item.name;
+        const planItem = category.items.find(i => i.id === targetId || i.name === targetId);
         
         if (category.type === 'audio') {
-          // For audio, always try to navigate to detail page even if strict match fails
-          navigate(`/audio/plan/${encodeURIComponent(targetName)}`);
+          // For audio, always try to navigate to detail page
+          navigate(`/audio/plan/${encodeURIComponent(targetId)}`);
         } else if (planItem) {
           setSelectedPlan(planItem);
           navigate(`/security/vehicle/special#${planItem.id}`);

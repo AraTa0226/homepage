@@ -74,18 +74,18 @@ const MegaMenu = ({ show, categories, theme, onClose, navigate, handleMenuClick 
                                                 key={idx}
                                                 onClick={() => {
                                                     const planMapping: Record<string, any> = {
-                                                        "BASIC line (コアキシャル)": { id: "speaker_package", planName: "スピーカー交換BASIC line（コアキシャル）" },
-                                                        "BASIC line (セパレート)": { id: "speaker_package", planName: "スピーカー交換BASIC line（セパレート）" },
-                                                        "STANDARD line (10万円まで)": { id: "speaker_package", planName: "スピーカー交換STANDARD line（10万円まで）" },
-                                                        "PREMIUM line (10万円以上)": { id: "speaker_package", planName: "スピーカー交換PREMIUM line（10万円以上）" },
-                                                        "フロント3WAYセット": { id: "speaker_package", planName: "フロント3WAYプラン" },
-                                                        "BMW専用パッケージ": { id: "speaker_package", planName: "BMWスピーカー交換パッケージ" },
-                                                        "Mercedes Benz専用パッケージ": { id: "speaker_package", planName: "Mercedes Benzスピーカー交換パッケージ" },
-                                                        "車種別スピーカー交換プラン": { id: "speaker_package", planName: "車種別スピーカー交換プラン" },
-                                                        "AMP内蔵DSPパッケージ": { id: "digital_source", planName: "アンプ内蔵DSPパッケージ" },
-                                                        "AMPレスDSPパッケージ": { id: "digital_source", planName: "アンプレスDSPパッケージ" },
-                                                        "お手軽低音増強 (パワード)": { id: "bass_power", planName: "チューンナップウーファー・パッケージ" },
-                                                        "お手軽低音増強＋ (アンプ別)": { id: "bass_power", planName: "大型パワードウーファー・パッケージ" },
+                                                        "BASIC line (コアキシャル)": { id: "speaker_package", planId: "basic-coaxial" },
+                                                        "BASIC line (セパレート)": { id: "speaker_package", planId: "basic-separate" },
+                                                        "STANDARD line (10万円まで)": { id: "speaker_package", planId: "standard-line" },
+                                                        "PREMIUM line (10万円以上)": { id: "speaker_package", planId: "premium-line" },
+                                                        "フロント3WAYセット": { id: "speaker_package", planId: "front-3way" },
+                                                        "BMW専用パッケージ": { id: "speaker_package", planId: "bmw-package" },
+                                                        "Mercedes Benz専用パッケージ": { id: "speaker_package", planId: "mercedes-package" },
+                                                        "車種別スピーカー交換プラン": { id: "speaker_package", planId: "model-specific" },
+                                                        "AMP内蔵DSPパッケージ": { id: "digital_source", planId: "amplified-dsp" },
+                                                        "AMPレスDSPパッケージ": { id: "digital_source", planId: "standalone-dsp" },
+                                                        "お手軽低音増強 (パワード)": { id: "bass_power", planId: "easy-bass" },
+                                                        "お手軽低音増強＋ (アンプ別)": { id: "bass_power", planId: "easy-bass-plus" },
                                                         "店内の常時試聴ユニット": { id: "audition-showcase", isAnchor: true },
                                                         "施工ブログ / 店舗詳細": { id: "contact", isAnchor: true }
                                                     };
@@ -850,16 +850,18 @@ export const MainPage: React.FC<MainPageProps> = ({
                                                                                         key={idx}
                                                                                         onClick={() => {
                                                                                             const planMapping: Record<string, any> = {
-                                                                                                "BASIC line (コアキシャル)": { id: "speaker_package", planName: "スピーカー交換BASIC line（コアキシャル）" },
-                                                                                                "BASIC line (セパレート)": { id: "speaker_package", planName: "スピーカー交換BASIC line（セパレート）" },
-                                                                                                "STANDARD line (10万円まで)": { id: "speaker_package", planName: "スピーカー交換STANDARD line（10万円まで）" },
-                                                                                                "PREMIUM line (10万円以上)": { id: "speaker_package", planName: "スピーカー交換PREMIUM line（10万円以上）" },
-                                                                                                "BMW専用パッケージ": { id: "speaker_package", planName: "BMWスピーカー交換パッケージ" },
-                                                                                                "Mercedes Benz専用パッケージ": { id: "speaker_package", planName: "Mercedes Benzスピーカー交換パッケージ" },
-                                                                                                "AMP内蔵DSPパッケージ": { id: "digital_source", planName: "アンプ内蔵DSPパッケージ" },
-                                                                                                "AMPレスDSPパッケージ": { id: "digital_source", planName: "アンプレスDSPパッケージ" },
-                                                                                                "お手軽低音増強 (パワード)": { id: "bass_power", planName: "チューンナップウーファー・パッケージ" },
-                                                                                                "お手軽低音増強＋ (アンプ別)": { id: "bass_power", planName: "大型パワードウーファー・パッケージ" },
+                                                                                                "BASIC line (コアキシャル)": { id: "speaker_package", planId: "basic-coaxial" },
+                                                                                                "BASIC line (セパレート)": { id: "speaker_package", planId: "basic-separate" },
+                                                                                                "STANDARD line (10万円まで)": { id: "speaker_package", planId: "standard-line" },
+                                                                                                "PREMIUM line (10万円以上)": { id: "speaker_package", planId: "premium-line" },
+                                                                                                "フロント3WAYセット": { id: "speaker_package", planId: "front-3way" },
+                                                                                                "BMW専用パッケージ": { id: "speaker_package", planId: "bmw-package" },
+                                                                                                "Mercedes Benz専用パッケージ": { id: "speaker_package", planId: "mercedes-package" },
+                                                                                                "車種別スピーカー交換プラン": { id: "speaker_package", planId: "model-specific" },
+                                                                                                "AMP内蔵DSPパッケージ": { id: "digital_source", planId: "amplified-dsp" },
+                                                                                                "AMPレスDSPパッケージ": { id: "digital_source", planId: "standalone-dsp" },
+                                                                                                "お手軽低音増強 (パワード)": { id: "bass_power", planId: "easy-bass" },
+                                                                                                "お手軽低音増強＋ (アンプ別)": { id: "bass_power", planId: "easy-bass-plus" },
                                                                                                 "店内の常時試聴ユニット": { id: "audition-showcase", isAnchor: true },
                                                                                                 "施工ブログ / 店舗詳細": { id: "contact", isAnchor: true }
                                                                                             };

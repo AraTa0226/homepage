@@ -30,12 +30,13 @@ const AudioPlanDetail: React.FC = () => {
         if (plan) break;
     }
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [planId]);
-
     // Even if not found in data, we show the name from the URL
     const displayTitle = plan?.name || decodedPlanId;
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        document.title = `${displayTitle} | サウンドエナジー (Sound ANG)`;
+    }, [displayTitle]);
 
     return (
         <div className="min-h-screen bg-white">

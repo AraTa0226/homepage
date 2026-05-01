@@ -47,6 +47,7 @@
       "showDescriptionInList": true,
       "items": [
         {
+          "id": "basic-coaxial",
           "name": "スピーカー交換BASIC line（コアキシャル）",
           "price": "44000",
           "subType": "level",
@@ -59,6 +60,7 @@
           "image": "/images/Audio/basic_line_coaxial.webp"
         },
         {
+          "id": "basic-separate",
           "name": "スピーカー交換BASIC line（セパレート）",
           "price": "59400",
           "subType": "level",
@@ -71,7 +73,8 @@
           "image": "/images/Audio/basic_line_separate.webp"
         },
         {
-          "name": "スピーカー交換STANDARD line（10万円まで）",
+          "id": "standard-line",
+        "name": "スピーカー交換STANDARD line（10万円まで）",
           "price": "104500",
           "subType": "level",
           "badge": "コスパ最強",
@@ -83,7 +86,8 @@
           "image": "/images/Audio/standard.webp"
         },
         {
-          "name": "スピーカー交換PREMIUM line（10万円以上）",
+          "id": "premium-line",
+        "name": "スピーカー交換PREMIUM line（10万円以上）",
           "price": "184800",
           "subType": "level",
           "badge": "人気No.1",
@@ -95,6 +99,7 @@
           "image": "/images/Audio/premium.webp"
         },
         {
+          "id": "front-3way",
           "name": "フロント3WAYプラン",
           "price": "286000",
           "subType": "level",
@@ -107,6 +112,7 @@
           "image": "/images/Audio/front_3way.webp"
         },
         {
+          "id": "k-car-package",
           "name": "軽自動車専用スピーカーパッケージ",
           "price": "44000",
           "subType": "car",
@@ -119,6 +125,7 @@
           "image": "/images/Audio/k-car.webp"
         },
         {
+          "id": "model-specific",
           "name": "車種別スピーカー交換プラン",
           "price": "44000",
           "subType": "car",
@@ -131,6 +138,7 @@
           "image": "/images/Audio/standard-car.webp"
         },
         {
+          "id": "bmw-package",
           "name": "BMWスピーカー交換パッケージ",
           "price": "77000",
           "subType": "car",
@@ -143,6 +151,7 @@
           "image": "/images/Audio/bmw_sound_upgrade.webp"
         },
         {
+          "id": "mercedes-package",
           "name": "Mercedes Benzスピーカー交換パッケージ",
           "price": "88000",
           "subType": "car",
@@ -166,6 +175,7 @@
       "showDescriptionInList": true,
       "items": [
         {
+          "id": "compact-amp",
           "name": "省スペース”小型”パワーアンプパッケージ",
           "price": "33000",
           "subType": "amp",
@@ -243,6 +253,7 @@
           ]
         },
         {
+          "id": "amp-package",
           "name": "アンプインスト・パッケージ",
           "price": "55000",
           "subType": "amp",
@@ -308,6 +319,7 @@
           ]
         },
         {
+          "id": "easy-bass",
           "name": "お手軽低音増強セット",
           "price": "42000",
           "subType": "subwoofer",
@@ -320,6 +332,7 @@
           "image": "/images/Audio/easy_bass_package.webp"
         },
         {
+          "id": "easy-bass-plus",
           "name": "お手軽低音増強セット”プラス”",
           "price": "110000",
           "subType": "subwoofer",
@@ -355,6 +368,7 @@
       "showDescriptionInList": true,
       "items": [
         {
+          "id": "amplified-dsp",
           "name": "アンプ内蔵DSPパッケージ",
           "price": "110000",
           "subType": "dsp",
@@ -367,6 +381,7 @@
           "image": "/images/Audio/amplified_dsp.webp"
         },
         {
+          "id": "standalone-dsp",
           "name": "アンプレスDSPパッケージ",
           "price": "180000",
           "subType": "dsp",
@@ -526,6 +541,7 @@
           "image": "/images/Audio/custom_outer_baffle.webp"
         },
         {
+          "id": "custom-install",
           "name": "カスタムインストール・ワンオフ製作",
           "price": "ASK",
           "subType": "oneoff",
