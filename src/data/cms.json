@@ -53,11 +53,26 @@
           "badge": "お手軽導入",
           "features": [
             "コアキシャルスピーカー交換",
-            "簡易デッドニング",
+            "ドアチューニングB",
             "バーチ材バッフル"
           ],
           "image": "/images/Audio/basic_line_coaxial.webp",
-          "id": "basic-coaxial"
+          "id": "basic-coaxial",
+          "packageDetails": {
+            "standardPrice": "66000",
+            "savings": "22000",
+            "contents": [
+              { "title": "コアキシャルスピーカー", "description": "お好みのユニットを選択", "icon": "Music" },
+              { "title": "ドアチューニングB", "description": "スピーカー周辺の制振施工", "icon": "Zap" },
+              { "title": "バーチ材バッフル", "description": "高密度な合板での土台作り", "icon": "Layers" },
+              { "title": "取付・調整工賃", "description": "プロによる確実なインストール", "icon": "Wrench" }
+            ]
+          },
+          "lineup": [
+            { "name": "Pioneer / TS-F1740-2", "price": "44000", "description": "純正からのステップアップに最適。明るくクリアなサウンド。", "image": "/images/Audio/speaker_default.webp", "youtube": "https://youtube.com" },
+            { "name": "KICKER / KSC6704", "price": "52800", "description": "USブランドらしい元気な音。コアキシャルでも迫力の低音。", "image": "/images/Audio/speaker_default.webp", "youtube": "https://youtube.com" },
+            { "name": "FOCAL / RCX-165", "price": "55000", "description": "フランスの名門。透明感のある高域が魅力のモデル。", "image": "/images/Audio/speaker_default.webp", "youtube": "https://youtube.com" }
+          ]
         },
         {
           "name": "スピーカー交換BASIC line（セパレート）",
@@ -66,15 +81,30 @@
           "badge": "初心者おすすめ",
           "features": [
             "セパレートスピーカー交換",
-            "簡易デッドニング",
+            "ドアチューニングB",
             "インラインNW"
           ],
           "image": "/images/Audio/basic_line_separate.webp",
-          "id": "basic-separate"
+          "id": "basic-separate",
+          "packageDetails": {
+            "standardPrice": "82500",
+            "savings": "23100",
+            "contents": [
+              { "title": "セパレートスピーカー", "description": "ツィーター別体の本格2WAY", "icon": "Music" },
+              { "title": "ドアチューニングB", "description": "スピーカー周辺の制振施工", "icon": "Zap" },
+              { "title": "バーチ材バッフル", "description": "高密度な合板での土台作り", "icon": "Layers" },
+              { "title": "取付・調整工賃", "description": "プロによる確実なインストール", "icon": "Wrench" }
+            ]
+          },
+          "lineup": [
+            { "name": "Pioneer / TS-F1740S-2", "price": "59400", "description": "セパレートの入門機。ボーカルがダッシュボード上に定位します。", "image": "/images/Audio/speaker_default.webp", "youtube": "https://youtube.com" },
+            { "name": "carrozzeria / TS-C1730S", "price": "71500", "description": "中域の厚みが魅力。情報量豊かなハイレゾ対応モデル。", "image": "/images/Audio/speaker_default.webp", "youtube": "https://youtube.com" },
+            { "name": "ALPINE / X-170S", "price": "74800", "description": "圧倒的な解像度。アルパインのフラッグシップ譲りの音質。", "image": "/images/Audio/speaker_default.webp", "youtube": "https://youtube.com" }
+          ]
         },
         {
           "name": "スピーカー交換STANDARD line（10万円まで）",
-          "price": "104500",
+          "price": "81840",
           "subType": "level",
           "badge": "コスパ最強",
           "features": [
@@ -83,7 +113,27 @@
             "インナーバッフル"
           ],
           "image": "/images/Audio/standard.webp",
-          "id": "standard-line"
+          "id": "standard-line",
+          "packageDetails": {
+            "standardPrice": "117700",
+            "savings": "35860",
+            "contents": [
+              { "title": "2WAYスピーカー", "description": "10万円までの人気モデルから選択", "icon": "Music" },
+              { "title": "ドアチューニングB", "description": "制振材によるデッドニング施工", "icon": "Zap" },
+              { "title": "カスタムバッフル", "description": "車種専用の強固な土台製作", "icon": "Layers" },
+              { "title": "ANG高品質ケーブル", "description": "特注スピーカーケーブル(10m)", "icon": "Activity" },
+              { "title": "取付・調整工賃", "description": "プロによる精密なインストール", "icon": "Wrench" }
+            ],
+            "upgrades": [
+              { "title": "B → Aコース", "price": "+¥11,000", "description": "制振材増量 & 背圧処理(フェリソニDS)" },
+              { "title": "B → Sコース", "price": "+¥33,000", "description": "最高峰マテリアル & 吸音・遮音複合" }
+            ]
+          },
+          "lineup": [
+            { "name": "FOCAL / PS 165 V1", "price": "99000", "description": "艶やかなボーカルと透明感のある高音。フランスの名門が生んだ傑作。", "image": "/audio_speaker_high_end_focal_1777648200679.png", "youtube": "https://youtube.com" },
+            { "name": "KICKER / KSS6704", "price": "81840", "description": "パワフルな低音とキレのあるサウンド。ロックやPOPSを楽しく。", "image": "/audio_speaker_kicker_style_1777648219037.png", "youtube": "https://youtube.com" },
+            { "name": "MOREL / MAXIMO ULTRA 602", "price": "93500", "description": "温かみのある自然な音色。女性ボーカルやクラシックを優雅に。", "image": "/images/Audio/speaker_default.webp", "youtube": "https://youtube.com" }
+          ]
         },
         {
           "name": "スピーカー交換PREMIUM line（10万円以上）",

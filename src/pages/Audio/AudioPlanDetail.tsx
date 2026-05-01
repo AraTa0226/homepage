@@ -6,82 +6,62 @@ import {
     Speaker, 
     ArrowLeft, 
     MessageSquare, 
-    Mail, 
     ChevronRight,
     Music,
     Zap,
-    Award,
     ShieldCheck,
     Menu,
     X,
     Calendar as CalendarIcon,
-    Home
+    Printer,
+    Youtube,
+    Clock,
+    Car,
+    Volume2,
+    Layers,
+    Wrench
 } from 'lucide-react';
 import { SafeImage } from '../../components/ui/SafeImage';
 
-const MegaMenu = ({ show, categories, theme, onClose, navigate, handleMenuClick }: any) => {
+// QR Code utility
+const getQRCodeUrl = (url: string) => `https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=${encodeURIComponent(url || 'https://sound-ang.com')}`;
+
+const MegaMenu = ({ show, onClose, navigate }: any) => {
+    const megaMenuCategories = [
+        { id: 'speaker_package', title: 'スピーカー交換パッケージ', subtitle: 'Speaker Package', items: ['BASIC line (コアキシャル)', 'BASIC line (セパレート)', 'STANDARD line (10万円まで)', 'PREMIUM line (10万円以上)'] },
+        { id: 'digital_source', title: 'DSP・アンプ・ソース', subtitle: 'Electronics', items: ['AMP内蔵DSPパッケージ', 'AMPレスDSPパッケージ', '小型アンプパッケージ'] },
+        { id: 'security', title: 'カーセキュリティー', subtitle: 'Car Security', items: ['Panthera (パンテーラ)', 'Grgo (ゴルゴ)', 'Viper (バイパー)', 'Clifford (クリフォード)'] }
+    ];
+
     return (
         <AnimatePresence>
             {show && (
-                <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50 pointer-events-auto"
-                >
-                    <div className={`rounded-3xl shadow-2xl overflow-hidden border ${theme === 'dark' ? 'bg-black border-white/10' : 'bg-white border-gray-100'} p-8 w-[95vw] max-w-[1100px]`}>
-                        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
-                            {categories.map((cat: any) => (
-                                <div key={cat.id} className="flex flex-col gap-4">
-                                    <div
-                                        onClick={() => {
-                                            onClose();
-                                            navigate(cat.path);
-                                        }}
-                                        className="flex flex-col gap-1 border-b border-gray-100 pb-3 group/header cursor-pointer"
-                                    >
-                                        <span className="text-[9px] font-black tracking-[0.2em] text-blue-600 uppercase">{cat.subtitle}</span>
-                                        <span className={`text-[13px] font-black tracking-tight transition-colors ${theme === 'dark' ? 'text-white' : 'text-gray-900'} group-hover/header:text-blue-600`}>
-                                            {cat.title.split('・')[0]}
-                                        </span>
-                                    </div>
+                <>
+                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={onClose} className="fixed inset-0 bg-black/40 backdrop-blur-md z-[60]" />
+                    <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="fixed top-24 left-1/2 -translate-x-1/2 w-[95vw] max-w-6xl bg-white rounded-[3rem] shadow-2xl z-[70] border border-gray-100 p-12 overflow-hidden">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                            {megaMenuCategories.map((cat) => (
+                                <div key={cat.id} className="space-y-6">
+                                    <div className="border-b border-gray-100 pb-4"><span className="text-[10px] font-black tracking-[0.3em] text-blue-600 uppercase block mb-1">{cat.subtitle}</span><h4 className="text-lg font-black text-gray-900">{cat.title}</h4></div>
                                     <div className="flex flex-col gap-3">
-                                        {cat.items.map((item: string, idx: number) => (
-                                            <button
-                                                key={idx}
-                                                onClick={() => {
-                                                    const planMapping: Record<string, any> = {
-                                                        "BASIC line (コアキシャル)": { id: "speaker_package", planId: "basic-coaxial" },
-                                                        "BASIC line (セパレート)": { id: "speaker_package", planId: "basic-separate" },
-                                                        "STANDARD line (10万円まで)": { id: "speaker_package", planId: "standard-line" },
-                                                        "PREMIUM line (10万円以上)": { id: "speaker_package", planId: "premium-line" },
-                                                        "フロント3WAYセット": { id: "speaker_package", planId: "front-3way" },
-                                                        "BMW専用パッケージ": { id: "speaker_package", planId: "bmw-package" },
-                                                        "Mercedes Benz専用パッケージ": { id: "speaker_package", planId: "mercedes-package" },
-                                                        "車種別スピーカー交換プラン": { id: "speaker_package", planId: "model-specific" },
-                                                        "AMP内蔵DSPパッケージ": { id: "digital_source", planId: "amplified-dsp" },
-                                                        "AMPレスDSPパッケージ": { id: "digital_source", planId: "standalone-dsp" },
-                                                        "お手軽低音増強 (パワード)": { id: "bass_power", planId: "easy-bass" },
-                                                        "お手軽低音増強＋ (アンプ別)": { id: "bass_power", planId: "easy-bass-plus" },
-                                                        "店内の常時試聴ユニット": { id: "audition-showcase", isAnchor: true },
-                                                        "施工ブログ / 店舗詳細": { id: "contact", isAnchor: true }
-                                                    };
-                                                    const target = planMapping[item] || { id: cat.id };
-                                                    onClose();
-                                                    handleMenuClick(target);
-                                                }}
-                                                className="text-[11px] font-bold text-gray-400 hover:text-blue-600 transition-all hover:translate-x-1 text-left flex items-center gap-2 group/link"
-                                            >
-                                                <div className="w-1 h-1 rounded-full bg-gray-200 group-hover/link:bg-blue-400 transition-colors" />
-                                                {item}
-                                            </button>
+                                        {cat.items.map((item, idx) => (
+                                            <button key={idx} onClick={() => {
+                                                const pathMap: Record<string, string> = {
+                                                    'STANDARD line (10万円まで)': '/audio/plan/standard-line',
+                                                    'BASIC line (コアキシャル)': '/audio/plan/basic-coaxial',
+                                                    'BASIC line (セパレート)': '/audio/plan/basic-separate',
+                                                    'PREMIUM line (10万円以上)': '/audio/plan/premium-line'
+                                                };
+                                                onClose();
+                                                navigate(pathMap[item] || '/');
+                                            }} className="text-sm font-bold text-gray-500 hover:text-blue-600 transition-all hover:translate-x-1 flex items-center gap-2 group"><div className="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-blue-400" />{item}</button>
                                         ))}
                                     </div>
                                 </div>
                             ))}
                         </div>
-                    </div>
-                </motion.div>
+                    </motion.div>
+                </>
             )}
         </AnimatePresence>
     );
@@ -90,253 +70,200 @@ const MegaMenu = ({ show, categories, theme, onClose, navigate, handleMenuClick 
 const AudioPlanDetail: React.FC = () => {
     const { planId } = useParams();
     const navigate = useNavigate();
-    const { plans, setSelectedPlan, setSelectedCategory } = usePrices();
-    const [showMegaMenu, setShowMegaMenu] = useState(false);
-
-    const handleMenuClick = (item: any) => {
-        const category = plans.find(p => p.id === item.id);
-        if (category) {
-            setSelectedCategory(category);
-            const targetId = item.planId || item.planName || item.name;
-            if (category.type === 'audio') {
-                navigate(`/audio/plan/${encodeURIComponent(targetId)}`);
-            } else {
-                const planItem = category.items.find(i => i.id === targetId || i.name === targetId);
-                if (planItem) {
-                    setSelectedPlan(planItem);
-                    navigate(`/security/vehicle/special#${planItem.id}`);
-                }
-            }
-        }
-    };
+    const { plans } = usePrices();
+    const [view, setView] = useState<'lp' | 'catalog'>('lp');
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const decodedPlanId = decodeURIComponent(planId || "");
-
-    // Full audio categories for the menu
-    const audioCategories = [
-        { id: 'speaker_package', title: 'スピーカー・パッケージ', subtitle: 'ACOUSTICS', items: ['BASIC line (コアキシャル)', 'BASIC line (セパレート)', 'STANDARD line (10万円まで)', 'PREMIUM line (10万円以上)', 'フロント3WAYセット', 'BMW専用パッケージ', 'Mercedes Benz専用パッケージ', '車種別スピーカー交換プラン'], path: '/audio/sp-package' },
-        { id: 'bass_power', title: 'DSP / アンプ / ウーファー', subtitle: 'ELECTRONICS', items: ['AMP内蔵DSPパッケージ', 'AMPレスDSPパッケージ', 'アンプインスト・パッケージ', '省スペース小型アンプ', 'お手軽低音増強 (パワード)', 'お手軽低音増強＋ (アンプ別)'], path: '/audio/amp-dsp' },
-        { id: 'custom_install', title: '施工・カスタム', subtitle: 'EXPERT CUSTOM', items: ['カスタムインストール', 'ツィーターCOOLマウント', 'オリジナルアウターバッフル', 'サブウーハー施工のアレコレ'], path: '/audio/custom' },
-        { id: 'digital_source', title: 'ハイレゾ・デジタル', subtitle: 'TECH & DIGITAL', items: ['ハイレゾ導入のススメ', 'いま注目！メディアプレーヤー'], path: '/audio/digital-source' },
-        { id: 'install_tuning', title: 'デッドニング・音響パーツ', subtitle: 'DEADENING', items: ['ドアチューニング (デッドニング)', 'サイレントチューニング (静音)'], path: '/audio/deadening' }
-    ];
-
-    let plan = null;
+    let plan: any = null;
     for (const cat of plans.filter(p => p.type === 'audio')) {
         plan = cat.items.find(item => item.name === decodedPlanId || item.id === decodedPlanId);
         if (plan) break;
     }
 
-    // Even if not found in data, we show the name from the URL
-    const displayTitle = plan?.name || decodedPlanId;
-
     useEffect(() => {
         window.scrollTo(0, 0);
-        document.title = `${displayTitle} | サウンドエナジー (Sound ANG)`;
-    }, [displayTitle]);
+        if (plan) document.title = `${plan.name} | Sound ANG`;
+    }, [plan]);
+
+    if (!plan) return <div className="p-20 text-center font-black">Plan not found</div>;
+
+    const details = plan.packageDetails;
+    const lineup = plan.lineup;
 
     return (
-        <div className="min-h-screen bg-white">
-            {/* Header / Navigation */}
-            <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
-                <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
-                    <div className="flex items-center gap-8">
-                        <button 
-                            onClick={() => navigate('/')}
-                            className="flex items-center gap-3 group"
-                        >
-                            <div className="w-10 h-10 rounded-xl bg-gray-900 flex items-center justify-center text-white group-hover:scale-105 transition-all">
-                                <span className="font-black italic">S</span>
-                            </div>
-                            <span className="font-black tracking-tighter text-xl hidden sm:block">Sound ANG</span>
-                        </button>
+        <div className="min-h-screen bg-white text-gray-900 selection:bg-blue-100">
+            <MegaMenu show={isMenuOpen} onClose={() => setIsMenuOpen(false)} navigate={navigate} />
 
-                        <nav className="hidden lg:flex items-center gap-8 text-sm font-bold uppercase tracking-widest shrink-0">
-                            <button onClick={() => navigate('/')} className="flex flex-col items-center group/item transition-colors">
-                                <span className="text-[11px] font-black tracking-widest group-hover/item:text-blue-500">HOME</span>
-                                <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">ホーム</span>
-                            </button>
-                            <div
-                                className="relative group/nav py-6"
-                                onMouseEnter={() => setShowMegaMenu(true)}
-                                onMouseLeave={() => setShowMegaMenu(false)}
-                            >
-                                <button className={`flex flex-col items-center transition-colors group-hover/nav:text-blue-500 ${showMegaMenu ? 'text-blue-500' : ''}`}>
-                                    <div className="flex items-center gap-1">
-                                        <span className="text-[11px] font-black tracking-widest">MENU</span>
-                                        <ChevronRight className={`w-3 h-3 transition-transform ${showMegaMenu ? 'rotate-90' : ''}`} />
-                                    </div>
-                                    <span className="text-[8px] font-bold opacity-40 group-hover/nav:opacity-100 transition-opacity">メニュー一覧</span>
-                                </button>
-                                <MegaMenu
-                                    show={showMegaMenu}
-                                    categories={audioCategories}
-                                    theme="light"
-                                    onClose={() => setShowMegaMenu(false)}
-                                    navigate={navigate}
-                                    handleMenuClick={handleMenuClick}
-                                />
-                            </div>
-                            <button onClick={() => navigate('/#blog')} className="flex flex-col items-center group/item transition-colors">
-                                <span className="text-[11px] font-black tracking-widest group-hover/item:text-blue-500">BLOG</span>
-                                <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">ブログ</span>
-                            </button>
-                            <button onClick={() => navigate('/#access')} className="flex flex-col items-center group/item transition-colors">
-                                <span className="text-[11px] font-black tracking-widest group-hover/item:text-blue-500">ACCESS</span>
-                                <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">店舗案内</span>
-                            </button>
-                        </nav>
-                    </div>
-                    
+            <header className="fixed top-0 left-0 right-0 z-[100] bg-white/90 backdrop-blur-md border-b border-gray-100 print:hidden">
+                <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+                    <button onClick={() => navigate('/')} className="flex items-center gap-3 group">
+                        <div className="w-10 h-10 rounded-xl bg-gray-900 flex items-center justify-center text-white font-black italic transition-transform group-hover:scale-110">S</div>
+                        <span className="font-black tracking-tighter text-xl">Sound ANG</span>
+                    </button>
                     <div className="flex items-center gap-4">
-                        <button 
-                            onClick={() => navigate(-1)}
-                            className="hidden md:flex items-center gap-2 text-gray-500 hover:text-blue-600 transition-colors group mr-4"
-                        >
-                            <ArrowLeft className="w-4 h-4" />
-                            <span className="text-[10px] font-black tracking-widest uppercase">Back</span>
-                        </button>
-                        
-                        <a 
-                            href="https://page.line.me/312qjhsq?openQrModal=true"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2 bg-[#06C755] text-white px-5 py-2.5 rounded-xl font-black text-[10px] tracking-widest shadow-lg shadow-green-500/20 hover:scale-105 transition-all"
-                        >
-                            <MessageSquare className="w-4 h-4" />
-                            LINE相談
-                        </a>
-                        <button 
-                            onClick={() => navigate('/reservation')}
-                            className="flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-xl font-black text-[10px] tracking-widest shadow-lg shadow-blue-500/20 hover:scale-105 transition-all"
-                        >
-                            <CalendarIcon className="w-4 h-4" />
-                            来店予約
+                        <button onClick={() => window.print()} className="hidden md:flex items-center gap-2 px-4 py-2 text-gray-500 hover:text-blue-600 transition-all font-black text-[10px] tracking-widest uppercase"><Printer className="w-4 h-4" /> PRINT</button>
+                        <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="flex items-center gap-2 px-6 py-2.5 bg-gray-900 text-white rounded-full font-black text-xs tracking-widest uppercase hover:bg-blue-600 transition-all shadow-lg shadow-gray-200">
+                            {isMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />} {isMenuOpen ? 'CLOSE' : 'MENU'}
                         </button>
                     </div>
                 </div>
             </header>
 
-            <main className="pt-32 pb-24">
-                <div className="max-w-7xl mx-auto px-4">
-                    {/* Hero Section */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
-                        <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            animate={{ opacity: 1, x: 0 }}
-                        >
-                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-600 rounded-full mb-6">
-                                <Music className="w-4 h-4" />
-                                <span className="text-[10px] font-black uppercase tracking-widest">Speaker Upgrade Plan</span>
-                            </div>
-                            <h1 className="text-4xl md:text-6xl font-black text-gray-900 mb-8 leading-tight tracking-tighter">
-                                {displayTitle}
-                            </h1>
-                            <div className="flex items-baseline gap-4 mb-10">
-                                <span className="text-sm font-bold text-gray-400">Price From</span>
-                                <span className="text-5xl font-black text-blue-600 tracking-tighter">
-                                    ¥{plan ? Number(plan.price).toLocaleString() : "---,---"}
-                                </span>
-                                <span className="text-sm font-bold text-gray-400 text-sm">税込 (工賃別)</span>
-                            </div>
-
-                            <p className="text-lg text-gray-500 font-bold leading-relaxed mb-10">
-                                このプランは現在詳細ページを準備中です。<br />
-                                施工内容の詳細や適合車種、お見積りについてはお気軽にお問い合わせください。
-                            </p>
-
-                            <div className="flex flex-wrap gap-4">
-                                <a 
-                                    href="https://page.line.me/312qjhsq?openQrModal=true"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center gap-3 bg-[#06C755] text-white px-8 py-5 rounded-2xl font-black text-sm tracking-widest shadow-xl shadow-green-500/20 hover:scale-105 transition-all"
-                                >
-                                    <MessageSquare className="w-5 h-5" />
-                                    LINEで相談する
-                                </a>
-                                <button 
-                                    onClick={() => navigate('/reservation')}
-                                    className="flex items-center gap-3 bg-gray-900 text-white px-8 py-5 rounded-2xl font-black text-sm tracking-widest shadow-xl shadow-gray-900/10 hover:scale-105 transition-all"
-                                >
-                                    <Mail className="w-5 h-5" />
-                                    来店予約・見積り
-                                </button>
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            className="relative"
-                        >
-                            <div className="aspect-square rounded-[3rem] overflow-hidden shadow-2xl shadow-blue-500/10 border border-gray-100">
-                                <SafeImage 
-                                    src={plan.image || '/images/Audio/speaker_default.webp'} 
-                                    alt={plan.name}
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-                            
-                            {/* Decorative Elements */}
-                            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-blue-600/10 blur-3xl rounded-full -z-10"></div>
-                            <div className="absolute -top-10 -left-10 w-40 h-40 bg-purple-600/10 blur-3xl rounded-full -z-10"></div>
-                        </motion.div>
-                    </div>
-
-                    {/* Features Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {plan?.features?.map((feature, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: i * 0.1 }}
-                                className="p-8 bg-gray-50 rounded-3xl border border-gray-100 hover:border-blue-200 transition-all group"
-                            >
-                                <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center mb-6 shadow-sm group-hover:bg-blue-600 group-hover:text-white transition-all">
-                                    <Zap className="w-5 h-5" />
-                                </div>
-                                <h3 className="text-lg font-black text-gray-900 mb-2">{feature}</h3>
-                                <p className="text-xs text-gray-500 font-bold leading-relaxed">
-                                    最高品質のパーツを使用し、熟練のインストーラーが丁寧に施工いたします。
-                                </p>
-                            </motion.div>
-                        ))}
-                    </div>
-
-                    {/* Coming Soon Notice */}
-                    <div className="mt-24 p-12 bg-gray-900 rounded-[3rem] text-center relative overflow-hidden">
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/20 blur-3xl rounded-full -translate-y-1/2 translate-x-1/2"></div>
-                        <div className="relative z-10">
-                            <Award className="w-16 h-16 text-blue-500 mx-auto mb-8" />
-                            <h2 className="text-3xl md:text-4xl font-black text-white mb-6 tracking-tighter">
-                                COMING SOON
-                            </h2>
-                            <p className="text-gray-400 font-bold max-w-2xl mx-auto leading-relaxed">
-                                より詳細な施工ギャラリーや、パーツの解説などを順次公開予定です。<br />
-                                サウンドエナジーが提供する、至高の音響空間へのこだわりを是非ご期待ください。
-                            </p>
+            <div className="pt-20">
+                {/* 1. LP Section */}
+                <div className={`${view === 'lp' ? 'block' : 'hidden'} print:block`}>
+                    <section className="relative min-h-[50vh] flex items-center print:min-h-0 print:py-6 print:border-b-4 print:border-gray-900">
+                        <div className="absolute inset-0 z-0 print:hidden">
+                            <SafeImage src={plan.image || "/images/Audio/speaker_default.webp"} className="w-full h-full object-cover opacity-30 grayscale" />
+                            <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-white to-white" />
                         </div>
+                        <div className="max-w-7xl mx-auto px-4 relative z-10 w-full text-center">
+                            <div className="inline-block px-4 py-1.5 bg-blue-600 text-white rounded-full text-[10px] font-black tracking-[0.3em] uppercase mb-6 print:bg-black">AUDIO PACKAGE PLAN</div>
+                            <h1 className="text-5xl md:text-8xl font-black text-gray-900 mb-6 tracking-tighter leading-none print:text-4xl">{plan.name.replace('スピーカー交換', '')}</h1>
+                            <p className="text-xl font-black text-gray-400 print:text-sm">専門店が認める、最高基準のインストールパッケージ</p>
+                        </div>
+                    </section>
+
+                    <section className="py-12 bg-white print:py-2">
+                        <div className="max-w-7xl mx-auto px-4 text-center mb-12 print:mb-4">
+                            {details ? (
+                                <>
+                                    <p className="text-gray-400 font-bold mb-2 print:text-[8px]">通常合計 ¥{Number(details.standardPrice).toLocaleString()} のところ</p>
+                                    <div className="flex items-baseline justify-center gap-2 mb-4 print:mb-1">
+                                        <span className="text-7xl font-black text-blue-600 print:text-3xl tracking-tighter">¥{Number(plan.price).toLocaleString()}</span>
+                                        <span className="text-xl font-bold print:text-[10px]">〜 (税込)</span>
+                                    </div>
+                                    <div className="inline-block bg-gray-900 text-white px-8 py-3 rounded-2xl font-black text-xl print:text-sm print:px-4 print:py-1">¥{Number(details.savings).toLocaleString()} おトク！</div>
+                                </>
+                            ) : (
+                                <div className="text-5xl font-black text-blue-600 print:text-3xl tracking-tighter">¥{Number(plan.price).toLocaleString()}〜 (税込)</div>
+                            )}
+                        </div>
+
+                        {details && (
+                            <div className="max-w-3xl mx-auto px-4">
+                                <h3 className="text-lg font-black mb-6 border-b pb-2 print:text-xs print:mb-2">パッケージ構成内容</h3>
+                                <div className="space-y-1">
+                                    {details.contents.map((item: any, i: number) => (
+                                        <div key={i} className="flex justify-between py-3 border-b border-gray-50 print:py-1 print:text-[9px]">
+                                            <span className="font-bold text-gray-400">{item.title}</span>
+                                            <span className="font-black">{item.description}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+                    </section>
+
+                    <section className="py-16 bg-gray-50 print:bg-white print:py-4">
+                        <div className="max-w-7xl mx-auto px-4">
+                            <h2 className="text-2xl font-black mb-10 text-center print:text-sm print:mb-4">サウンドエナジーが約束する施工品質</h2>
+                            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 print:gap-4">
+                                {[
+                                    { title: "ドアチューニング", icon: <Zap />, desc: "不要な共鳴を抑え、スピーカーのポテンシャルを解放。" },
+                                    { title: "高剛性バッフル", icon: <Layers />, desc: "強固な土台が音のキレとエネルギー感を生み出します。" },
+                                    { title: "高品質ケーブル", icon: <Music />, desc: "信号ロスを最小限に抑えるプロ用ワイヤリング。" },
+                                    { title: "精密チューニング", icon: <Wrench />, desc: "経験豊かなプロの耳による最終音響調整。" }
+                                ].map((item, i) => (
+                                    <div key={i} className="text-center print:text-left print:flex print:items-start print:gap-2">
+                                        <div className="w-16 h-16 mx-auto mb-4 bg-white rounded-2xl flex items-center justify-center text-blue-600 shadow-sm print:w-6 print:h-6 print:m-0">{item.icon}</div>
+                                        <div>
+                                            <h4 className="font-black text-sm mb-2 print:text-[9px] print:mb-0 leading-tight">{item.title}</h4>
+                                            <p className="text-xs text-gray-400 font-bold leading-tight print:text-[7px]">{item.desc}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Upgrades Section */}
+                    {details.upgrades && details.upgrades.length > 0 && (
+                        <section className="py-16 print:py-4">
+                            <div className="max-w-7xl mx-auto px-4">
+                                <h2 className="text-2xl font-black mb-8 flex items-center gap-3 print:text-lg print:mb-2">
+                                    <Volume2 className="text-blue-600" /> オトクなアップグレード・オプション
+                                </h2>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 print:gap-4">
+                                    <div className="space-y-3">
+                                        <p className="text-sm font-black text-blue-600 print:text-[9px]">■ コース・グレードアップ</p>
+                                        {details.upgrades.map((opt: any, i: number) => (
+                                            <div key={i} className="p-4 bg-gray-50 rounded-2xl print:p-2 print:rounded-lg">
+                                                <div className="flex justify-between items-center mb-1">
+                                                    <p className="font-black text-xs print:text-[8px] leading-none">{opt.title}</p>
+                                                    <span className="font-black text-blue-600 text-xs print:text-[8px]">{opt.price}</span>
+                                                </div>
+                                                <p className="text-[10px] text-gray-400 font-bold print:text-[7px] leading-none">{opt.description}</p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                    <div className="space-y-4">
+                                        <div className="p-6 bg-emerald-50 rounded-3xl print:p-3 print:rounded-xl">
+                                            <h4 className="font-black text-sm text-emerald-700 mb-2 print:text-[9px] print:mb-1 text-left">メタルバッフルへの変更</h4>
+                                            <p className="text-xs font-bold text-gray-600 leading-relaxed print:text-[8px] print:leading-tight text-left">同時施工で定価より<span className="font-black">20%OFF</span>。よりタイトでキレのある再生へ。</p>
+                                        </div>
+                                        <div className="p-6 bg-amber-50 rounded-3xl print:p-3 print:rounded-xl text-left">
+                                            <h4 className="font-black text-sm text-amber-700 mb-2 print:text-[9px] print:mb-1">ツィーター埋め込み加工</h4>
+                                            <p className="text-xs font-bold text-gray-600 leading-relaxed print:text-[8px] print:leading-tight">Aピラー埋め込み ¥46,200〜。クリアな音像と定位感を構築します。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    )}
+
+                    <section className="py-16 print:py-4 print:break-after-page text-center">
+                        <div className="max-w-4xl mx-auto px-4 flex justify-center gap-12 print:gap-4 font-black">
+                            <div className="flex items-center gap-2"><Clock className="w-5 h-5 text-blue-600 print:w-3 print:h-3" /><span className="text-sm print:text-[9px]">作業1日お預かり</span></div>
+                            <div className="flex items-center gap-2"><Car className="w-5 h-5 text-blue-600 print:w-3 print:h-3" /><span className="text-sm print:text-[9px]">無料代車完備</span></div>
+                        </div>
+                    </section>
+                </div>
+
+                {/* 2. Catalog Section */}
+                <div className={`${view === 'catalog' ? 'block' : 'hidden'} print:block print:pt-4`}>
+                    <div className="hidden print:block mb-6 text-center">
+                        <h1 className="text-2xl font-black uppercase">{plan.name}</h1>
+                        <p className="text-gray-500 text-[10px]">スピーカー・取り付け・消費税込みのパッケージ価格</p>
+                        <div className="mt-2 border-b-2 border-gray-900 w-full" />
+                    </div>
+                    <div className="max-w-7xl mx-auto px-4">
+                        {lineup && lineup.length > 0 ? (
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 print:grid-cols-2 print:gap-3">
+                                {lineup.map((item: any, i: number) => (
+                                    <div key={i} className="bg-white border border-gray-100 rounded-[2.5rem] overflow-hidden shadow-sm print:border-gray-200 print:rounded-xl">
+                                        <div className="aspect-[16/10] bg-gray-50 print:h-24"><SafeImage src={item.image || "/images/Audio/speaker_default.webp"} className="w-full h-full object-cover" /></div>
+                                        <div className="p-8 print:p-2">
+                                            <div className="flex justify-between items-center mb-1"><span className="text-[10px] font-black text-blue-600 uppercase print:text-[7px]">{item.name.split(' / ')[0]}</span><span className="text-2xl font-black print:text-sm">¥{Number(item.price).toLocaleString()}〜</span></div>
+                                            <h3 className="text-xl font-black mb-2 print:text-[10px] print:mb-0 leading-tight">{item.name.split(' / ')[1] || item.name}</h3>
+                                            <p className="text-[11px] text-gray-400 font-bold italic mb-6 print:text-[8px] print:mb-1 leading-tight">「{item.description}」</p>
+                                            <div className="flex justify-between items-center border-t border-gray-50 pt-6 print:pt-1">
+                                                <div className="hidden print:flex items-center gap-2"><img src={getQRCodeUrl(item.youtube)} alt="QR" className="w-9 h-9" /><span className="text-[7px] font-black leading-none text-gray-500">YouTubeで<br />試聴動画へ</span></div>
+                                                <button onClick={() => navigate('/reservation')} className="bg-gray-900 text-white px-6 py-3 rounded-xl font-black text-[10px] tracking-widest uppercase hover:bg-blue-600 transition-all print:hidden">相談する</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        ) : (
+                            <div className="py-20 text-center font-bold text-gray-400">現在ラインナップを準備中です。</div>
+                        )}
                     </div>
                 </div>
-            </main>
 
-            {/* Footer-like Floating Action (Mobile) */}
-            <div className="lg:hidden fixed bottom-6 left-4 right-4 z-50">
-                <div className="bg-white/90 backdrop-blur-xl border border-gray-100 rounded-3xl p-4 shadow-2xl flex gap-3">
-                    <a 
-                        href="https://page.line.me/312qjhsq?openQrModal=true"
-                        className="flex-1 bg-[#06C755] text-white py-4 rounded-2xl flex items-center justify-center gap-2 font-black text-xs tracking-widest"
-                    >
-                        <MessageSquare className="w-4 h-4" /> LINE
-                    </a>
-                    <button 
-                        onClick={() => navigate('/reservation')}
-                        className="flex-1 bg-gray-900 text-white py-4 rounded-2xl flex items-center justify-center gap-2 font-black text-xs tracking-widest"
-                    >
-                        <Mail className="w-4 h-4" /> 予約
-                    </button>
+                {/* Switcher */}
+                <div className="max-w-7xl mx-auto px-4 py-12 flex justify-center gap-4 print:hidden">
+                    <button onClick={() => setView('lp')} className={`px-8 py-4 rounded-2xl font-black text-sm tracking-widest transition-all ${view === 'lp' ? 'bg-gray-900 text-white shadow-xl' : 'bg-gray-100 text-gray-400 hover:bg-gray-200'}`}>PACKAGE DETAIL</button>
+                    <button onClick={() => setView('catalog')} className={`px-8 py-4 rounded-2xl font-black text-sm tracking-widest transition-all ${view === 'catalog' ? 'bg-gray-900 text-white shadow-xl' : 'bg-gray-100 text-gray-400 hover:bg-gray-200'}`}>SPEAKER LINEUP</button>
+                </div>
+            </div>
+
+            <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-40 print:hidden">
+                <div className="bg-gray-900 text-white px-8 py-4 rounded-[2rem] shadow-2xl flex items-center gap-6 backdrop-blur-xl bg-opacity-95 border border-white/10">
+                    <button onClick={() => navigate('/reservation')} className="flex items-center gap-2 hover:text-blue-400 transition-colors font-black text-xs tracking-widest"><CalendarIcon className="w-4 h-4" /> 来店予約</button>
+                    <div className="w-px h-4 bg-white/20" />
+                    <a href="https://page.line.me/312qjhsq?openQrModal=true" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#06C755] hover:text-[#05b34c] transition-colors font-black text-xs tracking-widest"><MessageSquare className="w-4 h-4" /> LINE相談</a>
                 </div>
             </div>
         </div>

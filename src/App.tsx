@@ -28,7 +28,6 @@ const SecurityMainPage = lazy(() => import('./pages/Home/SecurityMainPage'));
 const VehicleSecurityDetail = lazy(() => import('./pages/Security/VehicleSecurityDetail'));
 const AudioMenuDetail = lazy(() => import('./components/Menu/AudioMenuDetail').then(m => ({ default: m.AudioMenuDetail })));
 const AudioPlanDetail = lazy(() => import('./pages/Audio/AudioPlanDetail'));
-const StandardPackageDetail = lazy(() => import('./pages/Audio/StandardPackageDetail'));
 const PantheraPage = lazy(() => import('./pages/Security/PantheraPage').then(m => ({ default: m.PantheraPage })));
 const GrgoPage = lazy(() => import('./pages/Security/GrgoPage').then(m => ({ default: m.GrgoPage })));
 const GrgoV2Page = lazy(() => import('./pages/Security/GrgoV2Page').then(m => ({ default: m.GrgoV2Page })));
@@ -317,7 +316,6 @@ function AppContent() {
           <Route path="/security/partners" element={<SecurityPartnersPage />} />
           <Route path="/security/sitemap" element={<SecuritySitemapPage />} />
           <Route path="/security/vehicle/:modelId" element={<VehicleSecurityDetail assets={assets} />} />
-          <Route path="/audio/plan/standard-line" element={<StandardPackageDetail />} />
           <Route path="/audio/plan/:planId" element={<AudioPlanDetail />} />
         <Route path="/audio/sp-package" element={<AudioPlanDetail />} />
         <Route path="/audio/dsp-amp" element={<AudioPlanDetail />} />
