@@ -158,16 +158,26 @@ const StandardPackageDetail: React.FC = () => {
             </AnimatePresence>
 
             <div className="pt-32">
-                {/* 1. LP Section */}
+                {/* 1. LP Section (Page 1) */}
                 <div className={`${view === 'lp' ? 'block' : 'hidden'} print:block print:pt-0`}>
-                    <section className="relative min-h-[40vh] flex items-center print:min-h-0 print:py-4 print:border-b-4 print:border-gray-900">
-                        <div className="max-w-7xl mx-auto px-4 relative z-10 w-full">
-                            <span className="inline-block text-blue-600 font-black tracking-[0.3em] text-[10px] mb-2 uppercase">Core Plan</span>
-                            <h1 className="text-4xl md:text-7xl font-black text-gray-900 mb-4 tracking-tighter leading-none print:text-3xl">
-                                STANDARD LINE<br />
-                                <span className="text-gray-400">PACKAGE PLAN</span>
+                    <section className="relative min-h-[55vh] flex items-center print:min-h-0 print:py-6 print:border-b-4 print:border-gray-900">
+                        <div className="absolute inset-0 z-0 print:hidden">
+                            <SafeImage src="/audio_standard_package_hero_1777648073560.png" className="w-full h-full object-cover opacity-50" />
+                            <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-white to-white"></div>
+                        </div>
+                        <div className="max-w-7xl mx-auto px-4 relative z-10 w-full text-center">
+                            <div className="inline-block px-4 py-1.5 bg-blue-600 text-white rounded-full text-[10px] font-black tracking-[0.3em] uppercase mb-6 print:bg-black">
+                                SPEAKER PACKAGE PLAN
+                            </div>
+                            <h1 className="text-6xl md:text-9xl font-black text-gray-900 mb-6 tracking-tighter leading-none print:text-5xl">
+                                STANDARD<br />
+                                <span className="text-blue-600 print:text-black">LINE</span>
                             </h1>
-                            <p className="text-lg font-bold text-gray-500 print:text-[11px]">専門店が提案する、音質向上の最短ルート。すべてが揃う「本物」のパッケージ。</p>
+                            <div className="max-w-2xl mx-auto">
+                                <p className="text-xl md:text-2xl font-black text-gray-400 mb-8 tracking-tight print:text-sm">
+                                    音質アップの第一歩は、<br className="md:hidden" />スピーカー交換から！
+                                </p>
+                            </div>
                         </div>
                     </section>
 
