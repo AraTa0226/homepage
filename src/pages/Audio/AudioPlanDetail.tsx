@@ -27,9 +27,9 @@ const MegaMenu = ({ show, categories, theme, onClose, navigate, handleMenuClick 
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full right-0 mt-4 z-50 pointer-events-auto"
+                    className="absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50 pointer-events-auto"
                 >
-                    <div className={`rounded-3xl shadow-2xl overflow-hidden border ${theme === 'dark' ? 'bg-black border-white/10' : 'bg-white border-gray-100'} p-8 w-[90vw] max-w-[1000px]`}>
+                    <div className={`rounded-3xl shadow-2xl overflow-hidden border ${theme === 'dark' ? 'bg-black border-white/10' : 'bg-white border-gray-100'} p-8 w-[95vw] max-w-[1100px]`}>
                         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
                             {categories.map((cat: any) => (
                                 <div key={cat.id} className="flex flex-col gap-4">
