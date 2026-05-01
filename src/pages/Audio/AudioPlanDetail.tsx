@@ -169,12 +169,14 @@ const AudioPlanDetail: React.FC = () => {
                                     { title: "高品質ケーブル", img: "/.tempmediaStorage/input_file_2.png", desc: "信号ロスを最小限に抑えるプロ用ワイヤリング。" },
                                     { title: "精密チューニング", img: "/.tempmediaStorage/input_file_3.png", desc: "経験豊かなプロの耳による最終音響調整。" }
                                 ].map((item, i) => (
-                                    <div key={i} className="bg-white p-6 rounded-[2.5rem] border border-gray-100 shadow-sm print:p-2 print:rounded-xl print:border-gray-200">
-                                        <div className="aspect-square rounded-2xl overflow-hidden mb-6 print:mb-2 print:rounded-lg">
+                                    <div key={i} className="bg-white p-6 rounded-[2.5rem] border border-gray-100 shadow-sm print:p-2 print:rounded-xl print:border-gray-200 print:flex print:items-center print:gap-3">
+                                        <div className="aspect-square rounded-2xl overflow-hidden mb-6 print:mb-0 print:rounded-lg print:w-20 print:h-20 shrink-0">
                                             <SafeImage src={item.img} className="w-full h-full object-cover transition-transform hover:scale-110 duration-700" />
                                         </div>
-                                        <h4 className="font-black text-lg mb-2 print:text-[10px] print:mb-0 leading-tight">{item.title}</h4>
-                                        <p className="text-xs text-gray-400 font-bold leading-relaxed print:text-[7px] print:leading-tight">{item.desc}</p>
+                                        <div className="text-left">
+                                            <h4 className="font-black text-lg mb-2 print:text-[10px] print:mb-0 leading-tight">{item.title}</h4>
+                                            <p className="text-xs text-gray-400 font-bold leading-relaxed print:text-[7px] print:leading-tight">{item.desc}</p>
+                                        </div>
                                     </div>
                                 ))}
                             </div>
