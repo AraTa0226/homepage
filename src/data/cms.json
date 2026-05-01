@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-04-28T23:10:00Z",
-  "cacheVersion": "72",
+  "cacheVersion": "73",
   "heroAlert": {
     "active": true,
     "text": "【新商品案内】最新のレーザー探知機「Z1200」の取り扱いを開始しました。店舗にて展示中！",
@@ -74,7 +74,7 @@
         },
         {
           "id": "standard-line",
-        "name": "スピーカー交換STANDARD line（10万円まで）",
+          "name": "スピーカー交換STANDARD line（10万円まで）",
           "price": "104500",
           "subType": "level",
           "badge": "コスパ最強",
@@ -87,7 +87,7 @@
         },
         {
           "id": "premium-line",
-        "name": "スピーカー交換PREMIUM line（10万円以上）",
+          "name": "スピーカー交換PREMIUM line（10万円以上）",
           "price": "184800",
           "subType": "level",
           "badge": "人気No.1",
@@ -2500,7 +2500,7 @@
       "type": [
         "security"
       ],
-      "description": "<p>最新の40系。CANインベーダーや最新手口に対し、��マートキー連動や物理CANガードを組み合わせた鉄壁の布陣をご提案します。</p>",
+      "description": "<p>最新の40系。CANインベーダーや最新手口に対し、スマートキー連動や物理CANガードを組み合わせた鉄壁の布陣をご提案します。</p>",
       "items": [
         {
           "fieldId": "item",

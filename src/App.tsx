@@ -317,6 +317,12 @@ function AppContent() {
           <Route path="/security/sitemap" element={<SecuritySitemapPage />} />
           <Route path="/security/vehicle/:modelId" element={<VehicleSecurityDetail assets={assets} />} />
           <Route path="/audio/plan/:planId" element={<AudioPlanDetail />} />
+        <Route path="/audio/sp-package" element={<AudioPlanDetail />} />
+        <Route path="/audio/dsp-amp" element={<AudioPlanDetail />} />
+        <Route path="/audio/digital-source" element={<AudioPlanDetail />} />
+        <Route path="/audio/maintenance" element={<AudioPlanDetail />} />
+        <Route path="/audio/custom" element={<AudioPlanDetail />} />
+        <Route path="/audio/tuning" element={<AudioPlanDetail />} />
           <Route path="/partners" element={<PartnersListPage />} />
 
           {/* Legacy .html Redirects */}
