@@ -1301,9 +1301,9 @@
     {
       "id": "hiace_200_full",
       "createdAt": "2026-04-29T21:58:18.755Z",
-      "updatedAt": "2026-04-29T21:58:18.755Z",
+      "updatedAt": "2026-05-01T13:51:05.224Z",
       "publishedAt": "2026-04-29T21:58:18.755Z",
-      "revisedAt": "2026-04-29T21:58:18.755Z",
+      "revisedAt": "2026-05-01T13:51:05.224Z",
       "category": "HIACE (200系) フルラインナップ",
       "type": [],
       "description": "<p>仕事からレジャーまで幅広く活躍するハイエース。狙われやすい車種だからこそ、センサー感度の追求と利便性を両立した専用プランをご用意しました。</p>",
@@ -1367,14 +1367,14 @@
           "image": ""
         }
       ],
-      "showV2Option": false
+      "showV2Option": true
     },
     {
       "id": "kcar_special",
       "createdAt": "2026-04-29T21:58:18.026Z",
-      "updatedAt": "2026-04-29T21:58:18.026Z",
+      "updatedAt": "2026-05-01T13:51:25.199Z",
       "publishedAt": "2026-04-29T21:58:18.026Z",
-      "revisedAt": "2026-04-29T21:58:18.026Z",
+      "revisedAt": "2026-05-01T13:51:25.199Z",
       "category": "K-CAR 専用パッケージ",
       "type": [],
       "description": "<p>軽自動車だからこそ、センサー感度の追求と利便性を両立。車上荒らしやイタズラから愛車を守る、K-CAR専用の最適パッケージをご提案します。</p>",
@@ -1467,14 +1467,14 @@
           "image": ""
         }
       ],
-      "showV2Option": false
+      "showV2Option": true
     },
     {
       "id": "crown_2024",
       "createdAt": "2026-04-29T21:58:17.289Z",
-      "updatedAt": "2026-04-29T21:58:17.289Z",
+      "updatedAt": "2026-05-01T13:51:38.371Z",
       "publishedAt": "2026-04-29T21:58:17.289Z",
-      "revisedAt": "2026-04-29T21:58:17.289Z",
+      "revisedAt": "2026-05-01T13:51:38.371Z",
       "category": "CROWN 専用パッケージ",
       "type": [],
       "description": "<p>スポーツ、クロスオーバー、セダン、エステート。最新のクラウンシリーズに対し、CANガードやパンテーラを組み合わせた最適な防犯対策をご提案します。</p>",
@@ -1553,7 +1553,7 @@
           "image": ""
         }
       ],
-      "showV2Option": false
+      "showV2Option": true
     },
     {
       "id": "land_cruiser_70",
@@ -1644,9 +1644,9 @@
     {
       "id": "alphard_40",
       "createdAt": "2026-04-29T21:58:15.785Z",
-      "updatedAt": "2026-04-29T21:58:15.785Z",
+      "updatedAt": "2026-05-01T13:51:54.575Z",
       "publishedAt": "2026-04-29T21:58:15.785Z",
-      "revisedAt": "2026-04-29T21:58:15.785Z",
+      "revisedAt": "2026-05-01T13:51:54.575Z",
       "category": "ALPHARD / VELLFIRE (40系) 専用パッケージ",
       "type": [],
       "description": "<p>最新の40系。CANインベーダーや最新手口に対し、スマートキー連動や物理CANガードを組み合わせた鉄壁の布陣をご提案します。</p>",
@@ -1725,7 +1725,7 @@
           "image": ""
         }
       ],
-      "showV2Option": false
+      "showV2Option": true
     },
     {
       "id": "lexus_lbx",
@@ -1915,9 +1915,9 @@
     {
       "id": "lexus_nx",
       "createdAt": "2026-04-29T21:58:13.340Z",
-      "updatedAt": "2026-04-29T21:58:13.340Z",
+      "updatedAt": "2026-05-01T13:52:13.521Z",
       "publishedAt": "2026-04-29T21:58:13.340Z",
-      "revisedAt": "2026-04-29T21:58:13.340Z",
+      "revisedAt": "2026-05-01T13:52:13.521Z",
       "category": "LEXUS NX 専用パッケージ",
       "type": [],
       "description": "<p>都会派SUVとして高い支持。利便性を損なわず、かつ強力な防犯性能を両立させます。</p>",
@@ -1982,7 +1982,7 @@
           "image": ""
         }
       ],
-      "showV2Option": false
+      "showV2Option": true
     },
     {
       "id": "civic_fl5",
@@ -2045,9 +2045,9 @@
     {
       "id": "prius_60",
       "createdAt": "2026-04-29T21:12:45.402Z",
-      "updatedAt": "2026-04-29T21:12:45.402Z",
+      "updatedAt": "2026-05-01T13:52:33.321Z",
       "publishedAt": "2026-04-29T21:12:45.402Z",
-      "revisedAt": "2026-04-29T21:12:45.402Z",
+      "revisedAt": "2026-05-01T13:52:33.321Z",
       "category": "PRIUS (60系) 専用パッケージ",
       "type": [],
       "description": "<p>洗練されたデザインと高い防犯性能の両立。最新の60系プリウスに対し、CANガードやパンテーラを組み合わせた、都市部でも安心のパッケージをご提案します。</p>",
@@ -2098,7 +2098,7 @@
           "image": ""
         }
       ],
-      "showV2Option": false
+      "showV2Option": true
     },
     {
       "id": "hiace_200",
@@ -2358,9 +2358,9 @@
     {
       "id": "lexus_rx",
       "createdAt": "2026-04-29T11:07:23.545Z",
-      "updatedAt": "2026-04-29T21:12:41.478Z",
+      "updatedAt": "2026-05-01T13:52:51.320Z",
       "publishedAt": "2026-04-29T11:07:23.545Z",
-      "revisedAt": "2026-04-29T21:12:41.478Z",
+      "revisedAt": "2026-05-01T13:52:51.320Z",
       "category": "LEXUS RX 専用パッケージ",
       "type": [
         "security"
@@ -2413,7 +2413,7 @@
           "image": ""
         }
       ],
-      "showV2Option": false
+      "showV2Option": true
     },
     {
       "id": "land_cruiser_prado",
@@ -2484,7 +2484,7 @@
       "type": [
         "security"
       ],
-      "description": "<p>最新の40系。CANインベーダーや最新手口に対���、スマートキー連動や物理CANガードを組み合わせた鉄壁の布陣をご提案します。</p>",
+      "description": "<p>最新の40系。CANインベーダーや最新手口に対し、��マートキー連動や物理CANガードを組み合わせた鉄壁の布陣をご提案します。</p>",
       "items": [
         {
           "fieldId": "item",
@@ -2503,9 +2503,9 @@
     {
       "id": "land_cruiser_250",
       "createdAt": "2026-04-29T04:02:35.990Z",
-      "updatedAt": "2026-04-29T21:12:39.812Z",
+      "updatedAt": "2026-05-01T13:53:07.186Z",
       "publishedAt": "2026-04-29T04:27:31.952Z",
-      "revisedAt": "2026-04-29T21:12:39.812Z",
+      "revisedAt": "2026-05-01T13:53:07.186Z",
       "category": "LAND CRUISER 250 専用パッケージ",
       "type": [
         "security"
@@ -2543,7 +2543,7 @@
           "image": ""
         }
       ],
-      "showV2Option": false
+      "showV2Option": true
     },
     {
       "id": "land_cruiser_300",

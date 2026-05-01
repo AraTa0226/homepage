@@ -27,6 +27,7 @@ const MainPage = lazy(() => import('./pages/Home/MainPage').then(m => ({ default
 const SecurityMainPage = lazy(() => import('./pages/Home/SecurityMainPage'));
 const VehicleSecurityDetail = lazy(() => import('./pages/Security/VehicleSecurityDetail'));
 const AudioMenuDetail = lazy(() => import('./components/Menu/AudioMenuDetail').then(m => ({ default: m.AudioMenuDetail })));
+const AudioPlanDetail = lazy(() => import('./pages/Audio/AudioPlanDetail'));
 const PantheraPage = lazy(() => import('./pages/Security/PantheraPage').then(m => ({ default: m.PantheraPage })));
 const GrgoPage = lazy(() => import('./pages/Security/GrgoPage').then(m => ({ default: m.GrgoPage })));
 const GrgoV2Page = lazy(() => import('./pages/Security/GrgoV2Page').then(m => ({ default: m.GrgoV2Page })));
@@ -201,9 +202,14 @@ function AppContent() {
     if (category) {
       setSelectedCategory(category);
 
-      if (item.planName) {
-        const planItem = category.items.find(i => i.name === item.planName);
-        if (planItem) {
+      if (item.planName || item.name) {
+        const targetName = item.planName || item.name;
+        const planItem = category.items.find(i => i.name === targetName);
+        
+        if (category.type === 'audio') {
+          // For audio, always try to navigate to detail page even if strict match fails
+          navigate(`/audio/plan/${encodeURIComponent(targetName)}`);
+        } else if (planItem) {
           setSelectedPlan(planItem);
           navigate(`/security/vehicle/special#${planItem.id}`);
         } else {
@@ -310,6 +316,7 @@ function AppContent() {
           <Route path="/security/partners" element={<SecurityPartnersPage />} />
           <Route path="/security/sitemap" element={<SecuritySitemapPage />} />
           <Route path="/security/vehicle/:modelId" element={<VehicleSecurityDetail assets={assets} />} />
+          <Route path="/audio/plan/:planId" element={<AudioPlanDetail />} />
           <Route path="/partners" element={<PartnersListPage />} />
 
           {/* Legacy .html Redirects */}

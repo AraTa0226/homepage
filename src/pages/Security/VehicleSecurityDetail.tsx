@@ -1967,12 +1967,12 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                         <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-5 border border-white shadow-sm hover:shadow-md transition-shadow">
                                             <div className="flex items-center gap-2 mb-2">
                                                 <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                                                <div className="text-slate-800 text-xs font-black tracking-widest uppercase">{isAnalogKey ? 'Robust Protection' : 'Seamless Operation'}</div>
+                                                <div className="text-slate-800 text-xs font-black tracking-widest uppercase">{isAnalogKey ? 'Robust Protection' : 'Seamless Arming'}</div>
                                             </div>
                                             <div className="text-[12px] text-slate-500 font-bold leading-relaxed ml-3.5">
                                                 {isAnalogKey
                                                     ? '屈強なサイレンとセンサー構成により、強引な侵入も即座に迎撃。'
-                                                    : '純正キー操作のみで全システムが連動。'}
+                                                    : '純正キーのロック操作に連動して、確実に警戒を開始。'}
                                             </div>
                                         </div>
                                     </div>
