@@ -172,7 +172,7 @@
         },
         {
           "name": "スピーカー交換STANDARD line（10万円まで）",
-          "price": "81840",
+          "price": "104500",
           "subType": "level",
           "badge": "コスパ最強",
           "features": [
@@ -180,74 +180,7 @@
             "本格デッドニング",
             "インナーバッフル"
           ],
-          "image": "/images/Audio/standard.webp",
-          "id": "standard-line",
-          "packageDetails": {
-            "standardPrice": "117700",
-            "savings": "35860",
-            "contents": [
-              {
-                "title": "2WAYスピーカー",
-                "description": "10万円までの人気モデルから選択",
-                "icon": "Music"
-              },
-              {
-                "title": "ドアチューニングB",
-                "description": "制振材によるデッドニング施工",
-                "icon": "Zap"
-              },
-              {
-                "title": "カスタムバッフル",
-                "description": "車種専用の強固な土台製作",
-                "icon": "Layers"
-              },
-              {
-                "title": "ANG高品質ケーブル",
-                "description": "特注スピーカーケーブル(10m)",
-                "icon": "Activity"
-              },
-              {
-                "title": "取付・調整工賃",
-                "description": "プロによる精密なインストール",
-                "icon": "Wrench"
-              }
-            ],
-            "upgrades": [
-              {
-                "title": "B → Aコース",
-                "price": "+¥11,000",
-                "description": "制振材増量 & 背圧処理(フェリソニDS)"
-              },
-              {
-                "title": "B → Sコース",
-                "price": "+¥33,000",
-                "description": "最高峰マテリアル & 吸音・遮音複合"
-              }
-            ]
-          },
-          "lineup": [
-            {
-              "name": "FOCAL / PS 165 V1",
-              "price": "99000",
-              "description": "艶やかなボーカルと透明感のある高音。フランスの名門が生んだ傑作。",
-              "image": "/audio_speaker_high_end_focal_1777648200679.png",
-              "youtube": "https://youtube.com"
-            },
-            {
-              "name": "KICKER / KSS6704",
-              "price": "81840",
-              "description": "パワフルな低音とキレのあるサウンド。ロックやPOPSを楽しく。",
-              "image": "/audio_speaker_kicker_style_1777648219037.png",
-              "youtube": "https://youtube.com"
-            },
-            {
-              "name": "MOREL / MAXIMO ULTRA 602",
-              "price": "93500",
-              "description": "温かみのある自然な音色。女性ボーカルやクラシックを優雅に。",
-              "image": "/images/Audio/speaker_default.webp",
-              "youtube": "https://youtube.com"
-            }
-          ]
+          "image": "/images/Audio/standard.webp"
         },
         {
           "name": "スピーカー交換PREMIUM line（10万円以上）",
@@ -676,7 +609,7 @@
       "id": "custom_install",
       "category": "カスタムインストール・造作",
       "type": "audio",
-      "description": "音を耳で楽しむだけでなく、**匠の技**で視覚的にも美しく。**ピラー加工**や**アウターバッフル**など、世界に一台のカスタムを。",
+      "description": "音を耳で楽しむだけでなく、**匠の技**で視覚的にも美しく。**ピラー加工**や**アウター��ッフル**など、世界に一台のカスタムを。",
       "showDescriptionInMenu": true,
       "showDescriptionInList": true,
       "items": [
@@ -2552,7 +2485,7 @@
           "name": "Grgo ZVT II ＋ CANガード",
           "price": "336,600",
           "badge": "おすすめ",
-          "description": "傾斜センサーとCANガード。1WAYリモコンも付属した上位モデル。",
+          "description": "傾斜センサーとCANガード。1WAY���モコンも付属した上位モデル。",
           "triple": true,
           "tilt": true,
           "bonnet": true,

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+﻿import React, { createContext, useContext, useState, ReactNode } from 'react';
 import cmsData from '../data/cms.json';
 import { client } from '../lib/microcms';
 
@@ -33,7 +33,6 @@ export interface LineupItem {
 }
 
 export interface PlanItem {
-  id?: string;
   name: string;
   price: string;
   features: string[];
@@ -399,7 +398,7 @@ const initialPlans: PlanCategory[] = [
           savings: "16500",
           contents: [
             { title: "スピーカー", description: "17cmモデル2WAYセパレートスピーカー", icon: "Speaker" },
-            { title: "ツィーター取付", description: "純正位置もしくはダッシュボードへ置き型マウント装着", icon: "Speaker" },
+            { title: "ツィーター取付", description: "純正位置もしくはオンダッ� description: "17cmモデル2WAYスピーカー（10万円以上）", icon: "Speaker" },
             { title: "ドアチューニングBコース", description: "制振材によるドアの環境整備（通常27,500円）", icon: "Activity" },
             { title: "カスタムインナーバッフル", description: "車種に合わせた高剛性バッフル（通常11,000円）", icon: "Layers" },
             { title: "スピーカーケーブル", description: "ANGオリジナル（オーディオテクニカ製相当 10m）", icon: "Zap" },
