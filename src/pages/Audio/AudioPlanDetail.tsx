@@ -140,6 +140,7 @@ const AudioPlanDetail: React.FC = () => {
                 { title: "ドアチューニングBコース", description: "¥27,500 相当", icon: "Zap" },
                 { title: "カスタムインナーバッフル", description: "¥11,000 相当", icon: "Layers" },
                 { title: "スピーカーケーブル", description: "ANGオリジナル/10m (¥16,500 相当)", icon: "Layers" },
+                { title: "ツイーター取り付け", description: "純正位置もしくはオンダッシュ取り付け", icon: "Music" },
                 { title: "取付・調整工賃", description: "ワイヤリング込 ¥22,000 相当", icon: "Wrench" }
             ],
             upgrades: [
@@ -165,9 +166,9 @@ const AudioPlanDetail: React.FC = () => {
                 }
             ],
             notes: [
-                "車種により追加バッフルが必要な場合があります。",
-                "特殊な車両（輸入車等）は別途お見積りとなります。",
-                "純正オーディオの仕様により別途部材が必要な場合があります。"
+                "注)バッフル適合が無い車種では別途製作しますので5500円が必要です。",
+                "注）ツィーター固定にマウントなどが必要な車種では別途追加が必要になります。",
+                "注）ドア通線に加工が必要な車両(ハーネスがカプラなど)では別途加工費用がかかります。"
             ]
         },
         lineup: [
@@ -213,177 +214,186 @@ const AudioPlanDetail: React.FC = () => {
                 {/* 1. Main Catalog Page (A4 Page 1) */}
                 <div className={`${view === 'lp' ? 'block' : 'hidden'} print:block print:pt-0`}>
                     <div className="max-w-6xl mx-auto px-4 py-8 print:p-0 print:max-w-none">
-                        {/* Header Section - Compact but high impact */}
-                        <div className="text-center mb-10 print:mb-6">
-                            <div className="inline-block px-5 py-1.5 bg-blue-600 text-white rounded-full text-xs font-black tracking-[0.3em] uppercase mb-6 print:mb-2 print:bg-black print:text-[10px]">STANDARD LINE</div>
-                            
-                            <div className="relative inline-block mb-8 print:mb-2">
-                                <h1 className="text-5xl md:text-7xl font-black text-gray-900 tracking-tighter leading-tight flex flex-col items-center gap-2 print:text-4xl print:shrink-h1">
-                                    <span className="block">{(plan.name || '').split(' ')[0]}</span>
-                                    { (plan.name || '').split(' ').length > 1 && (
-                                        <span className="text-2xl md:text-3xl text-blue-600 print:text-sm tracking-widest">{(plan.name || '').split(' ').slice(1).join(' ')}</span>
-                                    )}
+                        {/* 1. Header: Brand & Store Info */}
+                        <header className="flex justify-between items-end border-b-2 border-gray-900 pb-4 mb-8 print:mb-3 print:pb-2 print:border-black">
+                            <div className="text-left">
+                                <div className="flex items-center gap-3 mb-1 print:mb-0.5">
+                                    <span className="w-8 h-[2px] bg-blue-600 print:w-4 print:h-[1px]"></span>
+                                    <p className="text-[10px] font-black tracking-[0.3em] text-blue-600 uppercase print:text-[8px] print:font-medium">
+                                        SOUND ANG
+                                    </p>
+                                </div>
+                                <h1 className="text-5xl md:text-7xl font-black text-gray-900 tracking-tighter leading-none mb-2 print:text-3xl print:mb-1">
+                                    {(plan.name || '').split(' ')[0]}
                                 </h1>
-                                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-24 h-2 bg-blue-600 rounded-full print:static print:mx-auto print:mt-2 print:translate-x-0 print:w-16 print:h-1 print:bg-black" />
+                                <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+                                    <p className="text-lg md:text-xl font-bold text-gray-500 tracking-tight print:text-[11px] print:font-medium">
+                                        スピーカー交換パッケージ
+                                    </p>
+                                    <span className="hidden md:block w-1.5 h-1.5 rounded-full bg-gray-200 print:hidden"></span>
+                                    <p className="text-sm md:text-base font-bold text-blue-500 print:text-[8px] print:font-light">
+                                        17cm 2WAY セパレート / 10万円まで
+                                    </p>
+                                </div>
                             </div>
+                        </header>
+
+                        {/* 2. Price Comparison Example Box */}
+                        <div className="bg-gray-900 text-white p-10 rounded-[3rem] mb-6 shadow-2xl shadow-blue-100 print:bg-gray-50 print:text-black print:p-5 print:rounded-xl print:mb-4 print:shadow-none print:border print:border-gray-200">
+                            <h2 className="text-2xl md:text-3xl font-black mb-10 text-center text-blue-400 print:text-[13px] print:text-black print:mb-4 print:font-bold">
+                                同じ施工内容で、35,860円違います。
+                            </h2>
                             
-                            <div className="max-w-4xl mx-auto bg-blue-50/50 p-8 rounded-[2.5rem] print:p-0 print:bg-transparent">
-                                <p className="text-lg font-black text-blue-600 mb-3 print:text-xs print:mb-1">{(plan.description || '').split('\n')[0]}</p>
-                                <p className="text-sm md:text-base font-bold text-gray-600 leading-relaxed text-left print:text-[10px] print:leading-snug">
-                                    {(plan.description || '').split('\n').length > 2 ? (plan.description || '').split('\n').slice(2).join('\n') : (plan.description || '')}
-                                </p>
+                            <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+                                {/* Left: Normal Price with Breakdown */}
+                                <div className="text-center">
+                                    <p className="text-[10px] md:text-xs font-bold tracking-widest uppercase mb-4 opacity-40 print:text-[7px] print:mb-1">通常施工（単品合計）の場合</p>
+                                    <div className="opacity-60 print:opacity-100">
+                                        <p className="text-[10px] md:text-xs font-bold mb-2 print:text-[7px] print:mb-0.5">スピーカー本体 40,700円 ＋ 施工費 77,000円</p>
+                                        <p className="text-3xl md:text-4xl font-black line-through decoration-red-500/50 decoration-4 print:text-lg print:decoration-2">
+                                            ¥117,700
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {/* Transition Label */}
+                                <div className="flex flex-col items-center gap-2 opacity-40 print:opacity-100">
+                                    <div className="hidden md:block text-4xl font-light text-gray-700 print:text-gray-300">→</div>
+                                    <p className="text-[10px] font-black tracking-tighter print:text-[7px]">パッケージなら</p>
+                                    <div className="md:hidden text-2xl opacity-40">↓</div>
+                                </div>
+
+                                {/* Right: Package Price */}
+                                <div className="text-center relative">
+                                    <p className="text-xs font-bold tracking-widest uppercase mb-4 text-blue-400 print:text-[7.5px] print:text-gray-500 print:mb-1">パッケージ価格</p>
+                                    <p className="text-5xl md:text-7xl font-black text-white print:text-3xl print:text-black leading-none tracking-tighter">
+                                        ¥81,840
+                                    </p>
+                                    <div className="absolute -top-6 -right-12 md:-right-20 bg-blue-600 text-white px-5 py-2.5 rounded-full text-xs md:text-sm font-black rotate-12 shadow-xl print:static print:rotate-0 print:bg-transparent print:text-blue-600 print:p-0 print:text-[10px] print:mt-2 print:font-bold">
+                                        35,860円おトク！
+                                    </div>
+                                </div>
                             </div>
+
+                            <p className="text-center mt-12 text-[10px] font-bold text-gray-500 print:text-[7px] print:mt-4 print:font-light">
+                                ※KICKER CSS674（40,700円）の場合
+                            </p>
                         </div>
 
-                        {/* Main Info Grid */}
-                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 print:gap-4 mb-10 print:mb-4 print:compact-gap print:grid-cols-12">
-                            {/* Left: Description & Contents */}
-                            <div className="lg:col-span-7 space-y-8 print:space-y-4 print:col-span-7">
-                                <div className="bg-gray-50 p-12 rounded-[3.5rem] border border-gray-100 print:p-6 print:rounded-3xl print:bg-white print:border-black print:border-2 print:shrink-card">
-                                    <h3 className="text-2xl font-black mb-8 flex items-center gap-3 print:text-lg print:mb-4">
-                                        <ShieldCheck className="w-8 h-8 text-blue-600 print:w-5 print:h-5" /> おトクなパッケージ構成内容
-                                    </h3>
-                                    <div className="space-y-3">
-                                        {details?.contents?.map((item: any, i: number) => (
-                                            <div key={i} className="flex justify-between items-center py-5 border-b border-gray-200 last:border-0 print:py-3 print:text-sm">
-                                                <span className="font-bold text-gray-500 text-lg print:text-xs">{item.title}</span>
-                                                <span className="font-black text-gray-900 text-xl print:text-sm">{item.description}</span>
-                                            </div>
-                                        ))}
-                                    </div>
+                        {/* Professional Advice Message */}
+                        <div className="bg-blue-50/50 border border-blue-100 p-6 rounded-[2rem] mb-10 print:bg-white print:border-gray-200 print:p-3 print:rounded-lg print:mb-6">
+                            <p className="text-sm md:text-base font-bold text-gray-600 text-center leading-relaxed print:text-[8.5px] print:font-medium">
+                                車種やご希望に合わせて最適なスピーカーをご提案します。<br className="hidden md:block" />
+                                音の好みは実際に店頭のデモ機で試聴してからお決めください。
+                            </p>
+                        </div>
 
-                                    {/* Image Gallery */}
-                                    <div className="grid grid-cols-3 gap-4 mt-10 print:mt-2">
-                                        <div className="space-y-1 text-center">
-                                            <div className="aspect-square rounded-3xl overflow-hidden border-2 border-gray-100 print:rounded-xl print:border-black print:h-20 print:w-20 mx-auto">
-                                                <SafeImage src="/images/Audio/Speaker/door-b.webp" className="w-full h-full object-cover" />
-                                            </div>
-                                            <p className="text-sm font-black text-gray-400 print:text-[8px] uppercase tracking-wider">ドアチューニング</p>
+                        {/* 3. Package Contents Grid (3 Columns) */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 print:grid-cols-3 print:gap-1.5 print:mb-4">
+                            {[
+                                { title: 'ドアチューニング', val: 'Bコース', sub: '27,500円相当', img: '/images/Audio/Speaker/door-b.webp' },
+                                { title: 'インナーバッフル', val: 'カスタム製作', sub: '11,000円相当', img: '/images/Audio/Speaker/baffle.webp' },
+                                { title: 'スピーカーケーブル', val: 'ANGオリジナル', sub: '16,500円相当', img: '/images/Audio/Speaker/ang-cable.webp' },
+                                { title: 'ツイーター取付', val: '純正 / オンダッシュ', sub: '込み' },
+                                { title: 'ワイヤリング工賃', detail: '調整込み', sub: '22,000円相当' },
+                                { title: '施工費合計', val: '77,000円', sub: 'すべて込み', highlight: true }
+                            ].map((item, i) => (
+                                <div key={i} className={`rounded-[2.5rem] border-2 overflow-hidden transition-all hover:translate-y-[-4px] ${item.highlight ? 'bg-blue-600 border-blue-500 text-white shadow-xl shadow-blue-200' : 'bg-white border-gray-100 text-gray-900 shadow-sm'} print:rounded-md print:border-[0.5px] print:translate-y-0 print:shadow-none ${item.highlight ? 'print:bg-blue-50 print:border-blue-300 print:text-blue-900' : 'print:bg-gray-50 print:border-gray-200'}`}>
+                                    {item.img && (
+                                        <div className="aspect-video bg-gray-100 overflow-hidden print:aspect-[16/9]">
+                                            <SafeImage src={item.img} className="w-full h-full object-cover" />
                                         </div>
-                                        <div className="space-y-1 text-center">
-                                            <div className="aspect-square rounded-3xl overflow-hidden border-2 border-gray-100 print:rounded-xl print:border-black print:h-20 print:w-20 mx-auto">
-                                                <SafeImage src="/images/Audio/Speaker/baffle.webp" className="w-full h-full object-cover" />
-                                            </div>
-                                            <p className="text-sm font-black text-gray-400 print:text-[8px] uppercase tracking-wider">カスタムバッフル</p>
-                                        </div>
-                                        <div className="space-y-1 text-center">
-                                            <div className="aspect-square rounded-3xl overflow-hidden border-2 border-gray-100 print:rounded-xl print:border-black print:h-20 print:w-20 mx-auto">
-                                                <SafeImage src="/images/Audio/Speaker/ang-cable.webp" className="w-full h-full object-cover" />
-                                            </div>
-                                            <p className="text-sm font-black text-gray-400 print:text-[8px] uppercase tracking-wider">高品質配線</p>
-                                        </div>
+                                    )}
+                                    <div className={`p-6 ${!item.img ? 'h-full flex flex-col justify-center' : ''} print:p-2`}>
+                                        <p className={`text-[10px] font-bold tracking-widest uppercase mb-2 ${item.highlight ? 'text-blue-200 print:text-blue-600' : 'text-gray-400'} print:text-[7.5px] print:mb-0.5 print:font-light`}>
+                                            {item.title}
+                                        </p>
+                                        <p className={`text-2xl font-black mb-1 print:text-[11px] print:font-medium print:mb-0`}>
+                                            {item.val || item.detail}
+                                        </p>
+                                        <p className={`text-xs font-bold ${item.highlight ? 'text-blue-100 print:text-blue-500' : 'text-gray-400'} print:text-[7.5px] print:font-light`}>
+                                            {item.sub}
+                                        </p>
                                     </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* 4. Notes Section */}
+                        <div className="px-6 mb-10 print:mb-4 print:px-1">
+                            <p className="text-xs font-bold text-gray-400 flex items-start gap-2 mb-1 print:text-[7.5px] print:font-light print:leading-tight">
+                                <span className="text-blue-600 print:text-gray-300">※</span> バッフル適合なし車種：別途 5,500円
+                            </p>
+                            <p className="text-xs font-bold text-gray-400 flex items-start gap-2 print:text-[7.5px] print:font-light print:leading-tight">
+                                <span className="text-blue-600 print:text-gray-300">※</span> ツイーターマウント・ドア通線加工が必要な場合：別途費用あり
+                            </p>
+                        </div>
+
+                        <hr className="border-gray-100 mb-10 print:border-gray-200 print:mb-4" />
+
+                        {/* 5. Upgrades & Options Grid (2 Columns) */}
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12 print:grid-cols-2 print:gap-4 print:mb-6">
+                            {/* Upgrade Courses */}
+                            <div>
+                                <h3 className="text-lg font-black mb-6 flex items-center gap-3 border-l-4 border-blue-600 pl-4 print:text-[9.5px] print:font-medium print:mb-2 print:pl-2">
+                                    ドアチューニング グレードアップ <span className="text-gray-400 text-xs font-bold print:text-[7.5px] print:font-light">（同時施工割引）</span>
+                                </h3>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 print:grid-cols-2 print:gap-1.5">
+                                    {(details?.upgrades?.length ? details.upgrades : [
+                                        { title: 'Aコース', description: 'フェリソニDS-1.5WP使用・制振増量', price: '+11,000円' },
+                                        { title: 'A+コース', description: 'フェリソニC2使用・制振増量', price: '+22,000円' },
+                                        { title: 'Sコース', description: 'DS-1.5WP増量＋最新マテリアル複合', price: '+33,000円' },
+                                        { title: 'S+コース', description: 'C2増量＋最高峰の制振・吸音・遮音', price: '+44,000円' }
+                                    ]).map((item: any, i: number) => (
+                                        <div key={i} className="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-all print:p-2 print:rounded-md print:border-[0.5px] print:border-gray-200 print:shadow-none">
+                                            <div className="flex justify-between items-baseline mb-2 print:mb-0.5">
+                                                <span className="font-black text-base print:text-[9px] print:font-medium">{item.title || item.name}</span>
+                                                <div className="text-right">
+                                                    <span className="text-blue-600 font-black text-base print:text-[9px] print:font-medium">{item.price}</span>
+                                                </div>
+                                            </div>
+                                            <p className="text-xs font-bold text-gray-400 print:text-[7.5px] print:font-light print:mb-0 leading-tight">
+                                                {item.description || item.spec}
+                                            </p>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
 
-                            {/* Right: Price Highlight */}
-                            <div className="lg:col-span-5 flex flex-col justify-start gap-8 print:gap-4 print:col-span-5">
-                                <div className="bg-white p-12 rounded-[4rem] shadow-2xl shadow-blue-100 border-[3px] border-blue-600 text-center relative overflow-hidden print:p-6 print:rounded-3xl print:shadow-none print:border-black print:border-4 print:shrink-card">
-                                    <div className="absolute top-0 left-0 bg-blue-600 text-white px-10 py-3 rounded-br-[2rem] font-black text-sm print:hidden tracking-widest">PRICE EXAMPLE</div>
-                                    
-                                    <div className="mb-6 bg-blue-50 py-3 rounded-2xl print:bg-transparent print:py-0">
-                                        <p className="text-blue-700 font-black text-base print:text-xs">お見積り例：KICKER CSS674 (¥40,700) の場合</p>
-                                    </div>
-
-                                    <div className="mb-8 print:mb-6">
-                                        <p className="text-gray-400 font-black text-base mb-2 print:text-xs">通常施工（単品合計）の場合</p>
-                                        <p className="text-gray-400 font-black text-3xl line-through decoration-red-500 decoration-[3px] print:text-xl italic">¥117,700 <span className="text-sm print:text-xs">(税込)</span></p>
-                                    </div>
-
-                                    <div className="mb-6 print:mb-2 print:pb-0">
-                                        <p className="text-blue-600 font-black text-lg mb-2 print:text-[10px] print:mb-0">スタンダードライン パッケージ価格</p>
-                                        <div className="flex items-baseline justify-center gap-2 print:gap-1">
-                                            <span className="text-8xl font-black text-blue-600 print:text-5xl print:text-black tracking-tighter leading-none">¥81,840</span>
-                                            <span className="text-2xl font-bold print:text-[10px]">(税込)</span>
+                            {/* Installation Options */}
+                            <div>
+                                <h3 className="text-lg font-black mb-6 flex items-center gap-3 border-l-4 border-blue-600 pl-4 print:text-[9.5px] print:font-medium print:mb-2 print:pl-2">
+                                    インストールオプション
+                                </h3>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 print:grid-cols-2 print:gap-1.5">
+                                    {[
+                                        { name: 'メタルバッフル変更', desc: 'タイトでキレのある再生へ。20% OFF', price: '20% OFF', img: '/images/Audio/Speaker/metal.webp' },
+                                        { name: 'ツイーター埋め込み', desc: '純正のような美しい仕上がりへ', price: '46,200円〜', img: '/images/Audio/Speaker/tw-mount.webp' }
+                                    ].map((item, i) => (
+                                        <div key={i} className="bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-all overflow-hidden print:p-0 print:rounded-md print:border-[0.5px] print:border-gray-200 print:shadow-none">
+                                            <div className="aspect-video bg-gray-100 overflow-hidden">
+                                                <SafeImage src={item.img} className="w-full h-full object-cover" />
+                                            </div>
+                                            <div className="p-6 print:p-2">
+                                                <div className="flex justify-between items-baseline mb-1 print:mb-0.5">
+                                                    <span className="font-black text-base print:text-[9px] print:font-medium">{item.name}</span>
+                                                    <span className="text-blue-600 font-black text-base print:text-[9px] print:font-medium">{item.price}</span>
+                                                </div>
+                                                <p className="text-xs font-bold text-gray-400 print:text-[7.5px] print:font-light leading-tight">{item.desc}</p>
+                                            </div>
                                         </div>
-                                        <p className="text-gray-400 font-bold text-xs mt-3 print:text-[7px] print:mt-1 leading-tight">※選ぶスピーカーによりパッケージ総額は変動します。<br className="hidden print:block" />詳しくはお見積りください。</p>
-                                    </div>
-
-                                    <div className="bg-gray-900 text-white p-6 rounded-3xl print:bg-black print:p-2.5 print:rounded-xl">
-                                        <div className="flex items-center justify-center gap-4 mb-1 print:gap-2">
-                                            <Zap className="w-8 h-8 text-yellow-400 print:w-4 print:h-4" />
-                                            <p className="text-sm font-black opacity-70 print:text-[8px]">この組み合わせなら単品合計より</p>
-                                        </div>
-                                        <p className="font-black text-4xl print:text-xl tracking-tight">¥35,860 <span className="text-xl print:text-sm">おトク！</span></p>
-                                    </div>
-                                </div>
-
-                                <div className="space-y-4 px-6 print:px-2">
-                                    <p className="text-sm font-black text-blue-600 mb-2 print:text-[9px] tracking-wider">【 ご確認事項 】</p>
-                                    {details?.notes?.map((note: string, i: number) => (
-                                        <p key={i} className="text-sm text-gray-500 font-bold flex items-start gap-3 print:text-[8px] print:leading-snug">
-                                            <span className="text-blue-600 shrink-0 mt-1">●</span> {note}
-                                        </p>
                                     ))}
                                 </div>
                             </div>
                         </div>
 
-                        {/* Unified Upgrade Menu Section - Large Horizontal Card */}
-                        <div className="bg-gray-900 text-white p-12 rounded-[4rem] print:p-2 print:rounded-2xl print:bg-white print:text-black print:border-[1.5px] print:border-black print:mt-1 print:shrink-card">
-                            <h3 className="text-3xl font-black mb-10 flex items-center gap-4 print:text-base print:m-0 print:mb-1 text-blue-400 print:text-black">
-                                <Volume2 className="w-10 h-10 print:hidden" /> オトクなアップグレード・オプション
-                            </h3>
-
-                            <div className="xl:grid xl:grid-cols-12 gap-12 print-flex-container">
-                                {/* 1. Door Tuning Upgrades */}
-                                <div className="xl:col-span-7 print-flex-left">
-                                    <h4 className="text-sm font-black text-blue-400 mb-6 print:text-[8.5px] print:m-0 print:mb-0.5 tracking-[0.2em] uppercase print:text-black">■ ドアチューニング・コース変更</h4>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 print:gap-1.5">
-                                        {details?.upgrades?.map((opt: any, i: number) => (
-                                            <div key={i} className="bg-white/5 p-6 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors print:bg-white print:border-gray-200 print:p-1.5 print:rounded-lg">
-                                                <div className="flex justify-between items-center mb-0.5">
-                                                    <span className="font-black text-lg print:text-[9.5px]">{opt.title}</span>
-                                                    <span className="font-black text-blue-400 print:text-black text-lg print:text-[9.5px]">{opt.price}</span>
-                                                </div>
-                                                <p className="text-sm text-gray-400 font-bold leading-snug print:text-[7.5px] print:text-gray-500 print:leading-tight">{opt.description}</p>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-
-                                {/* 2. Hardware & Installation Upgrades */}
-                                <div className="xl:col-span-5 space-y-6 print:space-y-0 print-flex-right">
-                                    <h4 className="text-sm font-black text-blue-400 mb-6 print:text-[8.5px] print:m-0 print:mb-0.5 tracking-[0.2em] uppercase print:text-black">■ インストール・オプション</h4>
-                                    
-                                    <div className="grid grid-cols-1 print:grid-cols-1 gap-4 print:gap-1">
-                                        {/* Metal Baffle Sub-card */}
-                                        <div className="flex bg-white/5 rounded-3xl overflow-hidden border border-white/10 print:bg-white print:border-gray-200 print:rounded-lg">
-                                            <div className="w-32 shrink-0 print:w-20 bg-gray-100">
-                                                <SafeImage src="/images/Audio/Speaker/metal.webp" className="w-full h-full object-cover" />
-                                            </div>
-                                            <div className="p-6 print:p-4 flex-grow flex flex-col justify-center">
-                                                <div className="flex justify-between items-center mb-1">
-                                                    <span className="font-black text-sm print:text-[11px]">メタルバッフル変更</span>
-                                                    <span className="text-blue-400 font-black text-sm print:text-[11px] print:text-black">20% OFF</span>
-                                                </div>
-                                                <p className="text-[11px] text-gray-400 font-bold leading-tight print:text-[9.5px] print:text-gray-500">同時施工でおトク。タイトでキレのある再生へ。</p>
-                                            </div>
-                                        </div>
-
-                                        {/* Tweeter Sub-card */}
-                                        <div className="flex bg-white/5 rounded-3xl overflow-hidden border border-white/10 print:bg-white print:border-gray-200 print:rounded-lg">
-                                            <div className="w-32 shrink-0 print:w-20 bg-gray-100">
-                                                <SafeImage src="/images/Audio/Speaker/tw-mount.webp" className="w-full h-full object-cover" />
-                                            </div>
-                                            <div className="p-6 print:p-4 flex-grow flex flex-col justify-center">
-                                                <div className="flex justify-between items-center mb-1">
-                                                    <span className="font-black text-sm print:text-[11px]">ツィーター埋め込み</span>
-                                                    <span className="text-blue-400 font-black text-sm print:text-[11px] print:text-black">¥46,200〜</span>
-                                                </div>
-                                                <p className="text-[11px] text-gray-400 font-bold leading-tight print:text-[9.5px] print:text-gray-500">純正のような美しい仕上がりで理想の音場へ。</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                        {/* 6. Footer: Store badges & Contact */}
+                        <footer className="flex flex-col md:flex-row justify-between items-center border-t-2 border-gray-900 pt-8 mt-12 print:mt-auto print:pt-3 print:border-gray-200 print:flex-row print:items-end">
+                            <div className="flex gap-4 mb-6 md:mb-0 print:mb-0 print:gap-2">
+                                <div className="bg-gray-900 text-white px-6 py-2 rounded-xl text-xs font-black tracking-widest print:bg-black print:px-3 print:py-1 print:text-[7.5px] print:rounded-sm">作業1日お預かり</div>
+                                <div className="bg-gray-900 text-white px-6 py-2 rounded-xl text-xs font-black tracking-widest print:bg-black print:px-3 print:py-1 print:text-[7.5px] print:rounded-sm">無料代車完備</div>
                             </div>
-                        </div>
-
-                        {/* Work Info */}
-                        <div className="mt-12 flex justify-center gap-16 print:mt-2 print:gap-10 text-gray-400 print:text-black">
-                            <div className="flex items-center gap-4 font-black text-lg print:text-[10px] print:gap-2"><Clock className="w-8 h-8 text-blue-600 print:w-4 print:h-4" /> 作業1日お預かり</div>
-                            <div className="flex items-center gap-4 font-black text-lg print:text-[10px] print:gap-2"><Car className="w-8 h-8 text-blue-600 print:w-4 print:h-4" /> 無料代車完備</div>
-                        </div>
+                        </footer>
                     </div>
                 </div>
 

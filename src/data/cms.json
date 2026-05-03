@@ -609,7 +609,7 @@
       "id": "custom_install",
       "category": "カスタムインストール・造作",
       "type": "audio",
-      "description": "音を耳で楽しむだけでなく、**匠の技**で視覚的にも美しく。**ピラー加工**や**アウター��ッフル**など、世界に一台のカスタムを。",
+      "description": "音を耳で楽しむだけでなく、**匠の技**で視覚的にも美しく。**ピラー加工**や**アウター���ッフル**など、世界に一台のカスタムを。",
       "showDescriptionInMenu": true,
       "showDescriptionInList": true,
       "items": [
@@ -2485,7 +2485,7 @@
           "name": "Grgo ZVT II ＋ CANガード",
           "price": "336,600",
           "badge": "おすすめ",
-          "description": "傾斜センサーとCANガード。1WAY���モコンも付属した上位モデル。",
+          "description": "傾斜センサーとCANガード。1WAYリモコンも付属した上位モデル。",
           "triple": true,
           "tilt": true,
           "bonnet": true,
