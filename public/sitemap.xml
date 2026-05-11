@@ -3,13 +3,13 @@
   <!-- Main Pages -->
   <url>
     <loc>http://www.sec-ang.com/</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://www.sec-ang.com/security-home</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -17,25 +17,25 @@
   <!-- Security Brand Pages -->
   <url>
     <loc>http://www.sec-ang.com/security/panthera</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://www.sec-ang.com/security/grgo</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://www.sec-ang.com/security/viper</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://www.sec-ang.com/security/clifford</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -43,19 +43,19 @@
   <!-- Special Attack Countermeasures -->
   <url>
     <loc>http://www.sec-ang.com/security/relay-attack</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://www.sec-ang.com/security/can-invader</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://www.sec-ang.com/security/key-emulator</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -63,25 +63,25 @@
   <!-- Peripheral Devices -->
   <url>
     <loc>http://www.sec-ang.com/security/drive_recorder</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://www.sec-ang.com/security/radar</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sec-ang.com/security/digital_mirror</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sec-ang.com/security/okizariboushi</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -89,31 +89,37 @@
   <!-- Service & Support -->
   <url>
     <loc>http://www.sec-ang.com/security/maintain</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>http://www.sec-ang.com/security/knowledge</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>http://www.sec-ang.com/faq</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://www.sec-ang.com/security/partners</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sec-ang.com/security/sitemap</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://www.sec-ang.com/reservation</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -121,92 +127,92 @@
   <!-- Vehicle Specific Security Pages -->
   <url>
     <loc>http://www.sec-ang.com/security/vehicle/toyota-landcruiser-300</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://www.sec-ang.com/security/vehicle/toyota-landcruiser-250</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://www.sec-ang.com/security/vehicle/toyota-landcruiser-70</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://www.sec-ang.com/security/vehicle/toyota-landcruiser-prado-150-200</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://www.sec-ang.com/security/vehicle/lexus-lx</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://www.sec-ang.com/security/vehicle/lexus-gx550</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://www.sec-ang.com/security/vehicle/lexus-rx</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://www.sec-ang.com/security/vehicle/lexus-nx</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://www.sec-ang.com/security/vehicle/lexus-lbx</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://www.sec-ang.com/security/vehicle/toyota-alphard-vellfire</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://www.sec-ang.com/security/vehicle/toyota-harrier</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://www.sec-ang.com/security/vehicle/toyota-prius</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://www.sec-ang.com/security/vehicle/toyota-crown</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://www.sec-ang.com/security/vehicle/toyota-hiace</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://www.sec-ang.com/security/vehicle/honda-civic-typer</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://www.sec-ang.com/security/vehicle/suzuki-jimny</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://www.sec-ang.com/security/vehicle/kcar-special</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://www.sec-ang.com/security/vehicle/special-model</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <priority>0.6</priority>
   </url>
 </urlset>
