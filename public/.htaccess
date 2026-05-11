@@ -10,7 +10,7 @@
   RewriteRule ^index\.html$ / [R=301,L]
   RewriteRule ^security\.html$ /security-home [R=301,L]
   RewriteRule ^silent-sec\.html$ /security-home [R=301,L]
-  RewriteRule ^rader-drrec\.html$ /security/radar [R=301,L]
+  RewriteRule ^rader-drrec\.html$ /security/drive_recorder [R=301,L]
   RewriteRule ^shop\.html$ / [R=301,L]
   RewriteRule ^contactus\.html$ /reservation [R=301,L]
   RewriteRule ^reservation\.html$ /reservation [R=301,L]
