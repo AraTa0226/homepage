@@ -1,0 +1,49 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # ----------------------------------------------------------------------------
+  # 以前のサイト (.html) からの新サイトへのリダイレクト (301)
+  # ----------------------------------------------------------------------------
+  
+  # メイン・基本ページ
+  RewriteRule ^index\.html$ / [R=301,L]
+  RewriteRule ^security\.html$ /security-home [R=301,L]
+  RewriteRule ^silent-sec\.html$ /security-home [R=301,L]
+  RewriteRule ^rader-drrec\.html$ /security/radar [R=301,L]
+  RewriteRule ^shop\.html$ / [R=301,L]
+  RewriteRule ^contactus\.html$ /reservation [R=301,L]
+  RewriteRule ^reservation\.html$ /reservation [R=301,L]
+  RewriteRule ^maintain\.html$ /security/maintain [R=301,L]
+  RewriteRule ^sec-sample\.html$ /security/knowledge [R=301,L]
+  RewriteRule ^camp-eventINFO\.html$ /audio [R=301,L]
+  RewriteRule ^link\.html$ / [R=301,L]
+
+  # 車種別ページ (Security)
+  RewriteRule ^landcruiser300-security\.html$ /security/vehicle/toyota-landcruiser-300 [R=301,L]
+  RewriteRule ^landcruiser250-security\.html$ /security/vehicle/toyota-landcruiser-250 [R=301,L]
+  RewriteRule ^landcruiser70-security\.html$ /security/vehicle/toyota-landcruiser-70 [R=301,L]
+  RewriteRule ^landcruiser-security\.html$ /security/vehicle/toyota-landcruiser-300 [R=301,L]
+  RewriteRule ^LX600-security\.html$ /security/vehicle/lexus-lx [R=301,L]
+  RewriteRule ^RX-security\.html$ /security/vehicle/lexus-rx [R=301,L]
+  RewriteRule ^NX-security\.html$ /security/vehicle/lexus-nx [R=301,L]
+  RewriteRule ^harrier-security\.html$ /security/vehicle/toyota-harrier [R=301,L]
+  RewriteRule ^prius-security\.html$ /security/vehicle/toyota-prius [R=301,L]
+  RewriteRule ^hiace-security\.html$ /security/vehicle/toyota-hiace [R=301,L]
+  RewriteRule ^arver-security\.html$ /security/vehicle/toyota-alphard-vellfire [R=301,L]
+  RewriteRule ^civicfl5-security\.html$ /security/vehicle/honda-civic-typer [R=301,L]
+  RewriteRule ^jimny-security\.html$ /security/vehicle/suzuki-jimny [R=301,L]
+  RewriteRule ^keicar-security\.html$ /security/vehicle/kcar-special [R=301,L]
+
+  # 置き去り防止
+  RewriteRule ^okizariboushi\.html$ /security/okizariboushi [R=301,L]
+  RewriteRule ^okizari-k\.html$ /security/okizariboushi [R=301,L]
+  RewriteRule ^okizari-p\.html$ /security/okizariboushi [R=301,L]
+
+  # ----------------------------------------------------------------------------
+  # React SPA 用のルーティング設定 (物理ファイルがない場合は index.html へ)
+  # ----------------------------------------------------------------------------
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
