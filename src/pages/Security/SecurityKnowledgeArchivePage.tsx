@@ -16,6 +16,16 @@ const SecurityKnowledgeArchivePage: React.FC = () => {
     const { securityKnowledge } = usePrices();
     const theftMethods = securityKnowledge?.theftMethods || [];
 
+    // SEO Metadata
+    React.useEffect(() => {
+        document.title = "盗難手口・セキュリティー対策一覧 | ANG KNOWLEDGE";
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+            metaDescription.setAttribute('content', "最新の盗難手口（リレーアタック、CANインベーダー、キーエミュレーター等）とその対策方法を一覧で解説。大切な愛車を守るための最新ナレッジを公開しています。");
+        }
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div className="min-h-screen bg-[#050807] text-white font-sans selection:bg-emerald-500/30 selection:text-emerald-900">
             {/* Header */}

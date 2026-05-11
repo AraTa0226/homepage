@@ -16,6 +16,18 @@ const SecurityKnowledgeDetailPage: React.FC = () => {
     const { securityKnowledge } = usePrices();
     
     const article = securityKnowledge?.theftMethods?.find((m: any) => m.slug === slug);
+    
+    // SEO Metadata
+    React.useEffect(() => {
+        if (article) {
+            document.title = `${article.title} | ANG KNOWLEDGE`;
+            const metaDescription = document.querySelector('meta[name="description"]');
+            if (metaDescription && article.description) {
+                metaDescription.setAttribute('content', article.description);
+            }
+        }
+        window.scrollTo(0, 0);
+    }, [article]);
 
     if (!article) {
         return (
