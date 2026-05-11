@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowUpRight } from 'lucide-react';
 import { SafeImage } from './ui/SafeImage';
+import { usePrices } from '../contexts/PriceContext';
 
 interface VaultGridProps {
     categories: any[];
@@ -12,17 +13,25 @@ interface VaultGridProps {
 }
 
 export const VaultGrid: React.FC<VaultGridProps> = ({ categories, onCategoryClick, theme, handleMenuClick, isMegaMenu }) => {
+    const priceContext = usePrices();
+    const securityData = priceContext?.securityData || { vehicles: {} };
+    const findSlugByFlexibleName = priceContext?.findSlugByFlexibleName;
+    const vehicles = securityData.vehicles || {};
+
     return (
         <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-auto ${isMegaMenu ? 'max-w-6xl mx-auto p-8 bg-white/95 backdrop-blur-xl rounded-[3rem] shadow-2xl border border-gray-100' : ''}`}>
-            {categories.map((cat: any, i: number) => (
+            {(Array.isArray(categories) ? categories : []).map((cat: any, i: number) => (
                 <motion.div
                     key={cat.id}
                     id={cat.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.1 }}
-                    onClick={() => cat.id !== 'security_full' && onCategoryClick(cat)}
-                    className={`group relative rounded-[2.5rem] overflow-hidden ${cat.id !== 'security_full' ? 'cursor-pointer' : ''} shadow-2xl border border-white/10 w-full transition-all duration-500 ${cat.gridClass || "col-span-1"
+                    onClick={() => {
+                        const isGrouping = cat.groups || ['security_car', 'security_options', 'maintenance', 'security_full'].includes(cat.id);
+                        if (!isGrouping) onCategoryClick(cat);
+                    }}
+                    className={`group relative rounded-[2.5rem] overflow-hidden ${(cat.groups || ['security_car', 'security_options', 'maintenance', 'security_full'].includes(cat.id)) ? '' : 'cursor-pointer'} shadow-2xl border border-white/10 w-full transition-all duration-500 ${cat.gridClass || "col-span-1"
                         } h-full min-h-[320px]`}
                 >
                     {/* Background Image */}
@@ -50,7 +59,7 @@ export const VaultGrid: React.FC<VaultGridProps> = ({ categories, onCategoryClic
                         </h3>
 
                         {/* Standard Items or Groups */}
-                        {cat.groups ? (
+                        {(cat && Array.isArray(cat.groups)) ? (
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10 flex-grow pb-6">
                                 {cat.groups.map((group: any, gIdx: number) => (
                                     <div key={gIdx} className="space-y-4">
@@ -61,22 +70,28 @@ export const VaultGrid: React.FC<VaultGridProps> = ({ categories, onCategoryClic
                                             </span>
                                         </div>
                                         <div className="grid grid-cols-1 gap-2">
-                                            {group.items.map((item: string, j: number) => (
-                                                <div
-                                                    key={j}
-                                                    onClick={(e) => {
-                                                        e.stopPropagation();
-                                                        handleMenuClick({ id: cat.id, name: item });
-                                                    }}
-                                                    className={`flex items-center justify-between text-xs md:text-sm font-bold px-5 py-3 rounded-xl border transition-all hover:translate-x-1 ${theme === 'dark'
-                                                        ? 'bg-white/5 border-white/10 text-white/90 hover:bg-white/10 hover:text-emerald-400 hover:border-emerald-500/30'
-                                                        : 'bg-white border-gray-100 text-gray-700 hover:shadow-md hover:text-blue-600 hover:border-blue-500/30'
-                                                        } ${item.includes('相談') ? 'bg-emerald-50/50 border-emerald-100 text-emerald-700 font-black' : ''}`}
-                                                >
-                                                    <span className="truncate">{item}</span>
-                                                    <ArrowUpRight className="w-3.5 h-3.5 opacity-30" />
-                                                </div>
-                                            ))}
+                                             {(group && Array.isArray(group.items)) && group.items.map((item: string, j: number) => {
+                                                const slug = (typeof item === 'string' && findSlugByFlexibleName) ? findSlugByFlexibleName(item) : null;
+                                                const vehicleData = slug ? vehicles[slug] : null;
+                                                const displayName = vehicleData?.name || item;
+                                                
+                                                return (
+                                                    <div
+                                                        key={j}
+                                                        onClick={(e) => {
+                                                            e.stopPropagation();
+                                                            handleMenuClick({ id: cat.id, name: item });
+                                                        }}
+                                                        className={`flex items-center justify-between text-xs md:text-sm font-bold px-5 py-3 rounded-xl border transition-all hover:translate-x-1 ${theme === 'dark'
+                                                            ? 'bg-white/5 border-white/10 text-white/90 hover:bg-white/10 hover:text-emerald-400 hover:border-emerald-500/30'
+                                                            : 'bg-white border-gray-100 text-gray-700 hover:shadow-md hover:text-blue-600 hover:border-blue-500/30'
+                                                            } ${(typeof item === 'string' && item.includes('相談')) ? 'bg-emerald-50/50 border-emerald-100 text-emerald-700 font-black' : ''}`}
+                                                    >
+                                                        <span className="truncate">{displayName}</span>
+                                                        <ArrowUpRight className="w-3.5 h-3.5 opacity-30" />
+                                                    </div>
+                                                );
+                                            })}
                                         </div>
                                     </div>
                                 ))}
@@ -90,52 +105,17 @@ export const VaultGrid: React.FC<VaultGridProps> = ({ categories, onCategoryClic
                                     </span>
                                 </div>
                                 <div className="space-y-3">
-                                    {cat.items?.map((item: string, j: number) => (
+                                    {(cat && Array.isArray(cat.items)) && cat.items.map((item: string, j: number) => (
                                         <div
                                             key={j}
                                             onClick={(e) => {
                                                 e.stopPropagation();
-                                                const planMapping: Record<string, any> = {
-                                                    "BASIC line (コアキシャル)": { id: "speaker_package", planId: "basic-coaxial" },
-                                                    "BASIC line (セパレート)": { id: "speaker_package", planId: "basic-separate" },
-                                                    "STANDARD line (10万円まで)": { id: "speaker_package", planId: "standard-line" },
-                                                    "PREMIUM line (10万円以上)": { id: "speaker_package", planId: "premium-line" },
-                                                    "フロント3WAYセット": { id: "speaker_package", planId: "front-3way" },
-                                                    "BMW専用パッケージ": { id: "speaker_package", planId: "bmw-package" },
-                                                    "Mercedes Benz専用パッケージ": { id: "speaker_package", planId: "mercedes-package" },
-                                                    "車種別スピーカー交換プラン": { id: "speaker_package", planId: "model-specific" },
-                                                    "AMP内蔵DSPパッケージ": { id: "digital_source", planId: "amplified-dsp" },
-                                                    "AMPレスDSPパッケージ": { id: "digital_source", planId: "standalone-dsp" },
-                                                    "アンプインスト・パッケージ": { id: "bass_power", planId: "amp-package" },
-                                                    "省スペース小型アンプ": { id: "bass_power", planId: "compact-amp" },
-                                                    "お手軽低音増強 (パワード)": { id: "bass_power", planId: "easy-bass" },
-                                                    "お手軽低音増強＋ (アンプ別)": { id: "bass_power", planId: "easy-bass-plus" },
-                                                    "サイバーナビ・プラン": { id: "digital_source", planId: "cybernavi" },
-                                                    "ドアチューニング (デッドニング)": { id: "install_tuning", planId: "door-tuning" },
-                                                    "サイレントチューニング (静音)": { id: "install_tuning", planId: "silent-tuning" },
-                                                    "電源強化 / バッ直施工": { id: "install_tuning", planId: "power-upgrade" },
-                                                    "カスタムインストール": { id: "custom_install", planId: "custom-install" },
-                                                    "ツィーターCOOLマウント": { id: "custom_install", planId: "tw-mount" },
-                                                    "オリジナルアウターバッフル": { id: "custom_install", planId: "outer-baffle" },
-                                                    "Panthera (パンテーラ) Z-Series": { id: "security_panthera" },
-                                                    "Grgo (ゴルゴ) V2": { id: "security_grgo_v2" },
-                                                    "Grgo (ゴルゴ) VⅡ": { id: "security_grgo" },
-                                                    "Relay Attack Defense": { id: "security_relay_attack" },
-                                                    "リレーアタック対策": { id: "security_relay_attack" },
-                                                    "一瞬で盗まれる『リレーアタック』の手口": { id: "security_relay_attack" },
-                                                    "最新手口『CANインベーダー』の実態": { id: "security_can_invader" },
-                                                    "最凶の次世代手口『キーエミュレーター』": { id: "security_key_emulator" },
-                                                    "CANインベーダー対策": { id: "security_can_invader" },
-                                                    "Viper (バイパー)": { id: "security_viper" },
-                                                    "Clifford (クリフォード)": { id: "security_clifford" },
-                                                    "ドライブレコーダー": { id: "dashcam" },
-                                                    "レーダー探知機": { id: "security_radar" },
-                                                    "デジタルインナーミラー": { id: "digital_mirror", path: "/security/digital_mirror" },
-                                                    "送迎バス 置き去り防止支援装置": { id: "security_okizariboushi", path: "/security/okizariboushi" },
-                                                    "店内の常時試聴ユニット": { id: "audition-showcase", isAnchor: true },
-                                                    "施工ブログ / 店舗詳細": { id: "contact", isAnchor: true }
+                                                const isGrouping = cat.groups || ['security_car', 'security_options', 'maintenance', 'security_full'].includes(cat.id);
+                                                const target = { 
+                                                    id: cat.id, 
+                                                    name: item, 
+                                                    path: isGrouping ? undefined : cat.path 
                                                 };
-                                                const target = { ...(planMapping[item] || { id: cat.id }), name: item };
                                                 handleMenuClick(target);
                                             }}
                                             className={`flex items-center justify-between text-xs md:text-sm font-black transition-all hover:translate-x-2 px-6 py-3.5 rounded-xl backdrop-blur-md border shadow-sm ${theme === 'dark'

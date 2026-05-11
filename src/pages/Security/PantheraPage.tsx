@@ -159,6 +159,13 @@ export const PantheraPage: React.FC = () => {
                             <div key={item.id} className="group relative bg-[#0c1218] border border-white/5 rounded-[3.5rem] p-12 hover:border-blue-500/30 transition-all overflow-hidden flex flex-col items-center text-center">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/5 blur-[60px] group-hover:bg-blue-600/10 transition-all"></div>
                                 <div className="space-y-8 relative z-10 w-full">
+                                    <div className="w-full h-40 mb-4">
+                                        <SafeImage
+                                            src={item.image}
+                                            className="w-full h-full object-contain filter group-hover:scale-110 transition-transform duration-500"
+                                            alt={item.name}
+                                        />
+                                    </div>
                                     <div className="space-y-2">
                                         <span className="text-[10px] font-black text-blue-500 uppercase tracking-widest bg-blue-600/10 px-4 py-1 rounded-full inline-block mb-4">{item.label}</span>
                                         <h4 className="text-4xl font-black italic tracking-tighter text-white">{item.name}</h4>
@@ -166,8 +173,8 @@ export const PantheraPage: React.FC = () => {
                                     <div className="h-1 w-12 bg-blue-600 mx-auto rounded-full"></div>
                                     <p className="text-xs text-gray-500 font-bold leading-relaxed min-h-[3em]">{item.desc}</p>
                                     <div className="pt-4">
-                                        <div className="w-16 h-16 rounded-3xl bg-white/5 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all text-gray-500 mx-auto shadow-2xl">
-                                            <Shield className="w-6 h-6" />
+                                        <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all text-gray-500 mx-auto shadow-2xl">
+                                            <Shield className="w-5 h-5" />
                                         </div>
                                     </div>
                                 </div>
@@ -202,12 +209,13 @@ export const PantheraPage: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="relative aspect-square rounded-[4rem] bg-white/5 border border-white/5 p-12 overflow-hidden flex items-center justify-center group">
-                            <SafeImage src="/images/Security/model/panthera.webp" className="w-full h-auto transform group-hover:scale-110 transition-transform duration-1000 opacity-60" />
-                            <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="text-center space-y-4">
-                                    <ShieldCheck className="w-20 h-20 text-blue-500 mx-auto drop-shadow-[0_0_30px_rgba(37,99,235,0.5)]" />
-                                    <span className="text-[10px] font-black tracking-[0.3em] text-white/50 uppercase">Full Professional Spec</span>
+                        <div className="relative aspect-square rounded-[4rem] bg-[#0c1218] border border-white/5 p-12 overflow-hidden flex items-center justify-center group">
+                            <SafeImage src="/images/Security/model/panthera.webp" className="w-full h-auto transform group-hover:scale-110 transition-transform duration-1000" />
+                            <div className="absolute inset-0 bg-blue-600/5 group-hover:bg-transparent transition-colors duration-1000"></div>
+                            <div className="absolute top-10 right-10">
+                                <div className="text-right space-y-2">
+                                    <ShieldCheck className="w-12 h-12 text-blue-500 ml-auto drop-shadow-[0_0_30px_rgba(37,99,235,0.5)]" />
+                                    <span className="text-[10px] font-black tracking-[0.3em] text-white/50 uppercase block">Full Professional Spec</span>
                                 </div>
                             </div>
                         </div>
@@ -272,8 +280,15 @@ export const PantheraPage: React.FC = () => {
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="bg-[#0c1218] border border-white/5 rounded-[4.5rem] p-16 space-y-10 group hover:border-blue-500/20 transition-all"
+                            className="bg-[#0c1218] border border-white/5 rounded-[4.5rem] p-16 space-y-10 group hover:border-blue-500/20 transition-all flex flex-col"
                         >
+                            <div className="w-full h-48 mb-4">
+                                <SafeImage
+                                    src="/images/Security/model/panthera.webp"
+                                    className="w-full h-full object-contain filter group-hover:scale-105 transition-transform duration-500"
+                                    alt="Z306"
+                                />
+                            </div>
                             <div className="space-y-4">
                                 <span className="text-blue-500 font-black tracking-[0.4em] uppercase text-[10px]">High Spec Model</span>
                                 <h4 className="text-4xl font-black italic text-white tracking-tighter">Z306</h4>
@@ -282,7 +297,7 @@ export const PantheraPage: React.FC = () => {
                                     異常時にはハザード点滅と大音量ハイパワーサイレンで威嚇します。
                                 </p>
                             </div>
-                            <ul className="space-y-4 pt-12 border-t border-white/5">
+                            <ul className="space-y-4 pt-12 border-t border-white/5 mt-auto">
                                 {["デジタル傾斜センサ標準", "トリプルセンサ標準", "アンサーバックリモコン", "2ポイントイモビライザ"].map((li, i) => (
                                     <li key={i} className="flex items-center gap-3 text-xs font-black text-gray-300">
                                         <CheckCircle2 className="w-4 h-4 text-blue-500" />
@@ -296,8 +311,15 @@ export const PantheraPage: React.FC = () => {
                             initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="bg-[#0c1218] border border-white/5 rounded-[4.5rem] p-16 space-y-10 group hover:border-blue-500/20 transition-all"
+                            className="bg-[#0c1218] border border-white/5 rounded-[4.5rem] p-16 space-y-10 group hover:border-blue-500/20 transition-all flex flex-col"
                         >
+                            <div className="w-full h-48 mb-4">
+                                <SafeImage
+                                    src="/images/Security/model/panthera.webp"
+                                    className="w-full h-full object-contain filter group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
+                                    alt="Z106"
+                                />
+                            </div>
                             <div className="space-y-4">
                                 <span className="text-blue-500 font-black tracking-[0.4em] uppercase text-[10px]">Basic Model</span>
                                 <h4 className="text-4xl font-black italic text-white tracking-tighter">Z106</h4>
@@ -306,7 +328,7 @@ export const PantheraPage: React.FC = () => {
                                     ドア/ボンネット/トランク全開放検知、2ポイントイモビライザなど、Pantheraの基本性能を凝縮。
                                 </p>
                             </div>
-                            <ul className="space-y-4 pt-12 border-t border-white/5">
+                            <ul className="space-y-4 pt-12 border-t border-white/5 mt-auto">
                                 {["ショックセンサ標準", "2ポイントイモビライザ", "電圧低下検知機能", "カメラ録画連携対応"].map((li, i) => (
                                     <li key={i} className="flex items-center gap-3 text-xs font-black text-gray-300">
                                         <CheckCircle2 className="w-4 h-4 text-blue-500" />

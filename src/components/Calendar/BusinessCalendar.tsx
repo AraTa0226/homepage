@@ -11,7 +11,7 @@ import {
   Phone,
   Mail
 } from 'lucide-react';
-import { useCalendar } from '../../contexts/CalendarContext';
+import { usePrices } from '../../contexts/PriceContext';
 import { useNavigate } from 'react-router-dom';
 
 const LineIcon = ({ className }: { className?: string }) => (
@@ -31,11 +31,10 @@ const DEFAULT_WEEKLY_HOLIDAYS = [2, 5]; // 0:日, 1:月, 2:火, 3:水, 4:木, 5:
 interface BusinessCalendarProps {
   theme?: 'light' | 'dark';
 }
-
 export const BusinessCalendar: React.FC<BusinessCalendarProps> = ({ theme = 'light' }) => {
   const navigate = useNavigate();
   const [viewDate, setViewDate] = useState(new Date());
-  const { holidays } = useCalendar();
+  const { holidays } = usePrices();
 
   const isDark = theme === 'dark';
 
@@ -51,7 +50,7 @@ export const BusinessCalendar: React.FC<BusinessCalendarProps> = ({ theme = 'lig
   const month = viewDate.getMonth();
   const daysInMonth = new Date(year, month + 1, 0).getDate();
   const firstDayOfMonth = new Date(year, month, 1).getDay();
-  const monthKey = `${year}-${month + 1}`;
+  const monthKey = `${year}-${String(month + 1).padStart(2, '0')}`;
 
   const accentColor = isDark ? 'emerald' : 'blue';
   const secondaryAccent = isDark ? 'emerald' : 'red';

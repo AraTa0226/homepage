@@ -17,6 +17,7 @@ import {
     Settings
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { usePrices } from '../../contexts/PriceContext';
 
 interface FAQ {
     question: string;
@@ -36,44 +37,14 @@ const FAQPage: React.FC = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const faqs: FAQ[] = [
-        {
-            category: "機能・仕様",
-            question: "スマートキー連動は可能ですか？",
-            answer: "はい、多くの最新車両で可能です。ただし、リレーアタックやCANインベーダー等の最新手口を防ぐためには、純正スマートキーとは別にセキュリティー専用のキーでの認証を組み合わせるプランを推奨しております。"
-        },
-        {
-            category: "機能・仕様",
-            question: "車検は通りますか？",
-            answer: "当店で取り扱っているセキュリティーはすべて保安基準に適合した製品です。正しく施工されていれば車検に通りますのでご安心ください。"
-        },
-        {
-            category: "導入・施工",
-            question: "取り付けにかかる時間はどのくらいですか？",
-            answer: "車種やプランにより異なりますが、標準的なセキュリティーで2〜3日、フルオプションやオーディオ施工が加わる場合は1週間から10日前後お預かりするケースが多いです。代車の貸し出しも行っております。"
-        },
-        {
-            category: "運用・トラブル",
-            question: "バッテリー上がりは心配ありませんか？",
-            answer: "最新のデジタルセキュリティーは待機電力が非常に小さく設計されています。1〜2週間程度の放置であれば問題ありませんが、長期間（1ヶ月以上）お車に乗られない場合は、バッテリーメンテナンス等の対策をご案内しております。"
-        },
-        {
-            category: "運用・トラブル",
-            question: "誤作動（サイレンの鳴りっぱなし）が心配です。",
-            answer: "プロの技術者がお客様の駐車環境（近くを大型車が通る、立体駐車場など）をヒアリングし、センサーの感度を最適に調整します。また、万が一誤作動が起きた場合でも、リモコンで即座に停止が可能です。"
-        },
-        {
-            category: "機能・仕様",
-            question: "中古車に最初から付いていたセキュリティーの使い方が分かりません。",
-            answer: "当店では中古車購入時のセキュリティー診断サービス（￥3,300）をご用意しております。操作説明や設定の確認、必要に応じて再登録等も承りますのでお気軽にご相談ください。"
-        }
-    ];
+    const { securityKnowledge } = usePrices();
+    const faqs = securityKnowledge?.faqs || [];
 
-    const categories = ['すべて', ...Array.from(new Set(faqs.map(f => f.category)))];
+    const categories = ['すべて', ...Array.from(new Set(faqs.map((f: any) => f.category)))];
 
     const filteredFaqs = activeTab === 'すべて'
         ? faqs
-        : faqs.filter(f => f.category === activeTab);
+        : faqs.filter((f: any) => f.category === activeTab);
 
     return (
         <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-blue-500/10 selection:text-blue-600">

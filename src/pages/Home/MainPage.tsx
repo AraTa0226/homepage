@@ -25,10 +25,12 @@ import { SafeImage } from '../../components/ui/SafeImage';
 import { BusinessCalendar } from '../../components/Calendar/BusinessCalendar';
 import { PartnersSection } from '../../components/PartnersSection';
 import { VaultGrid } from '../../components/VaultGrid';
+import { usePrices } from '../../contexts/PriceContext';
 
 interface MainPageProps {
     assets: any;
     emergencyAnnouncement: any;
+    heroAlert?: any;
     posts: any[];
     loading: boolean;
     facilities: any[];
@@ -58,10 +60,12 @@ const MegaMenu = ({ show, categories, theme, onClose, navigate, handleMenuClick 
                                 <div key={cat.id} className="flex flex-col gap-4">
                                     <div
                                         onClick={() => {
+                                            const isGrouping = cat.groups || ['security_car', 'security_options', 'maintenance', 'security_full'].includes(cat.id);
+                                            if (isGrouping) return;
                                             onClose();
                                             navigate(cat.path);
                                         }}
-                                        className="flex flex-col gap-1 border-b border-gray-100 pb-3 group/header cursor-pointer"
+                                        className={`flex flex-col gap-1 border-b border-gray-100 pb-3 group/header ${(cat.groups || ['security_car', 'security_options', 'maintenance', 'security_full'].includes(cat.id)) ? 'cursor-default' : 'cursor-pointer'}`}
                                     >
                                         <span className="text-[9px] font-black tracking-[0.2em] text-blue-600 uppercase">{cat.subtitle}</span>
                                         <span className={`text-[13px] font-black tracking-tight transition-colors ${theme === 'dark' ? 'text-white' : 'text-gray-900'} group-hover/header:text-blue-600`}>
@@ -69,36 +73,46 @@ const MegaMenu = ({ show, categories, theme, onClose, navigate, handleMenuClick 
                                         </span>
                                     </div>
                                     <div className="flex flex-col gap-3">
-                                        {cat.items.map((item: string, idx: number) => (
-                                            <button
-                                                key={idx}
-                                                onClick={() => {
-                                                    const planMapping: Record<string, any> = {
-                                                        "BASIC line (コアキシャル)": { id: "speaker_package", planId: "basic-coaxial" },
-                                                        "BASIC line (セパレート)": { id: "speaker_package", planId: "basic-separate" },
-                                                        "STANDARD line (10万円まで)": { id: "speaker_package", planId: "standard-line" },
-                                                        "PREMIUM line (10万円以上)": { id: "speaker_package", planId: "premium-line" },
-                                                        "フロント3WAYセット": { id: "speaker_package", planId: "front-3way" },
-                                                        "BMW専用パッケージ": { id: "speaker_package", planId: "bmw-package" },
-                                                        "Mercedes Benz専用パッケージ": { id: "speaker_package", planId: "mercedes-package" },
-                                                        "車種別スピーカー交換プラン": { id: "speaker_package", planId: "model-specific" },
-                                                        "AMP内蔵DSPパッケージ": { id: "digital_source", planId: "amplified-dsp" },
-                                                        "AMPレスDSPパッケージ": { id: "digital_source", planId: "standalone-dsp" },
-                                                        "お手軽低音増強 (パワード)": { id: "bass_power", planId: "easy-bass" },
-                                                        "お手軽低音増強＋ (アンプ別)": { id: "bass_power", planId: "easy-bass-plus" },
-                                                        "店内の常時試聴ユニット": { id: "audition-showcase", isAnchor: true },
-                                                        "施工ブログ / 店舗詳細": { id: "contact", isAnchor: true }
-                                                    };
-                                                    const target = planMapping[item] || { id: cat.id };
-                                                    onClose();
-                                                    handleMenuClick(target);
-                                                }}
-                                                className="text-[11px] font-bold text-gray-400 hover:text-blue-600 transition-all hover:translate-x-1 text-left flex items-center gap-2 group/link"
-                                            >
-                                                <div className="w-1 h-1 rounded-full bg-gray-200 group-hover/link:bg-blue-400 transition-colors" />
-                                                {item}
-                                            </button>
-                                        ))}
+                                        {cat.items ? (
+                                            cat.items.map((item: any, idx: number) => {
+                                                const itemName = typeof item === 'string' ? item : item.name;
+                                                return (
+                                                    <button
+                                                        key={idx}
+                                                        onClick={() => {
+                                                            const target = { id: cat.id, name: itemName, path: cat.path };
+                                                            onClose();
+                                                            handleMenuClick(target);
+                                                        }}
+                                                        className="text-[11px] font-bold text-gray-400 hover:text-blue-600 transition-all hover:translate-x-1 text-left flex items-center gap-2 group/link"
+                                                    >
+                                                        <div className="w-1 h-1 rounded-full bg-gray-200 group-hover/link:bg-blue-400 transition-colors" />
+                                                        {itemName}
+                                                    </button>
+                                                );
+                                            })
+                                        ) : (cat && Array.isArray(cat.groups)) ? (
+                                            cat.groups.map((group: any, gIdx: number) => (
+                                                <div key={gIdx} className="space-y-2">
+                                                    <div className="text-[10px] font-black text-gray-500/50 uppercase tracking-widest">{group.name}</div>
+                                                    <div className="flex flex-col gap-2 pl-2">
+                                                        {(group && Array.isArray(group.items)) && group.items.map((item: string, iIdx: number) => (
+                                                            <button
+                                                                key={iIdx}
+                                                                onClick={() => {
+                                                                    const target = { id: cat.id, name: item, path: cat.path };
+                                                                    onClose();
+                                                                    handleMenuClick(target);
+                                                                }}
+                                                                className="text-[10px] font-bold text-gray-400 hover:text-blue-600 transition-all text-left"
+                                                            >
+                                                                {item}
+                                                            </button>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            ))
+                                        ) : null}
                                     </div>
                                 </div>
                             ))}
@@ -113,6 +127,7 @@ const MegaMenu = ({ show, categories, theme, onClose, navigate, handleMenuClick 
 export const MainPage: React.FC<MainPageProps> = ({
     assets,
     emergencyAnnouncement,
+    heroAlert,
     posts,
     loading,
     facilities,
@@ -125,6 +140,7 @@ export const MainPage: React.FC<MainPageProps> = ({
     setShowMegaMenu,
     auditionSpeakers
 }) => {
+    const { audioRecruitment, audioEvents } = usePrices();
     const [activeYoutubeId, setActiveYoutubeId] = useState<string | null>(null);
     const [isLineupExpanded, setIsLineupExpanded] = useState(false);
     const [showFullAuditionList, setShowFullAuditionList] = useState(false);
@@ -133,101 +149,17 @@ export const MainPage: React.FC<MainPageProps> = ({
     const isSecurityDomain = hostname.includes('sec-ang.com');
     const theme = isSecurityDomain ? 'dark' : 'light';
 
-    const audioCategories = [
-        {
-            id: 'speaker_package',
-            title: 'スピーカー・パッケージ',
-            subtitle: 'ACOUSTICS',
-            image: assets.audioMenuImage,
-            gridClass: 'lg:row-span-2',
-            items: [
-                'BASIC line (コアキシャル)',
-                'BASIC line (セパレート)',
-                'STANDARD line (10万円まで)',
-                'PREMIUM line (10万円以上)',
-                'フロント3WAYセット',
-                'BMW専用パッケージ',
-                'Mercedes Benz専用パッケージ',
-                '車種別スピーカー交換プラン',
-                'ハイエンドクラス・施工'
-            ],
-            path: '/audio/sp-package'
-        },
-        {
-            id: 'bass_power',
-            title: 'DSP / アンプ / ウーファー',
-            subtitle: 'ELECTRONICS',
-            image: assets.auditionRoomImage,
-            items: [
-                'AMP内蔵DSPパッケージ',
-                'AMPレスDSPパッケージ',
-                'アンプインスト・パッケージ',
-                '省スペース小型アンプ',
-                'お手軽低音増強 (パワード)',
-                'お手軽低音増強＋ (アンプ別)',
-                'サイバーナビ・プラン'
-            ],
-            path: '/audio/amp-dsp'
-        },
-        {
-            id: 'custom_install',
-            title: '施工・カスタム',
-            subtitle: 'EXPERT CUSTOM',
-            image: assets.workspaceImage,
-            items: [
-                'カスタムインストール',
-                'ツィーターCOOLマウント',
-                'オリジナルアウターバッフル',
-                'サブウーハー施工のアレコレ',
-                'ヘッドユニット / プロセッサー'
-            ],
-            path: '/audio/custom'
-        },
-        {
-            id: 'digital_source',
-            title: 'ハイレゾ・デジタル',
-            subtitle: 'TECH & DIGITAL',
-            image: assets.showroomImage,
-            items: [
-                'ハイレゾ導入のススメ',
-                'いま注目！メディアプレーヤー',
-                'デジタルソース・ビルドアップ'
-            ],
-            path: '/audio/digital-source'
-        },
-        {
-            id: 'install_tuning',
-            title: 'デッドニング・音響パーツ',
-            subtitle: 'DEADENING',
-            image: assets.pitImage,
-            items: [
-                'ドアチューニング (デッドニング)',
-                'サイレントチューニング (静音)',
-                '電源強化 / バッ直施工'
-            ],
-            path: '/audio/deadening'
-        }
-    ];
+    const { plans, securityData } = usePrices();
 
-    const securityCategories = [
-        {
-            id: 'security',
-            title: 'SECURITY VAULT',
-            subtitle: 'ACTIVE GUARD',
-            image: assets.securityMenuImage,
-            gridClass: 'lg:col-span-2 lg:row-span-2',
-            items: ['Panthera Z-Series', 'Grgo V-Series', 'Relay Attack Defense'],
-            path: '/security/panthera'
-        },
-        {
-            id: 'gadgets',
-            title: 'DASHCAM / HUD',
-            subtitle: 'DIGITAL EYE',
-            image: assets.dashcamMenuImage,
-            items: ['Digital Mirror', 'Radar Detector', 'Dual Cam Recording'],
-            path: '/security/drive_recorder'
-        }
-    ];
+    const audioCategories = (Array.isArray(plans) ? plans : []).filter(p => p && p.type === 'audio').map(p => ({
+        ...p,
+        items: (Array.isArray(p.items) ? p.items : []).map((item: any) => {
+            if (typeof item === 'string') return item;
+            return item?.name || '';
+        })
+    }));
+
+    const securityCategories = securityData?.menu?.categories || [];
 
     const categories = isSecurityDomain ? securityCategories : audioCategories;
 
@@ -330,7 +262,7 @@ export const MainPage: React.FC<MainPageProps> = ({
             </header>
 
             {
-                emergencyAnnouncement.active && emergencyAnnouncement.text && (
+                emergencyAnnouncement?.active && (
                     <div className="max-w-7xl mx-auto px-4 pt-24 -mb-16 relative z-30">
                         <motion.div
                             initial={{ opacity: 0, y: -20 }}
@@ -392,6 +324,23 @@ export const MainPage: React.FC<MainPageProps> = ({
                                 </span>
                             </div>
                         </div>
+
+                        {heroAlert?.active && (
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                className="mb-8 p-1.5 bg-white/10 backdrop-blur-3xl rounded-2xl border border-white/20 w-fit group cursor-pointer shadow-xl hover:shadow-blue-500/10 transition-all"
+                                onClick={() => heroAlert.link && navigate(heroAlert.link)}
+                            >
+                                <div className="flex items-center gap-4 pr-6">
+                                    <div className="bg-blue-600 text-white text-[9px] font-black px-3 py-1 rounded-lg uppercase tracking-tighter shadow-lg shadow-blue-500/20">
+                                        {heroAlert.badge || 'NEW'}
+                                    </div>
+                                    <span className="text-white font-bold text-xs md:text-sm tracking-tight">{heroAlert.text}</span>
+                                    <ChevronRight className="w-3.5 h-3.5 text-blue-400 group-hover:translate-x-1 transition-transform" />
+                                </div>
+                            </motion.div>
+                        )}
 
                         <h1 className="text-3xl md:text-7xl font-black text-white mb-8 leading-[1.2] md:leading-[1.1] tracking-tighter">
                             <span className="block md:inline whitespace-nowrap">感性を揺さぶる至高の音、</span><br className="hidden md:block" />
@@ -684,6 +633,31 @@ export const MainPage: React.FC<MainPageProps> = ({
                 </div>
             </section>
 
+            {/* Recruitment Section */}
+            {audioRecruitment?.active && (
+                <section className="py-12 bg-white overflow-hidden" id="recruitment">
+                    <div className="max-w-5xl mx-auto px-4">
+                        <motion.div 
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="bg-[#020202] rounded-[2.5rem] p-8 md:p-12 overflow-hidden relative group border border-blue-500/20 shadow-2xl"
+                        >
+                            <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#2563eb 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
+                            <div className="flex flex-col items-center text-center relative z-10">
+                                <span className="text-blue-500 font-black tracking-[0.4em] uppercase text-[9px] mb-2 block">Join Our Team</span>
+                                <h2 className="text-2xl md:text-3xl font-black text-white leading-tight tracking-tighter mb-4 italic">
+                                    {audioRecruitment.title}
+                                </h2>
+                                <p className="text-gray-400 font-bold text-sm leading-relaxed max-w-2xl">
+                                    {audioRecruitment.message || audioRecruitment.description}
+                                </p>
+                            </div>
+                        </motion.div>
+                    </div>
+                </section>
+            )}
+
             {/* Footer */}
             <footer id="contact" className="bg-gray-900 text-gray-400 py-24 relative overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 relative z-10">
@@ -729,8 +703,26 @@ export const MainPage: React.FC<MainPageProps> = ({
                             <ul className="space-y-4 text-sm font-bold">
                                 <li><a href="#" className="hover:text-blue-500 transition-colors">Home</a></li>
                                 <li><a href="#blog" className="hover:text-white transition-colors">BLOG</a></li>
-
-                                <li><a href="#blog" className="hover:text-white transition-colors">Latest News</a></li>
+                                <li className="pt-4 mt-4 border-t border-white/5">
+                                    <span className="text-[10px] font-black text-blue-500 block mb-3 tracking-widest uppercase">Latest News</span>
+                                    {audioEvents.filter(e => e.status !== 'draft').length > 0 ? (
+                                        <ul className="space-y-3">
+                                            {audioEvents.filter(e => e.status !== 'draft').slice(0, 3).map(event => (
+                                                <li key={event.id}>
+                                                    <button 
+                                                        onClick={() => navigate(`/audio/news/${event.slug}`)}
+                                                        className="text-left hover:text-white transition-colors block leading-snug"
+                                                    >
+                                                        {event.title}
+                                                        <span className="text-[8px] block opacity-40 mt-0.5">{event.date}</span>
+                                                    </button>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    ) : (
+                                        <p className="text-white/20 italic text-xs font-black tracking-widest">COMING SOON...</p>
+                                    )}
+                                </li>
                                 <li><a href="#services" className="hover:text-white transition-colors">Audio Menu</a></li>
                                 <li><a href="#options" className="hover:text-white transition-colors">Audition Room</a></li>
                                 <li><button onClick={() => navigate('/reservation')} className="text-blue-500 hover:underline">ご来店・ご相談予約</button></li>
@@ -832,7 +824,7 @@ export const MainPage: React.FC<MainPageProps> = ({
                                                                 className="overflow-hidden bg-gray-50 rounded-2xl border border-gray-100"
                                                             >
                                                                 <div className="p-4 flex flex-col gap-6">
-                                                                    {audioCategories.map((cat: any) => (
+                                                                    {categories.map((cat: any) => (
                                                                         <div key={cat.id} className="space-y-3">
                                                                             <div
                                                                                 onClick={() => {
@@ -845,36 +837,60 @@ export const MainPage: React.FC<MainPageProps> = ({
                                                                                 <ArrowUpRight className="w-3 h-3 opacity-40 ml-auto" />
                                                                             </div>
                                                                             <div className="flex flex-col gap-1 pl-3">
-                                                                                {cat.items.map((item: string, idx: number) => (
-                                                                                    <button
-                                                                                        key={idx}
-                                                                                        onClick={() => {
-                                                                                            const planMapping: Record<string, any> = {
-                                                                                                "BASIC line (コアキシャル)": { id: "speaker_package", planId: "basic-coaxial" },
-                                                                                                "BASIC line (セパレート)": { id: "speaker_package", planId: "basic-separate" },
-                                                                                                "STANDARD line (10万円まで)": { id: "speaker_package", planId: "standard-line" },
-                                                                                                "PREMIUM line (10万円以上)": { id: "speaker_package", planId: "premium-line" },
-                                                                                                "フロント3WAYセット": { id: "speaker_package", planId: "front-3way" },
-                                                                                                "BMW専用パッケージ": { id: "speaker_package", planId: "bmw-package" },
-                                                                                                "Mercedes Benz専用パッケージ": { id: "speaker_package", planId: "mercedes-package" },
-                                                                                                "車種別スピーカー交換プラン": { id: "speaker_package", planId: "model-specific" },
-                                                                                                "AMP内蔵DSPパッケージ": { id: "digital_source", planId: "amplified-dsp" },
-                                                                                                "AMPレスDSPパッケージ": { id: "digital_source", planId: "standalone-dsp" },
-                                                                                                "お手軽低音増強 (パワード)": { id: "bass_power", planId: "easy-bass" },
-                                                                                                "お手軽低音増強＋ (アンプ別)": { id: "bass_power", planId: "easy-bass-plus" },
-                                                                                                "店内の常時試聴ユニット": { id: "audition-showcase", isAnchor: true },
-                                                                                                "施工ブログ / 店舗詳細": { id: "contact", isAnchor: true }
-                                                                                            };
-                                                                                            const target = planMapping[item] || { id: cat.id };
-                                                                                            setIsMobileMenuOpen(false);
-                                                                                            handleMenuClick(target);
-                                                                                        }}
-                                                                                        className="text-[13px] leading-snug font-bold text-gray-500 hover:text-blue-600 transition-colors text-left flex items-center justify-between py-3 border-b border-gray-100 last:border-0"
-                                                                                    >
-                                                                                        {item}
-                                                                                        <ChevronRight className="w-3 h-3 opacity-30" />
-                                                                                    </button>
-                                                                                ))}
+                                                                                {cat.items ? (
+                                                                                    cat.items.map((item: string, idx: number) => {
+                                                                                        const planMapping: Record<string, any> = {
+                                                                                            "BASIC line (コアキシャル)": { id: "speaker_package", planId: "basic-coaxial" },
+                                                                                            "BASIC line (セパレート)": { id: "speaker_package", planId: "basic-separate" },
+                                                                                            "STANDARD line (10万円まで)": { id: "speaker_package", planId: "standard-line" },
+                                                                                            "PREMIUM line (10万円以上)": { id: "speaker_package", planId: "premium-line" },
+                                                                                            "フロント3WAYセット": { id: "speaker_package", planId: "front-3way" },
+                                                                                            "BMW専用パッケージ": { id: "speaker_package", planId: "bmw-package" },
+                                                                                            "Mercedes Benz専用パッケージ": { id: "speaker_package", planId: "mercedes-package" },
+                                                                                            "車種別スピーカー交換プラン": { id: "speaker_package", planId: "model-specific" },
+                                                                                            "AMP内蔵DSPパッケージ": { id: "digital_source", planId: "amplified-dsp" },
+                                                                                            "AMPレスDSPパッケージ": { id: "digital_source", planId: "standalone-dsp" },
+                                                                                            "お手軽低音増強 (パワード)": { id: "bass_power", planId: "easy-bass" },
+                                                                                            "お手軽低音増強＋ (アンプ別)": { id: "bass_power", planId: "easy-bass-plus" },
+                                                                                            "店内の常時試聴ユニット": { id: "audition-showcase", isAnchor: true },
+                                                                                            "施工ブログ / 店舗詳細": { id: "contact", isAnchor: true }
+                                                                                        };
+                                                                                        const target = planMapping[item] || { id: cat.id };
+                                                                                        return (
+                                                                                            <button
+                                                                                                key={idx}
+                                                                                                onClick={() => {
+                                                                                                    setIsMobileMenuOpen(false);
+                                                                                                    handleMenuClick(target);
+                                                                                                }}
+                                                                                                className="text-[13px] leading-snug font-bold text-gray-500 hover:text-blue-600 transition-colors text-left flex items-center justify-between py-3 border-b border-gray-100 last:border-0"
+                                                                                            >
+                                                                                                {item}
+                                                                                                <ChevronRight className="w-3 h-3 opacity-30" />
+                                                                                            </button>
+                                                                                        );
+                                                                                    })
+                                                                                ) : (cat && Array.isArray(cat.groups)) ? (
+                                                                                    cat.groups.map((group: any, gIdx: number) => (
+                                                                                        <div key={gIdx} className="space-y-2 mt-4">
+                                                                                            <div className="text-[10px] font-black text-gray-400 uppercase tracking-widest">{group.name}</div>
+                                                                                            <div className="flex flex-col gap-1 pl-2">
+                                                                                                {(group && Array.isArray(group.items)) && group.items.map((item: string, iIdx: number) => (
+                                                                                                    <button
+                                                                                                        key={iIdx}
+                                                                                                        onClick={() => {
+                                                                                                            setIsMobileMenuOpen(false);
+                                                                                                            handleMenuClick({ id: cat.id, name: item, path: cat.path });
+                                                                                                        }}
+                                                                                                        className="text-[12px] font-bold text-gray-500 py-2 border-b border-gray-100 last:border-0 text-left"
+                                                                                                    >
+                                                                                                        {item}
+                                                                                                    </button>
+                                                                                                ))}
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    ))
+                                                                                ) : null}
                                                                             </div>
                                                                         </div>
                                                                     ))}

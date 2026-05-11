@@ -14,9 +14,12 @@ import {
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
+import { usePrices } from '../../contexts/PriceContext';
+
 const SecurityPartnersPage: React.FC = () => {
     const navigate = useNavigate();
     const [scrolled, setScrolled] = useState(false);
+    const { securityData } = usePrices();
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -24,22 +27,8 @@ const SecurityPartnersPage: React.FC = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const securityPartners = [
-        { name: "アーマテック株式会社", brand: "CLIFFORD", url: "http://clifford.co.jp/", desc: "クリフォード正規輸入元。最高峰の防犯技術を日本へ。" },
-        { name: "加藤電機株式会社", brand: "VIPER / HORNET / セキュリティラウンジ", url: "https://kato-denki.com/", desc: "世界を代表するセキュリティブランドVIPERを展開。" },
-        { name: "CAN plus", brand: "アンパイア", url: "http://www.ampire.jp/", desc: "最新デジタルセキュリティAMPIREの正規輸入元。" },
-        { name: "クラフトマン", brand: "LOCK音", url: "http://lockon.to/", desc: "ハリウッド映画のようなサウンドアンサーバックを展開。" },
-        { name: "株式会社ユピテル", brand: "GRGO / Panthera / レーダー探知機", url: "http://www.yupiteru.co.jp/", desc: "日本専用に開発された最高峰ブランドGrgo・パンテーラを展開。" },
-        { name: "シーバスリンク", brand: "HID / LED / ライティングユニット", url: "http://www.seabass-link.co.jp/", desc: "高品質なライティングシステムと電子部品を提供。" },
-        { name: "SMART DIVISION", brand: "HID / インターフェース", url: "http://minkara.carview.co.jp/userid/560861/profile/", desc: "輸入車向けの電装パーツ・ライティングを幅広く展開。" },
-        { name: "BELLOF", brand: "HID / LED / バッテリーチャージャー", url: "http://www.bellof.co.jp/", desc: "ライティング及び電源関連のトップブランド。" },
-        { name: "クラッツィオ", brand: "シートカバー / 内装パーツ", url: "http://www.11i.co.jp/", desc: "高品質シートカバー。内装の保護と美観を両立。" }
-    ];
-
-    const technicalPartners = [
-        { name: "カギ商福岡", desc: "スペアキー作製・特殊キー対応", url: "http://www.kuruma-kagi.com/" },
-        { name: "ハローサービス", desc: "カーフィルム施工・ボディコーティング", url: "http://efuhs-tint.com/" }
-    ];
+    const securityPartners = securityData.home?.partners || [];
+    const technicalPartners = securityData.home?.techPartners || [];
 
     return (
         <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-emerald-500/10 selection:text-emerald-600 overflow-x-hidden">

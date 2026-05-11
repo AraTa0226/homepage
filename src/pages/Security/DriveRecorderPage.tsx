@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'motion/react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { usePrices, formatPrice } from '../../contexts/PriceContext';
 import { useSite } from '../../contexts/SiteContext';
-import { fetchDashcamProducts, type DashcamProduct } from '../../lib/microcms';
 import {
     Video,
     Eye,
@@ -21,6 +20,7 @@ import {
     Zap,
     HardDrive
 } from 'lucide-react';
+import { SafeImage } from '../../components/ui/SafeImage';
 
 // アイコンマッピングの定義
 const iconMap: Record<string, any> = {
@@ -31,54 +31,15 @@ const iconMap: Record<string, any> = {
     HardDrive,
     Info
 };
-import { SafeImage } from '../../components/ui/SafeImage';
-
-// microCMS商品データをcms.json形式に変換するヘルパー
-function convertCmsProduct(p: DashcamProduct): any {
-    // microCMSに画像未アップロードの場合はslugからローカルパスを推定
-    const localImagePath = `/images/Security/drive_recorder/${p.slug}.webp`;
-    return {
-        name: p.name,
-        price: p.price.replace(/[^0-9]/g, ''), // 数字のみ抽出
-        badge: p.badge,
-        slug: p.slug,
-        description: p.description || '',
-        link: p.link || '',
-        youtubeId: p.youtubeId || '',
-        image: p.image?.url || localImagePath,
-        featureImage: p.featureImage?.url || '',
-        // 改行区切りテキスト → 配列に変換
-        features: p.features ? p.features.split('\n').filter(Boolean) : [],
-    };
-}
-
 export const DriveRecorderPage: React.FC = () => {
     const { assets } = useSite();
     const { plans } = usePrices();
     const navigate = useNavigate();
     const { productId } = useParams();
     const [selectedItem, setSelectedItem] = useState<any | null>(null);
-    const [cmsItems, setCmsItems] = useState<any[] | null>(null);
-    const [cmsLoading, setCmsLoading] = useState(true);
-
-    // microCMSからドラレコ商品を取得
-    useEffect(() => {
-        fetchDashcamProducts()
-            .then((products) => {
-                if (products.length > 0) {
-                    setCmsItems(products.map(convertCmsProduct));
-                } else {
-                    setCmsItems(null); // fallback to cms.json
-                }
-            })
-            .catch(() => setCmsItems(null))
-            .finally(() => setCmsLoading(false));
-    }, []);
-
-    // CMSデータ優先、なければcms.jsonのデータ
     const categoryId = 'dashcam';
     const fallbackCategory = plans.find(p => p.id === categoryId);
-    const displayItems = cmsItems ?? fallbackCategory?.items ?? [];
+    const displayItems = fallbackCategory?.items ?? [];
 
     // URLのproductIdに基づいてselectedItemを同期
     useEffect(() => {
@@ -245,12 +206,10 @@ export const DriveRecorderPage: React.FC = () => {
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {cmsLoading ? (
-                            <div className="col-span-3 text-center py-12 text-gray-400 font-bold">商品情報を読み込み中...</div>
-                        ) : displayItems.length === 0 ? (
+                        {displayItems.length === 0 ? (
                             <div className="col-span-3 text-center py-12 text-gray-400 font-bold">商品情報がありません</div>
                         ) : null}
-                        {!cmsLoading && displayItems.map((item: any, i: number) => (
+                        {displayItems.map((item: any, i: number) => (
                             <motion.div
                                 key={i}
                                 initial={{ opacity: 0, y: 20 }}
