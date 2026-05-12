@@ -43,86 +43,7 @@ interface MainPageProps {
     setShowMegaMenu: (show: boolean) => void;
     auditionSpeakers: any[];
 }
-
-const MegaMenu = ({ show, categories, theme, onClose, navigate, handleMenuClick }: any) => {
-    return (
-        <AnimatePresence>
-            {show && (
-                <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50 pointer-events-auto"
-                >
-                    <div className={`rounded-3xl shadow-2xl overflow-hidden border ${theme === 'dark' ? 'bg-black border-white/10' : 'bg-white border-gray-100'} p-10 w-[1100px]`}>
-                        <div className="grid grid-cols-5 gap-8">
-                            {categories.map((cat: any) => (
-                                <div key={cat.id} className="flex flex-col gap-4">
-                                    <div
-                                        onClick={() => {
-                                            const isGrouping = cat.groups || ['security_car', 'security_options', 'maintenance', 'security_full'].includes(cat.id);
-                                            if (isGrouping) return;
-                                            onClose();
-                                            navigate(cat.path);
-                                        }}
-                                        className={`flex flex-col gap-1 border-b border-gray-100 pb-3 group/header ${(cat.groups || ['security_car', 'security_options', 'maintenance', 'security_full'].includes(cat.id)) ? 'cursor-default' : 'cursor-pointer'}`}
-                                    >
-                                        <span className="text-[9px] font-black tracking-[0.2em] text-blue-600 uppercase">{cat.subtitle}</span>
-                                        <span className={`text-[13px] font-black tracking-tight transition-colors ${theme === 'dark' ? 'text-white' : 'text-gray-900'} group-hover/header:text-blue-600`}>
-                                            {cat.title.split('・')[0]}
-                                        </span>
-                                    </div>
-                                    <div className="flex flex-col gap-3">
-                                        {cat.items ? (
-                                            cat.items.map((item: any, idx: number) => {
-                                                const itemName = typeof item === 'string' ? item : item.name;
-                                                return (
-                                                    <button
-                                                        key={idx}
-                                                        onClick={() => {
-                                                            const target = { id: cat.id, name: itemName, path: cat.path };
-                                                            onClose();
-                                                            handleMenuClick(target);
-                                                        }}
-                                                        className="text-[11px] font-bold text-gray-400 hover:text-blue-600 transition-all hover:translate-x-1 text-left flex items-center gap-2 group/link"
-                                                    >
-                                                        <div className="w-1 h-1 rounded-full bg-gray-200 group-hover/link:bg-blue-400 transition-colors" />
-                                                        {itemName}
-                                                    </button>
-                                                );
-                                            })
-                                        ) : (cat && Array.isArray(cat.groups)) ? (
-                                            cat.groups.map((group: any, gIdx: number) => (
-                                                <div key={gIdx} className="space-y-2">
-                                                    <div className="text-[10px] font-black text-gray-500/50 uppercase tracking-widest">{group.name}</div>
-                                                    <div className="flex flex-col gap-2 pl-2">
-                                                        {(group && Array.isArray(group.items)) && group.items.map((item: string, iIdx: number) => (
-                                                            <button
-                                                                key={iIdx}
-                                                                onClick={() => {
-                                                                    const target = { id: cat.id, name: item, path: cat.path };
-                                                                    onClose();
-                                                                    handleMenuClick(target);
-                                                                }}
-                                                                className="text-[10px] font-bold text-gray-400 hover:text-blue-600 transition-all text-left"
-                                                            >
-                                                                {item}
-                                                            </button>
-                                                        ))}
-                                                    </div>
-                                                </div>
-                                            ))
-                                        ) : null}
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </motion.div>
-            )}
-        </AnimatePresence>
-    );
-};
+import { MegaMenu } from '../../components/Menu/MegaMenu';
 
 export const MainPage: React.FC<MainPageProps> = ({
     assets,
@@ -840,10 +761,10 @@ export const MainPage: React.FC<MainPageProps> = ({
                                                                                 {cat.items ? (
                                                                                     cat.items.map((item: string, idx: number) => {
                                                                                         const planMapping: Record<string, any> = {
-                                                                                            "BASIC line (コアキシャル)": { id: "speaker_package", planId: "basic-coaxial" },
-                                                                                            "BASIC line (セパレート)": { id: "speaker_package", planId: "basic-separate" },
-                                                                                            "STANDARD line (10万円まで)": { id: "speaker_package", planId: "standard-line" },
-                                                                                            "PREMIUM line (10万円以上)": { id: "speaker_package", planId: "premium-line" },
+                                                                                            "スピーカー交換BASIC line（コアキシャル）": { id: "speaker_package", planId: "basic-coaxial" },
+                                                                                            "スピーカー交換BASIC line（セパレート）": { id: "speaker_package", planId: "basic-separate" },
+                                                                                            "スピーカー交換STANDARD line（10万円まで）": { id: "speaker_package", planId: "standard-line" },
+                                                                                            "スピーカー交換PREMIUM line（10万円以上）": { id: "speaker_package", planId: "premium-line" },
                                                                                             "フロント3WAYセット": { id: "speaker_package", planId: "front-3way" },
                                                                                             "BMW専用パッケージ": { id: "speaker_package", planId: "bmw-package" },
                                                                                             "Mercedes Benz専用パッケージ": { id: "speaker_package", planId: "mercedes-package" },
@@ -855,7 +776,9 @@ export const MainPage: React.FC<MainPageProps> = ({
                                                                                             "店内の常時試聴ユニット": { id: "audition-showcase", isAnchor: true },
                                                                                             "施工ブログ / 店舗詳細": { id: "contact", isAnchor: true }
                                                                                         };
-                                                                                        const target = planMapping[item] || { id: cat.id };
+                                                                                        // Fallback mapping just in case the item has different string format
+                                                                                        const matchedKey = Object.keys(planMapping).find(k => item.includes(k) || k.includes(item));
+                                                                                        const target = (matchedKey ? planMapping[matchedKey] : planMapping[item]) || { id: cat.id, name: item };
                                                                                         return (
                                                                                             <button
                                                                                                 key={idx}

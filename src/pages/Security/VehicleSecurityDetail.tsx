@@ -41,70 +41,84 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
     const currentVehicle = vehicleConfigs[currentModelId] || vehicleConfigs['lexus-gx550'] || { name: 'Unknown', image: '', description: '', plans: [] };
     const basePlans = vehicleConfigs.basePlans || [];
 
-    // microCMSデータの安全な取得
-    let rawPlans = currentVehicle?.plans || basePlans || [];
-    
-    let showV2 = true;
-    
-    try {
-        if (plans && plans.length > 0) {
-            const idMapping: Record<string, string> = {
-                'toyota-landcruiser-300': 'land_cruiser_300',
-                'toyota-landcruiser-250': 'land_cruiser_250',
-                'toyota-landcruiser-prado-150-200': 'land_cruiser_prado',
-                'toyota-landcruiser-70': 'land_cruiser_70',
-                'toyota-alphard-vellfire': 'alphard_40',
-                'lexus-lx': 'lexus_lx',
-                'lexus-rx': 'lexus_rx',
-                'lexus-nx': 'lexus_nx',
-                'lexus-gx550': 'lexus_gx550',
-                'lexus-lbx': 'lexus_lbx',
-                'lexus-lm': 'lexus_lx',
-                'toyota-harrier': 'harrier_80',
-                'honda-civic-typer': 'civic_fl5',
-                'suzuki-jimny': 'jimny_jb64',
-                'toyota-hiace': 'hiace_200_full',
-                'toyota-prius': 'prius_60',
-                'toyota-crown': 'crown_2024',
-                'kcar-special': 'kcar_special',
+    // 1. Prioritize individual vehicle plans from Admin Dashboard
+    let rawPlans = [];
+    let showV2 = currentVehicle?.showV2Option ?? true;
+
+    if (currentVehicle?.plans && currentVehicle.plans.length > 0) {
+        rawPlans = currentVehicle.plans.map((p: any) => {
+            const basePrice = parseInt((p.price || '0').replace(/,/g, ''), 10);
+            const taxPrice = Math.floor(basePrice * 1.1);
+            return {
+                ...p,
+                priceTax: isNaN(taxPrice) ? '0' : taxPrice.toLocaleString(),
+                // Ensure features object exists
+                features: p.features || {}
             };
-            const cmsId = idMapping[currentModelId] || currentModelId.replace(/-/g, '_');
-            const cmsPlan = plans.find(p => p.id === cmsId);
-            
-            if (cmsPlan) {
-                showV2 = cmsPlan.showV2Option ?? true;
-                if (cmsPlan.items && cmsPlan.items.length > 0) {
-                rawPlans = cmsPlan.items.map((item: any, idx: number) => {
-                    const basePrice = parseInt((item.price || '0').replace(/,/g, ''), 10);
-                    const taxPrice = Math.floor(basePrice * 1.1);
-                    return {
-                        id: `cms-${idx}`,
-                        brand: (item.name || '').split(/[\s　]/)[0] || 'Unknown',
-                        grade: item.name || '',
-                        price: item.price || '0',
-                        priceTax: taxPrice.toLocaleString(),
-                        description: item.description || '',
-                        badge: item.badge || '',
-                        image: item.image || '',
-                        isRecommended: !!(item.badge && (item.badge === 'おすすめ' || item.badge === '推奨構成')),
-                        category: (item.name || '').toLowerCase().includes('grgo') ? 'grgo' : 'パンテーラ',
-                        features: {
-                            triple: item.triple ?? false,
-                            tilt: item.tilt ?? false,
-                            bonnet: item.bonnet ?? false,
-                            microwave: item.microwave ?? false,
-                            siren: item.siren ?? false,
-                            algorithm: item.algorithm ?? false,
-                            canguard: item.canguard ?? false,
-                            led: false,
-                        }
-                    };
-                });
+        });
+    } else {
+        // 2. Fallback to legacy/global plans if no vehicle-specific plans are set
+        rawPlans = basePlans || [];
+        try {
+            if (plans && plans.length > 0) {
+                const idMapping: Record<string, string> = {
+                    'toyota-landcruiser-300': 'land_cruiser_300',
+                    'toyota-landcruiser-250': 'land_cruiser_250',
+                    'toyota-landcruiser-prado-150-200': 'land_cruiser_prado',
+                    'toyota-landcruiser-70': 'land_cruiser_70',
+                    'toyota-alphard-vellfire': 'alphard_40',
+                    'lexus-lx': 'lexus_lx',
+                    'lexus-rx': 'lexus_rx',
+                    'lexus-nx': 'lexus_nx',
+                    'lexus-gx550': 'lexus_gx550',
+                    'lexus-lbx': 'lexus_lbx',
+                    'lexus-lm': 'lexus_lx',
+                    'toyota-harrier': 'harrier_80',
+                    'honda-civic-typer': 'civic_fl5',
+                    'suzuki-jimny': 'jimny_jb64',
+                    'toyota-hiace': 'hiace_200_full',
+                    'toyota-prius': 'prius_60',
+                    'toyota-crown': 'crown_2024',
+                    'kcar-special': 'kcar_special',
+                };
+                const cmsId = idMapping[currentModelId] || currentModelId.replace(/-/g, '_');
+                const cmsPlan = plans.find(p => p.id === cmsId);
+                
+                if (cmsPlan) {
+                    showV2 = cmsPlan.showV2Option ?? true;
+                    if (cmsPlan.items && cmsPlan.items.length > 0) {
+                        rawPlans = cmsPlan.items.map((item: any, idx: number) => {
+                            const basePrice = parseInt((item.price || '0').replace(/,/g, ''), 10);
+                            const taxPrice = Math.floor(basePrice * 1.1);
+                            return {
+                                id: `cms-${idx}`,
+                                brand: (item.name || '').split(/[\s　]/)[0] || 'Unknown',
+                                grade: item.name || '',
+                                price: item.price || '0',
+                                priceTax: taxPrice.toLocaleString(),
+                                description: item.description || '',
+                                badge: item.badge || '',
+                                image: item.image || '',
+                                isRecommended: !!(item.badge && (item.badge === 'おすすめ' || item.badge === '推奨構成')),
+                                category: (item.name || '').toLowerCase().includes('grgo') ? 'grgo' : 'パンテーラ',
+                                features: {
+                                    triple: item.triple ?? false,
+                                    tilt: item.tilt ?? false,
+                                    bonnet: item.bonnet ?? false,
+                                    microwave: item.microwave ?? false,
+                                    siren: item.siren ?? false,
+                                    algorithm: item.algorithm ?? false,
+                                    canguard: item.canguard ?? false,
+                                    keyless: item.keyless ?? false,
+                                }
+                            };
+                        });
+                    }
                 }
             }
+        } catch (e) {
+            console.error("CMS Data Error:", e);
         }
-    } catch (e) {
-        console.error("CMS Data Error:", e);
     }
 
     const filteredPlans = rawPlans.filter((p: any) => {
@@ -131,6 +145,13 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
     // アナログキー（非スマートキー）車両かどうかの判定
     const isAnalogKey = modelId === 'toyota-landcruiser-70';
     const isSpecialModel = modelId === 'special-model';
+
+    const templates = (securityData as any).featuredPlanTemplates || [];
+    const activeTemplate = templates.find((t: any) => t.id === currentVehicle.featuredPlanId);
+
+    // Get Feature Set Template
+    const featureSets = (securityData as any).featureSetTemplates || [];
+    const activeFeatureSet = featureSets.find((fs: any) => fs.id === currentVehicle.featureSetId);
 
     return (
         <div className="min-h-screen bg-neutral-50 font-sans pb-32">
@@ -270,26 +291,32 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                         </div>
                                         <div>
                                             <h3 className="text-xl md:text-2xl font-black tracking-tight italic uppercase text-slate-800 leading-none">
-                                                エナジー <span className="text-emerald-600 font-black ml-1">{isAnalogKey ? 'ランクル70専用 セキュリティ対策パッケージ' : 'CANインベーダー対策パッケージ'}</span>
+                                                {activeTemplate ? activeTemplate.title : (
+                                                    <>エナジー <span className="text-emerald-600 font-black ml-1">{isAnalogKey ? 'ランクル70専用 セキュリティ対策パッケージ' : 'CANインベーダー対策パッケージ'}</span></>
+                                                )}
                                             </h3>
                                             <div className="h-1 w-20 bg-emerald-500/20 mt-2 rounded-full" />
                                         </div>
                                     </div>
                                     <p className="text-base md:text-lg text-slate-600 font-bold leading-relaxed mb-6 italic tracking-tight">
-                                        {isAnalogKey
-                                            ? '長年の実績に基づく、伝統的な物理防御と最新システムの融合プラン。'
-                                            : '豊富な施工経験から最新の盗難手口に対応させた独自プラン。'}
-                                        <span className="text-slate-900 block md:inline font-black ml-0 md:ml-1 underline decoration-emerald-300 decoration-4 underline-offset-4">
-                                            {isAnalogKey
-                                                ? 'お車の構造を熟知したプロの技で、大切な愛車を徹底的に守り抜きます。'
-                                                : 'スマートキーの利便性はそのままに、鉄壁の守りを提供します。'}
-                                        </span>
+                                        {activeTemplate ? activeTemplate.description : (
+                                            <>
+                                                {isAnalogKey
+                                                    ? '長年の実績に基づく、伝統的な物理防御と最新システムの融合プラン。'
+                                                    : '豊富な施工経験から最新の盗難手口に対応させた独自プラン。'}
+                                                <span className="text-slate-900 block md:inline font-black ml-0 md:ml-1 underline decoration-emerald-300 decoration-4 underline-offset-4">
+                                                    {isAnalogKey
+                                                        ? 'お車の構造を熟知したプロの技で、大切な愛車を徹底的に守り抜きます。'
+                                                        : 'スマートキーの利便性はそのままに、鉄壁の守りを提供します。'}
+                                                </span>
+                                            </>
+                                        )}
                                     </p>
                                     <div className="flex flex-wrap gap-2 mb-8">
-                                        {(isAnalogKey
+                                        {(activeTemplate ? activeTemplate.tags : (isAnalogKey
                                             ? ['Anti-プロ窃盗集団', 'Anti-自走盗難', 'Anti-部品盗難']
                                             : ['Anti-リレーアタック', 'Anti-CANインベーダー', 'Anti-コードグラバー', 'Anti-ゲームボーイ']
-                                        ).map((threat) => (
+                                        )).map((threat: string) => (
                                             <span key={threat} className="px-4 py-1.5 bg-white rounded-lg text-[10px] font-black tracking-[0.2em] text-emerald-700 uppercase border border-emerald-100 shadow-sm">
                                                 {threat}
                                             </span>
@@ -299,23 +326,27 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                         <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-5 border border-white shadow-sm hover:shadow-md transition-shadow">
                                             <div className="flex items-center gap-2 mb-2">
                                                 <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                                                <div className="text-slate-800 text-xs font-black tracking-widest uppercase">{isAnalogKey ? 'Analog Immobilize' : 'Digital Immobilize'}</div>
+                                                <div className="text-slate-800 text-xs font-black tracking-widest uppercase">
+                                                    {activeTemplate ? activeTemplate.feature1.title : (isAnalogKey ? 'Analog Immobilize' : 'Digital Immobilize')}
+                                                </div>
                                             </div>
                                             <div className="text-[12px] text-slate-500 font-bold leading-relaxed ml-3.5">
-                                                {isAnalogKey
+                                                {activeTemplate ? activeTemplate.feature1.description : (isAnalogKey
                                                     ? 'スターター回路等の物理遮断により、エンジンの自走盗難を確実に阻止します。'
-                                                    : '不正信号による engine 始動をデジタル的に徹底ブロック。'}
+                                                    : '不正信号による engine 始動をデジタル的に徹底ブロック。')}
                                             </div>
                                         </div>
                                         <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-5 border border-white shadow-sm hover:shadow-md transition-shadow">
                                             <div className="flex items-center gap-2 mb-2">
                                                 <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                                                <div className="text-slate-800 text-xs font-black tracking-widest uppercase">{isAnalogKey ? 'Robust Protection' : 'Seamless Arming'}</div>
+                                                <div className="text-slate-800 text-xs font-black tracking-widest uppercase">
+                                                    {activeTemplate ? activeTemplate.feature2.title : (isAnalogKey ? 'Robust Protection' : 'Seamless Arming')}
+                                                </div>
                                             </div>
                                             <div className="text-[12px] text-slate-500 font-bold leading-relaxed ml-3.5">
-                                                {isAnalogKey
+                                                {activeTemplate ? activeTemplate.feature2.description : (isAnalogKey
                                                     ? '屈強なサイレンとセンサー構成により、強引な侵入も即座に迎撃。'
-                                                    : '純正キーのロック操作に連動して、確実に警戒を開始。'}
+                                                    : '純正キーのロック操作に連動して、確実に警戒を開始。')}
                                             </div>
                                         </div>
                                     </div>
@@ -392,18 +423,19 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                         </div>
 
                                         <div className="grid grid-cols-2 gap-x-4 gap-y-3">
-                                            {[
-                                                { label: 'トリプルセンサー', active: plan.features.triple },
-                                                { label: '傾斜センサー', active: plan.features.tilt },
-                                                { label: 'ボンネットセンサー', active: plan.features.bonnet },
-                                                { label: 'マイクロ波', active: plan.features.microwave },
-                                                { label: 'バックアップサイレン', active: plan.features.siren },
-                                                { label: '純正ロック連動', active: plan.features.algorithm },
-                                                { label: 'CANガード', active: plan.features.canguard }
-                                            ].map((f, i) => (
-                                                <div key={i} className={`flex items-center gap-2 ${f.active ? 'opacity-100' : 'opacity-20'}`}>
-                                                    <div className={`w-3.5 h-3.5 rounded-full flex items-center justify-center ${f.active ? 'bg-emerald-100' : 'bg-gray-100'}`}>
-                                                        <Check className={`w-2 h-2 ${f.active ? 'text-emerald-600' : 'text-gray-400'}`} />
+                                            {(activeFeatureSet?.features || [
+                                                { key: 'triple', label: 'トリプル' },
+                                                { key: 'tilt', label: '傾斜' },
+                                                { key: 'bonnet', label: 'ボンネット' },
+                                                { key: 'microwave', label: 'マイクロ波' },
+                                                { key: 'siren', label: 'バックアップサイレン' },
+                                                { key: 'algorithm', label: '純正ロック連動' },
+                                                { key: 'canguard', label: 'CANガード' },
+                                                { key: 'keyless', label: 'アルゴリズム' }
+                                            ]).map((f, i) => (
+                                                <div key={i} className={`flex items-center gap-2 ${plan.features?.[f.key] ? 'opacity-100' : 'opacity-20'}`}>
+                                                    <div className={`w-3.5 h-3.5 rounded-full flex items-center justify-center ${plan.features?.[f.key] ? 'bg-emerald-100' : 'bg-gray-100'}`}>
+                                                        <Check className={`w-2 h-2 ${plan.features?.[f.key] ? 'text-emerald-600' : 'text-gray-400'}`} />
                                                     </div>
                                                     <span className="text-[10px] font-bold text-gray-600 italic whitespace-nowrap">{f.label}</span>
                                                 </div>
@@ -442,25 +474,22 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                                         </tr>
                                     </thead>
                                     <tbody className="divide-y divide-gray-100">
-                                        {[
-                                            { label: 'トリプル', key: 'triple', desc: '衝撃と空圧検知。' },
-                                            { label: '傾斜センサー', key: 'tilt', desc: 'レッカー対策。' },
-                                            { label: 'ボンネット', key: 'bonnet', desc: 'バッテリー切断対策。' },
-                                            { label: 'マイクロ波', key: 'microwave', desc: '不審接近威嚇。' },
-                                            { label: 'バックアップ', key: 'siren', desc: '電源断対応サイレン。' },
-                                            { label: '純正ロック連動', key: 'algorithm', desc: '純正キー同期。' },
-                                            { label: 'CANガード', key: 'canguard', desc: 'デジタル通信遮断。' },
-                                             { label: 'LEDプレート', key: 'led', desc: '視覚的威嚇効果。' }
-                                        ].map((feature, idx) => (
+                                        {(activeFeatureSet?.features || [
+                                            { key: 'triple', label: 'トリプル' },
+                                            { key: 'tilt', label: '傾斜' },
+                                            { key: 'bonnet', label: 'ボンネット' },
+                                            { key: 'microwave', label: 'マイクロ波' },
+                                            { key: 'siren', label: 'バックアップサイレン' },
+                                            { key: 'algorithm', label: '純正ロック連動' },
+                                            { key: 'canguard', label: 'CANガード' },
+                                            { key: 'keyless', label: 'アルゴリズム' }
+                                        ]).map((feature, idx) => (
                                             <tr key={feature.key} className={`hover:bg-neutral-50/50 transition-colors group`}>
                                                 <td className="py-5 px-2 lg:px-4">
                                                     <div className="flex flex-col gap-1">
                                                         <div className="flex items-center gap-2">
                                                             <div className="w-1.5 h-1.5 rounded-full bg-emerald-500/30 group-hover:bg-emerald-500 transition-colors shrink-0" />
                                                             <span className="text-[10px] lg:text-xs font-black text-gray-600 italic tracking-tighter leading-none">{feature.label}</span>
-                                                        </div>
-                                                        <div className="text-[8px] text-gray-400 font-bold ml-3.5 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap overflow-hidden h-0 group-hover:h-auto">
-                                                            {feature.desc}
                                                         </div>
                                                     </div>
                                                 </td>
@@ -502,23 +531,40 @@ const VehicleSecurityDetail: React.FC<VehicleSecurityDetailProps> = ({ assets })
                     </>
                 )}
 
-                {/* Alternative Options Section */}
-                {showV2 && (
-                    <div className="mt-16 bg-white rounded-[2.5rem] p-8 md:p-12 border border-slate-100 shadow-sm relative overflow-hidden">
-                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
-                            <div>
-                                <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-50 rounded-full text-slate-500 text-[10px] font-black tracking-widest uppercase mb-4 italic border border-slate-100">
-                                    Alternative Options
+                {/* Condensed Features / Budget Suggestion (Grgo V2) */}
+                {!isSpecialModel && currentVehicle.showV2Option && (
+                    <motion.div 
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="mt-16"
+                    >
+                        <div className="bg-[#0b1210] rounded-[3rem] p-8 md:p-12 relative overflow-hidden group shadow-2xl border border-emerald-500/10">
+                            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-500/5 rounded-full -mr-250 -mt-250 blur-3xl" />
+                            
+                            <div className="flex flex-col md:flex-row items-center gap-10 relative z-10">
+                                <div className="w-full md:w-1/4">
+                                    <div className="aspect-square bg-gradient-to-br from-emerald-400/10 to-emerald-600/10 rounded-3xl p-6 border border-emerald-500/10 flex flex-col items-center justify-center text-center">
+                                        <Zap className="w-12 h-12 text-emerald-400 mb-4 animate-pulse" />
+                                        <div className="text-emerald-500 text-[10px] font-black tracking-[0.4em] uppercase mb-1">Select Option</div>
+                                        <h3 className="text-white text-xl font-black italic tracking-tighter uppercase leading-tight">Grgo V2<br /><span className="text-xs opacity-50 italic">Smart Selection</span></h3>
+                                    </div>
                                 </div>
-                                <h3 className="text-xl md:text-2xl font-black italic tracking-tighter text-slate-900 mb-4">
-                                    ご予算に合わせた基本プラン
-                                </h3>
-                                <p className="text-sm text-slate-500 font-bold leading-relaxed max-w-2xl">
-                                    上記メインプランの他、基本性能を凝縮した「Grgo V2」ベースのプラン等、ご予算に応じた柔軟な構成も可能です。「まずは最低限の守りを固めたい」という方も、最適な防犯対策をご提案いたしますので、お気軽にご相談ください。
-                                </p>
+                                
+                                <div className="w-full md:w-3/4 space-y-4">
+                                    <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-500/10 rounded-full text-emerald-400 text-[10px] font-black tracking-widest uppercase italic">
+                                        <AlertTriangle className="w-3.5 h-3.5" /> For Selective Protection
+                                    </div>
+                                    <h2 className="text-white text-2xl md:text-3xl font-black italic tracking-tighter leading-none uppercase" dangerouslySetInnerHTML={{ 
+                                        __html: securityData.home.v2Settings?.title || '予算に合わせて、<span class="text-emerald-500">機能を凝縮した守り</span>を。' 
+                                    }} />
+                                    <p className="text-zinc-400 font-bold leading-relaxed max-w-xl text-xs md:text-sm">
+                                        {securityData.home.v2Settings?.description || '「フルスペックは必要ないが、最新の盗難手口からは確実に守りたい」というお客様へ。ANGでは、機能を厳選しコストパフォーマンスを極限まで高めた**Grgo V2ベースのプラン**も提案可能です。お気軽にご相談ください。'}
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 )}
 
                 {/* Trust & Commitment Section */}

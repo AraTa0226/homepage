@@ -98,10 +98,23 @@ const AudioPlanDetail: React.FC = () => {
         }
     }
 
+    const isRedirect = decodedPlanId === 'スピーカー交換STANDARD line（10万円まで）' || 
+            decodedPlanId === 'STANDARD line' || 
+            decodedPlanId === 'standard-line' ||
+            decodedPlanId.includes('STANDARD line') ||
+            decodedPlanId.includes('スタンダードライン');
+
     useEffect(() => {
+        if (isRedirect) {
+            navigate('/sp-standard', { replace: true });
+            return;
+        }
+
         window.scrollTo(0, 0);
         if (plan) document.title = `${plan.name} | Sound ANG`;
-    }, [plan]);
+    }, [plan, isRedirect, navigate]);
+
+    if (isRedirect) return null;
 
     if (!plan) return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -128,59 +141,7 @@ const AudioPlanDetail: React.FC = () => {
         </div>
     );
 
-    const STANDARD_LINE_FALLBACK = {
-        badge: 'STANDARD LINE',
-        name: "スタンダードライン スピーカー交換パッケージ",
-        description: "音質アップの第一歩はスピーカー交換から！\n\nスピーカー交換パッケージスタンダードラインでは１０万円までのスピーカーの中からお気に入りのスピーカーを選んでいただき、ドアチューニング、スピーカーケーブルなどがセットになったこだわった内容です。\n\nこの価格帯は各社とも人気商品がラインアップされていて個性が強いユニットが並んでいます。商品選びのときはご希望のインストール方法が可能かどうかも判断しながらのユニット選びが必要です。埋め込み奥行きやツィーターマウントの有無も併記していますのでご参考ください。",
-        packageDetails: {
-            standardPrice: "117700",
-            savings: "35860",
-            contents: [
-                { title: "スピーカーユニット", description: "17cmモデル2WAY（10万円まで）", icon: "Music" },
-                { title: "ドアチューニングBコース", description: "¥27,500 相当", icon: "Zap" },
-                { title: "カスタムインナーバッフル", description: "¥11,000 相当", icon: "Layers" },
-                { title: "スピーカーケーブル", description: "ANGオリジナル/10m (¥16,500 相当)", icon: "Layers" },
-                { title: "ツイーター取り付け", description: "純正位置もしくはオンダッシュ取り付け", icon: "Music" },
-                { title: "取付・調整工賃", description: "ワイヤリング込 ¥22,000 相当", icon: "Wrench" }
-            ],
-            upgrades: [
-                { 
-                    title: "B→Aコース", 
-                    price: "+¥11,000", 
-                    description: "背圧処理にフェリソニDS-1.5WPを使用、及び制振材料の増量（通常¥16,500）" 
-                },
-                { 
-                    title: "B→A+コース", 
-                    price: "+¥22,000", 
-                    description: "背圧処理にフェリソニC2を使用、及び制振材料の増量（通常¥27,500）" 
-                },
-                { 
-                    title: "B→Sコース", 
-                    price: "+¥33,000", 
-                    description: "DS-1.5WPをさらに増量。最新マテリアルを複合した高密度な施工（通常¥38,500）" 
-                },
-                { 
-                    title: "B→S+コース", 
-                    price: "+¥44,000", 
-                    description: "フェリソニC2を贅沢に使用。最高峰の制振・吸音・遮音処理（通常¥49,500）" 
-                }
-            ],
-            notes: [
-                "注)バッフル適合が無い車種では別途製作しますので5500円が必要です。",
-                "注）ツィーター固定にマウントなどが必要な車種では別途追加が必要になります。",
-                "注）ドア通線に加工が必要な車両(ハーネスがカプラなど)では別途加工費用がかかります。"
-            ]
-        },
-        lineup: [
-            { brand: "KICKER", model: "CSS674", price: "81840", depth: "47mm", tweeter: "付属", image: "/images/Audio/speakers/kicker_css674.webp", youtube: "https://www.youtube.com/watch?v=kicker_sample" },
-            { brand: "FOCAL", model: "PS165V1", price: "98450", depth: "65mm", tweeter: "付属", image: "/images/Audio/speakers/focal_ps165v1.webp", youtube: "https://www.youtube.com/watch?v=focal_sample" }
-        ]
-    };
 
-    // If plan is found but missing details (reverted data), merge with fallback
-    if (plan && (plan.id === 'standard-line' || plan.name?.includes('STANDARD line')) && (!plan.packageDetails || !plan.lineup)) {
-        plan = { ...plan, ...STANDARD_LINE_FALLBACK };
-    }
 
     const details = plan?.packageDetails;
     const lineup = plan?.lineup;

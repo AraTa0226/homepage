@@ -2466,7 +2466,7 @@
           "fieldId": "item",
           "name": "Grgo ZVT II ＋ CANガード ＋ マイクロ波 ＋ ボンネット",
           "price": "373,800",
-          "description": "傾斜・トリプルセンサー標準��備�������������������������������������������������������にマ�����������������������������������ク��������������波��������追加しました。。CANガードと1WAYリモコンも付属。",
+          "description": "傾斜・トリプルセンサー標準�������������������������������������������������������������������������������������������������������������������������にマ�����������������������������������ク��������������波��������追加しました。。CANガードと1WAYリモコンも付属。",
           "triple": true,
           "tilt": true,
           "bonnet": true,
@@ -2480,7 +2480,7 @@
           "fieldId": "item",
           "name": "Panthera Z106 ＋ CANガード ＋ マイクロ波 ＋ トリプル",
           "price": "412,000",
-          "description": "最高峰のセキュリティーパンテーラのスタートモデルに、マイクロ波、トリプルを追加したプランです。",
+          "description": "最高峰のセキュリティーパンテーラのス���ートモ���ルに、マイクロ波、����プルを追��し��プランです。",
           "triple": true,
           "tilt": false,
           "bonnet": true,
@@ -3749,10 +3749,10 @@
               "name": "LEXUS",
               "items": [
                 "GX550",
+                "レクサス LX",
                 "RX",
                 "NX",
-                "LBX",
-                "レクサス LX"
+                "LBX"
               ]
             },
             {
@@ -3766,8 +3766,7 @@
                 "クラウン各種",
                 "ハリアー",
                 "ハイエース",
-                "プリウス",
-                "Land Cruiser 300"
+                "プリウス"
               ]
             },
             {
@@ -3838,30 +3837,74 @@
         }
       ]
     },
+    "featuredPlanTemplates": [
+      {
+        "id": "can-invader-standard",
+        "name": "最新車・CANインベーダー対策基本",
+        "title": "エナジー CANインベーダー対策パッケージ",
+        "description": "豊富な施工経験から最新の盗難手口に対応させた独自プラン。スマートキーの利便性はそのままに、鉄壁の守りを提供します。",
+        "tags": [
+          "ANTI-リレーアタック",
+          "ANTI-CANインベーダー",
+          "ANTI-コードグラバー",
+          "ANTI-ゲームボーイ"
+        ],
+        "feature1": {
+          "title": "DIGITAL IMMOBILIZE",
+          "description": "不正信号による engine 始動をデジタル的に徹底ブロック。"
+        },
+        "feature2": {
+          "title": "SEAMLESS ARMING",
+          "description": "純正キーのロック操作に連動して、確実に警戒を開始。"
+        }
+      },
+      {
+        "id": "analog-special",
+        "name": "ランクル70等・アナログ車専用",
+        "title": "エナジー 物理防御パッケージ",
+        "description": "長年の実績に基づく、伝統的な物理防御と最新システムの融合プラン。お車の構造を熟知したプロの技で、大切な愛車を徹底的に守り抜きます。",
+        "tags": [
+          "Anti-プロ窃盗集団",
+          "Anti-自走盗難",
+          "Anti-部品盗難"
+        ],
+        "feature1": {
+          "title": "ANALOG IMMOBILIZE",
+          "description": "スターター回路等の物理遮断により、エンジンの自走盗難を確実に阻止します。"
+        },
+        "feature2": {
+          "title": "ROBUST PROTECTION",
+          "description": "屈強なサイレンとセンサー構成により、強引な侵入も即座に迎撃。"
+        }
+      }
+    ],
     "vehicles": {
       "lexus-gx550": {
         "name": "レクサス GX550",
         "year": "2024-",
         "image": "/images/Security/vehicle/gx.webp",
         "description": "最新鋭のオフローダー。...",
+        "featuredPlanId": "can-invader-standard",
+        "showV2Option": false,
         "plans": [
           {
             "id": "gx-grgo-zvt",
             "brand": "Grgo",
-            "grade": "ZVT II + CAN",
+            "grade": "ZVT II + CANガード ",
             "description": "傾斜センサー標準装備。CANガードと1WAYリモコンも付属。",
             "price": "321,800",
             "priceTax": "370,260",
-            "isRecommended": true,
+            "isRecommended": false,
             "features": {
               "triple": true,
-              "tilt": false,
+              "tilt": true,
               "bonnet": true,
               "microwave": false,
               "siren": false,
               "algorithm": true,
               "canguard": true,
-              "led": false
+              "led": false,
+              "keyless": true
             },
             "category": "grgo"
           },
@@ -3870,46 +3913,28 @@
             "brand": "Grgo",
             "grade": "ZVT II ＋ CANガード ＋ マイクロ波",
             "description": "ZVT IIに車外接近検知（うろつき対策）を追加。",
-            "price": "345,600",
+            "price": "373,800",
             "priceTax": "427,460",
             "features": {
               "triple": true,
-              "tilt": false,
+              "tilt": true,
               "bonnet": true,
               "microwave": true,
               "siren": false,
               "algorithm": true,
               "canguard": true,
-              "led": false
+              "led": false,
+              "keyless": true
             },
             "category": "grgo"
           },
           {
             "id": "gx-panthera-z106",
             "brand": "Panthera",
-            "grade": "Z106 ＋ CANガード ＋ トリプル",
+            "grade": "Z106 ＋ CANガード + トリプル + マイクロ波",
             "description": "パンテーラの緻密な感度調整を活かす実戦的パッケージ。",
-            "price": "374,800",
+            "price": "412,000",
             "priceTax": "412,280",
-            "features": {
-              "triple": true,
-              "tilt": false,
-              "bonnet": true,
-              "microwave": false,
-              "siren": false,
-              "algorithm": true,
-              "canguard": true,
-              "led": false
-            },
-            "category": "パンテーラ"
-          },
-          {
-            "id": "gx-panthera-z106-microwave",
-            "brand": "Grgo",
-            "grade": "Z106 ＋ CANガード ＋ トリプル ＋ マイクロ波",
-            "description": "Z106パッケージに接近検知のマイクロ波をプラス。",
-            "price": "426,800",
-            "priceTax": "469,480",
             "features": {
               "triple": true,
               "tilt": false,
@@ -3918,37 +3943,39 @@
               "siren": false,
               "algorithm": true,
               "canguard": true,
-              "led": false
+              "led": false,
+              "keyless": true
+            },
+            "category": "パンテーラ"
+          },
+          {
+            "id": "gx-panthera-z106-microwave",
+            "brand": "Panthera",
+            "grade": "Z306 + CANガード ",
+            "description": "Z106パッケージに接近検知のマイクロ波をプラス。",
+            "price": "382,000",
+            "priceTax": "469,480",
+            "features": {
+              "triple": true,
+              "tilt": true,
+              "bonnet": true,
+              "microwave": false,
+              "siren": false,
+              "algorithm": true,
+              "canguard": true,
+              "led": false,
+              "keyless": true
             },
             "category": "パンテーラ"
           },
           {
             "id": "gx-panthera-z306",
             "brand": "Panthera",
-            "grade": "Z306 ＋ CANガード",
+            "grade": "Z306 ＋ CANガード + マイクロ波",
             "description": "全方位検知のZ306に最新のCANガードを融合。",
-            "price": "396,800",
+            "price": "434,000",
             "priceTax": "436,480",
-            "isRecommended": true,
-            "features": {
-              "triple": true,
-              "tilt": true,
-              "bonnet": true,
-              "microwave": false,
-              "siren": false,
-              "algorithm": true,
-              "canguard": true,
-              "led": false
-            },
-            "category": "パンテーラ"
-          },
-          {
-            "id": "gx-panthera-z306-microwave",
-            "brand": "Panthera",
-            "grade": "Z306 ＋ CANガード ＋ マイクロ波",
-            "description": "全方位検知のZ306に、接近検知のマイクロ波をプラス。",
-            "price": "448,800",
-            "priceTax": "493,680",
+            "isRecommended": false,
             "features": {
               "triple": true,
               "tilt": true,
@@ -3957,7 +3984,8 @@
               "siren": false,
               "algorithm": true,
               "canguard": true,
-              "led": false
+              "led": false,
+              "keyless": true
             },
             "category": "パンテーラ"
           },
@@ -3966,7 +3994,7 @@
             "brand": "Panthera",
             "grade": "Z706 ＋ CANガード",
             "description": "すべてのセンサーを装備した究極の多重防御モデル。",
-            "price": "486,800",
+            "price": "472,000",
             "priceTax": "535,480",
             "features": {
               "triple": true,
@@ -3977,162 +4005,146 @@
               "algorithm": true,
               "canguard": true,
               "led": false,
-              "ir": true
+              "ir": true,
+              "keyless": true
             },
-            "category": "パンテーラ"
-          },
-          {
-            "id": 1778272347260,
-            "brand": "Grgo",
-            "grade": "New Plan",
-            "description": "",
-            "price": "0",
-            "features": {
-              "triple": false,
-              "tilt": false,
-              "bonnet": false,
-              "microwave": false,
-              "siren": false,
-              "algorithm": false,
-              "canguard": false
-            }
-          },
-          {
-            "id": 1778272347766,
-            "brand": "Grgo",
-            "grade": "New Plan",
-            "description": "",
-            "price": "0",
-            "features": {
-              "triple": false,
-              "tilt": false,
-              "bonnet": false,
-              "microwave": false,
-              "siren": false,
-              "algorithm": false,
-              "canguard": false
-            }
-          },
-          {
-            "id": 1778272355943,
-            "brand": "Grgo",
-            "grade": "New Plan",
-            "description": "",
-            "price": "0",
-            "features": {
-              "triple": false,
-              "tilt": false,
-              "bonnet": false,
-              "microwave": false,
-              "siren": false,
-              "algorithm": false,
-              "canguard": false
-            }
-          },
-          {
-            "id": 1778272357909,
-            "brand": "Grgo",
-            "grade": "New Plan",
-            "description": "",
-            "price": "0",
-            "features": {
-              "triple": false,
-              "tilt": false,
-              "bonnet": false,
-              "microwave": false,
-              "siren": false,
-              "algorithm": false,
-              "canguard": false
-            }
-          },
-          {
-            "id": 1778272364342,
-            "brand": "Grgo",
-            "grade": "New Plan",
-            "description": "",
-            "price": "0",
-            "features": {
-              "triple": false,
-              "tilt": false,
-              "bonnet": false,
-              "microwave": false,
-              "siren": false,
-              "algorithm": false,
-              "canguard": false
-            }
-          },
-          {
-            "id": 1778272371393,
-            "brand": "Grgo",
-            "grade": "New Plan",
-            "description": "",
-            "price": "0",
-            "features": {
-              "triple": false,
-              "tilt": false,
-              "bonnet": false,
-              "microwave": false,
-              "siren": false,
-              "algorithm": false,
-              "canguard": false
-            }
-          },
-          {
-            "id": 1778272378804,
-            "brand": "Grgo",
-            "grade": "New Plan",
-            "description": "",
-            "price": "0",
-            "features": {
-              "triple": false,
-              "tilt": false,
-              "bonnet": false,
-              "microwave": false,
-              "siren": false,
-              "algorithm": false,
-              "canguard": false
-            }
-          },
-          {
-            "id": 1778272398422,
-            "brand": "Grgo",
-            "grade": "New Plan",
-            "description": "",
-            "price": "0",
-            "features": {
-              "triple": false,
-              "tilt": false,
-              "bonnet": false,
-              "microwave": false,
-              "siren": false,
-              "algorithm": false,
-              "canguard": false
-            }
-          },
-          {
-            "id": 1778272412751,
-            "brand": "Grgo",
-            "grade": "New Plan",
-            "description": "",
-            "price": "0",
-            "features": {
-              "triple": false,
-              "tilt": false,
-              "bonnet": false,
-              "microwave": false,
-              "siren": false,
-              "algorithm": false,
-              "canguard": false
-            }
+            "category": "パンテーラ",
+            "isRecommended": true
           }
         ]
       },
       "lexus-lx": {
         "name": "レクサス LX",
-        "year": "2024-",
+        "year": "2022-",
         "image": "/images/Security/vehicle/lx.webp",
         "description": "",
-        "plans": []
+        "plans": [
+          {
+            "id": "gx-grgo-zvt",
+            "brand": "Grgo",
+            "grade": "ZVT II + CANガード ",
+            "description": "傾斜センサー標準装備。CANガードと1WAYリモコンも付属。",
+            "price": "328,800",
+            "priceTax": "370,260",
+            "isRecommended": false,
+            "features": {
+              "triple": true,
+              "tilt": true,
+              "bonnet": true,
+              "microwave": false,
+              "siren": false,
+              "algorithm": true,
+              "canguard": true,
+              "led": false,
+              "keyless": true
+            },
+            "category": "grgo"
+          },
+          {
+            "id": "gx-grgo-zvt-microwave",
+            "brand": "Grgo",
+            "grade": "ZVT II ＋ CANガード ＋ マイクロ波",
+            "description": "ZVT IIに車外接近検知（うろつき対策）を追加。",
+            "price": "380,800",
+            "priceTax": "427,460",
+            "features": {
+              "triple": true,
+              "tilt": true,
+              "bonnet": true,
+              "microwave": true,
+              "siren": false,
+              "algorithm": true,
+              "canguard": true,
+              "led": false,
+              "keyless": true
+            },
+            "category": "grgo"
+          },
+          {
+            "id": "gx-panthera-z106",
+            "brand": "Panthera",
+            "grade": "Z106 ＋ CANガード + トリプル + マイクロ波",
+            "description": "パンテーラの緻密な感度調整を活かす実戦的パッケージ。",
+            "price": "419,000",
+            "priceTax": "412,280",
+            "features": {
+              "triple": true,
+              "tilt": false,
+              "bonnet": true,
+              "microwave": true,
+              "siren": false,
+              "algorithm": true,
+              "canguard": true,
+              "led": false,
+              "keyless": true
+            },
+            "category": "パンテーラ"
+          },
+          {
+            "id": "gx-panthera-z106-microwave",
+            "brand": "Panthera",
+            "grade": "Z306 + CANガード ",
+            "description": "Z106パッケージに接近検知のマイクロ波をプラス。",
+            "price": "389,000",
+            "priceTax": "469,480",
+            "features": {
+              "triple": true,
+              "tilt": true,
+              "bonnet": true,
+              "microwave": false,
+              "siren": false,
+              "algorithm": true,
+              "canguard": true,
+              "led": false,
+              "keyless": true
+            },
+            "category": "パンテーラ"
+          },
+          {
+            "id": "gx-panthera-z306",
+            "brand": "Panthera",
+            "grade": "Z306 ＋ CANガード + マイクロ波",
+            "description": "全方位検知のZ306に最新のCANガードを融合。",
+            "price": "441,000",
+            "priceTax": "436,480",
+            "isRecommended": false,
+            "features": {
+              "triple": true,
+              "tilt": true,
+              "bonnet": true,
+              "microwave": true,
+              "siren": false,
+              "algorithm": true,
+              "canguard": true,
+              "led": false,
+              "keyless": true
+            },
+            "category": "パンテーラ"
+          },
+          {
+            "id": "gx-panthera-z706-full",
+            "brand": "Panthera",
+            "grade": "Z706 ＋ CANガード",
+            "description": "すべてのセンサーを装備した究極の多重防御モデル。",
+            "price": "479,000",
+            "priceTax": "535,480",
+            "features": {
+              "triple": true,
+              "tilt": true,
+              "bonnet": true,
+              "microwave": true,
+              "siren": true,
+              "algorithm": true,
+              "canguard": true,
+              "led": false,
+              "ir": true,
+              "keyless": true
+            },
+            "category": "パンテーラ",
+            "isRecommended": true
+          }
+        ],
+        "featuredPlanId": "can-invader-standard"
       },
       "lexus-rx": {
         "name": "レクサス RX",
@@ -4143,14 +4155,14 @@
           {
             "id": "rx-grgo-zv-full",
             "brand": "Grgo",
-            "grade": "ZV II ＋ CANガード ＋ トリプル",
+            "grade": "ZV II ＋ CANガード ",
             "description": "純正ロック連動とトリプルセンサーを含むANG推奨パッケージ。",
-            "price": "314,600",
+            "price": "269,000",
             "priceTax": "346,060",
             "features": {
-              "triple": true,
+              "triple": false,
               "tilt": false,
-              "bonnet": true,
+              "bonnet": false,
               "microwave": false,
               "siren": false,
               "algorithm": true,
@@ -4164,9 +4176,9 @@
             "brand": "Grgo",
             "grade": "ZVT II ＋ CANガード",
             "description": "傾斜センサーとCANガード。1WAYリモコンも付属した上位モデル。",
-            "price": "336,600",
+            "price": "316,600",
             "priceTax": "370,260",
-            "isRecommended": true,
+            "isRecommended": false,
             "features": {
               "triple": true,
               "tilt": true,
@@ -4175,45 +4187,48 @@
               "siren": false,
               "algorithm": true,
               "canguard": true,
-              "led": false
+              "led": false,
+              "keyless": true
             },
             "category": "grgo"
           },
           {
             "id": "rx-panthera-z106-plus",
-            "brand": "Panthera",
-            "grade": "Z106 ＋ CANガード ＋ トリプル",
+            "brand": "Grgo",
+            "grade": "ZVT II ＋ CANガード +マイクロ波",
             "description": "パンテーラの高精度な検知能力を最大限に活かしたフルガード。",
-            "price": "374,800",
+            "price": "368,800",
             "priceTax": "412,280",
             "features": {
               "triple": true,
-              "tilt": false,
+              "tilt": true,
               "bonnet": true,
-              "microwave": false,
+              "microwave": true,
               "siren": false,
               "algorithm": true,
               "canguard": true,
-              "led": false
+              "led": false,
+              "keyless": true
             },
             "category": "パンテーラ"
           },
           {
             "id": "rx-panthera-z306-standard",
             "brand": "Panthera",
-            "grade": "Z306",
+            "grade": "Z106＋ CANガード + トリプル + マイクロ波",
             "description": "基本的な車両監視を網羅。後からオプション追加も可能です。",
-            "price": "360,800",
+            "price": "407,000",
             "priceTax": "396,880",
             "features": {
               "triple": true,
-              "tilt": true,
+              "tilt": false,
               "bonnet": true,
-              "microwave": false,
+              "microwave": true,
               "siren": false,
-              "algorithm": false,
+              "algorithm": true,
               "canguard": true,
-              "led": false
+              "led": false,
+              "keyless": true
             },
             "category": "パンテーラ"
           },
@@ -4222,9 +4237,9 @@
             "brand": "Panthera",
             "grade": "Z306 ＋ CANガード",
             "description": "Z306の多機能にデジタル対策のCANガードを完全統合。",
-            "price": "396,800",
+            "price": "377,000",
             "priceTax": "436,480",
-            "isRecommended": true,
+            "isRecommended": false,
             "features": {
               "triple": true,
               "tilt": true,
@@ -4233,7 +4248,8 @@
               "siren": false,
               "algorithm": true,
               "canguard": true,
-              "led": false
+              "led": false,
+              "keyless": true
             },
             "category": "パンテーラ"
           },
@@ -4242,7 +4258,7 @@
             "brand": "Panthera",
             "grade": "Z306 ＋ CANガード ＋ マイクロ波",
             "description": "接近検知を追加し、愛車へのうろつきも許さない最強布陣。",
-            "price": "448,800",
+            "price": "429,000",
             "priceTax": "493,680",
             "features": {
               "triple": true,
@@ -4252,7 +4268,8 @@
               "siren": false,
               "algorithm": true,
               "canguard": true,
-              "led": false
+              "led": false,
+              "keyless": true
             },
             "category": "パンテーラ"
           },
@@ -4261,7 +4278,7 @@
             "brand": "Panthera",
             "grade": "Z706 ＋ CANガード",
             "description": "あらゆる手口から車を守る、ANGノウハウの結晶プラン。",
-            "price": "486,800",
+            "price": "467,000",
             "priceTax": "535,480",
             "features": {
               "triple": true,
@@ -4272,11 +4289,13 @@
               "algorithm": true,
               "canguard": true,
               "led": false,
-              "ir": true
+              "ir": true,
+              "keyless": true
             },
             "category": "パンテーラ"
           }
-        ]
+        ],
+        "showV2Option": true
       },
       "lexus-nx": {
         "name": "レクサス NX",
@@ -4285,16 +4304,16 @@
         "description": "...",
         "plans": [
           {
-            "id": "nx-grgo-zv-full",
+            "id": "rx-grgo-zv-full",
             "brand": "Grgo",
-            "grade": "ZV II ＋ CANガード ＋ トリプル",
-            "description": "純正ロック連動とトリプルセンサー。NXオーナーに一番支持される構成。",
-            "price": "314,600",
+            "grade": "ZV II ＋ CANガード ",
+            "description": "純正ロック連動とトリプルセンサーを含むANG推奨パッケージ。",
+            "price": "269,000",
             "priceTax": "346,060",
             "features": {
-              "triple": true,
+              "triple": false,
               "tilt": false,
-              "bonnet": true,
+              "bonnet": false,
               "microwave": false,
               "siren": false,
               "algorithm": true,
@@ -4304,13 +4323,13 @@
             "category": "grgo"
           },
           {
-            "id": "nx-grgo-zvt-full",
+            "id": "rx-grgo-zvt-full",
             "brand": "Grgo",
             "grade": "ZVT II ＋ CANガード",
-            "description": "傾斜センサーとCANガード、1WAYリモコン。安心をワンランク上げるプラン。",
-            "price": "331,600",
-            "priceTax": "364,760",
-            "isRecommended": true,
+            "description": "傾斜センサーとCANガード。1WAYリモコンも付属した上位モデル。",
+            "price": "316,600",
+            "priceTax": "370,260",
+            "isRecommended": false,
             "features": {
               "triple": true,
               "tilt": true,
@@ -4319,75 +4338,18 @@
               "siren": false,
               "algorithm": true,
               "canguard": true,
-              "led": false
+              "led": false,
+              "keyless": true
             },
             "category": "grgo"
           },
           {
-            "id": "nx-panthera-z106-plus",
-            "brand": "Panthera",
-            "grade": "Z106 ＋ CANガード ＋ トリプル",
-            "description": "パンテーラの高度な検知能力と操作性を追求したパッケージ。",
-            "price": "369,800",
-            "priceTax": "406,780",
-            "features": {
-              "triple": true,
-              "tilt": false,
-              "bonnet": true,
-              "microwave": false,
-              "siren": false,
-              "algorithm": true,
-              "canguard": true,
-              "led": false
-            },
-            "category": "パンテーラ"
-          },
-          {
-            "id": "nx-panthera-z306-standard",
-            "brand": "Panthera",
-            "grade": "Z306",
-            "description": "充実のセンサー構成。車両の安全をバランスよく監視します。",
-            "price": "360,800",
-            "priceTax": "396,880",
-            "features": {
-              "triple": true,
-              "tilt": true,
-              "bonnet": true,
-              "microwave": false,
-              "siren": false,
-              "algorithm": false,
-              "canguard": true,
-              "led": false
-            },
-            "category": "パンテーラ"
-          },
-          {
-            "id": "nx-panthera-z306-canguard",
-            "brand": "Panthera",
-            "grade": "Z306 ＋ CANガード",
-            "description": "全方位監視とCANインベーダー対策を完全に両立させたプラン。",
-            "price": "391,800",
-            "priceTax": "430,980",
-            "isRecommended": true,
-            "features": {
-              "triple": true,
-              "tilt": true,
-              "bonnet": true,
-              "microwave": false,
-              "siren": false,
-              "algorithm": true,
-              "canguard": true,
-              "led": false
-            },
-            "category": "パンテーラ"
-          },
-          {
-            "id": "nx-panthera-z306-microwave",
-            "brand": "Panthera",
-            "grade": "Z306 ＋ CANガード ＋ マイクロ波",
-            "description": "車外への威嚇を強化し、不審な接近を未然に警告。",
-            "price": "443,800",
-            "priceTax": "488,180",
+            "id": "rx-panthera-z106-plus",
+            "brand": "Grgo",
+            "grade": "ZVT II ＋ CANガード +マイクロ波",
+            "description": "パンテーラの高精度な検知能力を最大限に活かしたフルガード。",
+            "price": "368,800",
+            "priceTax": "412,280",
             "features": {
               "triple": true,
               "tilt": true,
@@ -4396,17 +4358,79 @@
               "siren": false,
               "algorithm": true,
               "canguard": true,
-              "led": false
+              "led": false,
+              "keyless": true
             },
             "category": "パンテーラ"
           },
           {
-            "id": "nx-panthera-z706-full",
+            "id": "rx-panthera-z306-standard",
+            "brand": "Panthera",
+            "grade": "Z106＋ CANガード + トリプル + マイクロ波",
+            "description": "基本的な車両監視を網羅。後からオプション追加も可能です。",
+            "price": "407,000",
+            "priceTax": "396,880",
+            "features": {
+              "triple": true,
+              "tilt": false,
+              "bonnet": true,
+              "microwave": true,
+              "siren": false,
+              "algorithm": true,
+              "canguard": true,
+              "led": false,
+              "keyless": true
+            },
+            "category": "パンテーラ"
+          },
+          {
+            "id": "rx-panthera-z306-canguard",
+            "brand": "Panthera",
+            "grade": "Z306 ＋ CANガード",
+            "description": "Z306の多機能にデジタル対策のCANガードを完全統合。",
+            "price": "377,000",
+            "priceTax": "436,480",
+            "isRecommended": false,
+            "features": {
+              "triple": true,
+              "tilt": true,
+              "bonnet": true,
+              "microwave": false,
+              "siren": false,
+              "algorithm": true,
+              "canguard": true,
+              "led": false,
+              "keyless": true
+            },
+            "category": "パンテーラ"
+          },
+          {
+            "id": "rx-panthera-z306-microwave",
+            "brand": "Panthera",
+            "grade": "Z306 ＋ CANガード ＋ マイクロ波",
+            "description": "接近検知を追加し、愛車へのうろつきも許さない最強布陣。",
+            "price": "429,000",
+            "priceTax": "493,680",
+            "features": {
+              "triple": true,
+              "tilt": true,
+              "bonnet": true,
+              "microwave": true,
+              "siren": false,
+              "algorithm": true,
+              "canguard": true,
+              "led": false,
+              "keyless": true
+            },
+            "category": "パンテーラ"
+          },
+          {
+            "id": "rx-panthera-z706-full",
             "brand": "Panthera",
             "grade": "Z706 ＋ CANガード",
-            "description": "全機能を解放。NXを守るためのANGフラッグシッププラン。",
-            "price": "481,800",
-            "priceTax": "529,980",
+            "description": "あらゆる手口から車を守る、ANGノウハウの結晶プラン。",
+            "price": "467,000",
+            "priceTax": "535,480",
             "features": {
               "triple": true,
               "tilt": true,
@@ -4416,11 +4440,13 @@
               "algorithm": true,
               "canguard": true,
               "led": false,
-              "ir": true
+              "ir": true,
+              "keyless": true
             },
             "category": "パンテーラ"
           }
-        ]
+        ],
+        "featuredPlanId": "can-invader-standard"
       },
       "lexus-lbx": {
         "name": "レクサス LBX",
@@ -5203,6 +5229,7 @@
         "year": "2023-",
         "image": "/images/Security/vehicle/70.webp",
         "description": "...",
+        "featuredPlanId": "analog-special",
         "plans": [
           {
             "id": "lc70-grgo-5vf",
@@ -5335,169 +5362,6 @@
               "siren": true,
               "algorithm": false,
               "canguard": false,
-              "led": false,
-              "ir": true
-            },
-            "category": "パンテーラ"
-          }
-        ]
-      },
-      "toyota-landcruiser-300": {
-        "name": "Land Cruiser 300",
-        "year": "2021-",
-        "image": "/images/Security/vehicle/300.webp",
-        "description": "...",
-        "plans": [
-          {
-            "id": "lc300-grgo-zv",
-            "brand": "Grgo",
-            "grade": "ZV II ＋ CANガード ＋ トリプル",
-            "description": "最も狙われる300必須のアナログ防御と電子対策をパッケージ。",
-            "price": "314,600",
-            "priceTax": "346,060",
-            "features": {
-              "triple": true,
-              "tilt": false,
-              "bonnet": true,
-              "microwave": false,
-              "siren": false,
-              "algorithm": true,
-              "canguard": true,
-              "led": false
-            },
-            "category": "grgo"
-          },
-          {
-            "id": "lc300-grgo-zvt",
-            "brand": "Grgo",
-            "grade": "ZVT II ＋ CANガード",
-            "description": "高精度な傾斜センサーが、300のパーツ盗難やレッカーを阻止。",
-            "price": "336,600",
-            "priceTax": "370,260",
-            "isRecommended": true,
-            "features": {
-              "triple": true,
-              "tilt": true,
-              "bonnet": true,
-              "microwave": false,
-              "siren": false,
-              "algorithm": true,
-              "canguard": true,
-              "led": false
-            },
-            "category": "grgo"
-          },
-          {
-            "id": "lc300-grgo-zvt-microwave",
-            "brand": "Grgo",
-            "grade": "ZVT II ＋ CANガード ＋ マイクロ波",
-            "description": "車外への接近検知を追加。300への干渉を未然に威嚇。",
-            "price": "388,600",
-            "priceTax": "427,460",
-            "features": {
-              "triple": true,
-              "tilt": true,
-              "bonnet": true,
-              "microwave": true,
-              "siren": false,
-              "algorithm": true,
-              "canguard": true,
-              "led": false
-            },
-            "category": "grgo"
-          },
-          {
-            "id": "lc300-panthera-z106",
-            "brand": "Panthera",
-            "grade": "Z106 ＋ CANガード ＋ トリプル",
-            "description": "世界最強クラスのパンテーラで、300への不正信号を遮断。",
-            "price": "374,800",
-            "priceTax": "412,280",
-            "features": {
-              "triple": true,
-              "tilt": false,
-              "bonnet": true,
-              "microwave": false,
-              "siren": false,
-              "algorithm": true,
-              "canguard": true,
-              "led": false
-            },
-            "category": "パンテーラ"
-          },
-          {
-            "id": "lc300-panthera-z106-microwave",
-            "brand": "Panthera",
-            "grade": "Z106 ＋ CANガード ＋ トリプル ＋ マイクロ波",
-            "description": "高感度検知を活かし、不審車の接近もうろつきも逃さない。",
-            "price": "426,800",
-            "priceTax": "469,480",
-            "features": {
-              "triple": true,
-              "tilt": false,
-              "bonnet": true,
-              "microwave": true,
-              "siren": false,
-              "algorithm": true,
-              "canguard": true,
-              "led": false
-            },
-            "category": "パンテーラ"
-          },
-          {
-            "id": "lc300-panthera-z306",
-            "brand": "Panthera",
-            "grade": "Z306 ＋ CANガード",
-            "description": "充実のセンサー群で全方位監視。300を鉄壁の守りへ。",
-            "price": "396,800",
-            "priceTax": "436,480",
-            "features": {
-              "triple": true,
-              "tilt": true,
-              "bonnet": true,
-              "microwave": false,
-              "siren": false,
-              "algorithm": true,
-              "canguard": true,
-              "led": false
-            },
-            "category": "パンテーラ"
-          },
-          {
-            "id": "lc300-panthera-z306-microwave",
-            "brand": "Panthera",
-            "grade": "Z306 ＋ CANガード ＋ マイクロ波",
-            "description": "マイクロ波を含むフルセンサー構成。300防衛の最高峰。",
-            "price": "448,800",
-            "priceTax": "493,680",
-            "features": {
-              "triple": true,
-              "tilt": true,
-              "bonnet": true,
-              "microwave": true,
-              "siren": false,
-              "algorithm": true,
-              "canguard": true,
-              "led": false
-            },
-            "category": "パンテーラ"
-          },
-          {
-            "id": "lc300-panthera-z706-full",
-            "brand": "Panthera",
-            "grade": "Z706 ＋ CANガード",
-            "description": "ANGノウハウを結集。300を守るためのバックアップサイレン付最終回答。",
-            "price": "486,800",
-            "priceTax": "535,480",
-            "isRecommended": true,
-            "features": {
-              "triple": true,
-              "tilt": true,
-              "bonnet": true,
-              "microwave": true,
-              "siren": true,
-              "algorithm": true,
-              "canguard": true,
               "led": false,
               "ir": true
             },
@@ -6613,7 +6477,7 @@
             "id": "kcar-panthera-z306",
             "brand": "Panthera",
             "grade": "Z306 ＋ 純正ロック連動/スマクロ",
-            "description": "人気センサーを網羅したZ306にスマクロを追加。ホイール盗難からイタズラまで、全方位で車両を監視。",
+            "description": "人気センサーを網羅したZ306に���マクロを追加。ホイール盗難からイタズラまで、全方位で車両を監視。",
             "price": "315,800",
             "priceTax": "347,380",
             "isRecommended": true,
@@ -6924,8 +6788,493 @@
         "image": "/images/Security/vehicle/default.webp",
         "description": "",
         "plans": []
+      },
+      "landcruiser300": {
+        "name": "ランドクルーザー 300",
+        "year": "2024-",
+        "image": "/images/Security/vehicle/300.webp",
+        "description": "",
+        "plans": [
+          {
+            "id": "gx-grgo-zvt",
+            "brand": "Grgo",
+            "grade": "ZVT II + CANガード ",
+            "description": "傾斜センサー標準装備。CANガードと1WAYリモコンも付属。",
+            "price": "316,000",
+            "priceTax": "370,260",
+            "isRecommended": false,
+            "features": {
+              "triple": true,
+              "tilt": true,
+              "bonnet": true,
+              "microwave": false,
+              "siren": false,
+              "algorithm": true,
+              "canguard": true,
+              "led": false,
+              "keyless": true
+            },
+            "category": "grgo"
+          },
+          {
+            "id": "gx-grgo-zvt-microwave",
+            "brand": "Grgo",
+            "grade": "ZVT II ＋ CANガード ＋ マイクロ波",
+            "description": "ZVT IIに車外接近検知（うろつき対策）を追加。",
+            "price": "368,000",
+            "priceTax": "427,460",
+            "features": {
+              "triple": true,
+              "tilt": true,
+              "bonnet": true,
+              "microwave": true,
+              "siren": false,
+              "algorithm": true,
+              "canguard": true,
+              "led": false,
+              "keyless": true
+            },
+            "category": "grgo"
+          },
+          {
+            "id": "gx-panthera-z106",
+            "brand": "Panthera",
+            "grade": "Z106 ＋ CANガード + トリプル ",
+            "description": "パンテーラの緻密な感度調整を活かす実戦的パッケージ。",
+            "price": "362,000",
+            "priceTax": "412,280",
+            "features": {
+              "triple": true,
+              "tilt": false,
+              "bonnet": true,
+              "microwave": true,
+              "siren": false,
+              "algorithm": true,
+              "canguard": true,
+              "led": false,
+              "keyless": true
+            },
+            "category": "パンテーラ"
+          },
+          {
+            "id": "gx-panthera-z106-microwave",
+            "brand": "Panthera",
+            "grade": "Z306 + CANガード ",
+            "description": "Z106パッケージに接近検知のマイクロ波をプラス。",
+            "price": "384,000",
+            "priceTax": "469,480",
+            "features": {
+              "triple": true,
+              "tilt": true,
+              "bonnet": true,
+              "microwave": false,
+              "siren": false,
+              "algorithm": true,
+              "canguard": true,
+              "led": false,
+              "keyless": true
+            },
+            "category": "パンテーラ"
+          },
+          {
+            "id": "gx-panthera-z306",
+            "brand": "Panthera",
+            "grade": "Z306 ＋ CANガード + マイクロ波",
+            "description": "全方位検知のZ306に最新のCANガードを融合。",
+            "price": "436,000",
+            "priceTax": "436,480",
+            "isRecommended": false,
+            "features": {
+              "triple": true,
+              "tilt": true,
+              "bonnet": true,
+              "microwave": true,
+              "siren": false,
+              "algorithm": true,
+              "canguard": true,
+              "led": false,
+              "keyless": true
+            },
+            "category": "パンテーラ"
+          },
+          {
+            "id": "gx-panthera-z706-full",
+            "brand": "Panthera",
+            "grade": "Z706 ＋ CANガード",
+            "description": "すべてのセンサーを装備した究極の多重防御モデル。",
+            "price": "474,000",
+            "priceTax": "535,480",
+            "features": {
+              "triple": true,
+              "tilt": true,
+              "bonnet": true,
+              "microwave": true,
+              "siren": true,
+              "algorithm": true,
+              "canguard": true,
+              "led": false,
+              "ir": true,
+              "keyless": true
+            },
+            "category": "パンテーラ",
+            "isRecommended": false
+          }
+        ],
+        "featuredPlanId": "can-invader-standard"
+      },
+      "alphard-vellfire-40": {
+        "name": "アルファード / ヴェルファイア (40系)",
+        "year": "2024-",
+        "image": "/images/Security/vehicle/al,vel.webp",
+        "description": "",
+        "plans": [
+          {
+            "id": "gx-grgo-zvt",
+            "brand": "Grgo",
+            "grade": "ZV II + CANガード ",
+            "description": "傾斜センサー標準装備。CANガードと1WAYリモコンも付属。",
+            "price": "252,000",
+            "priceTax": "370,260",
+            "isRecommended": false,
+            "features": {
+              "triple": false,
+              "tilt": false,
+              "bonnet": false,
+              "microwave": false,
+              "siren": false,
+              "algorithm": true,
+              "canguard": true,
+              "led": false,
+              "keyless": false
+            },
+            "category": "grgo"
+          },
+          {
+            "id": "gx-grgo-zvt-microwave",
+            "brand": "Grgo",
+            "grade": "ZV II ＋ CANガード ＋ トリプル",
+            "description": "ZVT IIに車外接近検知（うろつき対策）を追加。",
+            "price": "288,800",
+            "priceTax": "427,460",
+            "features": {
+              "triple": true,
+              "tilt": false,
+              "bonnet": true,
+              "microwave": false,
+              "siren": false,
+              "algorithm": true,
+              "canguard": true,
+              "led": false,
+              "keyless": true
+            },
+            "category": "grgo"
+          },
+          {
+            "id": "gx-panthera-z106",
+            "brand": "Grgo",
+            "grade": "ZVT II ＋ CANガード",
+            "description": "パンテーラの緻密な感度調整を活かす実戦的パッケージ。",
+            "price": "311,800",
+            "priceTax": "412,280",
+            "features": {
+              "triple": true,
+              "tilt": true,
+              "bonnet": true,
+              "microwave": false,
+              "siren": false,
+              "algorithm": true,
+              "canguard": true,
+              "led": false,
+              "keyless": true
+            },
+            "category": "パンテーラ"
+          },
+          {
+            "id": "gx-panthera-z106-microwave",
+            "brand": "Grgo",
+            "grade": "ZVT II ＋ CANガード + マイクロ波",
+            "description": "Z106パッケージに接近検知のマイクロ波をプラス。",
+            "price": "363,800",
+            "priceTax": "469,480",
+            "features": {
+              "triple": true,
+              "tilt": true,
+              "bonnet": true,
+              "microwave": true,
+              "siren": false,
+              "algorithm": true,
+              "canguard": true,
+              "led": false,
+              "keyless": true
+            },
+            "category": "パンテーラ"
+          },
+          {
+            "id": "gx-panthera-z306",
+            "brand": "Panthera",
+            "grade": "Z106 ＋ CANガード ",
+            "description": "全方位検知のZ306に最新のCANガードを融合。",
+            "price": "322,000",
+            "priceTax": "436,480",
+            "isRecommended": false,
+            "features": {
+              "triple": false,
+              "tilt": false,
+              "bonnet": true,
+              "microwave": false,
+              "siren": false,
+              "algorithm": true,
+              "canguard": true,
+              "led": false,
+              "keyless": false
+            },
+            "category": "パンテーラ"
+          },
+          {
+            "id": "gx-panthera-z706-full",
+            "brand": "Panthera",
+            "grade": "Z306 ＋ CANガード",
+            "description": "すべてのセンサーを装備した究極の多重防御モデル。",
+            "price": "377,000",
+            "priceTax": "535,480",
+            "features": {
+              "triple": true,
+              "tilt": true,
+              "bonnet": true,
+              "microwave": false,
+              "siren": false,
+              "algorithm": true,
+              "canguard": true,
+              "led": false,
+              "ir": true,
+              "keyless": true
+            },
+            "category": "パンテーラ",
+            "isRecommended": false
+          },
+          {
+            "id": 1778544262541,
+            "brand": "Panthera",
+            "grade": "Z306 ＋ CANガード + マイクロ波",
+            "description": "",
+            "price": "424,000",
+            "features": {
+              "triple": true,
+              "tilt": true,
+              "bonnet": true,
+              "microwave": true,
+              "siren": false,
+              "algorithm": true,
+              "canguard": true,
+              "keyless": true
+            }
+          },
+          {
+            "id": 1778544314789,
+            "brand": "Panthera",
+            "grade": "Z706 ＋ CANガード",
+            "description": "",
+            "price": "462,000",
+            "features": {
+              "triple": true,
+              "tilt": true,
+              "bonnet": true,
+              "microwave": true,
+              "siren": true,
+              "algorithm": true,
+              "canguard": true,
+              "keyless": true
+            }
+          }
+        ],
+        "featuredPlanId": "can-invader-standard",
+        "showV2Option": true
+      },
+      "landcruiser250": {
+        "name": "ランドクルーザー 250",
+        "year": "2024-",
+        "image": "/images/Security/vehicle/250.webp",
+        "description": "",
+        "plans": [
+          {
+            "id": "gx-grgo-zvt",
+            "brand": "Grgo",
+            "grade": "ZV II + CANガード ",
+            "description": "傾斜センサー標準装備。CANガードと1WAYリモコンも付属。",
+            "price": "252,000",
+            "priceTax": "370,260",
+            "isRecommended": false,
+            "features": {
+              "triple": false,
+              "tilt": false,
+              "bonnet": false,
+              "microwave": false,
+              "siren": false,
+              "algorithm": true,
+              "canguard": true,
+              "led": false,
+              "keyless": false
+            },
+            "category": "grgo"
+          },
+          {
+            "id": "gx-grgo-zvt-microwave",
+            "brand": "Grgo",
+            "grade": "ZV II ＋ CANガード ＋ トリプル",
+            "description": "ZVT IIに車外接近検知（うろつき対策）を追加。",
+            "price": "288,800",
+            "priceTax": "427,460",
+            "features": {
+              "triple": true,
+              "tilt": false,
+              "bonnet": true,
+              "microwave": false,
+              "siren": false,
+              "algorithm": true,
+              "canguard": true,
+              "led": false,
+              "keyless": true
+            },
+            "category": "grgo"
+          },
+          {
+            "id": "gx-panthera-z106",
+            "brand": "Grgo",
+            "grade": "ZVT II ＋ CANガード",
+            "description": "パンテーラの緻密な感度調整を活かす実戦的パッケージ。",
+            "price": "311,800",
+            "priceTax": "412,280",
+            "features": {
+              "triple": true,
+              "tilt": true,
+              "bonnet": true,
+              "microwave": false,
+              "siren": false,
+              "algorithm": true,
+              "canguard": true,
+              "led": false,
+              "keyless": true
+            },
+            "category": "パンテーラ"
+          },
+          {
+            "id": "gx-panthera-z106-microwave",
+            "brand": "Grgo",
+            "grade": "ZVT II ＋ CANガード + マイクロ波",
+            "description": "Z106パッケージに接近検知のマイクロ波をプラス。",
+            "price": "363,800",
+            "priceTax": "469,480",
+            "features": {
+              "triple": true,
+              "tilt": true,
+              "bonnet": true,
+              "microwave": true,
+              "siren": false,
+              "algorithm": true,
+              "canguard": true,
+              "led": false,
+              "keyless": true
+            },
+            "category": "パンテーラ"
+          },
+          {
+            "id": "gx-panthera-z306",
+            "brand": "Panthera",
+            "grade": "Z106 ＋ CANガード ",
+            "description": "全方位検知のZ306に最新のCANガードを融合。",
+            "price": "322,000",
+            "priceTax": "436,480",
+            "isRecommended": false,
+            "features": {
+              "triple": false,
+              "tilt": false,
+              "bonnet": true,
+              "microwave": false,
+              "siren": false,
+              "algorithm": true,
+              "canguard": true,
+              "led": false,
+              "keyless": false
+            },
+            "category": "パンテーラ"
+          },
+          {
+            "id": "gx-panthera-z706-full",
+            "brand": "Panthera",
+            "grade": "Z306 ＋ CANガード",
+            "description": "すべてのセンサーを装備した究極の多重防御モデル。",
+            "price": "377,000",
+            "priceTax": "535,480",
+            "features": {
+              "triple": true,
+              "tilt": true,
+              "bonnet": true,
+              "microwave": false,
+              "siren": false,
+              "algorithm": true,
+              "canguard": true,
+              "led": false,
+              "ir": true,
+              "keyless": true
+            },
+            "category": "パンテーラ",
+            "isRecommended": false
+          },
+          {
+            "id": 1778544262541,
+            "brand": "Panthera",
+            "grade": "Z306 ＋ CANガード + マイクロ波",
+            "description": "",
+            "price": "424,000",
+            "features": {
+              "triple": true,
+              "tilt": true,
+              "bonnet": true,
+              "microwave": true,
+              "siren": false,
+              "algorithm": true,
+              "canguard": true,
+              "keyless": true
+            }
+          },
+          {
+            "id": 1778544314789,
+            "brand": "Panthera",
+            "grade": "Z706 ＋ CANガード",
+            "description": "",
+            "price": "462,000",
+            "features": {
+              "triple": true,
+              "tilt": true,
+              "bonnet": true,
+              "microwave": true,
+              "siren": true,
+              "algorithm": true,
+              "canguard": true,
+              "keyless": true
+            }
+          }
+        ],
+        "featuredPlanId": "can-invader-standard",
+        "showV2Option": true
       }
-    }
+    },
+    "featureSetTemplates": [
+      {
+        "id": "set-1778502170860",
+        "name": "新規機能項目セット",
+        "features": [
+          {
+            "key": "triple",
+            "label": "トリプル"
+          },
+          {
+            "key": "tilt",
+            "label": "傾斜"
+          }
+        ]
+      }
+    ]
   },
   "audioEmergencyAnnouncement": {
     "text": "混んでます",
@@ -6949,5 +7298,137 @@
     "text": ""
   },
   "audioEvents": [],
-  "securityEvents": []
+  "securityEvents": [],
+  "standardLineLanding": {
+    "header": {
+      "badge": "スタンダードライン",
+      "mainTitle": "STANDARD LINE",
+      "subTitle": "スピーカー交換パッケージ",
+      "description": "純正の音に不満がある方へ。音質アップの第一歩は確実なスピーカー交換から。ただユニットを取り替えるだけではなく、スピーカーの真価を発揮するための必須施工（ドアチューニング・専用バッフル・配線）をすべてセットにした、明朗会計のコミコミパッケージです。"
+    },
+    "pricing": {
+      "specialPrice": "81840",
+      "normalPriceText": "通常目安: 117,700円",
+      "savingsText": "約 35,860円 お得!",
+      "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。"
+    },
+    "features": {
+      "doorTuning": {
+        "title": "ドアチューニング Bコース",
+        "desc": "薄い鉄板のドア内部の振動・共振を抑え、音の漏れを防ぐ制振・防音処理。（通常¥27,500相当）",
+        "image": "/images/Audio/Speaker/door-b.webp"
+      },
+      "baffle": {
+        "title": "カスタムインナーバッフル",
+        "desc": "強固な土台を作り、不要な振動を徹底排除。音の立ち上がりと定位感が劇的に改善します。（通常¥11,000相当）",
+        "image": "/images/Audio/Speaker/baffle.webp"
+      },
+      "cable": {
+        "title": "ANGオリジナルケーブル",
+        "desc": "オーディオテクニカ製ベースの高品位スピーカーケーブル(10m)で繊細な情報までロスなく伝送。（通常¥16,500相当）",
+        "image": "/images/Audio/Speaker/ang-cable.webp"
+      }
+    },
+    "upgrades": {
+      "courses": [
+        {
+          "name": "B → A コース",
+          "price": "+¥11,000",
+          "desc": "フェリソニDS-1.5WP使用・制振材増量"
+        },
+        {
+          "name": "B → A+ コース",
+          "price": "+¥22,000",
+          "desc": "フェリソニC2使用・制振材増量"
+        },
+        {
+          "name": "B → S コース",
+          "price": "+¥33,000",
+          "desc": "DS-1.5WPをさらに増量。最新マテリアル高密度施工",
+          "pop": true
+        },
+        {
+          "name": "B → S+ コース",
+          "price": "+¥44,000",
+          "desc": "フェリソニC2を贅沢に使用。最高峰の制振・吸音・遮音"
+        }
+      ],
+      "options": {
+        "metalBaffleDiscount": "20% OFF",
+        "tweeterMountPrice": "¥46,200〜",
+        "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
+        "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
+      }
+    },
+    "id": "standard",
+    "slug": "sp-standard",
+    "name": "スタンダードライン"
+  },
+  "audioLPs": [
+    {
+      "header": {
+        "badge": "スタンダードライン",
+        "mainTitle": "STANDARD LINE",
+        "subTitle": "スピーカー交換パッケージ",
+        "description": "純正の音に不満がある方へ。音質アップの第一歩は確実なスピーカー交換から。ただユニットを取り替えるだけではなく、スピーカーの真価を発揮するための必須施工（ドアチューニング・専用バッフル・配線）をすべてセットにした、明朗会計のコミコミパッケージです。"
+      },
+      "pricing": {
+        "specialPrice": "81840",
+        "normalPriceText": "通常目安: 117,700円",
+        "savingsText": "約 35,860円 お得!",
+        "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。"
+      },
+      "features": {
+        "doorTuning": {
+          "title": "ドアチューニング Bコース",
+          "desc": "薄い鉄板のドア内部の振動・共振を抑え、音の漏れを防ぐ制振・防音処理。（通常¥27,500相当）",
+          "image": "/images/Audio/Speaker/door-b.webp"
+        },
+        "baffle": {
+          "title": "カスタムインナーバッフル",
+          "desc": "強固な土台を作り、不要な振動を徹底排除。音の立ち上がりと定位感が劇的に改善します。（通常¥11,000相当）",
+          "image": "/images/Audio/Speaker/baffle.webp"
+        },
+        "cable": {
+          "title": "ANGオリジナルケーブル",
+          "desc": "オーディオテクニカ製ベースの高品位スピーカーケーブル(10m)で繊細な情報までロスなく伝送。（通常¥16,500相当）",
+          "image": "/images/Audio/Speaker/ang-cable.webp"
+        }
+      },
+      "upgrades": {
+        "courses": [
+          {
+            "name": "B → A コース",
+            "price": "+¥11,000",
+            "desc": "フェリソニDS-1.5WP使用・制振材増量"
+          },
+          {
+            "name": "B → A+ コース",
+            "price": "+¥22,000",
+            "desc": "フェリソニC2使用・制振材増量"
+          },
+          {
+            "name": "B → S コース",
+            "price": "+¥33,000",
+            "desc": "DS-1.5WPをさらに増量。最新マテリアル高密度施工",
+            "pop": true
+          },
+          {
+            "name": "B → S+ コース",
+            "price": "+¥44,000",
+            "desc": "フェリソニC2を贅沢に使用。最高峰の制振・吸音・遮音"
+          }
+        ],
+        "options": {
+          "metalBaffleDiscount": "20% OFF",
+          "tweeterMountPrice": "¥46,200〜",
+          "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
+          "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
+        }
+      },
+      "id": "standard",
+      "slug": "sp-standard",
+      "name": "スタンダードライン"
+    }
+  ]
 }

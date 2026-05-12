@@ -24,6 +24,7 @@ import {
   Eye,
   Search,
   Layout,
+  Printer,
   Type,
   Image as ImageIcon,
   Users,
@@ -68,7 +69,10 @@ const AdminDashboard: React.FC = () => {
     saveSiteData,
     updatePrice,
     addItem,
-    removeItem
+    removeItem,
+    updateSecurityTemplate,
+    addSecurityTemplate,
+    removeSecurityTemplate
   } = usePrices();
 
   const {
@@ -84,7 +88,7 @@ const AdminDashboard: React.FC = () => {
     updateAssets
   } = useSite();
 
-  const [activeTab, setActiveTab] = useState<'vehicles' | 'security' | 'announcements' | 'recruitment' | 'events' | 'knowledge' | 'audio' | 'partners' | 'calendar' | 'assets' | 'others'>('vehicles');
+  const [activeTab, setActiveTab] = useState<'vehicles' | 'security' | 'announcements' | 'recruitment' | 'events' | 'knowledge' | 'templates' | 'audio' | 'partners' | 'calendar' | 'assets' | 'others'>('vehicles');
   const [searchTerm, setSearchTerm] = useState('');
 
   // Strict Authentication check: Always start as false on load
@@ -183,6 +187,8 @@ const AdminDashboard: React.FC = () => {
           <NavItem active={activeTab === 'recruitment'} onClick={() => setActiveTab('recruitment')} icon={Layout} label="Recruitment" />
           <NavItem active={activeTab === 'events'} onClick={() => setActiveTab('events')} icon={Globe} label="EVENTS" />
           <NavItem active={activeTab === 'knowledge'} onClick={() => setActiveTab('knowledge')} icon={BookOpen} label="Knowledge & FAQ" />
+          <NavItem active={activeTab === 'templates'} onClick={() => setActiveTab('templates')} icon={Layout} label="Plan Templates" />
+          <NavItem active={activeTab === 'features'} onClick={() => setActiveTab('features')} icon={CheckSquare} label="Feature Set" />
           
           <div className="px-4 mb-2 mt-6 text-[10px] font-black text-zinc-600 uppercase tracking-widest">System</div>
           <NavItem active={activeTab === 'partners'} onClick={() => setActiveTab('partners')} icon={Users} label="Partners" />
@@ -221,6 +227,12 @@ const AdminDashboard: React.FC = () => {
                 />
              </div>
             <button 
+              onClick={() => window.open('/admin/print/sp-standard', '_blank')}
+              className="flex items-center gap-2 px-6 py-3 bg-indigo-600/10 text-indigo-500 border border-indigo-500/20 rounded-xl font-bold text-xs hover:bg-indigo-600 hover:text-white transition-all"
+            >
+              <Printer className="w-4 h-4" /> A4 PRINT
+            </button>
+            <button 
               onClick={() => window.open('/', '_blank')}
               className="flex items-center gap-2 px-6 py-3 bg-blue-600/10 text-blue-500 border border-blue-500/20 rounded-xl font-bold text-xs hover:bg-blue-600 hover:text-white transition-all"
             >
@@ -237,6 +249,8 @@ const AdminDashboard: React.FC = () => {
           {activeTab === 'recruitment' && <RecruitmentManager />}
           {activeTab === 'events' && <EventManager />}
           {activeTab === 'knowledge' && <KnowledgeManager />}
+          {activeTab === 'templates' && <TemplateManager />}
+          {activeTab === 'features' && <FeatureSetManager />}
           {activeTab === 'others' && <PeripheralProductManager />}
           {activeTab === 'partners' && <PartnerManager />}
           {activeTab === 'calendar' && <CalendarManager />}
@@ -561,16 +575,35 @@ const VehicleManager = ({ search }: any) => {
 };
 
 const VehicleCard = ({ slug, data, group, allGroups, onUpdate, onRenameSlug, onChangeGroup, onRenameInMenu, onDelete }: any) => {
+  const { securityData } = usePrices();
   const [isEditing, setIsEditing] = useState(false);
   const [formData, setFormData] = useState(data);
   const [currentSlug, setCurrentSlug] = useState(slug);
+  const [copySourceSlug, setCopySourceSlug] = useState('');
+
+  const handleCopyPlans = () => {
+    if (!copySourceSlug) return;
+    const sourceVehicle = securityData.vehicles[copySourceSlug];
+    if (!sourceVehicle) return;
+
+    if (window.confirm(`${sourceVehicle.name}からプランとセンサー設定をコピーしますか？\n現在のプランはすべて上書きされます。`)) {
+      setFormData({
+        ...formData,
+        featureSetId: sourceVehicle.featureSetId,
+        plans: JSON.parse(JSON.stringify(sourceVehicle.plans || []))
+      });
+      setCopySourceSlug('');
+    }
+  };
 
   useEffect(() => {
     if (isEditing) {
         setFormData(data);
         setCurrentSlug(slug);
     }
-  }, [isEditing, data, slug]);
+    // Only reset when starting to edit
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isEditing]);
 
   const handleSave = () => {
     if (formData.name !== data.name) {
@@ -597,15 +630,16 @@ const VehicleCard = ({ slug, data, group, allGroups, onUpdate, onRenameSlug, onC
         microwave: false,
         siren: false,
         algorithm: false,
-        canguard: false
+        canguard: false,
+        keyless: false
       }
     };
     setFormData({ ...formData, plans: [...(formData.plans || []), newPlan] });
   };
 
   const removePlan = (index: number) => {
-    const next = [...formData.plans];
-    next.splice(index, 1);
+    if (!window.confirm('このプランを削除しますか？')) return;
+    const next = (formData.plans || []).filter((_: any, idx: number) => idx !== index);
     setFormData({ ...formData, plans: next });
   };
 
@@ -739,6 +773,48 @@ const VehicleCard = ({ slug, data, group, allGroups, onUpdate, onRenameSlug, onC
                               />
                               <p className="text-[9px] text-zinc-600 font-bold italic">※ publicフォルダからの相対パス（/images/...）を入力してください</p>
                           </div>
+                          <div className="space-y-3">
+                              <label className="block text-[10px] font-black text-emerald-500 uppercase tracking-[0.2em]">Featured Plan Template</label>
+                              <select 
+                                  value={formData.featuredPlanId || ''} 
+                                  onChange={e => setFormData({...formData, featuredPlanId: e.target.value})}
+                                  className="w-full bg-black border border-zinc-800 rounded-2xl px-6 py-4 text-white text-sm outline-none focus:border-emerald-500 font-bold transition-all shadow-inner"
+                              >
+                                  <option value="">No Template (Fallback to default logic)</option>
+                                  {((securityData as any).featuredPlanTemplates || []).map((t: any) => (
+                                      <option key={t.id} value={t.id}>{t.name}</option>
+                                  ))}
+                              </select>
+                              <p className="text-[9px] text-zinc-600 font-bold italic">※ この車種の特設プランに使用するパターンを選択します</p>
+                          </div>
+                          <div className="space-y-3">
+                              <label className="block text-[10px] font-black text-blue-500 uppercase tracking-[0.2em]">Sensor Checklist Pattern</label>
+                              <select 
+                                  value={formData.featureSetId || ''} 
+                                  onChange={e => setFormData({...formData, featureSetId: e.target.value})}
+                                  className="w-full bg-black border border-zinc-800 rounded-2xl px-6 py-4 text-white text-sm outline-none focus:border-blue-500 font-bold transition-all shadow-inner"
+                              >
+                                  <option value="">Standard (Default Sensors)</option>
+                                  {(securityData.featureSetTemplates || []).map((t: any) => (
+                                      <option key={t.id} value={t.id}>{t.name}</option>
+                                  ))}
+                              </select>
+                              <p className="text-[9px] text-zinc-600 font-bold italic">※ 比較表に表示するセンサー項目のセットを選択します</p>
+                          </div>
+                      </div>
+                      <div className="pt-4 border-t border-zinc-800/50">
+                          <div className="flex items-center justify-between bg-emerald-500/5 p-4 rounded-2xl border border-emerald-500/10 max-w-sm">
+                              <div className="flex flex-col">
+                                  <label className="text-[11px] font-black text-emerald-500 uppercase tracking-widest leading-none mb-1">Suggest V2 Plan</label>
+                                  <span className="text-[9px] text-zinc-600 font-bold uppercase">Show budget friendly message at bottom</span>
+                              </div>
+                              <input 
+                                  type="checkbox"
+                                  checked={formData.showV2Option}
+                                  onChange={e => setFormData({...formData, showV2Option: e.target.checked})}
+                                  className="w-6 h-6 rounded-lg bg-black border-emerald-900 text-emerald-600 focus:ring-0 transition-all cursor-pointer"
+                              />
+                          </div>
                       </div>
                    </div>
                    <div className="lg:col-span-4 space-y-3">
@@ -754,22 +830,56 @@ const VehicleCard = ({ slug, data, group, allGroups, onUpdate, onRenameSlug, onC
                 
                 {/* Section: Plans Management */}
                 <div className="space-y-8">
-                    <div className="flex items-center justify-between border-b border-zinc-800 pb-6">
+                    <div className="flex flex-col md:flex-row md:items-center justify-between border-b border-zinc-800 pb-6 gap-6">
                         <div className="flex items-center gap-4">
                            <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
                            <h4 className="text-xs font-black text-white uppercase tracking-[0.3em]">Security Plans Configuration</h4>
                         </div>
-                        <button 
-                            onClick={addPlan}
-                            className="group flex items-center gap-3 text-[11px] font-black text-emerald-400 hover:text-white uppercase tracking-widest bg-emerald-500/10 hover:bg-emerald-500 px-6 py-3 rounded-2xl transition-all duration-300"
-                        >
-                            <Plus className="w-4 h-4 group-hover:rotate-90 transition-transform" /> Add New Plan
-                        </button>
+                        
+                        <div className="flex flex-wrap items-center gap-4">
+                           <div className="flex items-center bg-black/40 border border-zinc-800 rounded-2xl px-4 py-2 gap-3">
+                               <span className="text-[9px] font-black text-zinc-500 uppercase tracking-widest whitespace-nowrap">Copy from:</span>
+                               <select 
+                                   value={copySourceSlug}
+                                   onChange={e => setCopySourceSlug(e.target.value)}
+                                   className="bg-transparent text-[10px] font-bold text-white outline-none cursor-pointer min-w-[140px]"
+                               >
+                                   <option value="" className="bg-zinc-900">Select Vehicle...</option>
+                                   {Object.keys(securityData.vehicles || {})
+                                       .filter(s => s !== slug)
+                                       .sort((a, b) => (securityData.vehicles[a]?.name || '').localeCompare(securityData.vehicles[b]?.name || ''))
+                                       .map(s => (
+                                           <option key={s} value={s} className="bg-zinc-900">
+                                               {securityData.vehicles[s]?.name || s}
+                                           </option>
+                                       ))
+                                   }
+                               </select>
+                               <button 
+                                   onClick={handleCopyPlans}
+                                   disabled={!copySourceSlug}
+                                   className={`px-4 py-2 rounded-xl text-[9px] font-black uppercase transition-all ${
+                                       copySourceSlug 
+                                       ? 'bg-blue-600/20 text-blue-400 hover:bg-blue-600 hover:text-white' 
+                                       : 'bg-zinc-800/50 text-zinc-600 cursor-not-allowed'
+                                   }`}
+                               >
+                                   Copy Plans
+                               </button>
+                           </div>
+
+                           <button 
+                               onClick={addPlan}
+                               className="group flex items-center gap-3 text-[11px] font-black text-emerald-400 hover:text-white uppercase tracking-widest bg-emerald-500/10 hover:bg-emerald-500 px-6 py-3 rounded-2xl transition-all duration-300"
+                           >
+                               <Plus className="w-4 h-4 group-hover:rotate-90 transition-transform" /> Add New Plan
+                           </button>
+                        </div>
                     </div>
 
                     <div className="grid grid-cols-1 gap-8">
                         {(formData.plans || []).map((p: any, i: number) => (
-                            <div key={i} className="bg-zinc-900/60 border border-zinc-800 rounded-[2rem] overflow-hidden group/plan hover:border-zinc-700 transition-colors">
+                            <div key={p.id || i} className="bg-zinc-900/60 border border-zinc-800 rounded-[2rem] overflow-hidden group/plan hover:border-zinc-700 transition-colors">
                                 <div className="px-8 py-5 bg-black/40 flex items-center justify-between border-b border-zinc-800/50">
                                     <div className="flex items-center gap-6">
                                         <div className="flex bg-black rounded-xl p-1 gap-1">
@@ -802,8 +912,12 @@ const VehicleCard = ({ slug, data, group, allGroups, onUpdate, onRenameSlug, onC
                                         />
                                     </div>
                                     <button 
-                                        onClick={() => removePlan(i)}
-                                        className="w-10 h-10 flex items-center justify-center rounded-xl text-zinc-700 hover:text-red-500 hover:bg-red-500/10 transition-all"
+                                        type="button"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            removePlan(i);
+                                        }}
+                                        className="w-10 h-10 flex items-center justify-center rounded-xl text-zinc-700 hover:text-red-500 hover:bg-red-500/10 transition-all z-10"
                                     >
                                         <Trash2 className="w-4.5 h-4.5" />
                                     </button>
@@ -860,37 +974,37 @@ const VehicleCard = ({ slug, data, group, allGroups, onUpdate, onRenameSlug, onC
                                     <div className="lg:col-span-9">
                                         <label className="block text-[8px] font-black text-zinc-600 uppercase tracking-widest mb-6">Features & Sensors Checklist</label>
                                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                                            {[
-                                                { id: 'triple', label: 'トリプル' },
-                                                { id: 'tilt', label: '傾斜' },
-                                                { id: 'bonnet', label: 'ボンネット' },
-                                                { id: 'microwave', label: 'マイクロ波' },
-                                                { id: 'siren', label: 'サイレン' },
-                                                { id: 'algorithm', label: 'アルゴリズム' },
-                                                { id: 'canguard', label: 'CANガード' },
-                                                { id: 'keyless', label: 'キーレス連動' }
-                                            ].map(f => (
+                                            {(securityData.featureSetTemplates?.find(t => t.id === formData.featureSetId)?.features || [
+                                                { key: 'triple', label: 'トリプル' },
+                                                { key: 'tilt', label: '傾斜' },
+                                                { key: 'bonnet', label: 'ボンネット' },
+                                                { key: 'microwave', label: 'マイクロ波' },
+                                                { key: 'siren', label: 'バックアップサイレン' },
+                                                { key: 'algorithm', label: '純正ロック連動' },
+                                                { key: 'canguard', label: 'CANガード' },
+                                                { key: 'keyless', label: 'アルゴリズム' }
+                                            ]).map((feat: any) => (
                                                 <button 
-                                                    key={f.id}
+                                                    key={feat.key}
                                                     onClick={() => {
                                                         const next = [...formData.plans];
                                                         next[i] = { 
                                                             ...next[i], 
                                                             features: { 
                                                                 ...(next[i].features || {}), 
-                                                                [f.id]: !next[i].features?.[f.id] 
+                                                                [feat.key]: !next[i].features?.[feat.key] 
                                                             } 
                                                         };
                                                         setFormData({ ...formData, plans: next });
                                                     }}
                                                     className={`flex items-center justify-between px-5 py-4 rounded-2xl border transition-all duration-300 ${
-                                                        p.features?.[f.id] 
+                                                        p.features?.[feat.key] 
                                                         ? 'bg-blue-600/10 border-blue-500/50 text-blue-400' 
                                                         : 'bg-black/20 border-zinc-800 text-zinc-600 hover:border-zinc-700'
                                                     }`}
                                                 >
-                                                    <span className="text-[10px] font-black uppercase tracking-widest">{f.label}</span>
-                                                    <div className={`w-2 h-2 rounded-full ${p.features?.[f.id] ? 'bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)]' : 'bg-zinc-800'}`}></div>
+                                                    <span className="text-[10px] font-black uppercase tracking-widest">{feat.label}</span>
+                                                    <div className={`w-2 h-2 rounded-full ${p.features?.[feat.key] ? 'bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)]' : 'bg-zinc-800'}`}></div>
                                                 </button>
                                             ))}
                                         </div>
@@ -925,11 +1039,52 @@ const VehicleCard = ({ slug, data, group, allGroups, onUpdate, onRenameSlug, onC
 };                                                            
 
 const SecurityPlanManager = () => {
-    const { plans, updatePrice } = usePrices();
+    const { plans, updatePrice, securityData, updateSecurityHome } = usePrices();
     const securityPlans = plans.filter(p => p.type === 'security');
+
+    const v2Settings = securityData.home.v2Settings || {
+        title: '予算に合わせて、<span class="text-emerald-500">機能を凝縮した守り</span>を。',
+        description: '「フルスペックは必要ないが、最新の盗難手口からは確実に守りたい」というお客様へ。ANGでは、機能を厳選しコストパフォーマンスを極限まで高めた**Grgo V2ベースのプラン**も提案可能です。お気軽にご相談ください。'
+    };
   
     return (
-      <div className="grid grid-cols-1 gap-8">
+      <div className="space-y-12">
+        {/* V2 Suggestion Section Editor */}
+        <div className="bg-emerald-500/5 border border-emerald-500/20 rounded-[2.5rem] p-10 space-y-8">
+            <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-emerald-600 rounded-2xl flex items-center justify-center shadow-xl shadow-emerald-600/20">
+                    <Zap className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                    <h3 className="text-2xl font-black text-white italic tracking-tighter uppercase leading-none">V2 Suggestion Content</h3>
+                    <p className="text-[10px] text-emerald-500 font-black uppercase tracking-widest mt-1">Global Message Settings</p>
+                </div>
+            </div>
+
+            <div className="grid grid-cols-1 gap-6">
+                <div className="space-y-3">
+                    <label className="text-[10px] font-black text-zinc-500 uppercase tracking-widest">Section Title (HTML Allowed)</label>
+                    <input 
+                        type="text"
+                        value={v2Settings.title}
+                        onChange={e => updateSecurityHome({ v2Settings: { ...v2Settings, title: e.target.value } })}
+                        className="w-full bg-black border border-zinc-800 rounded-2xl px-6 py-4 text-white text-sm font-bold focus:border-emerald-500 transition-all"
+                        placeholder="予算に合わせて、<span class='text-emerald-500'>機能を凝縮した守り</span>を。"
+                    />
+                </div>
+                <div className="space-y-3">
+                    <label className="text-[10px] font-black text-zinc-500 uppercase tracking-widest">Section Description</label>
+                    <textarea 
+                        value={v2Settings.description}
+                        onChange={e => updateSecurityHome({ v2Settings: { ...v2Settings, description: e.target.value } })}
+                        className="w-full bg-black border border-zinc-800 rounded-2xl px-6 py-5 text-white text-sm font-bold h-32 leading-relaxed focus:border-emerald-500 transition-all"
+                    />
+                </div>
+            </div>
+            <p className="text-[10px] text-zinc-600 font-bold italic">※ ここで設定した内容は、全車種詳細ページの「V2提案セクション」に反映されます。</p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-8">
         {securityPlans.map(cat => (
           <div key={cat.id} className="bg-zinc-900/30 border border-zinc-800 rounded-[2rem] p-10">
             <div className="flex items-center justify-between mb-8">
@@ -955,40 +1110,599 @@ const SecurityPlanManager = () => {
           </div>
         ))}
       </div>
+    </div>
+  );
+};
+
+const FeatureSetManager = () => {
+    const { securityData, updateFeatureSetTemplate, addFeatureSetTemplate, removeFeatureSetTemplate } = usePrices();
+    const templates = securityData.featureSetTemplates || [];
+
+    const addNew = () => {
+        const id = `set-${Date.now()}`;
+        addFeatureSetTemplate({
+            id,
+            name: '新規機能項目セット',
+            features: [
+                { key: 'triple', label: 'トリプル' },
+                { key: 'tilt', label: '傾斜' }
+            ]
+        });
+    };
+
+    return (
+        <div className="space-y-8">
+            <div className="flex justify-between items-center bg-zinc-900/50 p-6 rounded-3xl border border-zinc-800">
+                <div>
+                    <h3 className="text-xl font-black text-white italic tracking-tighter mb-1 uppercase">Feature Set Patterns</h3>
+                    <p className="text-[10px] text-zinc-500 font-bold uppercase tracking-widest">機能項目・センサーセットの管理</p>
+                </div>
+                <button 
+                    onClick={addNew}
+                    className="bg-emerald-500 hover:bg-emerald-600 text-black text-[10px] font-black px-6 py-3 rounded-xl transition-all shadow-lg shadow-emerald-500/20 uppercase tracking-widest"
+                >
+                    Add New Pattern
+                </button>
+            </div>
+
+            <div className="grid grid-cols-1 gap-6">
+                {templates.map(set => (
+                    <div key={set.id} className="bg-zinc-900/30 border border-zinc-800 rounded-[2rem] p-8 relative group">
+                        <button 
+                            onClick={() => {
+                                if(window.confirm('このパターンを削除しますか？')) removeFeatureSetTemplate(set.id);
+                            }}
+                            className="absolute top-8 right-8 text-zinc-600 hover:text-rose-500 transition-colors"
+                        >
+                            <Trash2 size={18} />
+                        </button>
+
+                        <div className="max-w-md mb-8">
+                            <label className="block text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-2 italic">Pattern Name</label>
+                            <input 
+                                type="text"
+                                value={set.name}
+                                onChange={e => updateFeatureSetTemplate({ ...set, name: e.target.value })}
+                                className="w-full bg-black border border-zinc-800 rounded-xl px-5 py-3 text-white text-sm outline-none focus:border-emerald-500 font-bold transition-all"
+                            />
+                        </div>
+
+                        <div className="space-y-4">
+                            <label className="block text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-4 italic">Features & Labels</label>
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                                {set.features.map((f, i) => (
+                                    <div key={i} className="bg-black/40 border border-zinc-800/50 p-4 rounded-2xl space-y-3 relative group/item">
+                                        <div className="space-y-1">
+                                            <label className="text-[8px] font-black text-zinc-600 uppercase tracking-widest leading-none">Label (Display Word)</label>
+                                            <input 
+                                                type="text"
+                                                value={f.label}
+                                                onChange={e => {
+                                                    const next = [...set.features];
+                                                    next[i] = { ...f, label: e.target.value };
+                                                    updateFeatureSetTemplate({ ...set, features: next });
+                                                }}
+                                                className="w-full bg-zinc-900/50 border border-zinc-800 rounded-lg px-3 py-2 text-xs text-white font-bold outline-none focus:border-emerald-500"
+                                            />
+                                        </div>
+                                        <div className="space-y-1">
+                                            <label className="text-[8px] font-black text-zinc-600 uppercase tracking-widest leading-none">Key (Data ID)</label>
+                                            <input 
+                                                type="text"
+                                                value={f.key}
+                                                onChange={e => {
+                                                    const next = [...set.features];
+                                                    next[i] = { ...f, key: e.target.value };
+                                                    updateFeatureSetTemplate({ ...set, features: next });
+                                                }}
+                                                className="w-full bg-zinc-900/50 border border-zinc-800 rounded-lg px-3 py-2 text-[10px] text-zinc-400 font-mono outline-none focus:border-emerald-500"
+                                            />
+                                        </div>
+                                        <button 
+                                            onClick={() => {
+                                                const next = set.features.filter((_, idx) => idx !== i);
+                                                updateFeatureSetTemplate({ ...set, features: next });
+                                            }}
+                                            className="absolute -top-2 -right-2 w-6 h-6 bg-rose-500 text-white rounded-full flex items-center justify-center opacity-0 group-hover/item:opacity-100 transition-opacity"
+                                        >
+                                            <X size={12} />
+                                        </button>
+                                    </div>
+                                ))}
+                                <button 
+                                    onClick={() => {
+                                        updateFeatureSetTemplate({
+                                            ...set,
+                                            features: [...set.features, { key: `new-${Date.now()}`, label: '新項目' }]
+                                        });
+                                    }}
+                                    className="border-2 border-dashed border-zinc-800 rounded-2xl flex items-center justify-center py-6 text-zinc-600 hover:text-emerald-500 hover:border-emerald-500 transition-all group/add"
+                                >
+                                    <div className="flex flex-col items-center">
+                                        <Plus size={20} className="mb-1" />
+                                        <span className="text-[10px] font-black uppercase tracking-widest">Add Row</span>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
     );
 };
 
 const AudioPlanManager = () => {
-    const { plans, updatePrice } = usePrices();
-    const audioPlans = plans.filter(p => p.type === 'audio');
-  
+    const { audioLPs, setAudioLPs } = usePrices();
+    const lps = audioLPs || [];
+
+    const [selectedId, setSelectedId] = useState(() => lps[0]?.id || 'standard');
+    const currentLine = lps.find(p => p.id === selectedId) || lps[0];
+
+    const [data, setData] = useState(() => currentLine);
+
+    useEffect(() => {
+        if (currentLine) {
+            setData(currentLine);
+        }
+    }, [currentLine]);
+
+    const handleSave = () => {
+        if (!data) return;
+        // Make sure slug doesn't start with slash
+        const cleanSlug = (data.slug || 'sp-custom').replace(/^\/+/, '');
+        const nextLPs = lps.map(p => p.id === currentLine.id ? { ...data, slug: cleanSlug } : p);
+        setAudioLPs(nextLPs);
+        alert(`「${data.name || 'プラン'}」の設定内容を保存しました。`);
+    };
+
+    const handleAddPlan = () => {
+        const newId = `line_${Date.now()}`;
+        const newSlug = `sp-custom-${Math.floor(Math.random() * 1000)}`;
+        const newPlan = {
+            id: newId,
+            slug: newSlug,
+            name: "新規オーディオプラン",
+            header: {
+                badge: "NEW PACKAGE",
+                mainTitle: "CUSTOM LINE",
+                subTitle: "オリジナルオーディオプラン",
+                description: "プランの特徴や魅力を伝える紹介文を入力してください。"
+            },
+            pricing: {
+                specialPrice: "100000",
+                normalPriceText: "通常目安: 150,000円",
+                savingsText: "約 50,000円 お得!",
+                note: "※構成内容による価格変動などの注釈文を入力してください。"
+            },
+            features: {
+                doorTuning: { title: "ドアチューニング詳細", desc: "施工内容を入力してください。", image: "/images/Audio/Speaker/door-b.webp" },
+                baffle: { title: "インナーバッフル詳細", desc: "施工内容を入力してください。", image: "/images/Audio/Speaker/baffle.webp" },
+                cable: { title: "スピーカーケーブル詳細", desc: "施工内容を入力してください。", image: "/images/Audio/Speaker/ang-cable.webp" }
+            },
+            upgrades: {
+                courses: [
+                    { name: "ベース → A コース", price: "+¥11,000", desc: "コース詳細説明文" },
+                    { name: "ベース → S コース", price: "+¥33,000", desc: "高密度特別施工コース", pop: true }
+                ],
+                options: {
+                    metalBaffleDiscount: "20% OFF",
+                    tweeterMountPrice: "¥46,200〜",
+                    metalBaffleImage: "/images/Audio/Speaker/metal.webp",
+                    tweeterMountImage: "/images/Audio/Speaker/tw-mount.webp"
+                }
+            }
+        };
+        const nextLPs = [...lps, newPlan as any];
+        setAudioLPs(nextLPs);
+        setSelectedId(newId);
+        alert('新しいプランラインのタブを追加しました。情報を編集して保存してください。');
+    };
+
+    const handleDeletePlan = (idToDelete: string, planName: string) => {
+        if (lps.length <= 1) {
+            alert('最低1つのプランラインは残す必要があります。');
+            return;
+        }
+        if (confirm(`本当に「${planName}」を削除しますか？この操作は元に戻せません。`)) {
+            const nextLPs = lps.filter(p => p.id !== idToDelete);
+            setAudioLPs(nextLPs);
+            setSelectedId(nextLPs[0]?.id || '');
+            alert('プランを削除しました。');
+        }
+    };
+
+    if (!data || !data.header) return null;
+
     return (
-      <div className="grid grid-cols-1 gap-8">
-         {audioPlans.map(cat => (
-          <div key={cat.id} className="bg-zinc-900/30 border border-zinc-800 rounded-[2rem] p-10">
-            <h3 className="text-2xl font-black text-white italic tracking-tighter mb-8">{cat.title}</h3>
-            <div className="space-y-3">
-              {cat.items.map(item => (
-                <div key={item.name} className="bg-black/40 border border-zinc-800/50 p-5 rounded-2xl flex items-center justify-between">
-                  <div className="flex items-center gap-4">
-                    <img src={item.image} className="w-12 h-12 rounded-lg object-cover bg-zinc-800" alt="" />
-                    <div>
-                      <h4 className="font-black text-white text-sm leading-none mb-1">{item.name}</h4>
-                      <p className="text-zinc-600 text-[10px] font-medium">{cat.subtitle}</p>
-                    </div>
-                  </div>
-                  <input 
-                    type="text" 
-                    defaultValue={item.price}
-                    onBlur={(e) => updatePrice(cat.id, item.name, { price: e.target.value })}
-                    className="w-32 bg-zinc-900 border border-zinc-800 rounded-lg px-4 py-2.5 text-xs text-white font-black text-right"
-                  />
+        <div className="space-y-12">
+            {/* Audio Menu Header Overview */}
+            <div className="border-b border-zinc-800 pb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                    <h2 className="text-3xl font-black text-white italic tracking-tighter uppercase leading-none">Audio Package Menu</h2>
+                    <p className="text-zinc-500 font-bold text-xs mt-2">
+                        オーディオ特設ラインごとの専用LPコンテンツを複数追加・一括管理します。各プラン専用のURL(Slug)も設定可能です。
+                    </p>
                 </div>
-              ))}
+                {/* 新規追加ボタン */}
+                <button 
+                    onClick={handleAddPlan}
+                    className="flex items-center gap-2 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-white px-4 py-2.5 rounded-xl font-black text-xs transition-all self-start md:self-auto"
+                >
+                    <Plus className="w-4 h-4 text-blue-400" />
+                    プランを追加
+                </button>
             </div>
-          </div>
-        ))}
-      </div>
+
+            {/* タブ切り替えリスト */}
+            <div className="flex flex-wrap gap-2 border-b border-zinc-800/60 pb-4">
+                {lps.map((p) => {
+                    const isSelected = p.id === selectedId;
+                    return (
+                        <div 
+                            key={p.id}
+                            className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-black transition-all cursor-pointer border ${
+                                isSelected 
+                                ? 'bg-blue-600/10 border-blue-500/40 text-white shadow-lg shadow-blue-600/5' 
+                                : 'bg-zinc-900/40 border-zinc-800 text-zinc-500 hover:text-zinc-300 hover:border-zinc-700'
+                            }`}
+                            onClick={() => setSelectedId(p.id || '')}
+                        >
+                            <Music className={`w-3.5 h-3.5 ${isSelected ? 'text-blue-400' : 'text-zinc-600'}`} />
+                            <span>{p.name || p.header?.badge || '無名プラン'}</span>
+                            {/* 削除ボタン */}
+                            {lps.length > 1 && (
+                                <button 
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        handleDeletePlan(p.id || '', p.name || 'プラン');
+                                    }}
+                                    className="p-1 hover:bg-red-500/20 rounded text-zinc-600 hover:text-red-400 transition-colors ml-1"
+                                    title="このプランを削除"
+                                >
+                                    <Trash2 className="w-3 h-3" />
+                                </button>
+                            )}
+                        </div>
+                    );
+                })}
+            </div>
+
+            {/* 選択中のプラン編集画面 */}
+            <motion.div 
+                key={selectedId}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="bg-zinc-950 border-2 border-zinc-800 rounded-[3rem] p-8 md:p-12 space-y-12 relative"
+            >
+                {/* 共通基本設定: 名前とSlug */}
+                <div className="bg-zinc-900/30 border border-zinc-800/80 p-6 rounded-2xl space-y-4">
+                    <div className="flex items-center gap-2">
+                        <span className="text-[10px] font-black text-blue-400 bg-blue-500/10 border border-blue-500/20 px-2 py-0.5 rounded uppercase tracking-widest">基本設定</span>
+                        <span className="text-xs font-bold text-zinc-400">管理名およびURLスラッグ</span>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+                        <div className="space-y-1.5">
+                            <label className="block text-[10px] font-black text-zinc-400">プラン名 (管理・タブ表示用)</label>
+                            <input 
+                                type="text"
+                                value={data.name || ''}
+                                onChange={e => setData({ ...data, name: e.target.value })}
+                                className="w-full bg-black border border-zinc-800 rounded-xl px-4 py-2.5 text-white text-xs font-bold focus:border-blue-500 outline-none"
+                                placeholder="例: スタンダードライン"
+                            />
+                        </div>
+                        <div className="space-y-1.5">
+                            <label className="block text-[10px] font-black text-zinc-400">URL Slug (英数字・ハイフン)</label>
+                            <div className="flex items-center bg-black border border-zinc-800 rounded-xl overflow-hidden focus-within:border-blue-500">
+                                <span className="text-zinc-600 text-xs font-bold pl-4 pr-1 select-none">/</span>
+                                <input 
+                                    type="text"
+                                    value={data.slug || ''}
+                                    onChange={e => setData({ ...data, slug: e.target.value.replace(/[^a-zA-Z0-9-_]/g, '') })}
+                                    className="w-full bg-transparent py-2.5 pr-4 text-blue-400 text-xs font-bold outline-none"
+                                    placeholder="sp-standard"
+                                />
+                            </div>
+                            <p className="text-[9px] text-zinc-500 mt-1">※自動で専用ページが生成されます（例: <span className="text-zinc-400">/audio/lp/{data.slug || 'sp-standard'}</span>）</p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Header section */}
+                <div className="bg-zinc-900/40 border border-zinc-800/80 rounded-[2rem] p-8 space-y-6">
+                    <div className="flex items-center gap-4">
+                        <div className="w-10 h-10 bg-blue-600/20 border border-blue-500/30 rounded-xl flex items-center justify-center">
+                            <span className="text-blue-400 font-black text-sm">H</span>
+                        </div>
+                        <div>
+                            <h4 className="text-lg font-black text-white italic tracking-tighter uppercase leading-none">Header Content</h4>
+                            <p className="text-[9px] text-zinc-500 font-black uppercase tracking-widest mt-1">LP上部キャッチフレーズ・紹介文</p>
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <Input 
+                            field="バッジ表記" 
+                            value={data.header.badge} 
+                            onChange={(val: string) => setData({ ...data, header: { ...data.header, badge: val } })} 
+                        />
+                        <Input 
+                            field="メインタイトル" 
+                            value={data.header.mainTitle} 
+                            onChange={(val: string) => setData({ ...data, header: { ...data.header, mainTitle: val } })} 
+                        />
+                        <Input 
+                            field="サブタイトル" 
+                            value={data.header.subTitle} 
+                            onChange={(val: string) => setData({ ...data, header: { ...data.header, subTitle: val } })} 
+                        />
+                    </div>
+
+                    <div className="space-y-2">
+                        <label className="block text-[10px] font-black text-zinc-500 uppercase tracking-widest">リード紹介文</label>
+                        <textarea 
+                            value={data.header.description}
+                            onChange={e => setData({ ...data, header: { ...data.header, description: e.target.value } })}
+                            className="w-full bg-black border border-zinc-800 rounded-xl px-5 py-4 text-white text-sm font-bold focus:border-blue-500 outline-none transition-all h-28 leading-relaxed"
+                        />
+                    </div>
+                </div>
+
+                {/* Pricing section */}
+                <div className="bg-zinc-900/40 border border-zinc-800/80 rounded-[2rem] p-8 space-y-6">
+                    <div className="flex items-center gap-4">
+                        <div className="w-10 h-10 bg-blue-600/20 border border-blue-500/30 rounded-xl flex items-center justify-center">
+                            <span className="text-blue-400 font-black text-sm">¥</span>
+                        </div>
+                        <div>
+                            <h4 className="text-lg font-black text-white italic tracking-tighter uppercase leading-none">Pricing Display</h4>
+                            <p className="text-[9px] text-zinc-500 font-black uppercase tracking-widest mt-1">価格・お得度ハイライト表記</p>
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <Input 
+                            field="特別価格 (数値または文字)" 
+                            value={data.pricing.specialPrice} 
+                            onChange={(val: string) => setData({ ...data, pricing: { ...data.pricing, specialPrice: val } })} 
+                        />
+                        <Input 
+                            field="通常目安表記文" 
+                            value={data.pricing.normalPriceText} 
+                            onChange={(val: string) => setData({ ...data, pricing: { ...data.pricing, normalPriceText: val } })} 
+                        />
+                        <Input 
+                            field="お得額表記文" 
+                            value={data.pricing.savingsText} 
+                            onChange={(val: string) => setData({ ...data, pricing: { ...data.pricing, savingsText: val } })} 
+                        />
+                    </div>
+
+                    <div className="space-y-2">
+                        <label className="block text-[10px] font-black text-zinc-500 uppercase tracking-widest">価格下部 注釈文</label>
+                        <input 
+                            type="text" 
+                            value={data.pricing.note} 
+                            onChange={e => setData({ ...data, pricing: { ...data.pricing, note: e.target.value } })}
+                            className="w-full bg-black border border-zinc-800 rounded-xl px-5 py-3.5 text-white text-xs font-bold focus:border-blue-500 outline-none transition-all"
+                        />
+                    </div>
+                </div>
+
+                {/* Features section */}
+                <div className="bg-zinc-900/40 border border-zinc-800/80 rounded-[2rem] p-8 space-y-6">
+                    <div className="flex items-center gap-4">
+                        <div className="w-10 h-10 bg-blue-600/20 border border-blue-500/30 rounded-xl flex items-center justify-center">
+                            <Music className="w-5 h-5 text-blue-400" />
+                        </div>
+                        <div>
+                            <h4 className="text-lg font-black text-white italic tracking-tighter uppercase leading-none">Core 3 Features</h4>
+                            <p className="text-[9px] text-zinc-500 font-black uppercase tracking-widest mt-1">標準装備の「3つの重要施工」詳細</p>
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        {[
+                            { key: 'doorTuning', label: '① ドアチューニング', defImg: '/images/Audio/Speaker/door-b.webp' },
+                            { key: 'baffle', label: '② インナーバッフル', defImg: '/images/Audio/Speaker/baffle.webp' },
+                            { key: 'cable', label: '③ ケーブル', defImg: '/images/Audio/Speaker/ang-cable.webp' }
+                        ].map((feat) => {
+                            const cur = (data.features as any)?.[feat.key] || { title: '', desc: '', image: feat.defImg };
+                            return (
+                                <div key={feat.key} className="bg-black/40 border border-zinc-800 p-5 rounded-2xl space-y-4">
+                                    <span className="text-[10px] font-black text-zinc-500 uppercase tracking-widest">{feat.label}</span>
+                                    <div className="space-y-2">
+                                        <label className="block text-[9px] font-bold text-zinc-600">見出しタイトル</label>
+                                        <input 
+                                            type="text"
+                                            value={cur.title}
+                                            onChange={e => {
+                                                setData({
+                                                    ...data,
+                                                    features: {
+                                                        ...data.features,
+                                                        [feat.key]: { ...cur, title: e.target.value }
+                                                    }
+                                                });
+                                            }}
+                                            className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-white text-xs font-bold focus:border-blue-500 outline-none"
+                                        />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <label className="block text-[9px] font-bold text-zinc-600">詳細説明</label>
+                                        <textarea 
+                                            value={cur.desc}
+                                            onChange={e => {
+                                                setData({
+                                                    ...data,
+                                                    features: {
+                                                        ...data.features,
+                                                        [feat.key]: { ...cur, desc: e.target.value }
+                                                    }
+                                                });
+                                            }}
+                                            className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-white text-xs font-bold focus:border-blue-500 outline-none h-20 leading-relaxed"
+                                        />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <label className="block text-[9px] font-bold text-zinc-600">画像パス</label>
+                                        <input 
+                                            type="text"
+                                            value={cur.image !== undefined ? cur.image : feat.defImg}
+                                            onChange={e => {
+                                                setData({
+                                                    ...data,
+                                                    features: {
+                                                        ...data.features,
+                                                        [feat.key]: { ...cur, image: e.target.value }
+                                                    }
+                                                });
+                                            }}
+                                            className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-zinc-400 text-xs font-bold focus:border-blue-500 outline-none"
+                                            placeholder={feat.defImg}
+                                        />
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+
+                {/* Upgrades section */}
+                <div className="bg-zinc-900/40 border border-zinc-800/80 rounded-[2rem] p-8 space-y-6">
+                    <div className="flex items-center gap-4">
+                        <div className="w-10 h-10 bg-blue-600/20 border border-blue-500/30 rounded-xl flex items-center justify-center">
+                            <Settings className="w-5 h-5 text-blue-400" />
+                        </div>
+                        <div>
+                            <h4 className="text-lg font-black text-white italic tracking-tighter uppercase leading-none">Upgrade Courses & Options</h4>
+                            <p className="text-[9px] text-zinc-500 font-black uppercase tracking-widest mt-1">アップグレード一覧および追加オプション</p>
+                        </div>
+                    </div>
+
+                    <div className="space-y-4">
+                        <label className="block text-[10px] font-black text-zinc-500 uppercase tracking-widest">コース設定</label>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {(data.upgrades?.courses || []).map((course, idx) => (
+                                <div key={idx} className="bg-black/40 border border-zinc-800 p-4 rounded-2xl space-y-3 relative">
+                                    <div className="flex items-center justify-between gap-4">
+                                        <input 
+                                            type="text"
+                                            value={course.name}
+                                            onChange={e => {
+                                                const nextCourses = [...data.upgrades.courses];
+                                                nextCourses[idx] = { ...course, name: e.target.value };
+                                                setData({ ...data, upgrades: { ...data.upgrades, courses: nextCourses } });
+                                            }}
+                                            className="w-1/2 bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-1.5 text-white text-xs font-black focus:border-blue-500"
+                                            placeholder="コース名"
+                                        />
+                                        <input 
+                                            type="text"
+                                            value={course.price}
+                                            onChange={e => {
+                                                const nextCourses = [...data.upgrades.courses];
+                                                nextCourses[idx] = { ...course, price: e.target.value };
+                                                setData({ ...data, upgrades: { ...data.upgrades, courses: nextCourses } });
+                                            }}
+                                            className="w-1/3 bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-1.5 text-blue-400 text-xs font-black text-right focus:border-blue-500"
+                                            placeholder="追加料金"
+                                        />
+                                    </div>
+                                    <input 
+                                        type="text"
+                                        value={course.desc}
+                                        onChange={e => {
+                                            const nextCourses = [...data.upgrades.courses];
+                                            nextCourses[idx] = { ...course, desc: e.target.value };
+                                            setData({ ...data, upgrades: { ...data.upgrades, courses: nextCourses } });
+                                        }}
+                                        className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-1.5 text-zinc-400 text-xs font-bold focus:border-blue-500"
+                                        placeholder="コース詳細"
+                                    />
+                                    <div className="flex items-center justify-end">
+                                        <label className="flex items-center gap-2 cursor-pointer">
+                                            <input 
+                                                type="checkbox"
+                                                checked={!!course.pop}
+                                                onChange={e => {
+                                                    const nextCourses = [...data.upgrades.courses];
+                                                    nextCourses[idx] = { ...course, pop: e.target.checked };
+                                                    setData({ ...data, upgrades: { ...data.upgrades, courses: nextCourses } });
+                                                }}
+                                                className="rounded border-zinc-800 bg-zinc-900 text-blue-600 focus:ring-0"
+                                            />
+                                            <span className="text-[10px] font-black text-zinc-500 uppercase tracking-widest">おすすめバッジ</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-zinc-800/80">
+                        <div className="space-y-4 bg-black/30 p-4 rounded-xl border border-zinc-800/50">
+                            <Input 
+                                field="メタルバッフル 特典表記" 
+                                value={data.upgrades?.options?.metalBaffleDiscount || ''}
+                                onChange={(val: string) => setData({ 
+                                    ...data, 
+                                    upgrades: { ...data.upgrades, options: { ...data.upgrades.options, metalBaffleDiscount: val } } 
+                                })}
+                            />
+                            <div className="space-y-1.5">
+                                <label className="block text-[9px] font-bold text-zinc-500">メタルバッフル 画像パス</label>
+                                <input 
+                                    type="text"
+                                    value={data.upgrades?.options?.metalBaffleImage !== undefined ? data.upgrades.options.metalBaffleImage : "/images/Audio/Speaker/metal.webp"}
+                                    onChange={e => setData({
+                                        ...data,
+                                        upgrades: { ...data.upgrades, options: { ...data.upgrades.options, metalBaffleImage: e.target.value } }
+                                    })}
+                                    className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-1.5 text-zinc-400 text-xs font-bold focus:border-blue-500 outline-none"
+                                    placeholder="/images/Audio/Speaker/metal.webp"
+                                />
+                            </div>
+                        </div>
+                        <div className="space-y-4 bg-black/30 p-4 rounded-xl border border-zinc-800/50">
+                            <Input 
+                                field="ツィーター埋込 最低価格表記" 
+                                value={data.upgrades?.options?.tweeterMountPrice || ''}
+                                onChange={(val: string) => setData({ 
+                                    ...data, 
+                                    upgrades: { ...data.upgrades, options: { ...data.upgrades.options, tweeterMountPrice: val } } 
+                                })}
+                            />
+                            <div className="space-y-1.5">
+                                <label className="block text-[9px] font-bold text-zinc-500">ツィーター埋込 画像パス</label>
+                                <input 
+                                    type="text"
+                                    value={data.upgrades?.options?.tweeterMountImage !== undefined ? data.upgrades.options.tweeterMountImage : "/images/Audio/Speaker/tw-mount.webp"}
+                                    onChange={e => setData({
+                                        ...data,
+                                        upgrades: { ...data.upgrades, options: { ...data.upgrades.options, tweeterMountImage: e.target.value } }
+                                    })}
+                                    className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-1.5 text-zinc-400 text-xs font-bold focus:border-blue-500 outline-none"
+                                    placeholder="/images/Audio/Speaker/tw-mount.webp"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* 保存ボタン */}
+                <div className="flex justify-end pt-4">
+                    <button 
+                        onClick={handleSave}
+                        className="flex items-center gap-3 bg-blue-600 hover:bg-blue-500 text-white px-12 py-5 rounded-2xl font-black text-xs uppercase tracking-widest shadow-xl shadow-blue-600/20 transition-all transform hover:-translate-y-1"
+                    >
+                        <Save className="w-5 h-5" />
+                        設定内容を確定して保存
+                    </button>
+                </div>
+            </motion.div>
+        </div>
     );
 };
 
@@ -2101,6 +2815,158 @@ const PeripheralProductManager = () => {
                 )}
             </AnimatePresence>
         </>
+    );
+};
+
+const TemplateManager = () => {
+    const { securityData, updateSecurityTemplate, addSecurityTemplate, removeSecurityTemplate } = usePrices();
+    const [editingTemplate, setEditingTemplate] = useState<any>(null);
+
+    const templates = (securityData as any).featuredPlanTemplates || [];
+
+    const handleAdd = () => {
+        const newTemplate = {
+            id: 'template-' + Date.now(),
+            name: 'New Template',
+            title: 'New Featured Package',
+            description: 'Description goes here...',
+            tags: ['TAG 1', 'TAG 2'],
+            feature1: { title: 'Feature 1', description: 'Feature 1 details...' },
+            feature2: { title: 'Feature 2', description: 'Feature 2 details...' }
+        };
+        addSecurityTemplate(newTemplate);
+        setEditingTemplate(newTemplate);
+    };
+
+    const handleUpdate = (id: string, updates: any) => {
+        const template = templates.find((t: any) => t.id === id);
+        if (template) {
+            const updated = { ...template, ...updates };
+            updateSecurityTemplate(updated);
+            if (editingTemplate?.id === id) setEditingTemplate(updated);
+        }
+    };
+
+    const handleRemove = (id: string) => {
+        if (!confirm('Are you sure you want to delete this template? Any vehicles using it will revert to defaults.')) return;
+        removeSecurityTemplate(id);
+        if (editingTemplate?.id === id) setEditingTemplate(null);
+    };
+
+    const handleTagChange = (index: number, value: string) => {
+        if (!editingTemplate) return;
+        const nextTags = [...editingTemplate.tags];
+        nextTags[index] = value;
+        handleUpdate(editingTemplate.id, { tags: nextTags });
+    };
+
+    const addTag = () => {
+        if (!editingTemplate) return;
+        handleUpdate(editingTemplate.id, { tags: [...editingTemplate.tags, 'NEW TAG'] });
+    };
+
+    const removeTag = (index: number) => {
+        if (!editingTemplate) return;
+        handleUpdate(editingTemplate.id, { tags: editingTemplate.tags.filter((_: any, i: number) => i !== index) });
+    };
+
+    return (
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            <div className="lg:col-span-1 space-y-4">
+                <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-xl font-black text-white italic tracking-tighter uppercase">Patterns</h3>
+                    <button onClick={handleAdd} className="p-2 bg-emerald-600/10 text-emerald-500 rounded-lg hover:bg-emerald-600 hover:text-white transition-all"><Plus className="w-5 h-5" /></button>
+                </div>
+                <div className="space-y-3">
+                    {templates.map((t: any) => (
+                        <div 
+                            key={t.id}
+                            onClick={() => setEditingTemplate(t)}
+                            className={`p-5 rounded-2xl border cursor-pointer transition-all ${editingTemplate?.id === t.id ? 'bg-emerald-600/10 border-emerald-600' : 'bg-zinc-900/40 border-zinc-800 hover:border-zinc-700'}`}
+                        >
+                            <h4 className="font-black text-white text-sm truncate">{t.name}</h4>
+                            <p className="text-[10px] text-zinc-500 font-mono mt-1">{t.title}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            <div className="lg:col-span-2">
+                {editingTemplate ? (
+                    <div className="bg-zinc-900/40 border border-zinc-800 p-8 rounded-[2.5rem] space-y-8">
+                        <div className="flex items-center justify-between">
+                            <h3 className="text-2xl font-black text-white uppercase italic">Edit Template</h3>
+                            <button onClick={() => handleRemove(editingTemplate.id)} className="p-2 text-zinc-600 hover:text-red-500 transition-all"><Trash2 className="w-5 h-5" /></button>
+                        </div>
+
+                        <div className="grid grid-cols-2 gap-6">
+                            <Input field="Internal Name (Dashboard only)" value={editingTemplate.name} onChange={(v: string) => handleUpdate(editingTemplate.id, { name: v })} />
+                            <Input field="Public Title (e.g. CANインベーダー対策パッケージ)" value={editingTemplate.title} onChange={(v: string) => handleUpdate(editingTemplate.id, { title: v })} />
+                        </div>
+
+                        <div className="space-y-2">
+                            <label className="text-[10px] font-black text-zinc-500 uppercase tracking-widest">Description</label>
+                            <textarea 
+                                value={editingTemplate.description}
+                                onChange={e => handleUpdate(editingTemplate.id, { description: e.target.value })}
+                                className="w-full bg-black border border-zinc-800 rounded-xl px-5 py-3 text-white font-bold h-24"
+                            />
+                        </div>
+
+                        <div className="space-y-4">
+                            <div className="flex items-center justify-between">
+                                <label className="text-[10px] font-black text-zinc-500 uppercase tracking-widest">Tags / Threats</label>
+                                <button onClick={addTag} className="text-[9px] font-black text-emerald-500 uppercase">+ Add Tag</button>
+                            </div>
+                            <div className="flex flex-wrap gap-2">
+                                {editingTemplate.tags.map((tag: string, idx: number) => (
+                                    <div key={idx} className="flex items-center gap-2 bg-black border border-zinc-800 rounded-lg pl-3 pr-1 py-1">
+                                        <input 
+                                            value={tag}
+                                            onChange={e => handleTagChange(idx, e.target.value)}
+                                            className="bg-transparent border-none outline-none text-[10px] font-bold text-white w-24"
+                                        />
+                                        <button onClick={() => removeTag(idx)} className="p-1 text-zinc-600 hover:text-red-500"><X className="w-3 h-3" /></button>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-2 gap-8">
+                            <div className="space-y-4 p-6 bg-black/40 rounded-3xl border border-zinc-800">
+                                <h4 className="text-[10px] font-black text-emerald-500 uppercase tracking-widest italic">Feature Block 1</h4>
+                                <Input field="Feature 1 Title" value={editingTemplate.feature1.title} onChange={(v: string) => handleUpdate(editingTemplate.id, { feature1: { ...editingTemplate.feature1, title: v } })} />
+                                <div className="space-y-2">
+                                    <label className="text-[10px] font-black text-zinc-400 uppercase tracking-widest">Feature 1 Description</label>
+                                    <textarea 
+                                        value={editingTemplate.feature1.description}
+                                        onChange={e => handleUpdate(editingTemplate.id, { feature1: { ...editingTemplate.feature1, description: e.target.value } })}
+                                        className="w-full bg-black border border-zinc-800 rounded-xl px-4 py-2 text-xs text-white h-20"
+                                    />
+                                </div>
+                            </div>
+                            <div className="space-y-4 p-6 bg-black/40 rounded-3xl border border-zinc-800">
+                                <h4 className="text-[10px] font-black text-emerald-500 uppercase tracking-widest italic">Feature Block 2</h4>
+                                <Input field="Feature 2 Title" value={editingTemplate.feature2.title} onChange={(v: string) => handleUpdate(editingTemplate.id, { feature2: { ...editingTemplate.feature2, title: v } })} />
+                                <div className="space-y-2">
+                                    <label className="text-[10px] font-black text-zinc-400 uppercase tracking-widest">Feature 2 Description</label>
+                                    <textarea 
+                                        value={editingTemplate.feature2.description}
+                                        onChange={e => handleUpdate(editingTemplate.id, { feature2: { ...editingTemplate.feature2, description: e.target.value } })}
+                                        className="w-full bg-black border border-zinc-800 rounded-xl px-4 py-2 text-xs text-white h-20"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ) : (
+                    <div className="h-full flex flex-col items-center justify-center p-20 border-2 border-dashed border-zinc-800 rounded-[3rem] text-zinc-700">
+                        <Layout className="w-16 h-16 mb-4 opacity-20" />
+                        <p className="font-black italic text-xl uppercase tracking-widest">Select or create a template</p>
+                    </div>
+                )}
+            </div>
+        </div>
     );
 };
 

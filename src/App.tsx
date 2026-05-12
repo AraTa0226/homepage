@@ -28,6 +28,8 @@ const SecurityMainPage = lazy(() => import('./pages/Home/SecurityMainPage'));
 const VehicleSecurityDetail = lazy(() => import('./pages/Security/VehicleSecurityDetail'));
 const AudioMenuDetail = lazy(() => import('./components/Menu/AudioMenuDetail').then(m => ({ default: m.AudioMenuDetail })));
 const AudioPlanDetail = lazy(() => import('./pages/Audio/AudioPlanDetail'));
+const StandardLinePage = lazy(() => import('./pages/Audio/StandardLinePage').then(m => ({ default: m.StandardLinePage })));
+const StandardLinePrintPage = lazy(() => import('./pages/Admin/StandardLinePrintPage').then(m => ({ default: m.StandardLinePrintPage })));
 const PantheraPage = lazy(() => import('./pages/Security/PantheraPage').then(m => ({ default: m.PantheraPage })));
 const GrgoPage = lazy(() => import('./pages/Security/GrgoPage').then(m => ({ default: m.GrgoPage })));
 const GrgoV2Page = lazy(() => import('./pages/Security/GrgoV2Page').then(m => ({ default: m.GrgoV2Page })));
@@ -148,7 +150,16 @@ function AppContent() {
             const targetId = item.planId || item.planName || item.name;
             
             if (category.type === 'audio') {
-                navigate(`/audio/plan/${encodeURIComponent(targetId)}`);
+                if (
+                    targetId === 'スピーカー交換STANDARD line（10万円まで）' || 
+                    targetId === 'STANDARD line' ||
+                    targetId === 'standard-line' ||
+                    (typeof targetId === 'string' && targetId.includes('STANDARD line'))
+                ) {
+                    navigate('/sp-standard');
+                } else {
+                    navigate(`/audio/plan/${encodeURIComponent(targetId)}`);
+                }
             } else {
                 // If it's a security category without a specific path, go to security-home
                 navigate('/security-home');
@@ -167,6 +178,8 @@ function AppContent() {
             'security_radar': '/security/radar',
             'digital_mirror': '/security/digital_mirror',
             // Japanese Name Mappings
+            'スピーカー交換STANDARD line（10万円まで）': '/sp-standard',
+            'STANDARD line': '/sp-standard',
             'Panthera': '/security/panthera',
             'V2': '/security/grgo-v2',
             'VⅡ': '/security/grgo',
@@ -310,6 +323,10 @@ function AppContent() {
           <Route path="/security/news/:slug" element={<EventDetailPage domain="security" />} />
           <Route path="/audio/news/:slug" element={<EventDetailPage domain="audio" />} />
           <Route path="/audio/plan/:planId" element={<AudioPlanDetail />} />
+          <Route path="/sp-standard" element={<StandardLinePage />} />
+          <Route path="/audio/lp/:slug" element={<StandardLinePage />} />
+          <Route path="/audio/line/:slug" element={<StandardLinePage />} />
+          <Route path="/sp-:slug" element={<StandardLinePage />} />
         <Route path="/audio/sp-package" element={<AudioPlanDetail />} />
         <Route path="/audio/dsp-amp" element={<AudioPlanDetail />} />
         <Route path="/audio/amp-dsp" element={<AudioPlanDetail />} />
@@ -356,6 +373,7 @@ function AppContent() {
           <Route path="/reservation" element={<ReservationFormPage onBack={() => navigate('/')} />} />
           <Route path="/legal" element={<LegalInfoPage onBack={() => navigate('/')} />} />
           <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/admin/print/sp-standard" element={<StandardLinePrintPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Suspense>

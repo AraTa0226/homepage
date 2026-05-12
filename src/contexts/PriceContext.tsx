@@ -11,6 +11,7 @@ const LS_MANAGED_KEYS = [
   'ang_plans', 'ang_guides', 'ang_optionals',
   'ang_security_status', 'ang_emergency',
   'ang_partners', 'ang_brand_partners', 'ang_assets',
+  'ang_standard_line_landing',
 ];
 
 (function clearStaleLocalStorage() {
@@ -124,6 +125,38 @@ export interface EventPage {
   category: 'audio' | 'security';
 }
 
+export interface StandardLineLandingData {
+  id?: string;
+  slug?: string;
+  name?: string;
+  header: {
+    mainTitle: string;
+    subTitle: string;
+    badge: string;
+    description: string;
+  };
+  pricing: {
+    specialPrice: string;
+    normalPriceText: string;
+    savingsText: string;
+    note: string;
+  };
+  features: {
+    doorTuning: { title: string; desc: string; image?: string };
+    baffle: { title: string; desc: string; image?: string };
+    cable: { title: string; desc: string; image?: string };
+  };
+  upgrades: {
+    courses: { name: string; price: string; desc: string; pop?: boolean }[];
+    options: {
+      metalBaffleDiscount: string;
+      tweeterMountPrice: string;
+      metalBaffleImage?: string;
+      tweeterMountImage?: string;
+    };
+  };
+}
+
 interface PriceContextType {
   plans: PlanCategory[];
   guides: KnowledgeGuide[];
@@ -183,6 +216,14 @@ interface PriceContextType {
   renameVehicleSlug: (oldSlug: string, newSlug: string) => void;
   addSecurityVehicle: (manufacturer: string, name: string, slug: string) => void;
   findSlugByFlexibleName: (name: string) => string | undefined;
+  // Featured Plan Templates
+  updateSecurityTemplate: (template: FeaturedPlanTemplate) => void;
+  addSecurityTemplate: (template: FeaturedPlanTemplate) => void;
+  removeSecurityTemplate: (id: string) => void;
+  // Feature Set Templates
+  updateFeatureSetTemplate: (template: FeatureSetTemplate) => void;
+  addFeatureSetTemplate: (template: FeatureSetTemplate) => void;
+  removeFeatureSetTemplate: (id: string) => void;
   saveSiteData: (updates: any) => void;
   heroAlert: HeroAlert;
   setHeroAlert: (alert: HeroAlert) => void;
@@ -190,6 +231,10 @@ interface PriceContextType {
   setSelectedPlan: (plan: PlanItem | null) => void;
   selectedCategory: PlanCategory | null;
   setSelectedCategory: (category: PlanCategory | null) => void;
+  standardLineLanding: StandardLineLandingData;
+  setStandardLineLanding: (data: StandardLineLandingData) => void;
+  audioLPs: StandardLineLandingData[];
+  setAudioLPs: (lps: StandardLineLandingData[]) => void;
 }
 
 // Security Interfaces
@@ -202,6 +247,10 @@ export interface SecurityHome {
   seo: { title: string; description: string };
   hero: { mainTitle: string; subTitle: string; features: SecurityFeature[] };
   standards: { title: string; points: { id: string; title: string; icon: string; desc: string }[] };
+  v2Settings?: {
+    title: string;
+    description: string;
+  };
 }
 
 export interface SecurityMenuCategory {
@@ -226,18 +275,39 @@ export interface VehiclePlan {
   category?: string;
 }
 
+export interface FeaturedPlanTemplate {
+  id: string;
+  name: string; // 管理画面用の識別名 (例: CANインベーダー対策基本)
+  title: string; // 実際の表示タイトル
+  description: string;
+  tags: string[];
+  feature1: { title: string; description: string };
+  feature2: { title: string; description: string };
+}
+
+export interface FeatureSetTemplate {
+  id: string;
+  name: string; // 管理用の名前 (例: 標準センサーセット)
+  features: { key: string; label: string }[];
+}
+
 export interface VehicleConfig {
   name: string;
   year: string;
   image: string;
   description: string;
   plans: VehiclePlan[];
+  featuredPlanId?: string; // 紐付けられた特設プランテンプレートのID
+  featureSetId?: string; // 紐付けられた機能項目パターンのID
+  showV2Option?: boolean;
 }
 
 export interface SecurityData {
   home: SecurityHome;
   menu: { categories: SecurityMenuCategory[] };
   vehicles: Record<string, VehicleConfig> & { basePlans: VehiclePlan[] };
+  featuredPlanTemplates?: FeaturedPlanTemplate[]; // プランパターンのリスト
+  featureSetTemplates?: FeatureSetTemplate[]; // 機能項目パターンのリスト
 }
 
 export interface RecruitmentInfo {
@@ -1619,6 +1689,55 @@ const initialOptionals: OptionalService[] = [
   { id: 'tuning_opt', name: "サウンドチューニング", price: "0", description: "当店でご購入・施工いただいたお客様には、無料で音響調整を行っております。", effect: "鮮度回復", percentage: 100, image: "/images/Top/speaker.webp" },
 ];
 
+const initialStandardLineLanding: StandardLineLandingData = {
+  id: "standard",
+  slug: "sp-standard",
+  name: "スタンダードライン",
+  header: {
+    badge: "スタンダードライン",
+    mainTitle: "STANDARD LINE",
+    subTitle: "スピーカー交換パッケージ",
+    description: "純正の音に不満がある方へ。音質アップの第一歩は確実なスピーカー交換から。ただユニットを取り替えるだけではなく、スピーカーの真価を発揮するための必須施工（ドアチューニング・専用バッフル・配線）をすべてセットにした、明朗会計のコミコミパッケージです。"
+  },
+  pricing: {
+    specialPrice: "81840",
+    normalPriceText: "通常目安: 117,700円",
+    savingsText: "約 35,860円 お得!",
+    note: "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。"
+  },
+  features: {
+    doorTuning: {
+      title: "ドアチューニング Bコース",
+      desc: "薄い鉄板のドア内部の振動・共振を抑え、音の漏れを防ぐ制振・防音処理。（通常¥27,500相当）",
+      image: "/images/Audio/Speaker/door-b.webp"
+    },
+    baffle: {
+      title: "カスタムインナーバッフル",
+      desc: "強固な土台を作り、不要な振動を徹底排除。音の立ち上がりと定位感が劇的に改善します。（通常¥11,000相当）",
+      image: "/images/Audio/Speaker/baffle.webp"
+    },
+    cable: {
+      title: "ANGオリジナルケーブル",
+      desc: "オーディオテクニカ製ベースの高品位スピーカーケーブル(10m)で繊細な情報までロスなく伝送。（通常¥16,500相当）",
+      image: "/images/Audio/Speaker/ang-cable.webp"
+    }
+  },
+  upgrades: {
+    courses: [
+      { name: "B → A コース", price: "+¥11,000", desc: "フェリソニDS-1.5WP使用・制振材増量" },
+      { name: "B → A+ コース", price: "+¥22,000", desc: "フェリソニC2使用・制振材増量" },
+      { name: "B → S コース", price: "+¥33,000", desc: "DS-1.5WPをさらに増量。最新マテリアル高密度施工", pop: true },
+      { name: "B → S+ コース", price: "+¥44,000", desc: "フェリソニC2を贅沢に使用。最高峰の制振・吸音・遮音" }
+    ],
+    options: {
+      metalBaffleDiscount: "20% OFF",
+      tweeterMountPrice: "¥46,200〜",
+      metalBaffleImage: "/images/Audio/Speaker/metal.webp",
+      tweeterMountImage: "/images/Audio/Speaker/tw-mount.webp"
+    }
+  }
+};
+
 const PriceContext = createContext<PriceContextType | undefined>(undefined);
 
 export const PriceProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
@@ -1804,6 +1923,73 @@ export const PriceProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   const [selectedPlan, setSelectedPlan] = useState<PlanItem | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<PlanCategory | null>(null);
 
+  const [standardLineLanding, setStandardLineLandingState] = useState<StandardLineLandingData>(() => {
+    if ((cmsData as any).standardLineLanding) return (cmsData as any).standardLineLanding;
+    const saved = localStorage.getItem('ang_standard_line_landing');
+    return saved ? JSON.parse(saved) : initialStandardLineLanding;
+  });
+
+  const setStandardLineLanding = (raw: StandardLineLandingData) => {
+    const data: StandardLineLandingData = {
+      ...raw,
+      features: {
+        doorTuning: { ...raw.features.doorTuning, image: normalizeStoredImagePath(raw.features.doorTuning?.image) || "/images/Audio/Speaker/door-b.webp" },
+        baffle: { ...raw.features.baffle, image: normalizeStoredImagePath(raw.features.baffle?.image) || "/images/Audio/Speaker/baffle.webp" },
+        cable: { ...raw.features.cable, image: normalizeStoredImagePath(raw.features.cable?.image) || "/images/Audio/Speaker/ang-cable.webp" }
+      },
+      upgrades: {
+        ...raw.upgrades,
+        options: {
+          ...raw.upgrades?.options,
+          metalBaffleImage: normalizeStoredImagePath(raw.upgrades?.options?.metalBaffleImage) || "/images/Audio/Speaker/metal.webp",
+          tweeterMountImage: normalizeStoredImagePath(raw.upgrades?.options?.tweeterMountImage) || "/images/Audio/Speaker/tw-mount.webp"
+        }
+      }
+    };
+    setStandardLineLandingState(data);
+    localStorage.setItem('ang_standard_line_landing', JSON.stringify(data));
+    saveSiteData({ standardLineLanding: data });
+  };
+
+  const [audioLPs, setAudioLPsState] = useState<StandardLineLandingData[]>(() => {
+    if ((cmsData as any).audioLPs && Array.isArray((cmsData as any).audioLPs)) {
+      return (cmsData as any).audioLPs;
+    }
+    const single = (cmsData as any).standardLineLanding;
+    const defaultItem = single ? { ...single, id: single.id || 'standard', slug: single.slug || 'sp-standard', name: single.name || 'スタンダードライン' } : { ...initialStandardLineLanding, id: 'standard', slug: 'sp-standard', name: 'スタンダードライン' };
+    const saved = localStorage.getItem('ang_audio_lps');
+    return saved ? JSON.parse(saved) : [defaultItem];
+  });
+
+  const setAudioLPs = (rawLPs: StandardLineLandingData[]) => {
+    const lps = rawLPs.map(raw => ({
+      ...raw,
+      id: raw.id || `line_${Date.now()}_${Math.random().toString(36).substring(2,7)}`,
+      slug: raw.slug || 'sp-custom',
+      name: raw.name || 'カスタムライン',
+      features: {
+        doorTuning: { ...raw.features?.doorTuning, image: normalizeStoredImagePath(raw.features?.doorTuning?.image) || "/images/Audio/Speaker/door-b.webp" },
+        baffle: { ...raw.features?.baffle, image: normalizeStoredImagePath(raw.features?.baffle?.image) || "/images/Audio/Speaker/baffle.webp" },
+        cable: { ...raw.features?.cable, image: normalizeStoredImagePath(raw.features?.cable?.image) || "/images/Audio/Speaker/ang-cable.webp" }
+      },
+      upgrades: {
+        ...raw.upgrades,
+        options: {
+          ...raw.upgrades?.options,
+          metalBaffleImage: normalizeStoredImagePath(raw.upgrades?.options?.metalBaffleImage) || "/images/Audio/Speaker/metal.webp",
+          tweeterMountImage: normalizeStoredImagePath(raw.upgrades?.options?.tweeterMountImage) || "/images/Audio/Speaker/tw-mount.webp"
+        }
+      }
+    }));
+    setAudioLPsState(lps);
+    localStorage.setItem('ang_audio_lps', JSON.stringify(lps));
+    const std = lps.find(p => p.slug === 'sp-standard') || lps[0];
+    if (std) {
+      setStandardLineLandingState(std);
+    }
+    saveSiteData({ audioLPs: lps, standardLineLanding: std });
+  };
+
   const saveSiteData = (updates: any) => {
     if (import.meta.env.DEV) {
       fetch('/api/save-cms', {
@@ -1861,6 +2047,8 @@ export const PriceProvider: React.FC<{ children: ReactNode }> = ({ children }) =
           if (data.securityEvents) setSecurityEventsState(data.securityEvents);
           if (data.calendar) setHolidaysState(data.calendar);
           if (data.securityKnowledge) setSecurityKnowledgeState(data.securityKnowledge);
+          if (data.standardLineLanding) setStandardLineLandingState(data.standardLineLanding);
+          if (data.audioLPs) setAudioLPsState(data.audioLPs);
         })
         .catch(console.error);
     }
@@ -1933,6 +2121,12 @@ export const PriceProvider: React.FC<{ children: ReactNode }> = ({ children }) =
     localStorage.setItem('ang_security_events', JSON.stringify(securityEvents));
     saveSiteData({ securityEvents });
   }, [securityEvents, isMounted]);
+
+  React.useEffect(() => {
+    if (!isMounted) return;
+    localStorage.setItem('ang_standard_line_landing', JSON.stringify(standardLineLanding));
+    saveSiteData({ standardLineLanding });
+  }, [standardLineLanding, isMounted]);
 
   const setAuditionSpeakers = (speakers: AuditionBrand[]) => {
     setAuditionSpeakersState(speakers);
@@ -2205,6 +2399,74 @@ export const PriceProvider: React.FC<{ children: ReactNode }> = ({ children }) =
     });
   };
 
+  const updateSecurityTemplate = (template: FeaturedPlanTemplate) => {
+    setSecurityDataState(prev => {
+      const templates = prev.featuredPlanTemplates || [];
+      const next = {
+        ...prev,
+        featuredPlanTemplates: templates.map(t => t.id === template.id ? template : t)
+      };
+      saveSiteData({ security: next });
+      return next;
+    });
+  };
+
+  const addSecurityTemplate = (template: FeaturedPlanTemplate) => {
+    setSecurityDataState(prev => {
+      const next = {
+        ...prev,
+        featuredPlanTemplates: [...(prev.featuredPlanTemplates || []), template]
+      };
+      saveSiteData({ security: next });
+      return next;
+    });
+  };
+
+  const removeSecurityTemplate = (id: string) => {
+    setSecurityDataState(prev => {
+      const next = {
+        ...prev,
+        featuredPlanTemplates: (prev.featuredPlanTemplates || []).filter(t => t.id !== id)
+      };
+      saveSiteData({ security: next });
+      return next;
+    });
+  };
+
+  const updateFeatureSetTemplate = (template: FeatureSetTemplate) => {
+    setSecurityDataState(prev => {
+      const templates = prev.featureSetTemplates || [];
+      const next = {
+        ...prev,
+        featureSetTemplates: templates.map(t => t.id === template.id ? template : t)
+      };
+      saveSiteData({ security: next });
+      return next;
+    });
+  };
+
+  const addFeatureSetTemplate = (template: FeatureSetTemplate) => {
+    setSecurityDataState(prev => {
+      const next = {
+        ...prev,
+        featureSetTemplates: [...(prev.featureSetTemplates || []), template]
+      };
+      saveSiteData({ security: next });
+      return next;
+    });
+  };
+
+  const removeFeatureSetTemplate = (id: string) => {
+    setSecurityDataState(prev => {
+      const next = {
+        ...prev,
+        featureSetTemplates: (prev.featureSetTemplates || []).filter(t => t.id !== id)
+      };
+      saveSiteData({ security: next });
+      return next;
+    });
+  };
+
   const findSlugByFlexibleName = (name: string) => {
     if (!securityData.vehicles) return undefined;
     const norm = (s: string) => {
@@ -2307,6 +2569,10 @@ export const PriceProvider: React.FC<{ children: ReactNode }> = ({ children }) =
       setSelectedPlan,
       selectedCategory,
       setSelectedCategory,
+      standardLineLanding,
+      setStandardLineLanding,
+      audioLPs,
+      setAudioLPs,
       securityData,
       setSecurityData,
       updateSecurityHome,
@@ -2317,6 +2583,12 @@ export const PriceProvider: React.FC<{ children: ReactNode }> = ({ children }) =
       renameVehicleSlug,
       addSecurityVehicle,
       findSlugByFlexibleName,
+      updateSecurityTemplate,
+      addSecurityTemplate,
+      removeSecurityTemplate,
+      updateFeatureSetTemplate,
+      addFeatureSetTemplate,
+      removeFeatureSetTemplate,
       saveSiteData
     }}>
       {children}
@@ -2334,7 +2606,11 @@ export const usePrices = () => {
     guides: context.guides,
     addGuide: context.addGuide,
     removeGuide: context.removeGuide,
-    updateGuide: context.updateGuide
+    updateGuide: context.updateGuide,
+    standardLineLanding: context.standardLineLanding,
+    setStandardLineLanding: context.setStandardLineLanding,
+    audioLPs: context.audioLPs,
+    setAudioLPs: context.setAudioLPs
   };
 };
 
