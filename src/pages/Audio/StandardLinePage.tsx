@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Check, ShieldCheck, Music, Settings, Zap, ArrowRight, Info, Wrench, MessageCircle, Calendar, ChevronDown, Menu as MenuIcon } from 'lucide-react';
+import { Check, ShieldCheck, Music, Settings, Zap, ArrowRight, Info, Wrench, MessageCircle, Calendar, ChevronDown, Menu as MenuIcon, Sparkles, Disc, Layers } from 'lucide-react';
 import { usePrices } from '../../contexts/PriceContext';
 import { MegaMenu } from '../../components/Menu/MegaMenu';
 
@@ -205,7 +205,7 @@ export const StandardLinePage: React.FC = () => {
         </div>
 
         {/* 2カラム構成：パッケージの残り＆アップグレード */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 mb-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 mb-24">
           
           {/* 左カラム：その他のパッケージ内容 */}
           <div>
@@ -292,6 +292,110 @@ export const StandardLinePage: React.FC = () => {
             </div>
           </div>
         </div>
+
+        {/* --- 適用可能スピーカー ラインナップ一覧 (最下部・3列表示) --- */}
+        {data.speakers && data.speakers.length > 0 && (
+          <div className="mb-10 pt-10 border-t border-gray-100">
+            <div className="flex items-center gap-5 mb-4">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center shrink-0 shadow-lg shadow-blue-600/20">
+                <Sparkles className="w-7 h-7 text-white" />
+              </div>
+              <div>
+                <span className="text-xs font-black text-blue-600 tracking-widest uppercase block mb-1">Applicable Speaker Lineup</span>
+                <h2 className="text-3xl md:text-4xl font-black text-gray-900 tracking-tight">プラン適用可能なスピーカーラインナップ</h2>
+              </div>
+            </div>
+            <p className="text-base md:text-lg text-gray-600 mb-12 font-bold leading-relaxed max-w-4xl">
+              本パッケージで選択可能な高音質スピーカーの一覧です。それぞれ本体仕様と、コミコミ適用総額を比較して最適なユニットをお選びいただけます。
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {data.speakers.map((spk) => (
+                <div key={spk.id} className="bg-gradient-to-b from-white to-gray-50/50 rounded-[2.5rem] border border-gray-200/80 shadow-xl shadow-gray-200/40 overflow-hidden hover:border-blue-200 hover:shadow-2xl hover:shadow-blue-900/5 transition-all duration-500 group flex flex-col justify-between">
+                  <div>
+                    {/* 上部：画像と基本情報 */}
+                    <div className="p-8 pb-0">
+                      <div className="flex justify-between items-start mb-4">
+                        <span className="text-xs font-black px-3 py-1 bg-gray-100 text-gray-600 rounded-full border border-gray-200 tracking-wider uppercase max-w-[120px] truncate">{spk.brand}</span>
+                        <div className="flex gap-1 shrink-0">
+                          {spk.hasGrille ? (
+                            <span className="text-[9px] font-black bg-emerald-50 text-emerald-600 border border-emerald-200/80 px-2 py-0.5 rounded-md flex items-center gap-0.5">
+                              <Check className="w-2.5 h-2.5" /> グリル有
+                            </span>
+                          ) : (
+                            <span className="text-[9px] font-bold bg-gray-100 text-gray-400 border border-gray-200 px-2 py-0.5 rounded-md">
+                              グリル無
+                            </span>
+                          )}
+                          {spk.hasTweeterMount ? (
+                            <span className="text-[9px] font-black bg-blue-50 text-blue-600 border border-blue-200/80 px-2 py-0.5 rounded-md flex items-center gap-0.5">
+                              <Check className="w-2.5 h-2.5" /> TWマウント有
+                            </span>
+                          ) : (
+                            <span className="text-[9px] font-bold bg-gray-100 text-gray-400 border border-gray-200 px-2 py-0.5 rounded-md">
+                              TWマウント無
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                      <h3 className="text-xl md:text-2xl font-black text-gray-900 tracking-tight group-hover:text-blue-600 transition-colors mb-6 line-clamp-2">{spk.name}</h3>
+                    </div>
+
+                    {/* 画像エリア */}
+                    <div className="h-48 bg-white overflow-hidden relative mx-8 rounded-2xl border border-gray-100 shadow-inner flex items-center justify-center group-hover:border-blue-100 transition-colors">
+                      <img src={spk.image || "/images/Top/speaker.webp"} alt={spk.name} className="max-w-full max-h-full object-contain p-3 group-hover:scale-110 transition-transform duration-700" />
+                    </div>
+
+                    {/* スペック詳細グリッド */}
+                    <div className="px-8 py-6">
+                      <div className="grid grid-cols-2 gap-2 bg-white p-3 rounded-2xl border border-gray-100">
+                        <div>
+                          <span className="block text-[9px] font-bold text-gray-400 mb-0.5">取付穴サイズ</span>
+                          <span className="text-xs font-black text-gray-800 flex items-center gap-1 truncate">
+                            <Disc className="w-3 h-3 text-gray-400 shrink-0" /> {spk.mountingHole || '未設定'}
+                          </span>
+                        </div>
+                        <div>
+                          <span className="block text-[9px] font-bold text-gray-400 mb-0.5">取付深さ</span>
+                          <span className="text-xs font-black text-gray-800 flex items-center gap-1 truncate">
+                            <Layers className="w-3 h-3 text-gray-400 shrink-0" /> {spk.mountingDepth || '未設定'}
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* 備考・特長 */}
+                      {spk.remarks && (
+                        <p className="text-[11px] text-gray-500 font-bold leading-relaxed mt-3 bg-gray-50/80 p-3 rounded-xl border border-gray-100 line-clamp-3">
+                          {spk.remarks}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* フッター金額比較エリア */}
+                  <div className="bg-white border-t border-gray-100 p-6 flex flex-col sm:flex-row items-baseline justify-between gap-3 mt-auto rounded-b-[2.5rem]">
+                    <div>
+                      <span className="block text-[9px] font-bold text-gray-400 mb-0.5">スピーカー単体金額</span>
+                      <span className="text-xs font-bold text-gray-500">{spk.standalonePrice || '―'}</span>
+                    </div>
+                    <div className="text-right sm:text-right">
+                      <span className="block text-[9px] font-black text-blue-600 tracking-wider mb-0.5">コミコミ適用金額</span>
+                      <div className="text-2xl font-black text-gray-900 tracking-tighter">
+                        {spk.planAppliedPrice || '―'}
+                        <span className="text-[10px] text-gray-500 font-bold ml-0.5">〜(税込)</span>
+                      </div>
+                      {spk.taxExcludedPrice && (
+                        <span className="block text-[9px] text-gray-400 font-bold mt-0.5">
+                          (税抜 {spk.taxExcludedPrice})
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
 
       {/* --- フッター / 注意事項 (フル幅) --- */}

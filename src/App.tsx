@@ -374,6 +374,7 @@ function AppContent() {
           <Route path="/legal" element={<LegalInfoPage onBack={() => navigate('/')} />} />
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/admin/print/sp-standard" element={<StandardLinePrintPage />} />
+          <Route path="/admin/print/audio/:slug" element={<StandardLinePrintPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Suspense>

@@ -125,10 +125,26 @@ export interface EventPage {
   category: 'audio' | 'security';
 }
 
+export interface AudioSpeakerItem {
+  id: string;
+  image: string;
+  brand: string;
+  name: string;
+  mountingHole: string;
+  mountingDepth: string;
+  standalonePrice: string;
+  planAppliedPrice: string;
+  taxExcludedPrice?: string;
+  hasGrille: boolean;
+  hasTweeterMount: boolean;
+  remarks: string;
+}
+
 export interface StandardLineLandingData {
   id?: string;
   slug?: string;
   name?: string;
+  speakers?: AudioSpeakerItem[];
   header: {
     mainTitle: string;
     subTitle: string;
@@ -1693,6 +1709,36 @@ const initialStandardLineLanding: StandardLineLandingData = {
   id: "standard",
   slug: "sp-standard",
   name: "スタンダードライン",
+  speakers: [
+    {
+      id: "spk_1",
+      image: "/images/Top/speaker.webp",
+      brand: "KICKER",
+      name: "CSS674",
+      mountingHole: "140mm",
+      mountingDepth: "47mm",
+      standalonePrice: "¥40,700",
+      planAppliedPrice: "¥81,840",
+      taxExcludedPrice: "¥74,400",
+      hasGrille: true,
+      hasTweeterMount: true,
+      remarks: "薄型設計で多くの国産車に無加工取付可能。クリアでパンチのある低音が魅力のベストセラーモデル。"
+    },
+    {
+      id: "spk_2",
+      image: "/images/Top/speaker.webp",
+      brand: "Pioneer carrozzeria",
+      name: "TS-C1730S II",
+      mountingHole: "140mm",
+      mountingDepth: "58mm",
+      standalonePrice: "¥35,200",
+      planAppliedPrice: "¥76,340",
+      taxExcludedPrice: "¥69,400",
+      hasGrille: false,
+      hasTweeterMount: true,
+      remarks: "ハイレゾ音源対応の高解像度ツィーターを搭載。ボーカルの息遣いまで鮮明に描き出す人気国産モデル。"
+    }
+  ],
   header: {
     badge: "スタンダードライン",
     mainTitle: "STANDARD LINE",
@@ -1741,18 +1787,32 @@ const initialStandardLineLanding: StandardLineLandingData = {
 const PriceContext = createContext<PriceContextType | undefined>(undefined);
 
 export const PriceProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  // Normalize a stored image path: only lowercase the FILENAME, preserve folder casing
+  // Normalize a stored image path: support absolute Windows file paths pasted from Explorer
   const normalizeStoredImagePath = (path: string | undefined): string | undefined => {
     if (!path) return path;
-    // Already a fully valid external URL → leave untouched
     if (path.startsWith('http')) return path;
+
+    // Convert Windows backslashes to forward slashes
+    let p = path.replace(/\\/g, '/');
+
+    // Automatically strip local system prefix up to '/public' or '/images'
+    const publicIdx = p.indexOf('/public/');
+    if (publicIdx !== -1) {
+      p = p.substring(publicIdx + 7); // keeps the leading slash: '/images/...'
+    } else {
+      const imagesIdx = p.indexOf('/images/');
+      if (imagesIdx !== -1) {
+        p = p.substring(imagesIdx);
+      }
+    }
+
     // Ensure leading slash
-    const p = path.startsWith('/') ? path : '/' + path;
-    // Only lowercase the filename part — folder names stay as-is (Vercel is case-sensitive)
-    const lastSlash = p.lastIndexOf('/');
-    const folder = p.substring(0, lastSlash + 1); // preserve original casing for folders
-    const file = p.substring(lastSlash + 1).toLowerCase(); // lowercase filename only
-    return folder + file;
+    if (!p.startsWith('/')) {
+      p = '/' + p;
+    }
+
+    // Preserve exact case for case-sensitive production environments (Vercel/Linux)
+    return p;
   };
 
   const [plans, setPlans] = useState<PlanCategory[]>(() => {
@@ -1956,7 +2016,18 @@ export const PriceProvider: React.FC<{ children: ReactNode }> = ({ children }) =
       return (cmsData as any).audioLPs;
     }
     const single = (cmsData as any).standardLineLanding;
-    const defaultItem = single ? { ...single, id: single.id || 'standard', slug: single.slug || 'sp-standard', name: single.name || 'スタンダードライン' } : { ...initialStandardLineLanding, id: 'standard', slug: 'sp-standard', name: 'スタンダードライン' };
+    const defaultItem = single ? { 
+      ...single, 
+      id: single.id || 'standard', 
+      slug: single.slug || 'sp-standard', 
+      name: single.name || 'スタンダードライン',
+      speakers: single.speakers || initialStandardLineLanding.speakers 
+    } : { 
+      ...initialStandardLineLanding, 
+      id: 'standard', 
+      slug: 'sp-standard', 
+      name: 'スタンダードライン' 
+    };
     const saved = localStorage.getItem('ang_audio_lps');
     return saved ? JSON.parse(saved) : [defaultItem];
   });

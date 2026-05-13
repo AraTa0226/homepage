@@ -34,7 +34,8 @@ import {
   HelpCircle,
   FileText,
   Monitor,
-  Globe
+  Globe,
+  Sparkles
 } from 'lucide-react';
 import { usePrices } from '../../contexts/PriceContext';
 import { useSite } from '../../contexts/SiteContext';
@@ -1236,6 +1237,15 @@ const AudioPlanManager = () => {
     const { audioLPs, setAudioLPs } = usePrices();
     const lps = audioLPs || [];
 
+    const cleanPathInput = (val: string) => {
+        let p = val.replace(/^["']|["']$/g, '').replace(/\\/g, '/');
+        const pubIdx = p.indexOf('/public/');
+        if (pubIdx !== -1) return p.substring(pubIdx + 7);
+        const imgIdx = p.indexOf('/images/');
+        if (imgIdx !== -1) return p.substring(imgIdx);
+        return val.replace(/^["']|["']$/g, '');
+    };
+
     const [selectedId, setSelectedId] = useState(() => lps[0]?.id || 'standard');
     const currentLine = lps.find(p => p.id === selectedId) || lps[0];
 
@@ -1324,14 +1334,23 @@ const AudioPlanManager = () => {
                         オーディオ特設ラインごとの専用LPコンテンツを複数追加・一括管理します。各プラン専用のURL(Slug)も設定可能です。
                     </p>
                 </div>
-                {/* 新規追加ボタン */}
-                <button 
-                    onClick={handleAddPlan}
-                    className="flex items-center gap-2 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-white px-4 py-2.5 rounded-xl font-black text-xs transition-all self-start md:self-auto"
-                >
-                    <Plus className="w-4 h-4 text-blue-400" />
-                    プランを追加
-                </button>
+                {/* アクションボタン群 */}
+                <div className="flex flex-wrap items-center gap-3 self-start md:self-auto">
+                    <button 
+                        onClick={() => window.open(`/admin/print/audio/${data.slug || 'sp-standard'}`, '_blank')}
+                        className="flex items-center gap-2 bg-blue-600/10 hover:bg-blue-600 border border-blue-500/30 text-blue-400 hover:text-white px-4 py-2.5 rounded-xl font-black text-xs transition-all"
+                    >
+                        <Printer className="w-4 h-4" />
+                        このプランを資料印刷 (A4)
+                    </button>
+                    <button 
+                        onClick={handleAddPlan}
+                        className="flex items-center gap-2 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-white px-4 py-2.5 rounded-xl font-black text-xs transition-all"
+                    >
+                        <Plus className="w-4 h-4 text-blue-400" />
+                        プランを追加
+                    </button>
+                </div>
             </div>
 
             {/* タブ切り替えリスト */}
@@ -1555,7 +1574,7 @@ const AudioPlanManager = () => {
                                                     ...data,
                                                     features: {
                                                         ...data.features,
-                                                        [feat.key]: { ...cur, image: e.target.value }
+                                                        [feat.key]: { ...cur, image: cleanPathInput(e.target.value) }
                                                     }
                                                 });
                                             }}
@@ -1658,7 +1677,7 @@ const AudioPlanManager = () => {
                                     value={data.upgrades?.options?.metalBaffleImage !== undefined ? data.upgrades.options.metalBaffleImage : "/images/Audio/Speaker/metal.webp"}
                                     onChange={e => setData({
                                         ...data,
-                                        upgrades: { ...data.upgrades, options: { ...data.upgrades.options, metalBaffleImage: e.target.value } }
+                                        upgrades: { ...data.upgrades, options: { ...data.upgrades.options, metalBaffleImage: cleanPathInput(e.target.value) } }
                                     })}
                                     className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-1.5 text-zinc-400 text-xs font-bold focus:border-blue-500 outline-none"
                                     placeholder="/images/Audio/Speaker/metal.webp"
@@ -1681,13 +1700,239 @@ const AudioPlanManager = () => {
                                     value={data.upgrades?.options?.tweeterMountImage !== undefined ? data.upgrades.options.tweeterMountImage : "/images/Audio/Speaker/tw-mount.webp"}
                                     onChange={e => setData({
                                         ...data,
-                                        upgrades: { ...data.upgrades, options: { ...data.upgrades.options, tweeterMountImage: e.target.value } }
+                                        upgrades: { ...data.upgrades, options: { ...data.upgrades.options, tweeterMountImage: cleanPathInput(e.target.value) } }
                                     })}
                                     className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-1.5 text-zinc-400 text-xs font-bold focus:border-blue-500 outline-none"
                                     placeholder="/images/Audio/Speaker/tw-mount.webp"
                                 />
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                {/* --- スピーカーラインナップ管理セクション --- */}
+                <div className="bg-zinc-900/40 border border-zinc-800/80 rounded-[2rem] p-8 space-y-6">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-zinc-800/80 pb-4">
+                        <div className="flex items-center gap-4">
+                            <div className="w-10 h-10 bg-blue-600/20 border border-blue-500/30 rounded-xl flex items-center justify-center">
+                                <Sparkles className="w-5 h-5 text-blue-400" />
+                            </div>
+                            <div>
+                                <h4 className="text-lg font-black text-white italic tracking-tighter uppercase leading-none">Speaker Lineup Management</h4>
+                                <p className="text-[9px] text-zinc-500 font-black uppercase tracking-widest mt-1">プラン適用可能スピーカー一覧（全10項目対応）</p>
+                            </div>
+                        </div>
+                        <button 
+                            onClick={() => {
+                                const newSpk = {
+                                    id: `spk_${Date.now()}_${Math.random().toString(36).substring(2,6)}`,
+                                    image: "/images/Top/speaker.webp",
+                                    brand: "新規メーカー",
+                                    name: "新規モデル",
+                                    mountingHole: "140mm",
+                                    mountingDepth: "50mm",
+                                    standalonePrice: "¥30,000",
+                                    planAppliedPrice: "¥70,000",
+                                    taxExcludedPrice: "¥63,600",
+                                    hasGrille: true,
+                                    hasTweeterMount: true,
+                                    remarks: "特長や注意点を入力してください"
+                                };
+                                setData({ ...data, speakers: [...(data.speakers || []), newSpk] });
+                            }}
+                            className="flex items-center gap-2 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-white px-3 py-2 rounded-xl font-bold text-xs self-start sm:self-auto transition-all"
+                        >
+                            <Plus className="w-4 h-4 text-blue-400" /> スピーカーを追加
+                        </button>
+                    </div>
+
+                    <div className="space-y-6">
+                        {(data.speakers || []).map((spk, idx) => (
+                            <div key={spk.id} className="bg-black/40 border border-zinc-800/80 rounded-2xl p-6 space-y-4 relative group">
+                                <div className="flex justify-between items-center pb-2 border-b border-zinc-800/40">
+                                    <span className="text-xs font-black text-blue-400">Speaker Item #{idx + 1}</span>
+                                    <button 
+                                        onClick={() => {
+                                            const nextSpks = [...(data.speakers || [])];
+                                            nextSpks.splice(idx, 1);
+                                            setData({ ...data, speakers: nextSpks });
+                                        }}
+                                        className="text-zinc-600 hover:text-red-400 transition-colors p-1 rounded hover:bg-red-500/10"
+                                        title="このスピーカーを削除"
+                                    >
+                                        <Trash2 className="w-4 h-4" />
+                                    </button>
+                                </div>
+
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                    <div className="space-y-1.5">
+                                        <label className="block text-[9px] font-bold text-zinc-500">メーカー (Brand)</label>
+                                        <input 
+                                            type="text"
+                                            value={spk.brand}
+                                            onChange={e => {
+                                                const next = [...(data.speakers || [])];
+                                                next[idx] = { ...spk, brand: e.target.value };
+                                                setData({ ...data, speakers: next });
+                                            }}
+                                            className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-white text-xs font-bold focus:border-blue-500 outline-none"
+                                            placeholder="KICKER"
+                                        />
+                                    </div>
+                                    <div className="space-y-1.5">
+                                        <label className="block text-[9px] font-bold text-zinc-500">品名 (Model Name)</label>
+                                        <input 
+                                            type="text"
+                                            value={spk.name}
+                                            onChange={e => {
+                                                const next = [...(data.speakers || [])];
+                                                next[idx] = { ...spk, name: e.target.value };
+                                                setData({ ...data, speakers: next });
+                                            }}
+                                            className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-white text-xs font-bold focus:border-blue-500 outline-none"
+                                            placeholder="CSS674"
+                                        />
+                                    </div>
+                                    <div className="space-y-1.5">
+                                        <label className="block text-[9px] font-bold text-zinc-500">画像パス (Image Path)</label>
+                                        <input 
+                                            type="text"
+                                            value={spk.image}
+                                            onChange={e => {
+                                                const next = [...(data.speakers || [])];
+                                                next[idx] = { ...spk, image: cleanPathInput(e.target.value) };
+                                                setData({ ...data, speakers: next });
+                                            }}
+                                            className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-zinc-400 text-xs font-bold focus:border-blue-500 outline-none"
+                                            placeholder="/images/Top/speaker.webp"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 pt-2">
+                                    <div className="space-y-1.5">
+                                        <label className="block text-[9px] font-bold text-zinc-500">取付穴サイズ</label>
+                                        <input 
+                                            type="text"
+                                            value={spk.mountingHole}
+                                            onChange={e => {
+                                                const next = [...(data.speakers || [])];
+                                                next[idx] = { ...spk, mountingHole: e.target.value };
+                                                setData({ ...data, speakers: next });
+                                            }}
+                                            className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-1.5 text-white text-xs font-bold focus:border-blue-500 outline-none"
+                                            placeholder="140mm"
+                                        />
+                                    </div>
+                                    <div className="space-y-1.5">
+                                        <label className="block text-[9px] font-bold text-zinc-500">取付深さ</label>
+                                        <input 
+                                            type="text"
+                                            value={spk.mountingDepth}
+                                            onChange={e => {
+                                                const next = [...(data.speakers || [])];
+                                                next[idx] = { ...spk, mountingDepth: e.target.value };
+                                                setData({ ...data, speakers: next });
+                                            }}
+                                            className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-1.5 text-white text-xs font-bold focus:border-blue-500 outline-none"
+                                            placeholder="47mm"
+                                        />
+                                    </div>
+                                    <div className="space-y-1.5">
+                                        <label className="block text-[9px] font-bold text-zinc-500">単体参考金額</label>
+                                        <input 
+                                            type="text"
+                                            value={spk.standalonePrice}
+                                            onChange={e => {
+                                                const next = [...(data.speakers || [])];
+                                                next[idx] = { ...spk, standalonePrice: e.target.value };
+                                                setData({ ...data, speakers: next });
+                                            }}
+                                            className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-1.5 text-zinc-400 text-xs font-bold focus:border-blue-500 outline-none"
+                                            placeholder="¥40,700"
+                                        />
+                                    </div>
+                                    <div className="space-y-1.5">
+                                        <label className="block text-[9px] font-black text-blue-400">プラン適用総額</label>
+                                        <input 
+                                            type="text"
+                                            value={spk.planAppliedPrice}
+                                            onChange={e => {
+                                                const next = [...(data.speakers || [])];
+                                                next[idx] = { ...spk, planAppliedPrice: e.target.value };
+                                                setData({ ...data, speakers: next });
+                                            }}
+                                            className="w-full bg-zinc-900 border border-blue-500/40 rounded-lg px-3 py-1.5 text-blue-400 text-xs font-black focus:border-blue-500 outline-none"
+                                            placeholder="¥81,840"
+                                        />
+                                    </div>
+                                    <div className="space-y-1.5">
+                                        <label className="block text-[9px] font-bold text-zinc-500">税抜価格(トータル)</label>
+                                        <input 
+                                            type="text"
+                                            value={spk.taxExcludedPrice || ''}
+                                            onChange={e => {
+                                                const next = [...(data.speakers || [])];
+                                                next[idx] = { ...spk, taxExcludedPrice: e.target.value };
+                                                setData({ ...data, speakers: next });
+                                            }}
+                                            className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-1.5 text-zinc-400 text-xs font-bold focus:border-blue-500 outline-none"
+                                            placeholder="¥74,400"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2 items-end">
+                                    <div className="md:col-span-2 space-y-1.5">
+                                        <label className="block text-[9px] font-bold text-zinc-500">備考・特長文 (Remarks)</label>
+                                        <input 
+                                            type="text"
+                                            value={spk.remarks}
+                                            onChange={e => {
+                                                const next = [...(data.speakers || [])];
+                                                next[idx] = { ...spk, remarks: e.target.value };
+                                                setData({ ...data, speakers: next });
+                                            }}
+                                            className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-1.5 text-zinc-300 text-xs font-bold focus:border-blue-500 outline-none"
+                                            placeholder="薄型設計で多くの国産車に無加工取付可能。"
+                                        />
+                                    </div>
+                                    <div className="flex gap-4 pb-1">
+                                        <label className="flex items-center gap-1.5 cursor-pointer">
+                                            <input 
+                                                type="checkbox"
+                                                checked={spk.hasGrille}
+                                                onChange={e => {
+                                                    const next = [...(data.speakers || [])];
+                                                    next[idx] = { ...spk, hasGrille: e.target.checked };
+                                                    setData({ ...data, speakers: next });
+                                                }}
+                                                className="rounded border-zinc-800 bg-zinc-900 text-emerald-600 focus:ring-0"
+                                            />
+                                            <span className="text-[10px] font-bold text-zinc-400 whitespace-nowrap">グリル付属</span>
+                                        </label>
+                                        <label className="flex items-center gap-1.5 cursor-pointer">
+                                            <input 
+                                                type="checkbox"
+                                                checked={spk.hasTweeterMount}
+                                                onChange={e => {
+                                                    const next = [...(data.speakers || [])];
+                                                    next[idx] = { ...spk, hasTweeterMount: e.target.checked };
+                                                    setData({ ...data, speakers: next });
+                                                }}
+                                                className="rounded border-zinc-800 bg-zinc-900 text-blue-600 focus:ring-0"
+                                            />
+                                            <span className="text-[10px] font-bold text-zinc-400 whitespace-nowrap">TWマウント有</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                        {(data.speakers || []).length === 0 && (
+                            <div className="text-center py-8 border border-dashed border-zinc-800 rounded-2xl">
+                                <p className="text-xs text-zinc-600 font-bold">登録されているスピーカーがありません。「スピーカーを追加」ボタンから追加してください。</p>
+                            </div>
+                        )}
                     </div>
                 </div>
 
