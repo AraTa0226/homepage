@@ -205,10 +205,14 @@ export const StandardLinePage: React.FC = () => {
                       </div>
                     )}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
-                      {(section.data.items || []).map((f: any, i: number) => (
+                      {[
+                        { title: section.data.doorTuning?.title, desc: section.data.doorTuning?.desc, image: section.data.doorTuning?.image || "/images/Audio/Speaker/door-b.webp" },
+                        { title: section.data.baffle?.title, desc: section.data.baffle?.desc, image: section.data.baffle?.image || "/images/Audio/Speaker/baffle.webp" },
+                        { title: section.data.cable?.title, desc: section.data.cable?.desc, image: section.data.cable?.image || "/images/Audio/Speaker/ang-cable.webp" }
+                      ].filter(f => f.title).map((f: any, i: number) => (
                         <div key={i} className="group relative">
                           <div className="aspect-[4/3] rounded-3xl overflow-hidden mb-8 shadow-2xl relative">
-                            <img src={f.image || "/images/Audio/Speaker/door-b.webp"} alt={f.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                            <img src={f.image} alt={f.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
                             <div className="absolute bottom-6 left-6 text-white font-black text-4xl italic opacity-20">0{i+1}</div>
                           </div>
