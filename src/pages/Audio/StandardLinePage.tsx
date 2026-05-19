@@ -88,9 +88,9 @@ export const StandardLinePage: React.FC = () => {
     const isString = typeof spk === 'string';
     const standalonePrice = isString ? spk : spk.standalonePrice;
     const speakerPrice = parsePrice(standalonePrice);
-    const fixedFee = !isString && spk.fixedPriceOverride !== undefined && spk.fixedPriceOverride !== ''
-      ? parsePrice(spk.fixedPriceOverride)
-      : (data.pricing?.fixedPrice || 0);
+    const fixedFee = parsePrice(!isString && spk.fixedPriceOverride !== undefined && spk.fixedPriceOverride !== ''
+      ? spk.fixedPriceOverride
+      : (data.pricing?.fixedPrice || 0));
     return speakerPrice + fixedFee;
   };
 
@@ -318,9 +318,9 @@ export const StandardLinePage: React.FC = () => {
                   ? section.data.speakers
                   : (data.speakers || []);
                 
-                const sectionFixedPrice = section.data?.fixedPrice !== undefined && section.data.fixedPrice !== null
+                const sectionFixedPrice = parsePrice(section.data?.fixedPrice !== undefined && section.data.fixedPrice !== null && section.data.fixedPrice !== ''
                   ? section.data.fixedPrice
-                  : (data.pricing?.fixedPrice || 0);
+                  : (data.pricing?.fixedPrice || 0));
 
                 const calculateAppliedPriceForSection = (spk: any) => {
                   if (!spk) return 0;
