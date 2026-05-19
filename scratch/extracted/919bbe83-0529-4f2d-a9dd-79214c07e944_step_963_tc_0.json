@@ -1,0 +1,11 @@
+{
+  "convId": "919bbe83-0529-4f2d-a9dd-79214c07e944",
+  "stepIdx": 963,
+  "toolName": "replace_file_content",
+  "startLine": "1655",
+  "endLine": "1658",
+  "desc": "\"Added editors for Text, Banner, CTA, FAQ, and Gallery section types in Dashboard.tsx.\"",
+  "inst": "\"Add new section editors.\"",
+  "target": "\"                                                        <Input field=\\\"Metal Baffle Disc.\\\" value={section.data.options?.metalBaffleDiscount || ''} onChange={v=>{const n=[...lpData.sections!]; n[sIdx].data.options={...(n[sIdx].data.options||{}), tweeterMo\n<truncated 217 bytes>",
+  "replacement": "\"                                                        <Input field=\\\"Metal Baffle Disc.\\\" value={section.data.options?.metalBaffleDiscount || ''} onChange={v=>{const n=[...lpData.sections!]; n[sIdx].data.options={...(n[n[sIdx].data.options||{}), metalBa\n<truncated 9909 bytes>"
+}

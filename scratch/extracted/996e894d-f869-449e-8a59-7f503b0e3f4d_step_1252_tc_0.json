@@ -1,0 +1,11 @@
+{
+  "convId": "996e894d-f869-449e-8a59-7f503b0e3f4d",
+  "stepIdx": 1252,
+  "toolName": "replace_file_content",
+  "startLine": "1262",
+  "endLine": "1267",
+  "desc": "\"Add missing setPlans and saveSiteData to usePrices destructuring in AudioPlanManager.\"",
+  "inst": "\"Add setPlans and saveSiteData to the usePrices() destructuring so they are available inside handleSaveLP.\"",
+  "target": "\"    const { \\n        audioLPs, setAudioLPs, plans, updatePrice, updateCategory, \\n        addItem, removeItem, addCategory, removeCategory,\\n        reorderPlans, reorderPlanItems, reorderAudioLPs,\\n        audioLPTemplates, setAudioLPTemplates\\n    } = \n<truncated 15 bytes>",
+  "replacement": "\"    const { \\n        audioLPs, setAudioLPs, plans, setPlans, updatePrice, updateCategory, \\n        addItem, removeItem, addCategory, removeCategory,\\n        reorderPlans, reorderPlanItems, reorderAudioLPs,\\n        audioLPTemplates, setAudioLPTemplates\n<truncated 39 bytes>"
+}

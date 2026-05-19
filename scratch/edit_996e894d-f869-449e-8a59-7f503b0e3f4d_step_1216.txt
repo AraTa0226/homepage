@@ -1,0 +1,2 @@
+"    const handleSaveLP = () => {\n        try {\n            console.log('[LP SAVE] Execution started. Current lpData:', lpData);\n            if (!lpData) {\n                alert('編集中のLPデータがありません。LPを一覧から選択して
+<truncated 524 bytes>

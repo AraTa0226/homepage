@@ -1,0 +1,11 @@
+{
+  "convId": "996e894d-f869-449e-8a59-7f503b0e3f4d",
+  "stepIdx": 1363,
+  "toolName": "replace_file_content",
+  "startLine": "1366",
+  "endLine": "1368",
+  "desc": "\"Replace reorderPlans with per-category updateCategory to prevent plans data race condition, and add debug logging to verify LP item is in nextPlans before save.\"",
+  "inst": "\"Replace reorderPlans(nextPlans) with individual updateCategory calls per changed category to avoid the race condition where reorderPlans's internal saveSiteData overwrites our nextPlans. Then log the final plans so we can verify the LP item is included.\"",
+  "target": "\"            reorderPlans(nextPlans);\\\\n            saveSiteData({ audioLPs: nextLPs, plans: nextPlans });\\\\n            alert(`「${updatedLP.name || 'プラン'}」の設定を保存しました。メニューとの同期も完了しました。`);\\n\"",
+  "replacement": "\"            // Update each changed category individually to avoid race condition\\n            // reorderPlans triggers its own saveSiteData which could overwrite nextPlans\\n            let anyChanged = false;\\n            plans.forEach(cat => {\\n         \n<truncated 1135 bytes>"
+}

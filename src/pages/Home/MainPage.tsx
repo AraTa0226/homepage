@@ -76,7 +76,7 @@ export const MainPage: React.FC<MainPageProps> = ({
         ...p,
         items: (Array.isArray(p.items) ? p.items : []).map((item: any) => {
             if (typeof item === 'string') return item;
-            return item?.name || '';
+            return item;
         })
     }));
 
@@ -105,10 +105,10 @@ export const MainPage: React.FC<MainPageProps> = ({
                         </div>
                     </div>
 
-                    <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-bold uppercase tracking-widest shrink-0">
+                    <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-[15px] font-bold uppercase tracking-widest shrink-0">
                         <a href="#" className="flex flex-col items-center group/item transition-colors">
-                            <span className="text-sm font-black tracking-widest group-hover/item:text-blue-500">HOME</span>
-                            <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">ホーム</span>
+                            <span className="text-[15px] font-black tracking-widest group-hover/item:text-blue-500">HOME</span>
+                            <span className="text-[12px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">ホーム</span>
                         </a>
                         <div
                             className="relative py-8 group/nav"
@@ -119,10 +119,10 @@ export const MainPage: React.FC<MainPageProps> = ({
                                 className={`flex flex-col items-center transition-colors group-hover/nav:text-blue-500 ${showMegaMenu ? 'text-blue-500' : ''}`}
                             >
                                 <div className="flex items-center gap-1">
-                                    <span className={`text-sm font-black tracking-widest ${showMegaMenu ? 'font-black' : ''}`}>MENU</span>
+                                    <span className={`text-[15px] font-black tracking-widest ${showMegaMenu ? 'font-black' : ''}`}>MENU</span>
                                     <ChevronRight className={`w-3 h-3 transition-transform ${showMegaMenu ? 'rotate-90' : ''}`} />
                                 </div>
-                                <span className="text-[8px] font-bold opacity-40 group-hover/nav:opacity-100 transition-opacity">メニュー一覧</span>
+                                <span className="text-[12px] font-bold opacity-40 group-hover/nav:opacity-100 transition-opacity">メニュー一覧</span>
                             </button>
                             <MegaMenu
                                 show={showMegaMenu}
@@ -134,19 +134,19 @@ export const MainPage: React.FC<MainPageProps> = ({
                             />
                         </div>
                         <a href="#blog" className="flex flex-col items-center group/item transition-colors">
-                            <span className="text-sm font-black tracking-widest group-hover/item:text-blue-500">BLOG</span>
-                            <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">ブログ</span>
+                            <span className="text-[15px] font-black tracking-widest group-hover/item:text-blue-500">BLOG</span>
+                            <span className="text-[12px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">ブログ</span>
                         </a>
                         <a href="#access" className="flex flex-col items-center group/item transition-colors">
-                            <span className="text-sm font-black tracking-widest group-hover/item:text-blue-500">ACCESS</span>
-                            <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">店舗案内</span>
+                            <span className="text-[15px] font-black tracking-widest group-hover/item:text-blue-500">ACCESS</span>
+                            <span className="text-[12px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">店舗案内</span>
                         </a>
                         <button
                             onClick={() => navigate('/security-home')}
                             className="flex flex-col items-center group/item transition-colors border-l border-gray-100 pl-4 ml-2"
                         >
-                            <span className="text-sm font-black tracking-widest text-emerald-600 group-hover/item:text-emerald-500">SECURITY</span>
-                            <span className="text-[8px] font-bold text-emerald-600/40 group-hover/item:text-emerald-500 transition-opacity">セキュリティー版</span>
+                            <span className="text-[15px] font-black tracking-widest text-emerald-600 group-hover/item:text-emerald-500">SECURITY</span>
+                            <span className="text-[12px] font-bold text-emerald-600/40 group-hover/item:text-emerald-500 transition-opacity">セキュリティー版</span>
                         </button>
                     </nav>
 
@@ -159,7 +159,7 @@ export const MainPage: React.FC<MainPageProps> = ({
                             aria-label="LINEで相談する"
                         >
                             <MessageSquare className="w-5 h-5 md:mr-2" />
-                            <span className="hidden sm:inline text-[10px] tracking-widest">LINE相談</span>
+                            <span className="hidden sm:inline text-[12px] tracking-widest">LINE相談</span>
                         </a>
 
                         <button
@@ -168,7 +168,7 @@ export const MainPage: React.FC<MainPageProps> = ({
                             aria-label="来店予約"
                         >
                             <CalendarIcon className="w-5 h-5 md:mr-2" />
-                            <span className="hidden sm:inline text-[10px] tracking-widest">来店予約</span>
+                            <span className="hidden sm:inline text-[12px] tracking-widest">来店予約</span>
                         </button>
 
                         <button
@@ -194,7 +194,7 @@ export const MainPage: React.FC<MainPageProps> = ({
                                 <Megaphone className="w-8 h-8 text-red-600" />
                             </div>
                             <div className="flex-grow text-center md:text-left">
-                                <span className="text-red-600 font-black text-xs uppercase tracking-widest mb-1 block">Emergency Notice</span>
+                                <span className="text-red-600 font-black text-sm uppercase tracking-widest mb-1 block">Emergency Notice</span>
                                 <div className="flex flex-col md:flex-row gap-6 items-center">
                                     {emergencyAnnouncement.image && (
                                         <SafeImage
@@ -213,7 +213,7 @@ export const MainPage: React.FC<MainPageProps> = ({
                                     href={emergencyAnnouncement.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="bg-red-600 text-white px-8 py-4 rounded-xl font-black text-sm tracking-widest hover:bg-red-700 transition-all shadow-lg shadow-red-200 shrink-0"
+                                    className="bg-red-600 text-white px-8 py-4 rounded-xl font-black text-[15px] tracking-widest hover:bg-red-700 transition-all shadow-lg shadow-red-200 shrink-0"
                                 >
                                     詳細を見る
                                 </a>
@@ -240,7 +240,7 @@ export const MainPage: React.FC<MainPageProps> = ({
                     <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }}>
                         <div className="flex flex-col gap-4 mb-8">
                             <div className="inline-flex items-center gap-2 md:gap-3 w-fit px-4 py-2 md:px-6 md:py-2.5 bg-blue-600 rounded-full shadow-lg shadow-blue-500/20">
-                                <span className="text-white text-[9px] md:text-sm font-black uppercase tracking-[0.15em] whitespace-nowrap">
+                                <span className="text-white text-[12px] md:text-[15px] font-black uppercase tracking-[0.15em] whitespace-nowrap">
                                     福岡のカーオーディオ専門店
                                 </span>
                             </div>
@@ -254,10 +254,10 @@ export const MainPage: React.FC<MainPageProps> = ({
                                 onClick={() => heroAlert.link && navigate(heroAlert.link)}
                             >
                                 <div className="flex items-center gap-4 pr-6">
-                                    <div className="bg-blue-600 text-white text-[9px] font-black px-3 py-1 rounded-lg uppercase tracking-tighter shadow-lg shadow-blue-500/20">
+                                    <div className="bg-blue-600 text-white text-[12px] font-black px-3 py-1 rounded-lg uppercase tracking-tighter shadow-lg shadow-blue-500/20">
                                         {heroAlert.badge || 'NEW'}
                                     </div>
-                                    <span className="text-white font-bold text-xs md:text-sm tracking-tight">{heroAlert.text}</span>
+                                    <span className="text-white font-bold text-sm md:text-[15px] tracking-tight">{heroAlert.text}</span>
                                     <ChevronRight className="w-3.5 h-3.5 text-blue-400 group-hover:translate-x-1 transition-transform" />
                                 </div>
                             </motion.div>
@@ -301,7 +301,7 @@ export const MainPage: React.FC<MainPageProps> = ({
                                     <ArrowUpRight className="w-3 h-3 text-emerald-500/0 group-hover:text-emerald-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                                 </button>
                             </div>
-                            <p className="text-[10px] text-gray-500 font-bold tracking-widest uppercase pl-4 flex items-center gap-2">
+                            <p className="text-[12px] text-gray-500 font-bold tracking-widest uppercase pl-4 flex items-center gap-2">
                                 <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
                                 Currently Viewing: High-End Audio Showcase
                             </p>
@@ -315,7 +315,7 @@ export const MainPage: React.FC<MainPageProps> = ({
                 <div className="max-w-7xl mx-auto px-4 relative z-10">
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                         <div className="max-w-2xl">
-                            <span className="text-blue-600 font-black tracking-[0.3em] uppercase text-xs mb-4 block">Journal & Blog</span>
+                            <span className="text-blue-600 font-black tracking-[0.3em] uppercase text-sm mb-4 block">Journal & Blog</span>
                             <h2 className="text-5xl md:text-7xl font-black leading-tight tracking-tighter italic text-gray-900">BLOG</h2>
                             <p className="text-gray-500 mt-4 font-bold leading-relaxed">
                                 最新の施工事例や、カーオーディオに関する深い知識、日々の出来事を発信しています。
@@ -325,7 +325,7 @@ export const MainPage: React.FC<MainPageProps> = ({
                             href="https://soundang.com/webbrog/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group flex items-center gap-3 bg-white px-8 py-4 rounded-2xl border border-gray-200 text-sm font-black hover:bg-blue-600 hover:text-white transition-all shadow-lg shadow-blue-500/5"
+                            className="group flex items-center gap-3 bg-white px-8 py-4 rounded-2xl border border-gray-200 text-[15px] font-black hover:bg-blue-600 hover:text-white transition-all shadow-lg shadow-blue-500/5"
                         >
                             ブログ一覧を見る
                             <div className="w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center group-hover:bg-white/20 transition-colors">
@@ -356,12 +356,12 @@ export const MainPage: React.FC<MainPageProps> = ({
 
                                     <div className="mb-6 flex justify-between items-start">
                                         <div className="w-12 h-12 rounded-2xl bg-blue-500 flex items-center justify-center shadow-lg shadow-blue-500/20">
-                                            <div className="text-[10px] font-black text-white">ANG</div>
+                                            <div className="text-[12px] font-black text-white">ANG</div>
                                         </div>
-                                        <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">{post.date}</span>
+                                        <span className="text-[12px] font-black text-gray-400 uppercase tracking-widest">{post.date}</span>
                                     </div>
                                     <h3 className="text-lg font-black leading-snug text-gray-900 group-hover:text-blue-600 transition-colors" dangerouslySetInnerHTML={{ __html: post.title }} />
-                                    <div className="mt-8 flex items-center gap-2 text-[10px] font-black tracking-[0.2em] text-blue-600 uppercase">
+                                    <div className="mt-8 flex items-center gap-2 text-[12px] font-black tracking-[0.2em] text-blue-600 uppercase">
                                         Read More <ChevronRight className="w-3 h-3" />
                                     </div>
                                 </motion.a>
@@ -396,7 +396,7 @@ export const MainPage: React.FC<MainPageProps> = ({
                         <div className="max-w-7xl mx-auto px-4 relative z-10">
                             <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                                 <div className="max-w-2xl">
-                                    <span className="text-blue-500 font-black tracking-[0.3em] uppercase text-xs mb-4 block">Sonic Experience Center</span>
+                                    <span className="text-blue-500 font-black tracking-[0.3em] uppercase text-sm mb-4 block">Sonic Experience Center</span>
                                     <h2 className="text-4xl md:text-7xl font-black tracking-tighter leading-tight">AUDITION</h2>
                                     <p className="text-gray-400 mt-6 font-bold text-lg leading-relaxed">
                                         店内の常時試聴ユニットで、世界最高峰のサウンドをご体感ください。<br />
@@ -423,14 +423,14 @@ export const MainPage: React.FC<MainPageProps> = ({
                                             />
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                                             <div className="absolute bottom-4 left-6">
-                                                <span className="text-[10px] font-black text-blue-400 uppercase tracking-widest">{speaker.brand}</span>
+                                                <span className="text-[12px] font-black text-blue-400 uppercase tracking-widest">{speaker.brand}</span>
                                                 <h3 className="text-lg font-black text-white">{speaker.name}</h3>
                                             </div>
                                         </div>
                                         <div className="p-6">
-                                            <p className="text-xs text-gray-400 font-bold mb-4 line-clamp-2">{speaker.desc}</p>
+                                            <p className="text-sm text-gray-400 font-bold mb-4 line-clamp-2">{speaker.desc}</p>
                                             <div className="flex items-center justify-between">
-                                                <span className="text-[10px] font-black tracking-widest text-emerald-400">ON DEMAND</span>
+                                                <span className="text-[12px] font-black tracking-widest text-emerald-400">ON DEMAND</span>
                                                 {speaker.youtubeId && (
                                                     <button
                                                         onClick={() => setActiveYoutubeId(speaker.youtubeId)}
@@ -448,7 +448,7 @@ export const MainPage: React.FC<MainPageProps> = ({
                             <div className="text-center">
                                 <button
                                     onClick={() => setShowFullAuditionList(!showFullAuditionList)}
-                                    className="group inline-flex items-center gap-4 bg-white text-gray-900 px-10 py-5 rounded-2xl font-black text-sm tracking-[0.2em] hover:bg-blue-600 hover:text-white transition-all shadow-2xl"
+                                    className="group inline-flex items-center gap-4 bg-white text-gray-900 px-10 py-5 rounded-2xl font-black text-[15px] tracking-[0.2em] hover:bg-blue-600 hover:text-white transition-all shadow-2xl"
                                 >
                                     {showFullAuditionList ? 'CLOSE LIST' : 'VIEW ALL SPEAKERS'}
                                     <ChevronRight className={`w-5 h-5 transition-transform ${showFullAuditionList ? 'rotate-90' : 'group-hover:translate-x-1'}`} />
@@ -467,8 +467,8 @@ export const MainPage: React.FC<MainPageProps> = ({
                                             {auditionSpeakers.slice(4).map((speaker, idx) => (
                                                 <div key={idx} className="bg-white/5 p-6 rounded-2xl border border-white/5 flex items-center justify-between hover:bg-white/10 transition-colors">
                                                     <div className="flex flex-col">
-                                                        <span className="text-[9px] font-black text-blue-400 uppercase tracking-widest">{speaker.brand}</span>
-                                                        <span className="font-black text-sm">{speaker.name}</span>
+                                                        <span className="text-[12px] font-black text-blue-400 uppercase tracking-widest">{speaker.brand}</span>
+                                                        <span className="font-black text-[15px]">{speaker.name}</span>
                                                     </div>
                                                     {speaker.youtubeId && (
                                                         <button
@@ -499,7 +499,7 @@ export const MainPage: React.FC<MainPageProps> = ({
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
                         <div className="space-y-8">
                             <div>
-                                <span className="text-blue-500 font-black tracking-[0.3em] uppercase text-xs mb-4 block">Store & Access</span>
+                                <span className="text-blue-500 font-black tracking-[0.3em] uppercase text-sm mb-4 block">Store & Access</span>
                                 <h2 className="text-4xl md:text-5xl font-black leading-tight tracking-tighter mb-8 italic text-white">SHOP INFO</h2>
                                 <p className="text-gray-400 font-bold leading-relaxed mb-8">
                                     30年以上の実績を持つカーオーディオ・セキュリティ専門店。
@@ -513,7 +513,7 @@ export const MainPage: React.FC<MainPageProps> = ({
                                 <div className="col-span-2 group relative aspect-video rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10 bg-white/5">
                                     <SafeImage src={assets.heroImage} alt="Sound ANG 店舗外観" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent flex items-end p-6">
-                                        <span className="text-white font-black text-sm tracking-widest uppercase">Shop Exterior</span>
+                                        <span className="text-white font-black text-[15px] tracking-widest uppercase">Shop Exterior</span>
                                     </div>
                                 </div>
                                 {/* Remaining 4 facilities */}
@@ -521,7 +521,7 @@ export const MainPage: React.FC<MainPageProps> = ({
                                     <div key={idx} className="group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-white/10 bg-white/5">
                                         <SafeImage src={fac.image} alt={fac.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-100" />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
-                                            <span className="text-white font-black text-xs tracking-widest">{fac.title}</span>
+                                            <span className="text-white font-black text-sm tracking-widest">{fac.title}</span>
                                         </div>
                                     </div>
                                 ))}
@@ -538,14 +538,14 @@ export const MainPage: React.FC<MainPageProps> = ({
                             </div>
 
                             <div className="p-8 rounded-[2.5rem] bg-white/5 shadow-2xl border border-white/10 backdrop-blur-sm">
-                                <h4 className="text-[10px] font-black tracking-widest text-blue-500 uppercase mb-4">Location Address</h4>
+                                <h4 className="text-[12px] font-black tracking-widest text-blue-500 uppercase mb-4">Location Address</h4>
                                 <div className="flex gap-4">
                                     <div className="w-12 h-12 rounded-2xl bg-blue-500/10 flex items-center justify-center shrink-0">
                                         <MapPin className="w-6 h-6 text-blue-500" />
                                     </div>
                                     <div>
                                         <p className="font-black text-white text-lg leading-tight tracking-tight">〒816-0912</p>
-                                        <p className="font-bold text-gray-400 text-sm mt-1">福岡県大野城市御笠川5-4-14</p>
+                                        <p className="font-bold text-gray-400 text-[15px] mt-1">福岡県大野城市御笠川5-4-14</p>
                                     </div>
                                 </div>
                             </div>
@@ -566,11 +566,11 @@ export const MainPage: React.FC<MainPageProps> = ({
                         >
                             <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#2563eb 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
                             <div className="flex flex-col items-center text-center relative z-10">
-                                <span className="text-blue-500 font-black tracking-[0.4em] uppercase text-[9px] mb-2 block">Join Our Team</span>
+                                <span className="text-blue-500 font-black tracking-[0.4em] uppercase text-[12px] mb-2 block">Join Our Team</span>
                                 <h2 className="text-2xl md:text-3xl font-black text-white leading-tight tracking-tighter mb-4 italic">
                                     {audioRecruitment.title}
                                 </h2>
-                                <p className="text-gray-400 font-bold text-sm leading-relaxed max-w-2xl">
+                                <p className="text-gray-400 font-bold text-[15px] leading-relaxed max-w-2xl">
                                     {audioRecruitment.message || audioRecruitment.description}
                                 </p>
                             </div>
@@ -585,7 +585,7 @@ export const MainPage: React.FC<MainPageProps> = ({
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
                         <div className="col-span-1 lg:col-span-1">
                             <div className="text-2xl font-black italic tracking-tighter text-white mb-6">SOUND ANG</div>
-                            <p className="text-xs font-bold leading-relaxed mb-8 opacity-60 uppercase tracking-widest">
+                            <p className="text-sm font-bold leading-relaxed mb-8 opacity-60 uppercase tracking-widest">
                                 Premium Car Audio & Security <br /> Professional Installation Suite
                             </p>
                             <div className="flex gap-4">
@@ -599,14 +599,14 @@ export const MainPage: React.FC<MainPageProps> = ({
                         </div>
 
                         <div>
-                            <h4 className="text-white font-black text-xs tracking-widest uppercase mb-8">Contact Information</h4>
-                            <ul className="space-y-6 text-sm">
+                            <h4 className="text-white font-black text-sm tracking-widest uppercase mb-8">Contact Information</h4>
+                            <ul className="space-y-6 text-[15px]">
                                 <li className="flex gap-4">
                                     <Phone className="w-5 h-5 text-blue-600 shrink-0" />
                                     <div className="space-y-1">
-                                        <p className="text-white font-black">092-503-5421 <span className="text-[8px] opacity-40 ml-2">AUDIO</span></p>
-                                        <p className="text-white font-black">092-503-5437 <span className="text-[8px] opacity-40 ml-2">SECURITY</span></p>
-                                        <p className="text-[10px] opacity-40 underline">FAX: 092-503-5492</p>
+                                        <p className="text-white font-black">092-503-5421 <span className="text-[12px] opacity-40 ml-2">AUDIO</span></p>
+                                        <p className="text-white font-black">092-503-5437 <span className="text-[12px] opacity-40 ml-2">SECURITY</span></p>
+                                        <p className="text-[12px] opacity-40 underline">FAX: 092-503-5492</p>
                                     </div>
                                 </li>
                                 <li className="flex gap-4 pt-4 border-t border-white/5">
@@ -620,12 +620,12 @@ export const MainPage: React.FC<MainPageProps> = ({
                         </div>
 
                         <div>
-                            <h4 className="text-white font-black text-xs tracking-widest uppercase mb-8">Quick Navigation</h4>
-                            <ul className="space-y-4 text-sm font-bold">
+                            <h4 className="text-white font-black text-sm tracking-widest uppercase mb-8">Quick Navigation</h4>
+                            <ul className="space-y-4 text-[15px] font-bold">
                                 <li><a href="#" className="hover:text-blue-500 transition-colors">Home</a></li>
                                 <li><a href="#blog" className="hover:text-white transition-colors">BLOG</a></li>
                                 <li className="pt-4 mt-4 border-t border-white/5">
-                                    <span className="text-[10px] font-black text-blue-500 block mb-3 tracking-widest uppercase">Latest News</span>
+                                    <span className="text-[12px] font-black text-blue-500 block mb-3 tracking-widest uppercase">Latest News</span>
                                     {audioEvents.filter(e => e.status !== 'draft').length > 0 ? (
                                         <ul className="space-y-3">
                                             {audioEvents.filter(e => e.status !== 'draft').slice(0, 3).map(event => (
@@ -635,13 +635,13 @@ export const MainPage: React.FC<MainPageProps> = ({
                                                         className="text-left hover:text-white transition-colors block leading-snug"
                                                     >
                                                         {event.title}
-                                                        <span className="text-[8px] block opacity-40 mt-0.5">{event.date}</span>
+                                                        <span className="text-[12px] block opacity-40 mt-0.5">{event.date}</span>
                                                     </button>
                                                 </li>
                                             ))}
                                         </ul>
                                     ) : (
-                                        <p className="text-white/20 italic text-xs font-black tracking-widest">COMING SOON...</p>
+                                        <p className="text-white/20 italic text-sm font-black tracking-widest">COMING SOON...</p>
                                     )}
                                 </li>
                                 <li><a href="#services" className="hover:text-white transition-colors">Audio Menu</a></li>
@@ -651,22 +651,22 @@ export const MainPage: React.FC<MainPageProps> = ({
                         </div>
 
                         <div>
-                            <h4 className="text-white font-black text-xs tracking-widest uppercase mb-8">Legal & Business</h4>
+                            <h4 className="text-white font-black text-sm tracking-widest uppercase mb-8">Legal & Business</h4>
                             <div className="space-y-6">
-                                <p className="text-[10px] font-black leading-relaxed opacity-40">
+                                <p className="text-[12px] font-black leading-relaxed opacity-40">
                                     適格請求書発行事業者登録番号<br />
                                     <span className="text-white font-mono tracking-tight opacity-100">T4290002038758</span>
                                 </p>
                                 <div className="space-y-2">
-                                    <button onClick={() => navigate('/legal')} className="block text-xs hover:text-white transition-colors">Privacy Policy</button>
-                                    <button onClick={() => navigate('/legal')} className="block text-xs hover:text-white transition-colors">Terms of Service</button>
+                                    <button onClick={() => navigate('/legal')} className="block text-sm hover:text-white transition-colors">Privacy Policy</button>
+                                    <button onClick={() => navigate('/legal')} className="block text-sm hover:text-white transition-colors">Terms of Service</button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-                        <p className="text-[10px] font-black tracking-widest">© 2026 SOUND ANG. PREMIUM INSTALLATION GROUP.</p>
+                        <p className="text-[12px] font-black tracking-widest">© 2026 SOUND ANG. PREMIUM INSTALLATION GROUP.</p>
 
                     </div>
                 </div>
@@ -727,8 +727,8 @@ export const MainPage: React.FC<MainPageProps> = ({
                                                     className="group flex items-center justify-between p-4 rounded-2xl border border-gray-100 bg-white text-gray-900 active:bg-gray-50 transition-all cursor-pointer"
                                                 >
                                                     <div className="flex flex-col gap-1">
-                                                        <span className="text-sm font-black tracking-widest">{link.en}</span>
-                                                        <span className="text-[9px] font-bold text-gray-400">{link.jp}</span>
+                                                        <span className="text-[15px] font-black tracking-widest">{link.en}</span>
+                                                        <span className="text-[12px] font-bold text-gray-400">{link.jp}</span>
                                                     </div>
                                                     <div className={`w-8 h-8 rounded-xl flex items-center justify-center transition-all bg-gray-50 ${isExpandable && isLineupExpanded ? 'rotate-90 bg-blue-50 text-blue-600' : ''}`}>
                                                         <ChevronRight className="w-4 h-4" />
@@ -752,51 +752,51 @@ export const MainPage: React.FC<MainPageProps> = ({
                                                                                     setIsMobileMenuOpen(false);
                                                                                     navigate(cat.path);
                                                                                 }}
-                                                                                className="flex items-center gap-2 text-blue-600 font-black text-xs uppercase tracking-[0.15em] border-l-4 border-blue-500 pl-4 py-2 cursor-pointer"
+                                                                                className="flex items-center gap-2 text-blue-600 font-black text-sm uppercase tracking-[0.15em] border-l-4 border-blue-500 pl-4 py-2 cursor-pointer"
                                                                             >
                                                                                 {cat.subtitle}
                                                                                 <ArrowUpRight className="w-3 h-3 opacity-40 ml-auto" />
                                                                             </div>
                                                                             <div className="flex flex-col gap-1 pl-3">
                                                                                 {cat.items ? (
-                                                                                    cat.items.map((item: string, idx: number) => {
-                                                                                        const planMapping: Record<string, any> = {
-                                                                                            "スピーカー交換BASIC line（コアキシャル）": { id: "speaker_package", planId: "basic-coaxial" },
-                                                                                            "スピーカー交換BASIC line（セパレート）": { id: "speaker_package", planId: "basic-separate" },
-                                                                                            "スピーカー交換STANDARD line（10万円まで）": { id: "speaker_package", planId: "standard-line" },
-                                                                                            "スピーカー交換PREMIUM line（10万円以上）": { id: "speaker_package", planId: "premium-line" },
-                                                                                            "フロント3WAYセット": { id: "speaker_package", planId: "front-3way" },
-                                                                                            "BMW専用パッケージ": { id: "speaker_package", planId: "bmw-package" },
-                                                                                            "Mercedes Benz専用パッケージ": { id: "speaker_package", planId: "mercedes-package" },
-                                                                                            "車種別スピーカー交換プラン": { id: "speaker_package", planId: "model-specific" },
-                                                                                            "AMP内蔵DSPパッケージ": { id: "digital_source", planId: "amplified-dsp" },
-                                                                                            "AMPレスDSPパッケージ": { id: "digital_source", planId: "standalone-dsp" },
-                                                                                            "お手軽低音増強 (パワード)": { id: "bass_power", planId: "easy-bass" },
-                                                                                            "お手軽低音増強＋ (アンプ別)": { id: "bass_power", planId: "easy-bass-plus" },
-                                                                                            "店内の常時試聴ユニット": { id: "audition-showcase", isAnchor: true },
-                                                                                            "施工ブログ / 店舗詳細": { id: "contact", isAnchor: true }
-                                                                                        };
-                                                                                        // Fallback mapping just in case the item has different string format
-                                                                                        const matchedKey = Object.keys(planMapping).find(k => item.includes(k) || k.includes(item));
-                                                                                        const target = (matchedKey ? planMapping[matchedKey] : planMapping[item]) || { id: cat.id, name: item };
-                                                                                        return (
-                                                                                            <button
-                                                                                                key={idx}
-                                                                                                onClick={() => {
-                                                                                                    setIsMobileMenuOpen(false);
-                                                                                                    handleMenuClick(target);
-                                                                                                }}
-                                                                                                className="text-[13px] leading-snug font-bold text-gray-500 hover:text-blue-600 transition-colors text-left flex items-center justify-between py-3 border-b border-gray-100 last:border-0"
-                                                                                            >
-                                                                                                {item}
-                                                                                                <ChevronRight className="w-3 h-3 opacity-30" />
-                                                                                            </button>
-                                                                                        );
-                                                                                    })
+                                                                                    cat.items.map((item: any, idx: number) => {
+                                                                                         const itemName = typeof item === 'string' ? item : item?.name || '';
+                                                                                         const planMapping: Record<string, any> = {
+                                                                                             "スピーカー交換BASIC line（コアキシャル）": { id: "speaker_package", planId: "basic-coaxial" },
+                                                                                             "スピーカー交換BASIC line（セパレート）": { id: "speaker_package", planId: "basic-separate" },
+                                                                                             "スピーカー交換STANDARD line（10万円まで）": { id: "speaker_package", planId: "standard-line" },
+                                                                                             "スピーカー交換PREMIUM line（10万円以上）": { id: "speaker_package", planId: "premium-line" },
+                                                                                             "フロント3WAYセット": { id: "speaker_package", planId: "front-3way" },
+                                                                                             "BMW専用パッケージ": { id: "speaker_package", planId: "bmw-package" },
+                                                                                             "Mercedes Benz専用パッケージ": { id: "speaker_package", planId: "mercedes-package" },
+                                                                                             "車種別スピーカー交換プラン": { id: "speaker_package", planId: "model-specific" },
+                                                                                             "AMP内蔵DSPパッケージ": { id: "digital_source", planId: "amplified-dsp" },
+                                                                                             "AMPレスDSPパッケージ": { id: "digital_source", planId: "standalone-dsp" },
+                                                                                             "お手軽低音増強 (パワード)": { id: "bass_power", planId: "easy-bass" },
+                                                                                             "お手軽低音増強＋ (アンプ別)": { id: "bass_power", planId: "easy-bass-plus" },
+                                                                                             "店内の常時試聴ユニット": { id: "audition-showcase", isAnchor: true },
+                                                                                             "施工ブログ / 店舗詳細": { id: "contact", isAnchor: true }
+                                                                                         };
+                                                                                         const matchedKey = Object.keys(planMapping).find(k => itemName.includes(k) || k.includes(itemName));
+                                                                                         const target = (matchedKey ? planMapping[matchedKey] : planMapping[itemName]) || (typeof item === 'object' ? { ...item, parentId: cat.id } : { id: cat.id, name: item });
+                                                                                         return (
+                                                                                             <button
+                                                                                                 key={idx}
+                                                                                                 onClick={() => {
+                                                                                                     setIsMobileMenuOpen(false);
+                                                                                                     handleMenuClick(target);
+                                                                                                 }}
+                                                                                                 className="text-[13px] leading-snug font-bold text-gray-500 hover:text-blue-600 transition-colors text-left flex items-center justify-between py-3 border-b border-gray-100 last:border-0"
+                                                                                             >
+                                                                                                 {itemName}
+                                                                                                 <ChevronRight className="w-3 h-3 opacity-30" />
+                                                                                             </button>
+                                                                                         );
+                                                                                     })
                                                                                 ) : (cat && Array.isArray(cat.groups)) ? (
                                                                                     cat.groups.map((group: any, gIdx: number) => (
                                                                                         <div key={gIdx} className="space-y-2 mt-4">
-                                                                                            <div className="text-[10px] font-black text-gray-400 uppercase tracking-widest">{group.name}</div>
+                                                                                            <div className="text-[12px] font-black text-gray-400 uppercase tracking-widest">{group.name}</div>
                                                                                             <div className="flex flex-col gap-1 pl-2">
                                                                                                 {(group && Array.isArray(group.items)) && group.items.map((item: string, iIdx: number) => (
                                                                                                     <button
@@ -835,11 +835,11 @@ export const MainPage: React.FC<MainPageProps> = ({
                                     rel="noopener noreferrer"
                                     className="flex flex-col items-center justify-center gap-1 w-full py-4 bg-[#06C755] text-white rounded-2xl shadow-lg shadow-green-500/20"
                                 >
-                                    <div className="flex items-center gap-3 font-black text-sm">
+                                    <div className="flex items-center gap-3 font-black text-[15px]">
                                         <MessageSquare className="w-5 h-5" />
                                         LINEで相談する
                                     </div>
-                                    <span className="text-[10px] font-bold opacity-90">※車種別適合の見積相談OK</span>
+                                    <span className="text-[12px] font-bold opacity-90">※車種別適合の見積相談OK</span>
                                 </a>
                                 <button
                                     onClick={() => {
@@ -848,11 +848,11 @@ export const MainPage: React.FC<MainPageProps> = ({
                                     }}
                                     className="flex flex-col items-center justify-center gap-1 w-full py-4 bg-blue-600 text-white rounded-2xl shadow-lg shadow-blue-500/20"
                                 >
-                                    <div className="flex items-center gap-3 font-black text-sm">
+                                    <div className="flex items-center gap-3 font-black text-[15px]">
                                         <CalendarIcon className="w-5 h-5" />
                                         来店予約・お問い合わせ
                                     </div>
-                                    <span className="text-[10px] font-bold opacity-80">※初めての方もお気軽にどうぞ</span>
+                                    <span className="text-[12px] font-bold opacity-80">※初めての方もお気軽にどうぞ</span>
                                 </button>
                             </div>
                         </motion.div>

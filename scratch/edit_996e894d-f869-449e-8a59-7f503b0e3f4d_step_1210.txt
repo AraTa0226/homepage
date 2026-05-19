@@ -1,0 +1,2 @@
+"    const handleSaveLP = () => {\n        console.log('[LP SAVE] Button clicked. lpData:', lpData);\n        if (!lpData) {\n            alert('保存対象のLPデータが見つかりません。LPを選択してから保存してください。');\n   
+<truncated 30 bytes>

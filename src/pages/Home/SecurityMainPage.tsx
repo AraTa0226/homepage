@@ -178,10 +178,10 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                         </div>
                     </div>
 
-                    <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-bold uppercase tracking-widest shrink-0">
+                    <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-[15px] font-bold uppercase tracking-widest shrink-0">
                         <a href="#" className="flex flex-col items-center group/item transition-colors">
-                            <span className="text-sm font-black tracking-widest group-hover/item:text-emerald-500">HOME</span>
-                            <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">ホーム</span>
+                            <span className="text-[15px] font-black tracking-widest group-hover/item:text-emerald-500">HOME</span>
+                            <span className="text-[12px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">ホーム</span>
                         </a>
                         <div
                             className="relative py-8 group/nav"
@@ -192,10 +192,10 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                 className={`flex flex-col items-center transition-colors group-hover/nav:text-emerald-500 ${showMegaMenu ? 'text-emerald-500' : ''}`}
                             >
                                 <div className="flex items-center gap-1">
-                                    <span className={`text-sm font-black tracking-widest ${showMegaMenu ? 'font-black' : ''}`}>MENU</span>
+                                    <span className={`text-[15px] font-black tracking-widest ${showMegaMenu ? 'font-black' : ''}`}>MENU</span>
                                     <ChevronRight className={`w-3 h-3 transition-transform ${showMegaMenu ? 'rotate-90' : ''}`} />
                                 </div>
-                                <span className="text-[8px] font-bold opacity-40 group-hover/nav:opacity-100 transition-opacity">セキュリティ一覧</span>
+                                <span className="text-[12px] font-bold opacity-40 group-hover/nav:opacity-100 transition-opacity">セキュリティ一覧</span>
                             </button>
                             <MegaMenu
                                 show={showMegaMenu}
@@ -210,20 +210,20 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                         </div>
 
                         <a href="https://www.soundang.com/webbrog/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center group/item transition-colors">
-                            <span className="text-sm font-black tracking-widest group-hover/item:text-emerald-500">BLOG</span>
-                            <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">ブログ</span>
+                            <span className="text-[15px] font-black tracking-widest group-hover/item:text-emerald-500">BLOG</span>
+                            <span className="text-[12px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">ブログ</span>
                         </a>
 
                         <a href="#access" className="flex flex-col items-center group/item transition-colors">
-                            <span className="text-sm font-black tracking-widest group-hover/item:text-emerald-500">ACCESS</span>
-                            <span className="text-[8px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">店舗案内</span>
+                            <span className="text-[15px] font-black tracking-widest group-hover/item:text-emerald-500">ACCESS</span>
+                            <span className="text-[12px] font-bold opacity-40 group-hover/item:opacity-100 transition-opacity">店舗案内</span>
                         </a>
                         <button
                             onClick={() => navigate('/')}
                             className="flex flex-col items-center group/item transition-colors border-l border-gray-100 pl-4 ml-2"
                         >
-                            <span className="text-sm font-black tracking-widest text-blue-500 group-hover/item:text-blue-400">AUDIO</span>
-                            <span className="text-[8px] font-bold text-blue-500/40 group-hover/item:text-blue-400 transition-opacity">オーディオ版</span>
+                            <span className="text-[15px] font-black tracking-widest text-blue-500 group-hover/item:text-blue-400">AUDIO</span>
+                            <span className="text-[12px] font-bold text-blue-500/40 group-hover/item:text-blue-400 transition-opacity">オーディオ版</span>
                         </button>
                     </nav>
 
@@ -236,7 +236,7 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                             aria-label="LINEで相談"
                         >
                             <MessageSquare className="w-5 h-5 md:mr-2" />
-                            <span className="hidden sm:inline text-[10px] tracking-widest">LINE相談</span>
+                            <span className="hidden sm:inline text-[12px] tracking-widest">LINE相談</span>
                         </a>
 
                         <button
@@ -245,7 +245,7 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                             aria-label="来店予約"
                         >
                             <CalendarIcon className="w-5 h-5 md:mr-2" />
-                            <span className="hidden sm:inline text-[10px] tracking-widest">来店予約</span>
+                            <span className="hidden sm:inline text-[12px] tracking-widest">来店予約</span>
                         </button>
 
                         <button
@@ -270,7 +270,7 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                             <Megaphone className="w-8 h-8 text-emerald-500" />
                         </div>
                         <div className="flex-grow text-center md:text-left">
-                            <span className="text-emerald-600 font-black text-xs uppercase tracking-widest mb-1 block">Important Notice</span>
+                            <span className="text-emerald-600 font-black text-sm uppercase tracking-widest mb-1 block">Important Notice</span>
                             <div className="flex flex-col md:flex-row gap-6 items-center">
                                 {emergencyAnnouncement.image && (
                                     <SafeImage
@@ -314,10 +314,10 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                     onClick={() => heroAlert.link && navigate(heroAlert.link)}
                                 >
                                     <div className="flex items-center gap-4 pr-6">
-                                        <div className="bg-emerald-500 text-black text-[9px] font-black px-3 py-1 rounded-lg uppercase tracking-tighter shadow-lg shadow-emerald-500/20">
+                                        <div className="bg-emerald-500 text-black text-[12px] font-black px-3 py-1 rounded-lg uppercase tracking-tighter shadow-lg shadow-emerald-500/20">
                                             {heroAlert.badge || 'NEW'}
                                         </div>
-                                        <span className="text-gray-900 font-bold text-xs md:text-sm tracking-tight">{heroAlert.text}</span>
+                                        <span className="text-gray-900 font-bold text-sm md:text-[15px] tracking-tight">{heroAlert.text}</span>
                                         <ArrowRight className="w-3.5 h-3.5 text-emerald-600 group-hover:translate-x-1 transition-transform" />
                                     </div>
                                 </motion.div>
@@ -325,7 +325,7 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
 
                             <div className="inline-flex items-center gap-3 w-fit px-6 py-2.5 bg-emerald-600 text-white rounded-full shadow-lg shadow-emerald-500/20">
                                 <Lock className="w-3.5 h-3.5" />
-                                <span className="text-xs md:text-sm font-black uppercase tracking-[0.15em] whitespace-nowrap">
+                                <span className="text-sm md:text-[15px] font-black uppercase tracking-[0.15em] whitespace-nowrap">
                                     {securityData.home?.hero?.subTitle}
                                 </span>
                             </div>
@@ -376,7 +376,7 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                     />
                                 </button>
                             </div>
-                            <p className="text-[10px] text-gray-500 font-bold tracking-widest uppercase pl-4 flex items-center gap-2">
+                            <p className="text-[12px] text-gray-500 font-bold tracking-widest uppercase pl-4 flex items-center gap-2">
                                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                                 Currently Viewing: Vehicle Security Armor
                             </p>
@@ -394,7 +394,7 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
                         <div className="lg:col-span-5 lg:sticky lg:top-32">
                             <div className="space-y-8">
-                                <span className="text-emerald-500 font-black tracking-[0.5em] uppercase text-[10px] block">The Protocol of Trust</span>
+                                <span className="text-emerald-500 font-black tracking-[0.5em] uppercase text-[12px] block">The Protocol of Trust</span>
                                 <h2 className="text-5xl md:text-6xl font-black text-white leading-[1.1] tracking-tighter italic">
                                     THE <br />
                                     <span className="text-emerald-500 shadow-emerald-500/20 [text-shadow:_0_0_20px_rgb(16_185_129_/_0.3)]">STANDARDS.</span>
@@ -424,10 +424,10 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                         <div className="space-y-4">
                                             <div className="flex items-center gap-4">
                                                 <IconComp className={`w-8 h-8 text-${colors === 'white' ? 'white' : colors + '-500'}`} />
-                                                <span className={`text-${colors === 'white' ? 'white' : colors + '-500'} font-black text-[10px] tracking-widest uppercase italic`}>{point.id} / Standard</span>
+                                                <span className={`text-${colors === 'white' ? 'white' : colors + '-500'} font-black text-[12px] tracking-widest uppercase italic`}>{point.id} / Standard</span>
                                             </div>
                                             <h3 className="text-3xl font-black text-white tracking-tight">{point.title}</h3>
-                                            <p className="text-gray-400 font-bold leading-relaxed text-sm">
+                                            <p className="text-gray-400 font-bold leading-relaxed text-[15px]">
                                                 {point.desc}
                                             </p>
                                         </div>
@@ -444,7 +444,7 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                 <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-500/10 to-transparent"></div>
                 <div className="max-w-7xl mx-auto">
                     <div className="mb-16 text-center">
-                        <span className="text-emerald-500 font-black tracking-[0.4em] uppercase text-[10px] mb-4 block">Security Menu</span>
+                        <span className="text-emerald-500 font-black tracking-[0.4em] uppercase text-[12px] mb-4 block">Security Menu</span>
                         <h2 className="text-4xl md:text-6xl font-black tracking-tighter italic text-gray-900">MENU</h2>
                     </div>
                     <VaultGrid
@@ -462,7 +462,7 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                 <div className="max-w-7xl mx-auto px-4 relative z-10">
                     <div className="mb-20 flex flex-col md:flex-row items-end justify-between gap-8">
                         <div className="space-y-4">
-                            <span className="text-emerald-500 font-black tracking-[0.4em] uppercase text-[10px] block">Mobile Solution</span>
+                            <span className="text-emerald-500 font-black tracking-[0.4em] uppercase text-[12px] block">Mobile Solution</span>
                             <h2 className="text-4xl md:text-6xl font-black tracking-tighter italic text-gray-900 leading-none">CAMPit &<br /><span className="text-emerald-600 underline decoration-emerald-500/20 underline-offset-8">MobiRest.</span></h2>
                             <p className="text-gray-500 font-bold max-w-xl text-lg mt-6">「遊び」を最高にするキャンプユニットと、「安心」を届ける移動型トイレ。場所の制約を解き放ち、車のある生活に新しい価値をもたらす次世代のユニットをご提案します。</p>
                         </div>
@@ -480,15 +480,15 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                 <SafeImage src="/images/Security/hero-campit.webp" alt="CAMPit" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                                 <div className="absolute bottom-8 left-8">
-                                    <span className="bg-emerald-500 text-black text-[9px] font-black px-5 py-2 rounded-full uppercase tracking-widest shadow-lg">Outdoor & Lifestyle</span>
+                                    <span className="bg-emerald-500 text-black text-[12px] font-black px-5 py-2 rounded-full uppercase tracking-widest shadow-lg">Outdoor & Lifestyle</span>
                                 </div>
                             </div>
                             <div className="p-12 flex flex-col flex-grow">
-                                <h3 className="text-3xl font-black text-gray-900 mb-6 tracking-tighter italic">CAMPit <span className="text-sm not-italic opacity-40 ml-2">（キャンピット）</span></h3>
+                                <h3 className="text-3xl font-black text-gray-900 mb-6 tracking-tighter italic">CAMPit <span className="text-[15px] not-italic opacity-40 ml-2">（キャンピット）</span></h3>
                                 <p className="text-emerald-600 font-black text-lg mb-6 leading-tight select-none">
                                     「何もないところがキャンプ場になる」
                                 </p>
-                                <p className="text-gray-500 font-bold leading-relaxed mb-10 flex-grow text-sm">
+                                <p className="text-gray-500 font-bold leading-relaxed mb-10 flex-grow text-[15px]">
                                     本格システムキッチン、50L給水タンク、そして清潔なトイレを完備。 “清潔、快適、簡単” をコンセプトに、場所を選ばず最高級のキャンプ体験を可能にする移動型ユニットです。
                                 </p>
                                 <div className="flex items-center justify-between pt-8 border-t border-gray-50">
@@ -498,7 +498,7 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                         rel="noopener noreferrer"
                                         className="group/btn flex items-center gap-3 text-gray-900 font-black"
                                     >
-                                        <span className="text-xs tracking-widest border-b-2 border-emerald-500 pb-1 group-hover/btn:border-emerald-600 transition-colors">OFFICIAL SITE</span>
+                                        <span className="text-sm tracking-widest border-b-2 border-emerald-500 pb-1 group-hover/btn:border-emerald-600 transition-colors">OFFICIAL SITE</span>
                                         <ArrowUpRight className="w-4 h-4 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
                                     </a>
                                 </div>
@@ -517,15 +517,15 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                 <SafeImage src="/images/Security/hero-mobirest.webp" alt="MobiRest" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                                 <div className="absolute bottom-8 left-8">
-                                    <span className="bg-blue-500 text-white text-[9px] font-black px-5 py-2 rounded-full uppercase tracking-widest shadow-lg">Safety & Hygiene</span>
+                                    <span className="bg-blue-500 text-white text-[12px] font-black px-5 py-2 rounded-full uppercase tracking-widest shadow-lg">Safety & Hygiene</span>
                                 </div>
                             </div>
                             <div className="p-12 flex flex-col flex-grow">
-                                <h3 className="text-3xl font-black text-gray-900 mb-6 tracking-tighter italic whitespace-pre-wrap">MobiRest <span className="text-sm not-italic opacity-40 ml-2">（モビレスト）</span></h3>
+                                <h3 className="text-3xl font-black text-gray-900 mb-6 tracking-tighter italic whitespace-pre-wrap">MobiRest <span className="text-[15px] not-italic opacity-40 ml-2">（モビレスト）</span></h3>
                                 <p className="text-blue-600 font-black text-lg mb-6 leading-tight select-none">
                                     「あなたの近くに運べる、水要らずのトイレルーム」
                                 </p>
-                                <p className="text-gray-500 font-bold leading-relaxed mb-10 flex-grow text-sm">
+                                <p className="text-gray-500 font-bold leading-relaxed mb-10 flex-grow text-[15px]">
                                     水を使わず熱圧着で排泄物を密閉する「ラップポン」システムを採用。臭わず清潔、上下水道不要でどこでも設置可能。災害時やイベントに最適な超低床設計の移動型トイレユニットです。
                                 </p>
                                 <div className="flex items-center justify-between pt-8 border-t border-gray-50">
@@ -535,7 +535,7 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                         rel="noopener noreferrer"
                                         className="group/btn flex items-center gap-3 text-gray-900 font-black"
                                     >
-                                        <span className="text-xs tracking-widest border-b-2 border-blue-500 pb-1 group-hover/btn:border-blue-600 transition-colors">OFFICIAL SITE</span>
+                                        <span className="text-sm tracking-widest border-b-2 border-blue-500 pb-1 group-hover/btn:border-blue-600 transition-colors">OFFICIAL SITE</span>
                                         <ArrowUpRight className="w-4 h-4 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
                                     </a>
                                 </div>
@@ -553,7 +553,7 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
             <section id="partners" className="py-32 bg-white relative overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 relative z-10">
                     <div className="mb-20 text-center">
-                        <span className="text-emerald-500 font-black tracking-[0.3em] uppercase text-xs mb-4 block">Trusted Partners</span>
+                        <span className="text-emerald-500 font-black tracking-[0.3em] uppercase text-sm mb-4 block">Trusted Partners</span>
                         <h2 className="text-4xl md:text-5xl font-black tracking-tighter italic text-gray-900 leading-tight">セキュリティーの<br className="md:hidden" /><span className="text-emerald-600">信頼のパートナー</span></h2>
                         <p className="text-gray-500 font-bold max-w-2xl mx-auto mt-6">確かな技術力と信頼の実績を持つ、Sound ANGが推奨するメーカーと提携サイトをご紹介します。</p>
                     </div>
@@ -572,9 +572,9 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                 className="group p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:bg-white hover:shadow-2xl hover:shadow-emerald-500/5 transition-all duration-500 flex flex-col justify-between h-48"
                             >
                                 <div>
-                                    <span className="text-[10px] font-black text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full uppercase tracking-widest mb-4 inline-block">Official Partner</span>
+                                    <span className="text-[12px] font-black text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full uppercase tracking-widest mb-4 inline-block">Official Partner</span>
                                     <h3 className="text-xl font-black text-gray-900 tracking-tight group-hover:text-emerald-600 transition-colors">{partner.name}</h3>
-                                    <p className="text-gray-400 text-xs font-bold mt-2 italic">{partner.brand}</p>
+                                    <p className="text-gray-400 text-sm font-bold mt-2 italic">{partner.brand}</p>
                                 </div>
                                 <div className="flex items-center justify-end">
                                     <ArrowUpRight className="w-5 h-5 text-gray-300 group-hover:text-emerald-500 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -586,7 +586,7 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                     <div className="flex justify-center mb-24">
                         <button
                             onClick={() => navigate('/security/partners')}
-                            className="group px-10 py-5 bg-white border border-slate-200 rounded-2xl font-black italic text-sm tracking-widest text-slate-900 hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all flex items-center gap-4 shadow-xl shadow-slate-200/50"
+                            className="group px-10 py-5 bg-white border border-slate-200 rounded-2xl font-black italic text-[15px] tracking-widest text-slate-900 hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all flex items-center gap-4 shadow-xl shadow-slate-200/50"
                         >
                             すべてのパートナーを見る <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </button>
@@ -597,8 +597,8 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
                             <div className="max-w-md text-center md:text-left">
                                 <h3 className="text-3xl font-black text-white mb-4 tracking-tighter italic uppercase">TECHNICAL PARTNERS</h3>
-                                <p className="text-emerald-500 font-bold text-xs uppercase tracking-widest mb-4">技術提携パートナー</p>
-                                <p className="text-gray-400 font-bold text-sm">スペアキー作製からカーフィルム施工まで、愛車のトータルケアをサポートする専門パートナーです。</p>
+                                <p className="text-emerald-500 font-bold text-sm uppercase tracking-widest mb-4">技術提携パートナー</p>
+                                <p className="text-gray-400 font-bold text-[15px]">スペアキー作製からカーフィルム施工まで、愛車のトータルケアをサポートする専門パートナーです。</p>
                             </div>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full md:w-auto">
                                 {(securityData.home?.techPartners || []).map((site: any, idx: number) => (
@@ -609,8 +609,8 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                         rel="noopener noreferrer"
                                         className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group/p"
                                     >
-                                        <p className="text-white font-black text-sm group-hover/p:text-emerald-500 transition-colors">{site.name}</p>
-                                        <p className="text-gray-500 text-[10px] font-bold mt-1 uppercase tracking-widest">{site.desc}</p>
+                                        <p className="text-white font-black text-[15px] group-hover/p:text-emerald-500 transition-colors">{site.name}</p>
+                                        <p className="text-gray-500 text-[12px] font-bold mt-1 uppercase tracking-widest">{site.desc}</p>
                                     </a>
                                 ))}
                             </div>
@@ -631,11 +631,11 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                         >
                             <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#10b981 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
                             <div className="flex flex-col items-center text-center relative z-10">
-                                <span className="text-emerald-500 font-black tracking-[0.4em] uppercase text-[9px] mb-2 block">Join Our Team</span>
+                                <span className="text-emerald-500 font-black tracking-[0.4em] uppercase text-[12px] mb-2 block">Join Our Team</span>
                                 <h2 className="text-2xl md:text-3xl font-black text-white leading-tight tracking-tighter mb-4 italic">
                                     {recruitment.title}
                                 </h2>
-                                <p className="text-gray-400 font-bold text-sm leading-relaxed max-w-2xl">
+                                <p className="text-gray-400 font-bold text-[15px] leading-relaxed max-w-2xl">
                                     {recruitment.message || recruitment.description}
                                 </p>
                             </div>
@@ -651,7 +651,7 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
                         <div className="space-y-8">
                             <div>
-                                <span className="text-emerald-500 font-black tracking-[0.3em] uppercase text-xs mb-4 block">Store & Access</span>
+                                <span className="text-emerald-500 font-black tracking-[0.3em] uppercase text-sm mb-4 block">Store & Access</span>
                                 <h2 className="text-4xl md:text-5xl font-black leading-tight tracking-tighter mb-8 italic text-white underline decoration-emerald-500/30">SHOP INFO</h2>
                                 <p className="text-gray-400 font-bold leading-relaxed mb-8">
                                     福岡県大野城市の御笠川沿いに位置する、九州No.1の施工実績を誇るプロショップ。<br />
@@ -663,14 +663,14 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                 <div className="col-span-2 group relative aspect-video rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-white/5">
                                     <SafeImage src={assets?.heroImage} alt="Sound ANG 店舗外観" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 via-transparent to-transparent flex items-end p-6">
-                                        <span className="text-white font-black text-sm tracking-widest uppercase">Shop Exterior</span>
+                                        <span className="text-white font-black text-[15px] tracking-widest uppercase">Shop Exterior</span>
                                     </div>
                                 </div>
                                 {facilities?.map((fac: any, idx: number) => (
                                     <div key={idx} className="group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-white/10 bg-white/5">
                                         <SafeImage src={fac.image} alt={fac.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent flex items-end p-4">
-                                            <span className="text-white font-black text-[10px] tracking-widest uppercase">{fac.title}</span>
+                                            <span className="text-white font-black text-[12px] tracking-widest uppercase">{fac.title}</span>
                                         </div>
                                     </div>
                                 ))}
@@ -687,14 +687,14 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                             </div>
 
                             <div className="p-8 rounded-[2.5rem] bg-white/5 shadow-2xl border border-white/10 backdrop-blur-sm">
-                                <h4 className="text-[10px] font-black tracking-widest text-emerald-500 uppercase mb-4">Location Address</h4>
+                                <h4 className="text-[12px] font-black tracking-widest text-emerald-500 uppercase mb-4">Location Address</h4>
                                 <div className="flex gap-4">
                                     <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center shrink-0">
                                         <MapPin className="w-6 h-6 text-emerald-500" />
                                     </div>
                                     <div>
                                         <p className="font-black text-white text-lg leading-tight tracking-tight">〒816-0912</p>
-                                        <p className="font-bold text-gray-400 text-sm mt-1">福岡県大野城市御笠川5-4-14</p>
+                                        <p className="font-bold text-gray-400 text-[15px] mt-1">福岡県大野城市御笠川5-4-14</p>
                                     </div>
                                 </div>
                             </div>
@@ -711,7 +711,7 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                             <div className="text-2xl font-black italic tracking-tighter text-white mb-6">
                                 AUTO SECURITY <span className="text-emerald-500">ANG</span>
                             </div>
-                            <p className="text-[10px] font-bold leading-relaxed mb-8 opacity-60 uppercase tracking-widest">
+                            <p className="text-[12px] font-bold leading-relaxed mb-8 opacity-60 uppercase tracking-widest">
                                 Premium Car Security & Armor <br /> Professional Installation Suite
                             </p>
                             <div className="flex gap-4">
@@ -725,34 +725,34 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                         </div>
 
                         <div>
-                            <h4 className="text-white font-black text-xs tracking-widest uppercase mb-8">Contact Information</h4>
-                            <ul className="space-y-6 text-sm">
+                            <h4 className="text-white font-black text-sm tracking-widest uppercase mb-8">Contact Information</h4>
+                            <ul className="space-y-6 text-[15px]">
                                 <li className="flex gap-4">
                                     <Phone className="w-5 h-5 text-emerald-500 shrink-0" />
                                     <div className="space-y-1">
-                                        <p className="text-white font-black">092-503-5437 <span className="text-[8px] opacity-40 ml-2 uppercase">Security Line</span></p>
-                                        <p className="text-white font-black">092-503-5421 <span className="text-[8px] opacity-40 ml-2 uppercase">Audio Line</span></p>
+                                        <p className="text-white font-black">092-503-5437 <span className="text-[12px] opacity-40 ml-2 uppercase">Security Line</span></p>
+                                        <p className="text-white font-black">092-503-5421 <span className="text-[12px] opacity-40 ml-2 uppercase">Audio Line</span></p>
                                     </div>
                                 </li>
                                 <li className="flex gap-4 pt-4 border-t border-white/5">
                                     <Mail className="w-5 h-5 text-emerald-500 shrink-0" />
                                     <div className="space-y-1">
                                         <a href="mailto:ang@sec-ang.com" className="block text-white hover:text-emerald-500 transition-colors">ang@sec-ang.com</a>
-                                        <a href="mailto:ang@soundang.com" className="block text-white hover:text-emerald-500 transition-colors text-xs opacity-60">ang@soundang.com</a>
+                                        <a href="mailto:ang@soundang.com" className="block text-white hover:text-emerald-500 transition-colors text-sm opacity-60">ang@soundang.com</a>
                                     </div>
                                 </li>
                             </ul>
                         </div>
 
                         <div>
-                            <h4 className="text-white font-black text-xs tracking-widest uppercase mb-8">Quick Navigation</h4>
-                            <ul className="space-y-4 text-sm font-bold">
+                            <h4 className="text-white font-black text-sm tracking-widest uppercase mb-8">Quick Navigation</h4>
+                            <ul className="space-y-4 text-[15px] font-bold">
                                 <li><a href="#" className="hover:text-emerald-500 transition-colors">Top</a></li>
                                 <li><a href="#services" className="hover:text-white transition-colors">Menu</a></li>
                                 <li><a href="#access" className="hover:text-white transition-colors">Shop Access</a></li>
                                 <li><button onClick={() => navigate('/security/sitemap')} className="hover:text-white transition-colors">Site Map</button></li>
                                 <li className="pt-4 mt-4 border-t border-white/5">
-                                    <span className="text-[10px] font-black text-emerald-500 block mb-3 tracking-widest uppercase">Latest News</span>
+                                    <span className="text-[12px] font-black text-emerald-500 block mb-3 tracking-widest uppercase">Latest News</span>
                                     {securityEvents.filter(e => e.status !== 'draft').length > 0 ? (
                                         <ul className="space-y-3">
                                             {securityEvents.filter(e => e.status !== 'draft').slice(0, 3).map(event => (
@@ -762,13 +762,13 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                                         className="text-left hover:text-white transition-colors block leading-snug"
                                                     >
                                                         {event.title}
-                                                        <span className="text-[8px] block opacity-40 mt-0.5">{event.date}</span>
+                                                        <span className="text-[12px] block opacity-40 mt-0.5">{event.date}</span>
                                                     </button>
                                                 </li>
                                             ))}
                                         </ul>
                                     ) : (
-                                        <p className="text-white/20 italic text-xs font-black tracking-widest">COMING SOON...</p>
+                                        <p className="text-white/20 italic text-sm font-black tracking-widest">COMING SOON...</p>
                                     )}
                                 </li>
                                 <li><a href="https://www.soundang.com/webbrog/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Blog</a></li>
@@ -777,24 +777,24 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                         </div>
 
                         <div>
-                            <h4 className="text-white font-black text-xs tracking-widest uppercase mb-8">Legal & Business</h4>
+                            <h4 className="text-white font-black text-sm tracking-widest uppercase mb-8">Legal & Business</h4>
                             <div className="space-y-6">
-                                <p className="text-[10px] font-black leading-relaxed opacity-40">
+                                <p className="text-[12px] font-black leading-relaxed opacity-40">
                                     適格請求書発行事業者登録番号<br />
                                     <span className="text-white font-mono tracking-tight opacity-100">T4290002038758</span>
                                 </p>
                                 <div className="space-y-2">
-                                    <button onClick={() => navigate('/legal')} className="block text-xs hover:text-white transition-colors">Privacy Policy</button>
-                                    <button onClick={() => navigate('/legal')} className="block text-xs hover:text-white transition-colors">Terms of Service</button>
+                                    <button onClick={() => navigate('/legal')} className="block text-sm hover:text-white transition-colors">Privacy Policy</button>
+                                    <button onClick={() => navigate('/legal')} className="block text-sm hover:text-white transition-colors">Terms of Service</button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-                        <p className="text-[10px] font-black tracking-widest uppercase opacity-40">© 2026 AUTO SECURITY ANG. SECURITY ARMOR SYSTEMS.</p>
+                        <p className="text-[12px] font-black tracking-widest uppercase opacity-40">© 2026 AUTO SECURITY ANG. SECURITY ARMOR SYSTEMS.</p>
                         <div className="flex gap-8">
-                            <span className="text-[8px] font-black text-emerald-500/40 uppercase tracking-[0.4em]">Official Certified SPS Dealer</span>
+                            <span className="text-[12px] font-black text-emerald-500/40 uppercase tracking-[0.4em]">Official Certified SPS Dealer</span>
                         </div>
                     </div>
                 </div>
@@ -858,8 +858,8 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                                     className="group flex items-center justify-between p-4 rounded-2xl border border-gray-100 bg-gray-50 text-gray-900 active:bg-gray-100 transition-all cursor-pointer"
                                                 >
                                                     <div className="flex flex-col gap-1">
-                                                        <span className="text-sm font-black tracking-widest">{link.en}</span>
-                                                        <span className="text-[9px] font-bold text-emerald-600 opacity-60">{link.jp}</span>
+                                                        <span className="text-[15px] font-black tracking-widest">{link.en}</span>
+                                                        <span className="text-[12px] font-bold text-emerald-600 opacity-60">{link.jp}</span>
                                                     </div>
                                                     <div className={`w-8 h-8 rounded-xl flex items-center justify-center transition-all bg-white ${isExpandable && isLineupExpanded ? 'rotate-90 bg-emerald-500 text-black' : ''}`}>
                                                         <ChevronRight className="w-4 h-4" />
@@ -878,8 +878,8 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                                                 {securityCategories.map((cat: any, catIdx: number) => (
                                                                     <div key={catIdx} className="p-5 border-b border-gray-100 last:border-0">
                                                                         <div className="flex flex-col gap-1 mb-4 select-none border-l-2 border-emerald-500 pl-4">
-                                                                            <span className="text-[9px] font-black tracking-[0.2em] text-emerald-500 uppercase">{cat.subtitle}</span>
-                                                                             <span className="text-xs font-black tracking-tight text-gray-900 transition-colors cursor-pointer hover:text-emerald-600" onClick={() => { setIsMobileMenuOpen(false); const element = document.getElementById(cat.id); if (element) { element.scrollIntoView({ behavior: 'smooth' }); } else { navigate(cat.path); } }}>
+                                                                            <span className="text-[12px] font-black tracking-[0.2em] text-emerald-500 uppercase">{cat.subtitle}</span>
+                                                                             <span className="text-sm font-black tracking-tight text-gray-900 transition-colors cursor-pointer hover:text-emerald-600" onClick={() => { setIsMobileMenuOpen(false); const element = document.getElementById(cat.id); if (element) { element.scrollIntoView({ behavior: 'smooth' }); } else { navigate(cat.path); } }}>
                                                                                 {cat.title}
                                                                             </span>
                                                                         </div>
@@ -889,7 +889,7 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                                                                 <div className="space-y-6">
                                                                                     {cat.groups.map((group: any, gIdx: number) => (
                                                                                         <div key={gIdx} className="space-y-3">
-                                                                                            <div className="text-[9px] font-black text-gray-400 tracking-[0.2em] border-b border-gray-50 pb-1 uppercase">
+                                                                                            <div className="text-[12px] font-black text-gray-400 tracking-[0.2em] border-b border-gray-50 pb-1 uppercase">
                                                                                                 {group.name}
                                                                                             </div>
                                                                                             <div className="grid grid-cols-2 gap-x-4 gap-y-2.5">
@@ -955,14 +955,14 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                     href="https://page.line.me/312qjhsq?openQrModal=true" 
                                     target="_blank" 
                                     rel="noopener noreferrer" 
-                                    className="flex items-center justify-center gap-3 w-full bg-[#06C755] text-white py-4 rounded-2xl font-black text-sm tracking-widest shadow-xl shadow-green-500/10"
+                                    className="flex items-center justify-center gap-3 w-full bg-[#06C755] text-white py-4 rounded-2xl font-black text-[15px] tracking-widest shadow-xl shadow-green-500/10"
                                 >
                                     <MessageSquare className="w-5 h-5" />
                                     LINEで相談
                                 </a>
                                 <button 
                                     onClick={() => { setIsMobileMenuOpen(false); navigate('/reservation'); }} 
-                                    className="flex items-center justify-center gap-3 w-full bg-gray-100 text-gray-900 py-4 rounded-2xl font-black text-sm tracking-widest border border-gray-100"
+                                    className="flex items-center justify-center gap-3 w-full bg-gray-100 text-gray-900 py-4 rounded-2xl font-black text-[15px] tracking-widest border border-gray-100"
                                 >
                                     <Mail className="w-5 h-5" />
                                     メールで問い合わせ

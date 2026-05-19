@@ -1,0 +1,11 @@
+{
+  "convId": "996e894d-f869-449e-8a59-7f503b0e3f4d",
+  "stepIdx": 1237,
+  "toolName": "replace_file_content",
+  "startLine": "1366",
+  "endLine": "1381",
+  "desc": "\"Clean up handleSaveLP and fix nesting.\"",
+  "inst": "\"Remove the redundant catch block and ensuring the function is properly closed with a single, clean try-catch structure. This will resolve the syntax error and restore the admin dashboard.\"",
+  "target": "\"            setPlans(nextPlans);\\n            saveSiteData({ audioLPs: nextLPs, plans: nextPlans });\\n            alert(`「${updatedLP.name || 'プラン'}」の設定を保存しました。メニューとの同期も完了しました。`);\\n        } \n<truncated 417 bytes>",
+  "replacement": "\"            setPlans(nextPlans);\\n            saveSiteData({ audioLPs: nextLPs, plans: nextPlans });\\n            alert(`「${updatedLP.name || 'プラン'}」の設定を保存しました。メニューとの同期も完了しました。`);\\n        } \n<truncated 214 bytes>"
+}

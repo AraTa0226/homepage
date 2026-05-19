@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import { usePrices, formatPrice } from '../../contexts/PriceContext';
 import { useSite } from '../../contexts/SiteContext';
 import { RecruitmentSection } from '../Shared/RecruitmentSection';
+import { FloatingCTA } from '../Shared/FloatingCTA';
 import { SafeImage } from '../ui/SafeImage';
 import {
   ArrowLeft,
@@ -379,6 +380,9 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
   };
 
   const isHtmlGuide = selectedItem?.isGuide && isHtmlString(selectedItem.description || "");
+
+  const activeCategoryData = plans.find(p => p.id === activeCategory);
+  const showFloatingCTA = !!activeCategoryData?.showFloatingCTA;
 
   return (
     <motion.div
@@ -1995,6 +1999,8 @@ export const AudioMenuDetail: React.FC<AudioMenuDetailProps> = ({ onBack }) => {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {showFloatingCTA && <FloatingCTA />}
     </motion.div>
   );
 };

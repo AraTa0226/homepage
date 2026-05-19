@@ -1,0 +1,2 @@
+"    const handleSaveLP = () => {\n        if (!lpData) return;\n        \n        // Ensure standardLineLanding is also updated if this is the sp-standard LP\n        if (lpData.slug === 'sp-standard') {\n            setStandardLineLanding(lpData);\n     
+<truncated 231 bytes>

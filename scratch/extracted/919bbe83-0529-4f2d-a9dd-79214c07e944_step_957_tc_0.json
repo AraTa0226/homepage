@@ -1,0 +1,11 @@
+{
+  "convId": "919bbe83-0529-4f2d-a9dd-79214c07e944",
+  "stepIdx": 957,
+  "toolName": "replace_file_content",
+  "startLine": "1570",
+  "endLine": "1575",
+  "desc": "\"Added icons for new section types in the LP section list in Dashboard.tsx.\"",
+  "inst": "\"Add icons for new section types.\"",
+  "target": "\"                                                    {section.type === 'hero' && <Type className=\\\"w-4 h-4\\\" />}\\n                                                    {section.type === 'pricing' && <Zap className=\\\"w-4 h-4\\\" />}\\n                           \n<truncated 333 bytes>",
+  "replacement": "\"                                                    {section.type === 'hero' && <Type className=\\\"w-4 h-4\\\" />}\\n                                                    {section.type === 'pricing' && <Zap className=\\\"w-4 h-4\\\" />}\\n                           \n<truncated 923 bytes>"
+}

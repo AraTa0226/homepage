@@ -1,0 +1,11 @@
+{
+  "convId": "996e894d-f869-449e-8a59-7f503b0e3f4d",
+  "stepIdx": 826,
+  "toolName": "replace_file_content",
+  "startLine": "1468",
+  "endLine": "1483",
+  "desc": "\"Always show 'Create from Template' button and handle empty state.\"",
+  "inst": "\"Remove the conditional check for audioLPTemplates.length to ensure the 'Create from Template' button is always visible. Add a fallback message if no templates are available to improve user feedback.\"",
+  "target": "\"                            {audioLPTemplates.length > 0 && (\\n                                <div className=\\\"relative group\\\">\\n                                    <button className=\\\"flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-\n<truncated 1414 bytes>",
+  "replacement": "\"                            <div className=\\\"relative group\\\">\\n                                <button className=\\\"flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-4 py-2.5 rounded-xl font-black text-xs transition-all shadow-lg shadow-\n<truncated 1694 bytes>"
+}

@@ -1,0 +1,2 @@
+"                                                    {section.type === 'hero' && <Type className=\"w-4 h-4\" />}\n                                                    {section.type === 'pricing' && <Zap className=\"w-4 h-4\" />}\n                           
+<truncated 923 bytes>

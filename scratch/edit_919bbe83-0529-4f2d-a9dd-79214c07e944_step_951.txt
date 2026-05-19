@@ -1,0 +1,2 @@
+"                                    {[\n                                        { type: 'hero', icon: <Type className=\"w-3.5 h-3.5\" />, label: 'Hero' },\n                                        { type: 'pricing', icon: <Zap className=\"w-3.5 h-3.5\" />,
+<truncated 24980 bytes>

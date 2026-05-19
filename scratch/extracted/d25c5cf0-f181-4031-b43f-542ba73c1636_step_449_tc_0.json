@@ -1,0 +1,11 @@
+{
+  "convId": "d25c5cf0-f181-4031-b43f-542ba73c1636",
+  "stepIdx": 449,
+  "toolName": "replace_file_content",
+  "startLine": "1823",
+  "endLine": "1833",
+  "desc": "\"管理画面のアップグレード編集機能を拡張し、メタルバッフルやツィーター埋込加工の「画像」や「詳細説明」も編集できるようにしました。これにより、テンプレートに追加した詳細なコ\n<truncated 82 bytes>",
+  "inst": "\"Update the upgrades section editor in Dashboard.tsx to include all fields (images and descriptions) for tweeter mount and metal baffle.\"",
+  "target": "\"                                                     <div className=\\\"space-y-4\\\">\\n                                                         <h6 className=\\\"text-[10px] font-black text-zinc-500 uppercase\\\">Global Options</h6>\\n                            \n<truncated 1132 bytes>",
+  "replacement": "\"                                                     <div className=\\\"space-y-6\\\">\\n                                                         <h6 className=\\\"text-[10px] font-black text-zinc-500 uppercase border-b border-zinc-800 pb-2\\\">Hardware Options (I\n<truncated 4831 bytes>"
+}

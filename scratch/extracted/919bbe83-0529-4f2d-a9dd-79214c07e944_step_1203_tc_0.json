@@ -1,0 +1,11 @@
+{
+  "convId": "919bbe83-0529-4f2d-a9dd-79214c07e944",
+  "stepIdx": 1203,
+  "toolName": "replace_file_content",
+  "startLine": "1483",
+  "endLine": "1495",
+  "desc": "\"Refactored handleSaveLP in Dashboard.tsx to use a more robust update pattern and ensure all sections are correctly persisted to both the individual LP entry and the shared state.\"",
+  "inst": "\"Robust handleSaveLP implementation.\"",
+  "target": "\"    const handleSaveLP = () => {\\n        if (!lpData) return;\\n        const updatedLP = { ...lpData };\\n\\n        if (updatedLP.slug === 'sp-standard') {\\n            setStandardLineLanding(updatedLP);\\n        }\\n\\n        const nextLPs = audioLPs.map(\n<truncated 179 bytes>",
+  "replacement": "\"    const handleSaveLP = () => {\\n        if (!lpData) return;\\n        \\n        // Ensure standardLineLanding is also updated if this is the sp-standard LP\\n        if (lpData.slug === 'sp-standard') {\\n            setStandardLineLanding(lpData);\\n     \n<truncated 231 bytes>"
+}

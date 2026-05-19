@@ -1,0 +1,11 @@
+{
+  "convId": "996e894d-f869-449e-8a59-7f503b0e3f4d",
+  "stepIdx": 1210,
+  "toolName": "replace_file_content",
+  "startLine": "1305",
+  "endLine": "1310",
+  "desc": "\"Add debugging to handleSaveLP.\"",
+  "inst": "\"Add a log and an alert if lpData is missing when handleSaveLP is called. This will help confirm if the function is even being triggered and if the data is available.\"",
+  "target": "\"    const handleSaveLP = () => {\\n        if (!lpData) return;\\n\"",
+  "replacement": "\"    const handleSaveLP = () => {\\n        console.log('[LP SAVE] Button clicked. lpData:', lpData);\\n        if (!lpData) {\\n            alert('保存対象のLPデータが見つかりません。LPを選択してから保存してください。');\\n   \n<truncated 30 bytes>"
+}

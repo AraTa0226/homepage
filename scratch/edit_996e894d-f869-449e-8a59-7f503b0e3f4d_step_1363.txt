@@ -1,0 +1,2 @@
+"            // Update each changed category individually to avoid race condition\n            // reorderPlans triggers its own saveSiteData which could overwrite nextPlans\n            let anyChanged = false;\n            plans.forEach(cat => {\n         
+<truncated 1135 bytes>

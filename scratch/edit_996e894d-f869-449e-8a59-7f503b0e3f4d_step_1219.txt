@@ -1,0 +1,2 @@
+"            alert(`「${updatedLP.name || 'プラン'}」の設定を保存しました。メニューとの同期も完了しました。`);\n        } catch (err) {\n            console.error('[LP SAVE] Error during save:', err);\n            alert('保
+<truncated 112 bytes>

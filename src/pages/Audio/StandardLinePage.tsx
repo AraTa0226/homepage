@@ -1,56 +1,36 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Check, ShieldCheck, Music, Settings, Zap, ArrowRight, Info, Wrench, MessageCircle, Calendar, ChevronDown, Menu as MenuIcon, Sparkles, Disc, Layers } from 'lucide-react';
+import { Check, ShieldCheck, Music, Settings, Zap, ArrowRight, Info, Wrench, MessageCircle, Calendar, ChevronDown, Menu as MenuIcon, Sparkles, Disc, Layers, Headphones, ChevronRight, Youtube } from 'lucide-react';
 import { usePrices } from '../../contexts/PriceContext';
 import { MegaMenu } from '../../components/Menu/MegaMenu';
+import { FloatingCTA } from '../../components/Shared/FloatingCTA';
 
 export const StandardLinePage: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { plans, standardLineLanding, audioLPs } = usePrices();
 
-  const pathSlug = location.pathname.split('/').filter(Boolean).pop() || 'sp-standard';
-  const matchedLP = audioLPs?.find(p => p.slug === pathSlug) || standardLineLanding;
+  const pathSlug = location.pathname.startsWith('/') ? location.pathname.substring(1) : location.pathname;
+  const matchedLP = audioLPs?.find(p => p.slug === pathSlug) || (pathSlug === 'sp-standard' ? standardLineLanding : null);
+  
+  const finalLP = matchedLP;
+  // data is defined below after null check
 
-  const data = matchedLP || {
-    header: {
-      badge: "スタンダードライン",
-      mainTitle: "STANDARD LINE",
-      subTitle: "スピーカー交換パッケージ",
-      description: "純正の音に不満がある方へ。音質アップの第一歩は確実なスピーカー交換から。ただユニットを取り替えるだけではなく、スピーカーの真価を発揮するための必須施工（ドアチューニング・専用バッフル・配線）をすべてセットにした、明朗会計のコミコミパッケージです。"
-    },
-    pricing: {
-      specialPrice: "81840",
-      normalPriceText: "通常目安: 117,700円",
-      savingsText: "約 35,860円 お得!",
-      note: "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。"
-    },
-    features: {
-      doorTuning: { title: "ドアチューニング Bコース", desc: "薄い鉄板のドア内部の振動・共振を抑え、音の漏れを防ぐ制振・防音処理。（通常¥27,500相当）" },
-      baffle: { title: "カスタムインナーバッフル", desc: "強固な土台を作り、不要な振動を徹底排除。音の立ち上がりと定位感が劇的に改善します。（通常¥11,000相当）" },
-      cable: { title: "ANGオリジナルケーブル", desc: "オーディオテクニカ製ベースの高品位スピーカーケーブル(10m)で繊細な情報までロスなく伝送。（通常¥16,500相当）" }
-    },
-    upgrades: {
-      courses: [
-        { name: "B → A コース", price: "+¥11,000", desc: "フェリソニDS-1.5WP使用・制振材増量" },
-        { name: "B → A+ コース", price: "+¥22,000", desc: "フェリソニC2使用・制振材増量" },
-        { name: "B → S コース", price: "+¥33,000", desc: "DS-1.5WPをさらに増量。最新マテリアル高密度施工", pop: true },
-        { name: "B → S+ コース", price: "+¥44,000", desc: "フェリソニC2を贅沢に使用。最高峰の制振・吸音・遮音" }
-      ],
-      options: { metalBaffleDiscount: "20% OFF", tweeterMountPrice: "¥46,200〜" }
-    }
-  };
-
-  // Create audio categories exactly like MainPage
+  // Create audio categories - preserve objects to keep link info for dynamic LPs
   const audioCategories = (Array.isArray(plans) ? plans : []).filter(p => p && p.type === 'audio').map(p => ({
       ...p,
-      items: (Array.isArray(p.items) ? p.items : []).map((item: any) => {
-          if (typeof item === 'string') return item;
-          return item?.name || '';
-      })
+      items: (Array.isArray(p.items) ? p.items : [])
   }));
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+
+  const parsePrice = (priceStr: any) => {
+    if (typeof priceStr === 'number') return priceStr;
+    if (!priceStr) return 0;
+    const str = priceStr.toString();
+    return parseInt(str.replace(/[^0-9]/g, '')) || 0;
+  };
+
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -63,385 +43,698 @@ export const StandardLinePage: React.FC = () => {
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  }, [finalLP, pathSlug]);
+
+  // If no LP found for this slug, redirect to home
+  if (!finalLP && pathSlug !== 'sp-standard') {
+    return (
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <div className="text-center">
+          <div className="text-6xl font-black text-gray-200 mb-4">404</div>
+          <p className="text-gray-500 font-bold mb-8">ページが見つかりません</p>
+          <button onClick={() => navigate('/')} className="bg-blue-600 text-white px-8 py-3 rounded-xl font-black">トップへ戻る</button>
+        </div>
+      </div>
+    );
+  }
+
+  const data = finalLP || {
+    header: {
+      badge: "スタンダードライン",
+      mainTitle: "STANDARD LINE",
+      subTitle: "スピーカー交換パッケージ",
+      description: "純正の音に不満がある方へ。音質アップの第一歩は確実なスピーカー交換から。"
+    },
+    pricing: {
+      specialPrice: "81840",
+      fixedPrice: 41140,
+      normalPriceText: "通常目安: 117,700円",
+      savingsText: "約 35,860円 お得!",
+      note: "※KICKER CSS674（40,700円）を選択した場合の例。"
+    },
+    features: {
+      doorTuning: { title: "ドアチューニング Bコース", desc: "制振施工。", image: "/images/Audio/Speaker/door-b.webp" },
+      baffle: { title: "カスタムインナーバッフル", desc: "バーチ材バッフル。", image: "/images/Audio/Speaker/baffle.webp" },
+      cable: { title: "ANGオリジナルケーブル", desc: "高品位ケーブル。", image: "/images/Audio/Speaker/ang-cable.webp" }
+    },
+    upgrades: {
+      courses: [],
+      options: { metalBaffleDiscount: "20% OFF", tweeterMountPrice: "¥46,200〜" }
+    }
+  };
+
+  const calculateAppliedPrice = (spk: any) => {
+    if (!spk) return 0;
+    const isString = typeof spk === 'string';
+    const standalonePrice = isString ? spk : spk.standalonePrice;
+    const speakerPrice = parsePrice(standalonePrice);
+    const fixedFee = !isString && spk.fixedPriceOverride !== undefined && spk.fixedPriceOverride !== ''
+      ? parsePrice(spk.fixedPriceOverride)
+      : (data.pricing?.fixedPrice || 0);
+    return speakerPrice + fixedFee;
+  };
+
+  const floatingCTASection = data.sections?.find(s => s.type === 'floating_cta');
+  const showFloatingCTA = !!floatingCTASection || !!data.showFloatingCTA;
+  const ctaConfig = floatingCTASection?.data || {};
 
   return (
     <div className="min-h-screen bg-white font-sans selection:bg-blue-600 selection:text-white pb-0">
       
-      {/* --- ヘッダー領域 (フル幅) --- */}
-      <div className="bg-gray-900 text-white pt-24 pb-16 px-6 md:px-12 lg:px-20 border-b-[8px] border-blue-600 relative z-40">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/20 blur-[120px] rounded-full transform translate-x-1/3 -translate-y-1/3"></div>
-        </div>
-        
-        <div className="max-w-6xl mx-auto relative z-10">
-          
-          {/* Top Actions (Breadcrumb & Menu) */}
-          <div className="flex justify-between items-center mb-10 relative z-20">
+      {/* Dynamic Sections Rendering */}
+      {data.sections && data.sections.length > 0 ? (
+        <>
+          {/* Navigation Overlay (Fixed) */}
+          <div className="fixed top-8 right-8 z-50 flex items-center gap-4">
             <button 
               onClick={() => navigate('/')}
-              className="text-gray-400 hover:text-white font-bold text-sm flex items-center gap-2 transition-colors group"
+              className="bg-white/90 backdrop-blur-md shadow-lg text-gray-900 font-bold text-sm px-4 py-2.5 rounded-xl flex items-center gap-2 border border-gray-100"
             >
-              <ArrowRight className="w-4 h-4 rotate-180 group-hover:-translate-x-1 transition-transform" />
-              トップページへ戻る
+              <ArrowRight className="w-3.5 h-3.5 rotate-180" /> HOME
             </button>
-            
             <div className="relative group/nav" ref={menuRef} onMouseEnter={() => setIsMenuOpen(true)} onMouseLeave={() => setIsMenuOpen(false)}>
               <button 
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="bg-gray-800 hover:bg-gray-700 text-white font-bold text-sm px-4 py-2.5 rounded-xl flex items-center gap-2 transition-colors border border-gray-700 shadow-sm"
+                className="bg-gray-900 shadow-xl text-white font-bold text-sm px-4 py-2.5 rounded-xl flex items-center gap-2 transition-colors border border-gray-800"
               >
-                <MenuIcon className="w-4 h-4" />
-                <span className="hidden sm:inline">MENU (他のプラン)</span>
-                <span className="sm:hidden">Menu</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ml-1 ${isMenuOpen ? 'rotate-180' : ''}`} />
+                <MenuIcon className="w-3.5 h-3.5" /> MENU <ChevronDown className={"w-3.5 h-3.5 transition-transform " + (isMenuOpen ? 'rotate-180' : '')} />
               </button>
-              
-              <MegaMenu
-                show={isMenuOpen}
-                categories={audioCategories}
-                theme="dark"
-                onClose={() => setIsMenuOpen(false)}
-                navigate={navigate}
-                handleMenuClick={(item: any) => {
-                  setIsMenuOpen(false);
-                  navigate(item.path || `/audio/plan/${item.name}`);
-                }}
-                positionClassName="right-0 -mr-4 md:right-0 md:mr-0"
-              />
+              <MegaMenu show={isMenuOpen} categories={audioCategories} theme="dark" onClose={() => setIsMenuOpen(false)} navigate={navigate} handleMenuClick={(item) => { setIsMenuOpen(false); navigate(item.path || `/audio/plan/${item.name}`); }} positionClassName="right-0 -mr-4 md:right-0 md:mr-0" />
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-6">
-            <div className="text-3xl md:text-4xl font-black italic tracking-[0.3em] text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">SOUND ANG</div>
-            <div className="text-left md:text-right">
-              <div className="text-sm md:text-base font-bold text-gray-400 tracking-widest uppercase">Speaker Installation Package</div>
-            </div>
-          </div>
-
-          <div>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-6 leading-[1.1]">
-              <span className="block text-lg md:text-2xl text-gray-400 mb-3 tracking-[0.2em] font-bold">{data.header.badge}</span>
-              {data.header.mainTitle}
-              <span className="block text-2xl md:text-4xl text-blue-400 mt-4 tracking-widest font-bold">{data.header.subTitle}</span>
-            </h1>
-            <p className="text-gray-300 font-bold leading-relaxed max-w-4xl text-base md:text-lg mt-8 whitespace-pre-line">
-              {data.header.description}
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* --- メインコンテンツ --- */}
-      <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-16 md:py-24">
-        
-        {/* 価格ハイライト */}
-        <div className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 rounded-[2rem] p-10 md:p-14 mb-24 flex flex-col lg:flex-row items-center justify-between gap-12 shadow-xl shadow-blue-900/5 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-blue-100/50 blur-[80px] rounded-full pointer-events-none transform translate-x-1/2 -translate-y-1/2"></div>
-          
-          <div className="relative z-10 w-full lg:w-auto">
-            <div className="inline-block bg-blue-600 text-white text-sm md:text-base font-black px-5 py-2 rounded-full tracking-widest mb-6 shadow-md">
-              パッケージ特別価格
-            </div>
-            <div className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-6 mb-6">
-              <div className="text-gray-500 line-through font-bold text-2xl">{data.pricing.normalPriceText}</div>
-              <div className="text-6xl md:text-8xl font-black text-gray-900 tracking-tighter">
-                {data.pricing.specialPrice.startsWith('¥') ? '' : '¥'}{parseInt(data.pricing.specialPrice.replace(/[^0-9]/g, '')) ? parseInt(data.pricing.specialPrice.replace(/[^0-9]/g, '')).toLocaleString() : data.pricing.specialPrice}<span className="text-2xl md:text-3xl text-gray-600 font-bold ml-2">〜(税込)</span>
-              </div>
-            </div>
-            <p className="text-sm text-gray-500 font-bold bg-white/80 inline-block px-4 py-2 rounded-lg border border-gray-100">
-              {data.pricing.note}
-            </p>
-          </div>
-          
-          <div className="relative z-10 bg-white rounded-3xl shadow-xl shadow-blue-900/10 border border-blue-100 p-8 md:p-10 text-center shrink-0 w-full lg:w-auto transform lg:rotate-2 lg:hover:rotate-0 transition-transform duration-300">
-            <div className="text-sm md:text-base font-black text-gray-500 tracking-widest mb-3">通常個別施工より</div>
-            <div className="text-3xl md:text-4xl font-black text-red-600 tracking-tighter">{data.pricing.savingsText}</div>
-          </div>
-        </div>
-
-        {/* 3つの重要画像セクション */}
-        <div className="mb-28">
-          <div className="flex items-center gap-5 mb-8">
-            <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center shrink-0">
-              <Settings className="w-7 h-7 text-blue-600" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900 tracking-tight">音質を決定づける「3つの重要施工」を標準装備</h2>
-          </div>
-          <p className="text-base md:text-lg text-gray-600 mb-12 font-bold leading-relaxed max-w-4xl">
-            スピーカーの性能を100%引き出すためには、ただ取り付けるだけでは不十分です。本パッケージは以下の必須環境づくりがすべて含まれています。
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
-            {[
-              { 
-                title: data.features.doorTuning.title, 
-                desc: data.features.doorTuning.desc, 
-                image: data.features.doorTuning.image || "/images/Audio/Speaker/door-b.webp" 
-              },
-              { 
-                title: data.features.baffle.title, 
-                desc: data.features.baffle.desc, 
-                image: data.features.baffle.image || "/images/Audio/Speaker/baffle.webp" 
-              },
-              { 
-                title: data.features.cable.title, 
-                desc: data.features.cable.desc, 
-                image: data.features.cable.image || "/images/Audio/Speaker/ang-cable.webp" 
-              }
-            ].map((feature, idx) => (
-              <div key={idx} className="bg-white rounded-[2rem] overflow-hidden border border-gray-100 shadow-xl shadow-gray-200/40 group">
-                <div className="aspect-[4/3] overflow-hidden bg-gray-100 relative">
-                  <img src={feature.image} alt={feature.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-                <div className="p-8 md:p-10 relative z-10 bg-white">
-                  <h3 className="font-black text-xl md:text-2xl text-gray-900 mb-4 leading-tight group-hover:text-blue-600 transition-colors">{feature.title}</h3>
-                  <p className="text-sm md:text-base text-gray-600 leading-relaxed font-bold">{feature.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* 2カラム構成：パッケージの残り＆アップグレード */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 mb-24">
-          
-          {/* 左カラム：その他のパッケージ内容 */}
-          <div>
-            <div className="flex items-center gap-5 mb-10 border-b-[4px] border-gray-100 pb-6">
-              <div className="w-14 h-14 rounded-2xl bg-gray-50 flex items-center justify-center shrink-0 border border-gray-200">
-                <Music className="w-7 h-7 text-gray-900" />
-              </div>
-              <h2 className="text-2xl md:text-3xl font-black text-gray-900 tracking-tight">パッケージ全内容（まとめ）</h2>
-            </div>
-            
-            <ul className="space-y-4">
-              {[
-                { num: "01", title: "17cmモデル2WAYスピーカー", desc: "10万円までのモデルから選択（※詳細は別紙参照）" },
-                { num: "02", title: data.features.doorTuning.title, value: "通常 ¥27,500", desc: "制振・防音処理" },
-                { num: "03", title: data.features.baffle.title, value: "通常 ¥11,000", desc: "専用マウント製作" },
-                { num: "04", title: data.features.cable.title, value: "通常 ¥16,500", desc: "オーディオテクニカ製¥1,500/m相当×10m計算" },
-                { num: "05", title: "ツィーター取付", desc: "純正位置、もしくはオンダッシュ取り付け" },
-                { num: "06", title: "ワイヤリング工賃", value: "通常 ¥22,000", desc: "正確な配線と極性チェックを含む" }
-              ].map((item, idx) => (
-                <li key={idx} className="flex gap-5 p-6 rounded-3xl bg-gray-50 hover:bg-white border border-gray-100 hover:border-blue-100 hover:shadow-lg hover:shadow-blue-900/5 transition-all items-center justify-between group">
-                  <div className="flex gap-5 items-start w-full">
-                    <div className="text-2xl font-black text-blue-200 italic shrink-0 w-10 pt-1 group-hover:text-blue-500 transition-colors">{item.num}</div>
-                    <div className="flex-1">
-                      <h3 className="font-black text-gray-900 text-base md:text-lg leading-tight mb-2">{item.title}</h3>
-                      <p className="text-sm text-gray-500 leading-tight font-bold">{item.desc}</p>
-                    </div>
-                    {item.value && (
-                      <div className="shrink-0 text-right">
-                        <span className="text-xs md:text-sm font-black text-gray-600 bg-white border border-gray-200 px-4 py-2 rounded-xl shadow-sm whitespace-nowrap">{item.value}</span>
+          {console.log('Rendering sections:', data.sections)}
+          {data.sections.map((section, idx) => {
+            switch(section.type) {
+              case 'hero':
+                return (
+                  <div 
+                    key={section.id} 
+                    className={`pt-32 pb-20 px-6 md:px-12 lg:px-20 border-b-[8px] border-blue-600 relative overflow-hidden ${section.data.useDarkTheme !== false ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'}`}
+                    style={section.data.bgColor ? { backgroundColor: section.data.bgColor } : {}}
+                  >
+                    {section.data.image && (
+                      <div className="absolute inset-0 z-0">
+                        <img 
+                          src={section.data.image} 
+                          alt="" 
+                          className="w-full h-full object-cover" 
+                          style={{ opacity: section.data.imageOpacity ?? 0.3 }} 
+                        />
+                        {section.data.useDarkTheme !== false && (
+                          <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-900/40 to-transparent"></div>
+                        )}
                       </div>
                     )}
+                    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/20 blur-[120px] rounded-full transform translate-x-1/3 -translate-y-1/3"></div>
+                    <div className="max-w-6xl mx-auto relative z-10">
+                      <div className={`text-3xl md:text-4xl font-black italic tracking-[0.3em] text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 mb-12 uppercase`}>SOUND ANG</div>
+                      <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-8 leading-[1.1]">
+                        <span className={`block text-[lg] md:text-2xl ${section.data.useDarkTheme !== false ? 'text-gray-400' : 'text-gray-500'} mb-3 tracking-[0.2em] font-bold`}>{section.data.badge}</span>
+                        {section.data.mainTitle}
+                        <span className="block text-2xl md:text-4xl text-blue-400 mt-4 tracking-widest font-bold">{section.data.subTitle}</span>
+                      </h1>
+                      <p className={`${section.data.useDarkTheme !== false ? 'text-gray-300' : 'text-gray-600'} font-bold leading-relaxed max-w-4xl text-base md:text-lg whitespace-pre-line`}>{section.data.description}</p>
+                    </div>
                   </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* 右カラム：アップグレードオプション */}
-          <div>
-            <div className="flex items-center gap-5 mb-10 border-b-[4px] border-gray-100 pb-6">
-              <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center shrink-0 border border-blue-100">
-                <Zap className="w-7 h-7 text-blue-600" />
-              </div>
-              <h2 className="text-2xl md:text-3xl font-black text-gray-900 tracking-tight">アップグレード オプション</h2>
-            </div>
-            <p className="text-base font-bold text-gray-600 mb-10 leading-relaxed">
-              基本の「Bコース」から、制振・吸音処理のグレードアップが可能です。（パッケージ同時施工の特別価格）
-            </p>
-            
-            <div className="grid grid-cols-1 gap-4 mb-10">
-              {data.upgrades.courses.map((opt, idx) => (
-                <div key={idx} className={`flex justify-between items-center p-6 border-2 rounded-3xl transition-all ${opt.pop ? 'border-blue-500 bg-blue-50/40 shadow-lg shadow-blue-900/5 transform hover:-translate-y-1' : 'border-gray-100 bg-white hover:border-blue-200'}`}>
-                  <div>
-                    <div className="flex items-center gap-4 mb-2">
-                      <span className="font-black text-base md:text-lg text-gray-900">{opt.name}</span>
-                      {opt.pop && <span className="text-xs bg-blue-600 text-white px-3 py-1.5 rounded-md font-black tracking-widest shadow-sm">おすすめ</span>}
-                    </div>
-                    <div className="text-sm text-gray-500 font-bold">{opt.desc}</div>
-                  </div>
-                  <div className="font-black text-blue-600 text-xl md:text-2xl whitespace-nowrap ml-6">{opt.price}</div>
-                </div>
-              ))}
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-5">
-              <div className="bg-white border border-gray-200 rounded-3xl flex-1 hover:shadow-xl hover:shadow-blue-900/5 hover:-translate-y-1 transition-all overflow-hidden group">
-                <div className="h-32 md:h-40 bg-gray-100 overflow-hidden relative border-b border-gray-100">
-                  <img src={data.upgrades.options.metalBaffleImage || "/images/Audio/Speaker/metal.webp"} alt="メタルバッフル" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                </div>
-                <div className="p-6 text-center">
-                  <span className="block text-gray-400 text-xs mb-2 tracking-widest uppercase font-black">高剛性化</span>
-                  <span className="text-base md:text-lg font-black text-gray-900">メタルバッフル変更 <br/><span className="text-blue-600 text-xl md:text-2xl mt-1 inline-block">{data.upgrades.options.metalBaffleDiscount}</span></span>
-                </div>
-              </div>
-              <div className="bg-white border border-gray-200 rounded-3xl flex-1 hover:shadow-xl hover:shadow-blue-900/5 hover:-translate-y-1 transition-all overflow-hidden group">
-                <div className="h-32 md:h-40 bg-gray-100 overflow-hidden relative border-b border-gray-100">
-                  <img src={data.upgrades.options.tweeterMountImage || "/images/Audio/Speaker/tw-mount.webp"} alt="ツィーター埋込" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                </div>
-                <div className="p-6 text-center">
-                  <span className="block text-gray-400 text-xs mb-2 tracking-widest uppercase font-black">理想の音像定位</span>
-                  <span className="text-base md:text-lg font-black text-gray-900">ツィーター埋込 <br/><span className="text-blue-600 text-xl md:text-2xl mt-1 inline-block">{data.upgrades.options.tweeterMountPrice}</span></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* --- 適用可能スピーカー ラインナップ一覧 (最下部・3列表示) --- */}
-        {data.speakers && data.speakers.length > 0 && (
-          <div className="mb-10 pt-10 border-t border-gray-100">
-            <div className="flex items-center gap-5 mb-4">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center shrink-0 shadow-lg shadow-blue-600/20">
-                <Sparkles className="w-7 h-7 text-white" />
-              </div>
-              <div>
-                <span className="text-xs font-black text-blue-600 tracking-widest uppercase block mb-1">Applicable Speaker Lineup</span>
-                <h2 className="text-3xl md:text-4xl font-black text-gray-900 tracking-tight">プラン適用可能なスピーカーラインナップ</h2>
-              </div>
-            </div>
-            <p className="text-base md:text-lg text-gray-600 mb-12 font-bold leading-relaxed max-w-4xl">
-              本パッケージで選択可能な高音質スピーカーの一覧です。それぞれ本体仕様と、コミコミ適用総額を比較して最適なユニットをお選びいただけます。
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {data.speakers.map((spk) => (
-                <div key={spk.id} className="bg-gradient-to-b from-white to-gray-50/50 rounded-[2.5rem] border border-gray-200/80 shadow-xl shadow-gray-200/40 overflow-hidden hover:border-blue-200 hover:shadow-2xl hover:shadow-blue-900/5 transition-all duration-500 group flex flex-col justify-between">
-                  <div>
-                    {/* 上部：画像と基本情報 */}
-                    <div className="p-8 pb-0">
-                      <div className="flex justify-between items-start mb-4">
-                        <span className="text-xs font-black px-3 py-1 bg-gray-100 text-gray-600 rounded-full border border-gray-200 tracking-wider uppercase max-w-[120px] truncate">{spk.brand}</span>
-                        <div className="flex gap-1 shrink-0">
-                          {spk.hasGrille ? (
-                            <span className="text-[9px] font-black bg-emerald-50 text-emerald-600 border border-emerald-200/80 px-2 py-0.5 rounded-md flex items-center gap-0.5">
-                              <Check className="w-2.5 h-2.5" /> グリル有
-                            </span>
-                          ) : (
-                            <span className="text-[9px] font-bold bg-gray-100 text-gray-400 border border-gray-200 px-2 py-0.5 rounded-md">
-                              グリル無
-                            </span>
+                );
+              case 'pricing':
+                return (
+                  <div key={section.id} className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-20">
+                    <div className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 rounded-[3rem] p-10 md:p-14 flex flex-col lg:flex-row items-center justify-between gap-12 shadow-xl shadow-blue-900/5 relative overflow-hidden">
+                      <div className="relative z-10 w-full lg:w-auto">
+                        <div className="inline-block bg-blue-600 text-white text-[15px] font-black px-5 py-2 rounded-full tracking-widest mb-6">PACKAGE PRICE</div>
+                        <div className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-6 mb-6">
+                          {section.data.normalPrice && (
+                            <div className="text-gray-500 line-through font-bold text-2xl">
+                              通常価格: {section.data.normalPrice}
+                            </div>
                           )}
-                          {spk.hasTweeterMount ? (
-                            <span className="text-[9px] font-black bg-blue-50 text-blue-600 border border-blue-200/80 px-2 py-0.5 rounded-md flex items-center gap-0.5">
-                              <Check className="w-2.5 h-2.5" /> TWマウント有
-                            </span>
-                          ) : (
-                            <span className="text-[9px] font-bold bg-gray-100 text-gray-400 border border-gray-200 px-2 py-0.5 rounded-md">
-                              TWマウント無
-                            </span>
-                          )}
+                          <div className="text-6xl md:text-8xl font-black text-gray-900 tracking-tighter">
+                            ¥{parsePrice(section.data.specialPrice || section.data.fixedPrice || 0).toLocaleString()}
+                            <span className="text-2xl md:text-3xl text-gray-600 font-bold ml-2">〜(税込)</span>
+                          </div>
                         </div>
+                        <p className="text-[15px] text-gray-500 font-bold bg-white/80 inline-block px-4 py-2 rounded-lg border border-gray-100">{section.data.note || data.pricing?.note || ''}</p>
                       </div>
-                      <h3 className="text-xl md:text-2xl font-black text-gray-900 tracking-tight group-hover:text-blue-600 transition-colors mb-6 line-clamp-2">{spk.name}</h3>
-                    </div>
-
-                    {/* 画像エリア */}
-                    <div className="h-48 bg-white overflow-hidden relative mx-8 rounded-2xl border border-gray-100 shadow-inner flex items-center justify-center group-hover:border-blue-100 transition-colors">
-                      <img src={spk.image || "/images/Top/speaker.webp"} alt={spk.name} className="max-w-full max-h-full object-contain p-3 group-hover:scale-110 transition-transform duration-700" />
-                    </div>
-
-                    {/* スペック詳細グリッド */}
-                    <div className="px-8 py-6">
-                      <div className="grid grid-cols-2 gap-2 bg-white p-3 rounded-2xl border border-gray-100">
-                        <div>
-                          <span className="block text-[9px] font-bold text-gray-400 mb-0.5">取付穴サイズ</span>
-                          <span className="text-xs font-black text-gray-800 flex items-center gap-1 truncate">
-                            <Disc className="w-3 h-3 text-gray-400 shrink-0" /> {spk.mountingHole || '未設定'}
-                          </span>
+                      {section.data.savingsText && (
+                        <div className="relative z-10 bg-white rounded-3xl shadow-xl border border-blue-100 p-8 md:p-10 text-center shrink-0 w-full lg:w-auto transform lg:rotate-2">
+                          <div className="text-[15px] font-black text-gray-500 tracking-widest mb-3">通常個別施工より</div>
+                          <div className="text-3xl md:text-4xl font-black text-red-600 tracking-tighter">{section.data.savingsText}</div>
                         </div>
-                        <div>
-                          <span className="block text-[9px] font-bold text-gray-400 mb-0.5">取付深さ</span>
-                          <span className="text-xs font-black text-gray-800 flex items-center gap-1 truncate">
-                            <Layers className="w-3 h-3 text-gray-400 shrink-0" /> {spk.mountingDepth || '未設定'}
-                          </span>
-                        </div>
-                      </div>
-
-                      {/* 備考・特長 */}
-                      {spk.remarks && (
-                        <p className="text-[11px] text-gray-500 font-bold leading-relaxed mt-3 bg-gray-50/80 p-3 rounded-xl border border-gray-100 line-clamp-3">
-                          {spk.remarks}
-                        </p>
                       )}
                     </div>
                   </div>
-
-                  {/* フッター金額比較エリア */}
-                  <div className="bg-white border-t border-gray-100 p-6 flex flex-col sm:flex-row items-baseline justify-between gap-3 mt-auto rounded-b-[2.5rem]">
-                    <div>
-                      <span className="block text-[9px] font-bold text-gray-400 mb-0.5">スピーカー単体金額</span>
-                      <span className="text-xs font-bold text-gray-500">{spk.standalonePrice || '―'}</span>
-                    </div>
-                    <div className="text-right sm:text-right">
-                      <span className="block text-[9px] font-black text-blue-600 tracking-wider mb-0.5">コミコミ適用金額</span>
-                      <div className="text-2xl font-black text-gray-900 tracking-tighter">
-                        {spk.planAppliedPrice || '―'}
-                        <span className="text-[10px] text-gray-500 font-bold ml-0.5">〜(税込)</span>
+                );
+              case 'features':
+                return (
+                  <div key={section.id} className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-24">
+                    {(section.data.title || section.data.description) && (
+                      <div className="mb-12">
+                        {section.data.title && (
+                          <div className="flex items-center gap-5 mb-6">
+                            <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center shrink-0">
+                              <Settings className="w-7 h-7 text-blue-600" />
+                            </div>
+                            <h2 className="text-3xl md:text-4xl font-black text-gray-900 tracking-tight">{section.data.title}</h2>
+                          </div>
+                        )}
+                        {section.data.description && (
+                          <p className="text-base md:text-lg text-gray-600 font-bold leading-relaxed max-w-4xl">{section.data.description}</p>
+                        )}
                       </div>
-                      {spk.taxExcludedPrice && (
-                        <span className="block text-[9px] text-gray-400 font-bold mt-0.5">
-                          (税抜 {spk.taxExcludedPrice})
-                        </span>
+                    )}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+                      {(section.data.items || []).map((f: any, i: number) => (
+                        <div key={i} className="group relative">
+                          <div className="aspect-[4/3] rounded-3xl overflow-hidden mb-8 shadow-2xl relative">
+                            <img src={f.image || "/images/Audio/Speaker/door-b.webp"} alt={f.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+                            <div className="absolute bottom-6 left-6 text-white font-black text-4xl italic opacity-20">0{i+1}</div>
+                          </div>
+                          <h3 className="text-2xl font-black text-gray-900 mb-4 flex items-center gap-3">
+                            <div className="w-2 h-8 bg-blue-600 rounded-full"></div>
+                            {f.title}
+                          </h3>
+                          <p className="text-gray-600 font-bold leading-relaxed text-[15px] md:text-base">{f.desc}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              case 'upgrades':
+                return (
+                  <div key={section.id} className="bg-gray-50 py-24 px-6 md:px-12 lg:px-20">
+                    <div className="max-w-6xl mx-auto">
+                      <div className="flex flex-col md:flex-row gap-12 items-start mb-16">
+                        <div className="md:w-1/3">
+                          {section.data.title ? (
+                            <h2 className="text-4xl font-black text-gray-900 italic tracking-tighter uppercase mb-6 leading-none">
+                              {section.data.title}
+                            </h2>
+                          ) : (
+                            <h2 className="text-4xl font-black text-gray-900 italic tracking-tighter uppercase mb-6 leading-none">
+                              Upgrade<br />
+                              <span className="text-blue-600">Options</span>
+                            </h2>
+                          )}
+                          <p className="text-gray-500 font-bold leading-relaxed">
+                            {section.data.subtitle || "より高みを目指す方への、特別なチューニング・オプション。施工と同時にお申し込みいただくことで、お得なパッケージ価格で提供いたします。"}
+                          </p>
+                        </div>
+                        <div className="md:w-2/3 space-y-4">
+                          {/* Upgrade Courses (Door Tuning, etc) - NO IMAGES */}
+                          {(section.data.courses || []).map((c: any, i: number) => (
+                            <div key={i} className={`flex gap-5 p-6 rounded-3xl border items-center justify-between transition-all group ${c.pop ? 'bg-blue-50 border-blue-200 shadow-md' : 'bg-white border-gray-100 hover:shadow-xl'}`}>
+                              <div className="flex gap-5 items-center flex-1">
+                                <div className={`w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 ${c.pop ? 'bg-blue-600 text-white' : 'bg-blue-50 text-blue-600'}`}>
+                                  <Zap className="w-6 h-6" />
+                                </div>
+                                <div className="flex-1">
+                                  <div className="flex items-center gap-3">
+                                    <h3 className="font-black text-gray-900 text-lg leading-tight">{c.name}</h3>
+                                    {c.pop && <span className="bg-blue-600 text-white text-[12px] font-black px-2 py-1 rounded-full uppercase tracking-widest">おすすめ</span>}
+                                  </div>
+                                  <p className="text-[15px] text-gray-500 font-bold mt-2 leading-relaxed">{c.desc}</p>
+                                </div>
+                              </div>
+                              <div className="text-xl font-black text-blue-600 shrink-0 bg-white px-6 py-3 rounded-2xl border border-blue-100 shadow-sm ml-4">{c.price}</div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Hardware Options (Metal Baffle, Tweeter Mount) - PROMINENT WITH IMAGES */}
+                      {(section.data.options?.metalBaffleDiscount || section.data.options?.tweeterMountPrice) && (
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-gray-200 pt-16">
+                          {section.data.options?.metalBaffleDiscount && (
+                            <div className="bg-white rounded-[3rem] overflow-hidden shadow-sm border border-gray-100 group hover:shadow-2xl transition-all duration-500 flex flex-col">
+                              <div className="aspect-[16/9] overflow-hidden relative">
+                                <img src={section.data.options?.metalBaffleImage || "/images/Audio/Speaker/metal.webp"} alt="Metal Baffle" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                <div className="absolute top-6 left-6">
+                                  <div className="bg-black/60 backdrop-blur-md text-white text-[12px] font-black px-4 py-2 rounded-full tracking-widest uppercase border border-white/20">高剛性化</div>
+                                </div>
+                              </div>
+                              <div className="p-10 flex flex-col flex-grow">
+                                <h4 className="text-2xl font-black text-gray-900 mb-2">メタルバッフル</h4>
+                                <p className="text-[15px] text-gray-500 font-bold mb-8 flex-grow leading-relaxed">{section.data.options?.metalBaffleDesc || 'より高剛性な土台を求める方へ。ドアの振動を抑え、解像度の高い低域再生を実現します。'}</p>
+                                <div className="pt-6 border-t border-gray-100 flex items-center justify-between">
+                                  <div className="text-[12px] font-black text-gray-400 tracking-widest uppercase">特別価格</div>
+                                  <div className="text-3xl font-black text-blue-600">{section.data.options?.metalBaffleDiscount}</div>
+                                </div>
+                              </div>
+                            </div>
+                          )}
+                          
+                          {section.data.options?.tweeterMountPrice && (
+                            <div className="bg-white rounded-[3rem] overflow-hidden shadow-sm border border-gray-100 group hover:shadow-2xl transition-all duration-500 flex flex-col">
+                              <div className="aspect-[16/9] overflow-hidden relative">
+                                <img src={section.data.options?.tweeterMountImage || "/images/Audio/Speaker/tw-mount.webp"} alt="Tweeter Mount" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                <div className="absolute top-6 left-6">
+                                  <div className="bg-black/60 backdrop-blur-md text-white text-[12px] font-black px-4 py-2 rounded-full tracking-widest uppercase border border-white/20">理想的な定位</div>
+                                </div>
+                              </div>
+                              <div className="p-10 flex flex-col flex-grow">
+                                <h4 className="text-2xl font-black text-gray-900 mb-2">ツィーター埋込加工</h4>
+                                <p className="text-[15px] text-gray-500 font-bold mb-8 flex-grow leading-relaxed">{section.data.options?.tweeterMountDesc || '理想的な音像定位を実現する、ピラー埋め込み加工。ステージが目の前に広がるような臨場感を生み出します。'}</p>
+                                <div className="pt-6 border-t border-gray-100 flex items-center justify-between">
+                                  <div className="text-[12px] font-black text-gray-400 tracking-widest uppercase">参考価格</div>
+                                  <div className="text-3xl font-black text-blue-600">{section.data.options?.tweeterMountPrice}</div>
+                                </div>
+                              </div>
+                            </div>
+                          )}
+                        </div>
                       )}
                     </div>
                   </div>
+                );
+              case 'speakers': {
+                const speakersList = section.data?.speakers && section.data.speakers.length > 0
+                  ? section.data.speakers
+                  : (data.speakers || []);
+                
+                const sectionFixedPrice = section.data?.fixedPrice !== undefined && section.data.fixedPrice !== null
+                  ? section.data.fixedPrice
+                  : (data.pricing?.fixedPrice || 0);
+
+                const calculateAppliedPriceForSection = (spk: any) => {
+                  if (!spk) return 0;
+                  const isString = typeof spk === 'string';
+                  const standalonePrice = isString ? spk : spk.standalonePrice;
+                  const speakerPrice = parsePrice(standalonePrice);
+                  const fixedFee = !isString && spk.fixedPriceOverride !== undefined && spk.fixedPriceOverride !== ''
+                    ? parsePrice(spk.fixedPriceOverride)
+                    : sectionFixedPrice;
+                  return speakerPrice + fixedFee;
+                };
+
+                const sectionTitle = section.data?.title || "Speaker Lineup";
+                const sectionSubtitle = section.data?.subtitle || "Selected high-quality units";
+
+                const totalSpeakers = speakersList.length;
+                let gridContainerClass = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10";
+                if (totalSpeakers === 1) {
+                  gridContainerClass = "max-w-md mx-auto";
+                } else if (totalSpeakers === 2) {
+                  gridContainerClass = "grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto";
+                }
+
+                return (
+                  <div key={section.id} className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-24">
+                    {(!section.data?.hideTitle || !section.data?.hideSubtitle) && (
+                      <div className="flex flex-col md:flex-row items-baseline justify-between gap-4 mb-16 border-b-4 border-gray-900 pb-8">
+                        {!section.data?.hideTitle && (
+                          <h2 className="text-5xl md:text-7xl font-black text-gray-900 italic tracking-tighter uppercase leading-none" dangerouslySetInnerHTML={{ __html: sectionTitle.includes('<br') || sectionTitle.includes('\n') ? sectionTitle.replace(/\n/g, '<br />') : sectionTitle }} />
+                        )}
+                        {!section.data?.hideSubtitle && (() => {
+                          const isTitleHidden = !!section.data?.hideTitle;
+                          const align = section.data?.subtitleAlign || 'right';
+                          
+                          let alignClasses = "ml-auto text-right";
+                          if (isTitleHidden) {
+                            if (align === 'left') alignClasses = "mr-auto text-left";
+                            else if (align === 'center') alignClasses = "mx-auto text-center";
+                          }
+                          
+                          return (
+                            <p className={`text-gray-500 font-black tracking-widest uppercase text-[15px] whitespace-pre-line ${alignClasses}`} dangerouslySetInnerHTML={{ __html: sectionSubtitle.includes('\n') || sectionSubtitle.includes('<br') ? sectionSubtitle.replace(/\n/g, '<br />') : sectionSubtitle }} />
+                          );
+                        })()}
+                      </div>
+                    )}
+                    <div className={gridContainerClass}>
+                      {speakersList.map((spk: any, i: number) => (
+                        <div key={i} className="group flex flex-col h-full bg-white border border-zinc-200/80 rounded-[2.5rem] overflow-hidden shadow-[0_15px_45px_-20px_rgba(0,0,0,0.06)] hover:shadow-[0_30px_60px_-15px_rgba(59,130,246,0.1),0_15px_30px_-10px_rgba(0,0,0,0.04)] hover:border-blue-500/30 hover:-translate-y-2 transition-all duration-500 ease-out">
+                          <div className="aspect-square relative overflow-hidden bg-zinc-50/50 flex items-center justify-center p-12 group-hover:bg-zinc-100/50 border-b border-zinc-100 transition-colors duration-500">
+                            <img src={spk.image} alt={`${spk.brand} ${spk.name}`} className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 drop-shadow-xl" />
+                            <div className="absolute top-6 left-6">
+                              <div className="bg-black/80 backdrop-blur-md text-white text-[12px] font-black px-4 py-2 rounded-full tracking-widest uppercase border border-white/20">{spk.brand}</div>
+                            </div>
+                            {spk.youtubeUrl && (
+                              <a 
+                                href={spk.youtubeUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                onClick={(e) => e.stopPropagation()}
+                                className="absolute top-6 right-6 z-10 w-11 h-11 bg-black/60 hover:bg-[#FF0000] backdrop-blur-md text-white hover:text-white border border-white/10 rounded-full flex items-center justify-center shadow-lg hover:shadow-red-600/40 transition-all duration-300 hover:scale-110 active:scale-95"
+                                title="YouTubeで試聴音源を聴く"
+                              >
+                                <Youtube className="w-5 h-5 shrink-0" />
+                              </a>
+                            )}
+                          </div>
+                          <div className="p-8 flex flex-col flex-grow">
+                            <h3 className="text-2xl font-black text-gray-900 mb-2 leading-tight">{spk.name}</h3>
+                            
+                            {/* Technical Specs */}
+                            <div className="grid grid-cols-2 gap-x-6 gap-y-3 mb-8">
+                              {spk.mountingHoleSize && (
+                                <div className="flex justify-between items-center border-b border-gray-100 pb-1.5">
+                                  <span className="text-[11px] font-black text-gray-400 uppercase tracking-tighter">取付穴径</span>
+                                  <span className="text-[15px] font-black text-gray-800">{spk.mountingHoleSize}</span>
+                                </div>
+                              )}
+                              {spk.depthSize && (
+                                <div className="flex justify-between items-center border-b border-gray-100 pb-1.5">
+                                  <span className="text-[11px] font-black text-gray-400 uppercase tracking-tighter">取付奥行</span>
+                                  <span className="text-[15px] font-black text-gray-800">{spk.depthSize}</span>
+                                </div>
+                              )}
+                              {spk.hasGrille && (
+                                <div className="flex justify-between items-center border-b border-gray-100 pb-1.5">
+                                  <span className="text-[11px] font-black text-gray-400 uppercase tracking-tighter">グリル</span>
+                                  <span className="text-[15px] font-black text-gray-800">{spk.hasGrille}</span>
+                                </div>
+                              )}
+                              {spk.hasTweeterMount && (
+                                <div className="flex justify-between items-center border-b border-gray-100 pb-1.5">
+                                  <span className="text-[11px] font-black text-gray-400 uppercase tracking-tighter">TWマウント</span>
+                                  <span className="text-[15px] font-black text-gray-800">{spk.hasTweeterMount}</span>
+                                </div>
+                              )}
+                            </div>
+
+                            {spk.remarks && <p className="text-gray-500 text-[15px] font-bold mb-8 flex-grow leading-relaxed" dangerouslySetInnerHTML={{ __html: '● ' + spk.remarks.replace(/\n/g, '<br />') }} />}
+                            
+                            <div className="pt-6 border-t border-gray-100">
+                              <div className="flex justify-between items-end">
+                                <div>
+                                  <div className="text-sm font-black text-gray-400 tracking-widest uppercase mb-1">パッケージ合計 (税込)</div>
+                                  <div className="flex items-baseline gap-2">
+                                    <div className="text-3xl font-black text-blue-600 tracking-tighter">¥{calculateAppliedPriceForSection(spk).toLocaleString()}</div>
+                                    <div className="text-[12px] font-black text-gray-400 uppercase italic">incl. tax</div>
+                                  </div>
+                                </div>
+                                <div className="text-right pb-1">
+                                  <div className="text-[12px] font-black text-gray-400 uppercase tracking-tighter">(税別)</div>
+                                  <div className="text-[15px] font-black text-gray-600 italic">¥{Math.round(calculateAppliedPriceForSection(spk) / (1 + (data.pricing.taxRate || 10) / 100)).toLocaleString()}</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              }
+              case 'text':
+                return (
+                  <div key={section.id} className="max-w-4xl mx-auto px-6 py-20">
+                    {section.data.title && <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-10 tracking-tighter italic uppercase">{section.data.title}</h2>}
+                    <div className="prose prose-lg max-w-none text-gray-600 font-bold leading-relaxed" dangerouslySetInnerHTML={{ __html: section.data.content || '' }} />
+                  </div>
+                );
+              case 'banner':
+                return (
+                  <div 
+                    key={section.id} 
+                    className="relative overflow-hidden group border-b-[8px] border-blue-600" 
+                    style={{ 
+                      height: section.data.height || '400px',
+                      backgroundColor: section.data.bgColor || undefined
+                    }}
+                  >
+                    {section.data.image && (
+                      <img src={section.data.image} alt={section.data.title} className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110" />
+                    )}
+                    <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6" style={{ backgroundColor: `rgba(0,0,0,${section.data.opacity !== undefined && section.data.opacity !== null ? section.data.opacity : 0.4})` }}>
+                      <div className="max-w-4xl">
+                        {section.data.badge && (
+                          <div className="text-gray-300 font-bold text-sm md:text-[15px] tracking-[0.2em] uppercase mb-2 animate-fade-in drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                            {section.data.badge}
+                          </div>
+                        )}
+                        {section.data.subTitle && <div className="text-blue-400 font-black text-[15px] md:text-base tracking-[0.3em] uppercase mb-4 animate-fade-in drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{section.data.subTitle}</div>}
+                        <h2 className="text-4xl md:text-7xl font-black text-white tracking-tighter italic uppercase leading-none drop-shadow-[0_4px_12px_rgba(0,0,0,0.85)]">{section.data.title}</h2>
+                        {section.data.description && (
+                          <p className="text-gray-100 text-sm md:text-base font-bold mt-6 max-w-2xl mx-auto leading-relaxed animate-fade-in whitespace-pre-line drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
+                            {section.data.description}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                );
+              case 'link_cards': {
+                const cardItems = section.data?.items || [];
+                const sectionTitle = section.data?.title;
+                const sectionSubtitle = section.data?.subtitle;
+                return (
+                  <div key={section.id} className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-24 border-b border-gray-100">
+                    {(sectionTitle || sectionSubtitle) && (
+                      <div className="flex flex-col md:flex-row items-baseline justify-between gap-4 mb-16 border-b-4 border-gray-900 pb-8">
+                        {sectionTitle && (
+                          <h2 className="text-4xl md:text-6xl font-black text-gray-900 italic tracking-tighter uppercase leading-none" dangerouslySetInnerHTML={{ __html: sectionTitle.includes('<br') || sectionTitle.includes('\n') ? sectionTitle.replace(/\n/g, '<br />') : sectionTitle }} />
+                        )}
+                        {sectionSubtitle && (
+                          <p className="text-gray-500 font-black tracking-widest uppercase text-[15px]">{sectionSubtitle}</p>
+                        )}
+                      </div>
+                    )}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                      {cardItems.map((item: any, i: number) => {
+                        const handleClick = () => {
+                          if (!item.slug) return;
+                          if (item.slug.startsWith('http://') || item.slug.startsWith('https://')) {
+                            window.open(item.slug, '_blank', 'noopener,noreferrer');
+                          } else {
+                            const path = item.slug.startsWith('/') ? item.slug : `/${item.slug}`;
+                            navigate(path);
+                          }
+                        };
+                        return (
+                          <div 
+                            key={i} 
+                            onClick={handleClick}
+                            className="group flex flex-col h-full bg-white border border-gray-150 rounded-[2.5rem] overflow-hidden hover:shadow-2xl hover:border-blue-500 hover:-translate-y-2 cursor-pointer transition-all duration-500 shadow-sm"
+                          >
+                            <div className="aspect-[16/10] relative overflow-hidden bg-zinc-50 flex items-center justify-center">
+                              {item.badge && (
+                                <div className="absolute top-5 left-5 z-10">
+                                  <span className="inline-block bg-blue-600 text-white text-[10px] font-black px-3.5 py-1.5 rounded-full tracking-widest uppercase shadow-lg border border-blue-500/20">
+                                    {item.badge}
+                                  </span>
+                                </div>
+                              )}
+                              {item.image ? (
+                                <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-115" />
+                              ) : (
+                                <div className="w-full h-full bg-gradient-to-br from-zinc-700 to-zinc-800 flex items-center justify-center p-8 text-center text-white/50 text-xs font-black uppercase">
+                                  No Image
+                                </div>
+                              )}
+                            </div>
+                            <div className="p-8 flex flex-col flex-grow">
+                              <h3 className="text-2xl font-black text-gray-900 mb-6 leading-tight group-hover:text-blue-600 transition-colors duration-300 whitespace-pre-line" dangerouslySetInnerHTML={{ __html: (item.title || 'Untitled Card').replace(/\n/g, '<br />') }} />
+                              <div className="mt-auto pt-6 border-t border-gray-100 flex items-center justify-between text-blue-600 font-black text-sm tracking-wider uppercase">
+                                <span>{item.linkText || '詳しく見る'}</span>
+                                <div className="w-10 h-10 rounded-full bg-zinc-50 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shadow-inner">
+                                  <ChevronRight className="w-5 h-5 transform group-hover:translate-x-0.5 transition-transform" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                );
+              }
+              case 'cta':
+                return (
+                  <div key={section.id} className="max-w-6xl mx-auto px-6 py-20">
+                    <div className="bg-blue-600 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl shadow-blue-500/20">
+                      <div className="absolute top-0 left-0 w-64 h-64 bg-white/10 blur-[80px] rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+                      <div className="relative z-10">
+                        <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter mb-8 italic uppercase">{section.data.title}</h2>
+                        <p className="text-blue-100 text-lg md:text-xl font-bold mb-12 max-w-2xl mx-auto">{section.data.desc}</p>
+                        <button onClick={() => navigate(section.data.btnLink || '/reservation')} className="group bg-white text-blue-600 px-12 py-6 rounded-2xl font-black text-lg hover:bg-gray-100 transition-all flex items-center gap-4 mx-auto uppercase tracking-tighter italic">
+                          {section.data.btnText || 'Contact Us'} <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                );
+              case 'faq':
+                return (
+                  <div key={section.id} className="max-w-4xl mx-auto px-6 py-24">
+                    <div className="text-center mb-16">
+                      <div className="inline-block bg-gray-100 text-gray-500 text-[12px] font-black px-4 py-2 rounded-full tracking-widest uppercase mb-4">Questions & Answers</div>
+                      <h2 className="text-4xl md:text-6xl font-black text-gray-900 tracking-tighter italic uppercase">よくあるご質問</h2>
+                    </div>
+                    <div className="space-y-6">
+                      {(section.data.items || []).map((faq:any, i:number) => (
+                        <div key={i} className="bg-white border border-gray-100 rounded-3xl p-8 md:p-10 hover:shadow-xl transition-all">
+                          <div className="flex gap-6">
+                            <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center shrink-0 text-blue-600 font-black text-xl italic">Q</div>
+                            <div className="flex-grow">
+                              <h4 className="text-xl font-black text-gray-900 mb-4">{faq.q}</h4>
+                              <div className="flex gap-6 pt-6 border-t border-gray-50">
+                                <div className="text-gray-400 font-black text-xl italic shrink-0">A</div>
+                                <p className="text-gray-600 font-bold leading-relaxed">{faq.a}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              case 'gallery':
+                return (
+                  <div key={section.id} className="max-w-7xl mx-auto px-6 py-20">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      {(section.data.images || []).map((img:string, i:number) => (
+                        <div key={i} className={`relative overflow-hidden rounded-3xl aspect-square group ${i % 5 === 0 ? 'md:col-span-2 md:row-span-2' : ''}`}>
+                          <img src={img} alt={`Gallery ${i}`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                          <div className="absolute inset-0 bg-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              case 'package_summary':
+                return (
+                  <div key={section.id} className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-20">
+                    <div className="flex items-center gap-5 mb-12">
+                      <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center shrink-0">
+                        <Music className="w-7 h-7 text-blue-600" />
+                      </div>
+                      <div>
+                        <h2 className="text-3xl md:text-4xl font-black text-gray-900 tracking-tight">{section.data.title || 'パッケージ全内容'}</h2>
+                        {section.data.subtitle && (
+                          <p className="text-[15px] text-gray-500 font-bold mt-2">{section.data.subtitle}</p>
+                        )}
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {(section.data.items || []).map((item: any, i: number) => (
+                        <div key={i} className="flex gap-5 p-6 rounded-3xl bg-gray-50 border border-gray-100 items-center justify-between hover:bg-white hover:shadow-xl transition-all group">
+                          <div className="flex gap-5 items-center">
+                            <div className="text-2xl font-black text-blue-200 group-hover:text-blue-400 italic transition-colors">0{i+1}</div>
+                            <div>
+                              <h3 className="font-black text-gray-900 text-lg leading-tight">{item.title}</h3>
+                              <p className="text-[15px] text-gray-500 font-bold mt-1">{item.desc}</p>
+                            </div>
+                          </div>
+                          {item.value && <div className="bg-white px-4 py-2 rounded-xl border border-gray-200 text-sm font-black text-gray-600 shadow-sm">{item.value}</div>}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              case 'notes':
+                return (
+                  <div key={section.id} className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-20">
+                    <div className="bg-gray-900 rounded-[3rem] p-10 md:p-14 text-white relative overflow-hidden border-b-8 border-blue-600">
+                      <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 blur-[80px] rounded-full transform translate-x-1/2 -translate-y-1/2"></div>
+                      <div className="relative z-10">
+                        <h2 className={`text-2xl md:text-3xl font-black flex items-center gap-4 italic uppercase ${(section.data.items || []).length === 1 ? 'mb-6' : 'mb-10'}`}>
+                          <Info className="w-8 h-8 text-blue-400" /> {section.data.title || '施工に関する注意事項'}
+                        </h2>
+                        {(section.data.items || []).length === 1 ? (
+                          <div className="text-gray-300 font-bold leading-relaxed text-[15px] md:text-base whitespace-pre-line" dangerouslySetInnerHTML={{ __html: section.data.items[0] }} />
+                        ) : (
+                          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+                            {(section.data.items || []).map((note: any, i: number) => (
+                              <li key={i} className="flex gap-4 items-start text-gray-300 font-bold leading-relaxed text-[15px] md:text-base">
+                                <div className="w-2 h-2 rounded-full bg-blue-500 mt-2 shrink-0"></div>
+                                <div dangerouslySetInnerHTML={{ __html: note }} />
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                );
+              default:
+                return null;
+            }
+          })}
+        </>
+      ) : (
+        <>
+          {/* --- ヘッダー領域 (Legacy) --- */}
+          <div className="bg-gray-900 text-white pt-24 pb-16 px-6 md:px-12 lg:px-20 border-b-[8px] border-blue-600 relative z-40">
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/20 blur-[120px] rounded-full transform translate-x-1/3 -translate-y-1/3"></div>
+            </div>
+            <div className="max-w-6xl mx-auto relative z-10">
+              <div className="flex justify-between items-center mb-10 relative z-20">
+                <button onClick={() => navigate('/')} className="text-gray-400 hover:text-white font-bold text-[15px] flex items-center gap-2 transition-colors group"><ArrowRight className="w-4 h-4 rotate-180 group-hover:-translate-x-1 transition-transform" />トップページへ戻る</button>
+                <div className="relative group/nav" ref={menuRef} onMouseEnter={() => setIsMenuOpen(true)} onMouseLeave={() => setIsMenuOpen(false)}>
+                  <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="bg-gray-800 hover:bg-gray-700 text-white font-bold text-[15px] px-4 py-2.5 rounded-xl flex items-center gap-2 transition-colors border border-gray-700 shadow-sm"><MenuIcon className="w-4 h-4" /><span className="hidden sm:inline">MENU (他のプラン)</span><span className="sm:hidden">Menu</span><ChevronDown className={"w-4 h-4 transition-transform ml-1 " + (isMenuOpen ? 'rotate-180' : '')} /></button>
+                  <MegaMenu show={isMenuOpen} categories={audioCategories} theme="dark" onClose={() => setIsMenuOpen(false)} navigate={navigate} handleMenuClick={(item) => { setIsMenuOpen(false); navigate(item.path || `/audio/plan/${item.name}`); }} positionClassName="right-0 -mr-4 md:right-0 md:mr-0" />
                 </div>
-              ))}
+              </div>
+              <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-6"><div className="text-3xl md:text-4xl font-black italic tracking-[0.3em] text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">SOUND ANG</div><div className="text-left md:text-right"><div className="text-[15px] md:text-base font-bold text-gray-400 tracking-widest uppercase">Speaker Installation Package</div></div></div>
+              <div><h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-6 leading-[1.1]"><span className="block text-lg md:text-2xl text-gray-400 mb-3 tracking-[0.2em] font-bold">{data.header.badge}</span>{data.header.mainTitle}<span className="block text-2xl md:text-4xl text-blue-400 mt-4 tracking-widest font-bold">{data.header.subTitle}</span></h1><p className="text-gray-300 font-bold leading-relaxed max-w-4xl text-base md:text-lg mt-8 whitespace-pre-line">{data.header.description}</p></div>
             </div>
           </div>
-        )}
-      </div>
 
-      {/* --- フッター / 注意事項 (フル幅) --- */}
-      <div className="bg-gray-900 text-gray-400 py-16 md:py-24 px-6 md:px-12 lg:px-20 border-t-[8px] border-gray-800 pb-36 md:pb-48">
-        <div className="max-w-6xl mx-auto flex flex-col justify-center items-center">
-          
-          <div className="w-full max-w-4xl bg-gray-800/50 p-8 md:p-10 rounded-3xl border border-gray-700">
-            <h4 className="text-lg md:text-xl font-black text-white mb-8 flex items-center gap-3">
-              <Info className="w-6 h-6 text-blue-500" /> 施工に関する注意事項
-            </h4>
-            <ul className="text-sm md:text-base space-y-4 font-bold">
-              <li className="flex items-start gap-4"><span className="text-blue-500 mt-1">●</span> 作業は<strong className="text-white mx-1 font-black border-b border-gray-600">1日お車をお預かり</strong>します（無料代車をご用意可能です）。</li>
-              <li className="flex items-start gap-4"><span className="text-blue-500 mt-1">●</span> バッフル適合がない車種は別途<strong className="text-white mx-1 font-black">¥5,500</strong>の製作費が必要になります。</li>
-              <li className="flex items-start gap-4"><span className="text-blue-500 mt-1">●</span> ツィーター固定にマウント等が必要な車種は追加費用が発生する場合があります。</li>
-              <li className="flex items-start gap-4"><span className="text-blue-500 mt-1">●</span> ドア通線に加工が必要な車両（ハーネスがカプラ等）は別途加工費用がかかる場合があります。</li>
-            </ul>
+          <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-16 md:py-24">
+            {data.pricing.showPricingDisplay !== false && (
+              <div className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 rounded-[2rem] p-10 md:p-14 mb-24 flex flex-col lg:flex-row items-center justify-between gap-12 shadow-xl shadow-blue-900/5 relative overflow-hidden">
+                <div className="relative z-10 w-full lg:w-auto">
+                  <div className="inline-block bg-blue-600 text-white text-[15px] md:text-base font-black px-5 py-2 rounded-full tracking-widest mb-6 shadow-md">パッケージ特別価格</div>
+                  <div className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-6 mb-6">
+                    <div className="text-gray-500 line-through font-bold text-2xl">{data.pricing.normalPriceText}</div>
+                    <div className="text-6xl md:text-8xl font-black text-gray-900 tracking-tighter">{data.pricing.pricingMode === 'manual' ? (<>{(data.pricing.specialPrice || "").toString().startsWith('¥') ? '' : '¥'}{parseInt((data.pricing.specialPrice || "").toString().replace(/[^0-9]/g, '')) ? parseInt((data.pricing.specialPrice || "").toString().replace(/[^0-9]/g, '')).toLocaleString() : (data.pricing.specialPrice || '0')}</>) : (<>¥{(calculateAppliedPrice(data.speakers?.[0]?.standalonePrice || "0")).toLocaleString()}</>)}<span className="text-2xl md:text-3xl text-gray-600 font-bold ml-2">〜(税込)</span></div>
+                  </div>
+                  <p className="text-[15px] text-gray-500 font-bold bg-white/80 inline-block px-4 py-2 rounded-lg border border-gray-100">{data.pricing.note}</p>
+                </div>
+                <div className="relative z-10 bg-white rounded-3xl shadow-xl shadow-blue-900/10 border border-blue-100 p-8 md:p-10 text-center shrink-0 w-full lg:w-auto transform lg:rotate-2 lg:hover:rotate-0 transition-transform duration-300"><div className="text-[15px] md:text-base font-black text-gray-500 tracking-widest mb-3">通常個別施工より</div><div className="text-3xl md:text-4xl font-black text-red-600 tracking-tighter">{data.pricing.savingsText}</div></div>
+              </div>
+            )}
+
+            <div className="mb-28">
+              <div className="flex items-center gap-5 mb-8"><div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center shrink-0"><Settings className="w-7 h-7 text-blue-600" /></div><h2 className="text-3xl md:text-4xl font-black text-gray-900 tracking-tight">音質を決定づける「3つの重要施工」を標準装備</h2></div>
+              <p className="text-base md:text-lg text-gray-600 mb-12 font-bold leading-relaxed max-w-4xl">スピーカーの性能を100%引き出すためには、ただ取り付けるだけでは不十分です。本パッケージは以下の必須環境づくりがすべて含まれています。</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+                {[
+                  { title: data.features.doorTuning.title, desc: data.features.doorTuning.desc, image: data.features.doorTuning.image || "/images/Audio/Speaker/door-b.webp" },
+                  { title: data.features.baffle.title, desc: data.features.baffle.desc, image: data.features.baffle.image || "/images/Audio/Speaker/baffle.webp" },
+                  { title: data.features.cable.title, desc: data.features.cable.desc, image: data.features.cable.image || "/images/Audio/Speaker/ang-cable.webp" }
+                ].map((f, i) => (
+                  <div key={i} className="group relative"><div className="aspect-[4/3] rounded-3xl overflow-hidden mb-8 shadow-2xl relative"><img src={f.image} alt={f.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" /><div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div><div className="absolute bottom-6 left-6 text-white font-black text-4xl italic opacity-20">0{i+1}</div></div><h3 className="text-2xl font-black text-gray-900 mb-4 flex items-center gap-3"><div className="w-2 h-8 bg-blue-600 rounded-full"></div>{f.title}</h3><p className="text-gray-600 font-bold leading-relaxed text-[15px] md:text-base">{f.desc}</p></div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mb-32">
+              <div className="flex flex-col md:flex-row items-baseline justify-between gap-4 mb-16 border-b-4 border-gray-900 pb-8"><h2 className="text-5xl md:text-7xl font-black text-gray-900 italic tracking-tighter uppercase leading-none">Speaker<br />Lineup</h2><p className="text-gray-500 font-black tracking-widest uppercase text-[15px]">Selected high-quality units</p></div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                {(data.speakers || []).map((spk, i) => (
+                  <div key={i} className="group flex flex-col h-full bg-white border border-gray-100 rounded-[2.5rem] overflow-hidden hover:shadow-2xl transition-all duration-500"><div className="aspect-square relative overflow-hidden bg-gray-50"><img src={spk.image} alt={`${spk.brand} ${spk.name}`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" /><div className="absolute top-6 left-6"><div className="bg-black/80 backdrop-blur-md text-white text-[12px] font-black px-4 py-2 rounded-full tracking-widest uppercase border border-white/20">{spk.brand}</div></div><div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div></div><div className="p-8 flex flex-col flex-grow"><h3 className="text-2xl font-black text-gray-900 mb-2 leading-tight">{spk.name}</h3><p className="text-gray-500 text-sm font-bold mb-6 flex-grow" dangerouslySetInnerHTML={{ __html: (spk.remarks || '').replace(/\n/g, '<br />') }} /><div className="pt-6 border-t border-gray-100"><div className="text-[12px] font-black text-gray-400 tracking-widest uppercase mb-1">Package Total</div><div className="flex items-baseline gap-2"><div className="text-3xl font-black text-blue-600 tracking-tighter">¥{(calculateAppliedPrice(spk)).toLocaleString()}</div><div className="text-sm font-black text-gray-500 uppercase italic">tax incl.</div></div></div></div></div>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-gray-900 rounded-[4rem] p-12 md:p-20 text-white relative overflow-hidden"><div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/20 blur-[100px] rounded-full transform translate-x-1/2 -translate-y-1/2"></div><div className="relative z-10 max-w-4xl mx-auto text-center"><div className="inline-block bg-blue-600 text-sm font-black px-6 py-2 rounded-full tracking-widest mb-10 uppercase">Optional Upgrades</div><h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-16 leading-tight italic uppercase">さらに高みを目指す<br /><span className="text-blue-500">特別なオプション</span></h2><div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">{(data.upgrades?.courses || []).map((course, i) => (<div key={i} className={`bg-gray-800/50 backdrop-blur-sm border p-10 rounded-[2.5rem] transition-all hover:bg-gray-800 group ${course.pop ? 'border-blue-500 shadow-2xl shadow-blue-500/10' : 'border-gray-700'}`}><div className="flex justify-between items-start mb-6"><h4 className="text-2xl font-black group-hover:text-blue-400 transition-colors">{course.name}</h4><div className="bg-blue-600 text-white text-[12px] font-black px-4 py-2 rounded-full tracking-widest">{course.price}</div></div><p className="text-gray-400 font-bold leading-relaxed">{course.desc}</p></div>))}</div><div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">{(data.upgrades?.options?.metalBaffleDiscount || data.upgrades?.options?.tweeterMountPrice) && <div className="bg-gray-800/30 border border-gray-700 p-8 rounded-3xl flex items-center justify-between gap-6 group hover:border-blue-500 transition-all"><div className="text-left"><div className="text-[12px] font-black text-blue-500 tracking-widest uppercase mb-1">Speaker Baffle</div><div className="text-xl font-black italic">METAL BAFFLE <span className="text-blue-500">{data.upgrades.options.metalBaffleDiscount}</span></div></div><div className="w-12 h-12 rounded-2xl bg-gray-700 flex items-center justify-center group-hover:bg-blue-600 transition-colors"><ChevronRight className="w-6 h-6" /></div></div>}</div><div className="mt-20"><button onClick={() => navigate('/reservation')} className="group bg-white text-gray-900 px-12 py-6 rounded-2xl font-black text-lg hover:bg-blue-600 hover:text-white transition-all shadow-2xl shadow-blue-500/20 flex items-center gap-4 mx-auto uppercase tracking-tighter italic"><MessageCircle className="w-6 h-6" /> お問い合わせ・ご予約はこちら <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" /></button></div></div></div>
           </div>
+        </>
+      )}
 
+      {/* --- フッター --- */}
+      <footer className="bg-white py-20 px-6 border-t border-gray-100">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+          <div className="text-2xl font-black italic tracking-widest text-gray-900">SOUND ANG</div>
+          <p className="text-gray-400 font-bold text-[15px]">© {new Date().getFullYear()} SOUND ANG. All rights reserved.</p>
         </div>
-      </div>
+      </footer>
 
-      {/* --- 追従フッター (CTA) --- */}
-      <div className="fixed bottom-0 left-0 w-full z-50 bg-gray-900/90 backdrop-blur-md border-t border-gray-800 shadow-[0_-10px_40px_rgba(0,0,0,0.3)] p-4 md:p-6">
-        <div className="max-w-4xl mx-auto flex gap-3 md:gap-6 justify-center">
-          <a 
-            href="https://page.line.me/312qjhsq?openQrModal=true"
-            target="_blank" rel="noopener noreferrer"
-            className="flex-1 bg-[#06C755] text-white py-4 md:py-5 rounded-2xl font-black text-sm md:text-lg tracking-widest hover:bg-[#05b34c] transition-colors shadow-lg shadow-[#06C755]/20 flex items-center justify-center gap-2 md:gap-3"
-          >
-            <MessageCircle className="w-5 h-5 md:w-6 md:h-6 fill-current" />
-            <span className="hidden sm:inline">LINEで無料相談</span>
-            <span className="sm:hidden">LINEで相談</span>
-          </a>
-          <button 
-            onClick={() => navigate('/reservation')}
-            className="flex-1 bg-blue-600 text-white py-4 md:py-5 rounded-2xl font-black text-sm md:text-lg tracking-widest hover:bg-blue-700 transition-colors shadow-lg shadow-blue-900/40 flex items-center justify-center gap-2 md:gap-3"
-          >
-            <Calendar className="w-5 h-5 md:w-6 md:h-6" />
-            <span className="hidden sm:inline">来店予約フォーム</span>
-            <span className="sm:hidden">来店予約</span>
-          </button>
-        </div>
-      </div>
-
+      {showFloatingCTA && (
+        <FloatingCTA 
+          showLine={ctaConfig.showLine !== false} 
+          showReservation={ctaConfig.showReservation !== false} 
+        />
+      )}
     </div>
   );
+
 };
 
 export default StandardLinePage;

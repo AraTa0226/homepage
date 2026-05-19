@@ -105,31 +105,36 @@ export const VaultGrid: React.FC<VaultGridProps> = ({ categories, onCategoryClic
                                     </span>
                                 </div>
                                 <div className="space-y-3">
-                                    {(cat && Array.isArray(cat.items)) && cat.items.map((item: string, j: number) => (
-                                        <div
-                                            key={j}
-                                            onClick={(e) => {
-                                                e.stopPropagation();
-                                                const isGrouping = cat.groups || ['security_car', 'security_options', 'maintenance', 'security_full'].includes(cat.id);
-                                                const target = { 
-                                                    id: cat.id, 
-                                                    name: item, 
-                                                    path: isGrouping ? undefined : cat.path 
-                                                };
-                                                handleMenuClick(target);
-                                            }}
-                                            className={`flex items-center justify-between text-xs md:text-sm font-black transition-all hover:translate-x-2 px-6 py-3.5 rounded-xl backdrop-blur-md border shadow-sm ${theme === 'dark'
-                                                ? 'bg-white/10 border-white/20 text-white/90 hover:bg-white/20'
-                                                : 'bg-white/80 border-gray-200 text-gray-900 hover:bg-white'
-                                                } ${cat.id.includes('security') || cat.id === 'can_invader' || cat.id === 'radar' || cat.id === 'maintenance'
-                                                    ? 'hover:text-emerald-500 hover:border-emerald-500/30'
-                                                    : 'hover:text-blue-600 hover:border-blue-500/30'
-                                                }`}
-                                        >
-                                            <span>{item}</span>
-                                            <ArrowUpRight className="w-4 h-4 opacity-40 group-hover:opacity-100 transition-opacity" />
-                                        </div>
-                                    ))}
+                                    {(cat && Array.isArray(cat.items)) && cat.items.map((item: any, j: number) => {
+                                        const itemName = typeof item === 'string' ? item : item?.name || '';
+                                        return (
+                                            <div
+                                                key={j}
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    const isGrouping = cat.groups || ['security_car', 'security_options', 'maintenance', 'security_full'].includes(cat.id);
+                                                    const target = typeof item === 'object' 
+                                                        ? { ...item, parentId: cat.id } 
+                                                        : { 
+                                                            id: cat.id, 
+                                                            name: item, 
+                                                            path: isGrouping ? undefined : cat.path 
+                                                        };
+                                                    handleMenuClick(target);
+                                                }}
+                                                className={`flex items-center justify-between text-xs md:text-sm font-black transition-all hover:translate-x-2 px-6 py-3.5 rounded-xl backdrop-blur-md border shadow-sm ${theme === 'dark'
+                                                    ? 'bg-white/10 border-white/20 text-white/90 hover:bg-white/20'
+                                                    : 'bg-white/80 border-gray-200 text-gray-900 hover:bg-white'
+                                                    } ${cat.id.includes('security') || cat.id === 'can_invader' || cat.id === 'radar' || cat.id === 'maintenance'
+                                                        ? 'hover:text-emerald-500 hover:border-emerald-500/30'
+                                                        : 'hover:text-blue-600 hover:border-blue-500/30'
+                                                    }`}
+                                            >
+                                                <span>{itemName}</span>
+                                                <ArrowUpRight className="w-4 h-4 opacity-40 group-hover:opacity-100 transition-opacity" />
+                                            </div>
+                                        );
+                                    })}
                                 </div>
                             </div>
                         )}

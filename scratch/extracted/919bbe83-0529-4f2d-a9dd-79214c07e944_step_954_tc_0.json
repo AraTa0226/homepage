@@ -1,0 +1,11 @@
+{
+  "convId": "919bbe83-0529-4f2d-a9dd-79214c07e944",
+  "stepIdx": 954,
+  "toolName": "replace_file_content",
+  "startLine": "1539",
+  "endLine": "1545",
+  "desc": "\"Added new section type buttons (Text, Banner, CTA, FAQ, Gallery) to the LP manager.\"",
+  "inst": "\"Add new section types to the buttons list.\"",
+  "target": "\"                                    {[\\n                                        { type: 'hero', icon: <Type className=\\\"w-3.5 h-3.5\\\" />, label: 'Hero' },\\n                                        { type: 'pricing', icon: <Zap className=\\\"w-3.5 h-3.5\\\" />,\n<truncated 454 bytes>",
+  "replacement": "\"                                    {[\\n                                        { type: 'hero', icon: <Type className=\\\"w-3.5 h-3.5\\\" />, label: 'Hero' },\\n                                        { type: 'pricing', icon: <Zap className=\\\"w-3.5 h-3.5\\\" />,\n<truncated 1062 bytes>"
+}

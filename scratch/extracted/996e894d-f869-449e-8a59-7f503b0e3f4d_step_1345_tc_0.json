@@ -1,0 +1,11 @@
+{
+  "convId": "996e894d-f869-449e-8a59-7f503b0e3f4d",
+  "stepIdx": 1345,
+  "toolName": "multi_replace_file_content",
+  "startLine": "",
+  "endLine": "",
+  "desc": "\"Replace setPlans with reorderPlans which is the correct exported function.\"",
+  "inst": "\"Remove setPlans from destructuring (it doesn't exist in usePrices), and replace the setPlans call in handleSaveLP with reorderPlans which does the same thing.\"",
+  "target": "",
+  "replacement": ""
+}

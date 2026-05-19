@@ -185,7 +185,7 @@ const AudioPlanDetail: React.FC = () => {
                                     </p>
                                 </div>
                                 <h1 className="text-5xl md:text-7xl font-black text-gray-900 tracking-tighter leading-none mb-2 print:text-3xl print:mb-1">
-                                    {(plan.name || '').split(' ')[0]}
+                                    {plan.name}
                                 </h1>
                                 <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
                                     <p className="text-lg md:text-xl font-bold text-gray-500 tracking-tight print:text-[11px] print:font-medium">
@@ -228,7 +228,7 @@ const AudioPlanDetail: React.FC = () => {
                                 <div className="text-center relative">
                                     <p className="text-xs font-bold tracking-widest uppercase mb-4 text-blue-400 print:text-[7.5px] print:text-gray-500 print:mb-1">パッケージ価格</p>
                                     <p className="text-5xl md:text-7xl font-black text-white print:text-3xl print:text-black leading-none tracking-tighter">
-                                        ¥81,840
+                                        ¥{Number(plan.price).toLocaleString()}
                                     </p>
                                     <div className="absolute -top-6 -right-12 md:-right-20 bg-blue-600 text-white px-5 py-2.5 rounded-full text-xs md:text-sm font-black rotate-12 shadow-xl print:static print:rotate-0 print:bg-transparent print:text-blue-600 print:p-0 print:text-[10px] print:mt-2 print:font-bold">
                                         35,860円おトク！

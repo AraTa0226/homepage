@@ -1,0 +1,11 @@
+{
+  "convId": "996e894d-f869-449e-8a59-7f503b0e3f4d",
+  "stepIdx": 901,
+  "toolName": "replace_file_content",
+  "startLine": "1496",
+  "endLine": "1502",
+  "desc": "\"Update LP data check to support section-only templates.\"",
+  "inst": "\"Change the condition to check for either a header OR non-empty sections. This ensures that new templates, which primarily use sections, are correctly displayed in the editor.\"",
+  "target": "\"                    {!lpData || !lpData.header ? (\\n                        <div className=\\\"p-20 text-center border-2 border-dashed border-zinc-800 rounded-[3rem] text-zinc-600\\\">\\n                            <Music className=\\\"w-16 h-16 mx-auto mb-4 opa\n<truncated 358 bytes>",
+  "replacement": "\"                    {!lpData || (!lpData.header && (!lpData.sections || lpData.sections.length === 0)) ? (\\n                        <div className=\\\"p-20 text-center border-2 border-dashed border-zinc-800 rounded-[3rem] text-zinc-600\\\">\\n                 \n<truncated 414 bytes>"
+}

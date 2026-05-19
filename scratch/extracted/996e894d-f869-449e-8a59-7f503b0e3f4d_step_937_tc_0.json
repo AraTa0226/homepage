@@ -1,0 +1,11 @@
+{
+  "convId": "996e894d-f869-449e-8a59-7f503b0e3f4d",
+  "stepIdx": 937,
+  "toolName": "replace_file_content",
+  "startLine": "1314",
+  "endLine": "1335",
+  "desc": "\"Strengthen LP to Menu synchronization logic.\"",
+  "inst": "\"Improve the synchronization between dedicated LPs and the menu categories (plans). Ensure that when an LP is saved with 'showInMenu' enabled, it is correctly inserted or updated in the corresponding category's items list, and removed from other categories\n<truncated 90 bytes>",
+  "target": "\"        // Sync with Menu Categories (plans)\\n        if (plans && Array.isArray(plans)) {\\n            const nextPlans = plans.map(cat => {\\n                const isTargetCat = updatedLP.showInMenu && cat.id === updatedLP.parentCategoryId;\\n             \n<truncated 715 bytes>",
+  "replacement": "\"        // Sync with Menu Categories (plans)\\n        if (plans && Array.isArray(plans)) {\\n            const nextPlans = plans.map(cat => {\\n                // Remove this LP from all categories first to avoid duplicates\\n                let nextItems = \n<truncated 1003 bytes>"
+}

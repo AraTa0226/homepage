@@ -1,0 +1,11 @@
+{
+  "convId": "996e894d-f869-449e-8a59-7f503b0e3f4d",
+  "stepIdx": 874,
+  "toolName": "replace_file_content",
+  "startLine": "1472",
+  "endLine": "1487",
+  "desc": "\"Fix hover gap for template dropdown.\"",
+  "inst": "\"Wrap the template dropdown menu in a container with top padding to bridge the gap between the button and the menu. This prevents the menu from disappearing when the user moves their mouse toward it. Also update the version string to v78.\"",
+  "target": "\"                                <div className=\\\"absolute right-0 top-full mt-2 w-64 bg-zinc-950 border border-zinc-800 rounded-2xl p-2 hidden group-hover:block z-50 shadow-2xl\\\">\\n                                    <div className=\\\"px-3 py-2 text-[8px] \n<truncated 1241 bytes>",
+  "replacement": "\"                                <div className=\\\"absolute right-0 top-full pt-2 hidden group-hover:block z-50\\\">\\n                                    <div className=\\\"w-64 bg-zinc-950 border border-zinc-800 rounded-2xl p-2 shadow-2xl\\\">\\n                 \n<truncated 1394 bytes>"
+}

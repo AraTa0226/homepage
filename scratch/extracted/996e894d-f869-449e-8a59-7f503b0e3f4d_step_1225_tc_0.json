@@ -1,0 +1,11 @@
+{
+  "convId": "996e894d-f869-449e-8a59-7f503b0e3f4d",
+  "stepIdx": 1225,
+  "toolName": "replace_file_content",
+  "startLine": "1316",
+  "endLine": "1371",
+  "desc": "\"Unify plans update in handleSaveLP.\"",
+  "inst": "\"Update the handleSaveLP function to collect all changes to the 'plans' array in a local variable during the loop, and then call setPlans and saveSiteData exactly once with the final, complete data. This prevents race conditions during the save process.\"",
+  "target": "\"        // Sync with Menu Categories (plans)\\n        if (plans && Array.isArray(plans)) {\\n            plans.forEach(cat => {\\n                if (cat.type !== 'audio') return;\\n                \\n                const curItems = Array.isArray(cat.items) \n<truncated 1979 bytes>",
+  "replacement": "\"            // Prepare nextPlans by collecting all category updates\\n            let nextPlans = [...plans];\\n            \\n            plans.forEach(cat => {\\n                if (cat.type !== 'audio') return;\\n                \\n                const curI\n<truncated 1597 bytes>"
+}

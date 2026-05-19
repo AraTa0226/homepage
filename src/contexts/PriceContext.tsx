@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode, useRef, useCallback, useEffect } from 'react';
 import cmsData from '../data/cms.json';
 
 // ────────────────────────────────────────────────────────
@@ -11,7 +11,7 @@ const LS_MANAGED_KEYS = [
   'ang_plans', 'ang_guides', 'ang_optionals',
   'ang_security_status', 'ang_emergency',
   'ang_partners', 'ang_brand_partners', 'ang_assets',
-  'ang_standard_line_landing',
+  'ang_standard_line_landing', 'ang_audio_lp_templates'
 ];
 
 (function clearStaleLocalStorage() {
@@ -73,6 +73,7 @@ export interface PlanCategory {
   showDescription?: boolean;
   showDescriptionInMenu?: boolean;
   showDescriptionInList?: boolean;
+  showFloatingCTA?: boolean;
 }
 
 export interface KnowledgeGuide {
@@ -127,25 +128,41 @@ export interface EventPage {
 
 export interface AudioSpeakerItem {
   id: string;
-  image: string;
-  brand: string;
-  name: string;
-  mountingHole: string;
-  mountingDepth: string;
+  image?: string;
+  brand?: string;
+  name?: string;
+  mountingHole?: string;
+  mountingDepth?: string;
+  mountingHoleSize?: string;
+  depthSize?: string;
   standalonePrice: string;
-  planAppliedPrice: string;
+  planAppliedPrice?: string;
   taxExcludedPrice?: string;
-  hasGrille: boolean;
-  hasTweeterMount: boolean;
-  remarks: string;
+  hasGrille?: boolean | string;
+  hasTweeterMount?: boolean | string;
+  remarks?: string;
+  youtubeUrl?: string;
+  fixedPriceOverride?: string | number;
+}
+
+export interface LPSection {
+  id: string;
+  type: 'hero' | 'pricing' | 'features' | 'upgrades' | 'speakers' | 'text' | 'banner' | 'cta' | 'faq' | 'gallery' | 'floating_cta' | 'link_cards';
+  data: any;
 }
 
 export interface StandardLineLandingData {
   id?: string;
   slug?: string;
   name?: string;
-  speakers?: AudioSpeakerItem[];
-  header: {
+  status?: 'published' | 'draft' | 'archived';
+  isTemplate?: boolean;
+  parentCategoryId?: string;
+  showInMenu?: boolean;
+  showFloatingCTA?: boolean;
+  sections?: LPSection[];
+  speakers?: AudioSpeakerItem[]; // Keep for backward compatibility or global list
+  header?: {
     mainTitle: string;
     subTitle: string;
     badge: string;
@@ -153,6 +170,9 @@ export interface StandardLineLandingData {
   };
   pricing: {
     specialPrice: string;
+    fixedPrice: number; // Added for dynamic calculation
+    showPricingDisplay?: boolean; // New field for visibility toggle
+    pricingMode?: 'dynamic' | 'manual';
     normalPriceText: string;
     savingsText: string;
     note: string;
@@ -251,6 +271,11 @@ interface PriceContextType {
   setStandardLineLanding: (data: StandardLineLandingData) => void;
   audioLPs: StandardLineLandingData[];
   setAudioLPs: (lps: StandardLineLandingData[]) => void;
+  reorderPlans: (newPlans: PlanCategory[]) => void;
+  reorderPlanItems: (categoryId: string, newItems: PlanItem[]) => void;
+  reorderAudioLPs: (newLPs: StandardLineLandingData[]) => void;
+  audioLPTemplates: StandardLineLandingData[];
+  setAudioLPTemplates: (templates: StandardLineLandingData[]) => void;
 }
 
 // Security Interfaces
@@ -527,7 +552,7 @@ const initialPlans: PlanCategory[] = [
     items: [
       {
         id: "basic-coaxial",
-        name: "BASIC line (コアキシャル)",
+        name: "ベーシックライン（コアキシャル）",
         price: "44000",
         features: ["コアキシャルスピーカー交換", "簡易デッドニング", "バーチ材バッフル"],
         badge: "お手軽導入",
@@ -562,7 +587,7 @@ const initialPlans: PlanCategory[] = [
       },
       {
         id: "basic-separate",
-        name: "BASIC line (セパレート)",
+        name: "ベーシックライン（セパレート）",
         price: "59400",
         features: ["セパレートスピーカー交換", "簡易デッドニング", "インラインNW"],
         badge: "初心者おすすめ",
@@ -1747,6 +1772,7 @@ const initialStandardLineLanding: StandardLineLandingData = {
   },
   pricing: {
     specialPrice: "81840",
+    fixedPrice: 40700,
     normalPriceText: "通常目安: 117,700円",
     savingsText: "約 35,860円 お得!",
     note: "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。"
@@ -1815,6 +1841,84 @@ export const PriceProvider: React.FC<{ children: ReactNode }> = ({ children }) =
     return p;
   };
 
+  const [audioLPTemplates, setAudioLPTemplatesState] = useState<StandardLineLandingData[]>(() => {
+    const cacheVersion = (cmsData as any).cacheVersion || "0";
+    const savedVersion = localStorage.getItem('ang_audio_lp_templates_version');
+    const saved = localStorage.getItem('ang_audio_lp_templates');
+    
+    // Hardcoded default templates
+    const defaultTemplates: StandardLineLandingData[] = [
+      {
+        "id": "tpl_a4_print",
+        "name": "A4印刷用標準レイアウト",
+        "isTemplate": true,
+        "showInMenu": true,
+        "parentCategoryId": "speaker_package",
+        "header": {
+          "mainTitle": "STANDARD LINE",
+          "subTitle": "スピーカー交換パッケージ",
+          "badge": "A4 PRINT",
+          "description": "A4印刷に最適な標準レイアウトです。"
+        },
+        "pricing": {
+          "specialPrice": "81840",
+          "fixedPrice": 81840,
+          "normalPriceText": "¥117,700",
+          "savingsText": "35,860円 お得!",
+          "note": "※KICKER CSS674を選択した場合の例。"
+        },
+        "sections": [
+          { "id": "sec_banner", "type": "banner", "data": { "title": "STANDARD LINE", "subTitle": "スピーカー交換パッケージ", "image": "/images/Top/speaker.webp", "height": "400px", "opacity": 0.5 } },
+          { "id": "sec_pricing", "type": "pricing", "data": { "specialPrice": "81840", "normalPrice": "117700", "savingsText": "35,860円 お得!", "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。" } },
+          { "id": "sec_features", "type": "features", "data": { "items": [
+            { "title": "ドアチューニング Bコース", "desc": "スピーカーの性能を最大限に引き出すための環境作り。", "image": "/images/Audio/Speaker/door-b.webp" },
+            { "title": "カスタムインナーバッフル", "desc": "車種に合わせて1台1台製作するバーチ材バッフル。", "image": "/images/Audio/Speaker/baffle.webp" },
+            { "title": "ANGオリジナルケーブル", "desc": "情報の損失を最小限に抑える高品位ケーブル。", "image": "/images/Audio/Speaker/ang-cable.webp" }
+          ] } },
+          { "id": "sec_upgrades", "type": "upgrades", "data": { "courses": [
+            { "name": "ツィーター埋込加工", "price": "¥46,200〜", "image": "/images/Audio/Speaker/tw-mount.webp", "desc": "理想的な音像定位を実現する、ピラー埋め込み加工。" },
+            { "name": "メタルバッフル", "price": "20% OFF", "image": "/images/Audio/Speaker/metal.webp", "desc": "より高剛性な土台を求める方へ。" }
+          ] } },
+          { "id": "sec_speakers", "type": "speakers", "data": {} }
+        ],
+        "features": {
+          "doorTuning": { "title": "ドアチューニング Bコース", "desc": "スピーカーの性能を最大限に引き出すための環境作り。", "image": "/images/Audio/Speaker/door-b.webp" },
+          "baffle": { "title": "カスタムインナーバッフル", "desc": "車種に合わせて1台1台製作するバーチ材バッフル。", "image": "/images/Audio/Speaker/baffle.webp" },
+          "cable": { "title": "ANGオリジナルケーブル", "desc": "情報の損失を最小限に抑える高品位ケーブル。", "image": "/images/Audio/Speaker/ang-cable.webp" }
+        },
+        "upgrades": {
+          "courses": [
+            { "name": "ツィーター埋込加工", "price": "¥46,200〜", "desc": "理想的な音像定位を実現する、ピラー埋め込み加工。" },
+            { "name": "メタルバッフル", "price": "20% OFF", "desc": "より高剛性な土台を求める方へ。" }
+          ],
+          "options": {
+            "metalBaffleDiscount": "20",
+            "tweeterMountPrice": "46200",
+            "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
+            "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
+          }
+        },
+        "speakers": []
+      }
+    ];
+
+    const baseTemplates = (cmsData as any).audioLPTemplates || defaultTemplates;
+    const finalTemplates = baseTemplates.length > 0 ? baseTemplates : defaultTemplates;
+
+    if (!saved || savedVersion !== cacheVersion) {
+      localStorage.setItem('ang_audio_lp_templates_version', cacheVersion);
+      if (saved) localStorage.removeItem('ang_audio_lp_templates');
+      return finalTemplates;
+    }
+
+    try { 
+      const parsed = JSON.parse(saved);
+      return parsed.length > 0 ? parsed : finalTemplates;
+    } catch (e) { 
+      return finalTemplates; 
+    }
+  });
+
   const [plans, setPlans] = useState<PlanCategory[]>(() => {
     const cacheVersion = (cmsData as any).cacheVersion || "0";
     const savedVersion = localStorage.getItem('ang_plans_version');
@@ -1837,19 +1941,25 @@ export const PriceProvider: React.FC<{ children: ReactNode }> = ({ children }) =
         return {
           ...initialCat,
           ...savedCat,
-          items: initialCat.items.map((initialItem: any) => {
-            const savedItem = savedCat.items?.find((i: any) => i.name === initialItem.name);
-            if (!savedItem) return initialItem;
+          items: [
+            ...initialCat.items.map((initialItem: any) => {
+              const savedItem = savedCat.items?.find((i: any) => i.name === initialItem.name);
+              if (!savedItem) return initialItem;
 
-            // Normalize the saved image path to fix stale uppercase/wrong paths
-            const normalizedSavedImage = normalizeStoredImagePath(savedItem.image);
-            return {
-              ...initialItem,
-              ...savedItem,
-              // Dashboard (savedItem) wins, but path is normalized; fall back to cms.json
-              image: normalizedSavedImage || initialItem.image,
-            };
-          })
+              // Normalize the saved image path to fix stale uppercase/wrong paths
+              const normalizedSavedImage = normalizeStoredImagePath(savedItem.image);
+              return {
+                ...initialItem,
+                ...savedItem,
+                // Dashboard (savedItem) wins, but path is normalized; fall back to cms.json
+                image: normalizedSavedImage || initialItem.image,
+              };
+            }),
+            // Add items that exist in localStorage but not in cms.json (e.g. dynamic LPs)
+            ...(savedCat.items || []).filter((savedItem: any) => 
+              !initialCat.items.some((initialItem: any) => initialItem.name === (typeof savedItem === 'string' ? savedItem : savedItem.name))
+            )
+          ]
         };
       });
     } catch (e) {
@@ -2012,24 +2122,55 @@ export const PriceProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   };
 
   const [audioLPs, setAudioLPsState] = useState<StandardLineLandingData[]>(() => {
-    if ((cmsData as any).audioLPs && Array.isArray((cmsData as any).audioLPs)) {
-      return (cmsData as any).audioLPs;
-    }
-    const single = (cmsData as any).standardLineLanding;
-    const defaultItem = single ? { 
-      ...single, 
-      id: single.id || 'standard', 
-      slug: single.slug || 'sp-standard', 
-      name: single.name || 'スタンダードライン',
-      speakers: single.speakers || initialStandardLineLanding.speakers 
-    } : { 
-      ...initialStandardLineLanding, 
-      id: 'standard', 
-      slug: 'sp-standard', 
-      name: 'スタンダードライン' 
-    };
+    const cacheVersion = (cmsData as any).cacheVersion || "0";
+    const savedVersion = localStorage.getItem('ang_audio_lps_version');
     const saved = localStorage.getItem('ang_audio_lps');
-    return saved ? JSON.parse(saved) : [defaultItem];
+
+    let baseLPs: StandardLineLandingData[] = [];
+    if ((cmsData as any).audioLPs && Array.isArray((cmsData as any).audioLPs)) {
+      baseLPs = (cmsData as any).audioLPs;
+    } else {
+      const single = (cmsData as any).standardLineLanding;
+      const defaultItem = single ? { 
+        ...single, 
+        id: single.id || 'standard', 
+        slug: single.slug || 'sp-standard', 
+        name: single.name || 'スタンダードライン',
+        speakers: single.speakers || initialStandardLineLanding.speakers 
+      } : { 
+        ...initialStandardLineLanding, 
+        id: 'standard', 
+        slug: 'sp-standard', 
+        name: 'スタンダードライン' 
+      };
+      baseLPs = [defaultItem];
+    }
+
+    if (!saved || savedVersion !== cacheVersion) {
+      localStorage.setItem('ang_audio_lps_version', cacheVersion);
+      if (saved) localStorage.removeItem('ang_audio_lps');
+      return baseLPs;
+    }
+
+    try {
+      const parsed = JSON.parse(saved);
+      return baseLPs.map(initialLP => {
+        const savedLP = parsed.find((p: any) => p.id === initialLP.id);
+        if (!savedLP) return initialLP;
+        return {
+          ...initialLP,
+          ...savedLP,
+          // Merge speakers array to retain base cms.json speakers if new ones were added, while applying saved fields
+          speakers: initialLP.speakers?.map(initialSpk => {
+            const savedSpk = savedLP.speakers?.find((s: any) => s.id === initialSpk.id || s.name === initialSpk.name);
+            if (!savedSpk) return initialSpk;
+            return { ...initialSpk, ...savedSpk };
+          }) || savedLP.speakers
+        };
+      });
+    } catch (e) {
+      return baseLPs;
+    }
   });
 
   const setAudioLPs = (rawLPs: StandardLineLandingData[]) => {
@@ -2053,25 +2194,50 @@ export const PriceProvider: React.FC<{ children: ReactNode }> = ({ children }) =
       }
     }));
     setAudioLPsState(lps);
+    const cacheVersion = (cmsData as any).cacheVersion || "0";
+    localStorage.setItem('ang_audio_lps_version', cacheVersion);
     localStorage.setItem('ang_audio_lps', JSON.stringify(lps));
+    
     const std = lps.find(p => p.slug === 'sp-standard') || lps[0];
     if (std) {
       setStandardLineLandingState(std);
     }
-    saveSiteData({ audioLPs: lps, standardLineLanding: std });
+    
+    // Explicitly save both the full list and the standard fallback to CMS
+    saveSiteData({ 
+      audioLPs: lps, 
+      standardLineLanding: std 
+    });
   };
 
-  const saveSiteData = (updates: any) => {
-    if (import.meta.env.DEV) {
+  const pendingUpdatesRef = useRef<any>({});
+  const saveTimeoutRef = useRef<any>(null);
+
+  const saveSiteData = useCallback((updates: any) => {
+    if (!import.meta.env.DEV) return;
+    
+    console.log('[CMS PENDING] Adding to buffer:', Object.keys(updates));
+    // Merge updates into pending buffer
+    pendingUpdatesRef.current = { ...pendingUpdatesRef.current, ...updates };
+    
+    if (saveTimeoutRef.current) clearTimeout(saveTimeoutRef.current);
+    
+    saveTimeoutRef.current = setTimeout(() => {
+      const dataToSend = { ...pendingUpdatesRef.current };
+      if (Object.keys(dataToSend).length === 0) return;
+      
+      pendingUpdatesRef.current = {};
+      console.log('[CMS SAVE] Sending to server:', Object.keys(dataToSend), dataToSend);
+      
       fetch('/api/save-cms', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(updates),
-      }).catch(console.error);
-    }
-  };
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(dataToSend),
+      }).catch(err => {
+        console.error('[CMS SAVE] Failed:', err);
+      });
+    }, 800);
+  }, []);
 
   const setHeroAlert = (alert: HeroAlert) => {
     setHeroAlertState(alert);
@@ -2120,10 +2286,16 @@ export const PriceProvider: React.FC<{ children: ReactNode }> = ({ children }) =
           if (data.securityKnowledge) setSecurityKnowledgeState(data.securityKnowledge);
           if (data.standardLineLanding) setStandardLineLandingState(data.standardLineLanding);
           if (data.audioLPs) setAudioLPsState(data.audioLPs);
+          
+          console.log('[CMS INIT] Data fetch complete.');
         })
-        .catch(console.error);
+        .catch(console.error)
+        .finally(() => {
+          setIsMounted(true);
+        });
+    } else {
+      setIsMounted(true);
     }
-    setIsMounted(true);
   }, []);
 
 
@@ -2248,6 +2420,22 @@ export const PriceProvider: React.FC<{ children: ReactNode }> = ({ children }) =
       items: cat.items.map(item => ({ ...item, price: adjust(item.price) }))
     })));
     setOptionals(prev => prev.map(opt => ({ ...opt, price: adjust(opt.price) })));
+  };
+
+  const reorderPlans = (newPlans: PlanCategory[]) => {
+    setPlans(newPlans);
+    saveSiteData({ plans: newPlans });
+  };
+
+  const reorderPlanItems = (categoryId: string, newItems: PlanItem[]) => {
+    const next = plans.map(cat => cat.id === categoryId ? { ...cat, items: newItems } : cat);
+    setPlans(next);
+    saveSiteData({ plans: next });
+  };
+
+  const reorderAudioLPs = (newLPs: StandardLineLandingData[]) => {
+    setAudioLPs(newLPs);
+    saveSiteData({ audioLPs: newLPs });
   };
 
   const addItem = (categoryId: string, item: PlanItem) => {
@@ -2660,7 +2848,18 @@ export const PriceProvider: React.FC<{ children: ReactNode }> = ({ children }) =
       updateFeatureSetTemplate,
       addFeatureSetTemplate,
       removeFeatureSetTemplate,
-      saveSiteData
+      saveSiteData,
+      reorderPlans,
+      reorderPlanItems,
+      reorderAudioLPs,
+      audioLPTemplates,
+      setAudioLPTemplates: (templates: StandardLineLandingData[]) => {
+        setAudioLPTemplatesState(templates);
+        const cacheVersion = (cmsData as any).cacheVersion || "0";
+        localStorage.setItem('ang_audio_lp_templates_version', cacheVersion);
+        localStorage.setItem('ang_audio_lp_templates', JSON.stringify(templates));
+        saveSiteData({ audioLPTemplates: templates });
+      }
     }}>
       {children}
     </PriceContext.Provider>
@@ -2681,7 +2880,17 @@ export const usePrices = () => {
     standardLineLanding: context.standardLineLanding,
     setStandardLineLanding: context.setStandardLineLanding,
     audioLPs: context.audioLPs,
-    setAudioLPs: context.setAudioLPs
+    setAudioLPs: context.setAudioLPs,
+    reorderAudioLPs: context.reorderAudioLPs,
+    audioLPTemplates: context.audioLPTemplates,
+    setAudioLPTemplates: context.setAudioLPTemplates,
+    addItem: context.addItem,
+    removeItem: context.removeItem,
+    addCategory: context.addCategory,
+    removeCategory: context.removeCategory,
+    reorderPlans: context.reorderPlans,
+    reorderPlanItems: context.reorderPlanItems,
+    updateCategory: context.updateCategory
   };
 };
 

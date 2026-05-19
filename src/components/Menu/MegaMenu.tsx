@@ -81,7 +81,9 @@ export const MegaMenu = ({ show, categories, theme, onClose, navigate, handleMen
                                                             if (cat.isExternal) {
                                                                 window.open(cat.path, '_blank');
                                                             } else {
-                                                                handleMenuClick({ id: cat.id, name: itemName, path: cat.path });
+                                                                // Pass the full item object if it's an object, otherwise construct one
+                                                                const clickItem = typeof item === 'object' && item !== null ? { ...(item as object), parentId: cat.id } : { id: cat.id, name: item };
+                                                                handleMenuClick(clickItem);
                                                             }
                                                         }}
                                                         className={`text-[11px] font-bold ${theme === 'dark' ? 'text-gray-400 hover:text-emerald-500' : 'text-gray-400 hover:text-blue-600'} transition-all hover:translate-x-1 text-left flex items-center gap-2 group/link`}

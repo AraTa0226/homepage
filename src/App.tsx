@@ -21,6 +21,7 @@ import { SiteProvider, useSite } from './contexts/SiteContext';
 
 // Components
 import { VaultGrid } from './components/VaultGrid';
+import { FloatingCTA } from './components/Shared/FloatingCTA';
 
 // Lazy Pages (Architectural Split for Lighthouse 100)
 const MainPage = lazy(() => import('./pages/Home/MainPage').then(m => ({ default: m.MainPage })));
@@ -89,6 +90,7 @@ function AppContent() {
     audioHeroAlert,
     securityHeroAlert,
     plans,
+    audioLPs,
     setSelectedPlan,
     setSelectedCategory,
     auditionSpeakers,
@@ -115,11 +117,13 @@ function AppContent() {
     const handleMenuClick = (item: any) => {
         setShowMegaMenu(false);
 
-        if (item.path) {
-            if (item.path.startsWith('http')) {
-                window.open(item.path, '_blank');
+        // Prioritize direct link/path if available
+        const directPath = item.link || item.path || item.url;
+        if (directPath) {
+            if (typeof directPath === 'string' && directPath.startsWith('http')) {
+                window.open(directPath, '_blank');
             } else {
-                navigate(item.path);
+                navigate(directPath);
             }
             return;
         }
@@ -144,21 +148,48 @@ function AppContent() {
         }
 
         // Search for category to resolve generic item clicks
-        const category = plans.find(p => p.id === item.id);
+        const category = plans.find(p => p.id === item.id || p.id === item.parentId);
         if (category) {
             setSelectedCategory(category);
-            const targetId = item.planId || item.planName || item.name;
+            const targetId = item.planId || item.planName || item.name || item.slug;
             
             if (category.type === 'audio') {
+                const targetIdStr = String(targetId);
+                
+                // 1. Precise Match with audioLPs
+                const matchedLP = audioLPs?.find(lp => {
+                    if (!lp) return false;
+                    return (item.id && lp.id === item.id) || 
+                           (item.slug && lp.slug === item.slug) ||
+                           (lp.name === targetIdStr);
+                });
+                
+                if (matchedLP && matchedLP.slug) {
+                    navigate(`/${matchedLP.slug}`);
+                    return;
+                }
+
                 if (
-                    targetId === 'スピーカー交換STANDARD line（10万円まで）' || 
-                    targetId === 'STANDARD line' ||
-                    targetId === 'standard-line' ||
-                    (typeof targetId === 'string' && targetId.includes('STANDARD line'))
+                    targetIdStr === 'スピーカー交換STANDARD line（10万円まで）' || 
+                    targetIdStr === 'STANDARD line' ||
+                    targetIdStr === 'standard-line' ||
+                    (typeof targetIdStr === 'string' && targetIdStr.includes('STANDARD line')) ||
+                    (typeof targetIdStr === 'string' && targetIdStr.includes('スタンダード'))
                 ) {
                     navigate('/sp-standard');
+                } else if (
+                    targetIdStr.includes('BASIC') || 
+                    targetIdStr.includes('ベーシック')
+                ) {
+                    // Try to find the basic LP slug
+                    const basicLP = audioLPs?.find(lp => lp.slug?.includes('basic') || lp.name?.includes('ベーシック'));
+                    if (basicLP) {
+                        navigate(`/${basicLP.slug}`);
+                    } else {
+                        navigate(`/audio/plan/${encodeURIComponent(targetIdStr)}`);
+                    }
                 } else {
-                    navigate(`/audio/plan/${encodeURIComponent(targetId)}`);
+                    navigate(`/audio/plan/${encodeURIComponent(targetIdStr)}`);
                 }
             } else {
                 // If it's a security category without a specific path, go to security-home
@@ -247,7 +278,7 @@ function AppContent() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pb-32">
       <Suspense fallback={
         <div className="fixed inset-0 bg-white flex items-center justify-center z-[9999]">
           <motion.div
@@ -324,10 +355,7 @@ function AppContent() {
           <Route path="/audio/news/:slug" element={<EventDetailPage domain="audio" />} />
           <Route path="/audio/plan/:planId" element={<AudioPlanDetail />} />
           <Route path="/sp-standard" element={<StandardLinePage />} />
-          <Route path="/audio/lp/:slug" element={<StandardLinePage />} />
-          <Route path="/audio/line/:slug" element={<StandardLinePage />} />
-          <Route path="/sp-:slug" element={<StandardLinePage />} />
-        <Route path="/audio/sp-package" element={<AudioPlanDetail />} />
+          <Route path="/audio/sp-package" element={<AudioPlanDetail />} />
         <Route path="/audio/dsp-amp" element={<AudioPlanDetail />} />
         <Route path="/audio/amp-dsp" element={<AudioPlanDetail />} />
         <Route path="/audio/digital-source" element={<AudioPlanDetail />} />
@@ -375,6 +403,11 @@ function AppContent() {
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/admin/print/sp-standard" element={<StandardLinePrintPage />} />
           <Route path="/admin/print/audio/:slug" element={<StandardLinePrintPage />} />
+          
+          {/* Dynamic Dedicated LPs - Top Level & Nested */}
+          <Route path="/:slug" element={<StandardLinePage />} />
+          <Route path="/:folder/:slug" element={<StandardLinePage />} />
+          
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Suspense>

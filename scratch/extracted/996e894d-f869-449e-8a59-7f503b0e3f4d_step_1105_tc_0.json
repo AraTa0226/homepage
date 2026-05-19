@@ -1,0 +1,11 @@
+{
+  "convId": "996e894d-f869-449e-8a59-7f503b0e3f4d",
+  "stepIdx": 1105,
+  "toolName": "replace_file_content",
+  "startLine": "1334",
+  "endLine": "1358",
+  "desc": "\"Fix dynamic LP link path and unify CMS save.\"",
+  "inst": "\"Correct the link path to use the root-level slug and ensure all updates (audioLPs and plans) are sent in a single saveSiteData call to prevent race conditions or data loss during the debounced save process.\"",
+  "target": "\"                    const newItem = { \\n                        id: updatedLP.id, \\n                        slug: updatedLP.slug, \\n                        name: updatedLP.name,\\n                        link: `/audio/${updatedLP.slug}`,\\n                 \n<truncated 800 bytes>",
+  "replacement": "\"                    const newItem = { \\n                        id: updatedLP.id, \\n                        slug: updatedLP.slug, \\n                        name: updatedLP.name,\\n                        link: `/${updatedLP.slug}`,\\n                       \n<truncated 1031 bytes>"
+}

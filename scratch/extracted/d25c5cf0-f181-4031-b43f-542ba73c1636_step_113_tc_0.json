@@ -1,0 +1,11 @@
+{
+  "convId": "d25c5cf0-f181-4031-b43f-542ba73c1636",
+  "stepIdx": 113,
+  "toolName": "replace_file_content",
+  "startLine": "1313",
+  "endLine": "1316",
+  "desc": "\"Ensuring parentCategoryId is set to a default if showInMenu is true but it is missing, to prevent save failures for new LPs.\"",
+  "inst": "\"Default parentCategoryId to 'speaker_package' if it's missing when showInMenu is true.\"",
+  "target": "\"            const cleanSlug = (lpData.slug || 'sp-custom').replace(/^\\\\/+/, '');\\n            const updatedLP = { ...lpData, slug: cleanSlug };\\n            console.log('[LP SAVE] Prepared updatedLP:', updatedLP);\"",
+  "replacement": "\"            const cleanSlug = (lpData.slug || 'sp-custom').replace(/^\\\\/+/, '');\\n            \\n            // Fix: If showInMenu is true but parentCategoryId is missing, default to speaker_package\\n            let parentCat = lpData.parentCategoryId;\\n  \n<truncated 412 bytes>"
+}

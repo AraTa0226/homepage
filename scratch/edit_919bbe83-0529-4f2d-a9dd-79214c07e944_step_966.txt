@@ -1,0 +1,2 @@
+"                                                        <Input field=\"Metal Baffle Disc.\" value={section.data.options?.metalBaffleDiscount || ''} onChange={v=>{const n=[...lpData.sections!]; n[sIdx].data.options={...(n[sIdx].data.options||{}), metalBaff
+<truncated 9907 bytes>

@@ -1,0 +1,2 @@
+"                                            {/* Section Content Editor */}\n                                            {section.type === 'hero' && (\n                                                <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\"
+<truncated 30257 bytes>

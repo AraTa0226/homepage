@@ -1,0 +1,2 @@
+"                    const newItem = { \n                        id: updatedLP.id, \n                        slug: updatedLP.slug, \n                        name: updatedLP.name,\n                        link: `/${updatedLP.slug}`,\n                       
+<truncated 1031 bytes>

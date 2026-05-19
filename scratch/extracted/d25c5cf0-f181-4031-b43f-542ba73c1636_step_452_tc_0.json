@@ -1,0 +1,11 @@
+{
+  "convId": "d25c5cf0-f181-4031-b43f-542ba73c1636",
+  "stepIdx": 452,
+  "toolName": "replace_file_content",
+  "startLine": "1823",
+  "endLine": "1833",
+  "desc": "\"Dashboard.tsxの編集セクションを更新し、ハードウェアオプションの「説明文」と「画像」のフィールドを追加しました。これにより、テンプレートで設定した詳細なコンテンツを管理画面か\n<truncated 202 bytes>",
+  "inst": "\"Add image and description fields to the upgrades editor in Dashboard.tsx.\"",
+  "target": "\"                                                    <div className=\\\"space-y-4\\\">\\n                                                        <h6 className=\\\"text-[10px] font-black text-zinc-500 uppercase\\\">Global Options</h6>\\n                              \n<truncated 1121 bytes>",
+  "replacement": "\"                                                    <div className=\\\"space-y-4\\\">\\n                                                        <h6 className=\\\"text-[10px] font-black text-zinc-500 uppercase\\\">Hardware Options (Details & Images)</h6>\\n         \n<truncated 4279 bytes>"
+}

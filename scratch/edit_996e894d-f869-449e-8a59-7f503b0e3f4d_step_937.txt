@@ -1,0 +1,2 @@
+"        // Sync with Menu Categories (plans)\n        if (plans && Array.isArray(plans)) {\n            const nextPlans = plans.map(cat => {\n                // Remove this LP from all categories first to avoid duplicates\n                let nextItems = 
+<truncated 1003 bytes>

@@ -1,0 +1,2 @@
+"            setPlans(nextPlans);\n            saveSiteData({ audioLPs: nextLPs, plans: nextPlans });\n            alert(`「${updatedLP.name || 'プラン'}」の設定を保存しました。メニューとの同期も完了しました。`);\n        } 
+<truncated 214 bytes>

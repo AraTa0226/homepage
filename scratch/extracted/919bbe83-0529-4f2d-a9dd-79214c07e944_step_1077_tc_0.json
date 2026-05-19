@@ -1,0 +1,11 @@
+{
+  "convId": "919bbe83-0529-4f2d-a9dd-79214c07e944",
+  "stepIdx": 1077,
+  "toolName": "replace_file_content",
+  "startLine": "1655",
+  "endLine": "1658",
+  "desc": "\"Fixed syntax error in the Metal Baffle Discount onChange handler in Dashboard.tsx.\"",
+  "inst": "\"Fix syntax error in onChange handler.\"",
+  "target": "\"                                                        <Input field=\\\"Metal Baffle Disc.\\\" value={section.data.options?.metalBaffleDiscount || ''} onChange={v=>{const n=[...lpData.sections!]; n[sIdx].data.options={...(n[n[sIdx].data.options||{}), metalBa\n<truncated 221 bytes>",
+  "replacement": "\"                                                        <Input field=\\\"Metal Baffle Disc.\\\" value={section.data.options?.metalBaffleDiscount || ''} onChange={v=>{const n=[...lpData.sections!]; n[sIdx].data.options={...(n[sIdx].data.options||{}), metalBaff\n<truncated 219 bytes>"
+}

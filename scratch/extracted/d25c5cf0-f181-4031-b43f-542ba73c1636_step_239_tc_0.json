@@ -1,0 +1,11 @@
+{
+  "convId": "d25c5cf0-f181-4031-b43f-542ba73c1636",
+  "stepIdx": 239,
+  "toolName": "replace_file_content",
+  "startLine": "1324",
+  "endLine": "1326",
+  "desc": "\"Updating handleSaveLP in Dashboard.tsx to automatically synchronize top-level header and pricing metadata from the LP's individual sections (Hero, Pricing, Banner) before saving. This ensures that essential data required for front-end rendering and menu d\n<truncated 42 bytes>",
+  "inst": "\"Add synchronization logic to handleSaveLP to update top-level header and pricing from sections.\"",
+  "target": "\"            const updatedLP = { ...lpData, slug: cleanSlug, parentCategoryId: parentCat };\\n            console.log('[LP SAVE] Prepared updatedLP:', updatedLP);\"",
+  "replacement": "\"            const updatedLP = { ...lpData, slug: cleanSlug, parentCategoryId: parentCat };\\n            \\n            // Sync top-level header/pricing from sections for compatibility\\n            const heroSection = updatedLP.sections?.find(s => s.type ==\n<truncated 1488 bytes>"
+}

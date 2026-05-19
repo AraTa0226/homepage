@@ -1,0 +1,11 @@
+{
+  "convId": "996e894d-f869-449e-8a59-7f503b0e3f4d",
+  "stepIdx": 1369,
+  "toolName": "replace_file_content",
+  "startLine": "1366",
+  "endLine": "1368",
+  "desc": "\"Fix race condition: use updateCategory instead of reorderPlans, then call saveSiteData directly.\"",
+  "inst": "\"Replace reorderPlans+saveSiteData with updateCategory per changed category, then a direct saveSiteData call to prevent the race condition.\"",
+  "target": "\"            reorderPlans(nextPlans);\\n            saveSiteData({ audioLPs: nextLPs, plans: nextPlans });\\n            alert(`「${updatedLP.name || 'プラン'}」の設定を保存しました。メニューとの同期も完了しました。`);\\n\"",
+  "replacement": "\"            // Use updateCategory for each changed category (avoids reorderPlans race condition)\\n            plans.forEach(cat => {\\n                if (cat.type !== 'audio') return;\\n                const nextCat = nextPlans.find((p: any) => p.id === ca\n<truncated 788 bytes>"
+}

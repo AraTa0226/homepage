@@ -1,0 +1,11 @@
+{
+  "convId": "919bbe83-0529-4f2d-a9dd-79214c07e944",
+  "stepIdx": 850,
+  "toolName": "replace_file_content",
+  "startLine": "1246",
+  "endLine": "1251",
+  "desc": "\"Added missing audioLPTemplates and setAudioLPTemplates to AudioPlanManager destructuring in Dashboard.tsx.\"",
+  "inst": "\"Add audioLPTemplates and setAudioLPTemplates to usePrices destructuring in AudioPlanManager.\"",
+  "target": "\"    const { \\n        audioLPs, setAudioLPs, plans, updatePrice, updateCategory, \\n        addItem, removeItem, addCategory, removeCategory,\\n        reorderPlans, reorderPlanItems, reorderAudioLPs\\n    } = usePrices();\"",
+  "replacement": "\"    const { \\n        audioLPs, setAudioLPs, plans, updatePrice, updateCategory, \\n        addItem, removeItem, addCategory, removeCategory,\\n        reorderPlans, reorderPlanItems, reorderAudioLPs,\\n        audioLPTemplates, setAudioLPTemplates\\n    } = \n<truncated 13 bytes>"
+}

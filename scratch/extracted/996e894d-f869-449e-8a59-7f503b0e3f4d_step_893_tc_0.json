@@ -1,0 +1,11 @@
+{
+  "convId": "996e894d-f869-449e-8a59-7f503b0e3f4d",
+  "stepIdx": 893,
+  "toolName": "replace_file_content",
+  "startLine": "1490",
+  "endLine": "1502",
+  "desc": "\"Loosen LP data display check in Dashboard.\"",
+  "inst": "\"Update the conditional check to display the LP editor if either header OR sections exist. This ensures that section-based templates are correctly recognized and displayed in the admin interface.\"",
+  "target": "\"                    {!lpData || !lpData.header ? (\\n                        <div className=\\\"flex flex-col items-center justify-center p-20 border-2 border-dashed border-zinc-800 rounded-[3rem] text-zinc-700\\\">\\n                            <Layout classNa\n<truncated 379 bytes>",
+  "replacement": "\"                    {!lpData || (!lpData.header && (!lpData.sections || lpData.sections.length === 0)) ? (\\n                        <div className=\\\"flex flex-col items-center justify-center p-20 border-2 border-dashed border-zinc-800 rounded-[3rem] text-\n<truncated 435 bytes>"
+}

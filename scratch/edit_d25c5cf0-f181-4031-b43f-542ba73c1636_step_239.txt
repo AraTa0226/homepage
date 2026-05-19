@@ -1,0 +1,2 @@
+"            const updatedLP = { ...lpData, slug: cleanSlug, parentCategoryId: parentCat };\n            \n            // Sync top-level header/pricing from sections for compatibility\n            const heroSection = updatedLP.sections?.find(s => s.type ==
+<truncated 1488 bytes>

@@ -1,0 +1,11 @@
+{
+  "convId": "d25c5cf0-f181-4031-b43f-542ba73c1636",
+  "stepIdx": 443,
+  "toolName": "multi_replace_file_content",
+  "startLine": "",
+  "endLine": "",
+  "desc": "\"Dedicated LP Managerの編集機能を強化しました。\\n1. パッケージ概要の編集画面に「説明文（Description）」入力欄を追加し、部材の詳細な情報を編集可能にしました。\\n2. アップグレードオプショ\n<truncated 275 bytes>",
+  "inst": "\"Update the package_summary and upgrades editors in Dashboard.tsx to include all relevant data fields (desc, image, value).\"",
+  "target": "",
+  "replacement": ""
+}

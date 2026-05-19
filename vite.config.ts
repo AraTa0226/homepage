@@ -29,16 +29,20 @@ const localCmsPlugin = () => ({
         req.on('end', () => {
           try {
             const dataPath = path.resolve(__dirname, 'src/data/cms.json');
+            console.log('[CMS SAVE] Saving to:', dataPath);
             let currentData = {};
             if (fs.existsSync(dataPath)) {
               currentData = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
             }
             const payload = JSON.parse(body);
+            console.log('[CMS SAVE] Payload keys:', Object.keys(payload));
             const newData = { ...currentData, ...payload };
             fs.writeFileSync(dataPath, JSON.stringify(newData, null, 2), 'utf-8');
+            console.log('[CMS SAVE] Write complete. Size:', JSON.stringify(newData).length);
             res.setHeader('Content-Type', 'application/json');
             res.end(JSON.stringify({ success: true }));
           } catch (e: any) {
+            console.error('[CMS SAVE] Error:', e.message);
             res.statusCode = 500;
             res.end(JSON.stringify({ error: e.message }));
           }

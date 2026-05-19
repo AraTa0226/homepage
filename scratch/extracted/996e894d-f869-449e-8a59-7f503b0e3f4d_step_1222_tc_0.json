@@ -1,0 +1,11 @@
+{
+  "convId": "996e894d-f869-449e-8a59-7f503b0e3f4d",
+  "stepIdx": 1222,
+  "toolName": "replace_file_content",
+  "startLine": "1367",
+  "endLine": "1376",
+  "desc": "\"Fix handleSaveLP structure and restore save logic.\"",
+  "inst": "\"Correct the syntax of handleSaveLP, ensuring all curly braces match and the crucial saveSiteData calls are restored. I will also make sure the try-catch block correctly wraps the entire logic.\"",
+  "target": "\"            });\\n        } else {\\n            // Even if plans are not involved, save the LPs\\n            alert(`「${updatedLP.name || 'プラン'}」の設定を保存しました。メニューとの同期も完了しました。`);\\n        } catch \n<truncated 208 bytes>",
+  "replacement": "\"            });\\n            // Final save after loop\\n            const nextPlans = plans; // Already updated via setPlans inside loop if changed\\n            saveSiteData({ audioLPs: nextLPs, plans: nextPlans });\\n        } else {\\n            // Even i\n<truncated 444 bytes>"
+}

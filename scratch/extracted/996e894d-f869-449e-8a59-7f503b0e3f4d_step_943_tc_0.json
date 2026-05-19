@@ -1,0 +1,11 @@
+{
+  "convId": "996e894d-f869-449e-8a59-7f503b0e3f4d",
+  "stepIdx": 943,
+  "toolName": "replace_file_content",
+  "startLine": "1314",
+  "endLine": "1350",
+  "desc": "\"Repair handleSaveLP logic and fix syntax errors.\"",
+  "inst": "\"Fix the broken handleSaveLP function by correctly defining nextItems, newItem, and changed variables. Implement a robust synchronization logic that ensures the LP is added to the selected category's items list and removed from all others when showInMenu i\n<truncated 74 bytes>",
+  "target": "\"        // Sync with Menu Categories (plans)\\n        if (plans && Array.isArray(plans)) {\\n            plans.forEach(cat => {\\n                if (cat.type !== 'audio') return;\\n                \\n                const curItems = Array.isArray(cat.items) \n<truncated 1620 bytes>",
+  "replacement": "\"        // Sync with Menu Categories (plans)\\n        if (plans && Array.isArray(plans)) {\\n            plans.forEach(cat => {\\n                if (cat.type !== 'audio') return;\\n                \\n                const curItems = Array.isArray(cat.items) \n<truncated 1830 bytes>"
+}

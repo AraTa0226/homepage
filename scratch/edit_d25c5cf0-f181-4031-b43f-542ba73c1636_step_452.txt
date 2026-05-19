@@ -1,0 +1,2 @@
+"                                                    <div className=\"space-y-4\">\n                                                        <h6 className=\"text-[10px] font-black text-zinc-500 uppercase\">Hardware Options (Details & Images)</h6>\n         
+<truncated 4279 bytes>

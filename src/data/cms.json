@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-04-28T23:10:00Z",
-  "cacheVersion": "74",
+  "cacheVersion": "83",
   "heroAlert": {
     "active": true,
     "text": "【新商品案内】最新のレーザー探知機「Z1200」の取り扱いを開始しました。店舗にて展示中！",
@@ -102,221 +102,72 @@
       "showDescriptionInList": true,
       "items": [
         {
-          "name": "スピーカー交換BASIC line（コアキシャル）",
-          "price": "44000",
-          "subType": "level",
-          "badge": "お手軽導入",
-          "features": [
-            "コアキシャルスピーカー交換",
-            "ドアチューニングB",
-            "バーチ材バッフル"
-          ],
-          "image": "/images/Audio/basic_line_coaxial.webp",
-          "id": "basic-coaxial",
-          "packageDetails": {
-            "standardPrice": "66000",
-            "savings": "22000",
-            "contents": [
-              {
-                "title": "コアキシャルスピーカー",
-                "description": "お好みのユニットを選択",
-                "icon": "Music"
-              },
-              {
-                "title": "ドアチューニングB",
-                "description": "スピーカー周辺の制振施工",
-                "icon": "Zap"
-              },
-              {
-                "title": "バーチ材バッフル",
-                "description": "高密度な合板での土台作り",
-                "icon": "Layers"
-              },
-              {
-                "title": "取付・調整工賃",
-                "description": "プロによる確実なインストール",
-                "icon": "Wrench"
-              }
-            ]
-          },
-          "lineup": [
-            {
-              "name": "Pioneer / TS-F1740-2",
-              "price": "44000",
-              "description": "純正からのステップアップに最適。明るくクリアなサウンド。",
-              "image": "/images/Audio/speaker_default.webp",
-              "youtube": "https://youtube.com"
-            },
-            {
-              "name": "KICKER / KSC6704",
-              "price": "52800",
-              "description": "USブランドらしい元気な音。コアキシャルでも迫力の低音。",
-              "image": "/images/Audio/speaker_default.webp",
-              "youtube": "https://youtube.com"
-            },
-            {
-              "name": "FOCAL / RCX-165",
-              "price": "55000",
-              "description": "フランスの名門。透明感のある高域が魅力のモデル。",
-              "image": "/images/Audio/speaker_default.webp",
-              "youtube": "https://youtube.com"
-            }
-          ]
+          "id": "line_1778977596396",
+          "slug": "basiccoax",
+          "name": "スピーカー交換・BASIC line （コアキシャル）",
+          "link": "/basiccoax",
+          "isDynamic": true,
+          "price": "39600"
         },
         {
-          "name": "スピーカー交換BASIC line（セパレート）",
-          "price": "59400",
-          "subType": "level",
-          "badge": "初心者おすすめ",
-          "features": [
-            "セパレートスピーカー交換",
-            "ドアチューニングB",
-            "インラインNW"
-          ],
-          "image": "/images/Audio/basic_line_separate.webp",
-          "id": "basic-separate",
-          "packageDetails": {
-            "standardPrice": "82500",
-            "savings": "23100",
-            "contents": [
-              {
-                "title": "セパレートスピーカー",
-                "description": "ツィーター別体の本格2WAY",
-                "icon": "Music"
-              },
-              {
-                "title": "ドアチューニングB",
-                "description": "スピーカー周辺の制振施工",
-                "icon": "Zap"
-              },
-              {
-                "title": "バーチ材バッフル",
-                "description": "高密度な合板での土台作り",
-                "icon": "Layers"
-              },
-              {
-                "title": "取付・調整工賃",
-                "description": "プロによる確実なインストール",
-                "icon": "Wrench"
-              }
-            ]
-          },
-          "lineup": [
-            {
-              "name": "Pioneer / TS-F1740S-2",
-              "price": "59400",
-              "description": "セパレートの入門機。ボーカルがダッシュボード上に定位します。",
-              "image": "/images/Audio/speaker_default.webp",
-              "youtube": "https://youtube.com"
-            },
-            {
-              "name": "carrozzeria / TS-C1730S",
-              "price": "71500",
-              "description": "中域の厚みが魅力。情報量豊かなハイレゾ対応モデル。",
-              "image": "/images/Audio/speaker_default.webp",
-              "youtube": "https://youtube.com"
-            },
-            {
-              "name": "ALPINE / X-170S",
-              "price": "74800",
-              "description": "圧倒的な解像度。アルパインのフラッグシップ譲りの音質。",
-              "image": "/images/Audio/speaker_default.webp",
-              "youtube": "https://youtube.com"
-            }
-          ]
+          "id": "line_1778978221406",
+          "slug": "basicsep",
+          "name": "スピーカー交換・BASIC line （セパレート） ",
+          "link": "/basicsep",
+          "isDynamic": true,
+          "price": "64900"
         },
         {
-          "name": "スピーカー交換STANDARD line（10万円まで）",
-          "price": "104500",
-          "subType": "level",
-          "badge": "コスパ最強",
-          "features": [
-            "ミドルグレードスピーカー",
-            "本格デッドニング",
-            "インナーバッフル"
-          ],
-          "image": "/images/Audio/standard.webp"
+          "id": "line_1778920109545",
+          "slug": "sp-standard",
+          "name": "スピーカー交換・STANDARD line（10万円まで）",
+          "link": "/sp-standard",
+          "isDynamic": true,
+          "price": "82500"
         },
         {
-          "name": "スピーカー交換PREMIUM line（10万円以上）",
-          "price": "184800",
-          "subType": "level",
-          "badge": "人気No.1",
-          "features": [
-            "ハイグレードスピーカー",
-            "フルデッドニング",
-            "ツィーター調整"
-          ],
-          "image": "/images/Audio/premium.webp",
-          "id": "premium-line"
+          "id": "line_1778924085764",
+          "slug": "sp-premium",
+          "name": "スピーカー交換・PREMIUM line（10万円以上）",
+          "link": "/sp-premium",
+          "isDynamic": true,
+          "price": "162800"
         },
         {
-          "name": "フロント3WAYプラン",
-          "price": "286000",
-          "subType": "level",
-          "badge": "究極の3way",
-          "features": [
-            "フロント3wayシステム",
-            "Aピラー埋め込み加工込",
-            "全力デッドニング施工"
-          ],
-          "image": "/images/Audio/front_3way.webp",
-          "id": "front-3way"
+          "id": "line_1778981709334",
+          "slug": "front3waypac",
+          "name": "フロント3way",
+          "link": "/front3waypac",
+          "isDynamic": true,
+          "price": "81840"
         },
         {
-          "name": "軽自動車専用スピーカーパッケージ",
-          "price": "44000",
-          "subType": "car",
-          "badge": "軽におすすめ",
-          "features": [
-            "軽自動車専用設計",
-            "デッドニング込",
-            "工賃込"
-          ],
-          "image": "/images/Audio/k-car.webp",
-          "id": "k-car-package"
+          "id": "line_1778985631489",
+          "slug": "bmwspeaker",
+          "name": "BMWスピーカー交換プラン",
+          "link": "/bmwspeaker",
+          "isDynamic": true,
+          "price": "81840"
         },
         {
+          "id": "line_1778992499214",
+          "slug": "benzspeaker",
+          "name": "Mercedes-Benzスピーカー交換プラン ",
+          "link": "/benzspeaker",
+          "isDynamic": true,
+          "price": "81840"
+        },
+        {
+          "id": "line_1778993388307",
+          "slug": "car-category",
           "name": "車種別スピーカー交換プラン",
-          "price": "44000",
-          "subType": "car",
-          "badge": "安心パック",
-          "features": [
-            "人気車種別セット",
-            "工賃込",
-            "純正復帰可能"
-          ],
-          "image": "/images/Audio/standard-car.webp",
-          "id": "model-specific"
-        },
-        {
-          "name": "BMWスピーカー交換パッケージ",
-          "price": "77000",
-          "subType": "car",
-          "badge": "車種専用",
-          "features": [
-            "車種専用設計",
-            "純正加工なし",
-            "音質劇的向上"
-          ],
-          "image": "/images/Audio/bmw_sound_upgrade.webp",
-          "id": "bmw-package"
-        },
-        {
-          "name": "Mercedes Benzスピーカー交換パッケージ",
-          "price": "88000",
-          "subType": "car",
-          "badge": "車種専用",
-          "features": [
-            "車種専用設計",
-            "純正加工なし",
-            "音質劇的向上"
-          ],
-          "image": "/images/Audio/mercedes-benz_sound_upgrade.webp",
-          "id": "mercedes-package"
+          "link": "/car-category",
+          "isDynamic": true,
+          "price": "81840"
         }
       ],
-      "images": []
+      "images": [],
+      "showFloatingCTA": false
     },
     {
       "id": "bass_power",
@@ -664,7 +515,7 @@
       "id": "custom_install",
       "category": "カスタムインストール・造作",
       "type": "audio",
-      "description": "音を耳で楽しむだけでなく、**匠の技**で視覚的にも美しく。**ピラー加工**や**アウター�����ッフル**など、世界に一台のカスタムを。",
+      "description": "音を耳で楽しむだけでなく、**匠の技**で視覚的にも美しく。**ピラー加工**や**アウター��������ッフル**など、世界に一台のカスタムを。",
       "showDescriptionInMenu": true,
       "showDescriptionInList": true,
       "items": [
@@ -1277,7 +1128,7 @@
           ]
         },
         {
-          "name": "純正交換タイプ 10型ドラレコミラー\n「車内用リアカメラ」",
+          "name": "純正交換タイプ 10型ドラレコミラー\n「車���用リアカメラ」",
           "price": "0",
           "badge": "NEW 4月下旬発売",
           "image": "/images/Security/d-mirror/dvr-dm1000a2-ic.webp",
@@ -2466,7 +2317,7 @@
           "fieldId": "item",
           "name": "Grgo ZVT II ＋ CANガード ＋ マイクロ波 ＋ ボンネット",
           "price": "373,800",
-          "description": "傾斜・トリプルセンサー標準�����������������������������������������������������������������������������������������������������������������������������������������������������������������������������������にマ�����������������������������������ク��������������波��������追加しました。。CANガードと1WAYリモコンも付属。",
+          "description": "傾斜・トリプルセ���サー標準������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������にマ���������������������������������������������������������ク��������������波��������追��しました。。CANガー��と1WAYリモ����������������ン��������������������付属。",
           "triple": true,
           "tilt": true,
           "bonnet": true,
@@ -2638,7 +2489,7 @@
           "name": "Panthera Z706 ＋ CANガード",
           "price": "449,800",
           "badge": "最強プラン",
-          "description": "ANG最強の組み合わせ。バックアップサイレン、全センサー、物理CAN対策の集大成。",
+          "description": "ANG最強の組み合わせ。バックアップサイレン、全センサー、物理CAN対���の集大成。",
           "triple": true,
           "tilt": true,
           "bonnet": true,
@@ -5993,6 +5844,7 @@
         "year": "Current Models",
         "image": "/images/Security/vehicle/crown.webp",
         "description": "...",
+        "audioLPs": [],
         "plans": [
           {
             "id": "crown-grgo-zv",
@@ -6136,6 +5988,7 @@
         "year": "2009-2023",
         "image": "/images/Security/vehicle/prado.webp",
         "description": "...",
+        "audioLPs": [],
         "plans": [
           {
             "id": "lc150-grgo-zv-keyless",
@@ -7300,473 +7153,3037 @@
   "audioEvents": [],
   "securityEvents": [],
   "standardLineLanding": {
+    "id": "line_1778920109545",
+    "name": "スピーカー交換・STANDARD line（10万円まで）",
+    "parentCategoryId": "speaker_package",
+    "isTemplate": false,
     "header": {
-      "badge": "スタンダードライン",
       "mainTitle": "STANDARD LINE",
-      "subTitle": "スピーカー交換パッケージ",
-      "description": "純正の音に不満がある方へ。音質アップの第一歩は確実なスピーカー交換から。ただユニットを取り替えるだけではなく、スピーカーの真価を発揮するための必須施工（ドアチューニング・専用バッフル・配線）をすべてセットにした、明朗会計のコミコミパッケージです。"
+      "subTitle": "スタンダードライン",
+      "badge": "スピーカー交換パッケージ",
+      "description": "10万円までのスピーカーの中から、お気に入りの1本を選べるパッケージです。ドアチューニングとスピーカーケーブルの交換もセットになっており、音にこだわりたい方の「最初の本格ステップ」としておすすめです。\nこの価格帯は各メーカーとも個性の強い人気モデルが揃っています。ただ、取り付けやすさを重視したモデルと、音質を最優先したモデルが混在している価格帯でもあります。見た目のスペックだけで選ぶと、いざ取り付けの段階で「このやり方はできない」となるケースも。商品選びの際は、ご希望のインストール方法と合っているかどうかも一緒に確認しながら進めることをおすすめします。\n埋め込み奥行きやツィーターマウントの有無も各モデルに記載していますので、参考にしてください。"
     },
     "pricing": {
       "specialPrice": "81840",
-      "normalPriceText": "通常目安: 117,700円",
-      "savingsText": "約 35,860円 お得!",
+      "fixedPrice": 41800,
+      "normalPriceText": "117700",
+      "savingsText": "35,860円 お得!",
       "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。"
     },
+    "sections": [
+      {
+        "id": "sec_banner",
+        "type": "banner",
+        "data": {
+          "title": "STANDARD LINE",
+          "subTitle": "スタンダードライン",
+          "image": "",
+          "height": "400px",
+          "opacity": 0.5,
+          "badge": "スピーカー交換パッケージ",
+          "bgColor": "#1e3a8a",
+          "description": "10万円までのスピーカーの中から、お気に入りの1本を選べるパッケージです。ドアチューニングとスピーカーケーブルの交換もセットになっており、音にこだわりたい方の「最初の本格ステップ」としておすすめです。\nこの価格帯は各メーカーとも個性の強い人気モデルが揃っています。ただ、取り付けやすさを重視したモデルと、音質を最優先したモデルが混在している価格帯でもあります。見た目のスペックだけで選ぶと、いざ取り付けの段階で「このやり方はできない」となるケースも。商品選びの際は、ご希望のインストール方法と合っているかどうかも一緒に確認しながら進めることをおすすめします。\n埋め込み奥行きやツィーターマウントの有無も各モデルに記載していますので、参考にしてください。"
+        }
+      },
+      {
+        "id": "sec_pricing",
+        "type": "pricing",
+        "data": {
+          "specialPrice": "81840",
+          "normalPrice": "117700",
+          "savingsText": "35,860円 お得!",
+          "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。"
+        }
+      },
+      {
+        "id": "sec_features",
+        "type": "features",
+        "data": {
+          "items": [
+            {
+              "title": "ドアチューニング Bコース",
+              "desc": "スピーカーの性能を最大限に引き出すための環境作り。ドア内部の共振を抑え、クリアな低域再生を実現します。",
+              "image": "/images/Audio/Speaker/door-b.webp"
+            },
+            {
+              "title": "カスタムインナーバッフル",
+              "desc": "車種に合わせて1台1台製作するバッフル。スピーカーを強固に固定し、音のレスポンスを高めます。",
+              "image": "/images/Audio/Speaker/baffle.webp"
+            },
+            {
+              "title": "ANGオリジナルケーブル",
+              "desc": "情報の損失を最小限に抑える高品位ケーブル。繊細な音のニュアンスまで余さず再生します。",
+              "image": "/images/Audio/Speaker/ang-cable.webp"
+            }
+          ],
+          "title": "スピーカーの実力を、正しく引き出す3つの施工",
+          "description": "スピーカーが本来の性能を発揮するための環境づくりが、このパッケージに含まれています。"
+        }
+      },
+      {
+        "id": "sec_pkg_summary",
+        "type": "package_summary",
+        "data": {
+          "title": "パッケージ内容",
+          "items": [
+            {
+              "title": "スピーカー",
+              "desc": "17cmモデル2WAYスピーカー（10万円までのモデルから選択）"
+            },
+            {
+              "title": "ドアチューニング Bコース",
+              "desc": "制振・防音処理",
+              "value": "¥27,500"
+            },
+            {
+              "title": "カスタムインナーバッフル",
+              "desc": "車種専用バーチ材マウント製作",
+              "value": "¥11,000"
+            },
+            {
+              "title": "ANGオリジナルスピーカーケーブル",
+              "desc": "高品位ケーブル（オーディオテクニカ製 ¥1,500/M相当を10m使用）",
+              "value": "¥16,500"
+            },
+            {
+              "title": "ツィーター取付",
+              "desc": "純正位置、もしくはオンダッシュ取り付け"
+            },
+            {
+              "title": "ワイヤリング工賃",
+              "desc": "正確な配線と極性チェックを含む",
+              "value": "¥22,000"
+            }
+          ],
+          "subtitle": "下記の内容が含まれたお得なパッケージとなっています。"
+        }
+      },
+      {
+        "id": "sec_upgrades",
+        "type": "upgrades",
+        "data": {
+          "courses": [
+            {
+              "name": "Bコース→Aコース",
+              "price": "+¥11,000",
+              "image": "/images/Audio/Speaker/door-b.webp",
+              "desc": "スピーカーの背圧処理にフェリソニDS-1.5WPを使用、及び制振材料の増量（通常¥16,500）"
+            },
+            {
+              "name": "Bコース→A+コース",
+              "price": "+¥22,000",
+              "image": "/images/Audio/Speaker/door-b.webp",
+              "desc": "スピーカーの背圧処理にフェリソニC2を使用、及び制振材料の増量（通常¥27,500）"
+            },
+            {
+              "name": "Bコース→Sコース",
+              "price": "+¥33,000",
+              "image": "/images/Audio/Speaker/door-b.webp",
+              "desc": "DS-1.5WPをAコース以上に増量使用、及び制振材料の増量、さらに最新複合マテリアルによる吸音・遮音処置（通常¥38,500）",
+              "pop": true
+            },
+            {
+              "name": "Bコース→S+コース",
+              "price": "+¥44,000",
+              "image": "/images/Audio/Speaker/door-b.webp",
+              "desc": "フェリソニC2をA+コース以上に増量使用、及び制振材料の増量、さらに最新複合マテリアルによる吸音・遮音処置（通常¥49,500）"
+            }
+          ],
+          "options": {
+            "metalBaffleDiscount": "20% OFF",
+            "tweeterMountPrice": "¥46,200〜",
+            "metalBaffleImage": "/images/Audio/Speaker/metalbaffle.webp",
+            "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp",
+            "metalBaffleDesc": "カロッツェリア製車種専用インナーバッフルのメタルバージョン。タイトで張りのある再生が可能になります。同時施工で定価より20%オフ。",
+            "tweeterMountDesc": "Aピラー等への埋め込み加工。反射を抑え、クリアな音像とクールなインテリアを実現。Aピラー: ¥46,200〜、ミラー裏: ¥57,750〜。"
+          },
+          "title": "アップグレード オプション",
+          "subtitle": "ドアチューニング グレードアップ 標準のBコースからAコース・Sコースへのグレードアップが可能です。スピーカーと同時施工の場合、お得な価格でご提供しています。"
+        }
+      },
+      {
+        "id": "sec_notes",
+        "type": "notes",
+        "data": {
+          "title": "施工に関する注意事項",
+          "items": [
+            "作業は<strong>1日お車をお預かり</strong>します（無料代車をご用意可能です）。",
+            "バッフル適合がない車種は別途<strong>¥5,500</strong>の製作費が必要になります。",
+            "ツィーター固定にマウント等が必要な車種は追加費用が発生する場合があります。",
+            "ドア通線に加工が必要な車両（ハーネスがカプラ等）は別途加工費用がかかる場合があります。"
+          ]
+        }
+      },
+      {
+        "id": "sec_speakers",
+        "type": "speakers",
+        "data": {
+          "speakers": [
+            {
+              "id": "spk_1779091883230",
+              "brand": "AUDISON",
+              "name": "APK 165 Ω2",
+              "image": "/images/Audio/Speaker/APK 165 Ω2.webp",
+              "standalonePrice": "30800",
+              "remarks": "TWのみ2Ω",
+              "mountingHoleSize": "141",
+              "depthSize": "58.5",
+              "hasGrille": "あり",
+              "hasTweeterMount": "あり",
+              "youtubeUrl": "https://youtu.be/bLHw8SO10Bc"
+            },
+            {
+              "id": "spk_1779091884255",
+              "brand": "VIBE",
+              "name": "VA-SLICK6C-V7",
+              "image": "/images/Audio/Speaker/VA-SLICK6C-V7.webp",
+              "standalonePrice": "39600",
+              "remarks": "パッシブあり",
+              "hasGrille": "あり",
+              "hasTweeterMount": "あり",
+              "mountingHoleSize": "142",
+              "depthSize": "61",
+              "youtubeUrl": "https://youtu.be/qe5WTXDNi6E"
+            },
+            {
+              "id": "spk_1779091884894",
+              "brand": "BLUE MOON AUDIO",
+              "name": "EX165",
+              "image": "/images/Audio/Speaker/EX165.webp",
+              "standalonePrice": "35200",
+              "remarks": "バイアンプ対応 4Ω",
+              "mountingHoleSize": "130",
+              "depthSize": "56.5",
+              "hasGrille": "なし",
+              "hasTweeterMount": "あり",
+              "youtubeUrl": "https://youtu.be/R0k8W8pN5is"
+            },
+            {
+              "id": "spk_1779091885462",
+              "brand": "KICKER",
+              "name": "CSS674",
+              "image": "/images/Audio/Speaker/CSS674.webp",
+              "standalonePrice": "40700",
+              "remarks": "パッシブあり",
+              "mountingHoleSize": "140",
+              "depthSize": "47",
+              "hasGrille": "あり",
+              "hasTweeterMount": "あり",
+              "youtubeUrl": "https://youtu.be/6FdEgXtALzY"
+            },
+            {
+              "id": "spk_1779091885974",
+              "brand": "carrozzeria",
+              "name": "TS-C1740S/TS-C1746S",
+              "image": "/images/Audio/Speaker/TS-C1746S.webp",
+              "standalonePrice": "open",
+              "remarks": "パッシブあり",
+              "fixedPriceOverride": "81840",
+              "mountingHoleSize": "137",
+              "depthSize": "57",
+              "hasGrille": "なし",
+              "hasTweeterMount": "あり",
+              "youtubeUrl": "https://youtu.be/ToQVJV9jK-g"
+            },
+            {
+              "id": "spk_1779091886510",
+              "brand": "ALPINE",
+              "name": "X-171S",
+              "image": "/images/Audio/Speaker/X-171S.webp",
+              "standalonePrice": "40700",
+              "remarks": "パッシブあり インライン",
+              "mountingHoleSize": "137",
+              "depthSize": "51",
+              "hasGrille": "なし",
+              "hasTweeterMount": "あり",
+              "youtubeUrl": "https://youtu.be/9ftZzHhT5wM"
+            },
+            {
+              "id": "spk_1779091886982",
+              "brand": "GROUND ZERO",
+              "name": "GZIC165.2SPL",
+              "image": "/images/Audio/Speaker/GZIC165.2SPL.webp",
+              "standalonePrice": "44000",
+              "remarks": "TWのみプロテクション",
+              "mountingHoleSize": "142.5",
+              "depthSize": "68",
+              "hasGrille": "あり",
+              "hasTweeterMount": "あり"
+            },
+            {
+              "id": "spk_1779091887502",
+              "brand": "GROUND ZERO",
+              "name": "GZIC 650FX",
+              "image": "/images/Audio/Speaker/GZIC 650FX.webp",
+              "standalonePrice": "48400",
+              "remarks": "パッシブあり /バイアンプ可 /フラッシュマウントのみ",
+              "mountingHoleSize": "142.5",
+              "depthSize": "44",
+              "hasGrille": "あり",
+              "hasTweeterMount": "なし",
+              "youtubeUrl": "https://youtu.be/D_piASeBr2s"
+            },
+            {
+              "id": "spk_1779091887982",
+              "brand": "HELIX",
+              "name": "CB K165.2-S3",
+              "image": "/images/Audio/Speaker/CB K165.2-S3.webp",
+              "standalonePrice": "44000",
+              "remarks": "パッシブあり /バイアンプ可 ",
+              "youtubeUrl": "https://youtu.be/aZ2mn_N8gVs",
+              "mountingHoleSize": "143",
+              "depthSize": "61.4",
+              "hasGrille": "あり",
+              "hasTweeterMount": "あり"
+            },
+            {
+              "id": "spk_1779091888582",
+              "brand": "BLAM",
+              "name": "SR 165X",
+              "image": "/images/Audio/Speaker/SR 165X.webp",
+              "standalonePrice": "47300",
+              "remarks": "TW25mm 3Ω",
+              "mountingHoleSize": "142",
+              "depthSize": "62.4",
+              "hasGrille": "なし",
+              "hasTweeterMount": "あり",
+              "youtubeUrl": "https://youtu.be/anRCVilehcI"
+            },
+            {
+              "id": "spk_1779091889047",
+              "brand": "DYNAUDIO",
+              "name": "ESOTAN 202",
+              "image": "/images/Audio/Speaker/ESOTAN 202.webp",
+              "standalonePrice": "60500",
+              "remarks": "パッシブあり",
+              "mountingHoleSize": "133",
+              "depthSize": "68.3",
+              "hasGrille": "なし",
+              "hasTweeterMount": "なし",
+              "youtubeUrl": "https://youtu.be/W8YVl6QgaTw"
+            },
+            {
+              "id": "spk_1779142935325",
+              "brand": "KICKER",
+              "name": "KSS6704",
+              "image": "/images/Audio/Speaker/KSS6704.webp",
+              "standalonePrice": "61600",
+              "remarks": "グリル別売り /パッシブあり",
+              "mountingHoleSize": "141",
+              "depthSize": "46",
+              "hasGrille": "あり",
+              "hasTweeterMount": "あり",
+              "youtubeUrl": "https://youtu.be/rV2gX6VtX3o"
+            },
+            {
+              "id": "spk_1779091889566",
+              "brand": "GROUND ZERO",
+              "name": "GZRC 165.2SQX-IV",
+              "image": "/images/Audio/Speaker/GZRC 165.2SQX-IV.webp",
+              "standalonePrice": "63800",
+              "remarks": "TWインライン /バイアンプ対応",
+              "youtubeUrl": "https://youtu.be/rV2gX6VtX3o",
+              "mountingHoleSize": "142.5",
+              "depthSize": "68",
+              "hasGrille": "あり",
+              "hasTweeterMount": "あり"
+            },
+            {
+              "id": "spk_1779091890095",
+              "brand": "BLAM",
+              "name": "L 165 S",
+              "image": "/images/Audio/Speaker/L 165 S.webp",
+              "standalonePrice": "63800",
+              "remarks": "TWインラインのみ 3Ω",
+              "mountingHoleSize": "142",
+              "depthSize": "61.7",
+              "hasGrille": "なし",
+              "hasTweeterMount": "あり",
+              "youtubeUrl": "https://youtu.be/9B-FkcMHI3w"
+            },
+            {
+              "id": "spk_1779091890655",
+              "brand": "HELIX",
+              "name": "Ci3 K165.2FM-S3 MK2",
+              "image": "/images/Audio/Speaker/Ci3 K165.2FM-S3 MK2.webp",
+              "standalonePrice": "66000",
+              "remarks": "グリル別途 /パッシブあり /バイアンプ",
+              "mountingHoleSize": "142",
+              "depthSize": "61",
+              "hasGrille": "あり",
+              "hasTweeterMount": "あり",
+              "youtubeUrl": "https://youtu.be/S7HEbCUv5ks"
+            },
+            {
+              "id": "spk_1779091891190",
+              "brand": "Focal",
+              "name": "PS 165 FSE",
+              "image": "/images/Audio/Speaker/PS 165 FSE.webp",
+              "standalonePrice": "77000",
+              "remarks": "パッシブあり",
+              "mountingHoleSize": "143",
+              "depthSize": "54.5",
+              "hasGrille": "なし",
+              "hasTweeterMount": "あり",
+              "youtubeUrl": "https://youtu.be/D49aol_HkKo"
+            },
+            {
+              "id": "spk_1779091891782",
+              "brand": "DLS",
+              "name": "RC6.2Q",
+              "image": "/images/Audio/Speaker/RC6.2Q.webp",
+              "standalonePrice": "77000",
+              "remarks": "パッシブあり",
+              "mountingHoleSize": "145",
+              "depthSize": "75",
+              "hasGrille": "なし",
+              "hasTweeterMount": "あり"
+            },
+            {
+              "id": "spk_1779091892358",
+              "brand": "DYNAUDIO",
+              "name": "ESOTAN232",
+              "image": "/images/Audio/Speaker/esotan232.webp",
+              "standalonePrice": "77000",
+              "remarks": "置き型マウント別売 /パッシブあり",
+              "mountingHoleSize": "135",
+              "depthSize": "67",
+              "hasGrille": "なし",
+              "hasTweeterMount": "あり",
+              "youtubeUrl": "https://youtu.be/byYM-uqoy2Q"
+            },
+            {
+              "id": "spk_1779091892878",
+              "brand": "carrozzeria",
+              "name": "TS-V174S",
+              "image": "/images/Audio/Speaker/TS-V174S.webp",
+              "standalonePrice": "79200",
+              "remarks": "パッシブあり /バイアンプ",
+              "mountingHoleSize": "137",
+              "depthSize": "61",
+              "hasGrille": "なし",
+              "hasTweeterMount": "あり",
+              "youtubeUrl": "https://youtu.be/XVG-UxCukkM"
+            },
+            {
+              "id": "spk_1779091893391",
+              "brand": "morel",
+              "name": "MAXIMO ULTRA 602 HE MK2",
+              "image": "/images/Audio/Speaker/MAXIMO ULTRA 602 HE MKII.webp",
+              "standalonePrice": "80300",
+              "remarks": "TWのみインライン /楕円マウント",
+              "youtubeUrl": "https://youtu.be/ZJvuipxFFR8",
+              "mountingHoleSize": "143",
+              "depthSize": "63",
+              "hasGrille": "なし",
+              "hasTweeterMount": "あり"
+            },
+            {
+              "id": "spk_1779091893927",
+              "brand": "FOCAL",
+              "name": "PS 165 FXE",
+              "image": "/images/Audio/Speaker/PS 165 FXE.webp",
+              "standalonePrice": "88000",
+              "remarks": "パッシブあり",
+              "mountingHoleSize": "143",
+              "depthSize": "77",
+              "hasGrille": "なし",
+              "hasTweeterMount": "あり"
+            },
+            {
+              "id": "spk_1779091894471",
+              "brand": "FOCAL",
+              "name": "ES 165 KE",
+              "image": "/images/Audio/Speaker/ES 165 KE.webp",
+              "standalonePrice": "96800",
+              "remarks": "パッシブあり",
+              "mountingHoleSize": "142",
+              "depthSize": "76",
+              "hasGrille": "なし",
+              "hasTweeterMount": "あり",
+              "youtubeUrl": "https://youtu.be/KJmnktRp3-A"
+            },
+            {
+              "id": "spk_1779091895007",
+              "brand": "morel",
+              "name": "TEMPO ULTRA 602 MK2",
+              "image": "/images/Audio/Speaker/TEMPO_ULTRA_602_MK2.webp",
+              "standalonePrice": "102300",
+              "remarks": "パッシブあり /楕円マウント",
+              "mountingHoleSize": "143",
+              "depthSize": "64",
+              "hasGrille": "あり",
+              "hasTweeterMount": "あり"
+            },
+            {
+              "id": "spk_1779091895543",
+              "brand": "BLAM",
+              "name": "165 S80",
+              "image": "/images/Audio/Speaker/165_S80.webp",
+              "standalonePrice": "104500",
+              "remarks": "バイアンプ対応 2Ω",
+              "mountingHoleSize": "141.9",
+              "depthSize": "73.5",
+              "hasGrille": "なし",
+              "hasTweeterMount": "あり"
+            }
+          ],
+          "title": "Speaker Lineup",
+          "hideSubtitle": false,
+          "subtitle": "右上の再生ボタンより音源試聴可能です。"
+        }
+      },
+      {
+        "id": "sec_1778923293452",
+        "type": "floating_cta",
+        "data": {}
+      }
+    ],
+    "status": "published",
+    "slug": "sp-standard",
     "features": {
       "doorTuning": {
-        "title": "ドアチューニング Bコース",
-        "desc": "薄い鉄板のドア内部の振動・共振を抑え、音の漏れを防ぐ制振・防音処理。（通常¥27,500相当）",
         "image": "/images/Audio/Speaker/door-b.webp"
       },
       "baffle": {
-        "title": "カスタムインナーバッフル",
-        "desc": "強固な土台を作り、不要な振動を徹底排除。音の立ち上がりと定位感が劇的に改善します。（通常¥11,000相当）",
         "image": "/images/Audio/Speaker/baffle.webp"
       },
       "cable": {
-        "title": "ANGオリジナルケーブル",
-        "desc": "オーディオテクニカ製ベースの高品位スピーカーケーブル(10m)で繊細な情報までロスなく伝送。（通常¥16,500相当）",
         "image": "/images/Audio/Speaker/ang-cable.webp"
       }
     },
     "upgrades": {
-      "courses": [
-        {
-          "name": "B → A コース",
-          "price": "+¥11,000",
-          "desc": "フェリソニDS-1.5WP使用・制振材増量"
-        },
-        {
-          "name": "B → A+ コース",
-          "price": "+¥22,000",
-          "desc": "フェリソニC2使用・制振材増量"
-        },
-        {
-          "name": "B → S コース",
-          "price": "+¥33,000",
-          "desc": "DS-1.5WPをさらに増量。最新マテリアル高密度施工",
-          "pop": true
-        },
-        {
-          "name": "B → S+ コース",
-          "price": "+¥44,000",
-          "desc": "フェリソニC2を贅沢に使用。最高峰の制振・吸音・遮音"
-        }
-      ],
       "options": {
-        "metalBaffleDiscount": "20% OFF",
-        "tweeterMountPrice": "¥46,200〜",
         "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
         "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
       }
     },
-    "id": "standard",
-    "slug": "sp-standard",
-    "name": "スタンダードライン",
-    "speakers": [
-      {
-        "id": "spk_1778622662466_f9c5",
-        "image": "/images/Audio/Speaker/GZIC165.2SPL.jpg",
-        "brand": "グランドゼロ",
-        "name": "GZIC165.2SPL",
-        "mountingHole": "140mm",
-        "mountingDepth": "50mm",
-        "standalonePrice": "¥30,000",
-        "planAppliedPrice": "¥70,000",
-        "taxExcludedPrice": "¥63,600",
-        "hasGrille": true,
-        "hasTweeterMount": true,
-        "remarks": "特長や注意点を入力してください"
-      },
-      {
-        "id": "spk_1778622688107_ntwu",
-        "image": "/images/Audio/Speaker/GZIC165.2SPL.jpg",
-        "brand": "グランドゼロ",
-        "name": "GZIC165.2SPL",
-        "mountingHole": "140mm",
-        "mountingDepth": "50mm",
-        "standalonePrice": "¥30,000",
-        "planAppliedPrice": "¥70,000",
-        "taxExcludedPrice": "¥63,600",
-        "hasGrille": true,
-        "hasTweeterMount": true,
-        "remarks": "特長や注意点を入力してください"
-      },
-      {
-        "id": "spk_1778622731468_ramm",
-        "image": "/images/Audio/Speaker/GZIC165.2SPL.jpg",
-        "brand": "Blam",
-        "name": "GZIC165.2SPL",
-        "mountingHole": "140mm",
-        "mountingDepth": "50mm",
-        "standalonePrice": "¥30,000",
-        "planAppliedPrice": "¥70,000",
-        "taxExcludedPrice": "¥63,600",
-        "hasGrille": true,
-        "hasTweeterMount": true,
-        "remarks": "特長や注意点を入力してください"
-      },
-      {
-        "id": "spk_1778629961746_knzh",
-        "image": "/images/Top/speaker.webp",
-        "brand": "新規メーカー",
-        "name": "新規モデル",
-        "mountingHole": "140mm",
-        "mountingDepth": "50mm",
-        "standalonePrice": "¥30,000",
-        "planAppliedPrice": "¥70,000",
-        "taxExcludedPrice": "¥63,600",
-        "hasGrille": true,
-        "hasTweeterMount": true,
-        "remarks": "特長や注意点を入力してください"
-      },
-      {
-        "id": "spk_1778629962684_4xor",
-        "image": "/images/Top/speaker.webp",
-        "brand": "新規メーカー",
-        "name": "新規モデル",
-        "mountingHole": "140mm",
-        "mountingDepth": "50mm",
-        "standalonePrice": "¥30,000",
-        "planAppliedPrice": "¥70,000",
-        "taxExcludedPrice": "¥63,600",
-        "hasGrille": true,
-        "hasTweeterMount": true,
-        "remarks": "特長や注意点を入力してください"
-      },
-      {
-        "id": "spk_1778629963566_vd3x",
-        "image": "/images/Top/speaker.webp",
-        "brand": "新規メーカー",
-        "name": "新規モデル",
-        "mountingHole": "140mm",
-        "mountingDepth": "50mm",
-        "standalonePrice": "¥30,000",
-        "planAppliedPrice": "¥70,000",
-        "taxExcludedPrice": "¥63,600",
-        "hasGrille": true,
-        "hasTweeterMount": true,
-        "remarks": "特長や注意点を入力してください"
-      },
-      {
-        "id": "spk_1778629964346_ljzr",
-        "image": "/images/Top/speaker.webp",
-        "brand": "新規メーカー",
-        "name": "新規モデル",
-        "mountingHole": "140mm",
-        "mountingDepth": "50mm",
-        "standalonePrice": "¥30,000",
-        "planAppliedPrice": "¥70,000",
-        "taxExcludedPrice": "¥63,600",
-        "hasGrille": true,
-        "hasTweeterMount": true,
-        "remarks": "特長や注意点を入力してください"
-      },
-      {
-        "id": "spk_1778629965140_imma",
-        "image": "/images/Top/speaker.webp",
-        "brand": "新規メーカー",
-        "name": "新規モデル",
-        "mountingHole": "140mm",
-        "mountingDepth": "50mm",
-        "standalonePrice": "¥30,000",
-        "planAppliedPrice": "¥70,000",
-        "taxExcludedPrice": "¥63,600",
-        "hasGrille": true,
-        "hasTweeterMount": true,
-        "remarks": "特長や注意点を入力してください"
-      },
-      {
-        "id": "spk_1778629965860_7r8r",
-        "image": "/images/Top/speaker.webp",
-        "brand": "新規メーカー",
-        "name": "新規モデル",
-        "mountingHole": "140mm",
-        "mountingDepth": "50mm",
-        "standalonePrice": "¥30,000",
-        "planAppliedPrice": "¥70,000",
-        "taxExcludedPrice": "¥63,600",
-        "hasGrille": true,
-        "hasTweeterMount": true,
-        "remarks": "特長や注意点を入力してください"
-      },
-      {
-        "id": "spk_1778629966598_oq88",
-        "image": "/images/Top/speaker.webp",
-        "brand": "新規メーカー",
-        "name": "新規モデル",
-        "mountingHole": "140mm",
-        "mountingDepth": "50mm",
-        "standalonePrice": "¥30,000",
-        "planAppliedPrice": "¥70,000",
-        "taxExcludedPrice": "¥63,600",
-        "hasGrille": true,
-        "hasTweeterMount": true,
-        "remarks": "特長や注意点を入力してください"
-      },
-      {
-        "id": "spk_1778629967262_y6we",
-        "image": "/images/Top/speaker.webp",
-        "brand": "新規メーカー",
-        "name": "新規モデル",
-        "mountingHole": "140mm",
-        "mountingDepth": "50mm",
-        "standalonePrice": "¥30,000",
-        "planAppliedPrice": "¥70,000",
-        "taxExcludedPrice": "¥63,600",
-        "hasGrille": true,
-        "hasTweeterMount": true,
-        "remarks": "特長や注意点を入力してください"
-      },
-      {
-        "id": "spk_1778629967873_ujug",
-        "image": "/images/Top/speaker.webp",
-        "brand": "新規メーカー",
-        "name": "新規モデル",
-        "mountingHole": "140mm",
-        "mountingDepth": "50mm",
-        "standalonePrice": "¥30,000",
-        "planAppliedPrice": "¥70,000",
-        "taxExcludedPrice": "¥63,600",
-        "hasGrille": true,
-        "hasTweeterMount": true,
-        "remarks": "特長や注意点を入力してください"
-      }
-    ]
+    "showInMenu": true,
+    "speakers": []
   },
   "audioLPs": [
     {
+      "id": "line_1778977596396",
+      "name": "スピーカー交換・BASIC line （コアキシャル）",
+      "parentCategoryId": "speaker_package",
+      "isTemplate": false,
       "header": {
-        "badge": "スタンダードライン",
-        "mainTitle": "STANDARD LINE",
-        "subTitle": "スピーカー交換パッケージ",
-        "description": "純正の音に不満がある方へ。音質アップの第一歩は確実なスピーカー交換から。ただユニットを取り替えるだけではなく、スピーカーの真価を発揮するための必須施工（ドアチューニング・専用バッフル・配線）をすべてセットにした、明朗会計のコミコミパッケージです。"
+        "mainTitle": "BASIC LINE（コアキシャル）",
+        "subTitle": "ベーシックライン",
+        "badge": "スピーカー交換パッケージ",
+        "description": "純正スピーカーを交換するだけで、音が明るく、華やかに変わります。\nこのパッケージで使うのは「コアキシャル（同軸）スピーカー」。ツィーター（高音）とミッドレンジ（中音）が一体になったタイプで、取り付けがシンプルなぶんコストも抑えられます。カーオーディオのシステムアップが初めての方に、まず試してほしいパッケージです。\n純正のフルレンジスピーカーから交換することで高音域がプラスされ、音の広がりがぐっとアップ。スピーカー本体から取り付け工賃まで含んだパッケージ価格でご提供しています。"
       },
       "pricing": {
-        "specialPrice": "81840",
-        "normalPriceText": "通常目安: 117,700円",
-        "savingsText": "約 35,860円 お得!",
-        "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。"
+        "specialPrice": "39600",
+        "fixedPrice": 17600,
+        "normalPriceText": "通常目安: 50,000円",
+        "savingsText": "約 10,000円 お得!",
+        "note": "※KICKER CSC674（22,000円）を選択した場合の例。"
       },
+      "sections": [
+        {
+          "id": "sec_banner",
+          "type": "banner",
+          "data": {
+            "title": "BASIC LINE（コアキシャル）",
+            "subTitle": "ベーシックライン",
+            "image": "",
+            "height": "400px",
+            "opacity": 0.5,
+            "badge": "スピーカー交換パッケージ",
+            "bgColor": "#1e3a8a",
+            "description": "純正スピーカーを交換するだけで、音が明るく、華やかに変わります。\nこのパッケージで使うのは「コアキシャル（同軸）スピーカー」。ツィーター（高音）とミッドレンジ（中音）が一体になったタイプで、取り付けがシンプルなぶんコストも抑えられます。カーオーディオのシステムアップが初めての方に、まず試してほしいパッケージです。\n純正のフルレンジスピーカーから交換することで高音域がプラスされ、音の広がりがぐっとアップ。スピーカー本体から取り付け工賃まで含んだパッケージ価格でご提供しています。"
+          }
+        },
+        {
+          "id": "sec_pricing_1779208759753_cafy",
+          "type": "pricing",
+          "data": {
+            "specialPrice": "39600",
+            "fixedPrice": 17600,
+            "normalPriceText": "通常目安: 50,000円",
+            "savingsText": "約 10,000円 お得!",
+            "note": "※KICKER CSC674（22,000円）を選択した場合の例。"
+          }
+        },
+        {
+          "id": "sec_features_1779208759753_rb7s",
+          "type": "features",
+          "data": {
+            "title": "手軽に良い音を！ベーシック施工",
+            "description": "スピーカー交換に必要な基本施工がセットになっています。",
+            "doorTuning": {
+              "title": "軽防振処理",
+              "desc": "スピーカー周辺の制振・防音処理",
+              "image": "/images/Audio/Speaker/door-b.webp"
+            },
+            "baffle": {
+              "title": "インナーバッフル",
+              "desc": "お車に適合したバッフル",
+              "image": "/images/Audio/Speaker/baffle.webp"
+            },
+            "cable": {
+              "title": "純正ケーブル活用",
+              "desc": "コストを抑えつつ確実な接続",
+              "image": "/images/Audio/Speaker/ang-cable.webp"
+            }
+          }
+        },
+        {
+          "id": "sec_pkg_summary",
+          "type": "package_summary",
+          "data": {
+            "title": "パッケージ内容",
+            "items": [
+              {
+                "title": "スピーカー",
+                "desc": "17cmモデルと10cmモデルの２種類をラインアップしています。お車のスピーカーサイズに合わせてお選びください"
+              },
+              {
+                "title": "軽防振",
+                "desc": "制振・防音処理",
+                "value": ""
+              },
+              {
+                "title": "カスタムインナーバッフル（17cmスピーカーのみ）",
+                "desc": "ジャストフィット（https://justfit.carrozzeria.pioneer/)の適合情報に合わせて製作",
+                "value": ""
+              },
+              {
+                "title": "スピーカー交換工賃",
+                "desc": "",
+                "value": ""
+              }
+            ],
+            "subtitle": "下記の内容が含まれたお得なパッケージとなっています。"
+          }
+        },
+        {
+          "id": "sec_notes",
+          "type": "notes",
+          "data": {
+            "title": "施工に関する注意事項",
+            "items": [
+              "作業は<strong>3～4時間お車をお預かり</strong>します（無料代車をご用意可能です）。",
+              "バッフル適合がない車種は別途<strong>¥5,500</strong>の製作費が必要になります。"
+            ]
+          }
+        },
+        {
+          "id": "sec_speakers",
+          "type": "speakers",
+          "data": {
+            "title": "Speaker Lineup",
+            "fixedPrice": 17600,
+            "speakers": [
+              {
+                "id": "spk_1778980699020",
+                "brand": "DLS",
+                "name": "M226",
+                "image": "/images/Audio/Speaker/M226.webp",
+                "standalonePrice": "33000",
+                "remarks": "４Ω　バイアンプ可能",
+                "hasGrille": "あり",
+                "mountingHoleSize": "144",
+                "depthSize": "46"
+              },
+              {
+                "id": "spk_1779081002394",
+                "brand": "ROCKFORD FOSGATE",
+                "name": "R165X3",
+                "image": "/images/Audio/Speaker/R165X3.webp",
+                "standalonePrice": "22000",
+                "remarks": "4Ω　3way",
+                "hasGrille": "あり",
+                "mountingHoleSize": "140",
+                "depthSize": "54.5"
+              },
+              {
+                "id": "spk_1779081588604",
+                "brand": "GROUND ZERO",
+                "name": "GZIF 6501FX",
+                "image": "/images/Audio/Speaker/GZIF_6501FX.webp",
+                "standalonePrice": "25300",
+                "remarks": "エクストラフラット",
+                "hasGrille": "あり",
+                "mountingHoleSize": "142.5",
+                "depthSize": "44"
+              },
+              {
+                "id": "spk_1779081589284",
+                "brand": "KICKER",
+                "name": "CSC674",
+                "image": "/images/Audio/Speaker/csc674.webp",
+                "standalonePrice": "22000",
+                "remarks": "ゼロツイーター",
+                "mountingHoleSize": "140",
+                "depthSize": "47",
+                "hasGrille": "あり"
+              },
+              {
+                "id": "spk_1779082153510",
+                "brand": "AUDISON",
+                "name": "APX 6.5",
+                "image": "/images/Audio/Speaker/APX 6.5.webp",
+                "standalonePrice": "17600",
+                "remarks": "グリル別売り",
+                "mountingHoleSize": "141",
+                "depthSize": "57",
+                "hasGrille": "あり"
+              },
+              {
+                "id": "spk_1779082153813",
+                "brand": "AUDISON",
+                "name": "APX 690",
+                "image": "/images/Audio/Speaker/APX 690.webp",
+                "standalonePrice": "25300",
+                "remarks": "楕円スピーカー",
+                "mountingHoleSize": "151/222",
+                "depthSize": "81",
+                "hasGrille": "あり"
+              }
+            ],
+            "subtitle": "17cmスピーカー"
+          }
+        },
+        {
+          "id": "sec_1778980074728",
+          "type": "speakers",
+          "data": {
+            "speakers": [
+              {
+                "id": "spk_1778980397673",
+                "brand": "KICKER",
+                "name": "CSC44",
+                "image": "/images/Audio/Speaker/CSC44.webp",
+                "standalonePrice": "14850",
+                "remarks": "",
+                "mountingHoleSize": "95",
+                "depthSize": "46",
+                "hasGrille": "あり"
+              },
+              {
+                "id": "spk_1778980409221",
+                "brand": "morel",
+                "name": "MAXIMO ULTRA COAX 402 MKII",
+                "image": "/images/Audio/Speaker/MAXIMO ULTRA 402 COAX MKII.webp",
+                "standalonePrice": "45100",
+                "remarks": "",
+                "hasGrille": "あり",
+                "depthSize": "52",
+                "fixedPriceOverride": "6600"
+              },
+              {
+                "id": "spk_1779083859891",
+                "brand": "AUDISON",
+                "name": "APX 4",
+                "image": "/images/Audio/Speaker/APX 4.webp",
+                "standalonePrice": "15400",
+                "remarks": "グリル別売り",
+                "mountingHoleSize": "93",
+                "depthSize": "45",
+                "hasGrille": "あり"
+              },
+              {
+                "id": "spk_1779083860331",
+                "brand": "BLAM",
+                "name": "100RFC",
+                "image": "/images/Audio/Speaker/100 RFC.webp",
+                "standalonePrice": "20900",
+                "remarks": "2Ω",
+                "mountingHoleSize": "93",
+                "depthSize": "57",
+                "hasGrille": "なし"
+              }
+            ],
+            "title": "",
+            "fixedPrice": 7700,
+            "subtitle": "10cmスピーカー",
+            "hideTitle": true
+          }
+        },
+        {
+          "id": "sec_1778923293452",
+          "type": "floating_cta",
+          "data": {}
+        }
+      ],
+      "status": "published",
+      "slug": "basiccoax",
       "features": {
         "doorTuning": {
-          "title": "ドアチューニング Bコース",
-          "desc": "薄い鉄板のドア内部の振動・共振を抑え、音の漏れを防ぐ制振・防音処理。（通常¥27,500相当）",
           "image": "/images/Audio/Speaker/door-b.webp"
         },
         "baffle": {
-          "title": "カスタムインナーバッフル",
-          "desc": "強固な土台を作り、不要な振動を徹底排除。音の立ち上がりと定位感が劇的に改善します。（通常¥11,000相当）",
           "image": "/images/Audio/Speaker/baffle.webp"
         },
         "cable": {
-          "title": "ANGオリジナルケーブル",
-          "desc": "オーディオテクニカ製ベースの高品位スピーカーケーブル(10m)で繊細な情報までロスなく伝送。（通常¥16,500相当）",
           "image": "/images/Audio/Speaker/ang-cable.webp"
         }
       },
       "upgrades": {
-        "courses": [
-          {
-            "name": "B → A コース",
-            "price": "+¥11,000",
-            "desc": "フェリソニDS-1.5WP使用・制振材増量"
-          },
-          {
-            "name": "B → A+ コース",
-            "price": "+¥22,000",
-            "desc": "フェリソニC2使用・制振材増量"
-          },
-          {
-            "name": "B → S コース",
-            "price": "+¥33,000",
-            "desc": "DS-1.5WPをさらに増量。最新マテリアル高密度施工",
-            "pop": true
-          },
-          {
-            "name": "B → S+ コース",
-            "price": "+¥44,000",
-            "desc": "フェリソニC2を贅沢に使用。最高峰の制振・吸音・遮音"
-          }
-        ],
         "options": {
-          "metalBaffleDiscount": "20% OFF",
-          "tweeterMountPrice": "¥46,200〜",
           "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
           "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
         }
       },
-      "id": "standard",
+      "showInMenu": true,
+      "speakers": []
+    },
+    {
+      "id": "line_1778978221406",
+      "name": "スピーカー交換・BASIC line （セパレート） ",
+      "parentCategoryId": "speaker_package",
+      "isTemplate": false,
+      "header": {
+        "mainTitle": "BASIC LINE（セパレート）",
+        "subTitle": "ベーシックライン",
+        "badge": "スピーカー交換パッケージ",
+        "description": "ツィーター（高音）とミッドレンジ（中低音）が別々になったセパレートタイプのスピーカーに交換するパッケージです。カーオーディオのシステムアップが初めての方にもおすすめです。\nコストを抑えながらセパレートの良さを体感していただけるよう、ネットワーク（音域を分離するユニット）はインラインタイプを中心にラインアップしています。ツィーターは純正位置またはダッシュボード上へのマウント取り付けが基本です。"
+      },
+      "pricing": {
+        "specialPrice": "64900",
+        "fixedPrice": 24200,
+        "normalPriceText": "通常目安: 80,000円",
+        "savingsText": "約 15,000円 お得!",
+        "note": "※KICKER CSS674（40,700円）を選択した場合の例。"
+      },
+      "sections": [
+        {
+          "id": "sec_banner",
+          "type": "banner",
+          "data": {
+            "title": "BASIC LINE（セパレート）",
+            "subTitle": "ベーシックライン",
+            "image": "",
+            "height": "400px",
+            "opacity": 0.5,
+            "badge": "スピーカー交換パッケージ",
+            "bgColor": "#1e3a8a",
+            "description": "ツィーター（高音）とミッドレンジ（中低音）が別々になったセパレートタイプのスピーカーに交換するパッケージです。カーオーディオのシステムアップが初めての方にもおすすめです。\nコストを抑えながらセパレートの良さを体感していただけるよう、ネットワーク（音域を分離するユニット）はインラインタイプを中心にラインアップしています。ツィーターは純正位置またはダッシュボード上へのマウント取り付けが基本です。"
+          }
+        },
+        {
+          "id": "sec_pricing_1779208759753_q0sp",
+          "type": "pricing",
+          "data": {
+            "specialPrice": "64900",
+            "fixedPrice": 24200,
+            "normalPriceText": "通常目安: 80,000円",
+            "savingsText": "約 15,000円 お得!",
+            "note": "※KICKER CSS674（40,700円）を選択した場合の例。"
+          }
+        },
+        {
+          "id": "sec_features_1779208759753_x7hl",
+          "type": "features",
+          "data": {
+            "title": "セパレートの魅力を引き出す施工",
+            "description": "高音と中低音を分けることで、よりクリアな音像を実現します。",
+            "doorTuning": {
+              "title": "軽防振処理",
+              "desc": "スピーカー周辺の制振・防音処理",
+              "image": "/images/Audio/Speaker/door-b.webp"
+            },
+            "baffle": {
+              "title": "インナーバッフル",
+              "desc": "お車に適合したバッフル",
+              "image": "/images/Audio/Speaker/baffle.webp"
+            },
+            "cable": {
+              "title": "ツィーター取付",
+              "desc": "純正位置またはダッシュボード上",
+              "image": "/images/Audio/Speaker/tw-mount.webp"
+            }
+          }
+        },
+        {
+          "id": "sec_pkg_summary",
+          "type": "package_summary",
+          "data": {
+            "title": "パッケージ内容",
+            "items": [
+              {
+                "title": "スピーカー",
+                "desc": "17cmモデルと10cmモデルの２種類をラインアップしています。お車のスピーカーサイズに合わせてお選びください"
+              },
+              {
+                "title": "軽防振",
+                "desc": "制振・防音処理",
+                "value": ""
+              },
+              {
+                "title": "カスタムインナーバッフル（17cmスピーカーのみ）",
+                "desc": "ジャストフィット（https://justfit.carrozzeria.pioneer/)の適合情報に合わせて製作",
+                "value": ""
+              },
+              {
+                "title": "スピーカー交換工賃",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "ツイーター取り付け",
+                "desc": "純正位置もしくはオンダッシュ取り付け",
+                "value": ""
+              }
+            ],
+            "subtitle": "下記の内容が含まれたお得なパッケージとなっています。"
+          }
+        },
+        {
+          "id": "sec_notes",
+          "type": "notes",
+          "data": {
+            "title": "施工に関する注意事項",
+            "items": [
+              "作業は<strong>3～4時間お車をお預かり</strong>します（無料代車をご用意可能です）。",
+              "バッフル適合がない車種は別途<strong>¥5,500</strong>の製作費が必要になります。",
+              "ツィーター固定にマウント等が必要な車種は追加費用が発生する場合があります。"
+            ]
+          }
+        },
+        {
+          "id": "sec_speakers",
+          "type": "speakers",
+          "data": {
+            "title": "Speaker Lineup",
+            "speakers": [
+              {
+                "id": "spk_1779089013844",
+                "brand": "ROCKFORD FOSGATE",
+                "name": "R1675-S",
+                "image": "/images/Audio/Speaker/R1675-S.webp",
+                "standalonePrice": "38500",
+                "remarks": "TW内にハイパスフィルター内蔵",
+                "hasGrille": "あり",
+                "hasTweeterMount": "あり",
+                "mountingHoleSize": "147.5",
+                "depthSize": "51.2"
+              },
+              {
+                "id": "spk_1779089430284",
+                "brand": "GROUND ZERO",
+                "name": "GZIC165.2SPL",
+                "image": "/images/Audio/Speaker/GZIC165.2SPL.webp",
+                "standalonePrice": "44000",
+                "remarks": "TWのみプロテクション",
+                "mountingHoleSize": "142.5",
+                "depthSize": "68",
+                "hasGrille": "あり",
+                "hasTweeterMount": "あり"
+              },
+              {
+                "id": "spk_1779089433628",
+                "brand": "BLAM",
+                "name": "SR 165S",
+                "image": "/images/Audio/Speaker/SR 165S.webp",
+                "standalonePrice": "38500",
+                "remarks": "TWのみプロテクション　3Ω",
+                "hasGrille": "なし",
+                "hasTweeterMount": "あり",
+                "mountingHoleSize": "142",
+                "depthSize": "62.4"
+              },
+              {
+                "id": "spk_1779089434476",
+                "brand": "AUDISON",
+                "name": "APK 165",
+                "image": "/images/Audio/Speaker/APK 165.webp",
+                "standalonePrice": "30800",
+                "remarks": "TWのみプロテクション　4Ω",
+                "mountingHoleSize": "141",
+                "depthSize": "58.5",
+                "hasGrille": "あり",
+                "hasTweeterMount": "なし"
+              },
+              {
+                "id": "spk_1779089435148",
+                "brand": "HELIX",
+                "name": "CB C165.2-S3",
+                "image": "/images/Audio/Speaker/CB C165.2-S3.webp",
+                "standalonePrice": "44000",
+                "remarks": "TWのみプロテクション",
+                "hasGrille": "なし",
+                "hasTweeterMount": "あり",
+                "mountingHoleSize": "143",
+                "depthSize": "61.4"
+              },
+              {
+                "id": "spk_1779089435572",
+                "brand": "BLUE MOON AUDIO",
+                "name": "EX165",
+                "image": "/images/Audio/Speaker/EX165.webp",
+                "standalonePrice": "35200",
+                "remarks": "TW/MID インラインNW",
+                "mountingHoleSize": "130",
+                "depthSize": "56.5",
+                "hasGrille": "なし",
+                "hasTweeterMount": "あり"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec_1778923293452",
+          "type": "floating_cta",
+          "data": {}
+        }
+      ],
+      "status": "published",
+      "slug": "basicsep",
+      "features": {
+        "doorTuning": {
+          "image": "/images/Audio/Speaker/door-b.webp"
+        },
+        "baffle": {
+          "image": "/images/Audio/Speaker/baffle.webp"
+        },
+        "cable": {
+          "image": "/images/Audio/Speaker/ang-cable.webp"
+        }
+      },
+      "upgrades": {
+        "options": {
+          "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
+          "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
+        }
+      },
+      "showInMenu": true,
+      "speakers": []
+    },
+    {
+      "id": "line_1778920109545",
+      "name": "スピーカー交換・STANDARD line（10万円まで）",
+      "parentCategoryId": "speaker_package",
+      "isTemplate": false,
+      "header": {
+        "mainTitle": "STANDARD LINE",
+        "subTitle": "スタンダードライン",
+        "badge": "スピーカー交換パッケージ",
+        "description": "10万円までのスピーカーの中から、お気に入りの1本を選べるパッケージです。ドアチューニングとスピーカーケーブルの交換もセットになっており、音にこだわりたい方の「最初の本格ステップ」としておすすめです。\nこの価格帯は各メーカーとも個性の強い人気モデルが揃っています。ただ、取り付けやすさを重視したモデルと、音質を最優先したモデルが混在している価格帯でもあります。見た目のスペックだけで選ぶと、いざ取り付けの段階で「このやり方はできない」となるケースも。商品選びの際は、ご希望のインストール方法と合っているかどうかも一緒に確認しながら進めることをおすすめします。\n埋め込み奥行きやツィーターマウントの有無も各モデルに記載していますので、参考にしてください。"
+      },
+      "pricing": {
+        "specialPrice": "82500",
+        "fixedPrice": 41800,
+        "normalPriceText": "通常目安: 110,000円",
+        "savingsText": "約 27,500円 お得!",
+        "note": "※KICKER CSS674（40,700円）を選択した場合の例。"
+      },
+      "sections": [
+        {
+          "id": "sec_banner",
+          "type": "banner",
+          "data": {
+            "title": "STANDARD LINE",
+            "subTitle": "スタンダードライン",
+            "image": "",
+            "height": "400px",
+            "opacity": 0.5,
+            "badge": "スピーカー交換パッケージ",
+            "bgColor": "#1e3a8a",
+            "description": "10万円までのスピーカーの中から、お気に入りの1本を選べるパッケージです。ドアチューニングとスピーカーケーブルの交換もセットになっており、音にこだわりたい方の「最初の本格ステップ」としておすすめです。\nこの価格帯は各メーカーとも個性の強い人気モデルが揃っています。ただ、取り付けやすさを重視したモデルと、音質を最優先したモデルが混在している価格帯でもあります。見た目のスペックだけで選ぶと、いざ取り付けの段階で「このやり方はできない」となるケースも。商品選びの際は、ご希望のインストール方法と合っているかどうかも一緒に確認しながら進めることをおすすめします。\n埋め込み奥行きやツィーターマウントの有無も各モデルに記載していますので、参考にしてください。"
+          }
+        },
+        {
+          "id": "sec_pricing",
+          "type": "pricing",
+          "data": {
+            "specialPrice": "82500",
+            "fixedPrice": 41800,
+            "normalPriceText": "通常目安: 110,000円",
+            "savingsText": "約 27,500円 お得!",
+            "note": "※KICKER CSS674（40,700円）を選択した場合の例。"
+          }
+        },
+        {
+          "id": "sec_features",
+          "type": "features",
+          "data": {
+            "items": [
+              {
+                "title": "ドアチューニング Bコース",
+                "desc": "スピーカーの性能を最大限に引き出すための環境作り。ドア内部の共振を抑え、クリアな低域再生を実現します。",
+                "image": "/images/Audio/Speaker/door-b.webp"
+              },
+              {
+                "title": "カスタムインナーバッフル",
+                "desc": "車種に合わせて1台1台製作するバッフル。スピーカーを強固に固定し、音のレスポンスを高めます。",
+                "image": "/images/Audio/Speaker/baffle.webp"
+              },
+              {
+                "title": "ANGオリジナルケーブル",
+                "desc": "情報の損失を最小限に抑える高品位ケーブル。繊細な音のニュアンスまで余さず再生します。",
+                "image": "/images/Audio/Speaker/ang-cable.webp"
+              }
+            ],
+            "title": "スピーカーの実力を、正しく引き出す3つの施工",
+            "description": "スピーカーが本来の性能を発揮するための環境づくりが、このパッケージに含まれています。"
+          }
+        },
+        {
+          "id": "sec_pkg_summary",
+          "type": "package_summary",
+          "data": {
+            "title": "パッケージ内容",
+            "items": [
+              {
+                "title": "スピーカー",
+                "desc": "17cmモデル2WAYスピーカー（10万円までのモデルから選択）"
+              },
+              {
+                "title": "ドアチューニング Bコース",
+                "desc": "制振・防音処理",
+                "value": "¥27,500"
+              },
+              {
+                "title": "カスタムインナーバッフル",
+                "desc": "車種専用バーチ材マウント製作",
+                "value": "¥11,000"
+              },
+              {
+                "title": "ANGオリジナルスピーカーケーブル",
+                "desc": "高品位ケーブル（オーディオテクニカ製 ¥1,500/M相当を10m使用）",
+                "value": "¥16,500"
+              },
+              {
+                "title": "ツィーター取付",
+                "desc": "純正位置、もしくはオンダッシュ取り付け"
+              },
+              {
+                "title": "ワイヤリング工賃",
+                "desc": "正確な配線と極性チェックを含む",
+                "value": "¥22,000"
+              }
+            ],
+            "subtitle": "下記の内容が含まれたお得なパッケージとなっています。"
+          }
+        },
+        {
+          "id": "sec_upgrades",
+          "type": "upgrades",
+          "data": {
+            "courses": [
+              {
+                "name": "Bコース→Aコース",
+                "price": "+¥11,000",
+                "image": "/images/Audio/Speaker/door-b.webp",
+                "desc": "スピーカーの背圧処理にフェリソニDS-1.5WPを使用、及び制振材料の増量（通常¥16,500）"
+              },
+              {
+                "name": "Bコース→A+コース",
+                "price": "+¥22,000",
+                "image": "/images/Audio/Speaker/door-b.webp",
+                "desc": "スピーカーの背圧処理にフェリソニC2を使用、及び制振材料の増量（通常¥27,500）"
+              },
+              {
+                "name": "Bコース→Sコース",
+                "price": "+¥33,000",
+                "image": "/images/Audio/Speaker/door-b.webp",
+                "desc": "DS-1.5WPをAコース以上に増量使用、及び制振材料の増量、さらに最新複合マテリアルによる吸音・遮音処置（通常¥38,500）",
+                "pop": true
+              },
+              {
+                "name": "Bコース→S+コース",
+                "price": "+¥44,000",
+                "image": "/images/Audio/Speaker/door-b.webp",
+                "desc": "フェリソニC2をA+コース以上に増量使用、及び制振材料の増量、さらに最新複合マテリアルによる吸音・遮音処置（通常¥49,500）"
+              }
+            ],
+            "options": {
+              "metalBaffleDiscount": "20% OFF",
+              "tweeterMountPrice": "¥46,200〜",
+              "metalBaffleImage": "/images/Audio/Speaker/metalbaffle.webp",
+              "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp",
+              "metalBaffleDesc": "カロッツェリア製車種専用インナーバッフルのメタルバージョン。タイトで張りのある再生が可能になります。同時施工で定価より20%オフ。",
+              "tweeterMountDesc": "Aピラー等への埋め込み加工。反射を抑え、クリアな音像とクールなインテリアを実現。Aピラー: ¥46,200〜、ミラー裏: ¥57,750〜。"
+            },
+            "title": "アップグレード オプション",
+            "subtitle": "ドアチューニング グレードアップ 標準のBコースからAコース・Sコースへのグレードアップが可能です。スピーカーと同時施工の場合、お得な価格でご提供しています。"
+          }
+        },
+        {
+          "id": "sec_notes",
+          "type": "notes",
+          "data": {
+            "title": "施工に関する注意事項",
+            "items": [
+              "作業は<strong>1日お車をお預かり</strong>します（無料代車をご用意可能です）。",
+              "バッフル適合がない車種は別途<strong>¥5,500</strong>の製作費が必要になります。",
+              "ツィーター固定にマウント等が必要な車種は追加費用が発生する場合があります。",
+              "ドア通線に加工が必要な車両（ハーネスがカプラ等）は別途加工費用がかかる場合があります。"
+            ]
+          }
+        },
+        {
+          "id": "sec_speakers",
+          "type": "speakers",
+          "data": {
+            "speakers": [
+              {
+                "id": "spk_1779091883230",
+                "brand": "AUDISON",
+                "name": "APK 165 Ω2",
+                "image": "/images/Audio/Speaker/APK 165 Ω2.webp",
+                "standalonePrice": "30800",
+                "remarks": "TWのみ2Ω",
+                "mountingHoleSize": "141",
+                "depthSize": "58.5",
+                "hasGrille": "あり",
+                "hasTweeterMount": "あり",
+                "youtubeUrl": "https://youtu.be/bLHw8SO10Bc"
+              },
+              {
+                "id": "spk_1779091884255",
+                "brand": "VIBE",
+                "name": "VA-SLICK6C-V7",
+                "image": "/images/Audio/Speaker/VA-SLICK6C-V7.webp",
+                "standalonePrice": "39600",
+                "remarks": "パッシブあり",
+                "hasGrille": "あり",
+                "hasTweeterMount": "あり",
+                "mountingHoleSize": "142",
+                "depthSize": "61",
+                "youtubeUrl": "https://youtu.be/qe5WTXDNi6E"
+              },
+              {
+                "id": "spk_1779091884894",
+                "brand": "BLUE MOON AUDIO",
+                "name": "EX165",
+                "image": "/images/Audio/Speaker/EX165.webp",
+                "standalonePrice": "35200",
+                "remarks": "バイアンプ対応 4Ω",
+                "mountingHoleSize": "130",
+                "depthSize": "56.5",
+                "hasGrille": "なし",
+                "hasTweeterMount": "あり",
+                "youtubeUrl": "https://youtu.be/R0k8W8pN5is"
+              },
+              {
+                "id": "spk_1779091885462",
+                "brand": "KICKER",
+                "name": "CSS674",
+                "image": "/images/Audio/Speaker/CSS674.webp",
+                "standalonePrice": "40700",
+                "remarks": "パッシブあり",
+                "mountingHoleSize": "140",
+                "depthSize": "47",
+                "hasGrille": "あり",
+                "hasTweeterMount": "あり",
+                "youtubeUrl": "https://youtu.be/6FdEgXtALzY"
+              },
+              {
+                "id": "spk_1779091885974",
+                "brand": "carrozzeria",
+                "name": "TS-C1740S/TS-C1746S",
+                "image": "/images/Audio/Speaker/TS-C1746S.webp",
+                "standalonePrice": "open",
+                "remarks": "パッシブあり",
+                "fixedPriceOverride": "81840",
+                "mountingHoleSize": "137",
+                "depthSize": "57",
+                "hasGrille": "なし",
+                "hasTweeterMount": "あり",
+                "youtubeUrl": "https://youtu.be/ToQVJV9jK-g"
+              },
+              {
+                "id": "spk_1779091886510",
+                "brand": "ALPINE",
+                "name": "X-171S",
+                "image": "/images/Audio/Speaker/X-171S.webp",
+                "standalonePrice": "40700",
+                "remarks": "パッシブあり インライン",
+                "mountingHoleSize": "137",
+                "depthSize": "51",
+                "hasGrille": "なし",
+                "hasTweeterMount": "あり",
+                "youtubeUrl": "https://youtu.be/9ftZzHhT5wM"
+              },
+              {
+                "id": "spk_1779091886982",
+                "brand": "GROUND ZERO",
+                "name": "GZIC165.2SPL",
+                "image": "/images/Audio/Speaker/GZIC165.2SPL.webp",
+                "standalonePrice": "44000",
+                "remarks": "TWのみプロテクション",
+                "mountingHoleSize": "142.5",
+                "depthSize": "68",
+                "hasGrille": "あり",
+                "hasTweeterMount": "あり"
+              },
+              {
+                "id": "spk_1779091887502",
+                "brand": "GROUND ZERO",
+                "name": "GZIC 650FX",
+                "image": "/images/Audio/Speaker/GZIC 650FX.webp",
+                "standalonePrice": "48400",
+                "remarks": "パッシブあり /バイアンプ可 /フラッシュマウントのみ",
+                "mountingHoleSize": "142.5",
+                "depthSize": "44",
+                "hasGrille": "あり",
+                "hasTweeterMount": "なし",
+                "youtubeUrl": "https://youtu.be/D_piASeBr2s"
+              },
+              {
+                "id": "spk_1779091887982",
+                "brand": "HELIX",
+                "name": "CB K165.2-S3",
+                "image": "/images/Audio/Speaker/CB K165.2-S3.webp",
+                "standalonePrice": "44000",
+                "remarks": "パッシブあり /バイアンプ可 ",
+                "youtubeUrl": "https://youtu.be/aZ2mn_N8gVs",
+                "mountingHoleSize": "143",
+                "depthSize": "61.4",
+                "hasGrille": "あり",
+                "hasTweeterMount": "あり"
+              },
+              {
+                "id": "spk_1779091888582",
+                "brand": "BLAM",
+                "name": "SR 165X",
+                "image": "/images/Audio/Speaker/SR 165X.webp",
+                "standalonePrice": "47300",
+                "remarks": "TW25mm 3Ω",
+                "mountingHoleSize": "142",
+                "depthSize": "62.4",
+                "hasGrille": "なし",
+                "hasTweeterMount": "あり",
+                "youtubeUrl": "https://youtu.be/anRCVilehcI"
+              },
+              {
+                "id": "spk_1779091889047",
+                "brand": "DYNAUDIO",
+                "name": "ESOTAN 202",
+                "image": "/images/Audio/Speaker/ESOTAN 202.webp",
+                "standalonePrice": "60500",
+                "remarks": "パッシブあり",
+                "mountingHoleSize": "133",
+                "depthSize": "68.3",
+                "hasGrille": "なし",
+                "hasTweeterMount": "なし",
+                "youtubeUrl": "https://youtu.be/W8YVl6QgaTw"
+              },
+              {
+                "id": "spk_1779142935325",
+                "brand": "KICKER",
+                "name": "KSS6704",
+                "image": "/images/Audio/Speaker/KSS6704.webp",
+                "standalonePrice": "61600",
+                "remarks": "グリル別売り /パッシブあり",
+                "mountingHoleSize": "141",
+                "depthSize": "46",
+                "hasGrille": "あり",
+                "hasTweeterMount": "あり",
+                "youtubeUrl": "https://youtu.be/rV2gX6VtX3o"
+              },
+              {
+                "id": "spk_1779091889566",
+                "brand": "GROUND ZERO",
+                "name": "GZRC 165.2SQX-IV",
+                "image": "/images/Audio/Speaker/GZRC 165.2SQX-IV.webp",
+                "standalonePrice": "63800",
+                "remarks": "TWインライン /バイアンプ対応",
+                "youtubeUrl": "https://youtu.be/rV2gX6VtX3o",
+                "mountingHoleSize": "142.5",
+                "depthSize": "68",
+                "hasGrille": "あり",
+                "hasTweeterMount": "あり"
+              },
+              {
+                "id": "spk_1779091890095",
+                "brand": "BLAM",
+                "name": "L 165 S",
+                "image": "/images/Audio/Speaker/L 165 S.webp",
+                "standalonePrice": "63800",
+                "remarks": "TWインラインのみ 3Ω",
+                "mountingHoleSize": "142",
+                "depthSize": "61.7",
+                "hasGrille": "なし",
+                "hasTweeterMount": "あり",
+                "youtubeUrl": "https://youtu.be/9B-FkcMHI3w"
+              },
+              {
+                "id": "spk_1779091890655",
+                "brand": "HELIX",
+                "name": "Ci3 K165.2FM-S3 MK2",
+                "image": "/images/Audio/Speaker/Ci3 K165.2FM-S3 MK2.webp",
+                "standalonePrice": "66000",
+                "remarks": "グリル別途 /パッシブあり /バイアンプ",
+                "mountingHoleSize": "142",
+                "depthSize": "61",
+                "hasGrille": "あり",
+                "hasTweeterMount": "あり",
+                "youtubeUrl": "https://youtu.be/S7HEbCUv5ks"
+              },
+              {
+                "id": "spk_1779091891190",
+                "brand": "Focal",
+                "name": "PS 165 FSE",
+                "image": "/images/Audio/Speaker/PS 165 FSE.webp",
+                "standalonePrice": "77000",
+                "remarks": "パッシブあり",
+                "mountingHoleSize": "143",
+                "depthSize": "54.5",
+                "hasGrille": "なし",
+                "hasTweeterMount": "あり",
+                "youtubeUrl": "https://youtu.be/D49aol_HkKo"
+              },
+              {
+                "id": "spk_1779091891782",
+                "brand": "DLS",
+                "name": "RC6.2Q",
+                "image": "/images/Audio/Speaker/RC6.2Q.webp",
+                "standalonePrice": "77000",
+                "remarks": "パッシブあり",
+                "mountingHoleSize": "145",
+                "depthSize": "75",
+                "hasGrille": "なし",
+                "hasTweeterMount": "あり"
+              },
+              {
+                "id": "spk_1779091892358",
+                "brand": "DYNAUDIO",
+                "name": "ESOTAN232",
+                "image": "/images/Audio/Speaker/esotan232.webp",
+                "standalonePrice": "77000",
+                "remarks": "置き型マウント別売 /パッシブあり",
+                "mountingHoleSize": "135",
+                "depthSize": "67",
+                "hasGrille": "なし",
+                "hasTweeterMount": "あり",
+                "youtubeUrl": "https://youtu.be/byYM-uqoy2Q"
+              },
+              {
+                "id": "spk_1779091892878",
+                "brand": "carrozzeria",
+                "name": "TS-V174S",
+                "image": "/images/Audio/Speaker/TS-V174S.webp",
+                "standalonePrice": "79200",
+                "remarks": "パッシブあり /バイアンプ",
+                "mountingHoleSize": "137",
+                "depthSize": "61",
+                "hasGrille": "なし",
+                "hasTweeterMount": "あり",
+                "youtubeUrl": "https://youtu.be/XVG-UxCukkM"
+              },
+              {
+                "id": "spk_1779091893391",
+                "brand": "morel",
+                "name": "MAXIMO ULTRA 602 HE MK2",
+                "image": "/images/Audio/Speaker/MAXIMO ULTRA 602 HE MKII.webp",
+                "standalonePrice": "80300",
+                "remarks": "TWのみインライン /楕円マウント",
+                "youtubeUrl": "https://youtu.be/ZJvuipxFFR8",
+                "mountingHoleSize": "143",
+                "depthSize": "63",
+                "hasGrille": "なし",
+                "hasTweeterMount": "あり"
+              },
+              {
+                "id": "spk_1779091893927",
+                "brand": "FOCAL",
+                "name": "PS 165 FXE",
+                "image": "/images/Audio/Speaker/PS 165 FXE.webp",
+                "standalonePrice": "88000",
+                "remarks": "パッシブあり",
+                "mountingHoleSize": "143",
+                "depthSize": "77",
+                "hasGrille": "なし",
+                "hasTweeterMount": "あり"
+              },
+              {
+                "id": "spk_1779091894471",
+                "brand": "FOCAL",
+                "name": "ES 165 KE",
+                "image": "/images/Audio/Speaker/ES 165 KE.webp",
+                "standalonePrice": "96800",
+                "remarks": "パッシブあり",
+                "mountingHoleSize": "142",
+                "depthSize": "76",
+                "hasGrille": "なし",
+                "hasTweeterMount": "あり",
+                "youtubeUrl": "https://youtu.be/KJmnktRp3-A"
+              },
+              {
+                "id": "spk_1779091895007",
+                "brand": "morel",
+                "name": "TEMPO ULTRA 602 MK2",
+                "image": "/images/Audio/Speaker/TEMPO_ULTRA_602_MK2.webp",
+                "standalonePrice": "102300",
+                "remarks": "パッシブあり /楕円マウント",
+                "mountingHoleSize": "143",
+                "depthSize": "64",
+                "hasGrille": "あり",
+                "hasTweeterMount": "あり"
+              },
+              {
+                "id": "spk_1779091895543",
+                "brand": "BLAM",
+                "name": "165 S80",
+                "image": "/images/Audio/Speaker/165_S80.webp",
+                "standalonePrice": "104500",
+                "remarks": "バイアンプ対応 2Ω",
+                "mountingHoleSize": "141.9",
+                "depthSize": "73.5",
+                "hasGrille": "なし",
+                "hasTweeterMount": "あり"
+              }
+            ],
+            "title": "Speaker Lineup",
+            "hideSubtitle": false,
+            "subtitle": "右上の再生ボタンより音源試聴可能です。"
+          }
+        },
+        {
+          "id": "sec_1778923293452",
+          "type": "floating_cta",
+          "data": {}
+        }
+      ],
+      "status": "published",
       "slug": "sp-standard",
-      "name": "スタンダードライン",
-      "speakers": [
+      "features": {
+        "doorTuning": {
+          "image": "/images/Audio/Speaker/door-b.webp"
+        },
+        "baffle": {
+          "image": "/images/Audio/Speaker/baffle.webp"
+        },
+        "cable": {
+          "image": "/images/Audio/Speaker/ang-cable.webp"
+        }
+      },
+      "upgrades": {
+        "options": {
+          "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
+          "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
+        }
+      },
+      "showInMenu": true,
+      "speakers": []
+    },
+    {
+      "id": "line_1778924085764",
+      "name": "スピーカー交換・PREMIUM line（10万円以上）",
+      "parentCategoryId": "speaker_package",
+      "isTemplate": false,
+      "header": {
+        "mainTitle": "PREMIUM LINE",
+        "subTitle": "プレミアムライン",
+        "badge": "スピーカー交換パッケージ",
+        "description": "10万円以上のスピーカーの中から、お気に入りの1本を選べるパッケージです。ドアチューニングとスピーカーケーブルの交換もセットで、本格的なサウンドを追求したい方のためのラインです。\nこの価格帯になると、各ブランドが素材や構造にまで独自のこだわりを注ぎ込んだモデルが揃います。情報量の多さ、音の質感、フォーカスの精度、ステレオイメージの広がり——スタンダードラインとは明らかに違う、一段上の音の世界を体感できます。\n一方で、どのブランドも「音作り優先」で設計されているため、インナーバッフルの加工やツィーターのオンダッシュマウントなど、取り付けに工夫が必要なモデルも少なくありません。スピーカー単体ではなく、どう取り付けるかまで含めて一緒に選ぶことが、このラインでは特に重要です。"
+      },
+      "pricing": {
+        "specialPrice": "162800",
+        "fixedPrice": 52800,
+        "normalPriceText": "通常目安: 200,000円",
+        "savingsText": "約 37,200円 お得!",
+        "note": "※DIATONE DS-G400（110,000円）を選択した場合の例。"
+      },
+      "sections": [
         {
-          "id": "spk_1778622662466_f9c5",
-          "image": "/images/Audio/Speaker/GZIC165.2SPL.jpg",
-          "brand": "グランドゼロ",
-          "name": "GZIC165.2SPL",
-          "mountingHole": "140mm",
-          "mountingDepth": "50mm",
-          "standalonePrice": "¥30,000",
-          "planAppliedPrice": "¥70,000",
-          "taxExcludedPrice": "¥63,600",
-          "hasGrille": true,
-          "hasTweeterMount": true,
-          "remarks": "特長や注意点を入力してください"
+          "id": "sec_banner",
+          "type": "banner",
+          "data": {
+            "title": "PREMIUM LINE",
+            "subTitle": "プレミアムライン",
+            "image": "",
+            "height": "400px",
+            "opacity": 0.5,
+            "badge": "スピーカー交換パッケージ",
+            "bgColor": "#1e3a8a",
+            "description": "10万円以上のスピーカーの中から、お気に入りの1本を選べるパッケージです。ドアチューニングとスピーカーケーブルの交換もセットで、本格的なサウンドを追求したい方のためのラインです。\nこの価格帯になると、各ブランドが素材や構造にまで独自のこだわりを注ぎ込んだモデルが揃います。情報量の多さ、音の質感、フォーカスの精度、ステレオイメージの広がり——スタンダードラインとは明らかに違う、一段上の音の世界を体感できます。\n一方で、どのブランドも「音作り優先」で設計されているため、インナーバッフルの加工やツィーターのオンダッシュマウントなど、取り付けに工夫が必要なモデルも少なくありません。スピーカー単体ではなく、どう取り付けるかまで含めて一緒に選ぶことが、このラインでは特に重要です。"
+          }
         },
         {
-          "id": "spk_1778622688107_ntwu",
-          "image": "/images/Audio/Speaker/GZIC165.2SPL.jpg",
-          "brand": "グランドゼロ",
-          "name": "GZIC165.2SPL",
-          "mountingHole": "140mm",
-          "mountingDepth": "50mm",
-          "standalonePrice": "¥30,000",
-          "planAppliedPrice": "¥70,000",
-          "taxExcludedPrice": "¥63,600",
-          "hasGrille": true,
-          "hasTweeterMount": true,
-          "remarks": "特長や注意点を入力してください"
+          "id": "sec_pricing_1779208759753_678a",
+          "type": "pricing",
+          "data": {
+            "specialPrice": "162800",
+            "fixedPrice": 52800,
+            "normalPriceText": "通常目安: 200,000円",
+            "savingsText": "約 37,200円 お得!",
+            "note": "※DIATONE DS-G400（110,000円）を選択した場合の例。"
+          }
         },
         {
-          "id": "spk_1778622731468_ramm",
-          "image": "/images/Audio/Speaker/GZIC165.2SPL.jpg",
-          "brand": "Blam",
-          "name": "GZIC165.2SPL",
-          "mountingHole": "140mm",
-          "mountingDepth": "50mm",
-          "standalonePrice": "¥30,000",
-          "planAppliedPrice": "¥70,000",
-          "taxExcludedPrice": "¥63,600",
-          "hasGrille": true,
-          "hasTweeterMount": true,
-          "remarks": "特長や注意点を入力してください"
+          "id": "sec_features",
+          "type": "features",
+          "data": {
+            "title": "プレミアムな音響空間を創り出す施工",
+            "description": "ハイクラスなスピーカーの性能を余すことなく発揮するための専用施工。",
+            "doorTuning": {
+              "title": "ドアチューニング Aコース",
+              "desc": "より広範囲かつ強固な制振・防音処理",
+              "image": "/images/Audio/Speaker/door-b.webp"
+            },
+            "baffle": {
+              "title": "高剛性カスタムバッフル",
+              "desc": "樺桜材などを使用した専用バッフル",
+              "image": "/images/Audio/Speaker/baffle.webp"
+            },
+            "cable": {
+              "title": "プレミアムケーブル",
+              "desc": "より情報量の多い高音質ケーブル",
+              "image": "/images/Audio/Speaker/ang-cable.webp"
+            }
+          }
         },
         {
-          "id": "spk_1778629961746_knzh",
-          "image": "/images/Top/speaker.webp",
-          "brand": "新規メーカー",
-          "name": "新規モデル",
-          "mountingHole": "140mm",
-          "mountingDepth": "50mm",
-          "standalonePrice": "¥30,000",
-          "planAppliedPrice": "¥70,000",
-          "taxExcludedPrice": "¥63,600",
-          "hasGrille": true,
-          "hasTweeterMount": true,
-          "remarks": "特長や注意点を入力してください"
+          "id": "sec_pkg_summary",
+          "type": "package_summary",
+          "data": {
+            "title": "パッケージ全内容（まとめ）",
+            "items": [
+              {
+                "title": "スピーカー",
+                "desc": "17cmモデル2WAYスピーカー（10万円以上のモデルから選択）"
+              },
+              {
+                "title": "ドアチューニング Bコース",
+                "desc": "制振・防音処理",
+                "value": "¥27,500"
+              },
+              {
+                "title": "カスタムインナーバッフル",
+                "desc": "車種専用マウント製作",
+                "value": "¥11,000"
+              },
+              {
+                "title": "ANGオリジナルスピーカーケーブル",
+                "desc": "高品位ケーブル（オーディオテクニカ製 ¥1,500/M相当を10m使用）",
+                "value": "¥16,500"
+              },
+              {
+                "title": "ツィーター取付",
+                "desc": "純正位置、もしくはオンダッシュ取り付け"
+              },
+              {
+                "title": "ワイヤリング工賃",
+                "desc": "正確な配線と極性チェックを含む",
+                "value": "¥22,000"
+              }
+            ],
+            "subtitle": "下記の内容が含まれたお得なパッケージとなっています。"
+          }
         },
         {
-          "id": "spk_1778629962684_4xor",
-          "image": "/images/Top/speaker.webp",
-          "brand": "新規メーカー",
-          "name": "新規モデル",
-          "mountingHole": "140mm",
-          "mountingDepth": "50mm",
-          "standalonePrice": "¥30,000",
-          "planAppliedPrice": "¥70,000",
-          "taxExcludedPrice": "¥63,600",
-          "hasGrille": true,
-          "hasTweeterMount": true,
-          "remarks": "特長や注意点を入力してください"
+          "id": "sec_upgrades",
+          "type": "upgrades",
+          "data": {
+            "courses": [
+              {
+                "name": "Bコース→Aコース",
+                "price": "+¥11,000",
+                "image": "/images/Audio/Speaker/door-b.webp",
+                "desc": "スピーカーの背圧処理にフェリソニDS-1.5WPを使用、及び制振材料の増量（通常¥16,500）"
+              },
+              {
+                "name": "Bコース→A+コース",
+                "price": "+¥22,000",
+                "image": "/images/Audio/Speaker/door-b.webp",
+                "desc": "スピーカーの背圧処理にフェリソニC2を使用、及び制振材料の増量（通常¥27,500）"
+              },
+              {
+                "name": "Bコース→Sコース",
+                "price": "+¥33,000",
+                "image": "/images/Audio/Speaker/door-b.webp",
+                "desc": "DS-1.5WPをAコース以上に増量使用、及び制振材料の増量、さらに最新複合マテリアルによる吸音・遮音処置（通常¥38,500）",
+                "pop": true
+              },
+              {
+                "name": "Bコース→S+コース",
+                "price": "+¥44,000",
+                "image": "/images/Audio/Speaker/door-b.webp",
+                "desc": "フェリソニC2をA+コース以上に増量使用、及び制振材料の増量、さらに最新複合マテリアルによる吸音・遮音処置（通常¥49,500）"
+              }
+            ],
+            "options": {
+              "metalBaffleDiscount": "20% OFF",
+              "tweeterMountPrice": "¥46,200〜",
+              "metalBaffleImage": "/images/Audio/Speaker/metalbaffle.webp",
+              "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp",
+              "metalBaffleDesc": "カロッツェリア製車種専用インナーバッフルのメタルバージョン。タイトで張りのある再生が可能になります。同時施工で定価より20%オフ。",
+              "tweeterMountDesc": "Aピラー等への埋め込み加工。反射を抑え、クリアな音像とクールなインテリアを実現。Aピラー: ¥46,200〜、ミラー裏: ¥57,750〜。"
+            },
+            "title": "アップグレード オプション",
+            "subtitle": "ドアチューニング グレードアップ 標準のBコースからAコース・Sコースへのグレードアップが可能です。スピーカーと同時施工の場合、お得な価格でご提供しています。"
+          }
         },
         {
-          "id": "spk_1778629963566_vd3x",
-          "image": "/images/Top/speaker.webp",
-          "brand": "新規メーカー",
-          "name": "新規モデル",
-          "mountingHole": "140mm",
-          "mountingDepth": "50mm",
-          "standalonePrice": "¥30,000",
-          "planAppliedPrice": "¥70,000",
-          "taxExcludedPrice": "¥63,600",
-          "hasGrille": true,
-          "hasTweeterMount": true,
-          "remarks": "特長や注意点を入力してください"
+          "id": "sec_notes",
+          "type": "notes",
+          "data": {
+            "title": "施工に関する注意事項",
+            "items": [
+              "作業は<strong>1日お車をお預かり</strong>します（無料代車をご用意可能です）。",
+              "バッフル適合がない車種は別途<strong>¥5,500</strong>の製作費が必要になります。",
+              "ツィーター固定にマウント等が必要な車種は追加費用が発生する場合があります。",
+              "ドア通線に加工が必要な車両（ハーネスがカプラ等）は別途加工費用がかかる場合があります。"
+            ]
+          }
         },
         {
-          "id": "spk_1778629964346_ljzr",
-          "image": "/images/Top/speaker.webp",
-          "brand": "新規メーカー",
-          "name": "新規モデル",
-          "mountingHole": "140mm",
-          "mountingDepth": "50mm",
-          "standalonePrice": "¥30,000",
-          "planAppliedPrice": "¥70,000",
-          "taxExcludedPrice": "¥63,600",
-          "hasGrille": true,
-          "hasTweeterMount": true,
-          "remarks": "特長や注意点を入力してください"
+          "id": "sec_1779143948990",
+          "type": "speakers",
+          "data": {
+            "speakers": [
+              {
+                "id": "spk_1779143962439",
+                "brand": "DIATONE",
+                "name": "DS-G400",
+                "image": "/images/Audio/Speaker/diatone400.webp",
+                "standalonePrice": "110000",
+                "remarks": "パッシブあり /バイアンプ",
+                "mountingHoleSize": "139",
+                "depthSize": "60",
+                "hasGrille": "なし",
+                "hasTweeterMount": "あり",
+                "youtubeUrl": "https://youtu.be/_1M6N16o9no"
+              },
+              {
+                "id": "spk_1779143965695",
+                "brand": "FOCAL",
+                "name": "ES 165 KX2E",
+                "image": "/images/Audio/Speaker/ES 165 KX2E.webp",
+                "standalonePrice": "118800",
+                "remarks": "パッシブあり 2Ω",
+                "mountingHoleSize": "142",
+                "depthSize": "79",
+                "hasGrille": "なし",
+                "hasTweeterMount": "あり"
+              },
+              {
+                "id": "spk_1779143966991",
+                "brand": "BLAM",
+                "name": "165 S45",
+                "image": "/images/Audio/Speaker/165 S45.webp",
+                "standalonePrice": "126500",
+                "remarks": "バイアンプ対応 3Ω",
+                "mountingHoleSize": "142",
+                "depthSize": "63.7",
+                "hasGrille": "なし",
+                "hasTweeterMount": "あり",
+                "youtubeUrl": "https://youtu.be/f0Uwc3Zz_Mk"
+              },
+              {
+                "id": "spk_1779143967807",
+                "brand": "FOCAL",
+                "name": "ES 165 K2S",
+                "image": "/images/Audio/Speaker/ES 165 K2S.webp",
+                "standalonePrice": "125400",
+                "remarks": "パッシブあり 2Ω",
+                "mountingHoleSize": "142",
+                "depthSize": "58",
+                "hasGrille": "なし",
+                "hasTweeterMount": "あり",
+                "youtubeUrl": "https://youtu.be/0Yl4ozb6_Hc"
+              },
+              {
+                "id": "spk_1779143968407",
+                "brand": "morel",
+                "name": "SENSUS 62",
+                "image": "/images/Audio/Speaker/SENSUS 62.webp",
+                "standalonePrice": "132000",
+                "remarks": "グリル別売り パッシブあり",
+                "mountingHoleSize": "141",
+                "depthSize": "61",
+                "hasGrille": "あり",
+                "hasTweeterMount": "なし"
+              },
+              {
+                "id": "spk_1779143969055",
+                "brand": "BLAM",
+                "name": "165 S85",
+                "image": "/images/Audio/Speaker/165 S85.webp",
+                "standalonePrice": "145200",
+                "remarks": "パッシブあり 3Ω",
+                "mountingHoleSize": "142",
+                "depthSize": "76.2",
+                "hasGrille": "なし",
+                "hasTweeterMount": "なし",
+                "youtubeUrl": "https://youtu.be/gP5U6fNJ4jE"
+              },
+              {
+                "id": "spk_1779143969583",
+                "brand": "carrozzeria",
+                "name": "TS-Z900PRS",
+                "image": "/images/Audio/Speaker/TS-Z900PRS.webp",
+                "standalonePrice": "140800",
+                "remarks": "パッシブあり 3Ω",
+                "mountingHoleSize": "137",
+                "depthSize": "58",
+                "hasGrille": "なし",
+                "hasTweeterMount": "あり",
+                "youtubeUrl": "https://youtu.be/FUUk22IfYdI"
+              },
+              {
+                "id": "spk_1779143970127",
+                "brand": "BLUE MOON AUDIO",
+                "name": "VX165",
+                "image": "/images/Audio/Speaker/VX165.webp",
+                "standalonePrice": "154000",
+                "remarks": "バイアンプ対応 4Ω",
+                "mountingHoleSize": "146",
+                "depthSize": "66.7",
+                "hasGrille": "あり",
+                "hasTweeterMount": "なし",
+                "youtubeUrl": "https://youtu.be/1WssbN3bELQ"
+              },
+              {
+                "id": "spk_1779143970679",
+                "brand": "KICKER",
+                "name": "QSS674",
+                "image": "/images/Audio/Speaker/QSS674.webp",
+                "standalonePrice": "177100",
+                "remarks": "パッシブあり",
+                "mountingHoleSize": "138",
+                "depthSize": "63.5",
+                "hasGrille": "あり",
+                "hasTweeterMount": "なし"
+              },
+              {
+                "id": "spk_1779143971367",
+                "brand": "FOCAL",
+                "name": "ES 165 KX2E",
+                "image": "/images/Audio/Speaker/ES 165 KX2E.webp",
+                "standalonePrice": "173800",
+                "remarks": "パッシブあり 2Ω",
+                "mountingHoleSize": "142",
+                "depthSize": "76",
+                "hasGrille": "なし",
+                "hasTweeterMount": "あり"
+              },
+              {
+                "id": "spk_1779143971831",
+                "brand": "DYNAUDIO",
+                "name": "esotec system242",
+                "image": "/images/Audio/Speaker/esotec system242.webp",
+                "standalonePrice": "220000",
+                "remarks": "パッシブあり",
+                "mountingHoleSize": "134",
+                "depthSize": "67",
+                "hasGrille": "あり",
+                "hasTweeterMount": "なし",
+                "youtubeUrl": "https://youtu.be/KhNixYLyDKI"
+              },
+              {
+                "id": "spk_1779143972343",
+                "brand": "morel",
+                "name": "HYBRID 62 MK2",
+                "image": "/images/Audio/Speaker/HYBRID_62_MK2.webp",
+                "standalonePrice": "231000",
+                "remarks": "パッシブあり",
+                "mountingHoleSize": "141",
+                "depthSize": "61",
+                "hasGrille": "あり",
+                "hasTweeterMount": "あり"
+              },
+              {
+                "id": "spk_1779143972767",
+                "brand": "FOCAL",
+                "name": "165 W-XP",
+                "image": "/images/Audio/Speaker/165 W-XP.webp",
+                "standalonePrice": "286000",
+                "remarks": "パッシブあり",
+                "mountingHoleSize": "142",
+                "depthSize": "74",
+                "hasGrille": "なし",
+                "hasTweeterMount": "なし",
+                "youtubeUrl": "https://youtu.be/U_ReOFJ06TI"
+              }
+            ],
+            "title": "Speaker Lineup",
+            "subtitle": "右上の再生ボタンより音源試聴可能です。"
+          }
         },
         {
-          "id": "spk_1778629965140_imma",
-          "image": "/images/Top/speaker.webp",
-          "brand": "新規メーカー",
-          "name": "新規モデル",
-          "mountingHole": "140mm",
-          "mountingDepth": "50mm",
-          "standalonePrice": "¥30,000",
-          "planAppliedPrice": "¥70,000",
-          "taxExcludedPrice": "¥63,600",
-          "hasGrille": true,
-          "hasTweeterMount": true,
-          "remarks": "特長や注意点を入力してください"
+          "id": "sec_1778923293452",
+          "type": "floating_cta",
+          "data": {}
+        }
+      ],
+      "status": "published",
+      "slug": "sp-premium",
+      "features": {
+        "doorTuning": {
+          "image": "/images/Audio/Speaker/door-b.webp"
+        },
+        "baffle": {
+          "image": "/images/Audio/Speaker/baffle.webp"
+        },
+        "cable": {
+          "image": "/images/Audio/Speaker/ang-cable.webp"
+        }
+      },
+      "upgrades": {
+        "options": {
+          "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
+          "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
+        }
+      },
+      "showInMenu": true,
+      "speakers": []
+    },
+    {
+      "id": "line_1778981709334",
+      "name": "フロント3way",
+      "parentCategoryId": "speaker_package",
+      "isTemplate": false,
+      "header": {
+        "mainTitle": "Front 3way set",
+        "subTitle": "フロント3wayセット",
+        "badge": "スピーカー交換パッケージ",
+        "description": "取り付けの複雑さとコストから、なかなか手が届かなかった3WAYスピーカー。そのハードルを下げたパッケージです。"
+      },
+      "pricing": {
+        "specialPrice": "81840",
+        "fixedPrice": 143000,
+        "normalPriceText": "117700",
+        "savingsText": "35,860円 お得!",
+        "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。"
+      },
+      "sections": [
+        {
+          "id": "sec_banner",
+          "type": "banner",
+          "data": {
+            "title": "Front 3way set",
+            "subTitle": "フロント3wayセット",
+            "image": "",
+            "height": "400px",
+            "opacity": 0.5,
+            "badge": "スピーカー交換パッケージ",
+            "bgColor": "#1e3a8a",
+            "description": "取り付けの複雑さとコストから、なかなか手が届かなかった3WAYスピーカー。そのハードルを下げたパッケージです。"
+          }
         },
         {
-          "id": "spk_1778629965860_7r8r",
-          "image": "/images/Top/speaker.webp",
-          "brand": "新規メーカー",
-          "name": "新規モデル",
-          "mountingHole": "140mm",
-          "mountingDepth": "50mm",
-          "standalonePrice": "¥30,000",
-          "planAppliedPrice": "¥70,000",
-          "taxExcludedPrice": "¥63,600",
-          "hasGrille": true,
-          "hasTweeterMount": true,
-          "remarks": "特長や注意点を入力してください"
+          "id": "sec_features",
+          "type": "features",
+          "data": {
+            "items": [
+              {
+                "title": "ピラーインストール",
+                "desc": "ピラーにツイーター＋スコーカーをインストール",
+                "image": "/images/Audio/Speaker/3way2.webp"
+              },
+              {
+                "title": "ピラー＋ミラー裏",
+                "desc": "ピラーにスコーカー、ミラー裏にツイーターをインストール",
+                "image": "/images/Audio/Speaker/3way4.webp"
+              },
+              {
+                "title": "その他",
+                "desc": "車種やご希望に合わせてさまざまな取り付け場所をご提案できます。まずはお気軽にご相談ください。",
+                "image": "/images/Audio/Speaker/3way3.webp"
+              }
+            ],
+            "title": "3WAYスピーカーのメリット",
+            "description": "ツィーター・スコーカー・ミッドレンジと役割を分担することで、それぞれの負担が減りよりクリアなサウンドを実現します。またスコーカーをツィーターに近い位置に設置できるため、障害物の影響を受けにくく自然なステージングが可能です。そして音だけでなく、車内インテリアとしての存在感も圧倒的に増します。"
+          }
         },
         {
-          "id": "spk_1778629966598_oq88",
-          "image": "/images/Top/speaker.webp",
-          "brand": "新規メーカー",
-          "name": "新規モデル",
-          "mountingHole": "140mm",
-          "mountingDepth": "50mm",
-          "standalonePrice": "¥30,000",
-          "planAppliedPrice": "¥70,000",
-          "taxExcludedPrice": "¥63,600",
-          "hasGrille": true,
-          "hasTweeterMount": true,
-          "remarks": "特長や注意点を入力してください"
+          "id": "sec_pkg_summary",
+          "type": "package_summary",
+          "data": {
+            "title": "パッケージ全内容（まとめ）",
+            "items": [
+              {
+                "title": "スピーカー",
+                "desc": ""
+              },
+              {
+                "title": "ドアチューニング Bコース",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "カスタムインナーバッフル",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "ANGオリジナルスピーカーケーブル",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "ツィーター/スコーカー埋め込み加工",
+                "desc": ""
+              },
+              {
+                "title": "ワイヤリング工賃",
+                "desc": "",
+                "value": ""
+              }
+            ],
+            "subtitle": "下記の内容が含まれたお得なパッケージとなっています。"
+          }
         },
         {
-          "id": "spk_1778629967262_y6we",
-          "image": "/images/Top/speaker.webp",
-          "brand": "新規メーカー",
-          "name": "新規モデル",
-          "mountingHole": "140mm",
-          "mountingDepth": "50mm",
-          "standalonePrice": "¥30,000",
-          "planAppliedPrice": "¥70,000",
-          "taxExcludedPrice": "¥63,600",
-          "hasGrille": true,
-          "hasTweeterMount": true,
-          "remarks": "特長や注意点を入力してください"
+          "id": "sec_upgrades",
+          "type": "upgrades",
+          "data": {
+            "courses": [
+              {
+                "name": "Bコース→Aコース",
+                "price": "+¥11,000",
+                "image": "/images/Audio/Speaker/door-b.webp",
+                "desc": "スピーカーの背圧処理にフェリソニDS-1.5WPを使用、及び制振材料の増量（通常¥16,500）"
+              },
+              {
+                "name": "Bコース→A+コース",
+                "price": "+¥22,000",
+                "image": "/images/Audio/Speaker/door-b.webp",
+                "desc": "スピーカーの背圧処理にフェリソニC2を使用、及び制振材料の増量（通常¥27,500）"
+              },
+              {
+                "name": "Bコース→Sコース",
+                "price": "+¥33,000",
+                "image": "/images/Audio/Speaker/door-b.webp",
+                "desc": "DS-1.5WPをAコース以上に増量使用、及び制振材料の増量、さらに最新複合マテリアルによる吸音・遮音処置（通常¥38,500）",
+                "pop": true
+              },
+              {
+                "name": "Bコース→S+コース",
+                "price": "+¥44,000",
+                "image": "/images/Audio/Speaker/door-b.webp",
+                "desc": "フェリソニC2をA+コース以上に増量使用、及び制振材料の増量、さらに最新複合マテリアルによる吸音・遮音処置（通常¥49,500）"
+              }
+            ],
+            "options": {},
+            "title": "アップグレード オプション",
+            "subtitle": "ドアチューニング グレードアップ 標準のBコースからAコース・Sコースへのグレードアップが可能です。スピーカーと同時施工の場合、お得な価格でご提供しています。"
+          }
         },
         {
-          "id": "spk_1778629967873_ujug",
-          "image": "/images/Top/speaker.webp",
-          "brand": "新規メーカー",
-          "name": "新規モデル",
-          "mountingHole": "140mm",
-          "mountingDepth": "50mm",
-          "standalonePrice": "¥30,000",
-          "planAppliedPrice": "¥70,000",
-          "taxExcludedPrice": "¥63,600",
-          "hasGrille": true,
-          "hasTweeterMount": true,
-          "remarks": "特長や注意点を入力してください"
+          "id": "sec_notes",
+          "type": "notes",
+          "data": {
+            "title": "施工に関する注意事項",
+            "items": [
+              "作業は<strong>3日お車をお預かり</strong>します（無料代車をご用意可能です）。",
+              "バッフル適合がない車種は別途<strong>¥5,500</strong>の製作費が必要になります。",
+              "ドア通線に加工が必要な車両（ハーネスがカプラ等）は別途加工費用がかかる場合があります。"
+            ]
+          }
+        },
+        {
+          "id": "sec_1778985137880",
+          "type": "speakers",
+          "data": {
+            "speakers": [
+              {
+                "id": "spk_1779192754242",
+                "brand": "MOREL",
+                "name": "MAXIMO ULTRA603 MK2",
+                "image": "/images/Top/speaker.webp",
+                "standalonePrice": "121000",
+                "remarks": "スコーカー外径：63mm /ローレンジ奥行き：63mm"
+              },
+              {
+                "id": "spk_1779192802067",
+                "brand": "carrozzeria ",
+                "name": "TS-Z900PRS",
+                "image": "/images/Top/speaker.webp",
+                "standalonePrice": "140800",
+                "remarks": "スコーカー外径：73mm /ローレンジ奥行き：58mm",
+                "fixedPriceOverride": "103400"
+              },
+              {
+                "id": "spk_1779192889252",
+                "brand": "FOCAL ",
+                "name": "PS165F3E",
+                "image": "/images/Top/speaker.webp",
+                "standalonePrice": "121000",
+                "remarks": "スコーカー外径：88mm /ローレンジ奥行き：77mm",
+                "fixedPriceOverride": "142200"
+              },
+              {
+                "id": "spk_1779192976357",
+                "brand": "MOREL ",
+                "name": "SENSUS 63",
+                "image": "/images/Top/speaker.webp",
+                "standalonePrice": "177100",
+                "remarks": "スコーカー外径：38mm /ローレンジ奥行き：61mm",
+                "fixedPriceOverride": "142200"
+              },
+              {
+                "id": "spk_1779193029542",
+                "brand": "DYNAUDIO",
+                "name": "ESOTAN372",
+                "image": "/images/Top/speaker.webp",
+                "standalonePrice": "176000",
+                "remarks": "スコーカー外径：99mm /ローレンジ奥行き：67mm",
+                "fixedPriceOverride": "154000"
+              },
+              {
+                "id": "spk_1779193082168",
+                "brand": "BLAM",
+                "name": "165S.300",
+                "image": "/images/Top/speaker.webp",
+                "standalonePrice": "217800",
+                "remarks": "スコーカー外径：90.1mm /ローレンジ奥行き：80.2mm",
+                "fixedPriceOverride": "154000"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec_1778923293452",
+          "type": "floating_cta",
+          "data": {}
+        }
+      ],
+      "status": "published",
+      "slug": "front3waypac",
+      "features": {
+        "doorTuning": {
+          "image": "/images/Audio/Speaker/door-b.webp"
+        },
+        "baffle": {
+          "image": "/images/Audio/Speaker/baffle.webp"
+        },
+        "cable": {
+          "image": "/images/Audio/Speaker/ang-cable.webp"
+        }
+      },
+      "upgrades": {
+        "options": {
+          "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
+          "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
+        }
+      },
+      "showInMenu": true,
+      "speakers": []
+    },
+    {
+      "id": "line_1778985631489",
+      "name": "BMWスピーカー交換プラン",
+      "parentCategoryId": "speaker_package",
+      "isTemplate": false,
+      "header": {
+        "mainTitle": "ＢＭＷパッケージ",
+        "subTitle": "スタンダードライン",
+        "badge": "スピーカー交換パッケージ",
+        "description": "輸入車の中でも、音質改善のご相談が特に多いのがBMWです。グレードを問わず純正システムの構成はほぼ同じで、多くのオーナー様が同じお悩みを抱えています。純正の見た目を崩さず、加工を抑えた方法で音質改善できるパッケージをご用意しています。"
+      },
+      "pricing": {
+        "specialPrice": "81840",
+        "fixedPrice": 41800,
+        "normalPriceText": "117700",
+        "savingsText": "35,860円 お得!",
+        "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。"
+      },
+      "sections": [
+        {
+          "id": "sec_banner",
+          "type": "banner",
+          "data": {
+            "title": "ＢＭＷパッケージ",
+            "subTitle": "",
+            "image": "",
+            "height": "400px",
+            "opacity": 0.5,
+            "badge": "スピーカー交換パッケージ",
+            "bgColor": "#1e3a8a",
+            "description": "輸入車の中でも、音質改善のご相談が特に多いのがBMWです。グレードを問わず純正システムの構成はほぼ同じで、多くのオーナー様が同じお悩みを抱えています。純正の見た目を崩さず、加工を抑えた方法で音質改善できるパッケージをご用意しています。"
+          }
+        },
+        {
+          "id": "sec_features",
+          "type": "features",
+          "data": {
+            "items": [
+              {
+                "title": "ドアスピーカー",
+                "desc": "トレードイン交換なので車両への加工は不要。純正の10cmスピーカーから交換することで音の厚みと広がりが大きく変わります。",
+                "image": "/images/Audio/Speaker/bmw-door.webp"
+              },
+              {
+                "title": "ツイーター",
+                "desc": "純正ツィーター非装着車の場合、別途純正部品が必要になる場合があります。（おおよそ15000円前後)",
+                "image": "/images/Audio/Speaker/bmw-tw2.webp"
+              },
+              {
+                "title": "シート下ウーハー",
+                "desc": "ウーハーも交換することで、よりハリのあるサウンドに仕上がります。",
+                "image": "/images/Audio/Speaker/bmw-woofer.webp"
+              }
+            ],
+            "title": "スピーカー交換例",
+            "description": "BMWの純正システムはフロントに10cm程度のスピーカー、ツィーターなし、シート下のウーハーで低音を補うという構成がほとんどです。 加工を抑えてコストを抑えた改善方法として、まずはフロントスピーカーの交換とツィーターの追加。さらに適合車種であればウーハーも交換することで、ハリのあるサウンドに生まれ変わります。このパッケージではトレードインで交換可能なスピーカーをご紹介しています。"
+          }
+        },
+        {
+          "id": "sec_pkg_summary",
+          "type": "package_summary",
+          "data": {
+            "title": "パッケージ全内容（まとめ）",
+            "items": [
+              {
+                "title": "スピーカー本体",
+                "desc": "掲載のラインナップからお選びいただけます。"
+              },
+              {
+                "title": "スピーカーインストール費用",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "ドアチューニング",
+                "desc": "",
+                "value": ""
+              }
+            ],
+            "subtitle": "下記の内容が含まれたパッケージとなっています。"
+          }
+        },
+        {
+          "id": "sec_notes",
+          "type": "notes",
+          "data": {
+            "title": "施工に関する注意事項",
+            "items": [
+              "作業は<strong>1日お車をお預かり</strong>します（無料代車をご用意可能です）。",
+              "純正ツィーター非装着車の場合、別途純正部品が必要になる場合があります。（おおよそ15000円前後)"
+            ]
+          }
+        },
+        {
+          "id": "sec_1778923293452",
+          "type": "floating_cta",
+          "data": {}
+        },
+        {
+          "id": "sec_speakers",
+          "type": "speakers",
+          "data": {
+            "subtitle": "Focal",
+            "speakers": [
+              {
+                "id": "spk_1778989822158",
+                "brand": "Focal",
+                "name": "IS BMW 100L",
+                "image": "/images/Top/speaker.webp",
+                "standalonePrice": "60500",
+                "remarks": ""
+              }
+            ],
+            "fixedPrice": 33000
+          }
+        },
+        {
+          "id": "sec_1778989911245",
+          "type": "speakers",
+          "data": {
+            "subtitle": "BLAM",
+            "speakers": [
+              {
+                "id": "spk_1778989941366",
+                "brand": "BLAM",
+                "name": "BM 100NS",
+                "image": "/images/Top/speaker.webp",
+                "standalonePrice": "46200",
+                "remarks": "",
+                "fixedPriceOverride": "33000"
+              }
+            ],
+            "fixedPrice": 33880
+          }
+        },
+        {
+          "id": "sec_1778990164885",
+          "type": "speakers",
+          "data": {
+            "subtitle": "ETON",
+            "speakers": [
+              {
+                "id": "spk_1778990178444",
+                "brand": "ETON",
+                "name": "B100W2",
+                "image": "/images/Top/speaker.webp",
+                "standalonePrice": "63800",
+                "remarks": ""
+              }
+            ],
+            "fixedPrice": 33000
+          }
+        },
+        {
+          "id": "sec_1778990300719",
+          "type": "speakers",
+          "data": {
+            "subtitle": "a/tack",
+            "fixedPrice": 33000,
+            "speakers": [
+              {
+                "id": "spk_1778990517359",
+                "brand": "a/tack",
+                "name": "PFS10A",
+                "image": "/images/Top/speaker.webp",
+                "standalonePrice": "52800",
+                "remarks": ""
+              }
+            ]
+          }
+        }
+      ],
+      "status": "published",
+      "slug": "bmwspeaker",
+      "features": {
+        "doorTuning": {
+          "image": "/images/Audio/Speaker/door-b.webp"
+        },
+        "baffle": {
+          "image": "/images/Audio/Speaker/baffle.webp"
+        },
+        "cable": {
+          "image": "/images/Audio/Speaker/ang-cable.webp"
+        }
+      },
+      "upgrades": {
+        "options": {
+          "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
+          "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
+        }
+      },
+      "showInMenu": true,
+      "speakers": []
+    },
+    {
+      "id": "line_1778992499214",
+      "name": "Mercedes-Benzスピーカー交換プラン ",
+      "parentCategoryId": "speaker_package",
+      "isTemplate": false,
+      "header": {
+        "mainTitle": "Mercedes-Benzパッケージ",
+        "subTitle": "スタンダードライン",
+        "badge": "スピーカー交換パッケージ",
+        "description": "近年のベンツは一部車種でスピーカーの小型化が進み、音質に不満を感じるオーナー様が増えています。車両への加工が不要なトレードイン交換であれば、比較的手軽に音質を改善できます。このページでは適合車種とともにトレードインスピーカーをご案内しています。"
+      },
+      "pricing": {
+        "specialPrice": "81840",
+        "fixedPrice": 41800,
+        "normalPriceText": "117700",
+        "savingsText": "35,860円 お得!",
+        "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。"
+      },
+      "sections": [
+        {
+          "id": "sec_banner",
+          "type": "banner",
+          "data": {
+            "title": "Mercedes-Benzパッケージ",
+            "subTitle": "",
+            "image": "",
+            "height": "400px",
+            "opacity": 0.5,
+            "badge": "スピーカー交換パッケージ",
+            "bgColor": "#1e3a8a",
+            "description": "近年のベンツは一部車種でスピーカーの小型化が進み、音質に不満を感じるオーナー様が増えています。車両への加工が不要なトレードイン交換であれば、比較的手軽に音質を改善できます。このページでは適合車種とともにトレードインスピーカーをご案内しています。"
+          }
+        },
+        {
+          "id": "sec_features",
+          "type": "features",
+          "data": {
+            "items": [
+              {
+                "title": "ドアスピーカー",
+                "desc": "トレードイン交換なので車両への加工は不要。純正の10cmスピーカーから交換することで音の厚みと広がりが大きく変わります。",
+                "image": "/images/Audio/Speaker/bmw-door.webp"
+              },
+              {
+                "title": "ツイーター",
+                "desc": "純正ツィーター非装着車の場合、別途純正部品が必要になる場合があります。（おおよそ15000円前後)",
+                "image": "/images/Audio/Speaker/bmw-tw2.webp"
+              },
+              {
+                "title": "シート下ウーハー",
+                "desc": "ウーハーも交換することで、よりハリのあるサウンドに仕上がります。",
+                "image": "/images/Audio/Speaker/bmw-woofer.webp"
+              }
+            ],
+            "title": "スピーカー交換例",
+            "description": "BMWの純正システムはフロントに10cm程度のスピーカー、ツィーターなし、シート下のウーハーで低音を補うという構成がほとんどです。 加工を抑えてコストを抑えた改善方法として、まずはフロントスピーカーの交換とツィーターの追加。さらに適合車種であればウーハーも交換することで、ハリのあるサウンドに生まれ変わります。このパッケージではトレードインで交換可能なスピーカーをご紹介しています。"
+          }
+        },
+        {
+          "id": "sec_pkg_summary",
+          "type": "package_summary",
+          "data": {
+            "title": "パッケージ全内容（まとめ）",
+            "items": [
+              {
+                "title": "スピーカー本体",
+                "desc": "掲載のラインナップからお選びいただけます。"
+              },
+              {
+                "title": "スピーカーインストール費用",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "ドアチューニング",
+                "desc": "",
+                "value": ""
+              }
+            ],
+            "subtitle": "下記の内容が含まれたパッケージとなっています。"
+          }
+        },
+        {
+          "id": "sec_notes",
+          "type": "notes",
+          "data": {
+            "title": "施工に関する注意事項",
+            "items": [
+              "作業は<strong>1日お車をお預かり</strong>します（無料代車をご用意可能です）。",
+              "純正ツィーター非装着車の場合、別途純正部品が必要になる場合があります。（おおよそ15000円前後)"
+            ]
+          }
+        },
+        {
+          "id": "sec_1778923293452",
+          "type": "floating_cta",
+          "data": {}
+        },
+        {
+          "id": "sec_speakers",
+          "type": "speakers",
+          "data": {
+            "subtitle": "Focal",
+            "speakers": [
+              {
+                "id": "spk_1778989822158",
+                "brand": "Focal",
+                "name": "IS BMW 100L",
+                "image": "/images/Top/speaker.webp",
+                "standalonePrice": "60500",
+                "remarks": ""
+              }
+            ],
+            "fixedPrice": 33000
+          }
+        },
+        {
+          "id": "sec_1778989911245",
+          "type": "speakers",
+          "data": {
+            "subtitle": "BLAM",
+            "speakers": [
+              {
+                "id": "spk_1778989941366",
+                "brand": "BLAM",
+                "name": "BM 100NS",
+                "image": "/images/Top/speaker.webp",
+                "standalonePrice": "46200",
+                "remarks": "",
+                "fixedPriceOverride": "33000"
+              }
+            ],
+            "fixedPrice": 33880
+          }
+        },
+        {
+          "id": "sec_1778990164885",
+          "type": "speakers",
+          "data": {
+            "subtitle": "ETON",
+            "speakers": [
+              {
+                "id": "spk_1778990178444",
+                "brand": "ETON",
+                "name": "B100W2",
+                "image": "/images/Top/speaker.webp",
+                "standalonePrice": "63800",
+                "remarks": ""
+              }
+            ],
+            "fixedPrice": 33000
+          }
+        },
+        {
+          "id": "sec_1778990300719",
+          "type": "speakers",
+          "data": {
+            "subtitle": "a/tack",
+            "fixedPrice": 33000,
+            "speakers": [
+              {
+                "id": "spk_1778990517359",
+                "brand": "a/tack",
+                "name": "PFS10A",
+                "image": "/images/Top/speaker.webp",
+                "standalonePrice": "52800",
+                "remarks": ""
+              }
+            ]
+          }
+        }
+      ],
+      "status": "published",
+      "slug": "benzspeaker",
+      "features": {
+        "doorTuning": {
+          "image": "/images/Audio/Speaker/door-b.webp"
+        },
+        "baffle": {
+          "image": "/images/Audio/Speaker/baffle.webp"
+        },
+        "cable": {
+          "image": "/images/Audio/Speaker/ang-cable.webp"
+        }
+      },
+      "upgrades": {
+        "options": {
+          "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
+          "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
+        }
+      },
+      "showInMenu": true,
+      "speakers": []
+    },
+    {
+      "id": "line_1778993388307",
+      "name": "車種別スピーカー交換プラン",
+      "parentCategoryId": "speaker_package",
+      "isTemplate": false,
+      "header": {
+        "mainTitle": "車種別スピーカー交換プラン",
+        "subTitle": "スタンダードライン",
+        "badge": "スピーカー交換パッケージ",
+        "description": "初めてカーオーディオにチャレンジする方向けに、できるだけ費用を抑えて楽しめるプランをご用意しました。コストを抑えるために人気車種に特化したパッケージ構成にしています。\nサブスクや残クレなど、原状回復が必要な車両にも対応できるよう、車両へのダメージを残さない取り付け方法を採用しています。対象車種は順次追加予定です。"
+      },
+      "pricing": {
+        "specialPrice": "81840",
+        "fixedPrice": 41800,
+        "normalPriceText": "117700",
+        "savingsText": "35,860円 お得!",
+        "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。"
+      },
+      "sections": [
+        {
+          "id": "sec_banner",
+          "type": "banner",
+          "data": {
+            "title": "車種別スピーカー交換プラン",
+            "subTitle": "",
+            "image": "",
+            "height": "400px",
+            "opacity": 0.5,
+            "badge": "スピーカー交換パッケージ",
+            "bgColor": "#1e3a8a",
+            "description": "初めてカーオーディオにチャレンジする方向けに、できるだけ費用を抑えて楽しめるプランをご用意しました。コストを抑えるために人気車種に特化したパッケージ構成にしています。\nサブスクや残クレなど、原状回復が必要な車両にも対応できるよう、車両へのダメージを残さない取り付け方法を採用しています。対象車種は順次追加予定です。"
+          }
+        },
+        {
+          "id": "sec_pkg_summary",
+          "type": "package_summary",
+          "data": {
+            "title": "パッケージ全内容（まとめ）",
+            "items": [
+              {
+                "title": "スピーカー本体",
+                "desc": ""
+              },
+              {
+                "title": "スピーカーインストール費用",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "軽防振",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "車種別キット",
+                "desc": "",
+                "value": ""
+              }
+            ],
+            "subtitle": "下記の内容が含まれたパッケージとなっています。"
+          }
+        },
+        {
+          "id": "sec_notes",
+          "type": "notes",
+          "data": {
+            "title": "施工に関する注意事項",
+            "items": [
+              "作業は<strong>1日お車をお預かり</strong>します（無料代車をご用意可能です）。"
+            ]
+          }
+        },
+        {
+          "id": "sec_1778923293452",
+          "type": "floating_cta",
+          "data": {}
+        },
+        {
+          "id": "sec_1778994303402",
+          "type": "link_cards",
+          "data": {
+            "items": [
+              {
+                "id": "card_1778994312301",
+                "title": "タント\n(H25.10～R1.7)(R1.7-)",
+                "image": "/images/Audio/vihicle/tanto.webp",
+                "slug": "car-category-tanto",
+                "linkText": "詳しく見る",
+                "badge": "DAIHATU"
+              },
+              {
+                "id": "card_1778994980439",
+                "title": "ムーヴ・キャンバス　\n(H28.9～R4.7)(R4.7-)",
+                "image": "/images/Audio/vihicle/move_canbus.webp",
+                "slug": "car-category-canbus",
+                "linkText": "詳しく見る",
+                "badge": "DAIHATU"
+              },
+              {
+                "id": "card_1778995261718",
+                "title": "ウェイク\n(H26.11～R4)",
+                "image": "/images/Audio/vihicle/wake.webp",
+                "slug": "car-category-wake",
+                "linkText": "詳しく見る",
+                "badge": "DAIHATU"
+              },
+              {
+                "id": "card_1778995262356",
+                "title": "FIT\n(H25.9～R2.2)(R2.2-)",
+                "image": "/images/Audio/vihicle/fit.webp",
+                "slug": "car-category-FIT",
+                "linkText": "詳しく見る",
+                "badge": "HONDA"
+              },
+              {
+                "id": "card_1778996564953",
+                "title": "N-BOX\n(H23.12-H29.9)(H29.9-R5.10)(R5.10-)",
+                "image": "/images/Audio/vihicle/n-box.webp",
+                "slug": "car-category-NBOX",
+                "linkText": "詳しく見る",
+                "badge": "HONDA"
+              },
+              {
+                "id": "card_1778996869048",
+                "title": "N-WGN\n(H25/11-R1.8)(R1.8-R4.9)(R4.9-)",
+                "image": "/images/Audio/vihicle/n-wgn.webp",
+                "slug": "car-category-NWGN",
+                "linkText": "詳しく見る",
+                "badge": "HONDA"
+              },
+              {
+                "id": "card_1778997196372",
+                "title": "デイズルークス\n(H26.2～R2.2)(R2.3-R7.9) ",
+                "image": "/images/Audio/vihicle/roox.webp",
+                "slug": "car-category-roox",
+                "linkText": "詳しく見る",
+                "badge": "NISSAN"
+              },
+              {
+                "id": "card_1778997494398",
+                "title": "スイフト/スイフトスポーツ\n(H22.9-H29.1)(H29.1-R5.12)",
+                "image": "/images/Audio/vihicle/swift.webp",
+                "slug": "car-category-swift",
+                "linkText": "詳しく見る",
+                "badge": "SUZUKI"
+              },
+              {
+                "id": "card_1778999500597",
+                "title": "ジムニー/ジムニーシエラ\n(H30.7～)",
+                "image": "/images/Audio/vihicle/jimny.webp",
+                "slug": "car-category-jimny",
+                "linkText": "詳しく見る",
+                "badge": "SUZUKI"
+              },
+              {
+                "id": "card_1778999886975",
+                "title": "アルファード/ヴェルファイア\n(H27.1-R5.6)(R5.6-)",
+                "image": "/images/Audio/vihicle/al.webp",
+                "slug": "car-category-ALVEL",
+                "linkText": "詳しく見る",
+                "badge": "TOYOTA"
+              },
+              {
+                "id": "card_1779000139048",
+                "title": "ランドクルーザー300\n(R3.8-)",
+                "image": "/images/Audio/vihicle/300.webp",
+                "slug": "car-category-landcruiser300",
+                "linkText": "詳しく見る",
+                "badge": "TOYOTA"
+              },
+              {
+                "id": "card_1779000143002",
+                "title": "ランドクルーザープラド\n(H21.9-R6.4)",
+                "image": "/images/Audio/vihicle/prado.webp",
+                "slug": "car-category-PRADO",
+                "linkText": "詳しく見る",
+                "badge": "TOYOTA"
+              },
+              {
+                "id": "card_1779000674198",
+                "title": "C-HR\n(H28.12~) ",
+                "image": "/images/Audio/vihicle/c-hr.webp",
+                "slug": "car-category-CHR",
+                "linkText": "詳しく見る",
+                "badge": "TOYOTA"
+              },
+              {
+                "id": "card_1779000674936",
+                "title": "プリウス\n(H27.12~R5.1)(H21.5～H27.12)\n(H27.12-R5.1)(R5.1-)",
+                "image": "/images/Audio/vihicle/prius.webp",
+                "slug": "car-category-prius",
+                "linkText": "詳しく見る",
+                "badge": "TOYOTA"
+              },
+              {
+                "id": "card_1779001163096",
+                "title": "レヴォーグ\n(R2.10～)(H26.6～R2.10)",
+                "image": "/images/Audio/vihicle/LEVORG.webp",
+                "slug": "car-category-LEVORG",
+                "linkText": "詳しく見る",
+                "badge": "SUBARU"
+              },
+              {
+                "id": "card_1779001163962",
+                "title": "フォレスター\n(R2.10～)(H26.6～R2.10)",
+                "image": "/images/Audio/vihicle/FORESTER.webp",
+                "slug": "car-category-FORESTER",
+                "linkText": "詳しく見る",
+                "badge": "SUBARU"
+              },
+              {
+                "id": "card_1779001164699",
+                "title": "RENEGADE\nRENEGADE 4ex\n(2015～) ",
+                "image": "/images/Audio/vihicle/RENEGADE.webp",
+                "slug": "car-category-renegade",
+                "linkText": "詳しく見る",
+                "badge": "JEEP"
+              },
+              {
+                "id": "card_1779001165296",
+                "title": "COMPASS\n(2017～) ",
+                "image": "/images/Audio/vihicle/COMPASS.webp",
+                "slug": "car-category-compass",
+                "linkText": "詳しく見る",
+                "badge": "JEEP"
+              }
+            ],
+            "title": "対応車種ラインナップ"
+          }
+        }
+      ],
+      "status": "published",
+      "slug": "car-category",
+      "features": {
+        "doorTuning": {
+          "image": "/images/Audio/Speaker/door-b.webp"
+        },
+        "baffle": {
+          "image": "/images/Audio/Speaker/baffle.webp"
+        },
+        "cable": {
+          "image": "/images/Audio/Speaker/ang-cable.webp"
+        }
+      },
+      "upgrades": {
+        "options": {
+          "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
+          "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
+        }
+      },
+      "showInMenu": true,
+      "speakers": []
+    },
+    {
+      "id": "line_1779002585045",
+      "name": "ダイハツ　タント専用プラン",
+      "parentCategoryId": "",
+      "isTemplate": false,
+      "header": {
+        "mainTitle": "タント専用プラン",
+        "subTitle": "ベーシックライン",
+        "badge": "スピーカー交換パッケージ",
+        "description": "コストを抑えながら、効果的に音質アップできるタント専用のスピーカー交換プランです。\nダイハツ　タント(LA650S/LA660S) (R1.7～) \nダイハツ　タント(LA600S/LA610S)　(H25.10～R1.7)"
+      },
+      "pricing": {
+        "specialPrice": "81840",
+        "fixedPrice": 41800,
+        "normalPriceText": "117700",
+        "savingsText": "35,860円 お得!",
+        "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。"
+      },
+      "sections": [
+        {
+          "id": "sec_banner",
+          "type": "banner",
+          "data": {
+            "title": "タント専用プラン",
+            "subTitle": "",
+            "image": "/images/Audio/vihicle/tanto.webp",
+            "height": "400px",
+            "opacity": 0.5,
+            "badge": "スピーカー交換パッケージ",
+            "bgColor": "",
+            "description": "コストを抑えながら、効果的に音質アップできるタント専用のスピーカー交換プランです。\nダイハツ　タント(LA650S/LA660S) (R1.7～) \nダイハツ　タント(LA600S/LA610S)　(H25.10～R1.7)"
+          }
+        },
+        {
+          "id": "sec_pkg_summary",
+          "type": "package_summary",
+          "data": {
+            "title": "このプランに含まれる内容",
+            "items": [
+              {
+                "title": "スピーカー本体　",
+                "desc": "KICKER　CSS674",
+                "value": "40700円税込み"
+              },
+              {
+                "title": "軽防振",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "タント専用取付キット一式",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "取り付け工賃",
+                "desc": "",
+                "value": ""
+              }
+            ],
+            "subtitle": ""
+          }
+        },
+        {
+          "id": "sec_1778923293452",
+          "type": "floating_cta",
+          "data": {}
+        },
+        {
+          "id": "sec_speakers",
+          "type": "speakers",
+          "data": {
+            "title": "Speaker Lineup",
+            "fixedPrice": 15730,
+            "speakers": [
+              {
+                "id": "spk_1779057904498",
+                "brand": "KICKER",
+                "name": "CSS674",
+                "image": "/images/Audio/Speaker/CSS674.webp",
+                "standalonePrice": "40700",
+                "remarks": ""
+              }
+            ],
+            "subtitle": "アメリカの人気ブランドKICKERのCSシリーズに交換します。\n純正ナビの内蔵アンプでも駆動しやすく、張りのある小気味よいサウンドが手軽に楽しめます。\nツィーターは純正位置への取り付けです。",
+            "hideSubtitle": false,
+            "hideTitle": true,
+            "subtitleAlign": "center"
+          }
+        },
+        {
+          "id": "sec_notes",
+          "type": "notes",
+          "data": {
+            "title": "施工に関する注意事項",
+            "items": [
+              "作業は<strong>半日ー1日お車をお預かり</strong>します（無料代車をご用意可能です）。"
+            ]
+          }
+        }
+      ],
+      "status": "published",
+      "slug": "car-category-tanto",
+      "features": {
+        "doorTuning": {
+          "image": "/images/Audio/Speaker/door-b.webp"
+        },
+        "baffle": {
+          "image": "/images/Audio/Speaker/baffle.webp"
+        },
+        "cable": {
+          "image": "/images/Audio/Speaker/ang-cable.webp"
+        }
+      },
+      "upgrades": {
+        "options": {
+          "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
+          "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
+        }
+      },
+      "showInMenu": false,
+      "speakers": []
+    }
+  ],
+  "audioLPTemplates": [
+    {
+      "id": "tpl_a4_print",
+      "name": "A4印刷用標準レイアウト",
+      "parentCategoryId": "speaker_package",
+      "isTemplate": true,
+      "header": {
+        "mainTitle": "STANDARD LINE",
+        "subTitle": "スピーカー交換パッケージ",
+        "badge": "A4 PRINT",
+        "description": "A4印刷に最適な標準レイアウトです。"
+      },
+      "pricing": {
+        "specialPrice": "81840",
+        "fixedPrice": 41140,
+        "normalPriceText": "通常目安: 117,700円",
+        "savingsText": "約 35,860円 お得!",
+        "note": "※KICKER CSS674（40,700円）を選択した場合の例。"
+      },
+      "sections": [
+        {
+          "id": "sec_banner",
+          "type": "banner",
+          "data": {
+            "title": "STANDARD LINE",
+            "subTitle": "スピーカー交換パッケージ",
+            "image": "/images/Top/speaker.webp",
+            "height": "400px",
+            "opacity": 0.5
+          }
+        },
+        {
+          "id": "sec_pricing",
+          "type": "pricing",
+          "data": {
+            "specialPrice": "81840",
+            "normalPrice": "117700",
+            "savingsText": "35,860円 お得!",
+            "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。"
+          }
+        },
+        {
+          "id": "sec_features",
+          "type": "features",
+          "data": {
+            "items": [
+              {
+                "title": "ドアチューニング Bコース",
+                "desc": "スピーカーの性能を最大限に引き出すための環境作り。ドア内部の共振を抑え、クリアな低域再生を実現します。",
+                "image": "/images/Audio/Speaker/door-b.webp"
+              },
+              {
+                "title": "カスタムインナーバッフル",
+                "desc": "車種に合わせて1台1台製作するバーチ材バッフル。スピーカーを強固に固定し、音のレスポンスを高めます。",
+                "image": "/images/Audio/Speaker/baffle.webp"
+              },
+              {
+                "title": "ANGオリジナルケーブル",
+                "desc": "情報の損失を最小限に抑える高品位ケーブル。繊細な音のニュアンスまで余さず再生します。",
+                "image": "/images/Audio/Speaker/ang-cable.webp"
+              }
+            ],
+            "title": "音質を決定づける「3つの重要施工」を標準装備",
+            "description": "スピーカーの性能を100%引き出すためには、ただ取り付けるだけでは不十分です。本パッケージは以下の必須環境づくりがすべて含まれています。"
+          }
+        },
+        {
+          "id": "sec_pkg_summary",
+          "type": "package_summary",
+          "data": {
+            "title": "パッケージ全内容（まとめ）",
+            "items": [
+              {
+                "title": "スピーカー",
+                "desc": "17cmモデル2WAYスピーカー（10万円までのモデルから選択）"
+              },
+              {
+                "title": "ドアチューニング Bコース",
+                "desc": "制振・防音処理",
+                "value": "¥27,500"
+              },
+              {
+                "title": "カスタムインナーバッフル",
+                "desc": "車種専用バーチ材マウント製作",
+                "value": "¥11,000"
+              },
+              {
+                "title": "ANGオリジナルスピーカーケーブル",
+                "desc": "高品位ケーブル（オーディオテクニカ製 ¥1,500/M相当を10m使用）",
+                "value": "¥16,500"
+              },
+              {
+                "title": "ツィーター取付",
+                "desc": "純正位置、もしくはオンダッシュ取り付け"
+              },
+              {
+                "title": "ワイヤリング工賃",
+                "desc": "正確な配線と極性チェックを含む",
+                "value": "¥22,000"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec_notes",
+          "type": "notes",
+          "data": {
+            "title": "施工に関する注意事項",
+            "items": [
+              "作業は<strong>1日お車をお預かり</strong>します（無料代車をご用意可能です）。",
+              "バッフル適合がない車種は別途<strong>¥5,500</strong>の製作費が必要になります。",
+              "ツィーター固定にマウント等が必要な車種は追加費用が発生する場合があります。",
+              "ドア通線に加工が必要な車両（ハーネスがカプラ等）は別途加工費用がかかる場合があります。"
+            ]
+          }
+        },
+        {
+          "id": "sec_upgrades",
+          "type": "upgrades",
+          "data": {
+            "courses": [
+              {
+                "name": "Bコース→Aコース",
+                "price": "+¥11,000",
+                "image": "/images/Audio/Speaker/door-b.webp",
+                "desc": "スピーカーの背圧処理にフェリソニDS-1.5WPを使用、及び制振材料の増量（通常¥16,500）"
+              },
+              {
+                "name": "Bコース→A+コース",
+                "price": "+¥22,000",
+                "image": "/images/Audio/Speaker/door-b.webp",
+                "desc": "スピーカーの背圧処理にフェリソニC2を使用、及び制振材料の増量（通常¥27,500）"
+              },
+              {
+                "name": "Bコース→Sコース",
+                "price": "+¥33,000",
+                "image": "/images/Audio/Speaker/door-b.webp",
+                "desc": "DS-1.5WPをAコース以上に増量使用、及び制振材料の増量、さらに最新複合マテリアルによる吸音・遮音処置（通常¥38,500）",
+                "pop": true
+              },
+              {
+                "name": "Bコース→S+コース",
+                "price": "+¥44,000",
+                "image": "/images/Audio/Speaker/door-b.webp",
+                "desc": "フェリソニC2をA+コース以上に増量使用、及び制振材料の増量、さらに最新複合マテリアルによる吸音・遮音処置（通常¥49,500）"
+              }
+            ],
+            "options": {
+              "metalBaffleDiscount": "20% OFF",
+              "tweeterMountPrice": "¥46,200〜",
+              "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
+              "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp",
+              "metalBaffleDesc": "カロッツェリア製車種専用インナーバッフルのメタルバージョン。タイトで張りのある再生が可能になります。同時施工で定価より20%オフ。",
+              "tweeterMountDesc": "Aピラー等への埋め込み加工。反射を抑え、クリアな音像とクールなインテリアを実現。Aピラー: ¥46,200〜、ミラー裏: ¥57,750〜。"
+            }
+          }
+        },
+        {
+          "id": "sec_speakers",
+          "type": "speakers",
+          "data": {}
         }
       ]
     }

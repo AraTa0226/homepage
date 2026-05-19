@@ -1,0 +1,2 @@
+"            const cleanSlug = (lpData.slug || 'sp-custom').replace(/^\\/+/, '');\n            \n            // Fix: If showInMenu is true but parentCategoryId is missing, default to speaker_package\n            let parentCat = lpData.parentCategoryId;\n  
+<truncated 412 bytes>
