@@ -561,8 +561,8 @@ export const StandardLinePage: React.FC = () => {
                 return (
                   <div key={section.id} className="max-w-4xl mx-auto px-6 py-24">
                     <div className="text-center mb-16">
-                      <div className="inline-block bg-gray-100 text-gray-500 text-[12px] font-black px-4 py-2 rounded-full tracking-widest uppercase mb-4">Questions & Answers</div>
-                      <h2 className="text-4xl md:text-6xl font-black text-gray-900 tracking-tighter italic uppercase">よくあるご質問</h2>
+                      <div className="inline-block bg-gray-100 text-gray-500 text-[12px] font-black px-4 py-2 rounded-full tracking-widest uppercase mb-4">{section.data.subtitle || 'Questions & Answers'}</div>
+                      <h2 className="text-4xl md:text-6xl font-black text-gray-900 tracking-tighter italic uppercase">{section.data.title || 'よくあるご質問'}</h2>
                     </div>
                     <div className="space-y-6">
                       {(section.data.items || []).map((faq:any, i:number) => (

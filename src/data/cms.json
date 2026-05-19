@@ -126,14 +126,6 @@
           "price": "82500"
         },
         {
-          "id": "line_1778924085764",
-          "slug": "sp-premium",
-          "name": "スピーカー交換・PREMIUM line（10万円以上）",
-          "link": "/sp-premium",
-          "isDynamic": true,
-          "price": "162800"
-        },
-        {
           "id": "line_1778981709334",
           "slug": "front3waypac",
           "name": "フロント3way",
@@ -164,6 +156,17 @@
           "link": "/car-category",
           "isDynamic": true,
           "price": "81840"
+        },
+        {
+          "id": "line_1778924085764",
+          "name": "スピーカー交換・PREMIUM line（10万円以上）",
+          "badge": "スピーカー交換パッケージ",
+          "description": "10万円以上のスピーカーの中から、お気に入りの1本を選べるパッケージです。ドアチューニングとスピーカーケーブルの交換もセットで、本格的なサウンドを追求したい方のためのラインです。\nこの価格帯になると、各ブランドが素材や構造にまで独自のこだわりを注ぎ込んだモデルが揃います。情報量の多さ、音の質感、フォーカスの精度、ステレオイメージの広がり——スタンダードラインとは明らかに違う、一段上の音の世界を体感できます。\n一方で、どのブランドも「音作り優先」で設計されているため、インナーバッフルの加工やツィーターのオンダッシュマウントなど、取り付けに工夫が必要なモデルも少なくありません。スピーカー単体ではなく、どう取り付けるかまで含めて一緒に選ぶことが、このラインでは特に重要です。",
+          "link": "/sp-premium",
+          "features": [],
+          "price": "162800",
+          "slug": "sp-premium",
+          "isDynamic": true
         }
       ],
       "images": [],
@@ -1656,7 +1659,7 @@
           "name": "Panthera Z706",
           "price": "425,800",
           "badge": "最強プラン",
-          "description": "全センサー装備の最高峰。70を守り抜くANGのフルスペックパッケージ。",
+          "description": "全センサー装備の最���峰。70を守り抜くANGのフルスペックパッケージ。",
           "triple": true,
           "tilt": true,
           "bonnet": false,
@@ -7164,11 +7167,11 @@
       "description": "10万円までのスピーカーの中から、お気に入りの1本を選べるパッケージです。ドアチューニングとスピーカーケーブルの交換もセットになっており、音にこだわりたい方の「最初の本格ステップ」としておすすめです。\nこの価格帯は各メーカーとも個性の強い人気モデルが揃っています。ただ、取り付けやすさを重視したモデルと、音質を最優先したモデルが混在している価格帯でもあります。見た目のスペックだけで選ぶと、いざ取り付けの段階で「このやり方はできない」となるケースも。商品選びの際は、ご希望のインストール方法と合っているかどうかも一緒に確認しながら進めることをおすすめします。\n埋め込み奥行きやツィーターマウントの有無も各モデルに記載していますので、参考にしてください。"
     },
     "pricing": {
-      "specialPrice": "81840",
+      "specialPrice": "82500",
       "fixedPrice": 41800,
-      "normalPriceText": "117700",
-      "savingsText": "35,860円 お得!",
-      "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。"
+      "normalPriceText": "通常目安: 110,000円",
+      "savingsText": "約 27,500円 お得!",
+      "note": "※KICKER CSS674（40,700円）を選択した場合の例。"
     },
     "sections": [
       {
@@ -7189,10 +7192,11 @@
         "id": "sec_pricing",
         "type": "pricing",
         "data": {
-          "specialPrice": "81840",
-          "normalPrice": "117700",
-          "savingsText": "35,860円 お得!",
-          "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。"
+          "specialPrice": "82500",
+          "fixedPrice": 41800,
+          "normalPriceText": "通常目安: 110,000円",
+          "savingsText": "約 27,500円 お得!",
+          "note": "※KICKER CSS674（40,700円）を選択した場合の例。"
         }
       },
       {
@@ -8678,7 +8682,8 @@
         "fixedPrice": 52800,
         "normalPriceText": "通常目安: 200,000円",
         "savingsText": "約 37,200円 お得!",
-        "note": "※DIATONE DS-G400（110,000円）を選択した場合の例。"
+        "note": "※DIATONE DS-G400（110,000円）を選択した場合の例。",
+        "taxRate": 10
       },
       "sections": [
         {
@@ -8693,17 +8698,6 @@
             "badge": "スピーカー交換パッケージ",
             "bgColor": "#1e3a8a",
             "description": "10万円以上のスピーカーの中から、お気に入りの1本を選べるパッケージです。ドアチューニングとスピーカーケーブルの交換もセットで、本格的なサウンドを追求したい方のためのラインです。\nこの価格帯になると、各ブランドが素材や構造にまで独自のこだわりを注ぎ込んだモデルが揃います。情報量の多さ、音の質感、フォーカスの精度、ステレオイメージの広がり——スタンダードラインとは明らかに違う、一段上の音の世界を体感できます。\n一方で、どのブランドも「音作り優先」で設計されているため、インナーバッフルの加工やツィーターのオンダッシュマウントなど、取り付けに工夫が必要なモデルも少なくありません。スピーカー単体ではなく、どう取り付けるかまで含めて一緒に選ぶことが、このラインでは特に重要です。"
-          }
-        },
-        {
-          "id": "sec_pricing_1779208759753_678a",
-          "type": "pricing",
-          "data": {
-            "specialPrice": "162800",
-            "fixedPrice": 52800,
-            "normalPriceText": "通常目安: 200,000円",
-            "savingsText": "約 37,200円 お得!",
-            "note": "※DIATONE DS-G400（110,000円）を選択した場合の例。"
           }
         },
         {
@@ -8994,7 +8988,8 @@
               }
             ],
             "title": "Speaker Lineup",
-            "subtitle": "右上の再生ボタンより音源試聴可能です。"
+            "subtitle": "右上の再生ボタンより音源試聴可能です。",
+            "fixedPrice": "52800"
           }
         },
         {
@@ -9023,7 +9018,172 @@
         }
       },
       "showInMenu": true,
-      "speakers": []
+      "speakers": [
+        {
+          "id": "spk_1779143962439",
+          "brand": "DIATONE",
+          "name": "DS-G400",
+          "image": "/images/Audio/Speaker/diatone400.webp",
+          "standalonePrice": "110000",
+          "remarks": "パッシブあり /バイアンプ",
+          "mountingHoleSize": "139",
+          "depthSize": "60",
+          "hasGrille": "なし",
+          "hasTweeterMount": "あり",
+          "youtubeUrl": "https://youtu.be/_1M6N16o9no"
+        },
+        {
+          "id": "spk_1779143965695",
+          "brand": "FOCAL",
+          "name": "ES 165 KX2E",
+          "image": "/images/Audio/Speaker/ES 165 KX2E.webp",
+          "standalonePrice": "118800",
+          "remarks": "パッシブあり 2Ω",
+          "mountingHoleSize": "142",
+          "depthSize": "79",
+          "hasGrille": "なし",
+          "hasTweeterMount": "あり"
+        },
+        {
+          "id": "spk_1779143966991",
+          "brand": "BLAM",
+          "name": "165 S45",
+          "image": "/images/Audio/Speaker/165 S45.webp",
+          "standalonePrice": "126500",
+          "remarks": "バイアンプ対応 3Ω",
+          "mountingHoleSize": "142",
+          "depthSize": "63.7",
+          "hasGrille": "なし",
+          "hasTweeterMount": "あり",
+          "youtubeUrl": "https://youtu.be/f0Uwc3Zz_Mk"
+        },
+        {
+          "id": "spk_1779143967807",
+          "brand": "FOCAL",
+          "name": "ES 165 K2S",
+          "image": "/images/Audio/Speaker/ES 165 K2S.webp",
+          "standalonePrice": "125400",
+          "remarks": "パッシブあり 2Ω",
+          "mountingHoleSize": "142",
+          "depthSize": "58",
+          "hasGrille": "なし",
+          "hasTweeterMount": "あり",
+          "youtubeUrl": "https://youtu.be/0Yl4ozb6_Hc"
+        },
+        {
+          "id": "spk_1779143968407",
+          "brand": "morel",
+          "name": "SENSUS 62",
+          "image": "/images/Audio/Speaker/SENSUS 62.webp",
+          "standalonePrice": "132000",
+          "remarks": "グリル別売り パッシブあり",
+          "mountingHoleSize": "141",
+          "depthSize": "61",
+          "hasGrille": "あり",
+          "hasTweeterMount": "なし"
+        },
+        {
+          "id": "spk_1779143969055",
+          "brand": "BLAM",
+          "name": "165 S85",
+          "image": "/images/Audio/Speaker/165 S85.webp",
+          "standalonePrice": "145200",
+          "remarks": "パッシブあり 3Ω",
+          "mountingHoleSize": "142",
+          "depthSize": "76.2",
+          "hasGrille": "なし",
+          "hasTweeterMount": "なし",
+          "youtubeUrl": "https://youtu.be/gP5U6fNJ4jE"
+        },
+        {
+          "id": "spk_1779143969583",
+          "brand": "carrozzeria",
+          "name": "TS-Z900PRS",
+          "image": "/images/Audio/Speaker/TS-Z900PRS.webp",
+          "standalonePrice": "140800",
+          "remarks": "パッシブあり 3Ω",
+          "mountingHoleSize": "137",
+          "depthSize": "58",
+          "hasGrille": "なし",
+          "hasTweeterMount": "あり",
+          "youtubeUrl": "https://youtu.be/FUUk22IfYdI"
+        },
+        {
+          "id": "spk_1779143970127",
+          "brand": "BLUE MOON AUDIO",
+          "name": "VX165",
+          "image": "/images/Audio/Speaker/VX165.webp",
+          "standalonePrice": "154000",
+          "remarks": "バイアンプ対応 4Ω",
+          "mountingHoleSize": "146",
+          "depthSize": "66.7",
+          "hasGrille": "あり",
+          "hasTweeterMount": "なし",
+          "youtubeUrl": "https://youtu.be/1WssbN3bELQ"
+        },
+        {
+          "id": "spk_1779143970679",
+          "brand": "KICKER",
+          "name": "QSS674",
+          "image": "/images/Audio/Speaker/QSS674.webp",
+          "standalonePrice": "177100",
+          "remarks": "パッシブあり",
+          "mountingHoleSize": "138",
+          "depthSize": "63.5",
+          "hasGrille": "あり",
+          "hasTweeterMount": "なし"
+        },
+        {
+          "id": "spk_1779143971367",
+          "brand": "FOCAL",
+          "name": "ES 165 KX2E",
+          "image": "/images/Audio/Speaker/ES 165 KX2E.webp",
+          "standalonePrice": "173800",
+          "remarks": "パッシブあり 2Ω",
+          "mountingHoleSize": "142",
+          "depthSize": "76",
+          "hasGrille": "なし",
+          "hasTweeterMount": "あり"
+        },
+        {
+          "id": "spk_1779143971831",
+          "brand": "DYNAUDIO",
+          "name": "esotec system242",
+          "image": "/images/Audio/Speaker/esotec system242.webp",
+          "standalonePrice": "220000",
+          "remarks": "パッシブあり",
+          "mountingHoleSize": "134",
+          "depthSize": "67",
+          "hasGrille": "あり",
+          "hasTweeterMount": "なし",
+          "youtubeUrl": "https://youtu.be/KhNixYLyDKI"
+        },
+        {
+          "id": "spk_1779143972343",
+          "brand": "morel",
+          "name": "HYBRID 62 MK2",
+          "image": "/images/Audio/Speaker/HYBRID_62_MK2.webp",
+          "standalonePrice": "231000",
+          "remarks": "パッシブあり",
+          "mountingHoleSize": "141",
+          "depthSize": "61",
+          "hasGrille": "あり",
+          "hasTweeterMount": "あり"
+        },
+        {
+          "id": "spk_1779143972767",
+          "brand": "FOCAL",
+          "name": "165 W-XP",
+          "image": "/images/Audio/Speaker/165 W-XP.webp",
+          "standalonePrice": "286000",
+          "remarks": "パッシブあり",
+          "mountingHoleSize": "142",
+          "depthSize": "74",
+          "hasGrille": "なし",
+          "hasTweeterMount": "なし",
+          "youtubeUrl": "https://youtu.be/U_ReOFJ06TI"
+        }
+      ]
     },
     {
       "id": "line_1778981709334",

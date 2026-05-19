@@ -1669,6 +1669,27 @@ const AudioPlanManager = () => {
             case 'features':
                 return (
                     <div className="space-y-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div className="space-y-1.5">
+                                <label className="block text-[10px] font-bold text-zinc-400">セクションタイトル</label>
+                                <input 
+                                    type="text"
+                                    value={section.data.title || ''}
+                                    onChange={e => updateSectionData(sIdx, { title: e.target.value })}
+                                    className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-white text-xs font-bold"
+                                    placeholder="音質を決定づける「3つの重要施工」を標準装備"
+                                />
+                            </div>
+                            <div className="space-y-1.5">
+                                <label className="block text-[10px] font-bold text-zinc-400">セクション説明文 (description)</label>
+                                <textarea 
+                                    value={section.data.description || ''}
+                                    onChange={e => updateSectionData(sIdx, { description: e.target.value })}
+                                    className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-white text-xs font-bold"
+                                    rows={2}
+                                />
+                            </div>
+                        </div>
                         {['doorTuning', 'baffle', 'cable'].map((key) => {
                             const feat = section.data[key] || {};
                             return (
@@ -2544,14 +2565,26 @@ const AudioPlanManager = () => {
                 const faqItems = section.data.items || [];
                 return (
                     <div className="space-y-6">
-                        <div className="space-y-1.5">
-                            <label className="block text-[10px] font-bold text-zinc-400">セクションタイトル</label>
-                            <input 
-                                type="text"
-                                value={section.data.title || ''}
-                                onChange={e => updateSectionData(sIdx, { title: e.target.value })}
-                                className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-white text-xs font-bold"
-                            />
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div className="space-y-1.5">
+                                <label className="block text-[10px] font-bold text-zinc-400">セクションタイトル</label>
+                                <input 
+                                    type="text"
+                                    value={section.data.title || ''}
+                                    onChange={e => updateSectionData(sIdx, { title: e.target.value })}
+                                    className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-white text-xs font-bold"
+                                />
+                            </div>
+                            <div className="space-y-1.5">
+                                <label className="block text-[10px] font-bold text-zinc-400">サブタイトル</label>
+                                <input 
+                                    type="text"
+                                    value={section.data.subtitle || ''}
+                                    onChange={e => updateSectionData(sIdx, { subtitle: e.target.value })}
+                                    className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-white text-xs font-bold"
+                                    placeholder="Questions & Answers"
+                                />
+                            </div>
                         </div>
 
                         <div className="space-y-4 pt-4 border-t border-zinc-800/60">
