@@ -114,19 +114,25 @@
         },
         {
           "id": "line_1778978221406",
-          "slug": "basicsep",
           "name": "スピーカー交換・BASIC line （セパレート） ",
+          "badge": "スピーカー交換パッケージ",
+          "description": "ツィーター（高音）とミッドレンジ（中低音）が別々になったセパレートタイプのスピーカーに交換するパッケージです。カーオーディオのシステムアップが初めての方にもおすすめです。\nコストを抑えながらセパレートの良さを体感していただけるよう、ネットワーク（音域を分離するユニット）はインラインタイプを中心にラインアップしています。ツィーターは純正位置またはダッシュボード上へのマウント取り付けが基本です。",
           "link": "/basicsep",
-          "isDynamic": true,
-          "price": "64900"
+          "features": [],
+          "price": "64900",
+          "slug": "basicsep",
+          "isDynamic": true
         },
         {
           "id": "line_1778920109545",
-          "slug": "sp-standard",
           "name": "スピーカー交換・STANDARD line（10万円まで）",
+          "badge": "スピーカー交換パッケージ",
+          "description": "10万円までのスピーカーの中から、お気に入りの1本を選べるパッケージです。ドアチューニングとスピーカーケーブルの交換もセットになっており、音にこだわりたい方の「最初の本格ステップ」としておすすめです。\nこの価格帯は各メーカーとも個性の強い人気モデルが揃っています。ただ、取り付けやすさを重視したモデルと、音質を最優先したモデルが混在している価格帯でもあります。見た目のスペックだけで選ぶと、いざ取り付けの段階で「このやり方はできない」となるケースも。商品選びの際は、ご希望のインストール方法と合っているかどうかも一緒に確認しながら進めることをおすすめします。\n埋め込み奥行きやツィーターマウントの有無も各モデルに記載していますので、参考にしてください。",
           "link": "/sp-standard",
-          "isDynamic": true,
-          "price": "82500"
+          "features": [],
+          "price": "81840 ",
+          "slug": "sp-standard",
+          "isDynamic": true
         },
         {
           "id": "line_1778924085764",
@@ -141,11 +147,14 @@
         },
         {
           "id": "line_1778981709334",
-          "slug": "front3waypac",
           "name": "フロント3way",
+          "badge": "スピーカー交換パッケージ",
+          "description": "取り付けの複雑さとコストから、なかなか手が届かなかった3WAYスピーカー。そのハードルを下げたパッケージです。",
           "link": "/front3waypac",
-          "isDynamic": true,
-          "price": "81840"
+          "features": [],
+          "price": "81840",
+          "slug": "front3waypac",
+          "isDynamic": true
         },
         {
           "id": "line_1778985631489",
@@ -540,7 +549,7 @@
     },
     {
       "id": "security_clifford",
-      "category": "CLIFFORD (クリフォード)",
+      "category": "CLIFFORD (ク���フォード)",
       "type": "security",
       "items": [
         {
@@ -7028,11 +7037,12 @@
       "description": "10万円までのスピーカーの中から、お気に入りの1本を選べるパッケージです。ドアチューニングとスピーカーケーブルの交換もセットになっており、音にこだわりたい方の「最初の本格ステップ」としておすすめです。\nこの価格帯は各メーカーとも個性の強い人気モデルが揃っています。ただ、取り付けやすさを重視したモデルと、音質を最優先したモデルが混在している価格帯でもあります。見た目のスペックだけで選ぶと、いざ取り付けの段階で「このやり方はできない」となるケースも。商品選びの際は、ご希望のインストール方法と合っているかどうかも一緒に確認しながら進めることをおすすめします。\n埋め込み奥行きやツィーターマウントの有無も各モデルに記載していますので、参考にしてください。"
     },
     "pricing": {
-      "specialPrice": "82500",
-      "fixedPrice": 41800,
-      "normalPriceText": "通常目安: 110,000円",
-      "savingsText": "約 27,500円 お得!",
-      "note": "※KICKER CSS674（40,700円）を選択した場合の例。"
+      "specialPrice": "81840 ",
+      "fixedPrice": 0,
+      "normalPriceText": "通常の施工価格: 117,700円",
+      "savingsText": "約 35,860円 お得!",
+      "note": "※KICKER CSS674（40,700円）を選択した場合の例。",
+      "taxRate": 10
     },
     "sections": [
       {
@@ -7053,10 +7063,10 @@
         "id": "sec_pricing",
         "type": "pricing",
         "data": {
-          "specialPrice": "82500",
-          "fixedPrice": 41800,
-          "normalPriceText": "通常目安: 110,000円",
-          "savingsText": "約 27,500円 お得!",
+          "specialPrice": "81840 ",
+          "fixedPrice": "",
+          "normalPriceText": "通常の施工価格: 117,700円",
+          "savingsText": "約 35,860円 お得!",
           "note": "※KICKER CSS674（40,700円）を選択した場合の例。"
         }
       },
@@ -7082,7 +7092,22 @@
             }
           ],
           "title": "スピーカーの実力を、正しく引き出す3つの施工",
-          "description": "スピーカーが本来の性能を発揮するための環境づくりが、このパッケージに含まれています。"
+          "description": "スピーカーが本来の性能を発揮するための環境づくりが、このパッケージに含まれています。",
+          "doorTuning": {
+            "title": "ドアチューニングBコース",
+            "image": "/images/Audio/Speaker/door-b.webp",
+            "desc": "ドアの振動を抑え、スピーカーの音を純粋に引き出す施工です。"
+          },
+          "baffle": {
+            "title": "カスタムインナーバッフル",
+            "image": "/images/Audio/Speaker/baffle.webp",
+            "desc": "車種に合わせてバッフルをオリジナルで製作。スピーカーをしっかり固定します。"
+          },
+          "cable": {
+            "title": "ANGオリジナルスピーカーケーブル",
+            "image": "/images/Audio/Speaker/ang-cable.webp",
+            "desc": "オーディオテクニカとオリジナル製作。音の鮮度と伝達品質にこだわっています。"
+          }
         }
       },
       {
@@ -7092,7 +7117,7 @@
           "title": "パッケージ内容",
           "items": [
             {
-              "title": "スピーカー",
+              "title": "スピーカー本体",
               "desc": "17cmモデル2WAYスピーカー（10万円までのモデルから選択）"
             },
             {
@@ -7102,7 +7127,7 @@
             },
             {
               "title": "カスタムインナーバッフル",
-              "desc": "車種専用バーチ材マウント製作",
+              "desc": "車種専用マウント製作",
               "value": "¥11,000"
             },
             {
@@ -7115,12 +7140,12 @@
               "desc": "純正位置、もしくはオンダッシュ取り付け"
             },
             {
-              "title": "ワイヤリング工賃",
-              "desc": "正確な配線と極性チェックを含む",
+              "title": "ワイヤリング・取付工賃",
+              "desc": "",
               "value": "¥22,000"
             }
           ],
-          "subtitle": "下記の内容が含まれたお得なパッケージとなっています。"
+          "subtitle": "下記の内容が含まれています。"
         }
       },
       {
@@ -7224,19 +7249,6 @@
               "youtubeUrl": "https://youtu.be/R0k8W8pN5is"
             },
             {
-              "id": "spk_1779091885462",
-              "brand": "KICKER",
-              "name": "CSS674",
-              "image": "/images/Audio/Speaker/CSS674.webp",
-              "standalonePrice": "40700",
-              "remarks": "パッシブあり",
-              "mountingHoleSize": "140",
-              "depthSize": "47",
-              "hasGrille": "あり",
-              "hasTweeterMount": "あり",
-              "youtubeUrl": "https://youtu.be/6FdEgXtALzY"
-            },
-            {
               "id": "spk_1779091885974",
               "brand": "carrozzeria",
               "name": "TS-C1740S/TS-C1746S",
@@ -7249,6 +7261,19 @@
               "hasGrille": "なし",
               "hasTweeterMount": "あり",
               "youtubeUrl": "https://youtu.be/ToQVJV9jK-g"
+            },
+            {
+              "id": "spk_1779091885462",
+              "brand": "KICKER",
+              "name": "CSS674",
+              "image": "/images/Audio/Speaker/CSS674.webp",
+              "standalonePrice": "40700",
+              "remarks": "パッシブあり",
+              "mountingHoleSize": "140",
+              "depthSize": "47",
+              "hasGrille": "あり",
+              "hasTweeterMount": "あり",
+              "youtubeUrl": "https://youtu.be/6FdEgXtALzY"
             },
             {
               "id": "spk_1779091886510",
@@ -7276,19 +7301,6 @@
               "hasTweeterMount": "あり"
             },
             {
-              "id": "spk_1779091887502",
-              "brand": "GROUND ZERO",
-              "name": "GZIC 650FX",
-              "image": "/images/Audio/Speaker/GZIC 650FX.webp",
-              "standalonePrice": "48400",
-              "remarks": "パッシブあり /バイアンプ可 /フラッシュマウントのみ",
-              "mountingHoleSize": "142.5",
-              "depthSize": "44",
-              "hasGrille": "あり",
-              "hasTweeterMount": "なし",
-              "youtubeUrl": "https://youtu.be/D_piASeBr2s"
-            },
-            {
               "id": "spk_1779091887982",
               "brand": "HELIX",
               "name": "CB K165.2-S3",
@@ -7313,6 +7325,19 @@
               "hasGrille": "なし",
               "hasTweeterMount": "あり",
               "youtubeUrl": "https://youtu.be/anRCVilehcI"
+            },
+            {
+              "id": "spk_1779091887502",
+              "brand": "GROUND ZERO",
+              "name": "GZIC 650FX",
+              "image": "/images/Audio/Speaker/GZIC 650FX.webp",
+              "standalonePrice": "48400",
+              "remarks": "パッシブあり /バイアンプ可 /フラッシュマウントのみ",
+              "mountingHoleSize": "142.5",
+              "depthSize": "44",
+              "hasGrille": "あり",
+              "hasTweeterMount": "なし",
+              "youtubeUrl": "https://youtu.be/D_piASeBr2s"
             },
             {
               "id": "spk_1779091889047",
@@ -7495,7 +7520,8 @@
           ],
           "title": "Speaker Lineup",
           "hideSubtitle": false,
-          "subtitle": "右上の再生ボタンより音源試聴可能です。"
+          "subtitle": "右上の再生ボタンより音源試聴可能です。",
+          "fixedPrice": "41800"
         }
       },
       {
@@ -7524,7 +7550,316 @@
       }
     },
     "showInMenu": true,
-    "speakers": [],
+    "speakers": [
+      {
+        "id": "spk_1779091883230",
+        "brand": "AUDISON",
+        "name": "APK 165 Ω2",
+        "image": "/images/Audio/Speaker/APK 165 Ω2.webp",
+        "standalonePrice": "30800",
+        "remarks": "TWのみ2Ω",
+        "mountingHoleSize": "141",
+        "depthSize": "58.5",
+        "hasGrille": "あり",
+        "hasTweeterMount": "あり",
+        "youtubeUrl": "https://youtu.be/bLHw8SO10Bc"
+      },
+      {
+        "id": "spk_1779091884255",
+        "brand": "VIBE",
+        "name": "VA-SLICK6C-V7",
+        "image": "/images/Audio/Speaker/VA-SLICK6C-V7.webp",
+        "standalonePrice": "39600",
+        "remarks": "パッシブあり",
+        "hasGrille": "あり",
+        "hasTweeterMount": "あり",
+        "mountingHoleSize": "142",
+        "depthSize": "61",
+        "youtubeUrl": "https://youtu.be/qe5WTXDNi6E"
+      },
+      {
+        "id": "spk_1779091884894",
+        "brand": "BLUE MOON AUDIO",
+        "name": "EX165",
+        "image": "/images/Audio/Speaker/EX165.webp",
+        "standalonePrice": "35200",
+        "remarks": "バイアンプ対応 4Ω",
+        "mountingHoleSize": "130",
+        "depthSize": "56.5",
+        "hasGrille": "なし",
+        "hasTweeterMount": "あり",
+        "youtubeUrl": "https://youtu.be/R0k8W8pN5is"
+      },
+      {
+        "id": "spk_1779091885974",
+        "brand": "carrozzeria",
+        "name": "TS-C1740S/TS-C1746S",
+        "image": "/images/Audio/Speaker/TS-C1746S.webp",
+        "standalonePrice": "open",
+        "remarks": "パッシブあり",
+        "fixedPriceOverride": "81840",
+        "mountingHoleSize": "137",
+        "depthSize": "57",
+        "hasGrille": "なし",
+        "hasTweeterMount": "あり",
+        "youtubeUrl": "https://youtu.be/ToQVJV9jK-g"
+      },
+      {
+        "id": "spk_1779091885462",
+        "brand": "KICKER",
+        "name": "CSS674",
+        "image": "/images/Audio/Speaker/CSS674.webp",
+        "standalonePrice": "40700",
+        "remarks": "パッシブあり",
+        "mountingHoleSize": "140",
+        "depthSize": "47",
+        "hasGrille": "あり",
+        "hasTweeterMount": "あり",
+        "youtubeUrl": "https://youtu.be/6FdEgXtALzY"
+      },
+      {
+        "id": "spk_1779091886510",
+        "brand": "ALPINE",
+        "name": "X-171S",
+        "image": "/images/Audio/Speaker/X-171S.webp",
+        "standalonePrice": "40700",
+        "remarks": "パッシブあり インライン",
+        "mountingHoleSize": "137",
+        "depthSize": "51",
+        "hasGrille": "なし",
+        "hasTweeterMount": "あり",
+        "youtubeUrl": "https://youtu.be/9ftZzHhT5wM"
+      },
+      {
+        "id": "spk_1779091886982",
+        "brand": "GROUND ZERO",
+        "name": "GZIC165.2SPL",
+        "image": "/images/Audio/Speaker/GZIC165.2SPL.webp",
+        "standalonePrice": "44000",
+        "remarks": "TWのみプロテクション",
+        "mountingHoleSize": "142.5",
+        "depthSize": "68",
+        "hasGrille": "あり",
+        "hasTweeterMount": "あり"
+      },
+      {
+        "id": "spk_1779091887982",
+        "brand": "HELIX",
+        "name": "CB K165.2-S3",
+        "image": "/images/Audio/Speaker/CB K165.2-S3.webp",
+        "standalonePrice": "44000",
+        "remarks": "パッシブあり /バイアンプ可 ",
+        "youtubeUrl": "https://youtu.be/aZ2mn_N8gVs",
+        "mountingHoleSize": "143",
+        "depthSize": "61.4",
+        "hasGrille": "あり",
+        "hasTweeterMount": "あり"
+      },
+      {
+        "id": "spk_1779091888582",
+        "brand": "BLAM",
+        "name": "SR 165X",
+        "image": "/images/Audio/Speaker/SR 165X.webp",
+        "standalonePrice": "47300",
+        "remarks": "TW25mm 3Ω",
+        "mountingHoleSize": "142",
+        "depthSize": "62.4",
+        "hasGrille": "なし",
+        "hasTweeterMount": "あり",
+        "youtubeUrl": "https://youtu.be/anRCVilehcI"
+      },
+      {
+        "id": "spk_1779091887502",
+        "brand": "GROUND ZERO",
+        "name": "GZIC 650FX",
+        "image": "/images/Audio/Speaker/GZIC 650FX.webp",
+        "standalonePrice": "48400",
+        "remarks": "パッシブあり /バイアンプ可 /フラッシュマウントのみ",
+        "mountingHoleSize": "142.5",
+        "depthSize": "44",
+        "hasGrille": "あり",
+        "hasTweeterMount": "なし",
+        "youtubeUrl": "https://youtu.be/D_piASeBr2s"
+      },
+      {
+        "id": "spk_1779091889047",
+        "brand": "DYNAUDIO",
+        "name": "ESOTAN 202",
+        "image": "/images/Audio/Speaker/ESOTAN 202.webp",
+        "standalonePrice": "60500",
+        "remarks": "パッシブあり",
+        "mountingHoleSize": "133",
+        "depthSize": "68.3",
+        "hasGrille": "なし",
+        "hasTweeterMount": "なし",
+        "youtubeUrl": "https://youtu.be/W8YVl6QgaTw"
+      },
+      {
+        "id": "spk_1779142935325",
+        "brand": "KICKER",
+        "name": "KSS6704",
+        "image": "/images/Audio/Speaker/KSS6704.webp",
+        "standalonePrice": "61600",
+        "remarks": "グリル別売り /パッシブあり",
+        "mountingHoleSize": "141",
+        "depthSize": "46",
+        "hasGrille": "あり",
+        "hasTweeterMount": "あり",
+        "youtubeUrl": "https://youtu.be/rV2gX6VtX3o"
+      },
+      {
+        "id": "spk_1779091889566",
+        "brand": "GROUND ZERO",
+        "name": "GZRC 165.2SQX-IV",
+        "image": "/images/Audio/Speaker/GZRC 165.2SQX-IV.webp",
+        "standalonePrice": "63800",
+        "remarks": "TWインライン /バイアンプ対応",
+        "youtubeUrl": "https://youtu.be/rV2gX6VtX3o",
+        "mountingHoleSize": "142.5",
+        "depthSize": "68",
+        "hasGrille": "あり",
+        "hasTweeterMount": "あり"
+      },
+      {
+        "id": "spk_1779091890095",
+        "brand": "BLAM",
+        "name": "L 165 S",
+        "image": "/images/Audio/Speaker/L 165 S.webp",
+        "standalonePrice": "63800",
+        "remarks": "TWインラインのみ 3Ω",
+        "mountingHoleSize": "142",
+        "depthSize": "61.7",
+        "hasGrille": "なし",
+        "hasTweeterMount": "あり",
+        "youtubeUrl": "https://youtu.be/9B-FkcMHI3w"
+      },
+      {
+        "id": "spk_1779091890655",
+        "brand": "HELIX",
+        "name": "Ci3 K165.2FM-S3 MK2",
+        "image": "/images/Audio/Speaker/Ci3 K165.2FM-S3 MK2.webp",
+        "standalonePrice": "66000",
+        "remarks": "グリル別途 /パッシブあり /バイアンプ",
+        "mountingHoleSize": "142",
+        "depthSize": "61",
+        "hasGrille": "あり",
+        "hasTweeterMount": "あり",
+        "youtubeUrl": "https://youtu.be/S7HEbCUv5ks"
+      },
+      {
+        "id": "spk_1779091891190",
+        "brand": "Focal",
+        "name": "PS 165 FSE",
+        "image": "/images/Audio/Speaker/PS 165 FSE.webp",
+        "standalonePrice": "77000",
+        "remarks": "���ッシブあり",
+        "mountingHoleSize": "143",
+        "depthSize": "54.5",
+        "hasGrille": "なし",
+        "hasTweeterMount": "あり",
+        "youtubeUrl": "https://youtu.be/D49aol_HkKo"
+      },
+      {
+        "id": "spk_1779091891782",
+        "brand": "DLS",
+        "name": "RC6.2Q",
+        "image": "/images/Audio/Speaker/RC6.2Q.webp",
+        "standalonePrice": "77000",
+        "remarks": "パッシブあり",
+        "mountingHoleSize": "145",
+        "depthSize": "75",
+        "hasGrille": "なし",
+        "hasTweeterMount": "あり"
+      },
+      {
+        "id": "spk_1779091892358",
+        "brand": "DYNAUDIO",
+        "name": "ESOTAN232",
+        "image": "/images/Audio/Speaker/esotan232.webp",
+        "standalonePrice": "77000",
+        "remarks": "置き型マウント別売 /パッシブあり",
+        "mountingHoleSize": "135",
+        "depthSize": "67",
+        "hasGrille": "なし",
+        "hasTweeterMount": "あり",
+        "youtubeUrl": "https://youtu.be/byYM-uqoy2Q"
+      },
+      {
+        "id": "spk_1779091892878",
+        "brand": "carrozzeria",
+        "name": "TS-V174S",
+        "image": "/images/Audio/Speaker/TS-V174S.webp",
+        "standalonePrice": "79200",
+        "remarks": "パッシブあり /バイアンプ",
+        "mountingHoleSize": "137",
+        "depthSize": "61",
+        "hasGrille": "なし",
+        "hasTweeterMount": "あり",
+        "youtubeUrl": "https://youtu.be/XVG-UxCukkM"
+      },
+      {
+        "id": "spk_1779091893391",
+        "brand": "morel",
+        "name": "MAXIMO ULTRA 602 HE MK2",
+        "image": "/images/Audio/Speaker/MAXIMO ULTRA 602 HE MKII.webp",
+        "standalonePrice": "80300",
+        "remarks": "TWのみインライン /楕円マウント",
+        "youtubeUrl": "https://youtu.be/ZJvuipxFFR8",
+        "mountingHoleSize": "143",
+        "depthSize": "63",
+        "hasGrille": "なし",
+        "hasTweeterMount": "あり"
+      },
+      {
+        "id": "spk_1779091893927",
+        "brand": "FOCAL",
+        "name": "PS 165 FXE",
+        "image": "/images/Audio/Speaker/PS 165 FXE.webp",
+        "standalonePrice": "88000",
+        "remarks": "パッシブあり",
+        "mountingHoleSize": "143",
+        "depthSize": "77",
+        "hasGrille": "なし",
+        "hasTweeterMount": "あり"
+      },
+      {
+        "id": "spk_1779091894471",
+        "brand": "FOCAL",
+        "name": "ES 165 KE",
+        "image": "/images/Audio/Speaker/ES 165 KE.webp",
+        "standalonePrice": "96800",
+        "remarks": "パッシブあり",
+        "mountingHoleSize": "142",
+        "depthSize": "76",
+        "hasGrille": "なし",
+        "hasTweeterMount": "あり",
+        "youtubeUrl": "https://youtu.be/KJmnktRp3-A"
+      },
+      {
+        "id": "spk_1779091895007",
+        "brand": "morel",
+        "name": "TEMPO ULTRA 602 MK2",
+        "image": "/images/Audio/Speaker/TEMPO_ULTRA_602_MK2.webp",
+        "standalonePrice": "102300",
+        "remarks": "パッシブあり /楕円マウント",
+        "mountingHoleSize": "143",
+        "depthSize": "64",
+        "hasGrille": "あり",
+        "hasTweeterMount": "あり"
+      },
+      {
+        "id": "spk_1779091895543",
+        "brand": "BLAM",
+        "name": "165 S80",
+        "image": "/images/Audio/Speaker/165_S80.webp",
+        "standalonePrice": "104500",
+        "remarks": "バイアンプ対応 2Ω",
+        "mountingHoleSize": "141.9",
+        "depthSize": "73.5",
+        "hasGrille": "なし",
+        "hasTweeterMount": "あり"
+      }
+    ],
     "subType": "package"
   },
   "audioLPs": [
@@ -7865,7 +8200,8 @@
         "fixedPrice": 24200,
         "normalPriceText": "通常目安: 80,000円",
         "savingsText": "約 15,000円 お得!",
-        "note": "※KICKER CSS674（40,700円）を選択した場合の例。"
+        "note": "※KICKER CSS674（40,700円）を選択した場合の例。",
+        "taxRate": 10
       },
       "sections": [
         {
@@ -7883,48 +8219,14 @@
           }
         },
         {
-          "id": "sec_pricing_1779208759753_q0sp",
-          "type": "pricing",
-          "data": {
-            "specialPrice": "64900",
-            "fixedPrice": 24200,
-            "normalPriceText": "通常目安: 80,000円",
-            "savingsText": "約 15,000円 お得!",
-            "note": "※KICKER CSS674（40,700円）を選択した場合の例。"
-          }
-        },
-        {
-          "id": "sec_features_1779208759753_x7hl",
-          "type": "features",
-          "data": {
-            "title": "セパレートの魅力を引き出す施工",
-            "description": "高音と中低音を分けることで、よりクリアな音像を実現します。",
-            "doorTuning": {
-              "title": "軽防振処理",
-              "desc": "スピーカー周辺の制振・防音処理",
-              "image": "/images/Audio/Speaker/door-b.webp"
-            },
-            "baffle": {
-              "title": "インナーバッフル",
-              "desc": "お車に適合したバッフル",
-              "image": "/images/Audio/Speaker/baffle.webp"
-            },
-            "cable": {
-              "title": "ツィーター取付",
-              "desc": "純正位置またはダッシュボード上",
-              "image": "/images/Audio/Speaker/tw-mount.webp"
-            }
-          }
-        },
-        {
           "id": "sec_pkg_summary",
           "type": "package_summary",
           "data": {
             "title": "パッケージ内容",
             "items": [
               {
-                "title": "スピーカー",
-                "desc": "17cmモデルと10cmモデルの２種類をラインアップしています。お車のスピーカーサイズに合わせてお選びください"
+                "title": "スピーカー本体",
+                "desc": "17cmモデル 2wayスピーカー"
               },
               {
                 "title": "軽防振",
@@ -7932,7 +8234,7 @@
                 "value": ""
               },
               {
-                "title": "カスタムインナーバッフル（17cmスピーカーのみ）",
+                "title": "カスタムインナーバッフル",
                 "desc": "ジャストフィット（https://justfit.carrozzeria.pioneer/)の適合情報に合わせて製作",
                 "value": ""
               },
@@ -7947,7 +8249,7 @@
                 "value": ""
               }
             ],
-            "subtitle": "下記の内容が含まれたお得なパッケージとなっています。"
+            "subtitle": "下記の内容が含まれています。"
           }
         },
         {
@@ -7973,7 +8275,7 @@
                 "brand": "ROCKFORD FOSGATE",
                 "name": "R1675-S",
                 "image": "/images/Audio/Speaker/R1675-S.webp",
-                "standalonePrice": "38500",
+                "standalonePrice": "35200",
                 "remarks": "TW内にハイパスフィルター内蔵",
                 "hasGrille": "あり",
                 "hasTweeterMount": "あり",
@@ -7985,7 +8287,7 @@
                 "brand": "GROUND ZERO",
                 "name": "GZIC165.2SPL",
                 "image": "/images/Audio/Speaker/GZIC165.2SPL.webp",
-                "standalonePrice": "44000",
+                "standalonePrice": "27500",
                 "remarks": "TWのみプロテクション",
                 "mountingHoleSize": "142.5",
                 "depthSize": "68",
@@ -8019,7 +8321,7 @@
               {
                 "id": "spk_1779089435148",
                 "brand": "HELIX",
-                "name": "CB C165.2-S3",
+                "name": "CB K165.2-S3",
                 "image": "/images/Audio/Speaker/CB C165.2-S3.webp",
                 "standalonePrice": "44000",
                 "remarks": "TWのみプロテクション",
@@ -8040,7 +8342,8 @@
                 "hasGrille": "なし",
                 "hasTweeterMount": "あり"
               }
-            ]
+            ],
+            "fixedPrice": "24200"
           }
         },
         {
@@ -8069,7 +8372,80 @@
         }
       },
       "showInMenu": true,
-      "speakers": [],
+      "speakers": [
+        {
+          "id": "spk_1779089013844",
+          "brand": "ROCKFORD FOSGATE",
+          "name": "R1675-S",
+          "image": "/images/Audio/Speaker/R1675-S.webp",
+          "standalonePrice": "35200",
+          "remarks": "TW内にハイパスフィルター内蔵",
+          "hasGrille": "あり",
+          "hasTweeterMount": "あり",
+          "mountingHoleSize": "147.5",
+          "depthSize": "51.2"
+        },
+        {
+          "id": "spk_1779089430284",
+          "brand": "GROUND ZERO",
+          "name": "GZIC165.2SPL",
+          "image": "/images/Audio/Speaker/GZIC165.2SPL.webp",
+          "standalonePrice": "27500",
+          "remarks": "TWのみプロテクション",
+          "mountingHoleSize": "142.5",
+          "depthSize": "68",
+          "hasGrille": "あり",
+          "hasTweeterMount": "あり"
+        },
+        {
+          "id": "spk_1779089433628",
+          "brand": "BLAM",
+          "name": "SR 165S",
+          "image": "/images/Audio/Speaker/SR 165S.webp",
+          "standalonePrice": "38500",
+          "remarks": "TWのみプロテクション　3Ω",
+          "hasGrille": "なし",
+          "hasTweeterMount": "あり",
+          "mountingHoleSize": "142",
+          "depthSize": "62.4"
+        },
+        {
+          "id": "spk_1779089434476",
+          "brand": "AUDISON",
+          "name": "APK 165",
+          "image": "/images/Audio/Speaker/APK 165.webp",
+          "standalonePrice": "30800",
+          "remarks": "TWのみプロテクション　4Ω",
+          "mountingHoleSize": "141",
+          "depthSize": "58.5",
+          "hasGrille": "あり",
+          "hasTweeterMount": "なし"
+        },
+        {
+          "id": "spk_1779089435148",
+          "brand": "HELIX",
+          "name": "CB K165.2-S3",
+          "image": "/images/Audio/Speaker/CB C165.2-S3.webp",
+          "standalonePrice": "44000",
+          "remarks": "TWのみプロテクション",
+          "hasGrille": "なし",
+          "hasTweeterMount": "あり",
+          "mountingHoleSize": "143",
+          "depthSize": "61.4"
+        },
+        {
+          "id": "spk_1779089435572",
+          "brand": "BLUE MOON AUDIO",
+          "name": "EX165",
+          "image": "/images/Audio/Speaker/EX165.webp",
+          "standalonePrice": "35200",
+          "remarks": "TW/MID インラインNW",
+          "mountingHoleSize": "130",
+          "depthSize": "56.5",
+          "hasGrille": "なし",
+          "hasTweeterMount": "あり"
+        }
+      ],
       "subType": "package"
     },
     {
@@ -8084,11 +8460,12 @@
         "description": "10万円までのスピーカーの中から、お気に入りの1本を選べるパッケージです。ドアチューニングとスピーカーケーブルの交換もセットになっており、音にこだわりたい方の「最初の本格ステップ」としておすすめです。\nこの価格帯は各メーカーとも個性の強い人気モデルが揃っています。ただ、取り付けやすさを重視したモデルと、音質を最優先したモデルが混在している価格帯でもあります。見た目のスペックだけで選ぶと、いざ取り付けの段階で「このやり方はできない」となるケースも。商品選びの際は、ご希望のインストール方法と合っているかどうかも一緒に確認しながら進めることをおすすめします。\n埋め込み奥行きやツィーターマウントの有無も各モデルに記載していますので、参考にしてください。"
       },
       "pricing": {
-        "specialPrice": "82500",
-        "fixedPrice": 41800,
-        "normalPriceText": "通常目安: 110,000円",
-        "savingsText": "約 27,500円 お得!",
-        "note": "※KICKER CSS674（40,700円）を選択した場合の例。"
+        "specialPrice": "81840 ",
+        "fixedPrice": 0,
+        "normalPriceText": "通常の施工価格: 117,700円",
+        "savingsText": "約 35,860円 お得!",
+        "note": "※KICKER CSS674（40,700円）を選択した場合の例。",
+        "taxRate": 10
       },
       "sections": [
         {
@@ -8109,10 +8486,10 @@
           "id": "sec_pricing",
           "type": "pricing",
           "data": {
-            "specialPrice": "82500",
-            "fixedPrice": 41800,
-            "normalPriceText": "通常目安: 110,000円",
-            "savingsText": "約 27,500円 お得!",
+            "specialPrice": "81840 ",
+            "fixedPrice": "",
+            "normalPriceText": "通常の施工価格: 117,700円",
+            "savingsText": "約 35,860円 お得!",
             "note": "※KICKER CSS674（40,700円）を選択した場合の例。"
           }
         },
@@ -8138,7 +8515,22 @@
               }
             ],
             "title": "スピーカーの実力を、正しく引き出す3つの施工",
-            "description": "スピーカーが本来の性能を発揮するための環境づくりが、このパッケージに含まれています。"
+            "description": "スピーカーが本来の性能を発揮するための環境づくりが、このパッケージに含まれています。",
+            "doorTuning": {
+              "title": "ドアチューニングBコース",
+              "image": "/images/Audio/Speaker/door-b.webp",
+              "desc": "ドアの振動を抑え、スピーカーの音を純粋に引き出す施工です。"
+            },
+            "baffle": {
+              "title": "カスタムインナーバッフル",
+              "image": "/images/Audio/Speaker/baffle.webp",
+              "desc": "車種に合わせてバッフルをオリジナルで製作。スピーカーをしっかり固定します。"
+            },
+            "cable": {
+              "title": "ANGオリジナルスピーカーケーブル",
+              "image": "/images/Audio/Speaker/ang-cable.webp",
+              "desc": "オーディオテクニカとオリジナル製作。音の鮮度と伝達品質にこだわっています。"
+            }
           }
         },
         {
@@ -8148,7 +8540,7 @@
             "title": "パッケージ内容",
             "items": [
               {
-                "title": "スピーカー",
+                "title": "スピーカー本体",
                 "desc": "17cmモデル2WAYスピーカー（10万円までのモデルから選択）"
               },
               {
@@ -8158,7 +8550,7 @@
               },
               {
                 "title": "カスタムインナーバッフル",
-                "desc": "車種専用バーチ材マウント製作",
+                "desc": "車種専用マウント製作",
                 "value": "¥11,000"
               },
               {
@@ -8171,12 +8563,12 @@
                 "desc": "純正位置、もしくはオンダッシュ取り付け"
               },
               {
-                "title": "ワイヤリング工賃",
-                "desc": "正確な配線と極性チェックを含む",
+                "title": "ワイヤリング・取付工賃",
+                "desc": "",
                 "value": "¥22,000"
               }
             ],
-            "subtitle": "下記の内容が含まれたお得なパッケージとなっています。"
+            "subtitle": "下記の内容が含まれています。"
           }
         },
         {
@@ -8280,19 +8672,6 @@
                 "youtubeUrl": "https://youtu.be/R0k8W8pN5is"
               },
               {
-                "id": "spk_1779091885462",
-                "brand": "KICKER",
-                "name": "CSS674",
-                "image": "/images/Audio/Speaker/CSS674.webp",
-                "standalonePrice": "40700",
-                "remarks": "パッシブあり",
-                "mountingHoleSize": "140",
-                "depthSize": "47",
-                "hasGrille": "あり",
-                "hasTweeterMount": "あり",
-                "youtubeUrl": "https://youtu.be/6FdEgXtALzY"
-              },
-              {
                 "id": "spk_1779091885974",
                 "brand": "carrozzeria",
                 "name": "TS-C1740S/TS-C1746S",
@@ -8305,6 +8684,19 @@
                 "hasGrille": "なし",
                 "hasTweeterMount": "あり",
                 "youtubeUrl": "https://youtu.be/ToQVJV9jK-g"
+              },
+              {
+                "id": "spk_1779091885462",
+                "brand": "KICKER",
+                "name": "CSS674",
+                "image": "/images/Audio/Speaker/CSS674.webp",
+                "standalonePrice": "40700",
+                "remarks": "パッシブあり",
+                "mountingHoleSize": "140",
+                "depthSize": "47",
+                "hasGrille": "あり",
+                "hasTweeterMount": "あり",
+                "youtubeUrl": "https://youtu.be/6FdEgXtALzY"
               },
               {
                 "id": "spk_1779091886510",
@@ -8332,19 +8724,6 @@
                 "hasTweeterMount": "あり"
               },
               {
-                "id": "spk_1779091887502",
-                "brand": "GROUND ZERO",
-                "name": "GZIC 650FX",
-                "image": "/images/Audio/Speaker/GZIC 650FX.webp",
-                "standalonePrice": "48400",
-                "remarks": "パッシブあり /バイアンプ可 /フラッシュマウントのみ",
-                "mountingHoleSize": "142.5",
-                "depthSize": "44",
-                "hasGrille": "あり",
-                "hasTweeterMount": "なし",
-                "youtubeUrl": "https://youtu.be/D_piASeBr2s"
-              },
-              {
                 "id": "spk_1779091887982",
                 "brand": "HELIX",
                 "name": "CB K165.2-S3",
@@ -8369,6 +8748,19 @@
                 "hasGrille": "なし",
                 "hasTweeterMount": "あり",
                 "youtubeUrl": "https://youtu.be/anRCVilehcI"
+              },
+              {
+                "id": "spk_1779091887502",
+                "brand": "GROUND ZERO",
+                "name": "GZIC 650FX",
+                "image": "/images/Audio/Speaker/GZIC 650FX.webp",
+                "standalonePrice": "48400",
+                "remarks": "パッシブあり /バイアンプ可 /フラッシュマウントのみ",
+                "mountingHoleSize": "142.5",
+                "depthSize": "44",
+                "hasGrille": "あり",
+                "hasTweeterMount": "なし",
+                "youtubeUrl": "https://youtu.be/D_piASeBr2s"
               },
               {
                 "id": "spk_1779091889047",
@@ -8551,7 +8943,8 @@
             ],
             "title": "Speaker Lineup",
             "hideSubtitle": false,
-            "subtitle": "右上の再生ボタンより音源試聴可能です。"
+            "subtitle": "右上の再生ボタンより音源試聴可能です。",
+            "fixedPrice": "41800"
           }
         },
         {
@@ -8580,7 +8973,316 @@
         }
       },
       "showInMenu": true,
-      "speakers": [],
+      "speakers": [
+        {
+          "id": "spk_1779091883230",
+          "brand": "AUDISON",
+          "name": "APK 165 Ω2",
+          "image": "/images/Audio/Speaker/APK 165 Ω2.webp",
+          "standalonePrice": "30800",
+          "remarks": "TWのみ2Ω",
+          "mountingHoleSize": "141",
+          "depthSize": "58.5",
+          "hasGrille": "あり",
+          "hasTweeterMount": "あり",
+          "youtubeUrl": "https://youtu.be/bLHw8SO10Bc"
+        },
+        {
+          "id": "spk_1779091884255",
+          "brand": "VIBE",
+          "name": "VA-SLICK6C-V7",
+          "image": "/images/Audio/Speaker/VA-SLICK6C-V7.webp",
+          "standalonePrice": "39600",
+          "remarks": "パッシブあり",
+          "hasGrille": "あり",
+          "hasTweeterMount": "あり",
+          "mountingHoleSize": "142",
+          "depthSize": "61",
+          "youtubeUrl": "https://youtu.be/qe5WTXDNi6E"
+        },
+        {
+          "id": "spk_1779091884894",
+          "brand": "BLUE MOON AUDIO",
+          "name": "EX165",
+          "image": "/images/Audio/Speaker/EX165.webp",
+          "standalonePrice": "35200",
+          "remarks": "バイアンプ対応 4Ω",
+          "mountingHoleSize": "130",
+          "depthSize": "56.5",
+          "hasGrille": "なし",
+          "hasTweeterMount": "あり",
+          "youtubeUrl": "https://youtu.be/R0k8W8pN5is"
+        },
+        {
+          "id": "spk_1779091885974",
+          "brand": "carrozzeria",
+          "name": "TS-C1740S/TS-C1746S",
+          "image": "/images/Audio/Speaker/TS-C1746S.webp",
+          "standalonePrice": "open",
+          "remarks": "パッシブあり",
+          "fixedPriceOverride": "81840",
+          "mountingHoleSize": "137",
+          "depthSize": "57",
+          "hasGrille": "なし",
+          "hasTweeterMount": "あり",
+          "youtubeUrl": "https://youtu.be/ToQVJV9jK-g"
+        },
+        {
+          "id": "spk_1779091885462",
+          "brand": "KICKER",
+          "name": "CSS674",
+          "image": "/images/Audio/Speaker/CSS674.webp",
+          "standalonePrice": "40700",
+          "remarks": "パッシブあり",
+          "mountingHoleSize": "140",
+          "depthSize": "47",
+          "hasGrille": "あり",
+          "hasTweeterMount": "あり",
+          "youtubeUrl": "https://youtu.be/6FdEgXtALzY"
+        },
+        {
+          "id": "spk_1779091886510",
+          "brand": "ALPINE",
+          "name": "X-171S",
+          "image": "/images/Audio/Speaker/X-171S.webp",
+          "standalonePrice": "40700",
+          "remarks": "パッシブあり インライン",
+          "mountingHoleSize": "137",
+          "depthSize": "51",
+          "hasGrille": "なし",
+          "hasTweeterMount": "あり",
+          "youtubeUrl": "https://youtu.be/9ftZzHhT5wM"
+        },
+        {
+          "id": "spk_1779091886982",
+          "brand": "GROUND ZERO",
+          "name": "GZIC165.2SPL",
+          "image": "/images/Audio/Speaker/GZIC165.2SPL.webp",
+          "standalonePrice": "44000",
+          "remarks": "TWのみプロテクション",
+          "mountingHoleSize": "142.5",
+          "depthSize": "68",
+          "hasGrille": "あり",
+          "hasTweeterMount": "あり"
+        },
+        {
+          "id": "spk_1779091887982",
+          "brand": "HELIX",
+          "name": "CB K165.2-S3",
+          "image": "/images/Audio/Speaker/CB K165.2-S3.webp",
+          "standalonePrice": "44000",
+          "remarks": "パッシブあり /バイアンプ可 ",
+          "youtubeUrl": "https://youtu.be/aZ2mn_N8gVs",
+          "mountingHoleSize": "143",
+          "depthSize": "61.4",
+          "hasGrille": "あり",
+          "hasTweeterMount": "あり"
+        },
+        {
+          "id": "spk_1779091888582",
+          "brand": "BLAM",
+          "name": "SR 165X",
+          "image": "/images/Audio/Speaker/SR 165X.webp",
+          "standalonePrice": "47300",
+          "remarks": "TW25mm 3Ω",
+          "mountingHoleSize": "142",
+          "depthSize": "62.4",
+          "hasGrille": "なし",
+          "hasTweeterMount": "あり",
+          "youtubeUrl": "https://youtu.be/anRCVilehcI"
+        },
+        {
+          "id": "spk_1779091887502",
+          "brand": "GROUND ZERO",
+          "name": "GZIC 650FX",
+          "image": "/images/Audio/Speaker/GZIC 650FX.webp",
+          "standalonePrice": "48400",
+          "remarks": "パッシブあり /バイアンプ可 /フラッシュマウントのみ",
+          "mountingHoleSize": "142.5",
+          "depthSize": "44",
+          "hasGrille": "あり",
+          "hasTweeterMount": "なし",
+          "youtubeUrl": "https://youtu.be/D_piASeBr2s"
+        },
+        {
+          "id": "spk_1779091889047",
+          "brand": "DYNAUDIO",
+          "name": "ESOTAN 202",
+          "image": "/images/Audio/Speaker/ESOTAN 202.webp",
+          "standalonePrice": "60500",
+          "remarks": "パッシブあり",
+          "mountingHoleSize": "133",
+          "depthSize": "68.3",
+          "hasGrille": "なし",
+          "hasTweeterMount": "なし",
+          "youtubeUrl": "https://youtu.be/W8YVl6QgaTw"
+        },
+        {
+          "id": "spk_1779142935325",
+          "brand": "KICKER",
+          "name": "KSS6704",
+          "image": "/images/Audio/Speaker/KSS6704.webp",
+          "standalonePrice": "61600",
+          "remarks": "グリル別売り /パッシブあり",
+          "mountingHoleSize": "141",
+          "depthSize": "46",
+          "hasGrille": "あり",
+          "hasTweeterMount": "あり",
+          "youtubeUrl": "https://youtu.be/rV2gX6VtX3o"
+        },
+        {
+          "id": "spk_1779091889566",
+          "brand": "GROUND ZERO",
+          "name": "GZRC 165.2SQX-IV",
+          "image": "/images/Audio/Speaker/GZRC 165.2SQX-IV.webp",
+          "standalonePrice": "63800",
+          "remarks": "TWインライン /バイアンプ対応",
+          "youtubeUrl": "https://youtu.be/rV2gX6VtX3o",
+          "mountingHoleSize": "142.5",
+          "depthSize": "68",
+          "hasGrille": "あり",
+          "hasTweeterMount": "あり"
+        },
+        {
+          "id": "spk_1779091890095",
+          "brand": "BLAM",
+          "name": "L 165 S",
+          "image": "/images/Audio/Speaker/L 165 S.webp",
+          "standalonePrice": "63800",
+          "remarks": "TWインラインのみ 3Ω",
+          "mountingHoleSize": "142",
+          "depthSize": "61.7",
+          "hasGrille": "なし",
+          "hasTweeterMount": "あり",
+          "youtubeUrl": "https://youtu.be/9B-FkcMHI3w"
+        },
+        {
+          "id": "spk_1779091890655",
+          "brand": "HELIX",
+          "name": "Ci3 K165.2FM-S3 MK2",
+          "image": "/images/Audio/Speaker/Ci3 K165.2FM-S3 MK2.webp",
+          "standalonePrice": "66000",
+          "remarks": "グリル別途 /パッシブあり /バイアンプ",
+          "mountingHoleSize": "142",
+          "depthSize": "61",
+          "hasGrille": "あり",
+          "hasTweeterMount": "あり",
+          "youtubeUrl": "https://youtu.be/S7HEbCUv5ks"
+        },
+        {
+          "id": "spk_1779091891190",
+          "brand": "Focal",
+          "name": "PS 165 FSE",
+          "image": "/images/Audio/Speaker/PS 165 FSE.webp",
+          "standalonePrice": "77000",
+          "remarks": "パッシブあり",
+          "mountingHoleSize": "143",
+          "depthSize": "54.5",
+          "hasGrille": "なし",
+          "hasTweeterMount": "あり",
+          "youtubeUrl": "https://youtu.be/D49aol_HkKo"
+        },
+        {
+          "id": "spk_1779091891782",
+          "brand": "DLS",
+          "name": "RC6.2Q",
+          "image": "/images/Audio/Speaker/RC6.2Q.webp",
+          "standalonePrice": "77000",
+          "remarks": "パッシブあり",
+          "mountingHoleSize": "145",
+          "depthSize": "75",
+          "hasGrille": "なし",
+          "hasTweeterMount": "あり"
+        },
+        {
+          "id": "spk_1779091892358",
+          "brand": "DYNAUDIO",
+          "name": "ESOTAN232",
+          "image": "/images/Audio/Speaker/esotan232.webp",
+          "standalonePrice": "77000",
+          "remarks": "置き型マウント別売 /パッシブあり",
+          "mountingHoleSize": "135",
+          "depthSize": "67",
+          "hasGrille": "なし",
+          "hasTweeterMount": "あり",
+          "youtubeUrl": "https://youtu.be/byYM-uqoy2Q"
+        },
+        {
+          "id": "spk_1779091892878",
+          "brand": "carrozzeria",
+          "name": "TS-V174S",
+          "image": "/images/Audio/Speaker/TS-V174S.webp",
+          "standalonePrice": "79200",
+          "remarks": "パッシブあり /バイアンプ",
+          "mountingHoleSize": "137",
+          "depthSize": "61",
+          "hasGrille": "なし",
+          "hasTweeterMount": "あり",
+          "youtubeUrl": "https://youtu.be/XVG-UxCukkM"
+        },
+        {
+          "id": "spk_1779091893391",
+          "brand": "morel",
+          "name": "MAXIMO ULTRA 602 HE MK2",
+          "image": "/images/Audio/Speaker/MAXIMO ULTRA 602 HE MKII.webp",
+          "standalonePrice": "80300",
+          "remarks": "TWのみインライン /楕円マウント",
+          "youtubeUrl": "https://youtu.be/ZJvuipxFFR8",
+          "mountingHoleSize": "143",
+          "depthSize": "63",
+          "hasGrille": "なし",
+          "hasTweeterMount": "あり"
+        },
+        {
+          "id": "spk_1779091893927",
+          "brand": "FOCAL",
+          "name": "PS 165 FXE",
+          "image": "/images/Audio/Speaker/PS 165 FXE.webp",
+          "standalonePrice": "88000",
+          "remarks": "パッシブあり",
+          "mountingHoleSize": "143",
+          "depthSize": "77",
+          "hasGrille": "なし",
+          "hasTweeterMount": "あり"
+        },
+        {
+          "id": "spk_1779091894471",
+          "brand": "FOCAL",
+          "name": "ES 165 KE",
+          "image": "/images/Audio/Speaker/ES 165 KE.webp",
+          "standalonePrice": "96800",
+          "remarks": "パッシブあり",
+          "mountingHoleSize": "142",
+          "depthSize": "76",
+          "hasGrille": "なし",
+          "hasTweeterMount": "あり",
+          "youtubeUrl": "https://youtu.be/KJmnktRp3-A"
+        },
+        {
+          "id": "spk_1779091895007",
+          "brand": "morel",
+          "name": "TEMPO ULTRA 602 MK2",
+          "image": "/images/Audio/Speaker/TEMPO_ULTRA_602_MK2.webp",
+          "standalonePrice": "102300",
+          "remarks": "パッシブあり /楕円マウント",
+          "mountingHoleSize": "143",
+          "depthSize": "64",
+          "hasGrille": "あり",
+          "hasTweeterMount": "あり"
+        },
+        {
+          "id": "spk_1779091895543",
+          "brand": "BLAM",
+          "name": "165 S80",
+          "image": "/images/Audio/Speaker/165_S80.webp",
+          "standalonePrice": "104500",
+          "remarks": "バイアンプ対応 2Ω",
+          "mountingHoleSize": "141.9",
+          "depthSize": "73.5",
+          "hasGrille": "なし",
+          "hasTweeterMount": "あり"
+        }
+      ],
       "subType": "package"
     },
     {
@@ -8621,21 +9323,21 @@
           "id": "sec_features",
           "type": "features",
           "data": {
-            "title": "プレミアムな音響空間を創り出す施工",
-            "description": "ハイクラスなスピーカーの性能を余すことなく発揮するための専用施工。",
+            "title": "スピーカーの実力を、正しく引き出す3つの施工",
+            "description": "スピーカーが本来の性能を発揮するための環境づくりが、このパッケージに含まれています。",
             "doorTuning": {
-              "title": "ドアチューニング Aコース",
-              "desc": "より広範囲かつ強固な制振・防音処理",
+              "title": "ドアチューニングBコース",
+              "desc": "ドアの振動を抑え、スピーカーの音を純粋に引き出す施工です。",
               "image": "/images/Audio/Speaker/door-b.webp"
             },
             "baffle": {
-              "title": "高剛性カスタムバッフル",
-              "desc": "樺桜材などを使用した専用バッフル",
+              "title": "カスタムインナーバッフル",
+              "desc": "車種に合わせてバッフルをオリジナルで製作。スピーカーをしっかり固定します。",
               "image": "/images/Audio/Speaker/baffle.webp"
             },
             "cable": {
-              "title": "プレミアムケーブル",
-              "desc": "より情報量の多い高音質ケーブル",
+              "title": "ANGオリジナルスピーカーケーブル",
+              "desc": "オーディオテクニカとオリジナル製作。音の鮮度と伝達品質にこだわっています。",
               "image": "/images/Audio/Speaker/ang-cable.webp"
             }
           }
@@ -8644,10 +9346,10 @@
           "id": "sec_pkg_summary",
           "type": "package_summary",
           "data": {
-            "title": "パッケージ全内容（まとめ）",
+            "title": "パッケージ内容",
             "items": [
               {
-                "title": "スピーカー",
+                "title": "スピーカー本体",
                 "desc": "17cmモデル2WAYスピーカー（10万円以上のモデルから選択）"
               },
               {
@@ -8670,12 +9372,12 @@
                 "desc": "純正位置、もしくはオンダッシュ取り付け"
               },
               {
-                "title": "ワイヤリング工賃",
-                "desc": "正確な配線と極性チェックを含む",
+                "title": "ワイヤリング・取付工賃",
+                "desc": "",
                 "value": "¥22,000"
               }
             ],
-            "subtitle": "下記の内容が含まれたお得なパッケージとなっています。"
+            "subtitle": "下記の内容が含まれています。"
           }
         },
         {
@@ -8912,13 +9614,12 @@
           }
         },
         {
-          "id": "sec_cta_1779248647132_akhu",
-          "type": "cta",
+          "id": "sec_floating_cta_1779253922250_v3ik",
+          "type": "floating_cta",
           "data": {
-            "title": "まずはお気軽にご相談ください",
-            "desc": "お見積り・ご質問など随時受付中",
-            "btnText": "LINEで無料相談・ご予約",
-            "btnLink": "/reservation"
+            "showLine": true,
+            "showReservation": true,
+            "theme": "audio"
           }
         }
       ],
@@ -9126,7 +9827,8 @@
         "fixedPrice": 143000,
         "normalPriceText": "117700",
         "savingsText": "35,860円 お得!",
-        "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。"
+        "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。",
+        "taxRate": 10
       },
       "sections": [
         {
@@ -9165,7 +9867,22 @@
               }
             ],
             "title": "3WAYスピーカーのメリット",
-            "description": "ツィーター・スコーカー・ミッドレンジと役割を分担することで、それぞれの負担が減りよりクリアなサウンドを実現します。またスコーカーをツィーターに近い位置に設置できるため、障害物の影響を受けにくく自然なステージングが可能です。そして音だけでなく、車内インテリアとしての存在感も圧倒的に増します。"
+            "description": "ツィーター・スコーカー・ミッドレンジと役割を分担することで、それぞれの負担が減りよりクリアなサウンドを実現します。またスコーカーをツィーターに近い位置に設置できるため、障害物の影響を受けにくく自然なステージングが可能です。そして音だけでなく、車内インテリアとしての存在感も圧倒的に増します。",
+            "doorTuning": {
+              "title": "ピラーツインマウント",
+              "desc": "Aピラーへツィーターとスコーカーを一体型で美しく埋め込み加工します。",
+              "image": "/images/Audio/Speaker/3way2.webp"
+            },
+            "baffle": {
+              "title": "ピラー＆ミラー裏マウント",
+              "desc": "Aピラーにスコーカー、ドアミラー裏のカバーにツィーターをそれぞれ最適な角度でインストールします。",
+              "image": "/images/Audio/Speaker/3way4.webp"
+            },
+            "cable": {
+              "title": "その他カスタムマウント",
+              "desc": "ダッシュボード上への配置など、お車の構造やご要望に合わせたさまざまな取り付け場所をご提案します。",
+              "image": "/images/Audio/Speaker/3way3.webp"
+            }
           }
         },
         {
@@ -9341,7 +10058,61 @@
         }
       },
       "showInMenu": true,
-      "speakers": [],
+      "speakers": [
+        {
+          "id": "spk_1779192754242",
+          "brand": "MOREL",
+          "name": "MAXIMO ULTRA603 MK2",
+          "image": "/images/Top/speaker.webp",
+          "standalonePrice": "121000",
+          "remarks": "スコーカー外径：63mm /ローレンジ奥行き：63mm"
+        },
+        {
+          "id": "spk_1779192802067",
+          "brand": "carrozzeria ",
+          "name": "TS-Z900PRS",
+          "image": "/images/Top/speaker.webp",
+          "standalonePrice": "140800",
+          "remarks": "スコーカー外径：73mm /ローレンジ奥行き：58mm",
+          "fixedPriceOverride": "103400"
+        },
+        {
+          "id": "spk_1779192889252",
+          "brand": "FOCAL ",
+          "name": "PS165F3E",
+          "image": "/images/Top/speaker.webp",
+          "standalonePrice": "121000",
+          "remarks": "スコーカー外径：88mm /ローレンジ奥行き：77mm",
+          "fixedPriceOverride": "142200"
+        },
+        {
+          "id": "spk_1779192976357",
+          "brand": "MOREL ",
+          "name": "SENSUS 63",
+          "image": "/images/Top/speaker.webp",
+          "standalonePrice": "177100",
+          "remarks": "スコーカー外径：38mm /ローレンジ奥行き：61mm",
+          "fixedPriceOverride": "142200"
+        },
+        {
+          "id": "spk_1779193029542",
+          "brand": "DYNAUDIO",
+          "name": "ESOTAN372",
+          "image": "/images/Top/speaker.webp",
+          "standalonePrice": "176000",
+          "remarks": "スコーカー外径：99mm /ローレンジ奥行き：67mm",
+          "fixedPriceOverride": "154000"
+        },
+        {
+          "id": "spk_1779193082168",
+          "brand": "BLAM",
+          "name": "165S.300",
+          "image": "/images/Top/speaker.webp",
+          "standalonePrice": "217800",
+          "remarks": "スコーカー外径：90.1mm /ローレンジ奥行き：80.2mm",
+          "fixedPriceOverride": "154000"
+        }
+      ],
       "subType": "package"
     },
     {
