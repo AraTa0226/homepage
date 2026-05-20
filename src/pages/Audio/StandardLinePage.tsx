@@ -165,9 +165,9 @@ export const StandardLinePage: React.FC = () => {
                       <div className="relative z-10 w-full lg:w-auto">
                         <div className="inline-block bg-blue-600 text-white text-[15px] font-black px-5 py-2 rounded-full tracking-widest mb-6">PACKAGE PRICE</div>
                         <div className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-6 mb-6">
-                          {section.data.normalPrice && (
+                          {(section.data.normalPriceText || section.data.normalPrice) && (
                             <div className="text-gray-500 line-through font-bold text-2xl">
-                              通常価格: {section.data.normalPrice}
+                              {section.data.normalPriceText || `通常価格: ${section.data.normalPrice}`}
                             </div>
                           )}
                           <div className="text-6xl md:text-8xl font-black text-gray-900 tracking-tighter">
