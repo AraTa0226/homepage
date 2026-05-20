@@ -42,6 +42,7 @@ import {
   ClipboardList,
   Info,
   Youtube,
+  ArrowLeft,
   ArrowRight
 } from 'lucide-react';
 import { usePrices } from '../../contexts/PriceContext';
@@ -1244,6 +1245,14 @@ const AudioPlanManager = () => {
     const { audioLPs, setAudioLPs, plans, updateCategory } = usePrices();
     const lps = audioLPs || [];
 
+    const CATEGORIES = [
+        { id: 'speaker_package', name: 'スピーカー交換・車種別プラン' },
+        { id: 'bass_power', name: '低音強化・パワーアップ（アンプ）' },
+        { id: 'digital_source', name: 'DSP・プレーヤー・高音音質ナビ' },
+        { id: 'install_tuning', name: 'デッドニング・施工・電源' },
+        { id: 'custom_install', name: 'カスタムインストール・造作' }
+    ];
+
     const cleanPathInput = (val: string) => {
         let p = val.replace(/^["']|["']$/g, '').replace(/\\/g, '/');
         const pubIdx = p.indexOf('/public/');
@@ -1340,13 +1349,14 @@ const AudioPlanManager = () => {
         
         // 3. Update plans for Navbar / MegaMenu menu items
         const targetCatId = updatedLP.parentCategoryId || 'speaker_package';
-        const nextPlans = plans.map(cat => {
+        const showInMenu = updatedLP.showInMenu !== false;
+        let nextPlans = plans.map(cat => {
             if (cat.type !== 'audio') return cat;
             
             // Remove this LP from all categories first to avoid duplicates
             let nextItems = (cat.items || []).filter(item => item.id !== updatedLP.id && item.slug !== updatedLP.slug);
             
-            if (cat.id === targetCatId) {
+            if (showInMenu && cat.id === targetCatId) {
                 // Add/update in this category
                 const matchedItem = (cat.items || []).find(item => item.id === updatedLP.id || item.slug === updatedLP.slug);
                 const newItem = {
@@ -1354,13 +1364,13 @@ const AudioPlanManager = () => {
                     name: updatedLP.name,
                     badge: updatedLP.header.badge || 'NEW',
                     description: updatedLP.header.description || '',
-                    link: `/${updatedLP.slug}`,
+                    link: updatedLP.externalLink || `/${updatedLP.slug}`,
                     features: [],
                     price: updatedLP.pricing.specialPrice || '0',
                     ...matchedItem
                 };
-                // Make sure slug is matching the updated one
-                newItem.link = `/${updatedLP.slug}`;
+                // Make sure slug and fields match the updated one
+                newItem.link = updatedLP.externalLink || `/${updatedLP.slug}`;
                 newItem.name = updatedLP.name;
                 newItem.badge = updatedLP.header.badge;
                 newItem.description = updatedLP.header.description;
@@ -1370,6 +1380,23 @@ const AudioPlanManager = () => {
             }
             
             return { ...cat, items: nextItems };
+        });
+
+        // 4. Sort the items inside each audio category to match the order of nextLPs
+        nextPlans = nextPlans.map(cat => {
+            if (cat.type !== 'audio') return cat;
+            
+            const catLPs = nextLPs.filter(lp => (lp.parentCategoryId || 'speaker_package') === cat.id && lp.showInMenu !== false);
+            const dynamicItems = (cat.items || []).filter((item: any) => catLPs.some(lp => lp.id === item.id));
+            const staticItems = (cat.items || []).filter((item: any) => !catLPs.some(lp => lp.id === item.id));
+            
+            const sortedDynamicItems = [...dynamicItems].sort((a: any, b: any) => {
+                const indexA = catLPs.findIndex(lp => lp.id === a.id);
+                const indexB = catLPs.findIndex(lp => lp.id === b.id);
+                return indexA - indexB;
+            });
+            
+            return { ...cat, items: [...sortedDynamicItems, ...staticItems] };
         });
         
         // Save the updated categories
@@ -1391,6 +1418,8 @@ const AudioPlanManager = () => {
             slug: newSlug,
             name: "新規オーディオプラン",
             parentCategoryId: "speaker_package",
+            showInMenu: true,
+            subType: "package",
             publishStatus: "draft",
             header: {
                 badge: "NEW PACKAGE",
@@ -1510,6 +1539,73 @@ const AudioPlanManager = () => {
             setSelectedId(nextLPs[0]?.id || '');
             alert('プランを削除し、メニューからも削除しました。');
         }
+    };
+
+    const handleMovePlan = (id: string, direction: 'left' | 'right') => {
+        const targetLP = lps.find(p => p.id === id);
+        if (!targetLP) return;
+        
+        const getLPType = (p: any) => {
+            if (p.subType) return p.subType;
+            if (p.showInMenu === false) return 'standalone';
+            const name = p.name || '';
+            if (name.includes('BMW') || name.includes('Mercedes') || name.includes('車種別')) {
+                return 'vehicle';
+            }
+            return 'package';
+        };
+
+        const catId = targetLP.parentCategoryId || 'speaker_package';
+        const targetType = getLPType(targetLP);
+        const catLPs = lps.filter(lp => (lp.parentCategoryId || 'speaker_package') === catId && getLPType(lp) === targetType);
+        const catIdx = catLPs.findIndex(p => p.id === id);
+        if (catIdx === -1) return;
+        
+        let neighborLP;
+        if (direction === 'left' && catIdx > 0) {
+            neighborLP = catLPs[catIdx - 1];
+        } else if (direction === 'right' && catIdx < catLPs.length - 1) {
+            neighborLP = catLPs[catIdx + 1];
+        }
+        
+        if (!neighborLP) return;
+        
+        // Find global indices
+        const globalIdx1 = lps.findIndex(p => p.id === targetLP.id);
+        const globalIdx2 = lps.findIndex(p => p.id === neighborLP.id);
+        if (globalIdx1 === -1 || globalIdx2 === -1) return;
+        
+        const nextLPs = [...lps];
+        nextLPs[globalIdx1] = neighborLP;
+        nextLPs[globalIdx2] = targetLP;
+        
+        // Update audioLPs state (calls setAudioLPs context function to save)
+        setAudioLPs(nextLPs);
+        
+        // Synchronize this order into plans context items
+        let nextPlans = plans.map(cat => {
+            if (cat.type !== 'audio') return cat;
+            
+            const catLPsList = nextLPs.filter(lp => (lp.parentCategoryId || 'speaker_package') === cat.id && lp.showInMenu !== false);
+            const dynamicItems = (cat.items || []).filter((item: any) => catLPsList.some(lp => lp.id === item.id));
+            const staticItems = (cat.items || []).filter((item: any) => !catLPsList.some(lp => lp.id === item.id));
+            
+            const sortedDynamicItems = [...dynamicItems].sort((a: any, b: any) => {
+                const indexA = catLPsList.findIndex(lp => lp.id === a.id);
+                const indexB = catLPsList.findIndex(lp => lp.id === b.id);
+                return indexA - indexB;
+            });
+            
+            return { ...cat, items: [...sortedDynamicItems, ...staticItems] };
+        });
+        
+        // Save the updated categories in context (triggers useEffect autosave)
+        nextPlans.forEach(cat => {
+            const origCat = plans.find(c => c.id === cat.id);
+            if (JSON.stringify(origCat?.items) !== JSON.stringify(cat.items)) {
+                updateCategory(cat.id, { items: cat.items });
+            }
+        });
     };
 
     const renderSectionForm = (section: any, sIdx: number) => {
@@ -2516,6 +2612,44 @@ const AudioPlanManager = () => {
                     </div>
                 );
             }
+            case 'floating_cta':
+                return (
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div className="space-y-1.5">
+                            <label className="block text-[10px] font-bold text-zinc-400">LINE相談ボタン表示</label>
+                            <select 
+                                value={section.data.showLine !== false ? 'true' : 'false'}
+                                onChange={e => updateSectionData(sIdx, { showLine: e.target.value === 'true' })}
+                                className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-white text-xs font-bold"
+                            >
+                                <option value="true">表示する</option>
+                                <option value="false">表示しない</option>
+                            </select>
+                        </div>
+                        <div className="space-y-1.5">
+                            <label className="block text-[10px] font-bold text-zinc-400">来店予約ボタン表示</label>
+                            <select 
+                                value={section.data.showReservation !== false ? 'true' : 'false'}
+                                onChange={e => updateSectionData(sIdx, { showReservation: e.target.value === 'true' })}
+                                className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-white text-xs font-bold"
+                            >
+                                <option value="true">表示する</option>
+                                <option value="false">表示しない</option>
+                            </select>
+                        </div>
+                        <div className="space-y-1.5">
+                            <label className="block text-[10px] font-bold text-zinc-400">テーマカラー</label>
+                            <select 
+                                value={section.data.theme || 'audio'}
+                                onChange={e => updateSectionData(sIdx, { theme: e.target.value })}
+                                className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-white text-xs font-bold"
+                            >
+                                <option value="audio">オーディオ (ブルー)</option>
+                                <option value="security">セキュリティ (エメラルド)</option>
+                            </select>
+                        </div>
+                    </div>
+                );
             case 'cta':
                 return (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -2915,35 +3049,104 @@ const AudioPlanManager = () => {
                 </div>
             </div>
 
-            {/* タブ切り替えリスト */}
-            <div className="flex flex-wrap gap-2 border-b border-zinc-800/60 pb-4">
-                {lps.map((p) => {
-                    const isSelected = p.id === selectedId;
+            {/* カテゴリごとにグループ分けされたタブ切り替えリスト */}
+            <div className="space-y-6 border-b border-zinc-800/60 pb-6">
+                {CATEGORIES.map(cat => {
+                    const catLPs = lps.filter(lp => (lp.parentCategoryId || 'speaker_package') === cat.id);
+                    if (catLPs.length === 0) return null;
+                    
+                    const getLPType = (p: any) => {
+                        if (p.subType) return p.subType;
+                        if (p.showInMenu === false) return 'standalone';
+                        const name = p.name || '';
+                        if (name.includes('BMW') || name.includes('Mercedes') || name.includes('車種別')) {
+                            return 'vehicle';
+                        }
+                        return 'package';
+                    };
+
+                    const subGroups = [
+                        { id: 'package', name: '一般パッケージプラン', color: 'text-blue-400' },
+                        { id: 'vehicle', name: '車種専用プラン', color: 'text-amber-400' },
+                        { id: 'standalone', name: '非表示・単体LP', color: 'text-zinc-500' }
+                    ];
+
                     return (
-                        <div 
-                            key={p.id}
-                            className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-black transition-all cursor-pointer border ${
-                                isSelected 
-                                ? 'bg-blue-600/10 border-blue-500/40 text-white shadow-lg shadow-blue-600/5' 
-                                : 'bg-zinc-900/40 border-zinc-800 text-zinc-500 hover:text-zinc-300 hover:border-zinc-700'
-                            }`}
-                            onClick={() => setSelectedId(p.id || '')}
-                        >
-                            <Music className={`w-3.5 h-3.5 ${isSelected ? 'text-blue-400' : 'text-zinc-600'}`} />
-                            <span>{p.name || p.header?.badge || '無名プラン'}</span>
-                            {/* 削除ボタン */}
-                            {lps.length > 1 && (
-                                <button 
-                                    onClick={(e) => {
-                                        e.stopPropagation();
-                                        handleDeletePlan(p.id || '', p.name || 'プラン');
-                                    }}
-                                    className="p-1 hover:bg-red-500/20 rounded text-zinc-600 hover:text-red-400 transition-colors ml-1"
-                                    title="このプランを削除"
-                                >
-                                    <Trash2 className="w-3 h-3" />
-                                </button>
-                            )}
+                        <div key={cat.id} className="space-y-4">
+                            <div className="text-[11px] font-black text-zinc-400 uppercase tracking-widest pl-1 border-b border-zinc-800/50 pb-2">{cat.name}</div>
+                            <div className="space-y-4 pl-2">
+                                {subGroups.map(sub => {
+                                    const groupLPs = catLPs.filter(p => getLPType(p) === sub.id);
+                                    if (groupLPs.length === 0) return null;
+
+                                    return (
+                                        <div key={sub.id} className="space-y-2">
+                                            <div className={`text-[9px] font-black uppercase tracking-wider pl-1 flex items-center gap-1.5 ${sub.color}`}>
+                                                <div className="w-1 h-1 rounded-full bg-current" />
+                                                {sub.name}
+                                            </div>
+                                            <div className="flex flex-wrap gap-2">
+                                                {groupLPs.map((p, catIdx) => {
+                                                    const isSelected = p.id === selectedId;
+                                                    return (
+                                                        <div 
+                                                            key={p.id}
+                                                            className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-black transition-all cursor-pointer border ${
+                                                                isSelected 
+                                                                ? 'bg-blue-600/10 border-blue-500/40 text-white shadow-lg shadow-blue-600/5' 
+                                                                : 'bg-zinc-900/40 border-zinc-800 text-zinc-500 hover:text-zinc-300 hover:border-zinc-700'
+                                                            }`}
+                                                            onClick={() => setSelectedId(p.id || '')}
+                                                        >
+                                                            <Music className={`w-3.5 h-3.5 ${isSelected ? 'text-blue-400' : 'text-zinc-600'}`} />
+                                                            <span>{p.name || p.header?.badge || '無名プラン'}</span>
+                                                            {p.showInMenu === false && (
+                                                                <span className="text-[9px] font-black bg-zinc-800 text-zinc-400 border border-zinc-700/60 px-1.5 py-0.5 rounded-md scale-95 origin-left tracking-tighter">単体LP</span>
+                                                            )}
+                                                            
+                                                            {/* 順序移動ボタン (同じサブグループ内での移動) */}
+                                                            <div className="flex items-center gap-0.5 ml-1 border-l border-zinc-800/50 pl-1.5" onClick={e => e.stopPropagation()}>
+                                                                {catIdx > 0 && (
+                                                                    <button 
+                                                                        onClick={() => handleMovePlan(p.id || '', 'left')}
+                                                                        className="p-1 hover:bg-zinc-800 rounded text-zinc-600 hover:text-blue-400 transition-colors"
+                                                                        title="左に移動"
+                                                                    >
+                                                                        <ArrowLeft className="w-3 h-3" />
+                                                                    </button>
+                                                                )}
+                                                                {catIdx < groupLPs.length - 1 && (
+                                                                    <button 
+                                                                        onClick={() => handleMovePlan(p.id || '', 'right')}
+                                                                        className="p-1 hover:bg-zinc-800 rounded text-zinc-600 hover:text-blue-400 transition-colors"
+                                                                        title="右に移動"
+                                                                    >
+                                                                        <ArrowRight className="w-3 h-3" />
+                                                                    </button>
+                                                                )}
+                                                            </div>
+
+                                                            {/* 削除ボタン */}
+                                                            {lps.length > 1 && (
+                                                                <button 
+                                                                    onClick={(e) => {
+                                                                        e.stopPropagation();
+                                                                        handleDeletePlan(p.id || '', p.name || 'プラン');
+                                                                    }}
+                                                                    className="p-1 hover:bg-red-500/20 rounded text-zinc-600 hover:text-red-400 transition-colors ml-1"
+                                                                    title="このプランを削除"
+                                                                >
+                                                                    <Trash2 className="w-3 h-3" />
+                                                                </button>
+                                                            )}
+                                                        </div>
+                                                    );
+                                                })}
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+                            </div>
                         </div>
                     );
                 })}
@@ -2962,7 +3165,7 @@ const AudioPlanManager = () => {
                         <span className="text-[10px] font-black text-blue-400 bg-blue-500/10 border border-blue-500/20 px-2 py-0.5 rounded uppercase tracking-widest">基本設定</span>
                         <span className="text-xs font-bold text-zinc-400">管理名およびURLスラッグ</span>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-6 pt-2">
+                    <div className="grid grid-cols-1 md:grid-cols-6 gap-6 pt-2">
                         <div className="space-y-1.5">
                             <label className="block text-[10px] font-black text-zinc-400">プラン名 (管理・タブ表示用)</label>
                             <input 
@@ -2983,7 +3186,7 @@ const AudioPlanManager = () => {
                                     onChange={e => setData({ ...data, slug: e.target.value.replace(/[^a-zA-Z0-9-_]/g, '') })}
                                     className="w-full bg-transparent py-2.5 pr-4 text-blue-400 text-xs font-bold outline-none"
                                     placeholder="sp-standard"
-                                />
+                                  />
                             </div>
                         </div>
                         <div className="space-y-1.5">
@@ -3001,6 +3204,29 @@ const AudioPlanManager = () => {
                             </select>
                         </div>
                         <div className="space-y-1.5">
+                            <label className="block text-[10px] font-black text-zinc-400">プラン分類</label>
+                            <select
+                                value={
+                                    data.subType 
+                                        ? data.subType 
+                                        : (data.showInMenu === false ? 'standalone' : ((data.name || '').includes('BMW') || (data.name || '').includes('Mercedes') || (data.name || '').includes('車種別') ? 'vehicle' : 'package'))
+                                }
+                                onChange={e => {
+                                    const val = e.target.value;
+                                    setData({
+                                        ...data,
+                                        subType: val,
+                                        showInMenu: val !== 'standalone'
+                                    });
+                                }}
+                                className="w-full bg-black border border-zinc-800 rounded-xl px-4 py-2.5 text-white text-xs font-bold focus:border-blue-500 outline-none"
+                            >
+                                <option value="package">一般パッケージプラン</option>
+                                <option value="vehicle">車種専用プラン</option>
+                                <option value="standalone">非表示・単体LP</option>
+                            </select>
+                        </div>
+                        <div className="space-y-1.5">
                             <label className="block text-[10px] font-black text-zinc-400">公開ステータス</label>
                             <select
                                 value={data.publishStatus || 'published'}
@@ -3011,6 +3237,16 @@ const AudioPlanManager = () => {
                                 <option value="draft">下書き (Draft)</option>
                                 <option value="archived">保管済 (Archived)</option>
                             </select>
+                        </div>
+                        <div className="space-y-1.5">
+                            <label className="block text-[10px] font-black text-zinc-400">外部リンク (オプション)</label>
+                            <input 
+                                type="text"
+                                value={data.externalLink || ''}
+                                onChange={e => setData({ ...data, externalLink: e.target.value })}
+                                className="w-full bg-black border border-zinc-800 rounded-xl px-4 py-2.5 text-white text-xs font-bold focus:border-blue-500 outline-none"
+                                placeholder="例: https://example.com"
+                            />
                         </div>
                     </div>
                 </div>
@@ -3136,6 +3372,7 @@ const AudioPlanManager = () => {
                                 { type: 'banner', label: 'Banner (横帯バナー)' },
                                 { type: 'link_cards', label: 'Link Cards (リンク枠)' },
                                 { type: 'cta', label: 'CTA (相談ボタン)' },
+                                { type: 'floating_cta', label: 'Floating CTA (常駐ボタン)' },
                                 { type: 'faq', label: 'FAQ (よくある質問)' },
                                 { type: 'gallery', label: 'Gallery (写真枠)' },
                                 { type: 'package_summary', label: 'Summary (構成表)' },
@@ -3173,6 +3410,8 @@ const AudioPlanManager = () => {
                                             newSec.data = { title: '関連リンク', subtitle: '各種メニュー', items: [] };
                                         } else if (btn.type === 'cta') {
                                             newSec.data = { title: 'まずはお気軽にご相談ください', desc: 'お見積り・ご質問など随時受付中', btnText: 'LINEで無料相談・ご予約', btnLink: '/reservation' };
+                                        } else if (btn.type === 'floating_cta') {
+                                            newSec.data = { showLine: true, showReservation: true, theme: 'audio' };
                                         } else if (btn.type === 'faq') {
                                             newSec.data = { title: 'よくあるご質問', items: [] };
                                         } else if (btn.type === 'gallery') {

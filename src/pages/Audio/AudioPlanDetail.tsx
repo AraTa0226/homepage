@@ -23,6 +23,7 @@ import {
     Info
 } from 'lucide-react';
 import { SafeImage } from '../../components/ui/SafeImage';
+import { FloatingCTA } from '../../components/Shared/FloatingCTA';
 
 // QR Code utility
 const getQRCodeUrl = (url: string) => `https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=${encodeURIComponent(url || 'https://sound-ang.com')}`;
@@ -147,7 +148,7 @@ const AudioPlanDetail: React.FC = () => {
     const lineup = plan?.lineup;
 
     return (
-        <div className="min-h-screen bg-white text-gray-900 selection:bg-blue-100">
+        <div className="min-h-screen bg-white text-gray-900 selection:bg-blue-100 pb-24 md:pb-28 print:pb-0">
             <MegaMenu show={isMenuOpen} onClose={() => setIsMenuOpen(false)} navigate={navigate} plans={plans} />
 
             <header className="fixed top-0 left-0 right-0 z-[100] bg-white/90 backdrop-blur-md border-b border-gray-100 print:hidden">
@@ -494,6 +495,7 @@ const AudioPlanDetail: React.FC = () => {
                     .grid { display: grid !important; }
                 }
             `}} />
+            <FloatingCTA />
         </div>
     );
 };

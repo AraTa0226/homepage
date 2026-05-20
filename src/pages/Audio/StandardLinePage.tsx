@@ -99,7 +99,7 @@ export const StandardLinePage: React.FC = () => {
   const ctaConfig = floatingCTASection?.data || {};
 
   return (
-    <div className="min-h-screen bg-white font-sans selection:bg-blue-600 selection:text-white pb-0">
+    <div className="min-h-screen bg-white font-sans selection:bg-blue-600 selection:text-white pb-24 md:pb-28 print:pb-0">
       
       {/* Dynamic Sections Rendering */}
       {data.sections && data.sections.length > 0 ? (
@@ -734,6 +734,7 @@ export const StandardLinePage: React.FC = () => {
         <FloatingCTA 
           showLine={ctaConfig.showLine !== false} 
           showReservation={ctaConfig.showReservation !== false} 
+          theme={ctaConfig.theme}
         />
       )}
     </div>
