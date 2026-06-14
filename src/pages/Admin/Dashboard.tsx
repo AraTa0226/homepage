@@ -43,7 +43,8 @@ import {
   Info,
   Youtube,
   ArrowLeft,
-  ArrowRight
+  ArrowRight,
+  Copy
 } from 'lucide-react';
 import { usePrices } from '../../contexts/PriceContext';
 import { useSite } from '../../contexts/SiteContext';
@@ -1513,6 +1514,32 @@ const AudioPlanManager = () => {
         alert('新しいプランラインのタブを追加しました。情報を編集して保存してください。');
     };
 
+    const handleCopyPlan = (planToCopy: any) => {
+        if (!planToCopy) return;
+        const newId = `line_${Date.now()}`;
+        const newSlug = `${(planToCopy.slug || 'custom').replace(/-copy-\d+$/, '')}-copy-${Math.floor(Math.random() * 1000)}`;
+        
+        // Deep copy sections with fresh unique IDs
+        const copiedSections = (planToCopy.sections || []).map((sec: any, idx: number) => ({
+            ...sec,
+            id: `sec_${sec.type || 'copy'}_${Date.now()}_${idx}`,
+            data: sec.data ? JSON.parse(JSON.stringify(sec.data)) : {}
+        }));
+
+        const copiedPlan = {
+            ...JSON.parse(JSON.stringify(planToCopy)),
+            id: newId,
+            slug: newSlug,
+            name: `${planToCopy.name || 'コピーされたプラン'} (コピー)`,
+            sections: copiedSections
+        };
+
+        const nextLPs = [...lps, copiedPlan];
+        setAudioLPs(nextLPs);
+        setSelectedId(newId);
+        alert(`「${planToCopy.name || 'プラン'}」をコピーしました。情報の編集を行ってから保存してください。`);
+    };
+
     const handleDeletePlan = (idToDelete: string, planName: string) => {
         if (lps.length <= 1) {
             alert('最低1つのプランラインは残す必要があります。');
@@ -2041,7 +2068,7 @@ const AudioPlanManager = () => {
 
                 return (
                     <div className="space-y-6">
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                             <div className="space-y-1.5">
                                 <label className="block text-[10px] font-bold text-zinc-400">セクションタイトル</label>
                                 <input 
@@ -2068,6 +2095,16 @@ const AudioPlanManager = () => {
                                     onChange={e => updateSectionData(sIdx, { fixedPrice: e.target.value })}
                                     className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-white text-xs font-bold"
                                     placeholder="例: 30000"
+                                />
+                            </div>
+                            <div className="space-y-1.5">
+                                <label className="block text-[10px] font-bold text-zinc-400">セクション共通画像パス (空欄で個別画像)</label>
+                                <input 
+                                    type="text"
+                                    value={section.data.sectionImage || ''}
+                                    onChange={e => updateSectionData(sIdx, { sectionImage: cleanPathInput(e.target.value) })}
+                                    className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-white text-xs font-bold"
+                                    placeholder="例: /images/Audio/... または 空欄"
                                 />
                             </div>
                         </div>
@@ -2103,6 +2140,30 @@ const AudioPlanManager = () => {
                                     <option value="left">左寄せ (Left)</option>
                                 </select>
                             </div>
+                            <div className="flex items-center gap-2">
+                                <span className="text-[10px] font-bold text-zinc-400">表示レイアウト:</span>
+                                <select 
+                                    value={section.data.displayMode || 'standard'}
+                                    onChange={e => updateSectionData(sIdx, { displayMode: e.target.value })}
+                                    className="bg-black border border-zinc-800 rounded px-2 py-1 text-white text-[10px] font-bold outline-none"
+                                >
+                                    <option value="standard">標準 (画像・スペック・価格)</option>
+                                    <option value="image_text">画像とテキストのみ (スペック非表示)</option>
+                                    <option value="no_image">画像非表示 (スペック・テキスト・価格)</option>
+                                    <option value="text_only">テキストのみ (画像・スペック非表示)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div className="space-y-1.5">
+                            <label className="block text-[10px] font-bold text-zinc-400">セクション説明文 (Description - 改行対応の複数行入力)</label>
+                            <textarea 
+                                value={section.data.content || ''}
+                                onChange={e => updateSectionData(sIdx, { content: e.target.value })}
+                                rows={3}
+                                className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-white text-xs font-bold focus:border-blue-500 outline-none"
+                                placeholder="スピーカーセクションの導入文や注釈などを入力してください（空欄時は非表示）"
+                            />
                         </div>
 
                         {/* Speakers lineup list */}
@@ -3072,7 +3133,7 @@ const AudioPlanManager = () => {
                     ];
 
                     return (
-                        <div key={cat.id} className="space-y-4">
+                            <div key={cat.id} className="space-y-4">
                             <div className="text-[11px] font-black text-zinc-400 uppercase tracking-widest pl-1 border-b border-zinc-800/50 pb-2">{cat.name}</div>
                             <div className="space-y-4 pl-2">
                                 {subGroups.map(sub => {
@@ -3125,6 +3186,18 @@ const AudioPlanManager = () => {
                                                                     </button>
                                                                 )}
                                                             </div>
+
+                                                            {/* コピーボタン */}
+                                                            <button 
+                                                                onClick={(e) => {
+                                                                    e.stopPropagation();
+                                                                    handleCopyPlan(p);
+                                                                }}
+                                                                className="p-1 hover:bg-blue-500/20 rounded text-zinc-600 hover:text-blue-400 transition-colors ml-1"
+                                                                title="このプランをコピー"
+                                                            >
+                                                                <Copy className="w-3 h-3" />
+                                                            </button>
 
                                                             {/* 削除ボタン */}
                                                             {lps.length > 1 && (

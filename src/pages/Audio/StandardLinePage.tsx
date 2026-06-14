@@ -322,6 +322,8 @@ export const StandardLinePage: React.FC = () => {
                   ? section.data.fixedPrice
                   : (data.pricing?.fixedPrice || 0));
 
+                const displayMode = section.data?.displayMode || 'standard';
+
                 const calculateAppliedPriceForSection = (spk: any) => {
                   if (!spk) return 0;
                   const isString = typeof spk === 'string';
@@ -367,57 +369,97 @@ export const StandardLinePage: React.FC = () => {
                         })()}
                       </div>
                     )}
+                    {section.data?.content && (
+                      <div 
+                        className="text-gray-600 font-bold text-[16px] leading-relaxed mb-12 max-w-4xl"
+                        dangerouslySetInnerHTML={{ 
+                          __html: section.data.content.includes('\n') 
+                            ? section.data.content.replace(/\n/g, '<br />') 
+                            : section.data.content 
+                        }}
+                      />
+                    )}
+                    {section.data?.sectionImage && (
+                      <div className="flex justify-center mb-20">
+                        <img 
+                          src={section.data.sectionImage} 
+                          alt={sectionTitle} 
+                          className="max-w-2xl w-full h-auto object-contain rounded-[2.5rem] border border-zinc-200/80 shadow-[0_15px_45px_-20px_rgba(0,0,0,0.08)] bg-zinc-50/50 p-6 md:p-12" 
+                        />
+                      </div>
+                    )}
                     <div className={gridContainerClass}>
                       {speakersList.map((spk: any, i: number) => (
                         <div key={i} className="group flex flex-col h-full bg-white border border-zinc-200/80 rounded-[2.5rem] overflow-hidden shadow-[0_15px_45px_-20px_rgba(0,0,0,0.06)] hover:shadow-[0_30px_60px_-15px_rgba(59,130,246,0.1),0_15px_30px_-10px_rgba(0,0,0,0.04)] hover:border-blue-500/30 hover:-translate-y-2 transition-all duration-500 ease-out">
-                          <div className="aspect-square relative overflow-hidden bg-zinc-50/50 flex items-center justify-center p-12 group-hover:bg-zinc-100/50 border-b border-zinc-100 transition-colors duration-500">
-                            <img src={spk.image} alt={`${spk.brand} ${spk.name}`} className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 drop-shadow-xl" />
-                            <div className="absolute top-6 left-6">
-                              <div className="bg-black/80 backdrop-blur-md text-white text-[12px] font-black px-4 py-2 rounded-full tracking-widest uppercase border border-white/20">{spk.brand}</div>
+                          {displayMode !== 'no_image' && displayMode !== 'text_only' && (
+                            <div className="aspect-square relative overflow-hidden bg-zinc-50/50 flex items-center justify-center p-12 group-hover:bg-zinc-100/50 border-b border-zinc-100 transition-colors duration-500">
+                              <img src={spk.image} alt={`${spk.brand} ${spk.name}`} className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 drop-shadow-xl" />
+                              <div className="absolute top-6 left-6">
+                                <div className="bg-black/80 backdrop-blur-md text-white text-[12px] font-black px-4 py-2 rounded-full tracking-widest uppercase border border-white/20">{spk.brand}</div>
+                              </div>
+                              {spk.youtubeUrl && (
+                                <a 
+                                  href={spk.youtubeUrl} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer" 
+                                  onClick={(e) => e.stopPropagation()}
+                                  className="absolute top-6 right-6 z-10 w-11 h-11 bg-black/60 hover:bg-[#FF0000] backdrop-blur-md text-white hover:text-white border border-white/10 rounded-full flex items-center justify-center shadow-lg hover:shadow-red-600/40 transition-all duration-300 hover:scale-110 active:scale-95"
+                                  title="YouTubeで試聴音源を聴く"
+                                >
+                                  <Youtube className="w-5 h-5 shrink-0" />
+                                </a>
+                              )}
                             </div>
-                            {spk.youtubeUrl && (
+                          )}
+                          <div className="p-8 flex flex-col flex-grow">
+                            {(displayMode === 'no_image' || displayMode === 'text_only') && spk.brand && (
+                              <div className="text-[11px] font-black text-blue-600 tracking-wider uppercase mb-1">{spk.brand}</div>
+                            )}
+                            <h3 className="text-2xl font-black text-gray-900 mb-2 leading-tight">{spk.name}</h3>
+                            
+                            {spk.youtubeUrl && (displayMode === 'no_image' || displayMode === 'text_only') && (
                               <a 
                                 href={spk.youtubeUrl} 
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 onClick={(e) => e.stopPropagation()}
-                                className="absolute top-6 right-6 z-10 w-11 h-11 bg-black/60 hover:bg-[#FF0000] backdrop-blur-md text-white hover:text-white border border-white/10 rounded-full flex items-center justify-center shadow-lg hover:shadow-red-600/40 transition-all duration-300 hover:scale-110 active:scale-95"
+                                className="inline-flex items-center gap-1.5 text-xs font-black text-red-600 hover:text-red-500 mb-4 transition-colors w-fit"
                                 title="YouTubeで試聴音源を聴く"
                               >
-                                <Youtube className="w-5 h-5 shrink-0" />
+                                <Youtube className="w-4 h-4 shrink-0" />
+                                <span>YouTubeで試聴</span>
                               </a>
                             )}
-                          </div>
-                          <div className="p-8 flex flex-col flex-grow">
-                            <h3 className="text-2xl font-black text-gray-900 mb-2 leading-tight">{spk.name}</h3>
-                            
+
                             {/* Technical Specs */}
-                            <div className="grid grid-cols-2 gap-x-6 gap-y-3 mb-8">
-                              {spk.mountingHoleSize && (
-                                <div className="flex justify-between items-center border-b border-gray-100 pb-1.5">
-                                  <span className="text-[11px] font-black text-gray-400 uppercase tracking-tighter">取付穴径</span>
-                                  <span className="text-[15px] font-black text-gray-800">{spk.mountingHoleSize}</span>
-                                </div>
-                              )}
-                              {spk.depthSize && (
-                                <div className="flex justify-between items-center border-b border-gray-100 pb-1.5">
-                                  <span className="text-[11px] font-black text-gray-400 uppercase tracking-tighter">取付奥行</span>
-                                  <span className="text-[15px] font-black text-gray-800">{spk.depthSize}</span>
-                                </div>
-                              )}
-                              {spk.hasGrille && (
-                                <div className="flex justify-between items-center border-b border-gray-100 pb-1.5">
-                                  <span className="text-[11px] font-black text-gray-400 uppercase tracking-tighter">グリル</span>
-                                  <span className="text-[15px] font-black text-gray-800">{spk.hasGrille}</span>
-                                </div>
-                              )}
-                              {spk.hasTweeterMount && (
-                                <div className="flex justify-between items-center border-b border-gray-100 pb-1.5">
-                                  <span className="text-[11px] font-black text-gray-400 uppercase tracking-tighter">TWマウント</span>
-                                  <span className="text-[15px] font-black text-gray-800">{spk.hasTweeterMount}</span>
-                                </div>
-                              )}
-                            </div>
+                            {(displayMode === 'standard' || displayMode === 'no_image') && (
+                              <div className="grid grid-cols-2 gap-x-6 gap-y-3 mb-8">
+                                {spk.mountingHoleSize && (
+                                  <div className="flex justify-between items-center border-b border-gray-100 pb-1.5">
+                                    <span className="text-[11px] font-black text-gray-400 uppercase tracking-tighter">取付穴径</span>
+                                    <span className="text-[15px] font-black text-gray-800">{spk.mountingHoleSize}</span>
+                                  </div>
+                                )}
+                                {spk.depthSize && (
+                                  <div className="flex justify-between items-center border-b border-gray-100 pb-1.5">
+                                    <span className="text-[11px] font-black text-gray-400 uppercase tracking-tighter">取付奥行</span>
+                                    <span className="text-[15px] font-black text-gray-800">{spk.depthSize}</span>
+                                  </div>
+                                )}
+                                {spk.hasGrille && (
+                                  <div className="flex justify-between items-center border-b border-gray-100 pb-1.5">
+                                    <span className="text-[11px] font-black text-gray-400 uppercase tracking-tighter">グリル</span>
+                                    <span className="text-[15px] font-black text-gray-800">{spk.hasGrille}</span>
+                                  </div>
+                                )}
+                                {spk.hasTweeterMount && (
+                                  <div className="flex justify-between items-center border-b border-gray-100 pb-1.5">
+                                    <span className="text-[11px] font-black text-gray-400 uppercase tracking-tighter">TWマウント</span>
+                                    <span className="text-[15px] font-black text-gray-800">{spk.hasTweeterMount}</span>
+                                  </div>
+                                )}
+                              </div>
+                            )}
 
                             {spk.remarks && <p className="text-gray-500 text-[15px] font-bold mb-8 flex-grow leading-relaxed" dangerouslySetInnerHTML={{ __html: '● ' + spk.remarks.replace(/\n/g, '<br />') }} />}
                             

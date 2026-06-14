@@ -158,19 +158,25 @@
         },
         {
           "id": "line_1778985631489",
-          "slug": "bmwspeaker",
           "name": "BMWスピーカー交換プラン",
+          "badge": "スピーカー交換パッケージ",
+          "description": "輸入車の中でも、音質改善のご相談が特に多いのがBMWです。グレードを問わず純正システムの構成はほぼ同じで、多くのオーナー様が同じお悩みを抱えています。純正の見た目を崩さず、加工を抑えた方法で音質改善できるパッケージをご用意しています。",
           "link": "/bmwspeaker",
-          "isDynamic": true,
-          "price": "81840"
+          "features": [],
+          "price": "81840",
+          "slug": "bmwspeaker",
+          "isDynamic": true
         },
         {
           "id": "line_1778992499214",
-          "slug": "benzspeaker",
           "name": "Mercedes-Benzスピーカー交換プラン ",
+          "badge": "スピーカー交換パッケージ",
+          "description": "近年のベンツは一部車種でスピーカーの小型化が進み、音質に不満を感じるオーナー様が増えています。車両への加工が不要なトレードイン交換であれば、比較的手軽に音質を改善できます。このページでは適合車種とともにトレードインスピーカーをご案内しています。",
           "link": "/benzspeaker",
-          "isDynamic": true,
-          "price": "81840"
+          "features": [],
+          "price": "81840",
+          "slug": "benzspeaker",
+          "isDynamic": true
         },
         {
           "id": "line_1778993388307",
@@ -549,7 +555,7 @@
     },
     {
       "id": "security_clifford",
-      "category": "CLIFFORD (ク���フォード)",
+      "category": "CLIFFORD (クリフォード)",
       "type": "security",
       "items": [
         {
@@ -2333,7 +2339,7 @@
           "name": "Grgo ZVT II ＋ スマキー連動/スマクロ",
           "price": "299,600",
           "badge": "おすすめ",
-          "description": "傾斜センサー含むフルセンサー構成にスマートキー連動をプラスし、利便性を高めた一台。",
+          "description": "傾斜センサー含むフルセンサー構成にスマートキー連動をプラスし�������������������������������������������������������������������利便性を高めた一台。",
           "triple": true,
           "tilt": true,
           "bonnet": true,
@@ -2588,7 +2594,7 @@
         {
           "name": "プランG：メディアプレーヤー導入",
           "price": "0",
-          "description": "大容量SSD等に対応した専用機。究極を求めるユーザーに人気. ライブラリーを丸ごと持ち歩けます。"
+          "description": "大容量SSD等に対応した専用機。究極を求めるユーザーに人気. ライ���ラ���ーを丸ごと持ち歩けます。"
         }
       ]
     },
@@ -7752,7 +7758,7 @@
         "name": "PS 165 FSE",
         "image": "/images/Audio/Speaker/PS 165 FSE.webp",
         "standalonePrice": "77000",
-        "remarks": "���ッシブあり",
+        "remarks": "パッシブあり",
         "mountingHoleSize": "143",
         "depthSize": "54.5",
         "hasGrille": "なし",
@@ -9842,7 +9848,7 @@
             "opacity": 0.5,
             "badge": "スピーカー交換パッケージ",
             "bgColor": "#1e3a8a",
-            "description": "取り付けの複雑さとコストから、なかなか手が届かなかった3WAYスピーカー。そのハードルを下げたパッケージです。"
+            "description": "通常の2WAYスピーカーに中音域を担う「スコーカー」を加えた3WAYシステムは、取付の難易度が高く、総額費用も不透明になりがちでした。しかし、カーオーディオを極めるうえで「フロント3WAY」は誰もが一度は憧れるシステムです。ANGでは、その憧れのシステムをより身近に感じていただけるよう、インストール工賃と厳選ユニットを明快なパッケージプランとして実現しました。"
           }
         },
         {
@@ -9866,22 +9872,22 @@
                 "image": "/images/Audio/Speaker/3way3.webp"
               }
             ],
-            "title": "美観と音響を極める「カスタムマウント・インストール」",
-            "description": "スピーカーのポテンシャルを最大限に引き出し、車内インテリアとしても圧倒的な存在感を放つカスタムマウント。一般的には取付難易度が高く総額費用もわかりにくかったピラー埋め込みやミラー裏加工などのワンオフインストール工賃を含め、明快なパッケージプランとしてご用意しました。",
+            "title": "カスタムマウント・インストール",
+            "description": "ツィーター・スコーカー・ミッドレンジと役割を分担することで、それぞれの負担が減りよりクリアなサウンドを実現します。またスコーカーをツィーターに近い位置に設置できるため、障害物の影響を受けにくく自然なステージングが可能です。そして音だけでなく、車内インテリアとしての存在感も圧倒的に増します。",
             "doorTuning": {
-              "title": "ピラーツインマウント",
-              "desc": "Aピラーへツィーターとスコーカーを一体型で美しく埋め込み加工します。",
-              "image": "/images/Audio/Speaker/3way2.webp"
+              "title": "ピラー2wayマウント",
+              "image": "/images/Audio/Speaker/3way2.webp",
+              "desc": "Aピラーへツィーターとスコーカーを一体型で埋め込み加工します。"
             },
             "baffle": {
               "title": "ピラー＆ミラー裏マウント",
-              "desc": "Aピラーにスコーカー、ドアミラー裏のカバーにツィーターをそれぞれ最適な角度でインストールします。",
-              "image": "/images/Audio/Speaker/3way4.webp"
+              "image": "/images/Audio/Speaker/3way4.webp",
+              "desc": "Aピラーにスコーカー、ドアミラー裏のカバーにツィーターをそれぞれ最適な角度でインストールします。"
             },
             "cable": {
               "title": "その他カスタムマウント",
-              "desc": "ダッシュボード上への配置など、お車の構造やご要望に合わせたさまざまな取り付け場所をご提案します。",
-              "image": "/images/Audio/Speaker/3way3.webp"
+              "image": "/images/Audio/Speaker/3way3.webp",
+              "desc": "ダッシュボード上への配置など、お車の構造やご要望に合わせたさまざまな取り付け場所をご提案します。"
             }
           }
         },
@@ -9889,10 +9895,10 @@
           "id": "sec_pkg_summary",
           "type": "package_summary",
           "data": {
-            "title": "パッケージ全内容（まとめ）",
+            "title": "パッケージ内容",
             "items": [
               {
-                "title": "スピーカー",
+                "title": "スピーカー本体",
                 "desc": ""
               },
               {
@@ -9920,7 +9926,7 @@
                 "value": ""
               }
             ],
-            "subtitle": "下記の内容が含まれたお得なパッケージとなっています。"
+            "subtitle": "下記の内容が含まれています。"
           }
         },
         {
@@ -9967,7 +9973,8 @@
             "items": [
               "作業は<strong>3日お車をお預かり</strong>します（無料代車をご用意可能です）。",
               "バッフル適合がない車種は別途<strong>¥5,500</strong>の製作費が必要になります。",
-              "ドア通線に加工が必要な車両（ハーネスがカプラ等）は別途加工費用がかかる場合があります。"
+              "ドア通線に加工が必要な車両（ハーネスがカプラ等）は別途加工費用がかかる場合があります。",
+              "取り付け場所や方法は車両を確認しながら打ち合わせが必要な場合がありますので、ご来店をお願いすることがあります。また車種によっては追加費用が発生する場合があります。"
             ]
           }
         },
@@ -9980,7 +9987,7 @@
                 "id": "spk_1779192754242",
                 "brand": "MOREL",
                 "name": "MAXIMO ULTRA603 MK2",
-                "image": "/images/Top/speaker.webp",
+                "image": "/images/Audio/Speaker/MAXIMO_ULTRA603_Mk2.webp",
                 "standalonePrice": "121000",
                 "remarks": "スコーカー外径：63mm /ローレンジ奥行き：63mm"
               },
@@ -9988,7 +9995,7 @@
                 "id": "spk_1779192802067",
                 "brand": "carrozzeria ",
                 "name": "TS-Z900PRS",
-                "image": "/images/Top/speaker.webp",
+                "image": "/images/Audio/Speaker/TS-Z900PRS.webp",
                 "standalonePrice": "140800",
                 "remarks": "スコーカー外径：73mm /ローレンジ奥行き：58mm",
                 "fixedPriceOverride": "103400"
@@ -9997,7 +10004,7 @@
                 "id": "spk_1779192889252",
                 "brand": "FOCAL ",
                 "name": "PS165F3E",
-                "image": "/images/Top/speaker.webp",
+                "image": "/images/Audio/Speaker/PS165F3E.webp",
                 "standalonePrice": "121000",
                 "remarks": "スコーカー外径：88mm /ローレンジ奥行き：77mm",
                 "fixedPriceOverride": "142200"
@@ -10006,7 +10013,7 @@
                 "id": "spk_1779192976357",
                 "brand": "MOREL ",
                 "name": "SENSUS 63",
-                "image": "/images/Top/speaker.webp",
+                "image": "/images/Audio/Speaker/SENSUS 63.webp",
                 "standalonePrice": "177100",
                 "remarks": "スコーカー外径：38mm /ローレンジ奥行き：61mm",
                 "fixedPriceOverride": "142200"
@@ -10015,7 +10022,7 @@
                 "id": "spk_1779193029542",
                 "brand": "DYNAUDIO",
                 "name": "ESOTAN372",
-                "image": "/images/Top/speaker.webp",
+                "image": "/images/Audio/Speaker/ESOTAN372.webp",
                 "standalonePrice": "176000",
                 "remarks": "スコーカー外径：99mm /ローレンジ奥行き：67mm",
                 "fixedPriceOverride": "154000"
@@ -10024,12 +10031,13 @@
                 "id": "spk_1779193082168",
                 "brand": "BLAM",
                 "name": "165S.300",
-                "image": "/images/Top/speaker.webp",
+                "image": "/images/Audio/Speaker/165 S300.webp",
                 "standalonePrice": "217800",
                 "remarks": "スコーカー外径：90.1mm /ローレンジ奥行き：80.2mm",
                 "fixedPriceOverride": "154000"
               }
-            ]
+            ],
+            "hideSubtitle": true
           }
         },
         {
@@ -10063,7 +10071,7 @@
           "id": "spk_1779192754242",
           "brand": "MOREL",
           "name": "MAXIMO ULTRA603 MK2",
-          "image": "/images/Top/speaker.webp",
+          "image": "/images/Audio/Speaker/MAXIMO_ULTRA603_Mk2.webp",
           "standalonePrice": "121000",
           "remarks": "スコーカー外径：63mm /ローレンジ奥行き：63mm"
         },
@@ -10071,7 +10079,7 @@
           "id": "spk_1779192802067",
           "brand": "carrozzeria ",
           "name": "TS-Z900PRS",
-          "image": "/images/Top/speaker.webp",
+          "image": "/images/Audio/Speaker/TS-Z900PRS.webp",
           "standalonePrice": "140800",
           "remarks": "スコーカー外径：73mm /ローレンジ奥行き：58mm",
           "fixedPriceOverride": "103400"
@@ -10080,7 +10088,7 @@
           "id": "spk_1779192889252",
           "brand": "FOCAL ",
           "name": "PS165F3E",
-          "image": "/images/Top/speaker.webp",
+          "image": "/images/Audio/Speaker/PS165F3E.webp",
           "standalonePrice": "121000",
           "remarks": "スコーカー外径：88mm /ローレンジ奥行き：77mm",
           "fixedPriceOverride": "142200"
@@ -10089,7 +10097,7 @@
           "id": "spk_1779192976357",
           "brand": "MOREL ",
           "name": "SENSUS 63",
-          "image": "/images/Top/speaker.webp",
+          "image": "/images/Audio/Speaker/SENSUS 63.webp",
           "standalonePrice": "177100",
           "remarks": "スコーカー外径：38mm /ローレンジ奥行き：61mm",
           "fixedPriceOverride": "142200"
@@ -10098,7 +10106,7 @@
           "id": "spk_1779193029542",
           "brand": "DYNAUDIO",
           "name": "ESOTAN372",
-          "image": "/images/Top/speaker.webp",
+          "image": "/images/Audio/Speaker/ESOTAN372.webp",
           "standalonePrice": "176000",
           "remarks": "スコーカー外径：99mm /ローレンジ奥行き：67mm",
           "fixedPriceOverride": "154000"
@@ -10107,7 +10115,7 @@
           "id": "spk_1779193082168",
           "brand": "BLAM",
           "name": "165S.300",
-          "image": "/images/Top/speaker.webp",
+          "image": "/images/Audio/Speaker/165 S300.webp",
           "standalonePrice": "217800",
           "remarks": "スコーカー外径：90.1mm /ローレンジ奥行き：80.2mm",
           "fixedPriceOverride": "154000"
@@ -10131,7 +10139,8 @@
         "fixedPrice": 41800,
         "normalPriceText": "117700",
         "savingsText": "35,860円 お得!",
-        "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。"
+        "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。",
+        "taxRate": 10
       },
       "sections": [
         {
@@ -10140,12 +10149,12 @@
           "data": {
             "title": "ＢＭＷパッケージ",
             "subTitle": "",
-            "image": "",
+            "image": "/images/Audio/vihicle/bmw-G20.webp",
             "height": "400px",
             "opacity": 0.5,
             "badge": "スピーカー交換パッケージ",
-            "bgColor": "#1e3a8a",
-            "description": "輸入車の中でも、音質改善のご相談が特に多いのがBMWです。グレードを問わず純正システムの構成はほぼ同じで、多くのオーナー様が同じお悩みを抱えています。純正の見た目を崩さず、加工を抑えた方法で音質改善できるパッケージをご用意しています。"
+            "bgColor": "",
+            "description": "輸入車の中でも、音質改善のご相談が特に多いのがBMWです。グレードを問わず純正システムの構成はほぼ同じで、多くのオーナー様が同じお悩みを抱えています。純正の見た目を崩さず、加工を抑えた方法で音質改善できるパッケージを��用意しています。"
           }
         },
         {
@@ -10170,7 +10179,20 @@
               }
             ],
             "title": "スピーカー交換例",
-            "description": "BMWの純正システムはフロントに10cm程度のスピーカー、ツィーターなし、シート下のウーハーで低音を補うという構成がほとんどです。 加工を抑えてコストを抑えた改善方法として、まずはフロントスピーカーの交換とツィーターの追加。さらに適合車種であればウーハーも交換することで、ハリのあるサウンドに生まれ変わります。このパッケージではトレードインで交換可能なスピーカーをご紹介しています。"
+            "description": "BMWの純正シス����������はフロントに10cm程度のスぴーかー、ツィーターなし、シート下のウーハーで低音を補うという構成がほとんどです。 加工を抑えてコストを抑えた改善方法として、まずはフロントスピーカーの交換とツィーターの追加。さらに適合車種であればウーハーも交換することで、ハリのあるサウンドに生まれ変わります。このパッケージではトレードインで交換可能なスピーカーをご紹介しています。",
+            "doorTuning": {
+              "title": "ツイーター",
+              "desc": "純正ツィーター非装着車の場合、別途純正部品が必要になる場合があります。",
+              "image": "/images/Audio/Speaker/bmw-tw2.webp"
+            },
+            "baffle": {
+              "title": "ドアスピーカー",
+              "image": "/images/Audio/Speaker/bmw-door.webp"
+            },
+            "cable": {
+              "title": "シート下ウーハー",
+              "image": "/images/Audio/Speaker/bmw-woofer.webp"
+            }
           }
         },
         {
@@ -10221,11 +10243,109 @@
             "speakers": [
               {
                 "id": "spk_1778989822158",
-                "brand": "Focal",
+                "brand": "2wayフロントスピーカー",
                 "name": "IS BMW 100L",
-                "image": "/images/Top/speaker.webp",
+                "image": "/images/Audio/Speaker/IS BMW 100L.webp",
                 "standalonePrice": "60500",
-                "remarks": ""
+                "remarks": "適合車種\n5シリーズ：G30/31、F10/11\n4シリーズ：F32/33\n3シリーズ：F30/31\n2シリーズクーペ：F22\n2シリーズアクティブツアラー：F45\n1シリーズ：F20\nX3：F25\nX2：F39\nX1：F48\n"
+              },
+              {
+                "id": "spk_1779867491380_pl50",
+                "brand": "フロントコアキシャル",
+                "name": "IC BMW 100L",
+                "image": "/images/Audio/Speaker/IC BMW 100L.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "44000",
+                "fixedPriceOverride": "",
+                "remarks": "適合車種\n5シリーズ：G30/31、F10/11\n4シリーズ：F32/33\n3シリーズ：F30/31\n2シリーズクーペ：F22\n2シリーズアクティブツアラー：F45\n1シリーズ：F20\nX3：F25\nX2：F39\nX1：F48\nMINI：3ドア/F56 、5ドア/F55\nクラブマン：F54\nクロスオーバー：F60\nコンバーチブル：F57",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1779867607013_smgf",
+                "brand": "2wayフロント+2wayセンターセット",
+                "name": "BMF30KVT3",
+                "image": "/images/Audio/Speaker/BMF30KVT3.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "192500",
+                "fixedPriceOverride": "44000",
+                "remarks": "適合車種\n8シリーズ：G16\n6シリーズ：F06\n5シリーズ：G60/G61、G30/31、F10/11\n4シリーズ：F32/33/36/82、G22/26\n3シリーズ：G20/21、F30/31\n2シリーズ：F44\n2シリーズクーペ：F22\n2シリーズアクティブツアラー：F45\n1シリーズ：F40、F20\nX6：G06\nX5：G05、F15\nX4：G02\nX3：G45*、G01、F25\nX1：F48\nZ4：G29\nM5：F90\nM2：F87\n*X3（G45）にはセンタースピーカー非対応",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1779867628297_cn78",
+                "brand": "2wayフロント+センターセット",
+                "name": "BMF30KV3",
+                "image": "/images/Audio/Speaker/BMF30KV3.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "165000",
+                "fixedPriceOverride": "41800",
+                "remarks": "適合車種\n8シリーズ：G16\n6シリーズ：F06\n5シリーズ：G60/G61、G30/31、F10/11\n4シリーズ：F32/33/36/82、G22/26\n3シリーズ：G20/21、F30/31\n2シリーズ：F44\n2シリーズクーペ：F22\n2シリーズアクティブツアラー：F45\n1シリーズ：F40、F20\nX6：G06\nX5：G05、F15\nX4：G02\nX3：G45*、G01、F25\nX1：F48\nZ4：G29\nM5：F90\nM2：F87\n*X3（G45）にはセンタースピーカー非対応",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1779867629628_vp3a",
+                "brand": "2wayフロント",
+                "name": "BMF30KV2",
+                "image": "/images/Audio/Speaker/BMF30KV2.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "118800",
+                "fixedPriceOverride": "",
+                "remarks": "適合車種\n8シリーズ：G16\n6シリーズ：F06\n5シリーズ：G60/G61、G30/31、F10/11\n4シリーズ：F32/33/36/82、G22/26\n3シリーズ：G20/21、F30/31\n2シリーズ：F44\n2シリーズクーペ：F22\n2シリーズアクティブツアラー：F45\n1シリーズ：F40、F20\nX6：G06\nX5：G05、F15\nX4：G02\nX3：G45*、G01、F25\nX1：F48\nZ4：G29\nM5：F90\nM2：F87\n",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1779867630485_napf",
+                "brand": "2wayセンター",
+                "name": "BMF30KVTC",
+                "image": "/images/Audio/Speaker/BMF30KVTC.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "77000",
+                "fixedPriceOverride": "11000",
+                "remarks": "適合車種\n8シリーズ：G16\n6シリーズ：F06\n5シリーズ：G60/G61、G30/31、F10/11\n4シリーズ：F32/33/36/82、G22/26\n3シリーズ：G20/21、F30/31\n2シリーズ：F44\n2シリーズクーペ：F22\n2シリーズアクティブツアラー：F45\n1シリーズ：F40、F20\nX6：G06\nX5：G05、F15\nX4：G02\nX3：G45*、G01、F25\nX1：F48\nZ4：G29\nM5：F90\nM2：F87\n*X3（G45）にはセンタースピーカー非対応",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1779867631100_j726",
+                "brand": "センター",
+                "name": "BMF30KVC",
+                "image": "/images/Audio/Speaker/BMF30KVC.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "52800",
+                "fixedPriceOverride": "8800",
+                "remarks": "適合車種\n8シリーズ：G16\n6シリーズ：F06\n5シリーズ：G60/G61、G30/31、F10/11\n4シリーズ：F32/33/36/82、G22/26\n3シリーズ：G20/21、F30/31\n2シリーズ：F44\n2シリーズクーペ：F22\n2シリーズアクティブツアラー：F45\n1シリーズ：F40、F20\nX6：G06\nX5：G05、F15\nX4：G02\nX3：G45*、G01、F25\nX1：F48\nZ4：G29\nM5：F90\nM2：F87\n*X3（G45）にはセンタースピーカー非対応",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1779867631625_61eu",
+                "brand": "ウーハー",
+                "name": "ISUB BMW 2 or BMW 4",
+                "image": "/images/Audio/Speaker/ISUB.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "44000",
+                "fixedPriceOverride": "60500",
+                "remarks": "適合車種\n5シリーズ：G30/31、F10/11\n4シリーズ：F32/33\n3シリーズ：F30/31\n2シリーズクーペ：F22\n2シリーズアクティブツアラー：F45\n1シリーズ：F20\nX3：F25\nX2：F39\nX1：F48\nMINI：3ドア/F56 、5ドア/F55\nクラブマン：F54\nクロスオーバー：F60\nコンバーチブル：F57\n\n※ウーハー本体左右分\n　2Ωモデル4Ωモデルがあります。",
+                "youtubeUrl": ""
               }
             ],
             "fixedPrice": 33000
@@ -10239,15 +10359,44 @@
             "speakers": [
               {
                 "id": "spk_1778989941366",
-                "brand": "BLAM",
-                "name": "BM 100NS",
-                "image": "/images/Top/speaker.webp",
+                "brand": "2wayフロント",
+                "name": "100 S24 BMW",
+                "image": "/images/Audio/Speaker/100 S24 BMW.webp",
+                "standalonePrice": "107800",
+                "remarks": "適合車種\n1シリーズ： E80系,F20,F21\n2シリーズ： F20系,F45,F46\n3シリーズ/4シリーズ：F30系,F80系\n5シリーズ：G30,G31\n7シリーズ：G10,G11\nX1：F48\nX2：F39\nX3：F25\nX4：F26\nX5：F15.F85\n\n",
+                "fixedPriceOverride": "33880"
+              },
+              {
+                "id": "spk_1779870188876_uexm",
+                "brand": "2wayフロント",
+                "name": "BM 100 NS",
+                "image": "/images/Audio/Speaker/BLAM BM 100NS.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
                 "standalonePrice": "46200",
-                "remarks": "",
-                "fixedPriceOverride": "33000"
+                "fixedPriceOverride": "",
+                "remarks": "適合車種\n1シリーズ： E80系,F20,F21\n2シリーズ： F20系,F45,F46\n3シリーズ/4シリーズ：F30系,F80系\n5シリーズ：G30,G31\n7シリーズ：G10,G11\nX1：F48\nX2：F39\nX3：F25\nX4：F26\nX5：F15.F85",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1779870353996_7931",
+                "brand": "ウーハー",
+                "name": "BM 200XF",
+                "image": "/images/Audio/Speaker/BM 200XF.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "52800",
+                "fixedPriceOverride": "16500",
+                "remarks": "適合車種\n165mmウーハー装着車ほぼ対応可\n\n※ウーハー本体左右分",
+                "youtubeUrl": ""
               }
             ],
-            "fixedPrice": 33880
+            "fixedPrice": "33000",
+            "hideTitle": true
           }
         },
         {
@@ -10258,14 +10407,85 @@
             "speakers": [
               {
                 "id": "spk_1778990178444",
-                "brand": "ETON",
-                "name": "B100W2",
-                "image": "/images/Top/speaker.webp",
+                "brand": "フロント2way",
+                "name": "B-100W2",
+                "image": "/images/Audio/Speaker/B-100W2.webp",
                 "standalonePrice": "63800",
-                "remarks": ""
+                "remarks": "適合車種\nX3：F25\nX5：F15,F85\nX6：F16\nなどドア鉄板側の取付に対応"
+              },
+              {
+                "id": "spk_1779871286876_787z",
+                "brand": "フロント2way",
+                "name": "B-100W",
+                "image": "/images/Audio/Speaker/B-100W.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "63800",
+                "fixedPriceOverride": "",
+                "remarks": "適合車種\n1シリーズ：F20,F21,F40\n2シリーズ：F22,F23,F44,F45,F46,F87\n3シリーズ：F30,F31,F34,F80,G20,G21,G28,G80\n4シリーズ：F32,F33,F36,F82,F83,G22,G23\n5シリーズ：G30,G31\n6シリーズ：F06,F12,F13,G32\n7シリーズ：G11,G12\nX1：F48,F49\nX2：F39\nX3：F25,G01\nX4：F26,G02\nX5：G05\nX6：G06\ni8：L15\nMINI：F54,F55,F56,F57,F60",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1779871526499_fq2x",
+                "brand": "2wayフロント",
+                "name": "B-100T",
+                "image": "/images/Audio/Speaker/B-100T.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "63800",
+                "fixedPriceOverride": "",
+                "remarks": "適合車種\n1シリーズ：E81,E82,E87,E88\n3シリーズ：E90,E91,E92,E93\n5シリーズ：F10,F11\n6シリーズ：E63,E64\nX1：E84",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1779871627268_k4ev",
+                "brand": "2wayフロント",
+                "name": "B-100N",
+                "image": "/images/Audio/Speaker/B-100N.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "63800",
+                "fixedPriceOverride": "",
+                "remarks": "適合車種\n5シリーズ：E60,E61,F07\n7シリーズ：E65,E66,F01,F02\nX3：E83\nX5：E70\nX6：E71\nZ4：E89\nMINI：R60,R61",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1779871809690_03g1",
+                "brand": "ウーハー",
+                "name": "B-195NEO",
+                "image": "/images/Audio/Speaker/B-195NEO.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "110000",
+                "fixedPriceOverride": "21000",
+                "remarks": "適合車種\n1シリーズ：E81,E82,E87,E88,F20,F21,F40\n2シリーズ：F22,F23,F44,F45,F46,F87\n3シリーズ：E90,E91,E92,E93,F30,F31,F34,F80 ,G20,G21,G28,G80\n4シリーズ：F32,F33,F36,F82,F83,G22,G23\n5シリーズ：E60,E61,F07,F10,F11,G30,G31\n6シリーズ：E63,E64,F06,F12,F13,G32\n7シリーズ：E65,E66,F01,F02,G11,G12\nX1：E84,F48,F49\nX2：F39\nX3：E83,F25,G01\nX4：F26,G02\nX5：E70,F15,F85,G05\nX6：E71,F16,G06\nMINI：R60,R61,F54,F55,F56,F57,F60\n\n※ウーハー本体左右分",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1779872004513_bpyv",
+                "brand": "ハイパスユニット",
+                "name": "B-100X HP",
+                "image": "/images/Audio/Speaker/B-100X HP.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "11000/ペア",
+                "fixedPriceOverride": "0",
+                "remarks": "10cmミッドレンジ用ハイパスユニット(標準価格11,000円/ペア)\n \n\nドアスピーカーの低音域をカットすることで中域の音質をアップさせます。\nスピーカーと同時取り付けの場合は工賃サービスとなります。",
+                "youtubeUrl": ""
               }
             ],
-            "fixedPrice": 33000
+            "fixedPrice": 33000,
+            "hideTitle": true
           }
         },
         {
@@ -10277,13 +10497,42 @@
             "speakers": [
               {
                 "id": "spk_1778990517359",
-                "brand": "a/tack",
+                "brand": "2wayフロント",
                 "name": "PFS10A",
-                "image": "/images/Top/speaker.webp",
+                "image": "/images/Audio/Speaker/PFS10A.webp",
                 "standalonePrice": "52800",
-                "remarks": ""
+                "remarks": "5シリーズ：E60,E61,F07\n7シリーズ：E65,E66,F01,F02,F04\nX3：E83\nX5：E70\nX6：E71,E72\nZ4：E89"
+              },
+              {
+                "id": "spk_1779872524229_pswl",
+                "brand": "2wayフロント",
+                "name": "PFS10B",
+                "image": "/images/Audio/Speaker/PFS10B.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "52800",
+                "fixedPriceOverride": "",
+                "remarks": "適合車種\n1シリーズ：E87,E82,E88,F20\n2シリーズ：F22,F44,F45,F46\n3シリーズ：E90,E91,E92,E93,F30,F31,F34,G20\n4シリーズ：F32,F33,F36\n5シリーズ：F10,F11,G30,G31\n6シリーズ：E63,E64,F12,F13,F06\nX1：E84,F48\nX2：F39\nX3：F25,G01\nX4：F26",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1779872728054_h9xo",
+                "brand": "ウーハー",
+                "name": "PFW20",
+                "image": "/images/Audio/Speaker/PFW20.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "52800",
+                "fixedPriceOverride": "16500",
+                "remarks": "適合車種\n1シリーズ：E87,E82,E88,F20\n2シリーズ：F22,F45,F46\n3シリーズ：E90,E91,E92,E93,F30,F31,F34\n4シリーズ：F32,F33,F36\n5シリーズ：E60,E61,F10,F11,F07,G30,G31\n6シリーズ：E63,F12,F13,F06\n7シリーズ：E65,E66,F01,F02,F04\nX1：E84,F48\nX2：F39\nX3：F25\nX4：F26\nX5：E70\nX6：E71,E72\n\n※ウーハー本体左右分",
+                "youtubeUrl": ""
               }
-            ]
+            ],
+            "hideTitle": true
           }
         }
       ],
@@ -10307,7 +10556,114 @@
         }
       },
       "showInMenu": true,
-      "speakers": [],
+      "speakers": [
+        {
+          "id": "spk_1778989822158",
+          "brand": "2wayフロントスピーカー",
+          "name": "IS BMW 100L",
+          "image": "/images/Audio/Speaker/IS BMW 100L.webp",
+          "standalonePrice": "60500",
+          "remarks": "適合車種\n5シリーズ：G30/31、F10/11\n4シリーズ：F32/33\n3シリーズ：F30/31\n2シリーズクーペ：F22\n2シリーズアクティブツアラー：F45\n1シリーズ：F20\nX3：F25\nX2：F39\nX1：F48\n"
+        },
+        {
+          "id": "spk_1779867491380_pl50",
+          "brand": "フロントコアキシャル",
+          "name": "IC BMW 100L",
+          "image": "/images/Audio/Speaker/IC BMW 100L.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "44000",
+          "fixedPriceOverride": "",
+          "remarks": "適合車種\n5シリーズ：G30/31、F10/11\n4シリーズ：F32/33\n3シリーズ：F30/31\n2シリーズクーペ：F22\n2シリーズアクティブツアラー：F45\n1シリーズ：F20\nX3：F25\nX2：F39\nX1：F48\nMINI：3ドア/F56 、5ドア/F55\nクラブマン：F54\nクロスオーバー：F60\nコンバーチブル：F57",
+          "youtubeUrl": ""
+        },
+        {
+          "id": "spk_1779867607013_smgf",
+          "brand": "2wayフロント+2wayセンターセット",
+          "name": "BMF30KVT3",
+          "image": "/images/Audio/Speaker/BMF30KVT3.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "192500",
+          "fixedPriceOverride": "44000",
+          "remarks": "適合車種\n8シリーズ：G16\n6シリーズ：F06\n5シリーズ：G60/G61、G30/31、F10/11\n4シリーズ：F32/33/36/82、G22/26\n3シリーズ：G20/21、F30/31\n2シリーズ：F44\n2シリーズクーペ：F22\n2シリーズアクティブツアラー：F45\n1シリーズ：F40、F20\nX6：G06\nX5：G05、F15\nX4：G02\nX3：G45*、G01、F25\nX1：F48\nZ4：G29\nM5：F90\nM2：F87\n*X3（G45）にはセンタースピーカー非対応",
+          "youtubeUrl": ""
+        },
+        {
+          "id": "spk_1779867628297_cn78",
+          "brand": "2wayフロント+センターセット",
+          "name": "BMF30KV3",
+          "image": "/images/Audio/Speaker/BMF30KV3.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "165000",
+          "fixedPriceOverride": "41800",
+          "remarks": "適合車種\n8シリーズ：G16\n6シリーズ：F06\n5シリーズ：G60/G61、G30/31、F10/11\n4シリーズ：F32/33/36/82、G22/26\n3シリーズ：G20/21、F30/31\n2シリーズ：F44\n2シリーズクーペ：F22\n2シリーズアクティブツアラー：F45\n1シリーズ：F40、F20\nX6：G06\nX5：G05、F15\nX4：G02\nX3：G45*、G01、F25\nX1：F48\nZ4：G29\nM5：F90\nM2：F87\n*X3（G45）にはセンタースピーカー非対応",
+          "youtubeUrl": ""
+        },
+        {
+          "id": "spk_1779867629628_vp3a",
+          "brand": "2wayフロント",
+          "name": "BMF30KV2",
+          "image": "/images/Audio/Speaker/BMF30KV2.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "118800",
+          "fixedPriceOverride": "",
+          "remarks": "適合車種\n8シリーズ：G16\n6シリーズ：F06\n5シリーズ：G60/G61、G30/31、F10/11\n4シリーズ：F32/33/36/82、G22/26\n3シリーズ：G20/21、F30/31\n2シリーズ：F44\n2シリーズクーペ：F22\n2シリーズアクティブツアラー：F45\n1シリーズ：F40、F20\nX6：G06\nX5：G05、F15\nX4：G02\nX3：G45*、G01、F25\nX1：F48\nZ4：G29\nM5：F90\nM2：F87\n",
+          "youtubeUrl": ""
+        },
+        {
+          "id": "spk_1779867630485_napf",
+          "brand": "2wayセンター",
+          "name": "BMF30KVTC",
+          "image": "/images/Audio/Speaker/BMF30KVTC.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "77000",
+          "fixedPriceOverride": "11000",
+          "remarks": "適合車種\n8シリーズ：G16\n6シリーズ：F06\n5シリーズ：G60/G61、G30/31、F10/11\n4シリーズ：F32/33/36/82、G22/26\n3シリーズ：G20/21、F30/31\n2シリーズ：F44\n2シリーズクーペ：F22\n2シリーズアクティブツアラー：F45\n1シリーズ：F40、F20\nX6：G06\nX5：G05、F15\nX4：G02\nX3：G45*、G01、F25\nX1：F48\nZ4：G29\nM5：F90\nM2：F87\n*X3（G45）にはセンタースピーカー非対応",
+          "youtubeUrl": ""
+        },
+        {
+          "id": "spk_1779867631100_j726",
+          "brand": "センター",
+          "name": "BMF30KVC",
+          "image": "/images/Audio/Speaker/BMF30KVC.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "52800",
+          "fixedPriceOverride": "8800",
+          "remarks": "適合車種\n8シリーズ：G16\n6シリーズ：F06\n5シリーズ：G60/G61、G30/31、F10/11\n4シリーズ：F32/33/36/82、G22/26\n3シリーズ：G20/21、F30/31\n2シリーズ：F44\n2シリーズクーペ：F22\n2シリーズアクティブツアラー：F45\n1シリーズ：F40、F20\nX6：G06\nX5：G05、F15\nX4：G02\nX3：G45*、G01、F25\nX1：F48\nZ4：G29\nM5：F90\nM2：F87\n*X3（G45）にはセンタースピーカー非対応",
+          "youtubeUrl": ""
+        },
+        {
+          "id": "spk_1779867631625_61eu",
+          "brand": "ウーハー",
+          "name": "ISUB BMW 2 or BMW 4",
+          "image": "/images/Audio/Speaker/ISUB.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "44000",
+          "fixedPriceOverride": "60500",
+          "remarks": "適合車種\n5シリーズ：G30/31、F10/11\n4シリーズ：F32/33\n3シリーズ：F30/31\n2シリーズクーペ：F22\n2シリーズアクティブツアラー：F45\n1シリーズ：F20\nX3：F25\nX2：F39\nX1：F48\nMINI：3ドア/F56 、5ドア/F55\nクラブマン：F54\nクロスオーバー：F60\nコンバーチブル：F57\n\n※ウーハー本体左右分\n　2Ωモデル4Ωモデルがあります。",
+          "youtubeUrl": ""
+        }
+      ],
       "subType": "vehicle"
     },
     {
@@ -10326,7 +10682,8 @@
         "fixedPrice": 41800,
         "normalPriceText": "117700",
         "savingsText": "35,860円 お得!",
-        "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。"
+        "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。",
+        "taxRate": 10
       },
       "sections": [
         {
@@ -10335,11 +10692,11 @@
           "data": {
             "title": "Mercedes-Benzパッケージ",
             "subTitle": "",
-            "image": "",
+            "image": "/images/Audio/vihicle/Benz C.webp",
             "height": "400px",
             "opacity": 0.5,
             "badge": "スピーカー交換パッケージ",
-            "bgColor": "#1e3a8a",
+            "bgColor": "",
             "description": "近年のベンツは一部車種でスピーカーの小型化が進み、音質に不満を感じるオーナー様が増えています。車両への加工が不要なトレードイン交換であれば、比較的手軽に音質を改善できます。このページでは適合車種とともにトレードインスピーカーをご案内しています。"
           }
         },
@@ -10372,7 +10729,7 @@
           "id": "sec_pkg_summary",
           "type": "package_summary",
           "data": {
-            "title": "パッケージ全内容（まとめ）",
+            "title": "パッケージ内容",
             "items": [
               {
                 "title": "スピーカー本体",
@@ -10412,73 +10769,493 @@
           "id": "sec_speakers",
           "type": "speakers",
           "data": {
-            "subtitle": "Focal",
+            "subtitle": "Eクラス セダン/ステーションワゴン（W213/S213）対応モデル",
             "speakers": [
               {
                 "id": "spk_1778989822158",
-                "brand": "Focal",
-                "name": "IS BMW 100L",
+                "brand": "（2ウェイフロント＋2ウェイリア＋センターセット）",
+                "name": "MB213KJ5T",
                 "image": "/images/Top/speaker.webp",
-                "standalonePrice": "60500",
-                "remarks": ""
+                "standalonePrice": "308000",
+                "remarks": "詳細\n使用ユニット：\nK2Power\n\nセット内容：\nドームトゥイーター×4\n8cmミッドレンジ×4\n8cmセンタースピーカー×1　\n（専用ネットワーク/取り付け用部材付属）",
+                "fixedPriceOverride": "77000"
+              },
+              {
+                "id": "spk_1779956745044_ar67",
+                "brand": "（2ウェイフロント＋リア＋センターセット）",
+                "name": "MB213KJ5",
+                "image": "/images/Top/speaker.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "275000",
+                "fixedPriceOverride": "71500",
+                "remarks": "詳細\n使用ユニット：\nK2Power\n\nセット内容：\nドームトゥイーター×2\n8cmミッドレンジ×4\n8cmセンタースピーカー×1　\n（専用ネットワーク/取り付け用部材付属）",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1779956756510_6125",
+                "brand": "（2ウェイフロント＋2ウェイリアセット）",
+                "name": "MB213KJ4T",
+                "image": "/images/Top/speaker.webp",
+                "mountingHoleSize": "140mm",
+                "depthSize": "50mm",
+                "hasGrille": "付属",
+                "hasTweeterMount": "付属",
+                "standalonePrice": "264000",
+                "fixedPriceOverride": "",
+                "remarks": "詳細\n使用ユニット：\nK2Power\n\nセット内容：\nドームトゥイーター×4\n8cmミッドレンジ×4\n（専用ネットワーク/取り付け用部材付属）",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1780467881507_xk4o",
+                "brand": "（2ウェイフロント＋リアセット）",
+                "name": "MB213KJ4",
+                "image": "/images/Top/speaker.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "225500",
+                "fixedPriceOverride": "60500",
+                "remarks": "詳細\n使用ユニット：\nK2Power\n\nセット内容：\nドームトゥイーター×2\n8cmミッドレンジ×4　\n（専用ネットワーク/取り付け用部材付属）",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1780467882345_442w",
+                "brand": "（2ウェイフロント＋センターセット）",
+                "name": "MB213KJ3",
+                "image": "/images/Top/speaker.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "184800",
+                "fixedPriceOverride": "44000",
+                "remarks": "詳細\n使用ユニット：\nK2Power\n\nセット内容：\nドームトゥイーター×2\n8cmミッドレンジ×2\n8cmセンタースピーカー×1　\n（専用ネットワーク/取り付け用部材付属）",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1780467883033_41gb",
+                "brand": "（2ウェイフロントセット）",
+                "name": "MB213KJ2",
+                "image": "/images/Top/speaker.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "135300",
+                "fixedPriceOverride": "33000",
+                "remarks": "詳細\n使用ユニット：\nK2Power\n\nセット内容：\nドームトゥイーター×2\n8cmミッドレンジ×2　\n（専用ネットワーク/取り付け用部材付属）",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1780468780931_y8n9",
+                "brand": "（2ウェイリアセット）",
+                "name": "MB213KJRT",
+                "image": "/images/Top/speaker.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "129800",
+                "fixedPriceOverride": "33000",
+                "remarks": "詳細\n使用ユニット：\nK2Power\n\nセット内容：\nドームトゥイーター×2\n8cmミッドレンジ×2　\n（専用ネットワーク/取り付け用部材付属）",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1780468930670_7hkd",
+                "brand": "（リアセット）",
+                "name": "MB213KJR",
+                "image": "/images/Top/speaker.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "92400",
+                "fixedPriceOverride": "27500",
+                "remarks": "詳細\n使用ユニット：\nK2Power\n\nセット内容：\n8cmミッドレンジ×2　\n（専用ネットワーク/取り付け用部材付属）",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1780468931383_ll9v",
+                "brand": "（センター単品）",
+                "name": "MB213KJC",
+                "image": "/images/Top/speaker.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "49500",
+                "fixedPriceOverride": "11000",
+                "remarks": "詳細\n使用ユニット：\nK2Power\n\nセット内容：\n8cmセンタースピーカー×1　\n（取り付け用部材付属）",
+                "youtubeUrl": ""
               }
             ],
-            "fixedPrice": 33000
+            "fixedPrice": 33000,
+            "sectionImage": "/images/Audio/Speaker/MB213KJ2.webp",
+            "displayMode": "no_image",
+            "content": "<h3 class=\"text-center text-3xl md:text-4xl font-black text-gray-900 tracking-tight mb-3\">FOCAL K2 Power</h3>\n<div class=\"w-12 h-1 bg-blue-600 mx-auto mb-6 rounded-full\"></div>\n<p class=\"text-center mx-auto max-w-2xl text-gray-600 font-bold leading-relaxed mb-6\">\n  Wサンドウィッチ構造アラミドファイバー・コンポジットコーンによる<span class=\"text-blue-600 font-black\">80mm TMDウーファー</span>と、<span class=\"text-blue-600 font-black\">Mインバーテッド・ドームトゥイーター</span>を組み合わせた上位モデル。<br />\n  スムーズに伸びたクリアな高音、情報量あふれる艶やかな中低音がフォーカルらしい個性を生み出します。\n</p>"
           }
         },
         {
           "id": "sec_1778989911245",
           "type": "speakers",
           "data": {
-            "subtitle": "BLAM",
+            "subtitle": "Cクラス セダン/ステーションワゴン（W205/S205）、GLC（X253）、GLCクーペ（C253）対応モデル",
             "speakers": [
               {
                 "id": "spk_1778989941366",
-                "brand": "BLAM",
-                "name": "BM 100NS",
+                "brand": "（2ウェイフロント＋リア＋センターセット）",
+                "name": "MB205KJ5",
                 "image": "/images/Top/speaker.webp",
-                "standalonePrice": "46200",
-                "remarks": "",
-                "fixedPriceOverride": "33000"
+                "standalonePrice": "275000",
+                "remarks": "詳細\n使用ユニット：\nK2Power\n\nセット内容：\nドームトゥイーター×2\n8cmミッドレンジ×4\n8cmセンタースピーカー×1　\n（専用ネットワーク/取り付け用部材付属）",
+                "fixedPriceOverride": "71500"
+              },
+              {
+                "id": "spk_1780470903956_dt8l",
+                "brand": "（2ウェイフロント＋リアセット）",
+                "name": "MB205KJ4",
+                "image": "/images/Top/speaker.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "225500",
+                "fixedPriceOverride": "60500",
+                "remarks": "詳細\n使用ユニット：\nK2Power\n\nセット内容：\nドームトゥイーター×2\n8cmミッドレンジ×4\n（専用ネットワーク/取り付け用部材付属）",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1780470904795_l6vo",
+                "brand": "（2ウェイフロント＋センターセット）",
+                "name": "MB205KJ3",
+                "image": "/images/Top/speaker.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "184800",
+                "fixedPriceOverride": "44000",
+                "remarks": "詳細\n使用ユニット：\nK2Power\n\nセット内容：\nドームトゥイーター×2\n8cmミッドレンジ×2\nセンタースピーカー×1　\n（専用ネットワーク/取り付け用部材付属）",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1780470905649_6b8v",
+                "brand": "（2ウェイフロントセット）",
+                "name": "MB205KJ2",
+                "image": "/images/Top/speaker.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "135300",
+                "fixedPriceOverride": "33000",
+                "remarks": "詳細\n使用ユニット：\nK2Power\n\nセット内容：\nドームトゥイーター×2\n8cmミッドレンジ×2　\n（専用ネットワーク/取り付け用部材付属）",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1780470906394_a5jo",
+                "brand": "（リアセット）",
+                "name": "MB205KJR",
+                "image": "/images/Top/speaker.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "92400",
+                "fixedPriceOverride": "27500",
+                "remarks": "詳細\n使用ユニット：\nK2Power\n\nセット内容：\n8cmミッドレンジ×2　\n（専用ネットワーク/取り付け用部材付属）",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1780470907118_obck",
+                "brand": "（センター単品）",
+                "name": "MB205KJC",
+                "image": "/images/Top/speaker.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "49500",
+                "fixedPriceOverride": "11000",
+                "remarks": "詳細\n使用ユニット：\nK2Power\n\nセット内容：\n8cmセンタースピーカー×1　\n（取り付け用部材付属）",
+                "youtubeUrl": ""
               }
             ],
-            "fixedPrice": 33880
+            "fixedPrice": 33880,
+            "displayMode": "no_image",
+            "content": "<h3 class=\"text-center text-3xl md:text-4xl font-black text-gray-900 tracking-tight mb-3\">FOCAL K2 Power</h3>\n<div class=\"w-12 h-1 bg-blue-600 mx-auto mb-6 rounded-full\"></div>\n<p class=\"text-center mx-auto max-w-2xl text-gray-600 font-bold leading-relaxed mb-6\">\n  Wサンドウィッチ構造アラミドファイバー・コンポジットコーンによる<span class=\"text-blue-600 font-black\">80mm TMDウーファー</span>と、<span class=\"text-blue-600 font-black\">Mインバーテッド・ドームトゥイーター</span>を組み合わせた上位モデル。<br />\n  スムーズに伸びたクリアな高音、情報量あふれる艶やかな中低音がフォーカルらしい個性を生み出します。\n</p>",
+            "hideTitle": true,
+            "sectionImage": "/images/Audio/Speaker/MB213KJ2.webp"
           }
         },
         {
           "id": "sec_1778990164885",
           "type": "speakers",
           "data": {
-            "subtitle": "ETON",
+            "subtitle": "Focal 【FLAX EVO】",
             "speakers": [
               {
                 "id": "spk_1778990178444",
-                "brand": "ETON",
-                "name": "B100W2",
-                "image": "/images/Top/speaker.webp",
-                "standalonePrice": "63800",
-                "remarks": ""
+                "brand": "2WAYフロントスピーカー",
+                "name": "IS MBZ 100",
+                "image": "/images/Audio/Speaker/IS_MBZ_100.webp",
+                "standalonePrice": "66000",
+                "remarks": "対応車種:\nEクラス セダン/ステーションワゴン（W213/S213）\nCクラス セダン/ステーションワゴン（W205/S205）\nGLC（X253）、GLCクーペ（C253）"
+              },
+              {
+                "id": "spk_1780815710681_so0b",
+                "brand": "コアキシャルフロントスピーカー",
+                "name": "IC MBZ 100",
+                "image": "/images/Audio/Speaker/IC MBZ 100.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "27500",
+                "fixedPriceOverride": "60500",
+                "remarks": "対応車種:\nEクラス セダン/ステーションワゴン（W213/S213）\nCクラス セダン/ステーションワゴン（W205/S205）\nGLC（X253）、GLCクーペ（C253）",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1780815896018_ev0w",
+                "brand": "センタースピーカー",
+                "name": "ICC MBZ 100",
+                "image": "/images/Audio/Speaker/ICC MBZ 100.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "33000",
+                "fixedPriceOverride": "11000",
+                "remarks": "対応車種:\nEクラス セダン/ステーションワゴン（W213/S213）\nCクラス セダン/ステーションワゴン（W205/S205）",
+                "youtubeUrl": ""
               }
             ],
-            "fixedPrice": 33000
+            "fixedPrice": 33000,
+            "hideTitle": true
           }
         },
         {
           "id": "sec_1778990300719",
           "type": "speakers",
           "data": {
-            "subtitle": "a/tack",
+            "subtitle": "BLAM",
             "fixedPrice": 33000,
             "speakers": [
               {
                 "id": "spk_1778990517359",
-                "brand": "a/tack",
-                "name": "PFS10A",
-                "image": "/images/Top/speaker.webp",
-                "standalonePrice": "52800",
-                "remarks": ""
+                "brand": "2WAYフロントスピーカー",
+                "name": "100S24 MB",
+                "image": "/images/Audio/Speaker/100 S24 MB.webp",
+                "standalonePrice": "105600",
+                "remarks": "適合車種\nCクラス：W205,S205,C205,A205\nEクラス： W213,S213,C238,A238\nGLCクラス： X253,C253\nSクラス：W222"
+              },
+              {
+                "id": "spk_1780816914494_s09r",
+                "brand": "2WAYフロントスピーカー",
+                "name": "BLAM 100MN S",
+                "image": "/images/Audio/Speaker/MB 100 S.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "46200",
+                "fixedPriceOverride": "",
+                "remarks": "適合車種\nCクラス：W205,S205,C205,A205\nEクラス： W213,S213,C238,A238\nGLCクラス： X253,C253\nSクラス：W222",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1780816983897_uup8",
+                "brand": "ウーハー×2",
+                "name": "MB200WR",
+                "image": "/images/Audio/Speaker/MB 200 W R.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "85800",
+                "fixedPriceOverride": "",
+                "remarks": "適合車種\nCクラス：W205,S205,C205,A205\nEクラス： W213,S213,C238,A238\nGLCクラス：X253,C253",
+                "youtubeUrl": ""
               }
-            ]
+            ],
+            "content": "フランスのメーカー「BLAM」のトレードインスピーカーです。",
+            "hideTitle": true
+          }
+        },
+        {
+          "id": "sec_speakers_1781413778819_vvjs",
+          "type": "speakers",
+          "data": {
+            "title": "",
+            "subtitle": "BEWITH　",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "right",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1781413828400_jqgt",
+                "brand": "ウーハー本体/ペア",
+                "name": "MBZSUB/213R",
+                "image": "/images/Audio/Speaker/MBZSUB-213R.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "88000",
+                "fixedPriceOverride": "33000",
+                "remarks": "適合車種：\n Eクラスセダン（W213）、\nクラスステーションワゴン（S213）、\nクラスクーペ（C238）、Eクラスカブリオレ（A238）\nCクラスセダン（W205）、Cクラスステーションワゴン（S205）、Cクラスクーペ（C205）、Cクラスカブリオレ（A205）\nGLC（X253）、GLCクーペ（C253）",
+                "youtubeUrl": ""
+              }
+            ],
+            "content": "日本のメーカー「BEWITH」のトレードインウーハーです。"
+          }
+        },
+        {
+          "id": "sec_speakers_1781414234716_x9km",
+          "type": "speakers",
+          "data": {
+            "title": "",
+            "subtitle": "MATCH　",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "right",
+            "fixedPrice": "33000",
+            "speakers": [
+              {
+                "id": "spk_1781414282750_7kt6",
+                "brand": "2WAYフロントスピーカー/リアスピーカー",
+                "name": "UP C42MB-FRT",
+                "image": "/images/Audio/Speaker/UP C42MB-FRT.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "39900",
+                "fixedPriceOverride": "",
+                "remarks": "適合車種：\nCクラス（ A205/C205/W205/S205）\nEクラス（ A238/C238/W213/S213）\nGLCクラス（ X253/C253）\nSクラス（ W222）",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1781414812802_or8r",
+                "brand": "コアキシャルフロントスピーカー/リアスピーカー",
+                "name": "UP X4MB-FRT",
+                "image": "/images/Audio/Speaker/UP X4MB-FRT.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "¥35200",
+                "fixedPriceOverride": "27500",
+                "remarks": "適合車種：\nCクラス（ A205/C205/W205/S205）\nEクラス（ A238/C238/W213/S213）\nGLCクラス（ X253/C253）\nSクラス（ W222）",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1781415084592_3hf0",
+                "brand": "センタースピーカー",
+                "name": "UP S4MB-CTR",
+                "image": "/images/Audio/Speaker/UP S4MB-CTR.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "16500",
+                "fixedPriceOverride": "11000",
+                "remarks": "適合車種：\nCクラス（ A205/C205/W205/S205）\nEクラス（ A238/C238/W213/S213）\nGLCクラス（ X253/C253）\nSクラス（ W222）",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1781415248078_7hfa",
+                "brand": "ウーハー/ペア",
+                "name": "UP W8MB-S4 RHD（右ハンドル用）/LHD（左ハンドル）",
+                "image": "/images/Audio/Speaker/UP W8MB-S4.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "84700",
+                "fixedPriceOverride": "",
+                "remarks": "適合車種：\nCクラス（ A205/C205/W205/S205）\nEクラス（ A238/C238/W213/S213）\nGLCクラス（ X253/C253）\nSクラス（ W222）\n\n※年式等により純正サブウーハーが片側のみの車両があります。",
+                "youtubeUrl": ""
+              }
+            ],
+            "content": "ドイツのメーカー「MATCH」のトレードインスピーカーです。"
+          }
+        },
+        {
+          "id": "sec_speakers_1781415567990_mvl5",
+          "type": "speakers",
+          "data": {
+            "title": "",
+            "subtitle": "ETON",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "right",
+            "fixedPrice": "33000",
+            "speakers": [
+              {
+                "id": "spk_1781415609580_edt0",
+                "brand": "2WAYフロントスピーカー/リアスピーカー",
+                "name": "UG MB-100F",
+                "image": "/images/Audio/Speaker/UG MB-100F.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "99000",
+                "fixedPriceOverride": "",
+                "remarks": "適合車種：\nCクラス（W205,S205,C205,A205）\nEクラス（W213,S213,C238,A238）\nGLCクラス（X253,C253）",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1781415975450_hmz2",
+                "brand": "センタースピーカー",
+                "name": "UG MB-100CNX",
+                "image": "/images/Audio/Speaker/UG MB-100CNX.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "¥33000",
+                "fixedPriceOverride": "11000",
+                "remarks": "適合車種：\nCクラス（W205,S205,C205,A205）\nEクラス（W213,S213,C238,A238）\nGLCクラス（X253,C253）",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1781416315976_oa8e",
+                "brand": "ウーハー/ペア",
+                "name": "UG MB-195R(右ハンドル用)/L(左ハンドル用)",
+                "image": "/images/Audio/Speaker/UG MB-195R.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "132000",
+                "fixedPriceOverride": "",
+                "remarks": "適合車種：\nCクラス（W205,S205,C205,A205）\nEクラス（W213,S213,C238,A238）\nGLCクラス（X253,C253）\n\n※年式等により純正サブウーハーが片側のみの車両があります。",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1781416430515_qc78",
+                "brand": "ハイパスフィルター",
+                "name": "UG MB-XHP",
+                "image": "/images/Audio/Speaker/UG MB-XHP.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "16500",
+                "fixedPriceOverride": "0",
+                "remarks": "スピーカーと同時接続の場合工賃サービス",
+                "youtubeUrl": ""
+              }
+            ],
+            "content": "ドイツのメーカー「ETON」のトレードインスピーカーです。"
           }
         }
       ],
@@ -10502,7 +11279,129 @@
         }
       },
       "showInMenu": true,
-      "speakers": [],
+      "speakers": [
+        {
+          "id": "spk_1778989822158",
+          "brand": "（2ウェイフロント＋2ウェイリア＋センターセット）",
+          "name": "MB213KJ5T",
+          "image": "/images/Top/speaker.webp",
+          "standalonePrice": "308000",
+          "remarks": "詳細\n使用ユニット：\nK2Power\n\nセット内容：\nドームトゥイーター×4\n8cmミッドレンジ×4\n8cmセンタースピーカー×1　\n（専用ネットワーク/取り付け用部材付属）",
+          "fixedPriceOverride": "77000"
+        },
+        {
+          "id": "spk_1779956745044_ar67",
+          "brand": "（2ウェイフロント＋リア＋センターセット）",
+          "name": "MB213KJ5",
+          "image": "/images/Top/speaker.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "275000",
+          "fixedPriceOverride": "71500",
+          "remarks": "詳細\n使用ユニット：\nK2Power\n\nセット内容：\nドームトゥイーター×2\n8cmミッドレンジ×4\n8cmセンタースピーカー×1　\n（専用ネットワーク/取り付け用部材付属）",
+          "youtubeUrl": ""
+        },
+        {
+          "id": "spk_1779956756510_6125",
+          "brand": "（2ウェイフロント＋2ウェイリアセット）",
+          "name": "MB213KJ4T",
+          "image": "/images/Top/speaker.webp",
+          "mountingHoleSize": "140mm",
+          "depthSize": "50mm",
+          "hasGrille": "付属",
+          "hasTweeterMount": "付属",
+          "standalonePrice": "264000",
+          "fixedPriceOverride": "",
+          "remarks": "詳細\n使用ユニット：\nK2Power\n\nセット内容：\nドームトゥイーター×4\n8cmミッドレンジ×4\n（専用ネットワーク/取り付け用部材付属）",
+          "youtubeUrl": ""
+        },
+        {
+          "id": "spk_1780467881507_xk4o",
+          "brand": "（2ウェイフロント＋リアセット）",
+          "name": "MB213KJ4",
+          "image": "/images/Top/speaker.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "225500",
+          "fixedPriceOverride": "60500",
+          "remarks": "詳細\n使用ユニット：\nK2Power\n\nセット内容：\nドームトゥイーター×2\n8cmミッドレンジ×4　\n（専用ネットワーク/取り付け用部材付属）",
+          "youtubeUrl": ""
+        },
+        {
+          "id": "spk_1780467882345_442w",
+          "brand": "（2ウェイフロント＋センターセット）",
+          "name": "MB213KJ3",
+          "image": "/images/Top/speaker.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "184800",
+          "fixedPriceOverride": "44000",
+          "remarks": "詳細\n使用ユニット：\nK2Power\n\nセット内容：\nドームトゥイーター×2\n8cmミッドレンジ×2\n8cmセンタースピーカー×1　\n（専用ネットワーク/取り付け用部材付属）",
+          "youtubeUrl": ""
+        },
+        {
+          "id": "spk_1780467883033_41gb",
+          "brand": "（2ウェイフロントセット）",
+          "name": "MB213KJ2",
+          "image": "/images/Top/speaker.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "135300",
+          "fixedPriceOverride": "33000",
+          "remarks": "詳細\n使用ユニット：\nK2Power\n\nセット内容：\nドームトゥイーター×2\n8cmミッドレンジ×2　\n（専用ネットワーク/取り付け用部材付属）",
+          "youtubeUrl": ""
+        },
+        {
+          "id": "spk_1780468780931_y8n9",
+          "brand": "（2ウェイリアセット）",
+          "name": "MB213KJRT",
+          "image": "/images/Top/speaker.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "129800",
+          "fixedPriceOverride": "33000",
+          "remarks": "詳細\n使用ユニット：\nK2Power\n\nセット内容：\nドームトゥイーター×2\n8cmミッドレンジ×2　\n（専用ネットワーク/取り付け用部材付属）",
+          "youtubeUrl": ""
+        },
+        {
+          "id": "spk_1780468930670_7hkd",
+          "brand": "（リアセット）",
+          "name": "MB213KJR",
+          "image": "/images/Top/speaker.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "92400",
+          "fixedPriceOverride": "27500",
+          "remarks": "詳細\n使用ユニット：\nK2Power\n\nセット内容：\n8cmミッドレンジ×2　\n（専用ネットワーク/取り付け用部材付属）",
+          "youtubeUrl": ""
+        },
+        {
+          "id": "spk_1780468931383_ll9v",
+          "brand": "（センター単品）",
+          "name": "MB213KJC",
+          "image": "/images/Top/speaker.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "49500",
+          "fixedPriceOverride": "11000",
+          "remarks": "詳細\n使用ユニット：\nK2Power\n\nセット内容：\n8cmセンタースピーカー×1　\n（取り付け用部材付属）",
+          "youtubeUrl": ""
+        }
+      ],
       "subType": "vehicle"
     },
     {
@@ -11995,7 +12894,7 @@
         "badge": "完全オーダー",
         "mainTitle": "カスタムインストール・ワンオフ製作",
         "subTitle": "完全オーダー",
-        "description": "プランの特徴や魅力を伝える紹介文を入力してください。"
+        "description": "プランの特徴や魅力を伝える紹介文を入力��てください。"
       },
       "pricing": {
         "specialPrice": "ASK",
@@ -12051,6 +12950,420 @@
           "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
         }
       }
+    },
+    {
+      "id": "line_1781417010381",
+      "name": "ダイハツ　ムーヴ・キャンバス専用プラン ",
+      "parentCategoryId": "speaker_package",
+      "showInMenu": false,
+      "isTemplate": false,
+      "header": {
+        "mainTitle": "タント専用プラン",
+        "subTitle": "ベーシックライン",
+        "badge": "スピーカー交換パッケージ",
+        "description": "コストを抑えながら、効果的に音質アップできるタント専用のスピーカー交換プランです。\nダイハツ　タント(LA650S/LA660S) (R1.7～) \nダイハツ　タント(LA600S/LA610S)　(H25.10～R1.7)"
+      },
+      "pricing": {
+        "specialPrice": "81840",
+        "fixedPrice": 41800,
+        "normalPriceText": "117700",
+        "savingsText": "35,860円 お得!",
+        "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。",
+        "taxRate": 10
+      },
+      "sections": [
+        {
+          "id": "sec_banner_1781417010381_0",
+          "type": "banner",
+          "data": {
+            "title": "ムーヴ・キャンバス専用プラン",
+            "subTitle": "",
+            "image": "/images/Audio/vihicle/move_canbus.webp",
+            "height": "400px",
+            "opacity": 0.5,
+            "badge": "スピーカー交換パッケージ",
+            "bgColor": "",
+            "description": "ムーヴ・キャンバスに合わせたスピーカー交換プランです。できるだけコストを抑えつつ、効果的に音質アップができるようにプランニングしています。カーオーディオに興味が湧いたときには、さらにグレードアップすることも可能です。"
+          }
+        },
+        {
+          "id": "sec_package_summary_1781417010381_1",
+          "type": "package_summary",
+          "data": {
+            "title": "このプランに含まれる内容",
+            "items": [
+              {
+                "title": "スピーカー本体　",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "軽防振",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "ムーヴキャンバス用パーフェクトキット ",
+                "desc": "TS-F1640S2は、パーフェクトキットの代わりにメタルバッフル（UD-K629）が付属します。",
+                "value": ""
+              },
+              {
+                "title": "取り付け工賃",
+                "desc": "",
+                "value": ""
+              }
+            ],
+            "subtitle": ""
+          }
+        },
+        {
+          "id": "sec_speakers_1781417010381_3",
+          "type": "speakers",
+          "data": {
+            "title": "フロントスピーカー交換プラン(LA850S/LA860S)",
+            "fixedPrice": 15730,
+            "speakers": [
+              {
+                "id": "spk_1779057904498",
+                "brand": "carrozzeria 　",
+                "name": "TS-C1640S",
+                "image": "/images/Audio/Speaker/TS-C1640S.webp",
+                "standalonePrice": "61050",
+                "remarks": "フロントスピーカーをカロッツェリアの製品に交換し、再生能力をアップします。上位モデルの技術を受け継いだ高解像度サウンドが楽しめます。純正ツィーターがドアミラー裏にある場合は純正位置に設置し、ない場合はダッシュボード上への設置となります。",
+                "fixedPriceOverride": "0"
+              },
+              {
+                "id": "spk_1781418680079_9m5l",
+                "brand": "KICKER ",
+                "name": "CSS674",
+                "image": "/images/Audio/Speaker/CSS674.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "40700",
+                "fixedPriceOverride": "19250",
+                "remarks": "フロントスピーカーをアメリカのブランド「KICKER」の製品に交換し、再生能力をアップします。キャンバス専用の取付キットを使用するため、無加工での取り付けが可能です。純正ツィーターがドアミラー裏にある場合は純正位置に設置し、ない場合はダッシュボード上への設置となります。",
+                "youtubeUrl": ""
+              }
+            ],
+            "subtitle": "フロントスピーカー交換プラン(LA850S/LA860S)",
+            "hideSubtitle": false,
+            "hideTitle": true,
+            "subtitleAlign": "center",
+            "content": ""
+          }
+        },
+        {
+          "id": "sec_speakers_1781419090502_u12i",
+          "type": "speakers",
+          "data": {
+            "title": "フロントスピーカー交換プラン(LA800S/LA810S)",
+            "subtitle": "フロントスピーカー交換プラン(LA800S/LA810S)",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1781419172931_mj8u",
+                "brand": "carrozzeria ",
+                "name": "TS-F1640S2",
+                "image": "/images/Audio/Speaker/TS-F1640SII.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "16500",
+                "fixedPriceOverride": "23100",
+                "remarks": "フロントスピーカーをカロッツェリアの製品に交換し、再生能力をアップします。取り付けにはカロッツェリア製の高音質メタルバッフルを使用し、強固なバッフルでスピーカーをしっかりと固定します。純正ツィーターがドアミラー裏にある場合は純正位置に設置し、ない場合はダッシュボード上への設置となります。",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1781419703089_yhwl",
+                "brand": "KICKER",
+                "name": "CSS674",
+                "image": "/images/Audio/Speaker/CSS674.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "40700",
+                "fixedPriceOverride": "19250",
+                "remarks": "フロントスピーカーをアメリカのブランド「KICKER」の製品に交換し、再生能力をアップします。キャンバス専用の取付キットを使用するため、無加工での取り付けが可能です。純正ツィーターがドアミラー裏にある場合は純正位置に設置し、ない場合はダッシュボード上への設置となります。",
+                "youtubeUrl": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec_floating_cta_1781417010381_2",
+          "type": "floating_cta",
+          "data": {}
+        },
+        {
+          "id": "sec_notes_1781417010381_4",
+          "type": "notes",
+          "data": {
+            "title": "施工に関する注意事項",
+            "items": [
+              "作業は<strong>半日ー1日お車をお預かり</strong>します（無料代車をご用意可能です）。"
+            ]
+          }
+        }
+      ],
+      "status": "published",
+      "slug": "car-category-canbus",
+      "features": {
+        "doorTuning": {
+          "image": "/images/Audio/Speaker/door-b.webp"
+        },
+        "baffle": {
+          "image": "/images/Audio/Speaker/baffle.webp"
+        },
+        "cable": {
+          "image": "/images/Audio/Speaker/ang-cable.webp"
+        }
+      },
+      "upgrades": {
+        "options": {
+          "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
+          "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
+        }
+      },
+      "speakers": [
+        {
+          "id": "spk_1779057904498",
+          "brand": "carrozzeria 　",
+          "name": "TS-C1640S",
+          "image": "/images/Audio/Speaker/TS-C1640S.webp",
+          "standalonePrice": "61050",
+          "remarks": "フロントスピーカーをカロッツェリアの製品に交換し、再生能力をアップします。上位モデルの技術を受け継いだ高解像度サウンドが楽しめます。純正ツィーターがドアミラー裏にある場合は純正位置に設置し、ない場合はダッシュボード上への設置となります。",
+          "fixedPriceOverride": "0"
+        },
+        {
+          "id": "spk_1781418680079_9m5l",
+          "brand": "KICKER ",
+          "name": "CSS674",
+          "image": "/images/Audio/Speaker/CSS674.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "40700",
+          "fixedPriceOverride": "19250",
+          "remarks": "フロントスピーカーをアメリカのブランド「KICKER」の製品に交換し、再生能力をアップします。キャンバス専用の取付キットを使用するため、無加工での取り付けが可能です。純正ツィーターがドアミラー裏にある場合は純正位置に設置し、ない場合はダッシュボード上への設置となります。",
+          "youtubeUrl": ""
+        }
+      ],
+      "subType": "standalone"
+    },
+    {
+      "id": "line_1781420327999",
+      "name": "ダイハツ　ウェイク専用プラン  ",
+      "parentCategoryId": "speaker_package",
+      "showInMenu": false,
+      "isTemplate": false,
+      "header": {
+        "mainTitle": "タント専用プラン",
+        "subTitle": "ベーシックライン",
+        "badge": "スピーカー交換パッケージ",
+        "description": "コストを抑えながら、効果的に音質アップできるタント専用のスピーカー交換プランです。\nダイハツ　タント(LA650S/LA660S) (R1.7～) \nダイハツ　タント(LA600S/LA610S)　(H25.10～R1.7)"
+      },
+      "pricing": {
+        "specialPrice": "81840",
+        "fixedPrice": 41800,
+        "normalPriceText": "117700",
+        "savingsText": "35,860円 お得!",
+        "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。",
+        "taxRate": 10
+      },
+      "sections": [
+        {
+          "id": "sec_banner_1781420327999_0",
+          "type": "banner",
+          "data": {
+            "title": "ウェイク専用プラン",
+            "subTitle": "",
+            "image": "/images/Audio/vihicle/wake.webp",
+            "height": "400px",
+            "opacity": 0.5,
+            "badge": "スピーカー交換パッケージ",
+            "bgColor": "",
+            "description": "ダイハツ ウェイクに合わせたスピーカー交換プランです。当店で人気の「スタンダードライン」とは違うアプローチで、できるだけコストを抑えつつ、効果的に音質アップができるようにプランニングしています。"
+          }
+        },
+        {
+          "id": "sec_package_summary_1781420327999_1",
+          "type": "package_summary",
+          "data": {
+            "title": "このプランに含まれる内容",
+            "items": [
+              {
+                "title": "スピーカー本体　",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "軽防振",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "ムーヴキャンバス用パーフェクトキット ",
+                "desc": "TS-F1640S2は、パーフェクトキットの代わりにメタルバッフル（UD-K629）が付属します。",
+                "value": ""
+              },
+              {
+                "title": "取り付け工賃",
+                "desc": "",
+                "value": ""
+              }
+            ],
+            "subtitle": ""
+          }
+        },
+        {
+          "id": "sec_speakers_1781420327999_2",
+          "type": "speakers",
+          "data": {
+            "title": "フロントスピーカー交換プラン(LA850S/LA860S)",
+            "fixedPrice": 15730,
+            "speakers": [
+              {
+                "id": "spk_1779057904498",
+                "brand": "carrozzeria 　",
+                "name": "TS-C1640S",
+                "image": "/images/Audio/Speaker/TS-C1640S.webp",
+                "standalonePrice": "61050",
+                "remarks": "フロントスピーカーをカロッツェリアの製品に交換し、再生能力をアップします。上位モデルの技術を受け継いだ高解像度サウンドが楽しめます。純正ツィーターがドアミラー裏にある場合は純正位置に設置し、ない場合はダッシュボード上への設置となります。",
+                "fixedPriceOverride": "0"
+              },
+              {
+                "id": "spk_1781418680079_9m5l",
+                "brand": "KICKER ",
+                "name": "CSS674",
+                "image": "/images/Audio/Speaker/CSS674.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "40700",
+                "fixedPriceOverride": "19250",
+                "remarks": "フロントスピーカーをアメリカのブランド「KICKER」の製品に交換し、再生能力をアップします。キャンバス専用の取付キットを使用するため、無加工での取り付けが可能です。純正ツィーターがドアミラー裏にある場合は純正位置に設置し、ない場合はダッシュボード上への設置となります。",
+                "youtubeUrl": ""
+              }
+            ],
+            "subtitle": "フロントスピーカー交換プラン(LA850S/LA860S)",
+            "hideSubtitle": false,
+            "hideTitle": true,
+            "subtitleAlign": "center",
+            "content": ""
+          }
+        },
+        {
+          "id": "sec_speakers_1781420327999_3",
+          "type": "speakers",
+          "data": {
+            "title": "フロントスピーカー交換プラン(LA800S/LA810S)",
+            "subtitle": "フロントスピーカー交換プラン(LA800S/LA810S)",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1781419172931_mj8u",
+                "brand": "carrozzeria ",
+                "name": "TS-F1640S2",
+                "image": "/images/Audio/Speaker/TS-F1640SII.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "16500",
+                "fixedPriceOverride": "23100",
+                "remarks": "フロントスピーカーをカロッツェリアの製品に交換し、再生能力をアップします。取り付けにはカロッツェリア製の高音質メタルバッフルを使用し、強固なバッフルでスピーカーをしっかりと固定します。純正ツィーターがドアミラー裏にある場合は純正位置に設置し、ない場合はダッシュボード上への設置となります。",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1781419703089_yhwl",
+                "brand": "KICKER",
+                "name": "CSS674",
+                "image": "/images/Audio/Speaker/CSS674.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "40700",
+                "fixedPriceOverride": "19250",
+                "remarks": "フロントスピーカーをアメリカのブランド「KICKER」の製品に交換し、再生能力をアップします。キャンバス専用の取付キットを使用するため、無加工での取り付けが可能です。純正ツィーターがドアミラー裏にある場合は純正位置に設置し、ない場合はダッシュボード上への設置となります。",
+                "youtubeUrl": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec_floating_cta_1781420327999_4",
+          "type": "floating_cta",
+          "data": {}
+        },
+        {
+          "id": "sec_notes_1781420327999_5",
+          "type": "notes",
+          "data": {
+            "title": "施工に関する注意事項",
+            "items": [
+              "作業は<strong>半日ー1日お車をお預かり</strong>します（無料代車をご用意可能です）。"
+            ]
+          }
+        }
+      ],
+      "status": "published",
+      "slug": "car-category-wake",
+      "features": {
+        "doorTuning": {
+          "image": "/images/Audio/Speaker/door-b.webp"
+        },
+        "baffle": {
+          "image": "/images/Audio/Speaker/baffle.webp"
+        },
+        "cable": {
+          "image": "/images/Audio/Speaker/ang-cable.webp"
+        }
+      },
+      "upgrades": {
+        "options": {
+          "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
+          "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
+        }
+      },
+      "speakers": [
+        {
+          "id": "spk_1779057904498",
+          "brand": "carrozzeria 　",
+          "name": "TS-C1640S",
+          "image": "/images/Audio/Speaker/TS-C1640S.webp",
+          "standalonePrice": "61050",
+          "remarks": "フロントスピーカーをカロッツェリアの製品に交換し、再生能力をアップします。上位モデルの技術を受け継いだ高解像度サウンドが楽しめます。純正ツィーターがドアミラー裏にある場合は純正位置に設置し、ない場合はダッシュボード上への設置となります。",
+          "fixedPriceOverride": "0"
+        },
+        {
+          "id": "spk_1781418680079_9m5l",
+          "brand": "KICKER ",
+          "name": "CSS674",
+          "image": "/images/Audio/Speaker/CSS674.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "40700",
+          "fixedPriceOverride": "19250",
+          "remarks": "フロントスピーカーをアメリカのブランド「KICKER」の製品に交換し、再生能力をアップします。キャンバス専用の取付キットを使用するため、無加工での取り付けが可能です。純正ツィーターがドアミラー裏にある場合は純正位置に設置し、ない場合はダッシュボード上への設置となります。",
+          "youtubeUrl": ""
+        }
+      ],
+      "subType": "standalone"
     }
   ],
   "audioLPTemplates": [
