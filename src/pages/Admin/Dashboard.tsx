@@ -2141,6 +2141,17 @@ const AudioPlanManager = () => {
                                 </select>
                             </div>
                             <div className="flex items-center gap-2">
+                                <span className="text-[10px] font-bold text-zinc-400">サブタイトルサイズ:</span>
+                                <input 
+                                    type="number"
+                                    value={section.data.subtitleFontSize || ''}
+                                    onChange={e => updateSectionData(sIdx, { subtitleFontSize: e.target.value ? parseInt(e.target.value) : '' })}
+                                    className="w-16 bg-black border border-zinc-800 rounded px-2 py-1 text-white text-[10px] font-bold outline-none"
+                                    placeholder="15"
+                                />
+                                <span className="text-[9px] text-zinc-600">px</span>
+                            </div>
+                            <div className="flex items-center gap-2">
                                 <span className="text-[10px] font-bold text-zinc-400">表示レイアウト:</span>
                                 <select 
                                     value={section.data.displayMode || 'standard'}

@@ -364,7 +364,11 @@ export const StandardLinePage: React.FC = () => {
                           }
                           
                           return (
-                            <p className={`text-gray-500 font-black tracking-widest uppercase text-[15px] whitespace-pre-line ${alignClasses}`} dangerouslySetInnerHTML={{ __html: sectionSubtitle.includes('\n') || sectionSubtitle.includes('<br') ? sectionSubtitle.replace(/\n/g, '<br />') : sectionSubtitle }} />
+                             <p 
+                               className={`text-gray-500 font-black tracking-widest uppercase text-[15px] whitespace-pre-line ${alignClasses}`} 
+                               style={section.data?.subtitleFontSize ? { fontSize: `${section.data.subtitleFontSize}px` } : {}}
+                               dangerouslySetInnerHTML={{ __html: sectionSubtitle.includes('\n') || sectionSubtitle.includes('<br') ? sectionSubtitle.replace(/\n/g, '<br />') : sectionSubtitle }} 
+                             />
                           );
                         })()}
                       </div>
