@@ -2080,11 +2080,11 @@ const AudioPlanManager = () => {
                             </div>
                             <div className="space-y-1.5">
                                 <label className="block text-[10px] font-bold text-zinc-400">セクションサブタイトル</label>
-                                <input 
-                                    type="text"
+                                <textarea 
                                     value={section.data.subtitle || ''}
                                     onChange={e => updateSectionData(sIdx, { subtitle: e.target.value })}
-                                    className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-white text-xs font-bold"
+                                    rows={2}
+                                    className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-white text-xs font-bold focus:border-blue-500 outline-none"
                                 />
                             </div>
                             <div className="space-y-1.5">
