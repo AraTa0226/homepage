@@ -2412,6 +2412,68 @@ const AudioPlanManager = () => {
                                                 />
                                             </div>
 
+                                            {/* Custom Prices List */}
+                                            <div className="space-y-3 pt-3 border-t border-zinc-800/40">
+                                                <div className="flex justify-between items-center">
+                                                    <span className="text-[9px] font-bold text-zinc-500">複数価格設定 (設定すると通常の合計金額の代わりに表示されます)</span>
+                                                    <button 
+                                                        type="button"
+                                                        onClick={() => {
+                                                            const next = [...speakersList];
+                                                            const prices = spk.prices ? [...spk.prices] : [];
+                                                            prices.push({ label: '', price: '' });
+                                                            next[idx] = { ...spk, prices };
+                                                            updateSectionData(sIdx, { speakers: next });
+                                                        }}
+                                                        className="px-2 py-0.5 bg-zinc-900 border border-zinc-800 text-white rounded text-[8px] font-bold hover:bg-zinc-800 transition-colors"
+                                                    >
+                                                        価格を追加
+                                                    </button>
+                                                </div>
+                                                {(spk.prices || []).map((pItem: any, pIdx: number) => (
+                                                    <div key={pIdx} className="flex gap-2 items-center">
+                                                        <input 
+                                                            type="text"
+                                                            value={pItem.label || ''}
+                                                            onChange={e => {
+                                                                const next = [...speakersList];
+                                                                const prices = [...spk.prices];
+                                                                prices[pIdx] = { ...pItem, label: e.target.value };
+                                                                next[idx] = { ...spk, prices };
+                                                                updateSectionData(sIdx, { speakers: next });
+                                                            }}
+                                                            placeholder="例: アルファード・ヴェルファイア(Z)"
+                                                            className="flex-1 bg-zinc-900 border border-zinc-800 rounded px-2.5 py-1.5 text-white text-[10px] font-bold focus:border-blue-500 outline-none"
+                                                        />
+                                                        <input 
+                                                            type="text"
+                                                            value={pItem.price || ''}
+                                                            onChange={e => {
+                                                                const next = [...speakersList];
+                                                                const prices = [...spk.prices];
+                                                                prices[pIdx] = { ...pItem, price: e.target.value };
+                                                                next[idx] = { ...spk, prices };
+                                                                updateSectionData(sIdx, { speakers: next });
+                                                            }}
+                                                            placeholder="価格 (例: 99550)"
+                                                            className="w-28 bg-zinc-900 border border-zinc-800 rounded px-2.5 py-1.5 text-white text-[10px] font-bold text-right focus:border-blue-500 outline-none"
+                                                        />
+                                                        <button 
+                                                            type="button"
+                                                            onClick={() => {
+                                                                const next = [...speakersList];
+                                                                const prices = spk.prices.filter((_: any, i: number) => i !== pIdx);
+                                                                next[idx] = { ...spk, prices };
+                                                                updateSectionData(sIdx, { speakers: next });
+                                                            }}
+                                                            className="p-1 text-zinc-600 hover:text-red-400"
+                                                        >
+                                                            <Trash2 className="w-3.5 h-3.5" />
+                                                        </button>
+                                                    </div>
+                                                ))}
+                                            </div>
+
                                             {/* Price calculations indicators */}
                                             <div className="bg-black/30 border border-zinc-900 rounded-xl p-3 flex flex-wrap items-center justify-between gap-4 text-xs font-bold text-zinc-400">
                                                 <div>施工料金ベース: <span className="text-white">¥{((spk.fixedPriceOverride !== undefined && spk.fixedPriceOverride !== '') ? parsePrice(spk.fixedPriceOverride) : sectionFixedPrice).toLocaleString()}</span></div>

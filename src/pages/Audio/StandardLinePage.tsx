@@ -468,19 +468,43 @@ export const StandardLinePage: React.FC = () => {
                             {spk.remarks && <p className="text-gray-500 text-[15px] font-bold mb-8 flex-grow leading-relaxed" dangerouslySetInnerHTML={{ __html: '● ' + spk.remarks.replace(/\n/g, '<br />') }} />}
                             
                             <div className="pt-6 border-t border-gray-100">
-                              <div className="flex justify-between items-end">
-                                <div>
-                                  <div className="text-sm font-black text-gray-400 tracking-widest uppercase mb-1">パッケージ合計 (税込)</div>
-                                  <div className="flex items-baseline gap-2">
-                                    <div className="text-3xl font-black text-blue-600 tracking-tighter">¥{calculateAppliedPriceForSection(spk).toLocaleString()}</div>
-                                    <div className="text-[12px] font-black text-gray-400 uppercase italic">incl. tax</div>
+                              {spk.prices && spk.prices.length > 0 ? (
+                                <div className="space-y-4">
+                                  {spk.prices.map((pItem: any, pIdx: number) => {
+                                    const priceVal = parsePrice(pItem.price);
+                                    const taxExcluded = Math.round(priceVal / (1 + (data.pricing?.taxRate || 10) / 100));
+                                    return (
+                                      <div key={pIdx} className="border-b border-gray-100 last:border-0 pb-3 last:pb-0">
+                                        <div className="text-[11px] font-black text-gray-400 uppercase tracking-widest mb-1">{pItem.label || 'パッケージ合計 (税込)'}</div>
+                                        <div className="flex justify-between items-end">
+                                          <div className="flex items-baseline gap-2">
+                                            <div className="text-2xl font-black text-blue-600 tracking-tighter">¥{priceVal.toLocaleString()}</div>
+                                            <div className="text-[10px] text-gray-400 uppercase italic">incl. tax</div>
+                                          </div>
+                                          <div className="text-right">
+                                            <span className="text-[10px] text-gray-400 uppercase tracking-tighter mr-1">(税別)</span>
+                                            <span className="text-sm font-black text-gray-600 italic">¥{taxExcluded.toLocaleString()}</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    );
+                                  })}
+                                </div>
+                              ) : (
+                                <div className="flex justify-between items-end">
+                                  <div>
+                                    <div className="text-sm font-black text-gray-400 tracking-widest uppercase mb-1">パッケージ合計 (税込)</div>
+                                    <div className="flex items-baseline gap-2">
+                                      <div className="text-3xl font-black text-blue-600 tracking-tighter">¥{calculateAppliedPriceForSection(spk).toLocaleString()}</div>
+                                      <div className="text-[12px] font-black text-gray-400 uppercase italic">incl. tax</div>
+                                    </div>
+                                  </div>
+                                  <div className="text-right pb-1">
+                                    <div className="text-[12px] font-black text-gray-400 uppercase tracking-tighter">(税別)</div>
+                                    <div className="text-[15px] font-black text-gray-600 italic">¥{Math.round(calculateAppliedPriceForSection(spk) / (1 + (data.pricing.taxRate || 10) / 100)).toLocaleString()}</div>
                                   </div>
                                 </div>
-                                <div className="text-right pb-1">
-                                  <div className="text-[12px] font-black text-gray-400 uppercase tracking-tighter">(税別)</div>
-                                  <div className="text-[15px] font-black text-gray-600 italic">¥{Math.round(calculateAppliedPriceForSection(spk) / (1 + (data.pricing.taxRate || 10) / 100)).toLocaleString()}</div>
-                                </div>
-                              </div>
+                              )}
                             </div>
                           </div>
                         </div>
