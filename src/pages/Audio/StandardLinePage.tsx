@@ -124,8 +124,18 @@ export const StandardLinePage: React.FC = () => {
           </div>
 
           {console.log('Rendering sections:', data.sections)}
-          {data.sections.map((section, idx) => {
-            switch(section.type) {
+          <div className="grid grid-cols-6 w-full items-stretch">
+            {data.sections.map((section, idx) => {
+              const sectionWidth = section.data?.sectionWidth || 'full';
+              let widthClass = "col-span-6";
+              if (sectionWidth === 'half') {
+                widthClass = "col-span-6 lg:col-span-3";
+              } else if (sectionWidth === 'third') {
+                widthClass = "col-span-6 lg:col-span-2";
+              }
+
+              const renderSectionContent = () => {
+                switch(section.type) {
               case 'hero':
                 return (
                   <div 
@@ -340,14 +350,20 @@ export const StandardLinePage: React.FC = () => {
 
                 const totalSpeakers = speakersList.length;
                 let gridContainerClass = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10";
-                if (totalSpeakers === 1) {
+                if (sectionWidth !== 'full') {
+                  gridContainerClass = "grid grid-cols-1 gap-6 w-full";
+                } else if (totalSpeakers === 1) {
                   gridContainerClass = "max-w-md mx-auto";
                 } else if (totalSpeakers === 2) {
                   gridContainerClass = "grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto";
                 }
 
+                const wrapperPadding = sectionWidth === 'full'
+                  ? "max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-24 w-full"
+                  : "px-4 md:px-6 lg:px-8 py-16 w-full h-full flex flex-col justify-between bg-white border border-gray-100 rounded-[2.5rem] shadow-sm";
+
                 return (
-                  <div key={section.id} className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-24">
+                  <div key={section.id} className={wrapperPadding}>
                     {(!section.data?.hideTitle || !section.data?.hideSubtitle) && (
                       <div className="flex flex-col md:flex-row items-baseline justify-between gap-4 mb-16 border-b-4 border-gray-900 pb-8">
                         {!section.data?.hideTitle && (
@@ -773,8 +789,19 @@ export const StandardLinePage: React.FC = () => {
               default:
                 return null;
             }
-          })}
-        </>
+          };
+
+          const content = renderSectionContent();
+          if (!content) return null;
+
+          return (
+            <div key={section.id || idx} className={`${widthClass} flex flex-col`}>
+              {content}
+            </div>
+          );
+        })}
+      </div>
+    </>
       ) : (
         <>
           {/* --- ヘッダー領域 (Legacy) --- */}

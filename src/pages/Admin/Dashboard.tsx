@@ -2164,6 +2164,18 @@ const AudioPlanManager = () => {
                                     <option value="text_only">テキストのみ (画像・スペック非表示)</option>
                                 </select>
                             </div>
+                            <div className="flex items-center gap-2">
+                                <span className="text-[10px] font-bold text-zinc-400">セクション幅:</span>
+                                <select 
+                                    value={section.data.sectionWidth || 'full'}
+                                    onChange={e => updateSectionData(sIdx, { sectionWidth: e.target.value })}
+                                    className="bg-black border border-zinc-800 rounded px-2 py-1 text-white text-[10px] font-bold outline-none"
+                                >
+                                    <option value="full">全幅 (100%)</option>
+                                    <option value="half">1/2幅 (50%)</option>
+                                    <option value="third">1/3幅 (33%)</option>
+                                </select>
+                            </div>
                         </div>
 
                         {/* Package Summary Toggle & Config */}
