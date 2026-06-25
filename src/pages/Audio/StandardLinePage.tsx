@@ -375,7 +375,7 @@ export const StandardLinePage: React.FC = () => {
 
                 return (
                   <div key={section.id} className={wrapperPadding}>
-                    <div className="flex-grow flex flex-col justify-start w-full">
+                    <div className={(sectionWidth === 'full' ? 'flex-grow' : '') + " flex flex-col justify-start w-full"}>
                       {(!section.data?.hideTitle || !section.data?.hideSubtitle) && (
                         <div className="flex flex-col md:flex-row items-baseline justify-between gap-4 mb-16 border-b-4 border-gray-900 pb-8 min-h-[90px] md:min-h-[120px] lg:min-h-[140px]">
                           {!section.data?.hideTitle && (
@@ -394,7 +394,7 @@ export const StandardLinePage: React.FC = () => {
                             return (
                                <p 
                                  className={`text-gray-500 font-black tracking-widest uppercase text-[15px] whitespace-pre-line ${alignClasses}`} 
-                                 style={section.data?.subtitleFontSize ? { fontSize: `${section.data.subtitleFontSize}px` } : {}}
+                                 style={section.data?.subtitleFontSize ? { fontSize: `${sectionWidth !== 'full' ? Math.min(section.data.subtitleFontSize, 16) : section.data.subtitleFontSize}px` } : {}}
                                  dangerouslySetInnerHTML={{ __html: sectionSubtitle.includes('\n') || sectionSubtitle.includes('<br') ? sectionSubtitle.replace(/\n/g, '<br />') : sectionSubtitle }} 
                                />
                             );
@@ -452,15 +452,17 @@ export const StandardLinePage: React.FC = () => {
                         </div>
                       )}
                     </div>
-                    <div className={gridContainerClass}>
+                    <div className={gridContainerClass + (sectionWidth !== 'full' ? " flex-grow flex flex-col" : "")}>
                       {speakersList.map((spk: any, i: number) => {
+                        const rawBrand = (spk.brand || '').trim();
+                        const displayBrand = rawBrand === 'ICKER' ? 'KICKER' : rawBrand;
                         return (
                           <div key={i} className="group flex flex-col h-full bg-white border border-zinc-200/80 rounded-[2.5rem] overflow-hidden shadow-[0_15px_45px_-20px_rgba(0,0,0,0.06)] hover:shadow-[0_30px_60px_-15px_rgba(59,130,246,0.1),0_15px_30px_-10px_rgba(0,0,0,0.04)] hover:border-blue-500/30 hover:-translate-y-2 transition-all duration-500 ease-out">
                             {displayMode !== 'no_image' && displayMode !== 'text_only' && (
                               <div className="aspect-square relative overflow-hidden bg-zinc-50/50 flex items-center justify-center p-12 group-hover:bg-zinc-100/50 border-b border-zinc-100 transition-colors duration-500">
-                                <img src={spk.image} alt={`${spk.brand} ${spk.name}`} className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 drop-shadow-xl" />
+                                <img src={spk.image} alt={`${displayBrand} ${spk.name}`} className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 drop-shadow-xl" />
                                 <div className="absolute top-6 left-6">
-                                  <div className="bg-black/80 backdrop-blur-md text-white text-[12px] font-black px-4 py-2 rounded-full tracking-widest uppercase border border-white/20">{spk.brand}</div>
+                                  <div className="bg-black/80 backdrop-blur-md text-white text-[12px] font-black px-4 py-2 rounded-full tracking-widest uppercase border border-white/20">{displayBrand}</div>
                                 </div>
                                 {spk.youtubeUrl && (
                                   <a 
@@ -477,8 +479,8 @@ export const StandardLinePage: React.FC = () => {
                               </div>
                             )}
                             <div className="p-8 flex flex-col flex-grow justify-between">
-                            {(displayMode === 'no_image' || displayMode === 'text_only') && spk.brand && (
-                              <div className="text-xs font-bold text-blue-600 tracking-wider uppercase mb-1">{spk.brand}</div>
+                            {(displayMode === 'no_image' || displayMode === 'text_only') && displayBrand && (
+                              <div className="text-xs font-bold text-blue-600 tracking-wider uppercase mb-1">{displayBrand}</div>
                             )}
                             <h3 className="text-2xl font-black text-gray-900 mb-2 leading-tight">{spk.name}</h3>
                             
