@@ -334,6 +334,7 @@ export const StandardLinePage: React.FC = () => {
                   </div>
                 );
               case 'speakers': {
+                const sectionWidth = section.data?.sectionWidth || 'full';
                 const speakersList = section.data?.speakers && section.data.speakers.length > 0
                   ? section.data.speakers
                   : (data.speakers || []);
