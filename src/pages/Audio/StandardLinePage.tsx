@@ -377,7 +377,7 @@ export const StandardLinePage: React.FC = () => {
                   <div key={section.id} className={wrapperPadding}>
                     <div className="flex-grow flex flex-col justify-start w-full">
                       {(!section.data?.hideTitle || !section.data?.hideSubtitle) && (
-                        <div className="flex flex-col md:flex-row items-baseline justify-between gap-4 mb-16 border-b-4 border-gray-900 pb-8">
+                        <div className="flex flex-col md:flex-row items-baseline justify-between gap-4 mb-16 border-b-4 border-gray-900 pb-8 min-h-[90px] md:min-h-[120px] lg:min-h-[140px]">
                           {!section.data?.hideTitle && (
                             <h2 className="text-5xl md:text-7xl font-black text-gray-900 italic tracking-tighter uppercase leading-none" dangerouslySetInnerHTML={{ __html: sectionTitle.includes('<br') || sectionTitle.includes('\n') ? sectionTitle.replace(/\n/g, '<br />') : sectionTitle }} />
                           )}
