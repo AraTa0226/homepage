@@ -2339,7 +2339,7 @@
           "name": "Grgo ZVT II ＋ スマキー連動/スマクロ",
           "price": "299,600",
           "badge": "おすすめ",
-          "description": "傾斜センサー含むフルセンサー構成にスマートキー連動をプラスし�������������������������������������������������������������������������������������������������������������������������������������������������������利便性を高めた一台。",
+          "description": "傾斜センサー含むフルセンサー構成にスマートキー連動をプラスし�����������������������������������������������������������������������������������������������������������������������������������������������������������利便性を高めた一台。",
           "triple": true,
           "tilt": true,
           "bonnet": true,
@@ -9052,7 +9052,7 @@
           "name": "X-171S",
           "image": "/images/Audio/Speaker/X-171S.webp",
           "standalonePrice": "40700",
-          "remarks": "パッシブあり ���ンライン",
+          "remarks": "パッシブあり インライン",
           "mountingHoleSize": "137",
           "depthSize": "51",
           "hasGrille": "なし",
@@ -10179,7 +10179,7 @@
               }
             ],
             "title": "スピーカー交換例",
-            "description": "BMWの純正シ�������������������はフロントに10cm程度のスぴーかー、ツィーターなし、シート下のウーハーで低音を補うという構成がほとんどです。 加工を抑えてコストを抑えた改善方法として、まずはフロントスピーカーの交換とツィーターの追加。さらに適合車種であればウーハーも交換することで、ハリのあるサウンドに生まれ変わります。このパッケージではトレードインで交換可能なスピーカーをご紹介しています。",
+            "description": "BMWの純正シ���������������������はフロントに10cm程度のスぴーかー、ツィーターなし、シート下のウーハーで低音を補うという構成がほとんどです。 加工を抑えてコストを抑えた改善方法として、まずはフロントスピーカーの交換とツィーターの追加。さらに適合車種であればウーハーも交換することで、ハリのあるサウンドに生まれ変わります。このパッケージではトレードインで交換可能なスピーカーをご紹介しています。",
             "doorTuning": {
               "title": "ツイーター",
               "desc": "純正ツィーター非装着車の場合、別途純正部品が必要になる場合があります。",
@@ -13470,7 +13470,7 @@
       "isTemplate": false,
       "header": {
         "mainTitle": "タント専用プラン",
-        "subTitle": "ベーシックラ���ン",
+        "subTitle": "ベーシックライン",
         "badge": "スピーカー交換パッケージ",
         "description": "コストを抑えながら、効果的に音質アップできるタント専用のスピーカー交換プランです。\nダイハツ　タント(LA650S/LA660S) (R1.7～) \nダイハツ　タント(LA600S/LA610S)　(H25.10～R1.7)"
       },
@@ -14777,7 +14777,7 @@
     },
     {
       "id": "line_1782367668473",
-      "name": "トヨタ　ランドクルーザー300 (コピー)",
+      "name": "トヨタ　ランドクルーザープラド",
       "parentCategoryId": "speaker_package",
       "showInMenu": false,
       "isTemplate": false,
@@ -14800,14 +14800,14 @@
           "id": "sec_banner_1782367668473_0",
           "type": "banner",
           "data": {
-            "title": "ランドクルーザー300専用プラン",
+            "title": "ランドクルーザープラド(150)専用プラン",
             "subTitle": "",
-            "image": "/images/Audio/vihicle/300.webp",
+            "image": "/images/Audio/vihicle/prado.webp",
             "height": "400px",
             "opacity": 0.5,
             "badge": "スピーカー交換パッケージ",
             "bgColor": "",
-            "description": "トヨタ　ランドクルーザー300に合わせたスピーカー交換プランです。できるだけコストを抑えつつ、効果的に音質アップができるようにプランニングしています。カーオーディオに興味が湧いたときには、さらにグレードアップすることも可能です。"
+            "description": "トヨタ　ランドクルーザープラド(150)に合わせたスピーカー交換プランです。できるだけコストを抑えつつ、効果的に音質アップができるようにプランニングしています。カーオーディオに興味が湧いたときには、さらにグレードアップすることも可能です。"
           }
         },
         {
@@ -14820,26 +14820,50 @@
               {
                 "id": "spk_1781768522973_r8l5",
                 "brand": "KICKER",
-                "name": "KST2004+KSS269+KSC2704",
+                "name": "KSS369+KSC3504",
                 "image": "/images/Audio/Speaker/KST2004+KSS269+KSC2704.webp",
                 "mountingHoleSize": "",
                 "depthSize": "",
                 "hasGrille": "",
                 "hasTweeterMount": "",
-                "standalonePrice": "116820",
+                "standalonePrice": "104995",
                 "fixedPriceOverride": "31900",
-                "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。ランドクルーザー300の純正スピーカーは6x9インチサイズのオーバルスピーカーですのでそのメリットを活かすべくオーバルスピーカーをチョイスしています。取り付けにはランドクルーザー300専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。Aピラーツィーター、ダッシュボード両サイド、ドアスピーカーの交換となります。",
-                "youtubeUrl": ""
+                "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。ランドクルーザープラドの純正スピーカーは6×9インチサイズのオーバルスピーカーですので、そのメリットを活かしてオーバルスピーカーをチョイスしています。取り付けにはランドクルーザープラド（150系）専用に設計されたパーツを使用するため、ローコストながら効果の高いオーディオグレードアップが実現します。Aピラーのツィーターとダッシュボードスピーカーおよびドアスピーカーを交換します。",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカー本体",
+                    "desc": "",
+                    "value": "104995"
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "ランドクルーザープラド(150)専用取り付けキット",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取り付け工賃",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
               }
             ],
-            "subtitle": "フロントスピーカー交換プラン\nランドクルーザー300(JBLプレミアムサウンド装着車)",
+            "subtitle": "フロントスピーカー交換プラン\n(スーパーライブサウンド装着車)",
             "hideSubtitle": false,
             "hideTitle": true,
             "subtitleAlign": "center",
             "content": "",
             "subtitleFontSize": 20,
             "displayMode": "standard",
-            "sectionImage": ""
+            "sectionImage": "",
+            "sectionWidth": "half"
           }
         },
         {
@@ -14847,7 +14871,7 @@
           "type": "speakers",
           "data": {
             "title": "",
-            "subtitle": "フロントスピーカー交換プラン\nランドクルーザー300(6スピーカー装着車)",
+            "subtitle": "フロントスピーカー交換プラン\n(スーパーライブサウンド非装着車)",
             "hideTitle": true,
             "hideSubtitle": false,
             "subtitleAlign": "center",
@@ -14856,49 +14880,43 @@
               {
                 "id": "spk_1781771117481_twhu",
                 "brand": "ICKER ",
-                "name": "KSS269",
+                "name": "KSC3504+KSC6904",
                 "image": "/images/Audio/Speaker/KSS269.webp",
                 "mountingHoleSize": "",
                 "depthSize": "",
                 "hasGrille": "",
                 "hasTweeterMount": "",
-                "standalonePrice": "76230",
+                "standalonePrice": "72050",
                 "fixedPriceOverride": "18700",
-                "remarks": "ロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。ランドクルーザー300の純正スピーカーは6x9インチサイズのオーバルスピーカーですのでそのメリットを活かすべくオーバルスピーカーをチョイスしています。取り付けにはランドクルーザー300専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。ダッシュボード両サイド、ドアスピーカーの交換となります。",
-                "youtubeUrl": ""
+                "remarks": "フロントスピーカーをアメリカのブランド「KICKER」のミドルグレードの製品に交換し、再生能力をアップします。純正スピーカーとのトレードイン交換取り付けで車両との親和性が高く、同軸スピーカーを使用するためプラド スーパーライブサウンド装着車にもおすすめです。",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカー本体",
+                    "desc": "",
+                    "value": "72050"
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "パーフェクトキット",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取付工賃",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
               }
             ],
-            "subtitleFontSize": 20
-          }
-        },
-        {
-          "id": "sec_package_summary_1782367668473_1",
-          "type": "package_summary",
-          "data": {
-            "title": "このプランに含まれる内容",
-            "items": [
-              {
-                "title": "スピーカー本体　",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "軽防振",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "専用取付キット",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "取り付け工賃",
-                "desc": "",
-                "value": ""
-              }
-            ],
-            "subtitle": ""
+            "subtitleFontSize": 20,
+            "sectionWidth": "half"
           }
         },
         {
@@ -14918,7 +14936,7 @@
         }
       ],
       "status": "published",
-      "slug": "car-category-landcruiser300-copy-831",
+      "slug": "car-category-PRADO",
       "features": {
         "doorTuning": {
           "image": "/images/Audio/Speaker/door-b.webp"
@@ -14940,16 +14958,39 @@
         {
           "id": "spk_1781768522973_r8l5",
           "brand": "KICKER",
-          "name": "KST2004+KSS269+KSC2704",
+          "name": "KSS369+KSC3504",
           "image": "/images/Audio/Speaker/KST2004+KSS269+KSC2704.webp",
           "mountingHoleSize": "",
           "depthSize": "",
           "hasGrille": "",
           "hasTweeterMount": "",
-          "standalonePrice": "116820",
+          "standalonePrice": "104995",
           "fixedPriceOverride": "31900",
-          "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。ランドクルーザー300の純正スピーカーは6x9インチサイズのオーバルスピーカーですのでそのメリットを活かすべくオーバルスピーカーをチョイスしています。取り付けにはランドクルーザー300専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。Aピラーツィーター、ダッシュボード両サイド、ドアスピーカーの交換となります。",
-          "youtubeUrl": ""
+          "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。ランドクルーザープラドの純正スピーカーは6×9インチサイズのオーバルスピーカーですので、そのメリットを活かしてオーバルスピーカーをチョイスしています。取り付けにはランドクルーザープラド（150系）専用に設計されたパーツを使用するため、ローコストながら効果の高いオーディオグレードアップが実現します。Aピラーのツィーターとダッシュボードスピーカーおよびドアスピーカーを交換します。",
+          "youtubeUrl": "",
+          "showCardSummary": true,
+          "cardSummaryItems": [
+            {
+              "title": "スピーカー本体",
+              "desc": "",
+              "value": "104995"
+            },
+            {
+              "title": "軽防振",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "ランドクルーザープラド(150)専用取り付けキット",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "取り付け工賃",
+              "desc": "",
+              "value": ""
+            }
+          ]
         }
       ],
       "subType": "standalone"

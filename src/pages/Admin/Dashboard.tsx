@@ -2307,6 +2307,7 @@ const AudioPlanManager = () => {
                                         const newSpk = {
                                             id: `spk_${Date.now()}_${Math.random().toString(36).substring(2,6)}`,
                                             brand: 'メーカー名',
+                                            brandLogo: '',
                                             name: '製品名',
                                             image: '/images/Top/speaker.webp',
                                             mountingHoleSize: '140mm',
@@ -2379,7 +2380,7 @@ const AudioPlanManager = () => {
                                                 </button>
                                             </div>
 
-                                            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                                            <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
                                                 <div className="space-y-1.5">
                                                     <label className="block text-[9px] font-bold text-zinc-500">メーカー (Brand)</label>
                                                     <input 
@@ -2404,6 +2405,20 @@ const AudioPlanManager = () => {
                                                             updateSectionData(sIdx, { speakers: next });
                                                         }}
                                                         className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-2.5 py-1.5 text-white text-xs font-bold"
+                                                    />
+                                                </div>
+                                                <div className="space-y-1.5">
+                                                    <label className="block text-[9px] font-bold text-zinc-500">ブランドロゴ画像パス (Logo)</label>
+                                                    <input 
+                                                        type="text"
+                                                        value={spk.brandLogo || ''}
+                                                        onChange={e => {
+                                                            const next = [...speakersList];
+                                                            next[idx] = { ...spk, brandLogo: cleanPathInput(e.target.value) };
+                                                            updateSectionData(sIdx, { speakers: next });
+                                                        }}
+                                                        className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-2.5 py-1.5 text-white text-xs font-bold"
+                                                        placeholder="未指定時はテキスト表示"
                                                     />
                                                 </div>
                                                 <div className="space-y-1.5">

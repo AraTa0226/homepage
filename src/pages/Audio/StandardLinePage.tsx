@@ -461,8 +461,14 @@ export const StandardLinePage: React.FC = () => {
                             {displayMode !== 'no_image' && displayMode !== 'text_only' && (
                               <div className="aspect-square relative overflow-hidden bg-zinc-50/50 flex items-center justify-center p-12 group-hover:bg-zinc-100/50 border-b border-zinc-100 transition-colors duration-500">
                                 <img src={spk.image} alt={`${displayBrand} ${spk.name}`} className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 drop-shadow-xl" />
-                                <div className="absolute top-6 left-6">
-                                  <div className="bg-black/80 backdrop-blur-md text-white text-[12px] font-black px-4 py-2 rounded-full tracking-widest uppercase border border-white/20">{displayBrand}</div>
+                                <div className="absolute top-6 left-6 animate-fade-in">
+                                  {spk.brandLogo ? (
+                                    <div className="bg-black/80 backdrop-blur-md px-3.5 py-1.5 rounded-2xl border border-white/20 h-9 flex items-center justify-center shadow-lg">
+                                      <img src={spk.brandLogo} alt={displayBrand} className="h-full object-contain max-w-[80px]" />
+                                    </div>
+                                  ) : (
+                                    <div className="bg-black/80 backdrop-blur-md text-white text-[12px] font-black px-4 py-2 rounded-full tracking-widest uppercase border border-white/20 shadow-lg">{displayBrand}</div>
+                                  )}
                                 </div>
                                 {spk.youtubeUrl && (
                                   <a 
