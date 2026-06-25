@@ -412,12 +412,14 @@ export const StandardLinePage: React.FC = () => {
                         />
                       )}
                       {section.data?.sectionImage && (
-                        <div className="flex justify-center mb-20">
-                          <img 
-                            src={section.data.sectionImage} 
-                            alt={sectionTitle} 
-                            className="max-w-2xl w-full h-auto object-contain rounded-[2.5rem] border border-zinc-200/80 shadow-[0_15px_45px_-20px_rgba(0,0,0,0.08)] bg-zinc-50/50 p-6 md:p-12" 
-                          />
+                        <div className="flex justify-center mb-20 w-full">
+                          <div className="aspect-[16/10] w-full max-w-2xl rounded-[2.5rem] overflow-hidden border border-zinc-200/80 shadow-[0_15px_45px_-20px_rgba(0,0,0,0.08)] bg-zinc-50/50 p-6 md:p-12 flex items-center justify-center">
+                            <img 
+                              src={section.data.sectionImage} 
+                              alt={sectionTitle} 
+                              className="w-full h-full object-contain" 
+                            />
+                          </div>
                         </div>
                       )}
                       {section.data?.showPackageSummary && (
