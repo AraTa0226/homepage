@@ -450,23 +450,10 @@ export const StandardLinePage: React.FC = () => {
                     )}
                     <div className={gridContainerClass}>
                       {speakersList.map((spk: any, i: number) => {
-                        const isMultiColumn = sectionWidth !== 'full';
-                        const cardClass = isMultiColumn
-                          ? "group flex flex-col sm:flex-row h-full bg-white border border-zinc-200/80 rounded-[2.5rem] overflow-hidden shadow-[0_15px_45px_-20px_rgba(0,0,0,0.06)] hover:shadow-[0_30px_60px_-15px_rgba(59,130,246,0.1),0_15px_30px_-10px_rgba(0,0,0,0.04)] hover:border-blue-500/30 hover:-translate-y-2 transition-all duration-500 ease-out"
-                          : "group flex flex-col h-full bg-white border border-zinc-200/80 rounded-[2.5rem] overflow-hidden shadow-[0_15px_45px_-20px_rgba(0,0,0,0.06)] hover:shadow-[0_30px_60px_-15px_rgba(59,130,246,0.1),0_15px_30px_-10px_rgba(0,0,0,0.04)] hover:border-blue-500/30 hover:-translate-y-2 transition-all duration-500 ease-out";
-                        
-                        const imgContainerClass = isMultiColumn
-                          ? "aspect-square sm:aspect-auto sm:w-1/3 sm:max-w-[200px] shrink-0 relative overflow-hidden bg-zinc-50/50 flex items-center justify-center p-12 sm:p-6 group-hover:bg-zinc-100/50 border-b sm:border-b-0 sm:border-r border-zinc-100 transition-colors duration-500"
-                          : "aspect-square relative overflow-hidden bg-zinc-50/50 flex items-center justify-center p-12 group-hover:bg-zinc-100/50 border-b border-zinc-100 transition-colors duration-500";
-
-                        const textContainerClass = isMultiColumn
-                          ? "p-6 md:p-8 flex flex-col flex-grow justify-between"
-                          : "p-8 flex flex-col flex-grow justify-between";
-
                         return (
-                          <div key={i} className={cardClass}>
+                          <div key={i} className="group flex flex-col h-full bg-white border border-zinc-200/80 rounded-[2.5rem] overflow-hidden shadow-[0_15px_45px_-20px_rgba(0,0,0,0.06)] hover:shadow-[0_30px_60px_-15px_rgba(59,130,246,0.1),0_15px_30px_-10px_rgba(0,0,0,0.04)] hover:border-blue-500/30 hover:-translate-y-2 transition-all duration-500 ease-out">
                             {displayMode !== 'no_image' && displayMode !== 'text_only' && (
-                              <div className={imgContainerClass}>
+                              <div className="aspect-square relative overflow-hidden bg-zinc-50/50 flex items-center justify-center p-12 group-hover:bg-zinc-100/50 border-b border-zinc-100 transition-colors duration-500">
                                 <img src={spk.image} alt={`${spk.brand} ${spk.name}`} className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 drop-shadow-xl" />
                                 <div className="absolute top-6 left-6">
                                   <div className="bg-black/80 backdrop-blur-md text-white text-[12px] font-black px-4 py-2 rounded-full tracking-widest uppercase border border-white/20">{spk.brand}</div>
@@ -485,7 +472,7 @@ export const StandardLinePage: React.FC = () => {
                                 )}
                               </div>
                             )}
-                            <div className={textContainerClass}>
+                            <div className="p-8 flex flex-col flex-grow justify-between">
                             {(displayMode === 'no_image' || displayMode === 'text_only') && spk.brand && (
                               <div className="text-[11px] font-black text-blue-600 tracking-wider uppercase mb-1">{spk.brand}</div>
                             )}
