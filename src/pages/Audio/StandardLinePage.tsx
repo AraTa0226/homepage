@@ -494,6 +494,23 @@ export const StandardLinePage: React.FC = () => {
                               </div>
                             )}
 
+                            {spk.showCardSummary && (
+                              <div className="mb-6 bg-gray-50/50 rounded-2xl border border-gray-100 p-4 space-y-2 text-left">
+                                <div className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1.5">パッケージ内容</div>
+                                <div className="space-y-1.5">
+                                  {(spk.cardSummaryItems || []).map((item: any, cIdx: number) => (
+                                    <div key={cIdx} className="flex justify-between items-center text-xs text-gray-600 font-bold border-b border-gray-100/50 last:border-0 pb-1.5 last:pb-0">
+                                      <div>
+                                        <span className="font-bold text-gray-800">{item.title}</span>
+                                        {item.desc && <span className="text-[10px] text-gray-400 font-normal ml-2">({item.desc})</span>}
+                                      </div>
+                                      {item.value && <span className="text-[10px] text-gray-500 font-black">{item.value}</span>}
+                                    </div>
+                                  ))}
+                                </div>
+                              </div>
+                            )}
+
                             {spk.remarks && <p className="text-gray-500 text-[15px] font-bold mb-8 flex-grow leading-relaxed" dangerouslySetInnerHTML={{ __html: '● ' + spk.remarks.replace(/\n/g, '<br />') }} />}
                             
                             <div className="pt-6 border-t border-gray-100">

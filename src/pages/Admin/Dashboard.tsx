@@ -2520,6 +2520,103 @@ const AudioPlanManager = () => {
                                                 />
                                             </div>
 
+                                            {/* Card Specific Package Summary */}
+                                            <div className="space-y-3 pt-3 border-t border-zinc-800/40">
+                                                <div className="flex items-center justify-between">
+                                                    <div className="flex items-center gap-2">
+                                                        <span className="text-[9px] font-bold text-zinc-500">カード内に専用パッケージ内容を表示する</span>
+                                                        <button 
+                                                            type="button"
+                                                            onClick={() => {
+                                                                const next = [...speakersList];
+                                                                next[idx] = { ...spk, showCardSummary: !spk.showCardSummary };
+                                                                updateSectionData(sIdx, { speakers: next });
+                                                            }}
+                                                            className={`px-3 py-1 rounded text-[8px] font-bold transition-all ${
+                                                                spk.showCardSummary ? 'bg-blue-600 text-white' : 'bg-zinc-900 border border-zinc-800 text-zinc-500'
+                                                            }`}
+                                                        >
+                                                            {spk.showCardSummary ? 'ON' : 'OFF'}
+                                                        </button>
+                                                    </div>
+                                                    {spk.showCardSummary && (
+                                                        <button 
+                                                            type="button"
+                                                            onClick={() => {
+                                                                const next = [...speakersList];
+                                                                const cardSummaryItems = spk.cardSummaryItems ? [...spk.cardSummaryItems] : [];
+                                                                cardSummaryItems.push({ title: '新しい項目', desc: '', value: '' });
+                                                                next[idx] = { ...spk, cardSummaryItems };
+                                                                updateSectionData(sIdx, { speakers: next });
+                                                            }}
+                                                            className="flex items-center gap-1 bg-zinc-900 border border-zinc-800 text-white px-2 py-0.5 rounded text-[8px] font-bold hover:bg-zinc-800"
+                                                        >
+                                                            <Plus className="w-3 h-3 text-blue-400" /> 項目を追加
+                                                        </button>
+                                                    )}
+                                                </div>
+
+                                                {spk.showCardSummary && (
+                                                    <div className="space-y-2 pl-2 border-l border-zinc-800">
+                                                        {(spk.cardSummaryItems || []).map((cItem: any, cIdx: number) => (
+                                                            <div key={cIdx} className="flex gap-2 items-center">
+                                                                <input 
+                                                                    type="text"
+                                                                    value={cItem.title || ''}
+                                                                    onChange={e => {
+                                                                        const next = [...speakersList];
+                                                                        const cardSummaryItems = [...spk.cardSummaryItems];
+                                                                        cardSummaryItems[cIdx] = { ...cItem, title: e.target.value };
+                                                                        next[idx] = { ...spk, cardSummaryItems };
+                                                                        updateSectionData(sIdx, { speakers: next });
+                                                                    }}
+                                                                    placeholder="項目名 (例: スピーカー本体)"
+                                                                    className="w-1/3 bg-zinc-900 border border-zinc-800 rounded px-2 py-1 text-white text-[9px] font-bold focus:border-blue-500 outline-none"
+                                                                />
+                                                                <input 
+                                                                    type="text"
+                                                                    value={cItem.desc || ''}
+                                                                    onChange={e => {
+                                                                        const next = [...speakersList];
+                                                                        const cardSummaryItems = [...spk.cardSummaryItems];
+                                                                        cardSummaryItems[cIdx] = { ...cItem, desc: e.target.value };
+                                                                        next[idx] = { ...spk, cardSummaryItems };
+                                                                        updateSectionData(sIdx, { speakers: next });
+                                                                    }}
+                                                                    placeholder="補足 (例: UD-K124付属)"
+                                                                    className="flex-1 bg-zinc-900 border border-zinc-800 rounded px-2 py-1 text-white text-[9px] font-bold focus:border-blue-500 outline-none"
+                                                                />
+                                                                <input 
+                                                                    type="text"
+                                                                    value={cItem.value || ''}
+                                                                    onChange={e => {
+                                                                        const next = [...speakersList];
+                                                                        const cardSummaryItems = [...spk.cardSummaryItems];
+                                                                        cardSummaryItems[cIdx] = { ...cItem, value: e.target.value };
+                                                                        next[idx] = { ...spk, cardSummaryItems };
+                                                                        updateSectionData(sIdx, { speakers: next });
+                                                                    }}
+                                                                    placeholder="値"
+                                                                    className="w-20 bg-zinc-900 border border-zinc-800 rounded px-2 py-1 text-white text-[9px] font-bold text-right focus:border-blue-500 outline-none"
+                                                                />
+                                                                <button 
+                                                                    type="button"
+                                                                    onClick={() => {
+                                                                        const next = [...speakersList];
+                                                                        const cardSummaryItems = spk.cardSummaryItems.filter((_: any, i: number) => i !== cIdx);
+                                                                        next[idx] = { ...spk, cardSummaryItems };
+                                                                        updateSectionData(sIdx, { cardSummaryItems });
+                                                                    }}
+                                                                    className="p-1 text-zinc-600 hover:text-red-400"
+                                                                >
+                                                                    <Trash2 className="w-3.5 h-3.5" />
+                                                                </button>
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                )}
+                                            </div>
+
                                             {/* Custom Prices List */}
                                             <div className="space-y-3 pt-3 border-t border-zinc-800/40">
                                                 <div className="flex justify-between items-center">
