@@ -474,7 +474,7 @@ export const StandardLinePage: React.FC = () => {
                             )}
                             <div className="p-8 flex flex-col flex-grow justify-between">
                             {(displayMode === 'no_image' || displayMode === 'text_only') && spk.brand && (
-                              <div className="text-[11px] font-black text-blue-600 tracking-wider uppercase mb-1">{spk.brand}</div>
+                              <div className="text-xs font-bold text-blue-600 tracking-wider uppercase mb-1">{spk.brand}</div>
                             )}
                             <h3 className="text-2xl font-black text-gray-900 mb-2 leading-tight">{spk.name}</h3>
                             
@@ -497,26 +497,26 @@ export const StandardLinePage: React.FC = () => {
                               <div className="grid grid-cols-2 gap-x-6 gap-y-3 mb-8">
                                 {spk.mountingHoleSize && (
                                   <div className="flex justify-between items-center border-b border-gray-100 pb-1.5">
-                                    <span className="text-[11px] font-black text-gray-400 uppercase tracking-tighter">取付穴径</span>
-                                    <span className="text-[15px] font-black text-gray-800">{spk.mountingHoleSize}</span>
+                                    <span className="text-xs font-bold text-gray-500 uppercase tracking-tighter">取付穴径</span>
+                                    <span className="text-base font-black text-gray-800">{spk.mountingHoleSize}</span>
                                   </div>
                                 )}
                                 {spk.depthSize && (
                                   <div className="flex justify-between items-center border-b border-gray-100 pb-1.5">
-                                    <span className="text-[11px] font-black text-gray-400 uppercase tracking-tighter">取付奥行</span>
-                                    <span className="text-[15px] font-black text-gray-800">{spk.depthSize}</span>
+                                    <span className="text-xs font-bold text-gray-500 uppercase tracking-tighter">取付奥行</span>
+                                    <span className="text-base font-black text-gray-800">{spk.depthSize}</span>
                                   </div>
                                 )}
                                 {spk.hasGrille && (
                                   <div className="flex justify-between items-center border-b border-gray-100 pb-1.5">
-                                    <span className="text-[11px] font-black text-gray-400 uppercase tracking-tighter">グリル</span>
-                                    <span className="text-[15px] font-black text-gray-800">{spk.hasGrille}</span>
+                                    <span className="text-xs font-bold text-gray-500 uppercase tracking-tighter">グリル</span>
+                                    <span className="text-base font-black text-gray-800">{spk.hasGrille}</span>
                                   </div>
                                 )}
                                 {spk.hasTweeterMount && (
                                   <div className="flex justify-between items-center border-b border-gray-100 pb-1.5">
-                                    <span className="text-[11px] font-black text-gray-400 uppercase tracking-tighter">TWマウント</span>
-                                    <span className="text-[15px] font-black text-gray-800">{spk.hasTweeterMount}</span>
+                                    <span className="text-xs font-bold text-gray-500 uppercase tracking-tighter">TWマウント</span>
+                                    <span className="text-base font-black text-gray-800">{spk.hasTweeterMount}</span>
                                   </div>
                                 )}
                               </div>
@@ -524,22 +524,22 @@ export const StandardLinePage: React.FC = () => {
 
                             {spk.showCardSummary && (
                               <div className="mb-6 bg-gray-50/50 rounded-2xl border border-gray-100 p-4 space-y-2 text-left">
-                                <div className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1.5">パッケージ内容</div>
+                                <div className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1.5">パッケージ内容</div>
                                 <div className="space-y-1.5">
                                   {(spk.cardSummaryItems || []).map((item: any, cIdx: number) => (
-                                    <div key={cIdx} className="flex justify-between items-center text-xs text-gray-600 font-bold border-b border-gray-100/50 last:border-0 pb-1.5 last:pb-0">
+                                    <div key={cIdx} className="flex justify-between items-center text-sm text-gray-700 font-bold border-b border-gray-100/50 last:border-0 pb-1.5 last:pb-0">
                                       <div>
                                         <span className="font-bold text-gray-800">{item.title}</span>
-                                        {item.desc && <span className="text-[10px] text-gray-400 font-normal ml-2">({item.desc})</span>}
+                                        {item.desc && <span className="text-xs text-gray-400 font-normal ml-2">({item.desc})</span>}
                                       </div>
-                                      {item.value && <span className="text-[10px] text-gray-500 font-black">{item.value}</span>}
+                                      {item.value && <span className="text-xs text-gray-500 font-black">{item.value}</span>}
                                     </div>
                                   ))}
                                 </div>
                               </div>
                             )}
 
-                            {spk.remarks && <p className="text-gray-500 text-[15px] font-bold mb-8 flex-grow leading-relaxed" dangerouslySetInnerHTML={{ __html: '● ' + spk.remarks.replace(/\n/g, '<br />') }} />}
+                            {spk.remarks && <p className="text-gray-600 text-base font-bold mb-8 flex-grow leading-relaxed" dangerouslySetInnerHTML={{ __html: '● ' + spk.remarks.replace(/\n/g, '<br />') }} />}
                             
                             <div className="pt-6 border-t border-gray-100">
                               {spk.prices && spk.prices.length > 0 ? (
@@ -549,15 +549,15 @@ export const StandardLinePage: React.FC = () => {
                                     const taxExcluded = Math.round(priceVal / (1 + (data.pricing?.taxRate || 10) / 100));
                                     return (
                                       <div key={pIdx} className="border-b border-gray-100 last:border-0 pb-3 last:pb-0">
-                                        <div className="text-[11px] font-black text-gray-400 uppercase tracking-widest mb-1">{pItem.label || 'パッケージ合計 (税込)'}</div>
+                                        <div className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">{pItem.label || 'パッケージ合計 (税込)'}</div>
                                         <div className="flex justify-between items-end">
                                           <div className="flex items-baseline gap-2">
                                             <div className="text-2xl font-black text-blue-600 tracking-tighter">¥{priceVal.toLocaleString()}</div>
-                                            <div className="text-[10px] text-gray-400 uppercase italic">incl. tax</div>
+                                            <div className="text-xs text-gray-400 uppercase italic">incl. tax</div>
                                           </div>
                                           <div className="text-right">
-                                            <span className="text-[10px] text-gray-400 uppercase tracking-tighter mr-1">(税別)</span>
-                                            <span className="text-sm font-black text-gray-600 italic">¥{taxExcluded.toLocaleString()}</span>
+                                            <span className="text-xs text-gray-400 uppercase tracking-tighter mr-1">(税別)</span>
+                                            <span className="text-base font-black text-gray-600 italic">¥{taxExcluded.toLocaleString()}</span>
                                           </div>
                                         </div>
                                       </div>
@@ -567,15 +567,15 @@ export const StandardLinePage: React.FC = () => {
                               ) : (
                                 <div className="flex justify-between items-end">
                                   <div>
-                                    <div className="text-sm font-black text-gray-400 tracking-widest uppercase mb-1">パッケージ合計 (税込)</div>
+                                    <div className="text-base font-bold text-gray-500 tracking-widest uppercase mb-1">パッケージ合計 (税込)</div>
                                     <div className="flex items-baseline gap-2">
                                       <div className="text-3xl font-black text-blue-600 tracking-tighter">¥{calculateAppliedPriceForSection(spk).toLocaleString()}</div>
-                                      <div className="text-[12px] font-black text-gray-400 uppercase italic">incl. tax</div>
+                                      <div className="text-xs text-gray-400 uppercase italic">incl. tax</div>
                                     </div>
                                   </div>
                                   <div className="text-right pb-1">
-                                    <div className="text-[12px] font-black text-gray-400 uppercase tracking-tighter">(税別)</div>
-                                    <div className="text-[15px] font-black text-gray-600 italic">¥{Math.round(calculateAppliedPriceForSection(spk) / (1 + (data.pricing.taxRate || 10) / 100)).toLocaleString()}</div>
+                                    <div className="text-xs text-gray-400 uppercase tracking-tighter">(税別)</div>
+                                    <div className="text-base font-black text-gray-600 italic">¥{Math.round(calculateAppliedPriceForSection(spk) / (1 + (data.pricing.taxRate || 10) / 100)).toLocaleString()}</div>
                                   </div>
                                 </div>
                               )}
