@@ -371,83 +371,85 @@ export const StandardLinePage: React.FC = () => {
 
                 const wrapperPadding = sectionWidth === 'full'
                   ? "max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-24 w-full"
-                  : "px-4 md:px-6 lg:px-8 py-16 w-full h-full flex flex-col justify-between bg-white border border-gray-100 rounded-[2.5rem] shadow-sm";
+                  : "px-4 md:px-6 lg:px-8 py-16 w-full h-full flex flex-col justify-start bg-white border border-gray-100 rounded-[2.5rem] shadow-sm";
 
                 return (
                   <div key={section.id} className={wrapperPadding}>
-                    {(!section.data?.hideTitle || !section.data?.hideSubtitle) && (
-                      <div className="flex flex-col md:flex-row items-baseline justify-between gap-4 mb-16 border-b-4 border-gray-900 pb-8">
-                        {!section.data?.hideTitle && (
-                          <h2 className="text-5xl md:text-7xl font-black text-gray-900 italic tracking-tighter uppercase leading-none" dangerouslySetInnerHTML={{ __html: sectionTitle.includes('<br') || sectionTitle.includes('\n') ? sectionTitle.replace(/\n/g, '<br />') : sectionTitle }} />
-                        )}
-                        {!section.data?.hideSubtitle && (() => {
-                          const isTitleHidden = !!section.data?.hideTitle;
-                          const align = section.data?.subtitleAlign || 'right';
-                          
-                          let alignClasses = "ml-auto text-right";
-                          if (isTitleHidden) {
-                            if (align === 'left') alignClasses = "mr-auto text-left";
-                            else if (align === 'center') alignClasses = "mx-auto text-center";
-                          }
-                          
-                          return (
-                             <p 
-                               className={`text-gray-500 font-black tracking-widest uppercase text-[15px] whitespace-pre-line ${alignClasses}`} 
-                               style={section.data?.subtitleFontSize ? { fontSize: `${section.data.subtitleFontSize}px` } : {}}
-                               dangerouslySetInnerHTML={{ __html: sectionSubtitle.includes('\n') || sectionSubtitle.includes('<br') ? sectionSubtitle.replace(/\n/g, '<br />') : sectionSubtitle }} 
-                             />
-                          );
-                        })()}
-                      </div>
-                    )}
-                    {section.data?.content && (
-                      <div 
-                        className="text-gray-600 font-bold text-[16px] leading-relaxed mb-12 max-w-4xl"
-                        dangerouslySetInnerHTML={{ 
-                          __html: section.data.content.includes('\n') 
-                            ? section.data.content.replace(/\n/g, '<br />') 
-                            : section.data.content 
-                        }}
-                      />
-                    )}
-                    {section.data?.sectionImage && (
-                      <div className="flex justify-center mb-20">
-                        <img 
-                          src={section.data.sectionImage} 
-                          alt={sectionTitle} 
-                          className="max-w-2xl w-full h-auto object-contain rounded-[2.5rem] border border-zinc-200/80 shadow-[0_15px_45px_-20px_rgba(0,0,0,0.08)] bg-zinc-50/50 p-6 md:p-12" 
+                    <div className="flex-grow flex flex-col justify-start w-full">
+                      {(!section.data?.hideTitle || !section.data?.hideSubtitle) && (
+                        <div className="flex flex-col md:flex-row items-baseline justify-between gap-4 mb-16 border-b-4 border-gray-900 pb-8">
+                          {!section.data?.hideTitle && (
+                            <h2 className="text-5xl md:text-7xl font-black text-gray-900 italic tracking-tighter uppercase leading-none" dangerouslySetInnerHTML={{ __html: sectionTitle.includes('<br') || sectionTitle.includes('\n') ? sectionTitle.replace(/\n/g, '<br />') : sectionTitle }} />
+                          )}
+                          {!section.data?.hideSubtitle && (() => {
+                            const isTitleHidden = !!section.data?.hideTitle;
+                            const align = section.data?.subtitleAlign || 'right';
+                            
+                            let alignClasses = "ml-auto text-right";
+                            if (isTitleHidden) {
+                              if (align === 'left') alignClasses = "mr-auto text-left";
+                              else if (align === 'center') alignClasses = "mx-auto text-center";
+                            }
+                            
+                            return (
+                               <p 
+                                 className={`text-gray-500 font-black tracking-widest uppercase text-[15px] whitespace-pre-line ${alignClasses}`} 
+                                 style={section.data?.subtitleFontSize ? { fontSize: `${section.data.subtitleFontSize}px` } : {}}
+                                 dangerouslySetInnerHTML={{ __html: sectionSubtitle.includes('\n') || sectionSubtitle.includes('<br') ? sectionSubtitle.replace(/\n/g, '<br />') : sectionSubtitle }} 
+                               />
+                            );
+                          })()}
+                        </div>
+                      )}
+                      {section.data?.content && (
+                        <div 
+                          className="text-gray-600 font-bold text-[16px] leading-relaxed mb-12 max-w-4xl"
+                          dangerouslySetInnerHTML={{ 
+                            __html: section.data.content.includes('\n') 
+                              ? section.data.content.replace(/\n/g, '<br />') 
+                              : section.data.content 
+                          }}
                         />
-                      </div>
-                    )}
-                    {section.data?.showPackageSummary && (
-                      <div className="mb-20">
-                        <div className="flex items-center gap-5 mb-8">
-                          <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center shrink-0">
-                            <Music className="w-7 h-7 text-blue-600" />
-                          </div>
-                          <div>
-                            <h3 className="text-2xl md:text-3xl font-black text-gray-900 tracking-tight">{section.data.packageSummaryTitle || 'パッケージに含まれる内容'}</h3>
-                            {section.data.packageSummarySubtitle && (
-                              <p className="text-[15px] text-gray-500 font-bold mt-2">{section.data.packageSummarySubtitle}</p>
-                            )}
-                          </div>
+                      )}
+                      {section.data?.sectionImage && (
+                        <div className="flex justify-center mb-20">
+                          <img 
+                            src={section.data.sectionImage} 
+                            alt={sectionTitle} 
+                            className="max-w-2xl w-full h-auto object-contain rounded-[2.5rem] border border-zinc-200/80 shadow-[0_15px_45px_-20px_rgba(0,0,0,0.08)] bg-zinc-50/50 p-6 md:p-12" 
+                          />
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          {(section.data.packageSummaryItems || []).map((item: any, i: number) => (
-                            <div key={i} className="flex gap-5 p-6 rounded-3xl bg-gray-50 border border-gray-100 items-center justify-between hover:bg-white hover:shadow-xl transition-all group">
-                              <div className="flex gap-5 items-center">
-                                <div className="text-2xl font-black text-blue-200 group-hover:text-blue-400 italic transition-colors">0{i+1}</div>
-                                <div>
-                                  <h4 className="font-black text-gray-900 text-lg leading-tight">{item.title}</h4>
-                                  {item.desc && <p className="text-[15px] text-gray-500 font-bold mt-1">{item.desc}</p>}
-                                </div>
-                              </div>
-                              {item.value && <div className="bg-white px-4 py-2 rounded-xl border border-gray-200 text-sm font-black text-gray-600 shadow-sm">{item.value}</div>}
+                      )}
+                      {section.data?.showPackageSummary && (
+                        <div className="mb-20">
+                          <div className="flex items-center gap-5 mb-8">
+                            <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center shrink-0">
+                              <Music className="w-7 h-7 text-blue-600" />
                             </div>
-                          ))}
+                            <div>
+                              <h3 className="text-2xl md:text-3xl font-black text-gray-900 tracking-tight">{section.data.packageSummaryTitle || 'パッケージに含まれる内容'}</h3>
+                              {section.data.packageSummarySubtitle && (
+                                <p className="text-[15px] text-gray-500 font-bold mt-2">{section.data.packageSummarySubtitle}</p>
+                              )}
+                            </div>
+                          </div>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {(section.data.packageSummaryItems || []).map((item: any, i: number) => (
+                              <div key={i} className="flex gap-5 p-6 rounded-3xl bg-gray-50 border border-gray-100 items-center justify-between hover:bg-white hover:shadow-xl transition-all group">
+                                <div className="flex gap-5 items-center">
+                                  <div className="text-2xl font-black text-blue-200 group-hover:text-blue-400 italic transition-colors">0{i+1}</div>
+                                  <div>
+                                    <h4 className="font-black text-gray-900 text-lg leading-tight">{item.title}</h4>
+                                    {item.desc && <p className="text-[15px] text-gray-500 font-bold mt-1">{item.desc}</p>}
+                                  </div>
+                                </div>
+                                {item.value && <div className="bg-white px-4 py-2 rounded-xl border border-gray-200 text-sm font-black text-gray-600 shadow-sm">{item.value}</div>}
+                              </div>
+                            ))}
+                          </div>
                         </div>
-                      </div>
-                    )}
+                      )}
+                    </div>
                     <div className={gridContainerClass}>
                       {speakersList.map((spk: any, i: number) => {
                         return (
