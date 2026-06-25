@@ -124,18 +124,28 @@ export const StandardLinePage: React.FC = () => {
           </div>
 
           {console.log('Rendering sections:', data.sections)}
-          <div className="grid grid-cols-6 w-full items-stretch">
-            {data.sections.map((section, idx) => {
-              const sectionWidth = section.data?.sectionWidth || 'full';
-              let widthClass = "col-span-6";
-              if (sectionWidth === 'half') {
-                widthClass = "col-span-6 lg:col-span-3";
-              } else if (sectionWidth === 'third') {
-                widthClass = "col-span-6 lg:col-span-2";
-              }
+          {(() => {
+            const groupedSections: any[] = [];
+            let currentGroup: any[] = [];
 
-              const renderSectionContent = () => {
-                switch(section.type) {
+            data.sections.forEach((section: any) => {
+              const sectionWidth = section.data?.sectionWidth || 'full';
+              if (sectionWidth === 'full') {
+                if (currentGroup.length > 0) {
+                  groupedSections.push({ type: 'grid_group', sections: currentGroup });
+                  currentGroup = [];
+                }
+                groupedSections.push(section);
+              } else {
+                currentGroup.push(section);
+              }
+            });
+            if (currentGroup.length > 0) {
+              groupedSections.push({ type: 'grid_group', sections: currentGroup });
+            }
+
+            const renderSectionContent = (section: any) => {
+              switch(section.type) {
               case 'hero':
                 return (
                   <div 
@@ -806,17 +816,32 @@ export const StandardLinePage: React.FC = () => {
             }
           };
 
-          const content = renderSectionContent();
-          if (!content) return null;
-
-          return (
-            <div key={section.id || idx} className={`${widthClass} flex flex-col`}>
-              {content}
-            </div>
-          );
-        })}
-      </div>
-    </>
+          return groupedSections.map((groupOrSection: any, gIdx: number) => {
+            if (groupOrSection.type === 'grid_group') {
+              return (
+                <div key={`group-${gIdx}`} className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-12 w-full">
+                  <div className="grid grid-cols-1 lg:grid-cols-6 gap-8 lg:gap-12 items-stretch">
+                    {groupOrSection.sections.map((sec: any, sIdx: number) => {
+                      const sectionWidth = sec.data?.sectionWidth || 'full';
+                      const colSpan = sectionWidth === 'half' ? 'lg:col-span-3' : 'lg:col-span-2';
+                      const content = renderSectionContent(sec);
+                      if (!content) return null;
+                      return (
+                        <div key={sec.id || sIdx} className={`${colSpan} flex flex-col`}>
+                          {content}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            } else {
+              const content = renderSectionContent(groupOrSection);
+              return content;
+            }
+          });
+        })()}
+      </>
       ) : (
         <>
           {/* --- ヘッダー領域 (Legacy) --- */}
