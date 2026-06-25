@@ -392,6 +392,35 @@ export const StandardLinePage: React.FC = () => {
                         />
                       </div>
                     )}
+                    {section.data?.showPackageSummary && (
+                      <div className="mb-20">
+                        <div className="flex items-center gap-5 mb-8">
+                          <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center shrink-0">
+                            <Music className="w-7 h-7 text-blue-600" />
+                          </div>
+                          <div>
+                            <h3 className="text-2xl md:text-3xl font-black text-gray-900 tracking-tight">{section.data.packageSummaryTitle || 'パッケージに含まれる内容'}</h3>
+                            {section.data.packageSummarySubtitle && (
+                              <p className="text-[15px] text-gray-500 font-bold mt-2">{section.data.packageSummarySubtitle}</p>
+                            )}
+                          </div>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          {(section.data.packageSummaryItems || []).map((item: any, i: number) => (
+                            <div key={i} className="flex gap-5 p-6 rounded-3xl bg-gray-50 border border-gray-100 items-center justify-between hover:bg-white hover:shadow-xl transition-all group">
+                              <div className="flex gap-5 items-center">
+                                <div className="text-2xl font-black text-blue-200 group-hover:text-blue-400 italic transition-colors">0{i+1}</div>
+                                <div>
+                                  <h4 className="font-black text-gray-900 text-lg leading-tight">{item.title}</h4>
+                                  {item.desc && <p className="text-[15px] text-gray-500 font-bold mt-1">{item.desc}</p>}
+                                </div>
+                              </div>
+                              {item.value && <div className="bg-white px-4 py-2 rounded-xl border border-gray-200 text-sm font-black text-gray-600 shadow-sm">{item.value}</div>}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                     <div className={gridContainerClass}>
                       {speakersList.map((spk: any, i: number) => (
                         <div key={i} className="group flex flex-col h-full bg-white border border-zinc-200/80 rounded-[2.5rem] overflow-hidden shadow-[0_15px_45px_-20px_rgba(0,0,0,0.06)] hover:shadow-[0_30px_60px_-15px_rgba(59,130,246,0.1),0_15px_30px_-10px_rgba(0,0,0,0.04)] hover:border-blue-500/30 hover:-translate-y-2 transition-all duration-500 ease-out">

@@ -2166,6 +2166,114 @@ const AudioPlanManager = () => {
                             </div>
                         </div>
 
+                        {/* Package Summary Toggle & Config */}
+                        <div className="bg-black/20 p-5 border border-zinc-800/80 rounded-2xl space-y-4">
+                            <div className="flex items-center justify-between">
+                                <div className="flex items-center gap-3">
+                                    <span className="text-[10px] font-black text-zinc-400 uppercase tracking-widest">セクション内パッケージサマリー表示</span>
+                                    <button 
+                                        type="button"
+                                        onClick={() => updateSectionData(sIdx, { showPackageSummary: !section.data.showPackageSummary })}
+                                        className={`px-4 py-1.5 rounded-xl font-black text-[10px] transition-all ${
+                                            section.data.showPackageSummary ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/20' : 'bg-zinc-800 text-zinc-500'
+                                        }`}
+                                    >
+                                        {section.data.showPackageSummary ? 'ON' : 'OFF'}
+                                    </button>
+                                </div>
+                                {section.data.showPackageSummary && (
+                                    <button 
+                                        type="button"
+                                        onClick={() => {
+                                            const packageSummaryItems = section.data.packageSummaryItems ? [...section.data.packageSummaryItems] : [];
+                                            packageSummaryItems.push({ title: '新しい項目', desc: '', value: '' });
+                                            updateSectionData(sIdx, { packageSummaryItems });
+                                        }}
+                                        className="flex items-center gap-1.5 bg-zinc-900 border border-zinc-800 text-white px-2.5 py-1 rounded text-[8px] font-black hover:bg-zinc-800"
+                                    >
+                                        <Plus className="w-3 h-3 text-blue-400" /> 項目を追加
+                                    </button>
+                                )}
+                            </div>
+
+                            {section.data.showPackageSummary && (
+                                <div className="space-y-4 pt-2 border-t border-zinc-800/40">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        <div className="space-y-1.5">
+                                            <label className="block text-[9px] font-bold text-zinc-500">サマリータイトル</label>
+                                            <input 
+                                                type="text"
+                                                value={section.data.packageSummaryTitle || ''}
+                                                onChange={e => updateSectionData(sIdx, { packageSummaryTitle: e.target.value })}
+                                                placeholder="例: このプランに含まれる内容"
+                                                className="w-full bg-zinc-900 border border-zinc-800 rounded px-2.5 py-1.5 text-white text-[10px] font-bold"
+                                            />
+                                        </div>
+                                        <div className="space-y-1.5">
+                                            <label className="block text-[9px] font-bold text-zinc-500">サマリーサブタイトル</label>
+                                            <input 
+                                                type="text"
+                                                value={section.data.packageSummarySubtitle || ''}
+                                                onChange={e => updateSectionData(sIdx, { packageSummarySubtitle: e.target.value })}
+                                                placeholder="例: 下記の内容が含まれたパッケージとなっています。"
+                                                className="w-full bg-zinc-900 border border-zinc-800 rounded px-2.5 py-1.5 text-white text-[10px] font-bold"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div className="grid grid-cols-1 gap-2">
+                                        {(section.data.packageSummaryItems || []).map((item: any, pIdx: number) => (
+                                            <div key={pIdx} className="flex gap-2 items-center bg-black/40 border border-zinc-800/50 p-2.5 rounded-xl">
+                                                <input 
+                                                    type="text"
+                                                    value={item.title || ''}
+                                                    onChange={e => {
+                                                        const packageSummaryItems = [...section.data.packageSummaryItems];
+                                                        packageSummaryItems[pIdx] = { ...item, title: e.target.value };
+                                                        updateSectionData(sIdx, { packageSummaryItems });
+                                                    }}
+                                                    placeholder="項目名 (例: スピーカー本体)"
+                                                    className="w-1/3 bg-zinc-900 border border-zinc-800 rounded px-2.5 py-1.5 text-white text-[10px] font-bold"
+                                                />
+                                                <input 
+                                                    type="text"
+                                                    value={item.desc || ''}
+                                                    onChange={e => {
+                                                        const packageSummaryItems = [...section.data.packageSummaryItems];
+                                                        packageSummaryItems[pIdx] = { ...item, desc: e.target.value };
+                                                        updateSectionData(sIdx, { packageSummaryItems });
+                                                    }}
+                                                    placeholder="説明 (例: 軽防振施工など)"
+                                                    className="flex-1 bg-zinc-900 border border-zinc-800 rounded px-2.5 py-1.5 text-white text-[10px] font-bold"
+                                                />
+                                                <input 
+                                                    type="text"
+                                                    value={item.value || ''}
+                                                    onChange={e => {
+                                                        const packageSummaryItems = [...section.data.packageSummaryItems];
+                                                        packageSummaryItems[pIdx] = { ...item, value: e.target.value };
+                                                        updateSectionData(sIdx, { packageSummaryItems });
+                                                    }}
+                                                    placeholder="右側ラベル (例: ¥22,000)"
+                                                    className="w-32 bg-zinc-900 border border-zinc-800 rounded px-2.5 py-1.5 text-white text-[10px] font-bold text-right"
+                                                />
+                                                <button 
+                                                    type="button"
+                                                    onClick={() => {
+                                                        const packageSummaryItems = section.data.packageSummaryItems.filter((_: any, i: number) => i !== pIdx);
+                                                        updateSectionData(sIdx, { packageSummaryItems });
+                                                    }}
+                                                    className="p-1 text-zinc-600 hover:text-red-400"
+                                                >
+                                                    <Trash2 className="w-3.5 h-3.5" />
+                                                </button>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+
                         <div className="space-y-1.5">
                             <label className="block text-[10px] font-bold text-zinc-400">セクション説明文 (Description - 改行対応の複数行入力)</label>
                             <textarea 

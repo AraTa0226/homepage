@@ -2339,7 +2339,7 @@
           "name": "Grgo ZVT II ＋ スマキー連動/スマクロ",
           "price": "299,600",
           "badge": "おすすめ",
-          "description": "傾斜センサー含むフルセンサー構成にスマートキー連動をプラスし���������������������������������������������������������������������������������������������������������利便性を高めた一台。",
+          "description": "傾斜センサー含むフルセンサー構成にスマートキー連動をプラスし���������������������������������������������������������������������������������������������������������������������������������利便性を高めた一台。",
           "triple": true,
           "tilt": true,
           "bonnet": true,
@@ -7062,7 +7062,7 @@
           "opacity": 0.5,
           "badge": "スピーカー交換パッケージ",
           "bgColor": "#1e3a8a",
-          "description": "10万円までのスピーカーの中から、お気に入りの1本を選べるパッケージです。ドアチューニングとスピーカーケーブルの交換もセットになっており、音にこだわりたい方の「最初の本格ステップ」としておすすめです。\nこの価格帯は各メーカーとも個性の強い人気モデルが揃っています。ただ、取り付けやすさを重視したモデルと、音質を最優先したモデルが混在している価格帯でもあります。見た目の���ペックだけで選ぶと、いざ取り付けの段階で「このやり方はできない」となるケースも。商品選びの際は、ご希望のインストール方法と合っているかどうかも一緒に確認しながら進めることをおすすめします。\n埋め込み奥行きやツィーターマウントの有無も各モデルに記載していますので、参考にしてください。"
+          "description": "10万円までのスピーカーの中から、お気に入りの1本を選べるパッケージです。ドアチューニングとスピーカーケーブルの交換もセットになっており、音にこだわりたい方の「最初の本格ステップ」としておすすめです。\nこの価格帯は各メーカーとも個性の強い人気モデルが揃っています。ただ、取り付けやすさを重視したモデルと、音質を最優先したモデルが混在している価格帯でもあります。見た目のスペックだけで選ぶと、いざ取り付けの段階で「このやり方はできない」となるケースも。商品選びの際は、ご希望のインストール方法と合っているかどうかも一緒に確認しながら進めることをおすすめします。\n埋め込み奥行きやツィーターマウントの有無も各モデルに記載していますので、参考にしてください。"
         }
       },
       {
@@ -10179,7 +10179,7 @@
               }
             ],
             "title": "スピーカー交換例",
-            "description": "BMWの純正シ�����������������はフロントに10cm程度のスぴーかー、ツィーターなし、シート下のウーハーで低音を補うという構成がほとんどです。 加工を抑えてコストを抑えた改善方法として、まずはフロントスピーカーの交換とツィーターの追加。さらに適合車種であればウーハーも交換することで、ハリのあるサウンドに生まれ変わります。このパッケージではトレードインで交換可能なスピーカーをご紹介しています。",
+            "description": "BMWの純正シ�������������������はフロントに10cm程度のスぴーかー、ツィーターなし、シート下のウーハーで低音を補うという構成がほとんどです。 加工を抑えてコストを抑えた改善方法として、まずはフロントスピーカーの交換とツィーターの追加。さらに適合車種であればウーハーも交換することで、ハリのあるサウンドに生まれ変わります。このパッケージではトレードインで交換可能なスピーカーをご紹介しています。",
             "doorTuning": {
               "title": "ツイーター",
               "desc": "純正ツィーター非装着車の場合、別途純正部品が必要になる場合があります。",
@@ -14285,6 +14285,185 @@
       "subType": "standalone"
     },
     {
+      "id": "line_1781771520050",
+      "name": "トヨタ　ランドクルーザー300",
+      "parentCategoryId": "speaker_package",
+      "showInMenu": false,
+      "isTemplate": false,
+      "header": {
+        "mainTitle": "タント専用プラン",
+        "subTitle": "ベーシックライン",
+        "badge": "スピーカー交換パッケージ",
+        "description": "コストを抑えながら、効果的に音質アップできるタント専用のスピーカー交換プランです。\nダイハツ　タント(LA650S/LA660S) (R1.7～) \nダイハツ　タント(LA600S/LA610S)　(H25.10～R1.7)"
+      },
+      "pricing": {
+        "specialPrice": "81840",
+        "fixedPrice": 41800,
+        "normalPriceText": "117700",
+        "savingsText": "35,860円 お得!",
+        "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。",
+        "taxRate": 10
+      },
+      "sections": [
+        {
+          "id": "sec_banner_1781771520050_0",
+          "type": "banner",
+          "data": {
+            "title": "ランドクルーザー300専用プラン",
+            "subTitle": "",
+            "image": "/images/Audio/vihicle/300.webp",
+            "height": "400px",
+            "opacity": 0.5,
+            "badge": "スピーカー交換パッケージ",
+            "bgColor": "",
+            "description": "トヨタ　ランドクルーザー300に合わせたスピーカー交換プランです。できるだけコストを抑えつつ、効果的に音質アップができるようにプランニングしています。カーオーディオに興味が湧いたときには、さらにグレードアップすることも可能です。"
+          }
+        },
+        {
+          "id": "sec_speakers_1781771520050_5",
+          "type": "speakers",
+          "data": {
+            "title": "",
+            "subtitle": "フロントスピーカー交換プラン\nランドクルーザー300(6スピーカー装着車)",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1781771117481_twhu",
+                "brand": "ICKER ",
+                "name": "KSS269",
+                "image": "/images/Audio/Speaker/KSS269.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "76230",
+                "fixedPriceOverride": "18700",
+                "remarks": "ロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。ランドクルーザー300の純正スピーカーは6x9インチサイズのオーバルスピーカーですのでそのメリットを活かすべくオーバルスピーカーをチョイスしています。取り付けにはランドクルーザー300専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。ダッシュボード両サイド、ドアスピーカーの交換となります。",
+                "youtubeUrl": ""
+              }
+            ],
+            "subtitleFontSize": 20
+          }
+        },
+        {
+          "id": "sec_package_summary_1781771520050_1",
+          "type": "package_summary",
+          "data": {
+            "title": "このプランに含まれる内容",
+            "items": [
+              {
+                "title": "スピーカー本体　",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "軽防振",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "専用取付キット",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "取り付け工賃",
+                "desc": "",
+                "value": ""
+              }
+            ],
+            "subtitle": ""
+          }
+        },
+        {
+          "id": "sec_speakers_1781771520050_2",
+          "type": "speakers",
+          "data": {
+            "title": "",
+            "fixedPrice": "19250 ",
+            "speakers": [
+              {
+                "id": "spk_1781768522973_r8l5",
+                "brand": "KICKER",
+                "name": "KST2004+KSS269+KSC2704",
+                "image": "/images/Audio/Speaker/KST2004+KSS269+KSC2704.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "116820",
+                "fixedPriceOverride": "31900",
+                "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。ランドクルーザー300の純正スピーカーは6x9インチサイズのオーバルスピーカーですのでそのメリットを活かすべくオーバルスピーカーをチョイスしています。取り付けにはランドクルーザー300専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。Aピラーツィーター、ダッシュボード両サイド、ドアスピーカーの交換となります。",
+                "youtubeUrl": ""
+              }
+            ],
+            "subtitle": "フロントスピーカー交換プラン\nランドクルーザー300(JBLプレミアムサウンド装着車)",
+            "hideSubtitle": false,
+            "hideTitle": true,
+            "subtitleAlign": "center",
+            "content": "",
+            "subtitleFontSize": 20,
+            "displayMode": "standard",
+            "sectionImage": ""
+          }
+        },
+        {
+          "id": "sec_floating_cta_1781771520050_6",
+          "type": "floating_cta",
+          "data": {}
+        },
+        {
+          "id": "sec_notes_1781771520050_7",
+          "type": "notes",
+          "data": {
+            "title": "施工に関する注意事項",
+            "items": [
+              "作業は<strong>半日ー1日お車をお預かり</strong>します（無料代車をご用意可能です）。"
+            ]
+          }
+        }
+      ],
+      "status": "published",
+      "slug": "car-category-landcruiser300",
+      "features": {
+        "doorTuning": {
+          "image": "/images/Audio/Speaker/door-b.webp"
+        },
+        "baffle": {
+          "image": "/images/Audio/Speaker/baffle.webp"
+        },
+        "cable": {
+          "image": "/images/Audio/Speaker/ang-cable.webp"
+        }
+      },
+      "upgrades": {
+        "options": {
+          "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
+          "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
+        }
+      },
+      "speakers": [
+        {
+          "id": "spk_1781771117481_twhu",
+          "brand": "ICKER ",
+          "name": "KSS269",
+          "image": "/images/Audio/Speaker/KSS269.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "76230",
+          "fixedPriceOverride": "18700",
+          "remarks": "ロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。ランドクルーザー300の純正スピーカーは6x9インチサイズのオーバルスピーカーですのでそのメリットを活かすべくオーバルスピーカーをチョイスしています。取り付けにはランドクルーザー300専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。ダッシュボード両サイド、ドアスピーカーの交換となります。",
+          "youtubeUrl": ""
+        }
+      ],
+      "subType": "standalone"
+    },
+    {
       "id": "line_1781762595406",
       "name": "トヨタ　アルファード/ヴェルファイアプラン ",
       "parentCategoryId": "speaker_package",
@@ -14336,8 +14515,8 @@
                 "value": ""
               },
               {
-                "title": "N-WGN専用取り付けキット　",
-                "desc": "TS-C1740SはインナーバッフルUD-K5210となります",
+                "title": "パーフェクトキット",
+                "desc": "",
                 "value": ""
               },
               {
@@ -14367,37 +14546,115 @@
                 "hasTweeterMount": "",
                 "standalonePrice": "83600",
                 "fixedPriceOverride": "60225",
-                "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。Aピラーツィーター、ダッシュ左右スピーカー、ドアウーハー、ダッシュセンタースピーカーの計4箇所を交換します。",
+                "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。A��ラーツィーター、ダッシュ左右スピーカー、ドアウーハー、ダッシュセンタースピーカーの計4箇所を交換します。",
                 "youtubeUrl": ""
-              },
+              }
+            ],
+            "subtitle": "フロントスピーカー交換プラン\n (40系アルファード・ヴェルファイア(Exective Lounge/アルファードZ,ヴェルファイアZpremierJBL仕様))",
+            "hideSubtitle": false,
+            "hideTitle": true,
+            "subtitleAlign": "center",
+            "content": "",
+            "subtitleFontSize": 20,
+            "displayMode": "standard",
+            "sectionImage": ""
+          }
+        },
+        {
+          "id": "sec_speakers_1781769954697_ny8j",
+          "type": "speakers",
+          "data": {
+            "title": "",
+            "subtitle": "フロントスピーカー交換プラン\n40系アルファード(Z)(X)ヴェルファイア(Z Premier)",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
               {
-                "id": "spk_1779057904498",
+                "id": "spk_1781770098805_fvkq",
                 "brand": "KICKER",
                 "name": "KSC6904+KSC3504",
                 "image": "/images/Audio/Speaker/KSC6904+KSC3504.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
                 "standalonePrice": "",
-                "remarks": "フロントスピーカーをアメリカのブランドKICKERのミドルグレードへ交換して再生能力アップ。純正スピーカーとのトレードイン交換取り付けで車両との親和性が高く、ダッシュに取り付けるスピーカーはワイドレンジなので情報量アップで音質の差は歴然！",
                 "fixedPriceOverride": "",
+                "remarks": "フロントスピーカーをアメリカのブランドKICKERのミドルグレードへ交換して再生能力アップ。純正スピーカーとのトレードイン交換取り付けで車両との親和性が高く、ダッシュに取り付けるスピーカーはワイドレンジなので情報量アップで音質の差は歴然！",
+                "youtubeUrl": "",
                 "prices": [
                   {
-                    "label": "アルファード・ヴェルファイア(Z)",
+                    "label": "アルファード・ヴェルファイア(Z用)",
                     "price": "99550"
                   },
                   {
-                    "label": "アルファード・ヴェルファイア(L)",
+                    "label": "アルファード・ヴェルファイア(L用)",
                     "price": "100650"
                   }
                 ]
               }
             ],
-            "subtitle": "フロントスピーカー交換プラン (40系アルファード・ヴェルファイア(Exective Lounge/アルファードZ,ヴェルファイアZpremierJBL仕様))",
-            "hideSubtitle": false,
+            "subtitleFontSize": 20
+          }
+        },
+        {
+          "id": "sec_speakers_1781770422516_yo8s",
+          "type": "speakers",
+          "data": {
+            "title": "",
+            "subtitle": "フロントスピーカー交換プラン\n30系アルファード・ヴェルファイア(JBLサウンドシステム)",
             "hideTitle": true,
+            "hideSubtitle": false,
             "subtitleAlign": "center",
-            "content": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。Aピラーツィーター、ダッシュ左右スピーカー、ドアウーハー、ダッシュセンタースピーカーの計4箇所を交換します。",
-            "subtitleFontSize": 20,
-            "displayMode": "standard",
-            "sectionImage": ""
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1781770463204_soqn",
+                "brand": "KICKER ",
+                "name": "KSS269+KSC3504",
+                "image": "/images/Audio/Speaker/KSS269+KSC3504.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "98780 ",
+                "fixedPriceOverride": "24200",
+                "remarks": "フロントスピーカーをアメリカのブランドKICKERのミドルグレードへ交換して再生能力アップ。純正スピーカーとのトレードイン交換取り付けで車両との親和性が高く、ダッシュに取り付けるスピーカーはワイドレンジなので情報量アップで音質の差は歴然！ドアスピーカー、ダッシュ左右スピーカー、センタースピーカーを交換します。（センタースピーカーは片側のみ使いますので1つ余ります）",
+                "youtubeUrl": ""
+              }
+            ],
+            "subtitleFontSize": 20
+          }
+        },
+        {
+          "id": "sec_speakers_1781771052902_oz5u",
+          "type": "speakers",
+          "data": {
+            "title": "",
+            "subtitle": "フロントスピーカー交換プラン\n30系アルファード・ヴェルファイア(JBLサウンドシステム非搭載)",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1781771117481_twhu",
+                "brand": "ICKER ",
+                "name": "KSS269",
+                "image": "/images/Audio/Speaker/KSS269.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "77880",
+                "fixedPriceOverride": "18700",
+                "remarks": "フロントスピーカーをアメリカのブランドKICKERのミドルグレードへ交換して再生能力アップ。純正スピーカーとのトレードイン交換取り付けで車両との親和性が高く、ダッシュに取り付けるスピーカーはワイドレンジなので情報量アップで音質の差は歴然！",
+                "youtubeUrl": ""
+              }
+            ],
+            "subtitleFontSize": 20
           }
         },
         {
@@ -14449,25 +14706,185 @@
           "fixedPriceOverride": "60225",
           "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。Aピラーツィーター、ダッシュ左右スピーカー、ドアウーハー、ダッシュセンタースピーカーの計4箇所を交換します。",
           "youtubeUrl": ""
+        }
+      ],
+      "subType": "standalone"
+    },
+    {
+      "id": "line_1782367668473",
+      "name": "トヨタ　ランドクルーザー300 (コピー)",
+      "parentCategoryId": "speaker_package",
+      "showInMenu": false,
+      "isTemplate": false,
+      "header": {
+        "mainTitle": "タント専用プラン",
+        "subTitle": "ベーシックライン",
+        "badge": "スピーカー交換パッケージ",
+        "description": "コストを抑えながら、効果的に音質アップできるタント専用のスピーカー交換プランです。\nダイハツ　タント(LA650S/LA660S) (R1.7～) \nダイハツ　タント(LA600S/LA610S)　(H25.10～R1.7)"
+      },
+      "pricing": {
+        "specialPrice": "81840",
+        "fixedPrice": 41800,
+        "normalPriceText": "117700",
+        "savingsText": "35,860円 お得!",
+        "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。",
+        "taxRate": 10
+      },
+      "sections": [
+        {
+          "id": "sec_banner_1782367668473_0",
+          "type": "banner",
+          "data": {
+            "title": "ランドクルーザー300専用プラン",
+            "subTitle": "",
+            "image": "/images/Audio/vihicle/300.webp",
+            "height": "400px",
+            "opacity": 0.5,
+            "badge": "スピーカー交換パッケージ",
+            "bgColor": "",
+            "description": "トヨタ　ランドクルーザー300に合わせたスピーカー交換プランです。できるだけコストを抑えつつ、効果的に音質アップができるようにプランニングしています。カーオーディオに興味が湧いたときには、さらにグレードアップすることも可能です。"
+          }
         },
         {
-          "id": "spk_1779057904498",
+          "id": "sec_speakers_1782367668473_2",
+          "type": "speakers",
+          "data": {
+            "title": "",
+            "fixedPrice": "19250 ",
+            "speakers": [
+              {
+                "id": "spk_1781768522973_r8l5",
+                "brand": "KICKER",
+                "name": "KST2004+KSS269+KSC2704",
+                "image": "/images/Audio/Speaker/KST2004+KSS269+KSC2704.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "116820",
+                "fixedPriceOverride": "31900",
+                "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。ランドクルーザー300の純正スピーカーは6x9インチサイズのオーバルスピーカーですのでそのメリットを活かすべくオーバルスピーカーをチョイスしています。取り付けにはランドクルーザー300専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。Aピラーツィーター、ダッシュボード両サイド、ドアスピーカーの交換となります。",
+                "youtubeUrl": ""
+              }
+            ],
+            "subtitle": "フロントスピーカー交換プラン\nランドクルーザー300(JBLプレミアムサウンド装着車)",
+            "hideSubtitle": false,
+            "hideTitle": true,
+            "subtitleAlign": "center",
+            "content": "",
+            "subtitleFontSize": 20,
+            "displayMode": "standard",
+            "sectionImage": ""
+          }
+        },
+        {
+          "id": "sec_speakers_1782367668473_3",
+          "type": "speakers",
+          "data": {
+            "title": "",
+            "subtitle": "フロントスピーカー交換プラン\nランドクルーザー300(6スピーカー装着車)",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1781771117481_twhu",
+                "brand": "ICKER ",
+                "name": "KSS269",
+                "image": "/images/Audio/Speaker/KSS269.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "76230",
+                "fixedPriceOverride": "18700",
+                "remarks": "ロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。ランドクルーザー300の純正スピーカーは6x9インチサイズのオーバルスピーカーですのでそのメリットを活かすべくオーバルスピーカーをチョイスしています。取り付けにはランドクルーザー300専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。ダッシュボード両サイド、ドアスピーカーの交換となります。",
+                "youtubeUrl": ""
+              }
+            ],
+            "subtitleFontSize": 20
+          }
+        },
+        {
+          "id": "sec_package_summary_1782367668473_1",
+          "type": "package_summary",
+          "data": {
+            "title": "このプランに含まれる内容",
+            "items": [
+              {
+                "title": "スピーカー本体　",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "軽防振",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "専用取付キット",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "取り付け工賃",
+                "desc": "",
+                "value": ""
+              }
+            ],
+            "subtitle": ""
+          }
+        },
+        {
+          "id": "sec_floating_cta_1782367668473_4",
+          "type": "floating_cta",
+          "data": {}
+        },
+        {
+          "id": "sec_notes_1782367668473_5",
+          "type": "notes",
+          "data": {
+            "title": "施工に関する注意事項",
+            "items": [
+              "作業は<strong>半日ー1日お車をお預かり</strong>します（無料代車をご用意可能です）。"
+            ]
+          }
+        }
+      ],
+      "status": "published",
+      "slug": "car-category-landcruiser300-copy-831",
+      "features": {
+        "doorTuning": {
+          "image": "/images/Audio/Speaker/door-b.webp"
+        },
+        "baffle": {
+          "image": "/images/Audio/Speaker/baffle.webp"
+        },
+        "cable": {
+          "image": "/images/Audio/Speaker/ang-cable.webp"
+        }
+      },
+      "upgrades": {
+        "options": {
+          "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
+          "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
+        }
+      },
+      "speakers": [
+        {
+          "id": "spk_1781768522973_r8l5",
           "brand": "KICKER",
-          "name": "KSC6904+KSC3504",
-          "image": "/images/Audio/Speaker/KSC6904+KSC3504.webp",
-          "standalonePrice": "",
-          "remarks": "フロントスピーカーをアメリカのブランドKICKERのミドルグレードへ交換して再生能力アップ。純正スピーカーとのトレードイン交換取り付けで車両との親和性が高く、ダッシュに取り付けるスピーカーはワイドレンジなので情報量アップで音質の差は歴然！",
-          "fixedPriceOverride": "",
-          "prices": [
-            {
-              "label": "アルファード・ヴェルファイア(Z)",
-              "price": "99550"
-            },
-            {
-              "label": "アルファード・ヴェルファイア(L)",
-              "price": "100650"
-            }
-          ]
+          "name": "KST2004+KSS269+KSC2704",
+          "image": "/images/Audio/Speaker/KST2004+KSS269+KSC2704.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "116820",
+          "fixedPriceOverride": "31900",
+          "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。ランドクルーザー300の純正スピーカーは6x9インチサイズのオーバルスピーカーですのでそのメリットを活かすべくオーバルスピーカーをチョイスしています。取り付けにはランドクルーザー300専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。Aピラーツィーター、ダッシュボード両サイド、ドアスピーカーの交換となります。",
+          "youtubeUrl": ""
         }
       ],
       "subType": "standalone"
