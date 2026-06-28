@@ -2756,12 +2756,12 @@ const AudioPlanManager = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-4">
                             <div className="space-y-1.5">
-                                <label className="block text-[10px] font-bold text-zinc-400">バッジ (Badge)</label>
-                                <input 
-                                    type="text"
+                                <label className="block text-[10px] font-bold text-zinc-400">バッジ (Badge - 改行可能)</label>
+                                <textarea 
                                     value={section.data.badge || ''}
                                     onChange={e => updateSectionData(sIdx, { badge: e.target.value })}
-                                    className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-white text-xs font-bold"
+                                    rows={2}
+                                    className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-white text-xs font-bold focus:border-blue-500 outline-none"
                                 />
                             </div>
                             <div className="space-y-1.5">

@@ -623,9 +623,14 @@ export const StandardLinePage: React.FC = () => {
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6" style={{ backgroundColor: `rgba(0,0,0,${section.data.opacity !== undefined && section.data.opacity !== null ? section.data.opacity : 0.4})` }}>
                       <div className="max-w-4xl">
                         {section.data.badge && (
-                          <div className="text-gray-300 font-bold text-sm md:text-[15px] tracking-[0.2em] uppercase mb-2 animate-fade-in drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                            {section.data.badge}
-                          </div>
+                          <div 
+                            className="text-gray-300 font-bold text-sm md:text-[15px] tracking-[0.2em] uppercase mb-2 animate-fade-in drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] whitespace-pre-line"
+                            dangerouslySetInnerHTML={{ 
+                              __html: section.data.badge.includes('\n') 
+                                ? section.data.badge.replace(/\n/g, '<br />') 
+                                : section.data.badge 
+                            }}
+                          />
                         )}
                         {section.data.subTitle && <div className="text-blue-400 font-black text-[15px] md:text-base tracking-[0.3em] uppercase mb-4 animate-fade-in drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{section.data.subTitle}</div>}
                         <h2 className="text-4xl md:text-7xl font-black text-white tracking-tighter italic uppercase leading-none drop-shadow-[0_4px_12px_rgba(0,0,0,0.85)]">{section.data.title}</h2>

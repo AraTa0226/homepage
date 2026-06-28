@@ -105,7 +105,7 @@
           "id": "line_1778977596396",
           "name": "スピーカー交換・BASIC line （コアキシャル）",
           "badge": "スピーカー交換パッケージ",
-          "description": "純正スピーカーを交換するだけで、音が明るく、華やかに変わります。\nこのパッケージで使うのは「コアキシャル（同軸）スピーカー」。ツィーター（高音）とミッドレンジ（中音）が一体になったタイプで、取り付けがシンプルなぶんコストも抑えられます。カーオーディオのシステムアップが初めての方に、まず試してほしいパッケージです。\n純正のフルレンジスピーカーから交換することで高音域がプラスされ、音の広がりがぐっとアップ。スピーカー本体から取り付け工賃まで含んだパッケージ価格でご提供しています。",
+          "description": "純正スピーカーを交換するだけで、音が明るく、華やかに変わります。\nこのパッケージで使うのは「コアキシャル（同軸）スピーカー」。ツィーター（高音）と��ッドレンジ（中音）が一体になったタイプで、取り付けがシンプルなぶんコストも抑えられます。カーオーディオのシステムアップが初めての方に、まず試してほしいパッケージです。\n純正のフルレンジスピーカーから交換することで高音域がプラスされ、音の広がりがぐっとアップ。スピーカー本体から取り付け工賃まで含んだパッケージ価格でご提供しています。",
           "link": "/basiccoax",
           "features": [],
           "price": "39600",
@@ -180,11 +180,14 @@
         },
         {
           "id": "line_1778993388307",
-          "slug": "car-category",
           "name": "車種別スピーカー交換プラン",
+          "badge": "スピーカー交換パッケージ",
+          "description": "初めてカーオーディオにチャレンジする方向けに、できるだけ費用を抑えて楽しめるプランをご用意しました。コストを抑えるために人気車種に特化したパッケージ構成にしています。\nサブスクや残クレなど、原状回復が必要な車両にも対応できるよう、車両へのダメージを残さない取り付け方法を採用しています。対象車種は順次追加予定です。",
           "link": "/car-category",
-          "isDynamic": true,
-          "price": "81840"
+          "features": [],
+          "price": "81840",
+          "slug": "car-category",
+          "isDynamic": true
         }
       ],
       "images": [],
@@ -2339,7 +2342,7 @@
           "name": "Grgo ZVT II ＋ スマキー連動/スマクロ",
           "price": "299,600",
           "badge": "おすすめ",
-          "description": "傾斜センサー含むフルセンサー構成にスマートキー連動をプラスし�����������������������������������������������������������������������������������������������������������������������������������������������������������利便性を高めた一台。",
+          "description": "傾斜センサー含むフルセンサー構成にスマートキー連動をプラスし�������������������������������������������������������������������������������������������������������������������������������������������������������������������������������利便性を高めた一台。",
           "triple": true,
           "tilt": true,
           "bonnet": true,
@@ -2584,7 +2587,7 @@
         {
           "name": "プランE：ハイレゾ対応DSP構築",
           "price": "0",
-          "description": "現在の主流。デジタル信号のままDSPへ入力し、内蔵の高音質DACで変換。ロスの極めて少ないシステム。"
+          "description": "現在の主流。デジタル信号のままDSPへ入力し、内蔵の高���質DACで変換。ロスの極めて少ないシステム。"
         },
         {
           "name": "プランF：LDACワイヤレス接続",
@@ -10179,7 +10182,7 @@
               }
             ],
             "title": "スピーカー交換例",
-            "description": "BMWの純正シ���������������������はフロントに10cm程度のスぴーかー、ツィーターなし、シート下のウーハーで低音を補うという構成がほとんどです。 加工を抑えてコストを抑えた改善方法として、まずはフロントスピーカーの交換とツィーターの追加。さらに適合車種であればウーハーも交換することで、ハリのあるサウンドに生まれ変わります。このパッケージではトレードインで交換可能なスピーカーをご紹介しています。",
+            "description": "BMWの純正シ�������������������������はフロントに10cm程度のスぴーかー、ツィーターなし、シート下のウーハーで低音を補うという構成がほとんどです。 加工を抑えてコストを抑えた改善方法として、まずはフロントスピーカーの交換とツィーターの追加。さらに適合車種であればウーハーも交換することで、ハリのあるサウンドに生まれ変わります。このパッケージではトレードインで交換可能なスピーカーをご紹介しています。",
             "doorTuning": {
               "title": "ツイーター",
               "desc": "純正ツィーター非装着車の場合、別途純正部品が必要になる場合があります。",
@@ -11420,7 +11423,8 @@
         "fixedPrice": 41800,
         "normalPriceText": "117700",
         "savingsText": "35,860円 お得!",
-        "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。"
+        "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。",
+        "taxRate": 10
       },
       "sections": [
         {
@@ -11434,52 +11438,16 @@
             "opacity": 0.5,
             "badge": "スピーカー交換パッケージ",
             "bgColor": "#1e3a8a",
-            "description": "初めてカーオーディオにチャレンジする方向けに、できるだけ費用を抑えて楽しめるプランをご用意しました。コストを抑えるために人気車種に特化したパッケージ構成にしています。\nサブスクや残クレなど、原状回復が必要な車両にも対応できるよう、車両へのダメージを残さない取り付け方法を採用しています。対象車種は順次追加予定です。"
+            "description": ""
           }
         },
         {
-          "id": "sec_pkg_summary",
-          "type": "package_summary",
+          "id": "sec_text_1782629166374_l2us",
+          "type": "text",
           "data": {
-            "title": "パッケージ全内容（まとめ）",
-            "items": [
-              {
-                "title": "スピーカー本体",
-                "desc": ""
-              },
-              {
-                "title": "スピーカーインストール費用",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "軽防振",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "車種別キット",
-                "desc": "",
-                "value": ""
-              }
-            ],
-            "subtitle": "下記の内容が含まれたパッケージとなっています。"
+            "title": "",
+            "content": "<div style=\"text-align: center; font-size: 1.1rem; line-height: 1.8;\">\n  <p>初めてカーオーディオにチャレンジする方向けに、できるだけ費用を抑えて楽しめるプランをご用意しました。</p>\n  <p>コストを抑えるために人気車種に特化したパッケージ構成にしています。</p>\n  <p>サブスクや残クレなど、原状回復が必要な車両にも対応できるよう、車両へのダメージを残さない取り付け方法を採用しています。</p>\n  <p>対象車種は順次追加予定です。</p>\n</div>"
           }
-        },
-        {
-          "id": "sec_notes",
-          "type": "notes",
-          "data": {
-            "title": "施工に関する注意事項",
-            "items": [
-              "作業は<strong>1日お車をお預かり</strong>します（無料代車をご用意可能です）。"
-            ]
-          }
-        },
-        {
-          "id": "sec_1778923293452",
-          "type": "floating_cta",
-          "data": {}
         },
         {
           "id": "sec_1778994303402",
@@ -11633,6 +11601,11 @@
             ],
             "title": "対応車種ラインナップ"
           }
+        },
+        {
+          "id": "sec_1778923293452",
+          "type": "floating_cta",
+          "data": {}
         }
       ],
       "status": "published",
@@ -11675,7 +11648,8 @@
         "fixedPrice": 41800,
         "normalPriceText": "117700",
         "savingsText": "35,860円 お得!",
-        "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。"
+        "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。",
+        "taxRate": 10
       },
       "sections": [
         {
@@ -11687,9 +11661,9 @@
             "image": "/images/Audio/vihicle/tanto.webp",
             "height": "400px",
             "opacity": 0.5,
-            "badge": "スピーカー交換パッケージ",
+            "badge": "ダイハツ　タント(LA650S/LA660S) (R1.7～)  ダイハツ　タント(LA600S/LA610S)　(H25.10～R1.7)",
             "bgColor": "",
-            "description": "コストを抑えながら、効果的に音質アップできるタント専用のスピーカー交換プランです。\nダイハツ　タント(LA650S/LA660S) (R1.7～) \nダイハツ　タント(LA600S/LA610S)　(H25.10～R1.7)"
+            "description": "コストを抑えながら、効果的に音質アップできるタント専用のスピーカー交換プランです。\n"
           }
         },
         {
@@ -11779,7 +11753,16 @@
           "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
         }
       },
-      "speakers": [],
+      "speakers": [
+        {
+          "id": "spk_1779057904498",
+          "brand": "KICKER",
+          "name": "CSS674",
+          "image": "/images/Audio/Speaker/CSS674.webp",
+          "standalonePrice": "40700",
+          "remarks": ""
+        }
+      ],
       "subType": "standalone"
     },
     {
@@ -13707,7 +13690,8 @@
                 "image": "/images/Audio/Speaker/CSS674.webp",
                 "standalonePrice": "40700",
                 "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。このCSシリーズは純正ナビなどの内蔵アンプでも駆動しやすく、張りのある小気味良い音が出るスピーカーです。ツィーターは純正位置への取り付けとなります。",
-                "fixedPriceOverride": "20020"
+                "fixedPriceOverride": "20020",
+                "brandLogo": "/images/Audio/logo/kicker.webp"
               },
               {
                 "id": "spk_1781422329912_7esz",
@@ -13721,7 +13705,8 @@
                 "standalonePrice": "62700",
                 "fixedPriceOverride": "０",
                 "remarks": "フロントスピーカーをカロッツェリアの製品に交換し、再生能力をアップします。上位モデルの技術を受け継いだ高い解像度のサウンドが楽しめます。純正ツィーターはダッシュボード上への設置となります。",
-                "youtubeUrl": ""
+                "youtubeUrl": "",
+                "brandLogo": "/images/Audio/logo/carrozzeria.webp"
               }
             ],
             "subtitle": "フロントスピーカー交換プラン (H25.11～R1.8)(R1.8-R4.9)(R4.9-)",
@@ -13775,7 +13760,8 @@
           "image": "/images/Audio/Speaker/CSS674.webp",
           "standalonePrice": "40700",
           "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。このCSシリーズは純正ナビなどの内蔵アンプでも駆動しやすく、張りのある小気味良い音が出るスピーカーです。ツィーターは純正位置への取り付けとなります。",
-          "fixedPriceOverride": "20020"
+          "fixedPriceOverride": "20020",
+          "brandLogo": "/images/Audio/logo/kicker.webp"
         },
         {
           "id": "spk_1781422329912_7esz",
@@ -13789,7 +13775,8 @@
           "standalonePrice": "62700",
           "fixedPriceOverride": "０",
           "remarks": "フロントスピーカーをカロッツェリアの製品に交換し、再生能力をアップします。上位モデルの技術を受け継いだ高い解像度のサウンドが楽しめます。純正ツィーターはダッシュボード上への設置となります。",
-          "youtubeUrl": ""
+          "youtubeUrl": "",
+          "brandLogo": "/images/Audio/logo/carrozzeria.webp"
         }
       ],
       "subType": "standalone"
@@ -14580,7 +14567,7 @@
                 "value": ""
               },
               {
-                "title": "パーフェクトキット",
+                "title": "���ーフェクトキット",
                 "desc": "",
                 "value": ""
               },
@@ -14821,7 +14808,7 @@
                 "id": "spk_1781768522973_r8l5",
                 "brand": "KICKER",
                 "name": "KSS369+KSC3504",
-                "image": "/images/Audio/Speaker/KST2004+KSS269+KSC2704.webp",
+                "image": "/images/Audio/Speaker/KSS369+KSC3504.webp",
                 "mountingHoleSize": "",
                 "depthSize": "",
                 "hasGrille": "",
@@ -14852,7 +14839,8 @@
                     "desc": "",
                     "value": ""
                   }
-                ]
+                ],
+                "brandLogo": "/images/Audio/logo/kicker.webp"
               }
             ],
             "subtitle": "フロントスピーカー交換プラン\n(スーパーライブサウンド装着車)",
@@ -14881,7 +14869,7 @@
                 "id": "spk_1781771117481_twhu",
                 "brand": "ICKER ",
                 "name": "KSC3504+KSC6904",
-                "image": "/images/Audio/Speaker/KSS269.webp",
+                "image": "/images/Audio/Speaker/KSC3504+KSC6904.webp",
                 "mountingHoleSize": "",
                 "depthSize": "",
                 "hasGrille": "",
@@ -14912,7 +14900,8 @@
                     "desc": "",
                     "value": ""
                   }
-                ]
+                ],
+                "brandLogo": "/images/Audio/logo/kicker.webp"
               }
             ],
             "subtitleFontSize": 20,
@@ -14959,7 +14948,7 @@
           "id": "spk_1781768522973_r8l5",
           "brand": "KICKER",
           "name": "KSS369+KSC3504",
-          "image": "/images/Audio/Speaker/KST2004+KSS269+KSC2704.webp",
+          "image": "/images/Audio/Speaker/KSS369+KSC3504.webp",
           "mountingHoleSize": "",
           "depthSize": "",
           "hasGrille": "",
@@ -14990,7 +14979,1152 @@
               "desc": "",
               "value": ""
             }
+          ],
+          "brandLogo": "/images/Audio/logo/kicker.webp"
+        }
+      ],
+      "subType": "standalone"
+    },
+    {
+      "id": "line_1782375960911",
+      "name": "トヨタ　C－HR",
+      "parentCategoryId": "speaker_package",
+      "showInMenu": false,
+      "isTemplate": false,
+      "header": {
+        "mainTitle": "タント専用プラン",
+        "subTitle": "ベーシックライン",
+        "badge": "スピーカー交換パッケージ",
+        "description": "コストを抑えながら、効果的に音質アップできるタント専用のスピーカー交換プランです。\nダイハツ　タント(LA650S/LA660S) (R1.7～) \nダイハツ　タント(LA600S/LA610S)　(H25.10～R1.7)"
+      },
+      "pricing": {
+        "specialPrice": "81840",
+        "fixedPrice": 41800,
+        "normalPriceText": "117700",
+        "savingsText": "35,860円 お得!",
+        "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。",
+        "taxRate": 10
+      },
+      "sections": [
+        {
+          "id": "sec_banner_1782375960911_0",
+          "type": "banner",
+          "data": {
+            "title": "C－HR専用プラン",
+            "subTitle": "",
+            "image": "/images/Audio/vihicle/c-hr.webp",
+            "height": "400px",
+            "opacity": 0.5,
+            "badge": "スピーカー交換パッケージ",
+            "bgColor": "",
+            "description": "トヨタ　C－HRに合わせたスピーカー交換プランです。できるだけコストを抑えつつ、効果的に音質アップができるようにプランニングしています。カーオーディオに興味が湧いたときには、さらにグレードアップすることも可能です。"
+          }
+        },
+        {
+          "id": "sec_speakers_1782375960911_1",
+          "type": "speakers",
+          "data": {
+            "title": "",
+            "fixedPrice": "19250 ",
+            "speakers": [
+              {
+                "id": "spk_1781768522973_r8l5",
+                "brand": "KICKER",
+                "name": "CSS674",
+                "image": "/images/Audio/Speaker/CSS674.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "47190",
+                "fixedPriceOverride": "18700",
+                "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。取り付けにはC-HR専用に設計されたパーツを使用するため、ローコストながら効果の高いオーディオグレードアップが実現します。",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカー本体",
+                    "desc": "",
+                    "value": "47190"
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "専用取り付けキット",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取り付け工賃",
+                    "desc": "",
+                    "value": ""
+                  }
+                ],
+                "brandLogo": "/images/Audio/logo/kicker.webp"
+              }
+            ],
+            "subtitle": "フロントスピーカー交換プラン",
+            "hideSubtitle": false,
+            "hideTitle": true,
+            "subtitleAlign": "center",
+            "content": "",
+            "subtitleFontSize": 20,
+            "displayMode": "standard",
+            "sectionImage": "",
+            "sectionWidth": "full"
+          }
+        },
+        {
+          "id": "sec_floating_cta_1782375960911_3",
+          "type": "floating_cta",
+          "data": {}
+        },
+        {
+          "id": "sec_notes_1782375960911_4",
+          "type": "notes",
+          "data": {
+            "title": "施工に関する注意事項",
+            "items": [
+              "作業は<strong>半日ー1日お車をお預かり</strong>します（無料代車をご用意可能です）。"
+            ]
+          }
+        }
+      ],
+      "status": "published",
+      "slug": "car-category-CHR",
+      "features": {
+        "doorTuning": {
+          "image": "/images/Audio/Speaker/door-b.webp"
+        },
+        "baffle": {
+          "image": "/images/Audio/Speaker/baffle.webp"
+        },
+        "cable": {
+          "image": "/images/Audio/Speaker/ang-cable.webp"
+        }
+      },
+      "upgrades": {
+        "options": {
+          "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
+          "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
+        }
+      },
+      "speakers": [
+        {
+          "id": "spk_1781768522973_r8l5",
+          "brand": "KICKER",
+          "name": "CSS674",
+          "image": "/images/Audio/Speaker/CSS674.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "47190",
+          "fixedPriceOverride": "18700",
+          "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。取り付けにはC-HR専用に設計されたパーツを使用するため、ローコストながら効果の高いオーディオグレードアップが実現します。",
+          "youtubeUrl": "",
+          "showCardSummary": true,
+          "cardSummaryItems": [
+            {
+              "title": "スピーカー本体",
+              "desc": "",
+              "value": "47190"
+            },
+            {
+              "title": "軽防振",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "専用取り付けキット",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "取り付け工賃",
+              "desc": "",
+              "value": ""
+            }
+          ],
+          "brandLogo": "/images/Audio/logo/kicker.webp"
+        }
+      ],
+      "subType": "standalone"
+    },
+    {
+      "id": "line_1782376432625",
+      "name": "トヨタ　プリウス",
+      "parentCategoryId": "speaker_package",
+      "showInMenu": false,
+      "isTemplate": false,
+      "header": {
+        "mainTitle": "タント専用プラン",
+        "subTitle": "ベーシックライン",
+        "badge": "スピーカー交換パッケージ",
+        "description": "コストを抑えながら、効果的に音質アップできるタント専用のスピーカー交換プランです。\nダイハツ　タント(LA650S/LA660S) (R1.7～) \nダイハツ　タント(LA600S/LA610S)　(H25.10～R1.7)"
+      },
+      "pricing": {
+        "specialPrice": "81840",
+        "fixedPrice": 41800,
+        "normalPriceText": "117700",
+        "savingsText": "35,860円 お得!",
+        "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。",
+        "taxRate": 10
+      },
+      "sections": [
+        {
+          "id": "sec_banner_1782376432626_0",
+          "type": "banner",
+          "data": {
+            "title": "プリウス専用プラン",
+            "subTitle": "",
+            "image": "/images/Audio/vihicle/prius.webp",
+            "height": "400px",
+            "opacity": 0.5,
+            "badge": "スピーカー交換パッケージ",
+            "bgColor": "",
+            "description": "トヨタ　プリウスに合わせたスピーカー交換プランです。できるだけコストを抑えつつ、効果的に音質アップができるようにプランニングしています。カーオーディオに興味が湧いたときには、さらにグレードアップすることも可能です。"
+          }
+        },
+        {
+          "id": "sec_speakers_1782376432626_1",
+          "type": "speakers",
+          "data": {
+            "title": "",
+            "fixedPrice": "19250 ",
+            "speakers": [
+              {
+                "id": "spk_1781768522973_r8l5",
+                "brand": "KICKER",
+                "name": "KSS369+KSC3504",
+                "image": "/images/Audio/Speaker/KSC3504+KSC6704.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "70620",
+                "fixedPriceOverride": "18150",
+                "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。取り付けにはプリウス専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカー本体",
+                    "desc": "",
+                    "value": "70620"
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "専用取り付けキット",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取り付け工賃",
+                    "desc": "",
+                    "value": ""
+                  }
+                ],
+                "brandLogo": "/images/Audio/logo/kicker.webp"
+              }
+            ],
+            "subtitle": "フロントスピーカー交換プラン\n(50/60系)",
+            "hideSubtitle": false,
+            "hideTitle": true,
+            "subtitleAlign": "center",
+            "content": "",
+            "subtitleFontSize": 20,
+            "displayMode": "standard",
+            "sectionImage": "",
+            "sectionWidth": "half"
+          }
+        },
+        {
+          "id": "sec_speakers_1782376432626_2",
+          "type": "speakers",
+          "data": {
+            "title": "",
+            "subtitle": "フロントスピーカー交換プラン\n(30系)",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1781771117481_twhu",
+                "brand": "ICKER ",
+                "name": "CSS694",
+                "image": "/images/Audio/Speaker/CSS694.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "38500",
+                "fixedPriceOverride": "22550",
+                "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。このCSシリーズは純正ナビなどの内蔵アンプでも駆動しやすく、張りのある小気味良い音が出るスピーカーです。取り付けにはプリウス専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。ツィータは専用マウントを用いての純正位置取り付けとなります。",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカー本体",
+                    "desc": "",
+                    "value": "38500"
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "専用取り付けキット",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取付工賃",
+                    "desc": "",
+                    "value": ""
+                  }
+                ],
+                "brandLogo": "/images/Audio/logo/kicker.webp"
+              }
+            ],
+            "subtitleFontSize": 20,
+            "sectionWidth": "half"
+          }
+        },
+        {
+          "id": "sec_floating_cta_1782376432626_3",
+          "type": "floating_cta",
+          "data": {}
+        },
+        {
+          "id": "sec_notes_1782376432626_4",
+          "type": "notes",
+          "data": {
+            "title": "施工に関する注意事項",
+            "items": [
+              "作業は<strong>半日ー1日お車をお預かり</strong>します（無料代車をご用意可能です）。"
+            ]
+          }
+        }
+      ],
+      "status": "published",
+      "slug": "car-category-prius",
+      "features": {
+        "doorTuning": {
+          "image": "/images/Audio/Speaker/door-b.webp"
+        },
+        "baffle": {
+          "image": "/images/Audio/Speaker/baffle.webp"
+        },
+        "cable": {
+          "image": "/images/Audio/Speaker/ang-cable.webp"
+        }
+      },
+      "upgrades": {
+        "options": {
+          "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
+          "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
+        }
+      },
+      "speakers": [
+        {
+          "id": "spk_1781768522973_r8l5",
+          "brand": "KICKER",
+          "name": "KSS369+KSC3504",
+          "image": "/images/Audio/Speaker/KSC3504+KSC6704.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "70620",
+          "fixedPriceOverride": "18150",
+          "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。取り付けにはプリウス専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。",
+          "youtubeUrl": "",
+          "showCardSummary": true,
+          "cardSummaryItems": [
+            {
+              "title": "スピーカー本体",
+              "desc": "",
+              "value": "70620"
+            },
+            {
+              "title": "軽防振",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "専用取り付けキット",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "取り付け工賃",
+              "desc": "",
+              "value": ""
+            }
+          ],
+          "brandLogo": "/images/Audio/logo/kicker.webp"
+        }
+      ],
+      "subType": "standalone"
+    },
+    {
+      "id": "line_1782625941090",
+      "name": "スバル　レヴォーグ",
+      "parentCategoryId": "speaker_package",
+      "showInMenu": false,
+      "isTemplate": false,
+      "header": {
+        "mainTitle": "タント専用プラン",
+        "subTitle": "ベーシックライン",
+        "badge": "スピーカー交換パッケージ",
+        "description": "コストを抑えながら、効果的に音質アップできるタント専用のスピーカー交換プランです。\nダイハツ　タント(LA650S/LA660S) (R1.7～) \nダイハツ　タント(LA600S/LA610S)　(H25.10～R1.7)"
+      },
+      "pricing": {
+        "specialPrice": "81840",
+        "fixedPrice": 41800,
+        "normalPriceText": "117700",
+        "savingsText": "35,860円 お得!",
+        "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。",
+        "taxRate": 10
+      },
+      "sections": [
+        {
+          "id": "sec_banner_1782625941090_0",
+          "type": "banner",
+          "data": {
+            "title": "LEVORG(レヴォーグ)専用プラン",
+            "subTitle": "",
+            "image": "/images/Audio/vihicle/LEVORG.webp",
+            "height": "400px",
+            "opacity": 0.5,
+            "badge": "スピーカー交換パッケージ",
+            "bgColor": "",
+            "description": "スバル　レヴォーグに合わせたスピーカー交換プランです。できるだけコストを抑えつつ、効果的に音質アップができるようにプランニングしています。カーオーディオに興味が湧いたときには、さらにグレードアップすることも可能です。"
+          }
+        },
+        {
+          "id": "sec_speakers_1782625941090_1",
+          "type": "speakers",
+          "data": {
+            "title": "",
+            "fixedPrice": "19250 ",
+            "speakers": [
+              {
+                "id": "spk_1781768522973_r8l5",
+                "brand": "KICKER",
+                "name": "KSS269",
+                "image": "/images/Audio/Speaker/KSS269.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "78100",
+                "fixedPriceOverride": "18700",
+                "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。取り付けにはプリウス専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカー本体",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "専用取り付けキット",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取り付け工賃",
+                    "desc": "",
+                    "value": ""
+                  }
+                ],
+                "brandLogo": "/images/Audio/logo/kicker.webp"
+              },
+              {
+                "id": "spk_1782626514940_js6p",
+                "brand": "KICKER",
+                "brandLogo": "/images/Audio/logo/kicker.webp",
+                "name": "CSS674",
+                "image": "/images/Audio/Speaker/CSS674.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "40700",
+                "fixedPriceOverride": "18700",
+                "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。このCSシリーズは純正ナビなどの内蔵アンプでも駆動しやすく、張りのある小気味良い音が出るスピーカーです。取り付けにはレヴォーグ専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。ツィータは専用マウントを用いての純正位置取り付けとなります。",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカー本体",
+                    "desc": "",
+                    "value": "40700"
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "専用取り付けキット",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取り付け工賃",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              }
+            ],
+            "subtitle": "フロントスピーカー交換プラン",
+            "hideSubtitle": false,
+            "hideTitle": true,
+            "subtitleAlign": "center",
+            "content": "",
+            "subtitleFontSize": 20,
+            "displayMode": "standard",
+            "sectionImage": "",
+            "sectionWidth": "full"
+          }
+        },
+        {
+          "id": "sec_floating_cta_1782625941090_3",
+          "type": "floating_cta",
+          "data": {}
+        },
+        {
+          "id": "sec_notes_1782625941090_4",
+          "type": "notes",
+          "data": {
+            "title": "施工に関する注意事項",
+            "items": [
+              "作業は<strong>半日ー1日お車をお預かり</strong>します（無料代車をご用意可能です）。"
+            ]
+          }
+        }
+      ],
+      "status": "published",
+      "slug": "car-category-LEVORG",
+      "features": {
+        "doorTuning": {
+          "image": "/images/Audio/Speaker/door-b.webp"
+        },
+        "baffle": {
+          "image": "/images/Audio/Speaker/baffle.webp"
+        },
+        "cable": {
+          "image": "/images/Audio/Speaker/ang-cable.webp"
+        }
+      },
+      "upgrades": {
+        "options": {
+          "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
+          "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
+        }
+      },
+      "speakers": [
+        {
+          "id": "spk_1781768522973_r8l5",
+          "brand": "KICKER",
+          "name": "KSS269",
+          "image": "/images/Audio/Speaker/KSS269.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "78100",
+          "fixedPriceOverride": "18700",
+          "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。取り付けにはプリウス専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。",
+          "youtubeUrl": "",
+          "showCardSummary": true,
+          "cardSummaryItems": [
+            {
+              "title": "スピーカー本体",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "軽防振",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "専用取り付けキット",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "取り付け工賃",
+              "desc": "",
+              "value": ""
+            }
+          ],
+          "brandLogo": "/images/Audio/logo/kicker.webp"
+        },
+        {
+          "id": "spk_1782626514940_js6p",
+          "brand": "KICKER",
+          "brandLogo": "/images/Audio/logo/kicker.webp",
+          "name": "CSS674",
+          "image": "/images/Audio/Speaker/CSS674.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "40700",
+          "fixedPriceOverride": "18700",
+          "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。このCSシリーズは純正ナビなどの内蔵アンプでも駆動しやすく、張りのある小気味良い音が出るスピーカーです。取り付けにはレヴォーグ専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。ツィータは専用マウントを用いての純正位置取り付けとなります。",
+          "youtubeUrl": "",
+          "showCardSummary": true,
+          "cardSummaryItems": [
+            {
+              "title": "スピーカー本体",
+              "desc": "",
+              "value": "40700"
+            },
+            {
+              "title": "軽防振",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "専用取り付けキット",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "取り付け工賃",
+              "desc": "",
+              "value": ""
+            }
           ]
+        }
+      ],
+      "subType": "standalone"
+    },
+    {
+      "id": "line_1782627000756",
+      "name": "スバル　フォレスター",
+      "parentCategoryId": "speaker_package",
+      "showInMenu": false,
+      "isTemplate": false,
+      "header": {
+        "mainTitle": "タント専用プラン",
+        "subTitle": "ベーシックライン",
+        "badge": "スピーカー交換パッケージ",
+        "description": "コストを抑えながら、効果的に音質アップできるタント専用のスピーカー交換プランです。\nダイハツ　タント(LA650S/LA660S) (R1.7～) \nダイハツ　タント(LA600S/LA610S)　(H25.10～R1.7)"
+      },
+      "pricing": {
+        "specialPrice": "81840",
+        "fixedPrice": 41800,
+        "normalPriceText": "117700",
+        "savingsText": "35,860円 お得!",
+        "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。",
+        "taxRate": 10
+      },
+      "sections": [
+        {
+          "id": "sec_banner_1782627000756_0",
+          "type": "banner",
+          "data": {
+            "title": "フォレスター専用プラン",
+            "subTitle": "",
+            "image": "/images/Audio/vihicle/FORESTER.webp",
+            "height": "400px",
+            "opacity": 0.5,
+            "badge": "H30.7～（SK）",
+            "bgColor": "",
+            "description": "スバル　フォレスターに合わせたスピーカー交換プランです。できるだけコストを抑えつつ、効果的に音質アップができるようにプランニングしています。カーオーディオに興味が湧いたときには、さらにグレードアップすることも可能です。"
+          }
+        },
+        {
+          "id": "sec_speakers_1782627000756_1",
+          "type": "speakers",
+          "data": {
+            "title": "",
+            "fixedPrice": "19250 ",
+            "speakers": [
+              {
+                "id": "spk_1781768522973_r8l5",
+                "brand": "KICKER",
+                "name": "KSS269",
+                "image": "/images/Audio/Speaker/KSS269.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "78100",
+                "fixedPriceOverride": "18700",
+                "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。純正スピーカーは6x9インチサイズのオーバルスピーカーですのでそのメリットを活かすべくオーバルスピーカーをチョイスしています。取り付けにはフォレスター専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカー本体",
+                    "desc": "",
+                    "value": "78100"
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "専用取り付けキット",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取り付け工賃",
+                    "desc": "",
+                    "value": ""
+                  }
+                ],
+                "brandLogo": "/images/Audio/logo/kicker.webp"
+              }
+            ],
+            "subtitle": "フロントスピーカー交換プラン",
+            "hideSubtitle": false,
+            "hideTitle": true,
+            "subtitleAlign": "center",
+            "content": "",
+            "subtitleFontSize": 20,
+            "displayMode": "standard",
+            "sectionImage": "",
+            "sectionWidth": "full"
+          }
+        },
+        {
+          "id": "sec_floating_cta_1782627000756_2",
+          "type": "floating_cta",
+          "data": {}
+        },
+        {
+          "id": "sec_notes_1782627000756_3",
+          "type": "notes",
+          "data": {
+            "title": "施工に関する注意事項",
+            "items": [
+              "作業は<strong>半日ー1日お車をお預かり</strong>します（無料代車をご用意可能です）。"
+            ]
+          }
+        }
+      ],
+      "status": "published",
+      "slug": "car-category-FORESTER",
+      "features": {
+        "doorTuning": {
+          "image": "/images/Audio/Speaker/door-b.webp"
+        },
+        "baffle": {
+          "image": "/images/Audio/Speaker/baffle.webp"
+        },
+        "cable": {
+          "image": "/images/Audio/Speaker/ang-cable.webp"
+        }
+      },
+      "upgrades": {
+        "options": {
+          "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
+          "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
+        }
+      },
+      "speakers": [
+        {
+          "id": "spk_1781768522973_r8l5",
+          "brand": "KICKER",
+          "name": "KSS269",
+          "image": "/images/Audio/Speaker/KSS269.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "78100",
+          "fixedPriceOverride": "18700",
+          "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。純正スピーカーは6x9インチサイズのオーバルスピーカーですのでそのメリットを活かすべくオーバルスピーカーをチョイスしています。取り付けにはフォレスター専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります",
+          "youtubeUrl": "",
+          "showCardSummary": true,
+          "cardSummaryItems": [
+            {
+              "title": "スピーカー本体",
+              "desc": "",
+              "value": "78100"
+            },
+            {
+              "title": "軽防振",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "専用取り付けキット",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "取り付け工賃",
+              "desc": "",
+              "value": ""
+            }
+          ],
+          "brandLogo": "/images/Audio/logo/kicker.webp"
+        }
+      ],
+      "subType": "standalone"
+    },
+    {
+      "id": "line_1782627979003",
+      "name": "JEEP RENEGADE/RENEGADE 4ex",
+      "parentCategoryId": "speaker_package",
+      "showInMenu": false,
+      "isTemplate": false,
+      "header": {
+        "mainTitle": "タント専用プラン",
+        "subTitle": "ベーシックライン",
+        "badge": "スピーカー交換パッケージ",
+        "description": "コストを抑えながら、効果的に音質アップできるタント専用のスピーカー交換プランです。\nダイハツ　タント(LA650S/LA660S) (R1.7～) \nダイハツ　タント(LA600S/LA610S)　(H25.10～R1.7)"
+      },
+      "pricing": {
+        "specialPrice": "81840",
+        "fixedPrice": 41800,
+        "normalPriceText": "117700",
+        "savingsText": "35,860円 お得!",
+        "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。",
+        "taxRate": 10
+      },
+      "sections": [
+        {
+          "id": "sec_banner_1782627979003_0",
+          "type": "banner",
+          "data": {
+            "title": "RENEGADE/RENEGADE 4ex専用プラン",
+            "subTitle": "",
+            "image": "/images/Audio/vihicle/RENEGADE.webp",
+            "height": "400px",
+            "opacity": 0.5,
+            "badge": "2015～",
+            "bgColor": "",
+            "description": "JEEP RENEGADE/RENEGADE 4exに合わせたスピーカー交換プランです。できるだけコストを抑えつつ、効果的に音質アップができるようにプランニングしています。カーオーディオに興味が湧いたときには、さらにグレードアップすることも可能です。"
+          }
+        },
+        {
+          "id": "sec_speakers_1782627979003_1",
+          "type": "speakers",
+          "data": {
+            "title": "",
+            "fixedPrice": "19250 ",
+            "speakers": [
+              {
+                "id": "spk_1781768522973_r8l5",
+                "brand": "KICKER",
+                "name": "KSS269",
+                "image": "/images/Audio/Speaker/KSS269.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "72600 ",
+                "fixedPriceOverride": "18700",
+                "remarks": "フロントスピーカーをアメリカのブランドKICKERへ交換して再生能力アップ。純正スピーカーとのトレードイン交換取り付けで車両との親和性が高く、ダッシュに取り付けるスピーカーはワイドレンジなので情報量アップで音質の差は歴然！",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカー本体",
+                    "desc": "",
+                    "value": "72600"
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "パーフェクトキット",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取り付け工賃",
+                    "desc": "",
+                    "value": ""
+                  }
+                ],
+                "brandLogo": "/images/Audio/logo/kicker.webp"
+              }
+            ],
+            "subtitle": "フロントスピーカー交換プラン",
+            "hideSubtitle": false,
+            "hideTitle": true,
+            "subtitleAlign": "center",
+            "content": "",
+            "subtitleFontSize": 20,
+            "displayMode": "standard",
+            "sectionImage": "",
+            "sectionWidth": "full"
+          }
+        },
+        {
+          "id": "sec_floating_cta_1782627979003_2",
+          "type": "floating_cta",
+          "data": {}
+        },
+        {
+          "id": "sec_notes_1782627979003_3",
+          "type": "notes",
+          "data": {
+            "title": "施工に関する注意事項",
+            "items": [
+              "作業は<strong>半日ー1日お車をお預かり</strong>します（無料代車をご用意可能です）。"
+            ]
+          }
+        }
+      ],
+      "status": "published",
+      "slug": "car-category-renegade",
+      "features": {
+        "doorTuning": {
+          "image": "/images/Audio/Speaker/door-b.webp"
+        },
+        "baffle": {
+          "image": "/images/Audio/Speaker/baffle.webp"
+        },
+        "cable": {
+          "image": "/images/Audio/Speaker/ang-cable.webp"
+        }
+      },
+      "upgrades": {
+        "options": {
+          "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
+          "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
+        }
+      },
+      "speakers": [
+        {
+          "id": "spk_1781768522973_r8l5",
+          "brand": "KICKER",
+          "name": "KSS269",
+          "image": "/images/Audio/Speaker/KSS269.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "72600 ",
+          "fixedPriceOverride": "18700",
+          "remarks": "フロントスピーカーをアメリカのブランドKICKERへ交換して再生能力アップ。純正スピーカーとのトレードイン交換取り付けで車両との親和性が高く、ダッシュに取り付けるスピーカーはワイドレンジなので情報量アップで音質の差は歴然！",
+          "youtubeUrl": "",
+          "showCardSummary": true,
+          "cardSummaryItems": [
+            {
+              "title": "スピーカー本体",
+              "desc": "",
+              "value": "72600"
+            },
+            {
+              "title": "軽防振",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "パーフェクトキット",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "取り付け工賃",
+              "desc": "",
+              "value": ""
+            }
+          ],
+          "brandLogo": "/images/Audio/logo/kicker.webp"
+        }
+      ],
+      "subType": "standalone"
+    },
+    {
+      "id": "line_1782628378899",
+      "name": "JEEP COMPASS",
+      "parentCategoryId": "speaker_package",
+      "showInMenu": false,
+      "isTemplate": false,
+      "header": {
+        "mainTitle": "タント専用プラン",
+        "subTitle": "ベーシックライン",
+        "badge": "スピーカー交換パッケージ",
+        "description": "コストを抑えながら、効果的に音質アップできるタント専用のスピーカー交換プランです。\nダイハツ　タント(LA650S/LA660S) (R1.7～) \nダイハツ　タント(LA600S/LA610S)　(H25.10～R1.7)"
+      },
+      "pricing": {
+        "specialPrice": "81840",
+        "fixedPrice": 41800,
+        "normalPriceText": "117700",
+        "savingsText": "35,860円 お得!",
+        "note": "※KICKER CSS674（40,700円）を選択した場合の例。選ぶスピーカーの本体価格により総額は変動します。",
+        "taxRate": 10
+      },
+      "sections": [
+        {
+          "id": "sec_banner_1782628378899_0",
+          "type": "banner",
+          "data": {
+            "title": "COMPASS専用プラン",
+            "subTitle": "",
+            "image": "/images/Audio/vihicle/COMPASS.webp",
+            "height": "400px",
+            "opacity": 0.5,
+            "badge": "2017～",
+            "bgColor": "",
+            "description": "JEEP COMPASSに合わせたスピーカー交換プランです。できるだけコストを抑えつつ、効果的に音質アップができるようにプランニングしています。カーオーディオに興味が湧いたときには、さらにグレードアップすることも可能です。"
+          }
+        },
+        {
+          "id": "sec_speakers_1782628378899_1",
+          "type": "speakers",
+          "data": {
+            "title": "",
+            "fixedPrice": "19250 ",
+            "speakers": [
+              {
+                "id": "spk_1781768522973_r8l5",
+                "brand": "KICKER",
+                "name": "KSS269",
+                "image": "/images/Audio/Speaker/KSS269.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "72600 ",
+                "fixedPriceOverride": "18700",
+                "remarks": "フロントスピーカーをアメリカのブランドKICKERへ交換して再生能力アップ。純正スピーカーとのトレードイン交換取り付けで車両との親和性が高く、ダッシュに取り付けるスピーカーはワイドレンジなので情報量アップで音質の差は歴然！",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカー本体",
+                    "desc": "",
+                    "value": "72600"
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "パーフェクトキット",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取り付け工賃",
+                    "desc": "",
+                    "value": ""
+                  }
+                ],
+                "brandLogo": "/images/Audio/logo/kicker.webp"
+              }
+            ],
+            "subtitle": "フロントスピーカー交換プラン",
+            "hideSubtitle": false,
+            "hideTitle": true,
+            "subtitleAlign": "center",
+            "content": "",
+            "subtitleFontSize": 20,
+            "displayMode": "standard",
+            "sectionImage": "",
+            "sectionWidth": "full"
+          }
+        },
+        {
+          "id": "sec_floating_cta_1782628378899_2",
+          "type": "floating_cta",
+          "data": {}
+        },
+        {
+          "id": "sec_notes_1782628378899_3",
+          "type": "notes",
+          "data": {
+            "title": "施工に関する注意事項",
+            "items": [
+              "作業は<strong>半日ー1日お車をお預かり</strong>します（無料代車をご用意可能です）。"
+            ]
+          }
+        }
+      ],
+      "status": "published",
+      "slug": "car-category-compass",
+      "features": {
+        "doorTuning": {
+          "image": "/images/Audio/Speaker/door-b.webp"
+        },
+        "baffle": {
+          "image": "/images/Audio/Speaker/baffle.webp"
+        },
+        "cable": {
+          "image": "/images/Audio/Speaker/ang-cable.webp"
+        }
+      },
+      "upgrades": {
+        "options": {
+          "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
+          "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
+        }
+      },
+      "speakers": [
+        {
+          "id": "spk_1781768522973_r8l5",
+          "brand": "KICKER",
+          "name": "KSS269",
+          "image": "/images/Audio/Speaker/KSS269.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "72600 ",
+          "fixedPriceOverride": "18700",
+          "remarks": "フロントスピーカーをアメリカのブランドKICKERへ交換して再生能力アップ。純正スピーカーとのトレードイン交換取り付けで車両との親和性が高く、ダッシュに取り付けるスピーカーはワイドレンジなので情報量アップで音質の差は歴然！",
+          "youtubeUrl": "",
+          "showCardSummary": true,
+          "cardSummaryItems": [
+            {
+              "title": "スピーカー本体",
+              "desc": "",
+              "value": "72600"
+            },
+            {
+              "title": "軽防振",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "パーフェクトキット",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "取り付け工賃",
+              "desc": "",
+              "value": ""
+            }
+          ],
+          "brandLogo": "/images/Audio/logo/kicker.webp"
         }
       ],
       "subType": "standalone"
