@@ -2189,6 +2189,40 @@ const AudioPlanManager = () => {
                                     <option value={4}>4列 (4 Columns)</option>
                                 </select>
                             </div>
+                            <div className="flex items-center gap-2">
+                                <span className="text-[10px] font-bold text-zinc-400">サブタイトル色:</span>
+                                <input 
+                                    type="text"
+                                    value={section.data.subtitleColor || ''}
+                                    onChange={e => updateSectionData(sIdx, { subtitleColor: e.target.value })}
+                                    className="w-20 bg-black border border-zinc-800 rounded px-2 py-1 text-white text-[10px] font-bold outline-none"
+                                    placeholder="例: #3B82F6"
+                                />
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <span className="text-[10px] font-bold text-zinc-400">下部余白:</span>
+                                <select 
+                                    value={section.data.borderSpacing || 'standard'}
+                                    onChange={e => updateSectionData(sIdx, { borderSpacing: e.target.value })}
+                                    className="bg-black border border-zinc-800 rounded px-2 py-1 text-white text-[10px] font-bold outline-none"
+                                >
+                                    <option value="standard">標準</option>
+                                    <option value="narrow">狭め</option>
+                                    <option value="wide">広め</option>
+                                </select>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <span className="text-[10px] font-bold text-zinc-400">書体:</span>
+                                <select 
+                                    value={section.data.subtitleFont || 'sans'}
+                                    onChange={e => updateSectionData(sIdx, { subtitleFont: e.target.value })}
+                                    className="bg-black border border-zinc-800 rounded px-2 py-1 text-white text-[10px] font-bold outline-none"
+                                >
+                                    <option value="sans">標準ゴシック</option>
+                                    <option value="serif">明朝体 (Serif)</option>
+                                    <option value="mono">等幅 (Mono)</option>
+                                </select>
+                            </div>
                         </div>
 
                         {/* Package Summary Toggle & Config */}

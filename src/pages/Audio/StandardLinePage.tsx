@@ -379,6 +379,16 @@ export const StandardLinePage: React.FC = () => {
                   gridContainerClass = "grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto";
                 }
 
+                const spacing = section.data?.borderSpacing || 'standard';
+                let spacingClass = "pb-8 mb-16";
+                if (spacing === 'narrow') spacingClass = "pb-4 mb-8";
+                if (spacing === 'wide') spacingClass = "pb-12 mb-20";
+
+                const font = section.data?.subtitleFont || 'sans';
+                let fontClass = "font-sans";
+                if (font === 'serif') fontClass = "font-serif";
+                if (font === 'mono') fontClass = "font-mono";
+
                 const wrapperPadding = sectionWidth === 'full'
                   ? "max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-24 w-full"
                   : "px-4 md:px-6 lg:px-8 py-16 w-full h-full flex flex-col justify-start bg-white border border-gray-100 rounded-[2.5rem] shadow-sm";
@@ -387,7 +397,7 @@ export const StandardLinePage: React.FC = () => {
                   <div key={section.id} className={wrapperPadding}>
                     <div className={(sectionWidth === 'full' ? 'flex-grow' : '') + " flex flex-col justify-start w-full"}>
                       {(!section.data?.hideTitle || !section.data?.hideSubtitle) && (
-                        <div className="flex flex-col md:flex-row items-baseline justify-between gap-4 mb-16 border-b-4 border-gray-900 pb-8 min-h-[90px] md:min-h-[120px] lg:min-h-[140px]">
+                        <div className={`flex flex-col md:flex-row items-baseline justify-between gap-4 border-b-4 border-gray-900 min-h-[90px] md:min-h-[120px] lg:min-h-[140px] ${spacingClass}`}>
                           {!section.data?.hideTitle && (
                             <h2 className="text-5xl md:text-7xl font-black text-gray-900 italic tracking-tighter uppercase leading-none" dangerouslySetInnerHTML={{ __html: sectionTitle.includes('<br') || sectionTitle.includes('\n') ? sectionTitle.replace(/\n/g, '<br />') : sectionTitle }} />
                           )}
@@ -403,8 +413,11 @@ export const StandardLinePage: React.FC = () => {
                             
                             return (
                                <p 
-                                 className={`text-gray-500 font-black tracking-widest uppercase text-[15px] whitespace-pre-line ${alignClasses}`} 
-                                 style={section.data?.subtitleFontSize ? { fontSize: `${section.data.subtitleFontSize}px` } : {}}
+                                 className={`text-gray-500 font-black tracking-widest uppercase text-[15px] whitespace-pre-line ${alignClasses} ${fontClass}`} 
+                                 style={{
+                                   fontSize: section.data?.subtitleFontSize ? `${section.data.subtitleFontSize}px` : undefined,
+                                   color: section.data?.subtitleColor || undefined
+                                 }}
                                  dangerouslySetInnerHTML={{ __html: sectionSubtitle.includes('\n') || sectionSubtitle.includes('<br') ? sectionSubtitle.replace(/\n/g, '<br />') : sectionSubtitle }} 
                                />
                             );
