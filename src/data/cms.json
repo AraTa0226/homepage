@@ -202,13 +202,30 @@
       "showDescriptionInList": true,
       "items": [
         {
-          "id": "line_1779235970105",
-          "name": "新規オーディオプラン",
-          "badge": "NEW PACKAGE",
+          "id": "easy-bass",
+          "name": "お手軽低音増強セット",
+          "badge": "パワードウーハー",
           "description": "プランの特徴や魅力を伝える紹介文を入力してください。",
-          "link": "/sp-custom-766",
-          "features": [],
-          "price": "100000"
+          "link": "/poweredsub",
+          "features": [
+            "シート下設置可",
+            "アンプ内蔵タイプ",
+            "取付工賃込"
+          ],
+          "price": "42000"
+        },
+        {
+          "id": "easy-bass-plus",
+          "name": "お手軽低音増強セット”プラス”",
+          "badge": "本格低音",
+          "description": "",
+          "link": "/easy-bass-plus",
+          "features": [
+            "BOX+ウーハー",
+            "別体アンプ",
+            "取付工賃込"
+          ],
+          "price": "110000"
         },
         {
           "id": "compact-amp",
@@ -235,45 +252,6 @@
             "解像度劇的向上"
           ],
           "price": "55000"
-        },
-        {
-          "id": "easy-bass",
-          "name": "お手軽低音増強セット",
-          "badge": "パワードウーハー",
-          "description": "",
-          "link": "/easy-bass",
-          "features": [
-            "シート下設置可",
-            "アンプ内蔵タイプ",
-            "取付工賃込"
-          ],
-          "price": "42000"
-        },
-        {
-          "id": "easy-bass-plus",
-          "name": "お手軽低音増強セット”プラス”",
-          "badge": "本格低音",
-          "description": "",
-          "link": "/easy-bass-plus",
-          "features": [
-            "BOX+ウーハー",
-            "別体アンプ",
-            "取付工賃込"
-          ],
-          "price": "110000"
-        },
-        {
-          "id": "line_1779248121851_680",
-          "name": "本格サブウーハーインストール",
-          "badge": "重低音増強",
-          "description": "",
-          "link": "/sp-17586",
-          "features": [
-            "本格的重低音",
-            "カスタムBOX対応",
-            "アンプ組み合わせ"
-          ],
-          "price": "ASK"
         }
       ],
       "images": []
@@ -1086,7 +1064,7 @@
             "純正ミラー交換タイプ",
             "駐車録画モード標準装備"
           ],
-          "description": "後方視界を確実に映すアルパインの最新10型デジタルミラー。車外設置専用のWQHD（370万画素）カメラを採用。雨天時や夜間のスモークガラス越しでは困難な視認性も、車外カメラなら常にクリアに確保。STARVIS 2搭載により、あらゆる環境下で自然で鮮明な映像を提供します。",
+          "description": "後方視界を確実に映すアルパインの最新10型デジタルミラー。���������外設置専用のWQHD（370万画素）カメラを採用。雨天時や夜間のスモークガラス越しでは困難な視認性も、車外カメラなら常にクリアに確保。STARVIS 2搭載により、あらゆる環境下で自然で鮮明な映像を提供します。",
           "specSummary": [
             {
               "label": "液晶サイズ",
@@ -1095,7 +1073,7 @@
             },
             {
               "label": "リア解像度",
-              "value": "370万画素 WQHD",
+              "value": "370万���素 WQHD",
               "icon": "Camera"
             },
             {
@@ -1729,7 +1707,7 @@
       "updatedAt": "2026-04-30T07:29:55.047Z",
       "publishedAt": "2026-04-29T21:58:14.144Z",
       "revisedAt": "2026-04-30T07:29:55.047Z",
-      "category": "LEXUS LX600 専用パッケージ",
+      "category": "LEXUS LX600 専用��ッケージ",
       "type": [
         "security"
       ],
@@ -2339,7 +2317,7 @@
       "items": [
         {
           "fieldId": "item",
-          "name": "Grgo ZVT II ＋ スマキー連動/スマクロ",
+          "name": "Grgo ZVT II ＋ �������������������������マ��������������������������������������������������連動/スマクロ",
           "price": "299,600",
           "badge": "おすすめ",
           "description": "傾斜センサー含むフルセンサー構成にスマートキー連動をプラスし�������������������������������������������������������������������������������������������������������������������������������������������������������������������������������利便性を高めた一台。",
@@ -2575,14 +2553,14 @@
           "description": "既存ナビの外部入力を利用。HDMI入力があれば高音質伝送が可能。接続用ケーブルが別途必要です。"
         },
         {
-          "name": "プランC：USBトランスポート追加",
+          "name": "���ラ���C：USBトランスポート追加",
           "price": "0",
           "description": "デジタル信号のまま取り出し、高音質なD/Aコンバーターを通して接続。音質が大きく改善されます。"
         },
         {
           "name": "プランD：ハイレゾ対応ナビ導入",
           "price": "0",
-          "description": "操作性も音質も抜群。SDカードやUSBメモリを差し込むだけでスマートに再生。タッチパネル操作も可能。"
+          "description": "操作性も音質も��群。SDカードやUSBメモリを差し込むだけでスマートに再生。タッチパネル操作も可能。"
         },
         {
           "name": "プランE：ハイレゾ対応DSP構築",
@@ -7683,7 +7661,7 @@
         "name": "GZIC 650FX",
         "image": "/images/Audio/Speaker/GZIC 650FX.webp",
         "standalonePrice": "48400",
-        "remarks": "パッシブあり /バイアンプ可 /フラッシュマウントのみ",
+        "remarks": "パッシ��あり /バイアンプ可 /フラッシュマウントのみ",
         "mountingHoleSize": "142.5",
         "depthSize": "44",
         "hasGrille": "あり",
@@ -10182,7 +10160,7 @@
               }
             ],
             "title": "スピーカー交換例",
-            "description": "BMWの純正シ�������������������������はフロントに10cm程度のスぴーかー、ツィーターなし、シート下のウーハーで低音を補うという構成がほとんどです。 加工を抑えてコストを抑えた改善方法として、まずはフロントスピーカーの交換とツィーターの追加。さらに適合車種であればウーハーも交換することで、ハリのあるサウンドに生まれ変わります。このパッケージではトレードインで交換可能なスピーカーをご紹介しています。",
+            "description": "BMWの純正シ�������テムはフロントに10cm程度のスぴーかー、ツィーターなし、シート下のウーハーで低音を補うという構成がほとんどです。 加工を抑えてコストを抑えた改善方法として、まずはフロントスピーカーの交換とツィーターの追加。さらに適合車種であればウーハーも交換することで、ハリのあるサウンドに生まれ変わります。このパッケージではトレードインで交換可能なスピーカーをご紹介しています。",
             "doorTuning": {
               "title": "ツイーター",
               "desc": "純正ツィーター非装着車の場合、別途純正部品が必要になる場合があります。",
@@ -11433,7 +11411,7 @@
           "data": {
             "title": "車種別スピーカー交換プラン",
             "subTitle": "",
-            "image": "",
+            "image": "/images/Audio/vihicle/vihicle.webp",
             "height": "400px",
             "opacity": 0.5,
             "badge": "スピーカー交換パッケージ",
@@ -11661,45 +11639,10 @@
             "image": "/images/Audio/vihicle/tanto.webp",
             "height": "400px",
             "opacity": 0.5,
-            "badge": "ダイハツ　タント(LA650S/LA660S) (R1.7～)  ダイハツ　タント(LA600S/LA610S)　(H25.10～R1.7)",
+            "badge": "ダイハツ　タント(LA650S/LA660S) (R1.7～)  \nダイハツ　タント(LA600S/LA610S)　(H25.10～R1.7)",
             "bgColor": "",
-            "description": "コストを抑えながら、効果的に音質アップできるタント専用のスピーカー交換プランです。\n"
+            "description": "ダイハツ タントに合わせたスピーカー交換プランです。できるだけコストを抑えて、しかし効果的に音質アップができるようにプランニングしています\n"
           }
-        },
-        {
-          "id": "sec_pkg_summary",
-          "type": "package_summary",
-          "data": {
-            "title": "このプランに含まれる内容",
-            "items": [
-              {
-                "title": "スピーカー本体　",
-                "desc": "KICKER　CSS674",
-                "value": "40700円税込み"
-              },
-              {
-                "title": "軽防振",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "タント専用取付キット一式",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "取り付け工賃",
-                "desc": "",
-                "value": ""
-              }
-            ],
-            "subtitle": ""
-          }
-        },
-        {
-          "id": "sec_1778923293452",
-          "type": "floating_cta",
-          "data": {}
         },
         {
           "id": "sec_speakers",
@@ -11714,13 +11657,38 @@
                 "name": "CSS674",
                 "image": "/images/Audio/Speaker/CSS674.webp",
                 "standalonePrice": "40700",
-                "remarks": ""
+                "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。このCSシリーズは純正ナビなどの内蔵アンプでも駆動しやすく、張りのある小気味良い音が出るスピーカーです。ツィーターは純正位置への取り付けです。",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカー本体",
+                    "desc": "",
+                    "value": "40700"
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "タント専用取付キット一式",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取り付け工賃",
+                    "desc": "",
+                    "value": ""
+                  }
+                ],
+                "brandLogo": "/images/Audio/logo/kicker.webp"
               }
             ],
-            "subtitle": "アメリカの人気ブランドKICKERのCSシリーズに交換します。\n純正ナビの内蔵アンプでも駆動しやすく、張りのある小気味よいサウンドが手軽に楽しめます。\nツィーターは純正位置への取り付けです。",
+            "subtitle": "フロントスピーカー交換プラン",
             "hideSubtitle": false,
             "hideTitle": true,
-            "subtitleAlign": "center"
+            "subtitleAlign": "center",
+            "subtitleFontSize": 20
           }
         },
         {
@@ -11732,6 +11700,11 @@
               "作業は<strong>半日ー1日お車をお預かり</strong>します（無料代車をご用意可能です）。"
             ]
           }
+        },
+        {
+          "id": "sec_1778923293452",
+          "type": "floating_cta",
+          "data": {}
         }
       ],
       "status": "published",
@@ -11760,121 +11733,1287 @@
           "name": "CSS674",
           "image": "/images/Audio/Speaker/CSS674.webp",
           "standalonePrice": "40700",
-          "remarks": ""
+          "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。このCSシリーズは純正ナビなどの内蔵アンプでも駆動しやすく、張りのある小気味良い音が出るスピーカーです。ツィーターは純正位置への取り付けです。",
+          "showCardSummary": true,
+          "cardSummaryItems": [
+            {
+              "title": "スピーカー本体",
+              "desc": "",
+              "value": "40700"
+            },
+            {
+              "title": "軽防振",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "タント専用取付キット一式",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "取り付け工賃",
+              "desc": "",
+              "value": ""
+            }
+          ],
+          "brandLogo": "/images/Audio/logo/kicker.webp"
         }
       ],
       "subType": "standalone"
     },
     {
-      "id": "line_1779235970105",
-      "slug": "sp-custom-766",
-      "name": "新規オーディオプラン",
+      "id": "easy-bass",
+      "slug": "poweredsub",
+      "name": "お手軽低音増強セット",
       "parentCategoryId": "bass_power",
-      "publishStatus": "draft",
+      "publishStatus": "published",
+      "showInMenu": true,
+      "subType": "package",
       "header": {
-        "badge": "NEW PACKAGE",
-        "mainTitle": "CUSTOM LINE",
-        "subTitle": "オリジナルオーディオプラン",
+        "badge": "パワードウーハー",
+        "mainTitle": "お手軽低音増強セット",
+        "subTitle": "サブ",
         "description": "プランの特徴や魅力を伝える紹介文を入力してください。"
       },
       "pricing": {
-        "specialPrice": "100000",
-        "fixedPrice": 30000,
-        "normalPriceText": "通常目安: 150,000円",
-        "savingsText": "約 50,000円 お得!",
-        "note": "※構成内容による価格変動などの注釈文を入力してください。",
+        "specialPrice": "42000",
+        "fixedPrice": 0,
+        "normalPriceText": "",
+        "savingsText": "",
+        "note": "",
         "taxRate": 10
       },
-      "speakers": [],
+      "speakers": [
+        {
+          "id": "spk_1782887588331_vmwa",
+          "brand": "alpine",
+          "brandLogo": "/images/Audio/logo/alpine.webp",
+          "name": "SWE-1080",
+          "image": "/images/Audio/sub/SWE-1080.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "42000",
+          "fixedPriceOverride": "0",
+          "remarks": "ローコストながらアルミダイキャストボディ採用\nパワフルなベースサウンドを再生",
+          "youtubeUrl": "",
+          "showCardSummary": true,
+          "cardSummaryItems": [
+            {
+              "title": "ハイレベルインプット対応",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "340cm（幅）",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "78cm（高）",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "230cm（億）",
+              "desc": "",
+              "value": ""
+            }
+          ],
+          "logoBg": "light"
+        }
+      ],
       "sections": [
         {
-          "id": "sec_hero_17792359701051",
-          "type": "hero",
+          "id": "sec_banner_1782886352213_djb7",
+          "type": "banner",
           "data": {
-            "badge": "NEW PACKAGE",
-            "title": "CUSTOM LINE",
-            "subtitle": "オリジナルオーディオプラン",
-            "desc": "プランの特徴や魅力を伝える紹介文を入力してください。",
-            "image": "/images/Audio/Speaker/door-b.webp",
-            "imageOpacity": 0.3,
-            "useDarkTheme": true,
-            "bgColor": ""
+            "title": "お手軽低音増強セット",
+            "badge": "パワードウーハー",
+            "opacity": 0.4,
+            "height": "400px",
+            "image": "/images/Audio/sub/sub.webp",
+            "bgColor": "#1e3a8a"
           }
         },
         {
-          "id": "sec_pricing_17792359701052",
-          "type": "pricing",
+          "id": "sec_text_1782886973955_pmxq",
+          "type": "text",
           "data": {
-            "specialPrice": "100000",
-            "fixedPrice": 30000,
-            "normalPriceText": "通常目安: 150,000円",
-            "savingsText": "約 50,000円 お得!",
-            "note": "※構成内容による価格変動などの注釈文を入力してください。",
-            "taxRate": 10
+            "title": "",
+            "content": "<p style=\"font-size:20px; text-align:center; line-height:1.8;\">\n建物と同じように、音楽にも基礎となる低域はとても重要です。<br>\nしっかりとした低音(ウーハー)は音楽に臨場感を与えてくれます。<br>\nここでご紹介するウーハーはアンプ内蔵タイプのパワードウーハー（チューンアップウーハー）。<br>\nシート下に収まるようなコンパクトなウーハーからパワードタイプとは思えない本格的なサウンドのウーハーまで取り付け込みでご提案しています。\n</p>"
           }
         },
         {
-          "id": "sec_features_17792359701053",
-          "type": "features",
+          "id": "sec_package_summary_1782887423786_jzf9",
+          "type": "package_summary",
           "data": {
-            "doorTuning": {
-              "title": "ドアチューニング詳細",
-              "desc": "施工内容を入力してください。",
-              "image": "/images/Audio/Speaker/door-b.webp"
-            },
-            "baffle": {
-              "title": "インナーバッフル詳細",
-              "desc": "施工内容を入力してください。",
-              "image": "/images/Audio/Speaker/baffle.webp"
-            },
-            "cable": {
-              "title": "スピーカーケーブル詳細",
-              "desc": "施工内容を入力してください。",
-              "image": "/images/Audio/Speaker/ang-cable.webp"
-            }
-          }
-        },
-        {
-          "id": "sec_upgrades_17792359701054",
-          "type": "upgrades",
-          "data": {
-            "title": "アップグレードオプション",
-            "subtitle": "さらなる音質向上のためのメニュー",
-            "courses": [
+            "title": "パッケージ内容",
+            "subtitle": "",
+            "items": [
               {
-                "name": "ベース → A コース",
-                "price": "+¥11,000",
-                "desc": "コース詳細説明文",
-                "pop": false
+                "title": "パワードウーハー",
+                "desc": "",
+                "value": ""
               },
               {
-                "name": "ベース → S コース",
-                "price": "+¥33,000",
-                "desc": "高密度特別施工コース",
-                "pop": true
+                "title": "必要なケーブル(不足ケーブルを追加します)",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "ワイヤリング工賃",
+                "desc": "",
+                "value": ""
               }
-            ],
-            "options": {
-              "metalBaffleDiscount": "20% OFF",
-              "tweeterMountPrice": "¥46,200〜",
-              "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
-              "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp",
-              "metalBaffleDesc": "高剛性メタルインナーバッフルによる制振効果。",
-              "tweeterMountDesc": "ツィーターの角度調整と理想 of 定位を実現する埋込加工。"
-            }
+            ]
           }
         },
         {
-          "id": "sec_speakers_17792359701055",
+          "id": "sec_speakers_1782884063479_mnpw",
           "type": "speakers",
           "data": {
-            "title": "Speaker Lineup",
-            "subtitle": "試聴可能スピーカーユニット一覧",
-            "hideTitle": false,
+            "title": "42",
+            "subtitle": "42セット",
+            "hideTitle": true,
             "hideSubtitle": false,
-            "subtitleAlign": "right",
-            "fixedPrice": 30000,
-            "speakers": []
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1782887588331_vmwa",
+                "brand": "alpine",
+                "brandLogo": "/images/Audio/logo/alpine.webp",
+                "name": "SWE-1080",
+                "image": "/images/Audio/sub/SWE-1080.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "42000",
+                "fixedPriceOverride": "0",
+                "remarks": "ローコストながらアルミダイキャストボディ採用\nパワフルなベースサウンドを再生",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "340cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "78cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "230cm（億）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ],
+                "logoBg": "light"
+              }
+            ],
+            "showPackageSummary": false,
+            "packageSummaryItems": [
+              {
+                "title": "パワードウーハー",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "必要なケーブル(不足ケーブルを追加します)",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "ワイヤリング工賃",
+                "desc": "",
+                "value": ""
+              }
+            ],
+            "subtitleFontSize": 20,
+            "sectionWidth": "half",
+            "content": "商品(ウーハー)・ケーブル・インストール費用込み"
+          }
+        },
+        {
+          "id": "sec_speakers_1782888259006_g7lu",
+          "type": "speakers",
+          "data": {
+            "title": "51",
+            "subtitle": "51セット",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1782888312230_bl6x",
+                "brand": "carrozzeria",
+                "brandLogo": "/images/Audio/logo/carrozzeria.webp",
+                "name": "TS-WH500A",
+                "image": "/images/Audio/sub/TS-WH500A.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "51000",
+                "fixedPriceOverride": "0",
+                "remarks": "両面駆動方式HVT方式ユニットが採用、フロントスピーカーとのつながりが良いウーハー",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "340cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "60cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "250cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              }
+            ],
+            "subtitleFontSize": 20,
+            "sectionWidth": "half",
+            "content": "商品(ウーハー)・ケーブル・インストール費用込み"
+          }
+        },
+        {
+          "id": "sec_speakers_1782889861471_uaum",
+          "type": "speakers",
+          "data": {
+            "title": "57",
+            "subtitle": "57セット",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1782889903545_lbhv",
+                "brand": "carrozzeria",
+                "brandLogo": "/images/Audio/logo/carrozzeria.webp",
+                "logoBg": "dark",
+                "name": "TS-WX400DA",
+                "image": "/images/Audio/sub/TS-WX400DA.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "57000",
+                "fixedPriceOverride": "0 ",
+                "remarks": "コンパクトながらパワフルなサウンド\n頑丈なのでトランク設置でも安心",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "300cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "100cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "200cm（億）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "id": "spk_1782890324483_x71z",
+                "brand": "carrozzeria",
+                "brandLogo": "/images/Audio/logo/carrozzeria.webp",
+                "logoBg": "dark",
+                "name": "TS-WX300TA",
+                "image": "/images/Audio/sub/TS-WX300TA.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "57000",
+                "fixedPriceOverride": "0",
+                "remarks": "バスレフならではの迫力ある重低音\n海外で人気のドラムタイプ",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "332cm（直径）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "663cm（長さ）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "id": "spk_1782891282676_on3o",
+                "brand": "carrozzeria",
+                "brandLogo": "/images/Audio/logo/carrozzeria.webp",
+                "logoBg": "dark",
+                "name": "TS-WX300A",
+                "image": "/images/Audio/sub/TS-WX300A.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "57000",
+                "fixedPriceOverride": "0",
+                "remarks": "バスレフならではの迫力ある重低音\n黒と赤の組み合わせで目を引くエンクロージャー",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "503cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "378cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "318cm（億）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "id": "spk_1782891562901_flh1",
+                "brand": "carrozzeria",
+                "brandLogo": "/images/Audio/logo/carrozzeria.webp",
+                "logoBg": "dark",
+                "name": "TS-WX1010A",
+                "image": "/images/Audio/sub/TS-WX1010A.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "57000",
+                "fixedPriceOverride": "0",
+                "remarks": "シールドタイプ\nしっかりとしたBOXの容量で質にこだわった低音",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "450cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "338cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "238cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              }
+            ],
+            "subtitleFontSize": 20,
+            "content": "商品(ウーハー)・ケーブル・インストール費用込み",
+            "columns": 2
+          }
+        },
+        {
+          "id": "sec_speakers_1782891904415_i8hw",
+          "type": "speakers",
+          "data": {
+            "title": "62",
+            "subtitle": "62セット",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1782891975532_n20v",
+                "brand": "carrozzeria",
+                "brandLogo": "/images/Audio/logo/carrozzeria.webp",
+                "logoBg": "dark",
+                "name": "TS-WX1210A",
+                "image": "/images/Audio/sub/TS-WX1210A.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "62000",
+                "fixedPriceOverride": "0",
+                "remarks": "シールドタイプ\nしっかりとしたBOXの容量で質にこだわった低音",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "528cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "380cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "279cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              }
+            ],
+            "subtitleFontSize": 20,
+            "sectionWidth": "half",
+            "content": "商品(ウーハー)・ケーブル・インストール費用込み"
+          }
+        },
+        {
+          "id": "sec_speakers_1782892327145_z08a",
+          "type": "speakers",
+          "data": {
+            "title": "76",
+            "subtitle": "76セット",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1782892568986_5l8b",
+                "brand": "carrozzeria",
+                "brandLogo": "/images/Audio/logo/carrozzeria.webp",
+                "logoBg": "dark",
+                "name": "TS-WH1000A",
+                "image": "/images/Audio/sub/TS-WH1000A.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "76000",
+                "fixedPriceOverride": "0",
+                "remarks": "わずか5㎝弱の厚さで超低温再生\nハイエンドに匹敵する玄人好みな質の高いウーハー",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "360cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "45cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "270cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              }
+            ],
+            "subtitleFontSize": 20,
+            "sectionWidth": "half",
+            "content": "商品(ウーハー)・ケーブル・インストール費用込み"
+          }
+        },
+        {
+          "id": "sec_speakers_1782894651710_h0gj",
+          "type": "speakers",
+          "data": {
+            "title": "86",
+            "subtitle": "86セット",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1782894694054_g6lt",
+                "brand": "helix",
+                "brandLogo": "/images/Audio/logo/helix.webp",
+                "logoBg": "light",
+                "name": "U-10A",
+                "image": "/images/Audio/sub/U-10A.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "86000",
+                "fixedPriceOverride": "0",
+                "remarks": "高音質なAB級アンプを採用。\n24db/octのクロスや0～180°のバリアブルな位相設定が可能。",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "345cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "78cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "245cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              }
+            ],
+            "subtitleFontSize": 20,
+            "sectionWidth": "half",
+            "content": "商品(ウーハー)・ケーブル・インストール費用込み"
+          }
+        },
+        {
+          "id": "sec_speakers_1782963599095_1rdn",
+          "type": "speakers",
+          "data": {
+            "title": "91",
+            "subtitle": "91セット",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1782963640216_tsv2",
+                "brand": "cerwinvega",
+                "brandLogo": "/images/Audio/logo/cerwinvega.webp",
+                "logoBg": "light",
+                "name": "VPAS10V2",
+                "image": "/images/Audio/sub/vpas10v2.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "91000",
+                "fixedPriceOverride": "0",
+                "remarks": "有名ブランドVEGAが繰り出すパワフルベース。\n10インチウーハービルトインでより深い低音。\n",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "345cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "65cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "245cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "id": "spk_1782965992511_qy6x",
+                "brand": "carrozzeria",
+                "brandLogo": "/images/Audio/logo/carrozzeria.webp",
+                "logoBg": "dark",
+                "name": "TS-WX1220AH",
+                "image": "/images/Audio/sub/TS-WX1220AH.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "91000",
+                "fixedPriceOverride": "0 ",
+                "remarks": "バスレフダブルウーハー！\n空気が揺れる低音を感じたい方に。",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "745cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "400cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "459cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              }
+            ],
+            "subtitleFontSize": 20,
+            "content": "商品(ウーハー)・ケーブル・インストール費用込み",
+            "columns": 2
+          }
+        },
+        {
+          "id": "sec_speakers_1782966498346_1wul",
+          "type": "speakers",
+          "data": {
+            "title": "105",
+            "subtitle": "105セット",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1782966557647_xnel",
+                "brand": "audison",
+                "brandLogo": "/images/Audio/logo/audison.webp",
+                "logoBg": "dark",
+                "name": "APBX 8AS",
+                "image": "/images/Audio/sub/APBX 8AS.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "105000",
+                "fixedPriceOverride": "0",
+                "remarks": "20cmウーハーシールドボックスで本格的なサウンド。\nクロスオーバーをバイパスできる便利機能。\n",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "368cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "158cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "294cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              }
+            ],
+            "sectionWidth": "half",
+            "subtitleFontSize": 20,
+            "content": "商品(ウーハー)・ケーブル・インストール費用込み"
+          }
+        },
+        {
+          "id": "sec_speakers_1782967266873_yajo",
+          "type": "speakers",
+          "data": {
+            "title": "108",
+            "subtitle": "108セット",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1782967316866_rt7r",
+                "brand": "KICKER",
+                "brandLogo": "/images/Audio/logo/kicker.webp",
+                "logoBg": "dark",
+                "name": "Hideaway HS8",
+                "image": "/images/Audio/sub/Hideaway HS8.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "108000",
+                "fixedPriceOverride": "0",
+                "remarks": "アルミコーンを採用した20㎝ウーハーを搭載。\nベースといえばキッカーといえるほどの迫力サウンド。",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "352cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "79.4cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "238cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              }
+            ],
+            "subtitleFontSize": 20,
+            "content": "商品(ウーハー)・ケーブル・インストール費用込み",
+            "sectionWidth": "half"
+          }
+        },
+        {
+          "id": "sec_speakers_1782967896022_8upi",
+          "type": "speakers",
+          "data": {
+            "title": "113",
+            "subtitle": "113セット",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1782967959378_pcrd",
+                "brand": "audison",
+                "brandLogo": "/images/Audio/logo/audison.webp",
+                "logoBg": "dark",
+                "name": "APBX 10AS",
+                "image": "/images/Audio/sub/APBX 10AS.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "113000",
+                "fixedPriceOverride": "0",
+                "remarks": "25cmウーハーシールドボックスで本格的なサウンド。\nクロスオーバーをバイパスできる便利機能。",
+                "youtubeUrl": "",
+                "prices": [],
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "440cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "158cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "334cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              }
+            ],
+            "subtitleFontSize": 20,
+            "sectionWidth": "half",
+            "content": "商品(ウーハー)・ケーブル・インストール費用込み"
+          }
+        },
+        {
+          "id": "sec_speakers_1782968343208_qw03",
+          "type": "speakers",
+          "data": {
+            "title": "129",
+            "subtitle": "129セット",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1782968397113_kys1",
+                "brand": "KICKER",
+                "brandLogo": "/images/Audio/logo/kicker.webp",
+                "logoBg": "dark",
+                "name": "HS10",
+                "image": "/images/Audio/sub/Hideaway HS10.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "129000",
+                "fixedPriceOverride": "0",
+                "remarks": "HS8とのボディーの差を極限まで抑えながらも\n25㎝ウーハーを搭載した本物のベースサウンド！",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "314cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "81cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "249cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              }
+            ],
+            "subtitleFontSize": 20,
+            "sectionWidth": "half",
+            "content": "商品(ウーハー)・ケーブル・インストール費用込み"
+          }
+        },
+        {
+          "id": "sec_speakers_1782968884860_diun",
+          "type": "speakers",
+          "data": {
+            "title": "139",
+            "subtitle": "139セット",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1782970594352_cw4c",
+                "brand": "ROCKFORD FOSGATE ",
+                "brandLogo": "/images/Audio/logo/ROCKFORD FOSGATE.webp",
+                "logoBg": "light",
+                "name": "P300-10",
+                "image": "/images/Audio/sub/P300-10.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "139000",
+                "fixedPriceOverride": "0",
+                "remarks": "10インチウーハー搭載、BOX容量が大きくここまでなればパワードウーハーの領域を超えています！",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "455cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "338cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "224/152cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              }
+            ],
+            "subtitleFontSize": 20,
+            "columns": 2,
+            "content": "商品(ウーハー)・ケーブル・インストール費用込み",
+            "sectionWidth": "half"
+          }
+        },
+        {
+          "id": "sec_speakers_1782971913785_i0yt",
+          "type": "speakers",
+          "data": {
+            "title": "149",
+            "subtitle": "149セット",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1782972102158_15fc",
+                "brand": "ROCKFORD FOSGATE ",
+                "brandLogo": "/images/Audio/logo/ROCKFORD FOSGATE.webp",
+                "logoBg": "light",
+                "name": "P300-12",
+                "image": "/images/Audio/sub/P300-12.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "149000",
+                "fixedPriceOverride": "0",
+                "remarks": "12インチウーハー搭載、深いローエンドと余裕のある鳴りっぷりはもはや本格派のサブウーハー！",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "503cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "380cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "278/180cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              }
+            ],
+            "subtitleFontSize": 20,
+            "columns": 2,
+            "content": "商品(ウーハー)・ケーブル・インストール費用込み",
+            "sectionWidth": "half"
+          }
+        },
+        {
+          "id": "sec_speakers_1782973264864_a6u4",
+          "type": "speakers",
+          "data": {
+            "title": "159",
+            "subtitle": "159セット",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1782973327747_sj7v",
+                "brand": "KICKER",
+                "brandLogo": "/images/Audio/logo/kicker.webp",
+                "logoBg": "dark",
+                "name": "HS12",
+                "image": "/images/Audio/sub/HS12.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "159000",
+                "fixedPriceOverride": "0",
+                "remarks": "ここまで深くて厚みのある低音は薄いパワードウーハーの中のベスト！30㎝搭載の本格派。",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "435cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "88cm高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "308cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              }
+            ],
+            "subtitleFontSize": 20,
+            "sectionWidth": "half",
+            "columns": 2,
+            "content": "商品(ウーハー)・ケーブル・インストール費用込み"
+          }
+        },
+        {
+          "id": "sec_speakers_1782973838800_gzf6",
+          "type": "speakers",
+          "data": {
+            "title": "161",
+            "subtitle": "161セット",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1782973897448_2a9v",
+                "brand": "GLADEN",
+                "brandLogo": "/images/Audio/logo/gladen-mosconi.webp",
+                "logoBg": "light",
+                "name": "RSX 08 SLIM VB-CU-AC",
+                "image": "/images/Audio/sub/RSX 08 SLIM VB-CU-AC.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "161000",
+                "fixedPriceOverride": "0",
+                "remarks": "本格的な8インチバスレフBOXウーハーに専用アンプ。\nダウンファイヤリング方式の設置にも対応！",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "480cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "135cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "360cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              }
+            ],
+            "subtitleFontSize": 20,
+            "sectionWidth": "half",
+            "columns": 2,
+            "content": "商品(ウーハー)・ケーブル・インストール費用込み"
+          }
+        },
+        {
+          "id": "sec_speakers_1782980271174_h584",
+          "type": "speakers",
+          "data": {
+            "title": "165",
+            "subtitle": "165セット",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1782980402243_9ofn",
+                "brand": "ROCKFORD FOSGATE ",
+                "brandLogo": "/images/Audio/logo/ROCKFORD FOSGATE.webp",
+                "logoBg": "light",
+                "name": "PS-8",
+                "image": "/images/Audio/sub/PS-8.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "165000",
+                "fixedPriceOverride": "0",
+                "remarks": "強固なボディーでウーハーの振動を抑え込み、タイトで深みのあるベースサウンドを実現しています。",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "354cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "85cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "239cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              }
+            ],
+            "subtitleFontSize": 20,
+            "sectionWidth": "half",
+            "content": "商品(ウーハー)・ケーブル・インストール費用込み"
+          }
+        },
+        {
+          "id": "sec_speakers_1782974270432_1bmq",
+          "type": "speakers",
+          "data": {
+            "title": "180",
+            "subtitle": "180セット",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1782974322676_py7b",
+                "brand": "KICKER",
+                "brandLogo": "/images/Audio/logo/kicker.webp",
+                "logoBg": "dark",
+                "name": "PTRTP10",
+                "image": "/images/Audio/sub/PTRTP10.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "180000",
+                "fixedPriceOverride": "0",
+                "remarks": "25cmウーハー搭載。パッシブウーハーを採用することで価格を抑えながらも本物のベースサウンドを実現。",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "65cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "14.2cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "33.5cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              }
+            ],
+            "subtitleFontSize": 20,
+            "sectionWidth": "half",
+            "columns": 2,
+            "content": "商品(ウーハー)・ケーブル・インストール費用込み"
+          }
+        },
+        {
+          "id": "sec_notes_1782886893561_quyn",
+          "type": "notes",
+          "data": {
+            "title": "注意事項",
+            "items": [
+              "注)車種や仕様によりパッケージ価格に追加が必要な場合があります。\n作業は１日お車をお預かりしますが無料代車をご用意していますのでご利用ください。"
+            ]
+          }
+        },
+        {
+          "id": "sec_floating_cta_1782886917233_6w76",
+          "type": "floating_cta",
+          "data": {
+            "showLine": true,
+            "showReservation": true,
+            "theme": "audio"
           }
         }
       ],
@@ -11894,8 +13033,76 @@
           "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
           "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
         }
+      }
+    },
+    {
+      "id": "easy-bass-plus",
+      "slug": "easy-bass-plus",
+      "name": "お手軽低音増強セット”プラス”",
+      "parentCategoryId": "bass_power",
+      "publishStatus": "published",
+      "showInMenu": true,
+      "subType": "package",
+      "header": {
+        "badge": "本格低音",
+        "mainTitle": "お手軽低音増強セット”プラス”",
+        "subTitle": "本格低音",
+        "description": "���ランの特徴や魅力を伝える紹介文を入力してください。"
       },
-      "subType": "package"
+      "pricing": {
+        "specialPrice": "110000",
+        "fixedPrice": 0,
+        "normalPriceText": "",
+        "savingsText": "",
+        "note": "",
+        "taxRate": 10
+      },
+      "speakers": [],
+      "sections": [
+        {
+          "id": "sec_hero_1779248121851_easy-bass-plus",
+          "type": "hero",
+          "data": {
+            "badge": "本���低���",
+            "title": "お手軽低音増強セット”プラス”",
+            "subtitle": "本格低音",
+            "desc": "プランの特徴や魅力を伝える紹介文を入力してください。",
+            "image": "/images/Audio/easy_bass_package_plus.webp",
+            "imageOpacity": 0.3,
+            "useDarkTheme": true,
+            "bgColor": ""
+          }
+        },
+        {
+          "id": "sec_pricing_1779248121851_easy-bass-plus",
+          "type": "pricing",
+          "data": {
+            "specialPrice": "110000",
+            "fixedPrice": 0,
+            "normalPriceText": "",
+            "savingsText": "",
+            "note": "",
+            "taxRate": 10
+          }
+        }
+      ],
+      "features": {
+        "doorTuning": {
+          "image": "/images/Audio/Speaker/door-b.webp"
+        },
+        "baffle": {
+          "image": "/images/Audio/Speaker/baffle.webp"
+        },
+        "cable": {
+          "image": "/images/Audio/Speaker/ang-cable.webp"
+        }
+      },
+      "upgrades": {
+        "options": {
+          "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
+          "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
+        }
+      }
     },
     {
       "id": "compact-amp",
@@ -12011,213 +13218,6 @@
           "type": "pricing",
           "data": {
             "specialPrice": "55000",
-            "fixedPrice": 0,
-            "normalPriceText": "",
-            "savingsText": "",
-            "note": "",
-            "taxRate": 10
-          }
-        }
-      ],
-      "features": {
-        "doorTuning": {
-          "image": "/images/Audio/Speaker/door-b.webp"
-        },
-        "baffle": {
-          "image": "/images/Audio/Speaker/baffle.webp"
-        },
-        "cable": {
-          "image": "/images/Audio/Speaker/ang-cable.webp"
-        }
-      },
-      "upgrades": {
-        "options": {
-          "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
-          "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
-        }
-      }
-    },
-    {
-      "id": "easy-bass",
-      "slug": "easy-bass",
-      "name": "お手軽低音増強セット",
-      "parentCategoryId": "bass_power",
-      "publishStatus": "published",
-      "showInMenu": true,
-      "subType": "package",
-      "header": {
-        "badge": "パワードウーハー",
-        "mainTitle": "お手軽低音増強セット",
-        "subTitle": "パワードウーハー",
-        "description": "プランの特徴や魅力を伝える紹介文を入力してください。"
-      },
-      "pricing": {
-        "specialPrice": "42000",
-        "fixedPrice": 0,
-        "normalPriceText": "",
-        "savingsText": "",
-        "note": "",
-        "taxRate": 10
-      },
-      "speakers": [],
-      "sections": [
-        {
-          "id": "sec_hero_1779248121851_easy-bass",
-          "type": "hero",
-          "data": {
-            "badge": "パワードウーハー",
-            "title": "お手軽低音増強セット",
-            "subtitle": "パワードウーハー",
-            "desc": "プランの特徴や魅力を伝える紹介文を入力してください。",
-            "image": "/images/Audio/easy_bass_package.webp",
-            "imageOpacity": 0.3,
-            "useDarkTheme": true,
-            "bgColor": ""
-          }
-        },
-        {
-          "id": "sec_pricing_1779248121851_easy-bass",
-          "type": "pricing",
-          "data": {
-            "specialPrice": "42000",
-            "fixedPrice": 0,
-            "normalPriceText": "",
-            "savingsText": "",
-            "note": "",
-            "taxRate": 10
-          }
-        }
-      ],
-      "features": {
-        "doorTuning": {
-          "image": "/images/Audio/Speaker/door-b.webp"
-        },
-        "baffle": {
-          "image": "/images/Audio/Speaker/baffle.webp"
-        },
-        "cable": {
-          "image": "/images/Audio/Speaker/ang-cable.webp"
-        }
-      },
-      "upgrades": {
-        "options": {
-          "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
-          "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
-        }
-      }
-    },
-    {
-      "id": "easy-bass-plus",
-      "slug": "easy-bass-plus",
-      "name": "お手軽低音増強セット”プラス”",
-      "parentCategoryId": "bass_power",
-      "publishStatus": "published",
-      "showInMenu": true,
-      "subType": "package",
-      "header": {
-        "badge": "本格低音",
-        "mainTitle": "お手軽低音増強セット”プラス”",
-        "subTitle": "本格低音",
-        "description": "���ランの特徴や魅力を伝える紹介文を入力してください。"
-      },
-      "pricing": {
-        "specialPrice": "110000",
-        "fixedPrice": 0,
-        "normalPriceText": "",
-        "savingsText": "",
-        "note": "",
-        "taxRate": 10
-      },
-      "speakers": [],
-      "sections": [
-        {
-          "id": "sec_hero_1779248121851_easy-bass-plus",
-          "type": "hero",
-          "data": {
-            "badge": "本格低音",
-            "title": "お手軽低音増強セット”プラス”",
-            "subtitle": "本格低音",
-            "desc": "プランの特徴や魅力を伝える紹介文を入力してください。",
-            "image": "/images/Audio/easy_bass_package_plus.webp",
-            "imageOpacity": 0.3,
-            "useDarkTheme": true,
-            "bgColor": ""
-          }
-        },
-        {
-          "id": "sec_pricing_1779248121851_easy-bass-plus",
-          "type": "pricing",
-          "data": {
-            "specialPrice": "110000",
-            "fixedPrice": 0,
-            "normalPriceText": "",
-            "savingsText": "",
-            "note": "",
-            "taxRate": 10
-          }
-        }
-      ],
-      "features": {
-        "doorTuning": {
-          "image": "/images/Audio/Speaker/door-b.webp"
-        },
-        "baffle": {
-          "image": "/images/Audio/Speaker/baffle.webp"
-        },
-        "cable": {
-          "image": "/images/Audio/Speaker/ang-cable.webp"
-        }
-      },
-      "upgrades": {
-        "options": {
-          "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
-          "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
-        }
-      }
-    },
-    {
-      "id": "line_1779248121851_680",
-      "slug": "sp-17586",
-      "name": "本格サブウーハーインストール",
-      "parentCategoryId": "bass_power",
-      "publishStatus": "published",
-      "showInMenu": true,
-      "subType": "package",
-      "header": {
-        "badge": "重低音増強",
-        "mainTitle": "本格サブウーハーインストール",
-        "subTitle": "重低音増強",
-        "description": "プランの特徴や魅力を伝える紹介文を入力してください。"
-      },
-      "pricing": {
-        "specialPrice": "ASK",
-        "fixedPrice": 0,
-        "normalPriceText": "",
-        "savingsText": "",
-        "note": "",
-        "taxRate": 10
-      },
-      "speakers": [],
-      "sections": [
-        {
-          "id": "sec_hero_1779248121851_line_1779248121851_680",
-          "type": "hero",
-          "data": {
-            "badge": "重低音増強",
-            "title": "本格サブウーハーインストール",
-            "subtitle": "重低音増強",
-            "desc": "プランの特徴や魅力を伝える紹介文を入力してください。",
-            "image": "https://picsum.photos/seed/subwoofer/800/600",
-            "imageOpacity": 0.3,
-            "useDarkTheme": true,
-            "bgColor": ""
-          }
-        },
-        {
-          "id": "sec_pricing_1779248121851_line_1779248121851_680",
-          "type": "pricing",
-          "data": {
-            "specialPrice": "ASK",
             "fixedPrice": 0,
             "normalPriceText": "",
             "savingsText": "",
@@ -12964,39 +13964,9 @@
             "image": "/images/Audio/vihicle/move_canbus.webp",
             "height": "400px",
             "opacity": 0.5,
-            "badge": "スピーカー交換パッケージ",
+            "badge": "(LA850S/LA860S)\n(LA800S/LA810S)",
             "bgColor": "",
             "description": "ムーヴ・キャンバスに合わせたスピーカー交換プランです。できるだけコストを抑えつつ、効果的に音質アップができるようにプランニングしています。カーオーディオに興味が湧いたときには、さらにグレードアップすることも可能です。"
-          }
-        },
-        {
-          "id": "sec_package_summary_1781417010381_1",
-          "type": "package_summary",
-          "data": {
-            "title": "このプランに含まれる内容",
-            "items": [
-              {
-                "title": "スピーカー本体　",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "軽防振",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "ムーヴキャンバス用パーフェクトキット ",
-                "desc": "TS-F1640S2は、パーフェクトキットの代わりにメタルバッフル（UD-K629）が付属します。",
-                "value": ""
-              },
-              {
-                "title": "取り付け工賃",
-                "desc": "",
-                "value": ""
-              }
-            ],
-            "subtitle": ""
           }
         },
         {
@@ -13013,7 +13983,31 @@
                 "image": "/images/Audio/Speaker/TS-C1640S.webp",
                 "standalonePrice": "61050",
                 "remarks": "フロントスピーカーをカロッツェリアの製品に交換し、再生能力をアップします。上位モデルの技術を受け継いだ高解像度サウンドが楽しめます。純正ツィーターがドアミラー裏にある場合は純正位置に設置し、ない場合はダッシュボード上への設置となります。",
-                "fixedPriceOverride": "0"
+                "fixedPriceOverride": "0",
+                "brandLogo": "/images/Audio/logo/carrozzeria.webp",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカー本体",
+                    "desc": "",
+                    "value": "open"
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "パーフェクトキット",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取り付け工賃",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
               },
               {
                 "id": "spk_1781418680079_9m5l",
@@ -13027,14 +14021,39 @@
                 "standalonePrice": "40700",
                 "fixedPriceOverride": "19250",
                 "remarks": "フロントスピーカーをアメリカのブランド「KICKER」の製品に交換し、再生能力をアップします。キャンバス専用の取付キットを使用するため、無加工での取り付けが可能です。純正ツィーターがドアミラー裏にある場合は純正位置に設置し、ない場合はダッシュボード上への設置となります。",
-                "youtubeUrl": ""
+                "youtubeUrl": "",
+                "brandLogo": "/images/Audio/logo/kicker.webp",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカー本体",
+                    "desc": "",
+                    "value": "40700"
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "パーフェクトキット",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取り付け工賃",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
               }
             ],
-            "subtitle": "フロントスピーカー交換プラン(LA850S/LA860S)",
+            "subtitle": "フロントスピーカー交換プラン\n(LA850S/LA860S)",
             "hideSubtitle": false,
             "hideTitle": true,
             "subtitleAlign": "center",
-            "content": ""
+            "content": "",
+            "subtitleFontSize": 20
           }
         },
         {
@@ -13042,7 +14061,7 @@
           "type": "speakers",
           "data": {
             "title": "フロントスピーカー交換プラン(LA800S/LA810S)",
-            "subtitle": "フロントスピーカー交換プラン(LA800S/LA810S)",
+            "subtitle": "フロントスピーカー交換プラン\n(LA800S/LA810S)",
             "hideTitle": true,
             "hideSubtitle": false,
             "subtitleAlign": "center",
@@ -13060,7 +14079,31 @@
                 "standalonePrice": "16500",
                 "fixedPriceOverride": "23100",
                 "remarks": "フロントスピーカーをカロッツェリアの製品に交換し、再生能力をアップします。取り付けにはカロッツェリア製の高音質メタルバッフルを使用し、強固なバッフルでスピーカーをしっかりと固定します。純正ツィーターがドアミラー裏にある場合は純正位置に設置し、ない場合はダッシュボード上への設置となります。",
-                "youtubeUrl": ""
+                "youtubeUrl": "",
+                "brandLogo": "/images/Audio/logo/carrozzeria.webp",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカ本体",
+                    "desc": "",
+                    "value": "16500"
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "メタルバッフル　UD-K629",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取り付け工賃",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
               },
               {
                 "id": "spk_1781419703089_yhwl",
@@ -13074,9 +14117,34 @@
                 "standalonePrice": "40700",
                 "fixedPriceOverride": "19250",
                 "remarks": "フロントスピーカーをアメリカのブランド「KICKER」の製品に交換し、再生能力をアップします。キャンバス専用の取付キットを使用するため、無加工での取り付けが可能です。純正ツィーターがドアミラー裏にある場合は純正位置に設置し、ない場合はダッシュボード上への設置となります。",
-                "youtubeUrl": ""
+                "youtubeUrl": "",
+                "brandLogo": "/images/Audio/logo/kicker.webp",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカ本体",
+                    "desc": "",
+                    "value": "40700"
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "パーフェクトキット",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取り付け工賃",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
               }
-            ]
+            ],
+            "subtitleFontSize": 20
           }
         },
         {
@@ -13122,7 +14190,31 @@
           "image": "/images/Audio/Speaker/TS-C1640S.webp",
           "standalonePrice": "61050",
           "remarks": "フロントスピーカーをカロッツェリアの製品に交換し、再生能力をアップします。上位モデルの技術を受け継いだ高解像度サウンドが楽しめます。純正ツィーターがドアミラー裏にある場合は純正位置に設置し、ない場合はダッシュボード上への設置となります。",
-          "fixedPriceOverride": "0"
+          "fixedPriceOverride": "0",
+          "brandLogo": "/images/Audio/logo/carrozzeria.webp",
+          "showCardSummary": true,
+          "cardSummaryItems": [
+            {
+              "title": "スピーカー本体",
+              "desc": "",
+              "value": "open"
+            },
+            {
+              "title": "軽防振",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "パーフェクトキット",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "取り付け工賃",
+              "desc": "",
+              "value": ""
+            }
+          ]
         },
         {
           "id": "spk_1781418680079_9m5l",
@@ -13136,7 +14228,31 @@
           "standalonePrice": "40700",
           "fixedPriceOverride": "19250",
           "remarks": "フロントスピーカーをアメリカのブランド「KICKER」の製品に交換し、再生能力をアップします。キャンバス専用の取付キットを使用するため、無加工での取り付けが可能です。純正ツィーターがドアミラー裏にある場合は純正位置に設置し、ない場合はダッシュボード上への設置となります。",
-          "youtubeUrl": ""
+          "youtubeUrl": "",
+          "brandLogo": "/images/Audio/logo/kicker.webp",
+          "showCardSummary": true,
+          "cardSummaryItems": [
+            {
+              "title": "スピーカー本体",
+              "desc": "",
+              "value": "40700"
+            },
+            {
+              "title": "軽防振",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "パーフェクトキット",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "取り付け工賃",
+              "desc": "",
+              "value": ""
+            }
+          ]
         }
       ],
       "subType": "standalone"
@@ -13171,39 +14287,9 @@
             "image": "/images/Audio/vihicle/wake.webp",
             "height": "400px",
             "opacity": 0.5,
-            "badge": "スピーカー交換パッケージ",
+            "badge": "(LA700S/LA710S)",
             "bgColor": "",
             "description": "ダイハツ ウェイクに合わせたスピーカー交換プランです。当店で人気の「スタンダードライン」とは違うアプローチで、できるだけコストを抑えつつ、効果的に音質アップができるようにプランニングしています。"
-          }
-        },
-        {
-          "id": "sec_package_summary_1781420327999_1",
-          "type": "package_summary",
-          "data": {
-            "title": "このプランに含まれる内容",
-            "items": [
-              {
-                "title": "スピーカー本体　",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "軽防振",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "ウェイク専用取付キット一式",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "取り付け工賃",
-                "desc": "",
-                "value": ""
-              }
-            ],
-            "subtitle": ""
           }
         },
         {
@@ -13217,13 +14303,37 @@
                 "id": "spk_1779057904498",
                 "brand": "KICKER",
                 "name": "CSS674",
-                "image": "/images/Audio/Speaker/TS-C1640S.webp",
+                "image": "/images/Audio/Speaker/CSS674.webp",
                 "standalonePrice": "40700",
                 "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。このCSシリーズは純正ナビなどの内蔵アンプでも駆動しやすく、張りのある小気味良い音が出るスピーカーです。ツィーターは純正位置への取り付けとなります。",
-                "fixedPriceOverride": "19250"
+                "fixedPriceOverride": "19250",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカー本体",
+                    "desc": "",
+                    "value": "40700"
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "専用取付キット一式",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取り付け工賃",
+                    "desc": "",
+                    "value": ""
+                  }
+                ],
+                "brandLogo": "/images/Audio/logo/kicker.webp"
               }
             ],
-            "subtitle": "フロントスピーカー交換プラン(LA700S/LA710S)",
+            "subtitle": "フロントスピーカー交換プラン\n(LA700S/LA710S)\n",
             "hideSubtitle": false,
             "hideTitle": true,
             "subtitleAlign": "center",
@@ -13271,10 +14381,34 @@
           "id": "spk_1779057904498",
           "brand": "KICKER",
           "name": "CSS674",
-          "image": "/images/Audio/Speaker/TS-C1640S.webp",
+          "image": "/images/Audio/Speaker/CSS674.webp",
           "standalonePrice": "40700",
           "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。このCSシリーズは純正ナビなどの内蔵アンプでも駆動しやすく、張りのある小気味良い音が出るスピーカーです。ツィーターは純正位置への取り付けとなります。",
-          "fixedPriceOverride": "19250"
+          "fixedPriceOverride": "19250",
+          "showCardSummary": true,
+          "cardSummaryItems": [
+            {
+              "title": "スピーカー本体",
+              "desc": "",
+              "value": "40700"
+            },
+            {
+              "title": "軽防振",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "専用取付キット一式",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "取り付け工賃",
+              "desc": "",
+              "value": ""
+            }
+          ],
+          "brandLogo": "/images/Audio/logo/kicker.webp"
         }
       ],
       "subType": "standalone"
@@ -13309,39 +14443,9 @@
             "image": "/images/Audio/vihicle/fit.webp",
             "height": "400px",
             "opacity": 0.5,
-            "badge": "スピーカー交換パッケージ",
+            "badge": " (H25.9～R2.2) (R2.2～)",
             "bgColor": "",
             "description": "FITに合わせたスピーカー交換プランです。できるだけコストを抑えつつ、効果的に音質アップができるようにプランニングしています。カーオーディオに興味が湧いたときには、さらにグレードアップすることも可能です。"
-          }
-        },
-        {
-          "id": "sec_package_summary_1781422139392_1",
-          "type": "package_summary",
-          "data": {
-            "title": "このプランに含まれる内容",
-            "items": [
-              {
-                "title": "スピーカー本体　",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "軽防振",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "FIT専用取り付けキット　",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "取り付け工賃",
-                "desc": "",
-                "value": ""
-              }
-            ],
-            "subtitle": ""
           }
         },
         {
@@ -13363,7 +14467,31 @@
                 "standalonePrice": "62700",
                 "fixedPriceOverride": "０",
                 "remarks": "フロントスピーカーをカロッツェリアの製品に交換し、再生能力をアップします。上位モデルの技術を受け継いだ高い解像度のサウンドが楽しめます。純正ツィーターはダッシュボード上への設置となります。",
-                "youtubeUrl": ""
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカー本体",
+                    "desc": "",
+                    "value": "open"
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "インナーバッフル UD-K5210",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取り付け工賃",
+                    "desc": "",
+                    "value": ""
+                  }
+                ],
+                "brandLogo": "/images/Audio/logo/carrozzeria.webp"
               },
               {
                 "id": "spk_1779057904498",
@@ -13372,10 +14500,34 @@
                 "image": "/images/Audio/Speaker/CSS674.webp",
                 "standalonePrice": "40700",
                 "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。このCSシリーズは純正ナビなどの内蔵アンプでも駆動しやすく、張りのある小気味良い音が出るスピーカーです。ツィーターは純正位置への取り付けとなります。",
-                "fixedPriceOverride": "20020"
+                "fixedPriceOverride": "20020",
+                "brandLogo": "/images/Audio/logo/kicker.webp",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカー本体",
+                    "desc": "",
+                    "value": "40700"
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "専用取り付けキット",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取り付け工賃",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
               }
             ],
-            "subtitle": "フロントスピーカー交換プラン (H25.9～R2.2) (R2.2～)",
+            "subtitle": "フロントスピーカー交換プラン\n (H25.9～R2.2) (R2.2～)",
             "hideSubtitle": false,
             "hideTitle": true,
             "subtitleAlign": "center",
@@ -13431,7 +14583,31 @@
           "standalonePrice": "62700",
           "fixedPriceOverride": "０",
           "remarks": "フロントスピーカーをカロッツェリアの製品に交換し、再生能力をアップします。上位モデルの技術を受け継いだ高い解像度のサウンドが楽しめます。純正ツィーターはダッシュボード上への設置となります。",
-          "youtubeUrl": ""
+          "youtubeUrl": "",
+          "showCardSummary": true,
+          "cardSummaryItems": [
+            {
+              "title": "スピーカー本体",
+              "desc": "",
+              "value": "open"
+            },
+            {
+              "title": "軽防振",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "インナーバッフル UD-K5210",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "取り付け工賃",
+              "desc": "",
+              "value": ""
+            }
+          ],
+          "brandLogo": "/images/Audio/logo/carrozzeria.webp"
         },
         {
           "id": "spk_1779057904498",
@@ -13440,7 +14616,31 @@
           "image": "/images/Audio/Speaker/CSS674.webp",
           "standalonePrice": "40700",
           "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。このCSシリーズは純正ナビなどの内蔵アンプでも駆動しやすく、張りのある小気味良い音が出るスピーカーです。ツィーターは純正位置への取り付けとなります。",
-          "fixedPriceOverride": "20020"
+          "fixedPriceOverride": "20020",
+          "brandLogo": "/images/Audio/logo/kicker.webp",
+          "showCardSummary": true,
+          "cardSummaryItems": [
+            {
+              "title": "スピーカー本体",
+              "desc": "",
+              "value": "40700"
+            },
+            {
+              "title": "軽防振",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "専用取り付けキット",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "取り付け工賃",
+              "desc": "",
+              "value": ""
+            }
+          ]
         }
       ],
       "subType": "standalone"
@@ -13475,39 +14675,9 @@
             "image": "/images/Audio/vihicle/n-box.webp",
             "height": "400px",
             "opacity": 0.5,
-            "badge": "スピーカー交換パッケージ",
+            "badge": "(H23.12～H29.9)(H29.9-R5.10)(R5.10-)",
             "bgColor": "",
             "description": "N-BOXに合わせたスピーカー交換プランです。できるだけコストを抑えつつ、効果的に音質アップができるようにプランニングしています。カーオーディオに興味が湧いたときには、さらにグレードアップすることも可能です。"
-          }
-        },
-        {
-          "id": "sec_package_summary_1781743743181_1",
-          "type": "package_summary",
-          "data": {
-            "title": "このプランに含まれる内容",
-            "items": [
-              {
-                "title": "スピーカー本体　",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "軽防振",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "N-BOX専用取り付けキット　",
-                "desc": "TS-C1740SはインナーバッフルUD-K5210となります",
-                "value": ""
-              },
-              {
-                "title": "取り付け工賃",
-                "desc": "",
-                "value": ""
-              }
-            ],
-            "subtitle": ""
           }
         },
         {
@@ -13524,7 +14694,31 @@
                 "image": "/images/Audio/Speaker/CSS674.webp",
                 "standalonePrice": "40700",
                 "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。このCSシリーズは純正ナビなどの内蔵アンプでも駆動しやすく、張りのある小気味良い音が出るスピーカーです。ツィーターは純正位置への取り付けとなります。",
-                "fixedPriceOverride": "20020"
+                "fixedPriceOverride": "20020",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカー本体",
+                    "desc": "",
+                    "value": "40700"
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "専用取り付けキット",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取り付け工賃",
+                    "desc": "",
+                    "value": ""
+                  }
+                ],
+                "brandLogo": "/images/Audio/logo/kicker.webp"
               },
               {
                 "id": "spk_1781422329912_7esz",
@@ -13538,10 +14732,34 @@
                 "standalonePrice": "62700",
                 "fixedPriceOverride": "０",
                 "remarks": "フロントスピーカーをカロッツェリアの製品に交換し、再生能力をアップします。上位モデルの技術を受け継いだ高い解像度のサウンドが楽しめます。純正ツィーターはダッシュボード上への設置となります。",
-                "youtubeUrl": ""
+                "youtubeUrl": "",
+                "brandLogo": "/images/Audio/logo/carrozzeria.webp",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカー本体",
+                    "desc": "",
+                    "value": "open"
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "インナーバッフルUD-K5210",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取り付け工賃",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
               }
             ],
-            "subtitle": "フロントスピーカー交換プラン (H23.12～H29.9)(H29.9-R5.10)(R5.10-)",
+            "subtitle": "フロントスピーカー交換プラン \n(H23.12～H29.9)(H29.9-R5.10)(R5.10-)",
             "hideSubtitle": false,
             "hideTitle": true,
             "subtitleAlign": "center",
@@ -13592,7 +14810,31 @@
           "image": "/images/Audio/Speaker/CSS674.webp",
           "standalonePrice": "40700",
           "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。このCSシリーズは純正ナビなどの内蔵アンプでも駆動しやすく、張りのある小気味良い音が出るスピーカーです。ツィーターは純正位置への取り付けとなります。",
-          "fixedPriceOverride": "20020"
+          "fixedPriceOverride": "20020",
+          "showCardSummary": true,
+          "cardSummaryItems": [
+            {
+              "title": "スピーカー本体",
+              "desc": "",
+              "value": "40700"
+            },
+            {
+              "title": "軽防振",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "専用取り付けキット",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "取り付け工賃",
+              "desc": "",
+              "value": ""
+            }
+          ],
+          "brandLogo": "/images/Audio/logo/kicker.webp"
         },
         {
           "id": "spk_1781422329912_7esz",
@@ -13606,7 +14848,31 @@
           "standalonePrice": "62700",
           "fixedPriceOverride": "０",
           "remarks": "フロントスピーカーをカロッツェリアの製品に交換し、再生能力をアップします。上位モデルの技術を受け継いだ高い解像度のサウンドが楽しめます。純正ツィーターはダッシュボード上への設置となります。",
-          "youtubeUrl": ""
+          "youtubeUrl": "",
+          "brandLogo": "/images/Audio/logo/carrozzeria.webp",
+          "showCardSummary": true,
+          "cardSummaryItems": [
+            {
+              "title": "スピーカー本体",
+              "desc": "",
+              "value": "open"
+            },
+            {
+              "title": "軽防振",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "インナーバッフルUD-K5210",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "取り付け工賃",
+              "desc": "",
+              "value": ""
+            }
+          ]
         }
       ],
       "subType": "standalone"
@@ -13641,39 +14907,9 @@
             "image": "/images/Audio/vihicle/n-wgn.webp",
             "height": "400px",
             "opacity": 0.5,
-            "badge": "スピーカー交換パッケージ",
+            "badge": "(H25.11～R1.8)(R1.8-R4.9)(R4.9-)",
             "bgColor": "",
             "description": "N-BOXに合わせたスピーカー交換プランです。できるだけコストを抑えつつ、効果的に音質アップができるようにプランニングしています。カーオーディオに興味が湧いたときには、さらにグレードアップすることも可能です。"
-          }
-        },
-        {
-          "id": "sec_package_summary_1781744335314_1",
-          "type": "package_summary",
-          "data": {
-            "title": "このプランに含まれる内容",
-            "items": [
-              {
-                "title": "スピーカー本体　",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "軽防振",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "N-WGN専用取り付けキット　",
-                "desc": "TS-C1740SはインナーバッフルUD-K5210となります",
-                "value": ""
-              },
-              {
-                "title": "取り付け工賃",
-                "desc": "",
-                "value": ""
-              }
-            ],
-            "subtitle": ""
           }
         },
         {
@@ -13691,7 +14927,30 @@
                 "standalonePrice": "40700",
                 "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。このCSシリーズは純正ナビなどの内蔵アンプでも駆動しやすく、張りのある小気味良い音が出るスピーカーです。ツィーターは純正位置への取り付けとなります。",
                 "fixedPriceOverride": "20020",
-                "brandLogo": "/images/Audio/logo/kicker.webp"
+                "brandLogo": "/images/Audio/logo/kicker.webp",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカー本体",
+                    "desc": "",
+                    "value": "40700"
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "専用取り付けキット",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取り付け工賃",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
               },
               {
                 "id": "spk_1781422329912_7esz",
@@ -13706,10 +14965,33 @@
                 "fixedPriceOverride": "０",
                 "remarks": "フロントスピーカーをカロッツェリアの製品に交換し、再生能力をアップします。上位モデルの技術を受け継いだ高い解像度のサウンドが楽しめます。純正ツィーターはダッシュボード上への設置となります。",
                 "youtubeUrl": "",
-                "brandLogo": "/images/Audio/logo/carrozzeria.webp"
+                "brandLogo": "/images/Audio/logo/carrozzeria.webp",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカー本体",
+                    "desc": "",
+                    "value": "open"
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "インナーバッフルUD-K5210",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取り付け工賃",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
               }
             ],
-            "subtitle": "フロントスピーカー交換プラン (H25.11～R1.8)(R1.8-R4.9)(R4.9-)",
+            "subtitle": "フロントスピーカー交換プラン \n(H25.11～R1.8)(R1.8-R4.9)(R4.9-)",
             "hideSubtitle": false,
             "hideTitle": true,
             "subtitleAlign": "center",
@@ -13761,7 +15043,30 @@
           "standalonePrice": "40700",
           "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。このCSシリーズは純正ナビなどの内蔵アンプでも駆動しやすく、張りのある小気味良い音が出るスピーカーです。ツィーターは純正位置への取り付けとなります。",
           "fixedPriceOverride": "20020",
-          "brandLogo": "/images/Audio/logo/kicker.webp"
+          "brandLogo": "/images/Audio/logo/kicker.webp",
+          "showCardSummary": true,
+          "cardSummaryItems": [
+            {
+              "title": "スピーカー本体",
+              "desc": "",
+              "value": "40700"
+            },
+            {
+              "title": "軽防振",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "専用取り付けキット",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "取り付け工賃",
+              "desc": "",
+              "value": ""
+            }
+          ]
         },
         {
           "id": "spk_1781422329912_7esz",
@@ -13776,7 +15081,30 @@
           "fixedPriceOverride": "０",
           "remarks": "フロントスピーカーをカロッツェリアの製品に交換し、再生能力をアップします。上位モデルの技術を受け継いだ高い解像度のサウンドが楽しめます。純正ツィーターはダッシュボード上への設置となります。",
           "youtubeUrl": "",
-          "brandLogo": "/images/Audio/logo/carrozzeria.webp"
+          "brandLogo": "/images/Audio/logo/carrozzeria.webp",
+          "showCardSummary": true,
+          "cardSummaryItems": [
+            {
+              "title": "スピーカー本体",
+              "desc": "",
+              "value": "open"
+            },
+            {
+              "title": "軽防振",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "インナーバッフルUD-K5210",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "取り付け工賃",
+              "desc": "",
+              "value": ""
+            }
+          ]
         }
       ],
       "subType": "standalone"
@@ -13811,39 +15139,9 @@
             "image": "/images/Audio/vihicle/roox.webp",
             "height": "400px",
             "opacity": 0.5,
-            "badge": "スピーカー交換パッケージ",
+            "badge": "(H26.2～R2.2) (R2.3-R7.9)",
             "bgColor": "",
             "description": "デイズ ルークスに合わせたスピーカー交換プランです。できるだけコストを抑えつつ、効果的に音質アップができるようにプランニングしています。カーオーディオに興味が湧いたときには、さらにグレードアップすることも可能です。"
-          }
-        },
-        {
-          "id": "sec_package_summary_1781744495778_1",
-          "type": "package_summary",
-          "data": {
-            "title": "このプランに含まれる内容",
-            "items": [
-              {
-                "title": "スピーカー本体　",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "軽防振",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "インナーバッフルUD-K524",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "取り付け工賃",
-                "desc": "",
-                "value": ""
-              }
-            ],
-            "subtitle": ""
           }
         },
         {
@@ -13865,10 +15163,34 @@
                 "standalonePrice": "59400",
                 "fixedPriceOverride": "０",
                 "remarks": "フロントスピーカーをカロッツェリアの製品に交換し、再生能力をアップします。上位モデルの技術を受け継いだ高い解像度のサウンドが楽しめます。純正ツィーターはダッシュボード上への設置となります。",
-                "youtubeUrl": ""
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカー本体",
+                    "desc": "",
+                    "value": "open"
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "インナーバッフルUD-K524",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取り付け工賃",
+                    "desc": "",
+                    "value": ""
+                  }
+                ],
+                "brandLogo": "/images/Audio/logo/carrozzeria.webp"
               }
             ],
-            "subtitle": "フロントスピーカー交換プラン (H26.2～R2.2) (R2.3-R7.9)",
+            "subtitle": "フロントスピーカー交換プラン \n(H26.2～R2.2) (R2.3-R7.9)",
             "hideSubtitle": false,
             "hideTitle": true,
             "subtitleAlign": "center",
@@ -13924,7 +15246,31 @@
           "standalonePrice": "59400",
           "fixedPriceOverride": "０",
           "remarks": "フロントスピーカーをカロッツェリアの製品に交換し、再生能力をアップします。上位モデルの技術を受け継いだ高い解像度のサウンドが楽しめます。純正ツィーターはダッシュボード上への設置となります。",
-          "youtubeUrl": ""
+          "youtubeUrl": "",
+          "showCardSummary": true,
+          "cardSummaryItems": [
+            {
+              "title": "スピーカー本体",
+              "desc": "",
+              "value": "open"
+            },
+            {
+              "title": "軽防振",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "インナーバッフルUD-K524",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "取り付け工賃",
+              "desc": "",
+              "value": ""
+            }
+          ],
+          "brandLogo": "/images/Audio/logo/carrozzeria.webp"
         }
       ],
       "subType": "standalone"
@@ -13959,39 +15305,9 @@
             "image": "/images/Audio/vihicle/swift.webp",
             "height": "400px",
             "opacity": 0.5,
-            "badge": "スピーカー交換パッケージ",
+            "badge": "SWIFT(H22.9-H29.1)(H29.1-R5.12)\n SWIFT sports(-H29.1)(H22.9-H29.1)",
             "bgColor": "",
             "description": "N-BOXに合わせたスピーカー交換プランです。できるだけコストを抑えつつ、効果的に音質アップができるようにプランニングしています。カーオーディオに興味が湧いたときには、さらにグレードアップすることも可能です。"
-          }
-        },
-        {
-          "id": "sec_package_summary_1781745027167_1",
-          "type": "package_summary",
-          "data": {
-            "title": "このプランに含まれる内容",
-            "items": [
-              {
-                "title": "スピーカー本体　",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "SWIFT/SWIFTsports専用プランチューニングキット",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "インナーバッフルUD-K526",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "取り付け工賃",
-                "desc": "",
-                "value": ""
-              }
-            ],
-            "subtitle": ""
           }
         },
         {
@@ -14013,10 +15329,34 @@
                 "standalonePrice": "62700",
                 "fixedPriceOverride": "０",
                 "remarks": "フロントスピーカーをカロッツェリアの製品に交換し、再生能力をアップします。上位モデルの技術を受け継いだ高い解像度のサウンドが楽しめます。純正ツィーターはダッシュボード上への設置となります。",
-                "youtubeUrl": ""
+                "youtubeUrl": "",
+                "brandLogo": "/images/Audio/logo/carrozzeria.webp",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカー本体",
+                    "desc": "",
+                    "value": "open"
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "インナーバッフルUD-K524",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取り付け工賃",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
               }
             ],
-            "subtitle": "フロントスピーカー交換プラン SWIFT(H22.9-H29.1)(H29.1-R5.12) SWIFT sports(-H29.1)(H22.9-H29.1)",
+            "subtitle": "フロントスピーカー交換プラン \nSWIFT(H22.9-H29.1)(H29.1-R5.12) \nSWIFT sports(-H29.1)(H22.9-H29.1)",
             "hideSubtitle": false,
             "hideTitle": true,
             "subtitleAlign": "center",
@@ -14072,7 +15412,31 @@
           "standalonePrice": "62700",
           "fixedPriceOverride": "０",
           "remarks": "フロントスピーカーをカロッツェリアの製品に交換し、再生能力をアップします。上位モデルの技術を受け継いだ高い解像度のサウンドが楽しめます。純正ツィーターはダッシュボード上への設置となります。",
-          "youtubeUrl": ""
+          "youtubeUrl": "",
+          "brandLogo": "/images/Audio/logo/carrozzeria.webp",
+          "showCardSummary": true,
+          "cardSummaryItems": [
+            {
+              "title": "スピーカー本体",
+              "desc": "",
+              "value": "open"
+            },
+            {
+              "title": "軽防振",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "インナーバッフルUD-K524",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "取り付け工賃",
+              "desc": "",
+              "value": ""
+            }
+          ]
         }
       ],
       "subType": "standalone"
@@ -14107,39 +15471,9 @@
             "image": "/images/Audio/vihicle/jimny.webp",
             "height": "400px",
             "opacity": 0.5,
-            "badge": "スピーカー交換パッケージ",
+            "badge": "(JB64)(JB74)(JC74)",
             "bgColor": "",
             "description": "ジムニー/ジムニーシエラ合わせたスピーカー交換プランです。できるだけコストを抑えつつ、効果的に音質アップができるようにプランニングしています。カーオーディオに興味が湧いたときには、さらにグレードアップすることも可能です。"
-          }
-        },
-        {
-          "id": "sec_package_summary_1781758383853_1",
-          "type": "package_summary",
-          "data": {
-            "title": "このプランに含まれる内容",
-            "items": [
-              {
-                "title": "スピーカー本体　",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "軽防振",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "オリジナルバッフル",
-                "desc": "※お選びいただくスピーカーにより異なります",
-                "value": ""
-              },
-              {
-                "title": "取り付け工賃",
-                "desc": "",
-                "value": ""
-              }
-            ],
-            "subtitle": ""
           }
         },
         {
@@ -14150,13 +15484,70 @@
             "fixedPrice": "19250 ",
             "speakers": [
               {
+                "id": "spk_1782870400090_5mxb",
+                "brand": "carrozzeria",
+                "brandLogo": "/images/Audio/logo/carrozzeria.webp",
+                "name": "TS-C1640S",
+                "image": "/images/Audio/Speaker/UD-K301.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "65450",
+                "fixedPriceOverride": "0",
+                "remarks": "フロントスピーカーをカロッツェリアへ交換して再生能力アップ。上位モデル譲りの高解像度。ツィーターはジムニー専用のドアミラー埋め込みマウントを仕様",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカー本体",
+                    "desc": "",
+                    "value": "open"
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "UD-K124+UD-K301",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取り付け工賃",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
                 "id": "spk_1779057904498",
                 "brand": "KICKER",
                 "name": "CSS654",
                 "image": "/images/Audio/Speaker/CSS674.webp",
                 "standalonePrice": "39600",
                 "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。このCSシリーズは純正ナビなどの内蔵アンプでも駆動しやすく、張りのある小気味良い音が出るスピーカーです。ツィーターはダッシュボードまたはドアパネルへ、両面テープもしくはネジ止めで固定となります。",
-                "fixedPriceOverride": "22000"
+                "fixedPriceOverride": "22000",
+                "brandLogo": "/images/Audio/logo/kicker.webp",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカー本体",
+                    "desc": "",
+                    "value": "39600"
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "スピーカーケーブル・オリジナルバッフル",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
               },
               {
                 "id": "spk_1781422329912_7esz",
@@ -14169,8 +15560,27 @@
                 "hasTweeterMount": "",
                 "standalonePrice": "88000",
                 "fixedPriceOverride": "15400",
-                "remarks": "フロントスピーカーをフランスの有名ブランド「FOCAL」の製品に交換し、再生能力をアップします。このパッケージはジムニー専用キットとして開発されており、アルミ削り出しのバッフルと、純正パーツを活用して整形されたツィーターマウントを使用します。取り付けへのこだわりも光るプレミアムモデルです。",
-                "youtubeUrl": ""
+                "remarks": "フロントスピーカーをフランスの有名ブランドFOCALへ交換して再生能力アップ。このパッケージはジムニー専用キットとして開発されたアルミ削り出しのバッフル、更には純正パーツを利用して整形されたツィーターマウントを使います。取り付けにもこだわったプレミアムモデルです。",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカー",
+                    "desc": "",
+                    "value": "88000"
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取り付け工賃(",
+                    "desc": "",
+                    "value": ""
+                  }
+                ],
+                "brandLogo": "/images/Audio/logo/focal.webp"
               },
               {
                 "id": "spk_1781760774682_m6kx",
@@ -14183,16 +15593,54 @@
                 "hasTweeterMount": "",
                 "standalonePrice": "88000",
                 "fixedPriceOverride": "15400",
-                "remarks": "フロントスピーカーを国産ブランド「BLUEMOON AUDIO」の製品に交換し、再生能力をアップします。このパッケージはジムニー専用キットとして開発されており、アルミ削り出しのバッフルや厳選されたパーツを使ったネットワークで、ジムニーのサウンドを激変させます。ツィーターはドアミラー裏のパネルへのネジ止め、またはオンダッシュ取り付けとなります",
-                "youtubeUrl": ""
+                "remarks": "フロントスピーカーを国産ブランド「BLUEMOON AUDIO」の製品に交換し、再生能力をアップ���ます。このパッケージはジムニー専用キットとして開発されており、アルミ削り出しのバッフルや厳選されたパーツを使ったネットワークで、ジムニーのサウンドを激変させます。ツィーターはドアミラー裏のパネルへのネジ止め、またはオンダッシュ取り付けとなります",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカー",
+                    "desc": "",
+                    "value": "88000"
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取り付け工賃",
+                    "desc": "",
+                    "value": ""
+                  }
+                ],
+                "brandLogo": "/images/Audio/logo/BLUEMOON AUDIO.webp"
               }
             ],
-            "subtitle": "フロントスピーカー交換プラン (JB64)(JB74)(JC74)",
+            "subtitle": "フロントスピーカー交換プラン \n(JB64)(JB74)(JC74)",
             "hideSubtitle": false,
             "hideTitle": true,
             "subtitleAlign": "center",
             "content": "",
-            "subtitleFontSize": 20
+            "subtitleFontSize": 20,
+            "sectionWidth": "full",
+            "cardSummaryItems": [
+              {
+                "title": "スピーカー",
+                "desc": "",
+                "value": "88000"
+              },
+              {
+                "title": "軽防振",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "取り付け工賃(",
+                "desc": "",
+                "value": ""
+              }
+            ],
+            "columns": 2
           }
         },
         {
@@ -14232,13 +15680,70 @@
       },
       "speakers": [
         {
+          "id": "spk_1782870400090_5mxb",
+          "brand": "carrozzeria",
+          "brandLogo": "/images/Audio/logo/carrozzeria.webp",
+          "name": "TS-C1640S",
+          "image": "/images/Audio/Speaker/UD-K301.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "65450",
+          "fixedPriceOverride": "0",
+          "remarks": "フロントスピーカーをカロッツェリアへ交換して再生能力アップ。上位モデル譲りの高解像度。ツィーターはジムニー専用のドアミラー埋め込みマウントを仕様",
+          "youtubeUrl": "",
+          "showCardSummary": true,
+          "cardSummaryItems": [
+            {
+              "title": "スピーカー本体",
+              "desc": "",
+              "value": "open"
+            },
+            {
+              "title": "軽防振",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "UD-K124+UD-K301",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "取り付け工賃",
+              "desc": "",
+              "value": ""
+            }
+          ]
+        },
+        {
           "id": "spk_1779057904498",
           "brand": "KICKER",
           "name": "CSS654",
           "image": "/images/Audio/Speaker/CSS674.webp",
           "standalonePrice": "39600",
           "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。このCSシリーズは純正ナビなどの内蔵アンプでも駆動しやすく、張りのある小気味良い音が出るスピーカーです。ツィーターはダッシュボードまたはドアパネルへ、両面テープもしくはネジ止めで固定となります。",
-          "fixedPriceOverride": "22000"
+          "fixedPriceOverride": "22000",
+          "brandLogo": "/images/Audio/logo/kicker.webp",
+          "showCardSummary": true,
+          "cardSummaryItems": [
+            {
+              "title": "スピーカー本体",
+              "desc": "",
+              "value": "39600"
+            },
+            {
+              "title": "軽防振",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "スピーカーケーブル・オリジナルバッフル",
+              "desc": "",
+              "value": ""
+            }
+          ]
         },
         {
           "id": "spk_1781422329912_7esz",
@@ -14251,8 +15756,27 @@
           "hasTweeterMount": "",
           "standalonePrice": "88000",
           "fixedPriceOverride": "15400",
-          "remarks": "フロントスピーカーをフランスの有名ブランド「FOCAL」の製品に交換し、再生能力をアップします。このパッケージはジムニー専用キットとして開発されており、アルミ削り出しのバッフルと、純正パーツを活用して整形されたツィーターマウントを使用します。取り付けへのこだわりも光るプレミアムモデルです。",
-          "youtubeUrl": ""
+          "remarks": "フロントスピーカーをフランスの有名ブランドFOCALへ交換して再生能力アップ。このパッケージはジムニー専用キットとして開発されたアルミ削り出しのバッフル、更には純正パーツを利用して整形されたツィーターマウントを使います。取り付けにもこだわったプレミアムモデルです。",
+          "youtubeUrl": "",
+          "showCardSummary": true,
+          "cardSummaryItems": [
+            {
+              "title": "スピーカー",
+              "desc": "",
+              "value": "88000"
+            },
+            {
+              "title": "軽防振",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "取り付け工賃(",
+              "desc": "",
+              "value": ""
+            }
+          ],
+          "brandLogo": "/images/Audio/logo/focal.webp"
         },
         {
           "id": "spk_1781760774682_m6kx",
@@ -14266,7 +15790,26 @@
           "standalonePrice": "88000",
           "fixedPriceOverride": "15400",
           "remarks": "フロントスピーカーを国産ブランド「BLUEMOON AUDIO」の製品に交換し、再生能力をアップします。このパッケージはジムニー専用キットとして開発されており、アルミ削り出しのバッフルや厳選されたパーツを使ったネットワークで、ジムニーのサウンドを激変させます。ツィーターはドアミラー裏のパネルへのネジ止め、またはオンダッシュ取り付けとなります",
-          "youtubeUrl": ""
+          "youtubeUrl": "",
+          "showCardSummary": true,
+          "cardSummaryItems": [
+            {
+              "title": "スピーカー",
+              "desc": "",
+              "value": "88000"
+            },
+            {
+              "title": "軽防振",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "取り付け工賃",
+              "desc": "",
+              "value": ""
+            }
+          ],
+          "brandLogo": "/images/Audio/logo/BLUEMOON AUDIO.webp"
         }
       ],
       "subType": "standalone"
@@ -14301,7 +15844,7 @@
             "image": "/images/Audio/vihicle/300.webp",
             "height": "400px",
             "opacity": 0.5,
-            "badge": "スピーカー交換パッケージ",
+            "badge": "",
             "bgColor": "",
             "description": "トヨタ　ランドクルーザー300に合わせたスピーカー交換プランです。できるだけコストを抑えつつ、効果的に音質アップができるようにプランニングしています。カーオーディオに興味が湧いたときには、さらにグレードアップすることも可能です。"
           }
@@ -14319,7 +15862,7 @@
             "speakers": [
               {
                 "id": "spk_1781771117481_twhu",
-                "brand": "ICKER ",
+                "brand": "KICKER ",
                 "name": "KSS269",
                 "image": "/images/Audio/Speaker/KSS269.webp",
                 "mountingHoleSize": "",
@@ -14334,9 +15877,9 @@
                 "prices": [],
                 "cardSummaryItems": [
                   {
-                    "title": "スピーカー本体",
-                    "desc": "",
-                    "value": ""
+                    "title": "スピーカー",
+                    "desc": "KSS269+専用取付キット",
+                    "value": "76230"
                   },
                   {
                     "title": "軽防振",
@@ -14353,7 +15896,8 @@
                     "desc": "",
                     "value": ""
                   }
-                ]
+                ],
+                "brandLogo": "/images/Audio/logo/kicker.webp"
               }
             ],
             "subtitleFontSize": 20,
@@ -14392,9 +15936,9 @@
                 "showCardSummary": true,
                 "cardSummaryItems": [
                   {
-                    "title": "スピーカー本体",
-                    "desc": "",
-                    "value": ""
+                    "title": "スピーカー",
+                    "desc": "KST2004+KSS269+KSC2704+専用取付キット",
+                    "value": "116820"
                   },
                   {
                     "title": "軽防振",
@@ -14411,7 +15955,8 @@
                     "desc": "",
                     "value": ""
                   }
-                ]
+                ],
+                "brandLogo": "/images/Audio/logo/kicker.webp"
               }
             ],
             "subtitle": "フロントスピーカー交換プラン\n(JBLプレミアムサウンド装着車)",
@@ -14476,7 +16021,7 @@
       "speakers": [
         {
           "id": "spk_1781771117481_twhu",
-          "brand": "ICKER ",
+          "brand": "KICKER ",
           "name": "KSS269",
           "image": "/images/Audio/Speaker/KSS269.webp",
           "mountingHoleSize": "",
@@ -14491,9 +16036,9 @@
           "prices": [],
           "cardSummaryItems": [
             {
-              "title": "スピーカー本体",
-              "desc": "",
-              "value": ""
+              "title": "スピーカー",
+              "desc": "KSS269+専用取付キット",
+              "value": "76230"
             },
             {
               "title": "軽防振",
@@ -14510,7 +16055,8 @@
               "desc": "",
               "value": ""
             }
-          ]
+          ],
+          "brandLogo": "/images/Audio/logo/kicker.webp"
         }
       ],
       "subType": "standalone"
@@ -14551,36 +16097,6 @@
           }
         },
         {
-          "id": "sec_package_summary_1781762595406_1",
-          "type": "package_summary",
-          "data": {
-            "title": "このプランに含まれる内容",
-            "items": [
-              {
-                "title": "スピーカー本体　",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "軽防振",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "���ーフェクトキット",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "取り付け工賃",
-                "desc": "",
-                "value": ""
-              }
-            ],
-            "subtitle": ""
-          }
-        },
-        {
           "id": "sec_speakers_1781762595406_2",
           "type": "speakers",
           "data": {
@@ -14599,17 +16115,42 @@
                 "standalonePrice": "83600",
                 "fixedPriceOverride": "60225",
                 "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。A��ラーツィーター、ダッシュ左右スピーカー、ドアウーハー、ダッシュセンタースピーカーの計4箇所を交換します。",
-                "youtubeUrl": ""
+                "youtubeUrl": "",
+                "brandLogo": "/images/Audio/logo/kicker.webp",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカー",
+                    "desc": "KSS6904(66,000円)+KSC3504(17,600円)3個",
+                    "value": ""
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "専用取り付けキット",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取り付け工賃",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
               }
             ],
-            "subtitle": "フロントスピーカー交換プラン\n (40系アルファード・ヴェルファイア(Exective Lounge/アルファードZ,ヴェルファイアZpremierJBL仕様))",
+            "subtitle": "フロントスピーカー交換プラン\n 40系アルファード・ヴェルファイア(Exective Lounge/アルファードZ,ヴェルファイアZpremierJBL仕様)",
             "hideSubtitle": false,
             "hideTitle": true,
             "subtitleAlign": "center",
             "content": "",
             "subtitleFontSize": 20,
             "displayMode": "standard",
-            "sectionImage": ""
+            "sectionImage": "",
+            "sectionWidth": "half"
           }
         },
         {
@@ -14645,10 +16186,35 @@
                     "label": "アルファード・ヴェルファイア(L用)",
                     "price": "100650"
                   }
+                ],
+                "brandLogo": "/images/Audio/logo/kicker.webp",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカー",
+                    "desc": "KSC6904+KSC3504+パーフェクトキット(Z用",
+                    "value": "80850"
+                  },
+                  {
+                    "title": "スピーカー",
+                    "desc": "KSC6904+KSC3504+パーフェクトキット(X用",
+                    "value": "81950"
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取り付け工賃",
+                    "desc": "",
+                    "value": ""
+                  }
                 ]
               }
             ],
-            "subtitleFontSize": 20
+            "subtitleFontSize": 20,
+            "sectionWidth": "half"
           }
         },
         {
@@ -14674,10 +16240,30 @@
                 "standalonePrice": "98780 ",
                 "fixedPriceOverride": "24200",
                 "remarks": "フロントスピーカーをアメリカのブランドKICKERのミドルグレードへ交換して再生能力アップ。純正スピーカーとのトレードイン交換取り付けで車両との親和性が高く、ダッシュに取り付けるスピーカーはワイドレンジなので情報量アップで音質の差は歴然！ドアスピーカー、ダッシュ左右スピーカー、センタースピーカーを交換します。（センタースピーカーは片側のみ使いますので1つ余ります）",
-                "youtubeUrl": ""
+                "youtubeUrl": "",
+                "brandLogo": "/images/Audio/logo/kicker.webp",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカー",
+                    "desc": "KSS269+KSC3504+パーフェクトキット",
+                    "value": "98780"
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取り付け工賃",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
               }
             ],
-            "subtitleFontSize": 20
+            "subtitleFontSize": 20,
+            "sectionWidth": "half"
           }
         },
         {
@@ -14703,10 +16289,30 @@
                 "standalonePrice": "77880",
                 "fixedPriceOverride": "18700",
                 "remarks": "フロントスピーカーをアメリカのブランドKICKERのミドルグレードへ交換して再生能力アップ。純正スピーカーとのトレードイン交換取り付けで車両との親和性が高く、ダッシュに取り付けるスピーカーはワイドレンジなので情報量アップで音質の差は歴然！",
-                "youtubeUrl": ""
+                "youtubeUrl": "",
+                "brandLogo": "/images/Audio/logo/kicker.webp",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "スピーカー",
+                    "desc": "KSS269+パーフェクトキット",
+                    "value": "77880"
+                  },
+                  {
+                    "title": "軽防振",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "取り付け工賃",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
               }
             ],
-            "subtitleFontSize": 20
+            "subtitleFontSize": 20,
+            "sectionWidth": "half"
           }
         },
         {
@@ -14756,8 +16362,32 @@
           "hasTweeterMount": "",
           "standalonePrice": "83600",
           "fixedPriceOverride": "60225",
-          "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。Aピラーツィーター、ダッシュ左右スピーカー、ドアウーハー、ダッシュセンタースピーカーの計4箇所を交換します。",
-          "youtubeUrl": ""
+          "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。A��ラーツィーター、ダッシュ左右スピーカー、ドアウーハー、ダッシュセンタースピーカーの計4箇所を交換します。",
+          "youtubeUrl": "",
+          "brandLogo": "/images/Audio/logo/kicker.webp",
+          "showCardSummary": true,
+          "cardSummaryItems": [
+            {
+              "title": "スピーカー",
+              "desc": "KSS6904(66,000円)+KSC3504(17,600円)3個",
+              "value": ""
+            },
+            {
+              "title": "軽防振",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "専用取り付けキット",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "取り付け工賃",
+              "desc": "",
+              "value": ""
+            }
+          ]
         }
       ],
       "subType": "standalone"
@@ -14792,7 +16422,7 @@
             "image": "/images/Audio/vihicle/prado.webp",
             "height": "400px",
             "opacity": 0.5,
-            "badge": "スピーカー交換パッケージ",
+            "badge": "",
             "bgColor": "",
             "description": "トヨタ　ランドクルーザープラド(150)に合わせたスピーカー交換プランです。できるだけコストを抑えつつ、効果的に音質アップができるようにプランニングしています。カーオーディオに興味が湧いたときには、さらにグレードアップすることも可能です。"
           }
@@ -14820,8 +16450,8 @@
                 "showCardSummary": true,
                 "cardSummaryItems": [
                   {
-                    "title": "スピーカー本体",
-                    "desc": "",
+                    "title": "スピーカー",
+                    "desc": "KSS369+KSC3504",
                     "value": "104995"
                   },
                   {
@@ -14881,8 +16511,8 @@
                 "showCardSummary": true,
                 "cardSummaryItems": [
                   {
-                    "title": "スピーカー本体",
-                    "desc": "",
+                    "title": "スピーカー",
+                    "desc": "KSC3504+KSC6904+パーフェクトキット",
                     "value": "72050"
                   },
                   {
@@ -14960,8 +16590,8 @@
           "showCardSummary": true,
           "cardSummaryItems": [
             {
-              "title": "スピーカー本体",
-              "desc": "",
+              "title": "スピーカー",
+              "desc": "KSS369+KSC3504",
               "value": "104995"
             },
             {
@@ -15015,7 +16645,7 @@
             "image": "/images/Audio/vihicle/c-hr.webp",
             "height": "400px",
             "opacity": 0.5,
-            "badge": "スピーカー交換パッケージ",
+            "badge": "",
             "bgColor": "",
             "description": "トヨタ　C－HRに合わせたスピーカー交換プランです。できるだけコストを抑えつつ、効果的に音質アップができるようにプランニングしています。カーオーディオに興味が湧いたときには、さらにグレードアップすることも可能です。"
           }
@@ -15043,8 +16673,8 @@
                 "showCardSummary": true,
                 "cardSummaryItems": [
                   {
-                    "title": "スピーカー本体",
-                    "desc": "",
+                    "title": "スピーカー",
+                    "desc": "CSS674+専用取り付けキット",
                     "value": "47190"
                   },
                   {
@@ -15129,8 +16759,8 @@
           "showCardSummary": true,
           "cardSummaryItems": [
             {
-              "title": "スピーカー本体",
-              "desc": "",
+              "title": "スピーカー",
+              "desc": "CSS674+専用取り付けキット",
               "value": "47190"
             },
             {
@@ -15184,7 +16814,7 @@
             "image": "/images/Audio/vihicle/prius.webp",
             "height": "400px",
             "opacity": 0.5,
-            "badge": "スピーカー交換パッケージ",
+            "badge": "",
             "bgColor": "",
             "description": "トヨタ　プリウスに合わせたスピーカー交換プランです。できるだけコストを抑えつつ、効果的に音質アップができるようにプランニングしています。カーオーディオに興味が湧いたときには、さらにグレードアップすることも可能です。"
           }
@@ -15213,7 +16843,7 @@
                 "cardSummaryItems": [
                   {
                     "title": "スピーカー本体",
-                    "desc": "",
+                    "desc": "KSC3504+KSC6704+専用取り付けキット",
                     "value": "70620"
                   },
                   {
@@ -15274,7 +16904,7 @@
                 "cardSummaryItems": [
                   {
                     "title": "スピーカー本体",
-                    "desc": "",
+                    "desc": "CSS694",
                     "value": "38500"
                   },
                   {
@@ -15353,7 +16983,7 @@
           "cardSummaryItems": [
             {
               "title": "スピーカー本体",
-              "desc": "",
+              "desc": "KSC3504+KSC6704+専用取り付けキット",
               "value": "70620"
             },
             {
@@ -15407,7 +17037,7 @@
             "image": "/images/Audio/vihicle/LEVORG.webp",
             "height": "400px",
             "opacity": 0.5,
-            "badge": "スピーカー交換パッケージ",
+            "badge": "(H26.6-R2.10)(R2.10～)",
             "bgColor": "",
             "description": "スバル　レヴォーグに合わせたスピーカー交換プランです。できるだけコストを抑えつつ、効果的に音質アップができるようにプランニングしています。カーオーディオに興味が湧いたときには、さらにグレードアップすることも可能です。"
           }
@@ -15436,7 +17066,7 @@
                 "cardSummaryItems": [
                   {
                     "title": "スピーカー本体",
-                    "desc": "",
+                    "desc": "KSS269+LEVORG専用取り付けキット",
                     "value": ""
                   },
                   {
@@ -15456,9 +17086,32 @@
                   }
                 ],
                 "brandLogo": "/images/Audio/logo/kicker.webp"
-              },
+              }
+            ],
+            "subtitle": "フロントスピーカー交換プラン\n(R2.10～)",
+            "hideSubtitle": false,
+            "hideTitle": true,
+            "subtitleAlign": "center",
+            "content": "",
+            "subtitleFontSize": 20,
+            "displayMode": "standard",
+            "sectionImage": "",
+            "sectionWidth": "half"
+          }
+        },
+        {
+          "id": "sec_speakers_1782874724706_6hzr",
+          "type": "speakers",
+          "data": {
+            "title": "",
+            "subtitle": "フロントスピーカー交換プラン\n(H26.6-R2.10)",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
               {
-                "id": "spk_1782626514940_js6p",
+                "id": "spk_1782874781199_9b1k",
                 "brand": "KICKER",
                 "brandLogo": "/images/Audio/logo/kicker.webp",
                 "name": "CSS674",
@@ -15474,8 +17127,8 @@
                 "showCardSummary": true,
                 "cardSummaryItems": [
                   {
-                    "title": "スピーカー本体",
-                    "desc": "",
+                    "title": "スピーカー",
+                    "desc": "CSS674",
                     "value": "40700"
                   },
                   {
@@ -15496,15 +17149,8 @@
                 ]
               }
             ],
-            "subtitle": "フロントスピーカー交換プラン",
-            "hideSubtitle": false,
-            "hideTitle": true,
-            "subtitleAlign": "center",
-            "content": "",
-            "subtitleFontSize": 20,
-            "displayMode": "standard",
-            "sectionImage": "",
-            "sectionWidth": "full"
+            "sectionWidth": "half",
+            "subtitleFontSize": 20
           }
         },
         {
@@ -15560,7 +17206,7 @@
           "cardSummaryItems": [
             {
               "title": "スピーカー本体",
-              "desc": "",
+              "desc": "KSS269+LEVORG専用取り付けキット",
               "value": ""
             },
             {
@@ -15580,44 +17226,6 @@
             }
           ],
           "brandLogo": "/images/Audio/logo/kicker.webp"
-        },
-        {
-          "id": "spk_1782626514940_js6p",
-          "brand": "KICKER",
-          "brandLogo": "/images/Audio/logo/kicker.webp",
-          "name": "CSS674",
-          "image": "/images/Audio/Speaker/CSS674.webp",
-          "mountingHoleSize": "",
-          "depthSize": "",
-          "hasGrille": "",
-          "hasTweeterMount": "",
-          "standalonePrice": "40700",
-          "fixedPriceOverride": "18700",
-          "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。このCSシリーズは純正ナビなどの内蔵アンプでも駆動しやすく、張りのある小気味良い音が出るスピーカーです。取り付けにはレヴォーグ専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。ツィータは専用マウントを用いての純正位置取り付けとなります。",
-          "youtubeUrl": "",
-          "showCardSummary": true,
-          "cardSummaryItems": [
-            {
-              "title": "スピーカー本体",
-              "desc": "",
-              "value": "40700"
-            },
-            {
-              "title": "軽防振",
-              "desc": "",
-              "value": ""
-            },
-            {
-              "title": "専用取り付けキット",
-              "desc": "",
-              "value": ""
-            },
-            {
-              "title": "取り付け工賃",
-              "desc": "",
-              "value": ""
-            }
-          ]
         }
       ],
       "subType": "standalone"
@@ -15681,7 +17289,7 @@
                 "cardSummaryItems": [
                   {
                     "title": "スピーカー本体",
-                    "desc": "",
+                    "desc": "KSS269+フォレスター専用取り付けキット",
                     "value": "78100"
                   },
                   {
@@ -15767,7 +17375,7 @@
           "cardSummaryItems": [
             {
               "title": "スピーカー本体",
-              "desc": "",
+              "desc": "KSS269+フォレスター専用取り付けキット",
               "value": "78100"
             },
             {
@@ -15849,8 +17457,8 @@
                 "showCardSummary": true,
                 "cardSummaryItems": [
                   {
-                    "title": "スピーカー本体",
-                    "desc": "",
+                    "title": "スピーカー",
+                    "desc": "KSS269+パーフェクトキット",
                     "value": "72600"
                   },
                   {
@@ -15935,8 +17543,8 @@
           "showCardSummary": true,
           "cardSummaryItems": [
             {
-              "title": "スピーカー本体",
-              "desc": "",
+              "title": "スピーカー",
+              "desc": "KSS269+パーフェクトキット",
               "value": "72600"
             },
             {
@@ -16013,13 +17621,13 @@
                 "hasTweeterMount": "",
                 "standalonePrice": "72600 ",
                 "fixedPriceOverride": "18700",
-                "remarks": "フロントスピーカーをアメリカのブランドKICKERへ交換して再生能力アップ。純正スピーカーとのトレードイン交換取り付けで車両との親和性が高く、ダッシュに取り付けるスピーカーはワイドレンジなので情報量アップで音質の差は歴然！",
+                "remarks": "フロ���トスピーカーをアメリカのブランドKICKERへ交換して再生能力アップ。純正スピーカーとのトレードイン交換取り付けで車両との親和性が高く、ダッシュに取り付けるスピーカーはワイドレンジなので情報量アップで音質の差は歴然！",
                 "youtubeUrl": "",
                 "showCardSummary": true,
                 "cardSummaryItems": [
                   {
-                    "title": "スピーカー本体",
-                    "desc": "",
+                    "title": "スピーカー",
+                    "desc": "KSS269+パーフェクトキット",
                     "value": "72600"
                   },
                   {
@@ -16104,8 +17712,8 @@
           "showCardSummary": true,
           "cardSummaryItems": [
             {
-              "title": "スピーカー本体",
-              "desc": "",
+              "title": "スピーカー",
+              "desc": "KSS269+パーフェクトキット",
               "value": "72600"
             },
             {
@@ -16128,6 +17736,270 @@
         }
       ],
       "subType": "standalone"
+    },
+    {
+      "id": "line_1782886291847",
+      "name": "スピーカー交換・BASIC line （セパレート）  (コピー)",
+      "parentCategoryId": "speaker_package",
+      "isTemplate": false,
+      "header": {
+        "mainTitle": "BASIC LINE（セパレート）",
+        "subTitle": "ベーシックライン",
+        "badge": "スピーカー交換パッケージ",
+        "description": "ツィーター（高音）とミッドレンジ（中低音）が別々になったセパレートタイプのスピーカーに交換するパッケージです。カーオーディオのシステムアップが初めての方にもおすすめです。\nコストを抑えながらセパレートの良さを体感していただけるよう、ネットワーク（音域を分離するユニット）はインラインタイプを中心にラインアップしています。ツィーターは純正位置またはダッシュボード上へのマウント取り付けが基本です。"
+      },
+      "pricing": {
+        "specialPrice": "64900",
+        "fixedPrice": 24200,
+        "normalPriceText": "通常目安: 80,000円",
+        "savingsText": "約 15,000円 お得!",
+        "note": "※KICKER CSS674（40,700円）を選択した場合の例。",
+        "taxRate": 10
+      },
+      "sections": [
+        {
+          "id": "sec_banner_1782886291847_0",
+          "type": "banner",
+          "data": {
+            "title": "BASIC LINE（セパレート）",
+            "subTitle": "ベーシックライン",
+            "image": "",
+            "height": "400px",
+            "opacity": 0.5,
+            "badge": "スピーカー交換パッケージ",
+            "bgColor": "#1e3a8a",
+            "description": "ツィーター（高音）とミッドレンジ（中低音）が別々になったセパレートタイプのスピーカーに交換するパッケージです。カーオーディオのシステムアップが初めての方にもおすすめです。\nコストを抑えながらセパレートの良さを体感していただけるよう、ネットワーク（音域を分離するユニット）はインラインタイプを中心にラインアップしています。ツィーターは純正位置またはダッシュボード上へのマウント取り付けが基本です。"
+          }
+        },
+        {
+          "id": "sec_package_summary_1782886291847_1",
+          "type": "package_summary",
+          "data": {
+            "title": "パッケージ内容",
+            "items": [
+              {
+                "title": "スピーカー本体",
+                "desc": "17cmモデル 2wayスピーカー"
+              },
+              {
+                "title": "軽防振",
+                "desc": "制振・防音処理",
+                "value": ""
+              },
+              {
+                "title": "カスタムインナーバッフル",
+                "desc": "ジャストフィット（https://justfit.carrozzeria.pioneer/)の適合情報に合わせて製作",
+                "value": ""
+              },
+              {
+                "title": "スピーカー交換工賃",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "ツイーター取り付け",
+                "desc": "純正位置もしくはオンダッシュ取り付け",
+                "value": ""
+              }
+            ],
+            "subtitle": "下記の内容が含まれています。"
+          }
+        },
+        {
+          "id": "sec_notes_1782886291847_2",
+          "type": "notes",
+          "data": {
+            "title": "施工に関する注意事項",
+            "items": [
+              "作業は<strong>3～4時間お車をお預かり</strong>します（無料代車をご用意可能です）。",
+              "バッフル適合がない車種は別途<strong>¥5,500</strong>の製作費が必要になります。",
+              "ツィーター固定にマウント等が必要な車種は追加費用が発生する場合があります。"
+            ]
+          }
+        },
+        {
+          "id": "sec_speakers_1782886291847_3",
+          "type": "speakers",
+          "data": {
+            "title": "Speaker Lineup",
+            "speakers": [
+              {
+                "id": "spk_1779089013844",
+                "brand": "ROCKFORD FOSGATE",
+                "name": "R1675-S",
+                "image": "/images/Audio/Speaker/R1675-S.webp",
+                "standalonePrice": "35200",
+                "remarks": "TW内にハイパスフィルター内蔵",
+                "hasGrille": "あり",
+                "hasTweeterMount": "あり",
+                "mountingHoleSize": "147.5",
+                "depthSize": "51.2"
+              },
+              {
+                "id": "spk_1779089430284",
+                "brand": "GROUND ZERO",
+                "name": "GZIC165.2SPL",
+                "image": "/images/Audio/Speaker/GZIC165.2SPL.webp",
+                "standalonePrice": "27500",
+                "remarks": "TWのみプロテクション",
+                "mountingHoleSize": "142.5",
+                "depthSize": "68",
+                "hasGrille": "あり",
+                "hasTweeterMount": "あり"
+              },
+              {
+                "id": "spk_1779089433628",
+                "brand": "BLAM",
+                "name": "SR 165S",
+                "image": "/images/Audio/Speaker/SR 165S.webp",
+                "standalonePrice": "38500",
+                "remarks": "TWのみプロテクション　3Ω",
+                "hasGrille": "なし",
+                "hasTweeterMount": "あり",
+                "mountingHoleSize": "142",
+                "depthSize": "62.4"
+              },
+              {
+                "id": "spk_1779089434476",
+                "brand": "AUDISON",
+                "name": "APK 165",
+                "image": "/images/Audio/Speaker/APK 165.webp",
+                "standalonePrice": "30800",
+                "remarks": "TWのみプロテクション　4Ω",
+                "mountingHoleSize": "141",
+                "depthSize": "58.5",
+                "hasGrille": "あり",
+                "hasTweeterMount": "なし"
+              },
+              {
+                "id": "spk_1779089435148",
+                "brand": "HELIX",
+                "name": "CB K165.2-S3",
+                "image": "/images/Audio/Speaker/CB C165.2-S3.webp",
+                "standalonePrice": "44000",
+                "remarks": "TWのみプロテクション",
+                "hasGrille": "なし",
+                "hasTweeterMount": "あり",
+                "mountingHoleSize": "143",
+                "depthSize": "61.4"
+              },
+              {
+                "id": "spk_1779089435572",
+                "brand": "BLUE MOON AUDIO",
+                "name": "EX165",
+                "image": "/images/Audio/Speaker/EX165.webp",
+                "standalonePrice": "35200",
+                "remarks": "TW/MID インラインNW",
+                "mountingHoleSize": "130",
+                "depthSize": "56.5",
+                "hasGrille": "なし",
+                "hasTweeterMount": "あり"
+              }
+            ],
+            "fixedPrice": "24200"
+          }
+        },
+        {
+          "id": "sec_floating_cta_1782886291847_4",
+          "type": "floating_cta",
+          "data": {}
+        }
+      ],
+      "status": "published",
+      "slug": "basicsep-copy-870",
+      "features": {
+        "doorTuning": {
+          "image": "/images/Audio/Speaker/door-b.webp"
+        },
+        "baffle": {
+          "image": "/images/Audio/Speaker/baffle.webp"
+        },
+        "cable": {
+          "image": "/images/Audio/Speaker/ang-cable.webp"
+        }
+      },
+      "upgrades": {
+        "options": {
+          "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
+          "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
+        }
+      },
+      "showInMenu": true,
+      "speakers": [
+        {
+          "id": "spk_1779089013844",
+          "brand": "ROCKFORD FOSGATE",
+          "name": "R1675-S",
+          "image": "/images/Audio/Speaker/R1675-S.webp",
+          "standalonePrice": "35200",
+          "remarks": "TW内にハイパスフィルター内蔵",
+          "hasGrille": "あり",
+          "hasTweeterMount": "あり",
+          "mountingHoleSize": "147.5",
+          "depthSize": "51.2"
+        },
+        {
+          "id": "spk_1779089430284",
+          "brand": "GROUND ZERO",
+          "name": "GZIC165.2SPL",
+          "image": "/images/Audio/Speaker/GZIC165.2SPL.webp",
+          "standalonePrice": "27500",
+          "remarks": "TWのみプロテクション",
+          "mountingHoleSize": "142.5",
+          "depthSize": "68",
+          "hasGrille": "あり",
+          "hasTweeterMount": "あり"
+        },
+        {
+          "id": "spk_1779089433628",
+          "brand": "BLAM",
+          "name": "SR 165S",
+          "image": "/images/Audio/Speaker/SR 165S.webp",
+          "standalonePrice": "38500",
+          "remarks": "TWのみプロテクション　3Ω",
+          "hasGrille": "なし",
+          "hasTweeterMount": "あり",
+          "mountingHoleSize": "142",
+          "depthSize": "62.4"
+        },
+        {
+          "id": "spk_1779089434476",
+          "brand": "AUDISON",
+          "name": "APK 165",
+          "image": "/images/Audio/Speaker/APK 165.webp",
+          "standalonePrice": "30800",
+          "remarks": "TWのみプロテクション　4Ω",
+          "mountingHoleSize": "141",
+          "depthSize": "58.5",
+          "hasGrille": "あり",
+          "hasTweeterMount": "なし"
+        },
+        {
+          "id": "spk_1779089435148",
+          "brand": "HELIX",
+          "name": "CB K165.2-S3",
+          "image": "/images/Audio/Speaker/CB C165.2-S3.webp",
+          "standalonePrice": "44000",
+          "remarks": "TWのみプロテクション",
+          "hasGrille": "なし",
+          "hasTweeterMount": "あり",
+          "mountingHoleSize": "143",
+          "depthSize": "61.4"
+        },
+        {
+          "id": "spk_1779089435572",
+          "brand": "BLUE MOON AUDIO",
+          "name": "EX165",
+          "image": "/images/Audio/Speaker/EX165.webp",
+          "standalonePrice": "35200",
+          "remarks": "TW/MID インラインNW",
+          "mountingHoleSize": "130",
+          "depthSize": "56.5",
+          "hasGrille": "なし",
+          "hasTweeterMount": "あり"
+        }
+      ],
+      "subType": "package"
     }
   ],
   "audioLPTemplates": [

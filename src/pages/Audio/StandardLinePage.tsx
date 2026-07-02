@@ -170,11 +170,17 @@ export const StandardLinePage: React.FC = () => {
                     <div className="max-w-6xl mx-auto relative z-10">
                       <div className={`text-3xl md:text-4xl font-black italic tracking-[0.3em] text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 mb-12 uppercase`}>SOUND ANG</div>
                       <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-8 leading-[1.1]">
-                        <span className={`block text-[lg] md:text-2xl ${section.data.useDarkTheme !== false ? 'text-gray-400' : 'text-gray-500'} mb-3 tracking-[0.2em] font-bold`}>{section.data.badge}</span>
-                        {section.data.mainTitle}
-                        <span className="block text-2xl md:text-4xl text-blue-400 mt-4 tracking-widest font-bold">{section.data.subTitle}</span>
+                        <span className={`block text-[lg] md:text-2xl ${section.data.useDarkTheme !== false ? 'text-gray-400' : 'text-gray-500'} mb-3 tracking-[0.2em] font-bold`}>
+                          {section.data.badge || data.header?.badge || ''}
+                        </span>
+                        {section.data.mainTitle || section.data.title || data.header?.mainTitle || ''}
+                        <span className="block text-2xl md:text-4xl text-blue-400 mt-4 tracking-widest font-bold">
+                          {section.data.subTitle || section.data.subtitle || data.header?.subTitle || ''}
+                        </span>
                       </h1>
-                      <p className={`${section.data.useDarkTheme !== false ? 'text-gray-300' : 'text-gray-600'} font-bold leading-relaxed max-w-4xl text-base md:text-lg whitespace-pre-line`}>{section.data.description}</p>
+                      <p className={`${section.data.useDarkTheme !== false ? 'text-gray-300' : 'text-gray-600'} font-bold leading-relaxed max-w-4xl text-base md:text-lg whitespace-pre-line`}>
+                        {section.data.description || section.data.desc || data.header?.description || ''}
+                      </p>
                     </div>
                   </div>
                 );
@@ -360,7 +366,11 @@ export const StandardLinePage: React.FC = () => {
                 const sectionSubtitle = section.data?.subtitle || "Selected high-quality units";
 
                 const totalSpeakers = speakersList.length;
-                let gridContainerClass = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10";
+                const cols = section.data?.columns || 3;
+                let gridColsClass = "lg:grid-cols-3";
+                if (cols === 2) gridColsClass = "lg:grid-cols-2";
+                if (cols === 4) gridColsClass = "lg:grid-cols-4";
+                let gridContainerClass = `grid grid-cols-1 md:grid-cols-2 ${gridColsClass} gap-10`;
                 if (sectionWidth !== 'full') {
                   gridContainerClass = "grid grid-cols-1 gap-6 w-full";
                 } else if (totalSpeakers === 1) {
@@ -463,8 +473,16 @@ export const StandardLinePage: React.FC = () => {
                                 <img src={spk.image} alt={`${displayBrand} ${spk.name}`} className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 drop-shadow-xl" />
                                 <div className="absolute top-6 left-6 animate-fade-in">
                                   {spk.brandLogo ? (
-                                    <div className="bg-black/80 backdrop-blur-md px-3.5 py-1.5 rounded-2xl border border-white/20 h-9 flex items-center justify-center shadow-lg">
-                                      <img src={spk.brandLogo} alt={displayBrand} className="h-full object-contain max-w-[80px]" />
+                                    <div className={`backdrop-blur-md px-4 py-2 rounded-2xl h-11 flex items-center justify-center shadow-lg border ${
+                                      spk.logoBg === 'light' 
+                                        ? 'bg-zinc-100/95 border-zinc-200/80' 
+                                        : 'bg-black/80 border-white/20'
+                                    }`}>
+                                      <img 
+                                        src={spk.brandLogo} 
+                                        alt={displayBrand} 
+                                        className="h-full object-contain max-w-[110px]" 
+                                      />
                                     </div>
                                   ) : (
                                     <div className="bg-black/80 backdrop-blur-md text-white text-[12px] font-black px-4 py-2 rounded-full tracking-widest uppercase border border-white/20 shadow-lg">{displayBrand}</div>

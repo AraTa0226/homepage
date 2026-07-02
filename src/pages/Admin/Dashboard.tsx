@@ -1244,6 +1244,7 @@ const FeatureSetManager = () => {
 
 const AudioPlanManager = () => {
     const { audioLPs, setAudioLPs, plans, updateCategory } = usePrices();
+    const [copiedSpeaker, setCopiedSpeaker] = useState<any>(null);
     const lps = audioLPs || [];
 
     const CATEGORIES = [
@@ -2176,6 +2177,18 @@ const AudioPlanManager = () => {
                                     <option value="third">1/3幅 (33%)</option>
                                 </select>
                             </div>
+                            <div className="flex items-center gap-2">
+                                <span className="text-[10px] font-bold text-zinc-400">表示列数 (PC):</span>
+                                <select 
+                                    value={section.data.columns || 3}
+                                    onChange={e => updateSectionData(sIdx, { columns: parseInt(e.target.value) })}
+                                    className="bg-black border border-zinc-800 rounded px-2 py-1 text-white text-[10px] font-bold outline-none"
+                                >
+                                    <option value={2}>2列 (2 Columns)</option>
+                                    <option value={3}>3列 (3 Columns)</option>
+                                    <option value={4}>4列 (4 Columns)</option>
+                                </select>
+                            </div>
                         </div>
 
                         {/* Package Summary Toggle & Config */}
@@ -2328,6 +2341,24 @@ const AudioPlanManager = () => {
                                 </button>
                             </div>
 
+                            {copiedSpeaker ? (
+                                <div className="flex justify-end mb-4">
+                                    <button 
+                                        type="button"
+                                        onClick={() => {
+                                            const newSpk = Object.assign({}, copiedSpeaker || {}, {
+                                                id: "spk_" + Date.now() + "_" + Math.random().toString(36).substring(2,6)
+                                            });
+                                            const nextSpks = speakersList.concat([newSpk]);
+                                            updateSectionData(sIdx, { speakers: nextSpks });
+                                        }}
+                                        className="flex items-center gap-1.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-white px-2.5 py-1.5 rounded-lg text-[10px] font-black"
+                                    >
+                                        <Plus className="w-3.5 h-3.5 text-green-400" /> Paste Speaker
+                                    </button>
+                                </div>
+                            ) : null}
+
                             <div className="space-y-6">
                                 {speakersList.map((spk: any, idx: number) => {
                                     const appliedPrice = calculateAppliedPriceForSection(spk, sectionFixedPrice);
@@ -2368,16 +2399,28 @@ const AudioPlanManager = () => {
                                                         <ChevronDown className="w-3.5 h-3.5" />
                                                     </button>
                                                 </div>
-                                                <button 
-                                                    type="button"
-                                                    onClick={() => {
-                                                        const next = speakersList.filter((_: any, i: number) => i !== idx);
-                                                        updateSectionData(sIdx, { speakers: next });
-                                                    }}
-                                                    className="text-zinc-600 hover:text-red-400 p-1 rounded hover:bg-red-500/10 transition-colors"
-                                                >
-                                                    <Trash2 className="w-3.5 h-3.5" />
-                                                </button>
+                                                <div className="flex items-center gap-1">
+                                                    <button 
+                                                        type="button"
+                                                        onClick={() => {
+                                                            setCopiedSpeaker(spk);
+                                                        }}
+                                                        className="text-zinc-500 hover:text-blue-400 p-1 rounded hover:bg-blue-500/10 transition-colors"
+                                                        title="Copy Speaker"
+                                                    >
+                                                        <Plus className="w-3.5 h-3.5" />
+                                                    </button>
+                                                    <button 
+                                                        type="button"
+                                                        onClick={() => {
+                                                            const next = speakersList.filter((_: any, i: number) => i !== idx);
+                                                            updateSectionData(sIdx, { speakers: next });
+                                                        }}
+                                                        className="text-zinc-600 hover:text-red-400 p-1 rounded hover:bg-red-500/10 transition-colors"
+                                                    >
+                                                        <Trash2 className="w-3.5 h-3.5" />
+                                                    </button>
+                                                </div>
                                             </div>
 
                                             <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
