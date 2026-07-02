@@ -381,8 +381,13 @@ export const StandardLinePage: React.FC = () => {
 
                 const spacing = section.data?.borderSpacing || 'standard';
                 let spacingClass = "pb-8 mb-16";
-                if (spacing === 'narrow') spacingClass = "pb-4 mb-8";
-                if (spacing === 'wide') spacingClass = "pb-12 mb-20";
+                let minHClass = "min-h-[90px] md:min-h-[120px] lg:min-h-[140px]";
+                if (spacing === 'narrow') {
+                  spacingClass = "pb-4 mb-8";
+                  minHClass = "min-h-0";
+                } else if (spacing === 'wide') {
+                  spacingClass = "pb-12 mb-20";
+                }
 
                 const font = section.data?.subtitleFont || 'sans';
                 let fontClass = "font-sans";
@@ -397,7 +402,7 @@ export const StandardLinePage: React.FC = () => {
                   <div key={section.id} className={wrapperPadding}>
                     <div className={(sectionWidth === 'full' ? 'flex-grow' : '') + " flex flex-col justify-start w-full"}>
                       {(!section.data?.hideTitle || !section.data?.hideSubtitle) && (
-                        <div className={`flex flex-col md:flex-row items-baseline justify-between gap-4 border-b-4 border-gray-900 min-h-[90px] md:min-h-[120px] lg:min-h-[140px] ${spacingClass}`}>
+                        <div className={`flex flex-col md:flex-row items-baseline justify-between gap-4 border-b-4 border-gray-900 ${minHClass} ${spacingClass}`}>
                           {!section.data?.hideTitle && (
                             <h2 className="text-5xl md:text-7xl font-black text-gray-900 italic tracking-tighter uppercase leading-none" dangerouslySetInnerHTML={{ __html: sectionTitle.includes('<br') || sectionTitle.includes('\n') ? sectionTitle.replace(/\n/g, '<br />') : sectionTitle }} />
                           )}
