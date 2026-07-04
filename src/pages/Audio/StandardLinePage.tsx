@@ -345,6 +345,9 @@ export const StandardLinePage: React.FC = () => {
                   ? section.data.speakers
                   : (data.speakers || []);
                 
+                const allBrands = speakersList.map((s: any) => (s.brand || '').trim().toLowerCase());
+                const isSingleBrandSection = allBrands.length > 0 && allBrands.every((b: string) => b === allBrands[0]);
+                
                 const sectionFixedPrice = parsePrice(section.data?.fixedPrice !== undefined && section.data.fixedPrice !== null && section.data.fixedPrice !== ''
                   ? section.data.fixedPrice
                   : (data.pricing?.fixedPrice || 0));
@@ -393,6 +396,8 @@ export const StandardLinePage: React.FC = () => {
                 let fontClass = "font-sans";
                 if (font === 'serif') fontClass = "font-serif";
                 if (font === 'mono') fontClass = "font-mono";
+                if (font === 'montserrat') fontClass = "font-montserrat";
+                if (font === 'oswald') fontClass = "font-oswald";
 
                 const wrapperPadding = sectionWidth === 'full'
                   ? "max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-24 w-full"
@@ -488,7 +493,9 @@ export const StandardLinePage: React.FC = () => {
                           <div key={i} className="group flex flex-col h-full bg-white border border-zinc-200/80 rounded-[2.5rem] overflow-hidden shadow-[0_15px_45px_-20px_rgba(0,0,0,0.06)] hover:shadow-[0_30px_60px_-15px_rgba(59,130,246,0.1),0_15px_30px_-10px_rgba(0,0,0,0.04)] hover:border-blue-500/30 hover:-translate-y-2 transition-all duration-500 ease-out">
                             {displayMode !== 'no_image' && displayMode !== 'text_only' && (
                               <div className="aspect-square relative overflow-hidden bg-zinc-50/50 flex items-center justify-center p-12 group-hover:bg-zinc-100/50 border-b border-zinc-100 transition-colors duration-500">
-                                <img src={spk.image} alt={`${displayBrand} ${spk.name}`} className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 drop-shadow-xl" />
+                                {spk.image && (
+                                  <img src={spk.image} alt={`${displayBrand} ${spk.name}`} className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 drop-shadow-xl" />
+                                )}
                                 <div className="absolute top-6 left-6 animate-fade-in">
                                   {spk.brandLogo ? (
                                     <div className={`backdrop-blur-md px-4 py-2 rounded-2xl h-11 flex items-center justify-center shadow-lg border ${
@@ -521,7 +528,7 @@ export const StandardLinePage: React.FC = () => {
                               </div>
                             )}
                             <div className="p-8 flex flex-col flex-grow justify-between">
-                            {(displayMode === 'no_image' || displayMode === 'text_only') && displayBrand && (
+                            {(displayMode === 'no_image' || displayMode === 'text_only') && displayBrand && !isSingleBrandSection && (
                               <div className="text-xs font-bold text-blue-600 tracking-wider uppercase mb-1">{displayBrand}</div>
                             )}
                             <h3 className="text-2xl font-black text-gray-900 mb-2 leading-tight">{spk.name}</h3>

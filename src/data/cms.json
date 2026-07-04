@@ -217,9 +217,9 @@
         {
           "id": "easy-bass-plus",
           "name": "お手軽低音増強セット”プラス”",
-          "badge": "本格低音",
-          "description": "",
-          "link": "/easy-bass-plus",
+          "badge": "本���低���",
+          "description": "プランの特徴や魅力を伝える紹介文を入力してください。",
+          "link": "/ampswpac",
           "features": [
             "BOX+ウーハー",
             "別体アンプ",
@@ -2313,11 +2313,11 @@
       "type": [
         "security"
       ],
-      "description": "<p>今なお狙われ続ける150系。スマートキー連動による最新の窃盗対策や、物理的なCANガードなど、年式に応じた最適な対策をご提案します。</p>",
+      "description": "<p>今なお狙われ続ける150系。スマートキー連動による最新の窃盗対策や、物理的なCANガードなど、年式に応じた最適な対��������������������������������をご提案します。</p>",
       "items": [
         {
           "fieldId": "item",
-          "name": "Grgo ZVT II ＋ ��������������������������������������マ��������������������������������������������������連動/スマクロ",
+          "name": "Grgo ZVT II ＋ ������������������������������������������マ��������������������������������������������������連動/スマクロ",
           "price": "299,600",
           "badge": "おすすめ",
           "description": "傾斜センサー含むフルセンサー構成にスマートキー連動をプラスし�������������������������������������������������������������������������������������������������������������������������������������������������������������������������������利便性を高めた一台。",
@@ -7610,7 +7610,7 @@
         "name": "X-171S",
         "image": "/images/Audio/Speaker/X-171S.webp",
         "standalonePrice": "40700",
-        "remarks": "パッシブあり インライン",
+        "remarks": "パッシブあり ���ンライン",
         "mountingHoleSize": "137",
         "depthSize": "51",
         "hasGrille": "なし",
@@ -9033,7 +9033,7 @@
           "name": "X-171S",
           "image": "/images/Audio/Speaker/X-171S.webp",
           "standalonePrice": "40700",
-          "remarks": "パッシブあり インライン",
+          "remarks": "パッシブあり ���ンライン",
           "mountingHoleSize": "137",
           "depthSize": "51",
           "hasGrille": "なし",
@@ -10135,7 +10135,7 @@
             "opacity": 0.5,
             "badge": "スピーカー交換パッケージ",
             "bgColor": "",
-            "description": "輸入車の中でも、音質改善のご相談が特に多いのがBMWです。グレードを問わず純正システムの構成はほぼ同じで、多くのオーナー様が同じお悩みを抱えています。純正の見た目を崩さず、加工を抑えた方法で音質改善できるパッケージを���用意しています。"
+            "description": "輸入車の中でも、音質改善のご相談が特に多いのがBMWです。グレードを問わず純正システムの構成はほぼ同じで、多くのオーナー様が同じお悩みを抱えています。純正の見た目を崩さず、加工を抑えた方法で音質改善できるパッケージを����用意しています。"
           }
         },
         {
@@ -10160,7 +10160,7 @@
               }
             ],
             "title": "スピーカー交換例",
-            "description": "BMWの純正シ�������テムはフロントに10cm程度のスぴーかー、ツィーターなし、シート下のウーハーで低音を補うという構成がほとんどです。 加工を抑えてコストを抑えた改善方法として、まずはフロントスピーカーの交換とツィーターの追加。さらに適合車種であればウーハーも交換することで、ハリのあるサウンドに生まれ変わります。このパッケージではトレードインで交換可能なスピーカーをご紹介しています。",
+            "description": "BMWの�����正シ�����テムはフロントに10cm程度のスぴーかー、ツィーターなし、シート下のウーハーで低音を補うという構成がほとんどです。 加工を抑えてコストを抑えた改善方法として、まずはフロントスピーカーの交換とツィーターの追加。さらに適合車種であればウーハーも交換することで、ハリのあるサウンドに生まれ変わります。このパッケージではトレードインで交換可能なスピーカーをご紹介しています。",
             "doorTuning": {
               "title": "ツイーター",
               "desc": "純正ツィーター非装着車の場合、別途純正部品が必要になる場合があります。",
@@ -11940,10 +11940,12 @@
                 "value": ""
               }
             ],
-            "subtitleFontSize": 20,
+            "subtitleFontSize": 22,
             "sectionWidth": "half",
             "content": "商品(ウーハー)・ケーブル・インストール費用込み",
-            "borderSpacing": "narrow"
+            "borderSpacing": "narrow",
+            "subtitleColor": "#ea580c",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -11996,12 +11998,12 @@
                 ]
               }
             ],
-            "subtitleFontSize": 30,
+            "subtitleFontSize": 22,
             "sectionWidth": "half",
             "content": "商品(ウーハー)・ケーブル・インストール費用込み",
-            "borderSpacing": "wide",
-            "subtitleFont": "sans",
-            "subtitleColor": "#0000ff"
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald",
+            "subtitleColor": "#ea580c"
           }
         },
         {
@@ -12167,9 +12169,12 @@
                 ]
               }
             ],
-            "subtitleFontSize": 20,
+            "subtitleFontSize": 22,
             "content": "商品(ウーハー)・ケーブル・インストール費用込み",
-            "columns": 2
+            "columns": 2,
+            "subtitleColor": "#ea580c",
+            "subtitleFont": "oswald",
+            "borderSpacing": "narrow"
           }
         },
         {
@@ -12223,9 +12228,12 @@
                 ]
               }
             ],
-            "subtitleFontSize": 20,
+            "subtitleFontSize": 22,
             "sectionWidth": "half",
-            "content": "商品(ウーハー)・ケーブル・インストール費用込み"
+            "content": "商品(ウーハー)・ケーブル・インストール費用込み",
+            "subtitleColor": "#ea580c",
+            "subtitleFont": "oswald",
+            "borderSpacing": "narrow"
           }
         },
         {
@@ -12279,9 +12287,12 @@
                 ]
               }
             ],
-            "subtitleFontSize": 20,
+            "subtitleFontSize": 22,
             "sectionWidth": "half",
-            "content": "商品(ウーハー)・ケーブル・インストール費用込み"
+            "content": "商品(ウーハー)・ケーブル・インストール費用込み",
+            "subtitleColor": "#ea580c",
+            "subtitleFont": "oswald",
+            "borderSpacing": "narrow"
           }
         },
         {
@@ -12335,9 +12346,12 @@
                 ]
               }
             ],
-            "subtitleFontSize": 20,
+            "subtitleFontSize": 22,
             "sectionWidth": "half",
-            "content": "商品(ウーハー)・ケー���ル・インストール費用込み"
+            "content": "商品(ウーハー)・ケーブル・インストール費用込み",
+            "subtitleColor": "#ea580c",
+            "subtitleFont": "oswald",
+            "borderSpacing": "narrow"
           }
         },
         {
@@ -12430,9 +12444,12 @@
                 ]
               }
             ],
-            "subtitleFontSize": 20,
+            "subtitleFontSize": 22,
             "content": "商品(ウーハー)・ケーブル・インストール費用込み",
-            "columns": 2
+            "columns": 2,
+            "subtitleColor": "#ea580c",
+            "subtitleFont": "oswald",
+            "borderSpacing": "narrow"
           }
         },
         {
@@ -12487,8 +12504,11 @@
               }
             ],
             "sectionWidth": "half",
-            "subtitleFontSize": 20,
-            "content": "商品(ウーハー)・ケーブル・インストール費用込み"
+            "subtitleFontSize": 22,
+            "content": "商品(ウーハー)・ケーブル・インストール費用込み",
+            "subtitleColor": "#ea580c",
+            "subtitleFont": "oswald",
+            "borderSpacing": "narrow"
           }
         },
         {
@@ -12542,9 +12562,12 @@
                 ]
               }
             ],
-            "subtitleFontSize": 20,
+            "subtitleFontSize": 22,
             "content": "商品(ウーハー)・ケーブル・インストール費用込み",
-            "sectionWidth": "half"
+            "sectionWidth": "half",
+            "subtitleColor": "#ea580c",
+            "subtitleFont": "oswald",
+            "borderSpacing": "narrow"
           }
         },
         {
@@ -12599,9 +12622,12 @@
                 ]
               }
             ],
-            "subtitleFontSize": 20,
+            "subtitleFontSize": 22,
             "sectionWidth": "half",
-            "content": "商品(ウーハー)・ケーブル・インストール費用込み"
+            "content": "商品(ウーハー)・ケーブル・インストール費用込み",
+            "subtitleColor": "#ea580c",
+            "subtitleFont": "oswald",
+            "borderSpacing": "narrow"
           }
         },
         {
@@ -12655,9 +12681,12 @@
                 ]
               }
             ],
-            "subtitleFontSize": 20,
+            "subtitleFontSize": 22,
             "sectionWidth": "half",
-            "content": "商品(ウーハー)・ケーブル・インストール費用込み"
+            "content": "商品(ウーハー)・ケーブル・インストール費用込み",
+            "subtitleColor": "#ea580c",
+            "subtitleFont": "oswald",
+            "borderSpacing": "narrow"
           }
         },
         {
@@ -12711,10 +12740,13 @@
                 ]
               }
             ],
-            "subtitleFontSize": 20,
+            "subtitleFontSize": 22,
             "columns": 2,
             "content": "商品(ウーハー)・ケーブル・インストール費用込み",
-            "sectionWidth": "half"
+            "sectionWidth": "half",
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -12768,10 +12800,13 @@
                 ]
               }
             ],
-            "subtitleFontSize": 20,
+            "subtitleFontSize": 22,
             "columns": 2,
             "content": "商品(ウーハー)・ケーブル・インストール費用込み",
-            "sectionWidth": "half"
+            "sectionWidth": "half",
+            "borderSpacing": "narrow",
+            "subtitleColor": "#ea580c",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -12825,10 +12860,13 @@
                 ]
               }
             ],
-            "subtitleFontSize": 20,
+            "subtitleFontSize": 22,
             "sectionWidth": "half",
             "columns": 2,
-            "content": "商品(ウーハー)・ケーブル・インストール費用込み"
+            "content": "商品(ウーハー)・ケーブル・インストール費用込み",
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -12882,10 +12920,13 @@
                 ]
               }
             ],
-            "subtitleFontSize": 20,
+            "subtitleFontSize": 22,
             "sectionWidth": "half",
             "columns": 2,
-            "content": "商品(ウーハー)・ケーブル・インストール費用込み"
+            "content": "商品(ウーハー)・ケーブル・インストール費用込み",
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -12939,9 +12980,12 @@
                 ]
               }
             ],
-            "subtitleFontSize": 20,
+            "subtitleFontSize": 22,
             "sectionWidth": "half",
-            "content": "商品(ウーハー)・ケーブル・インストール費用込み"
+            "content": "商品(ウーハー)・ケーブル・インストール費用込み",
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -12995,10 +13039,13 @@
                 ]
               }
             ],
-            "subtitleFontSize": 20,
+            "subtitleFontSize": 22,
             "sectionWidth": "half",
             "columns": 2,
-            "content": "商品(ウーハー)・ケーブル・インストール費用込み"
+            "content": "商品(ウーハー)・ケーブル・インストール費用込み",
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -13041,17 +13088,17 @@
     },
     {
       "id": "easy-bass-plus",
-      "slug": "easy-bass-plus",
+      "slug": "ampswpac",
       "name": "お手軽低音増強セット”プラス”",
       "parentCategoryId": "bass_power",
       "publishStatus": "published",
       "showInMenu": true,
       "subType": "package",
       "header": {
-        "badge": "本格低音",
+        "badge": "本���低���",
         "mainTitle": "お手軽低音増強セット”プラス”",
         "subTitle": "本格低音",
-        "description": "���ランの特徴や魅力を伝える紹介文を入力してください。"
+        "description": "プランの特徴や魅力を伝える紹介文を入力してください。"
       },
       "pricing": {
         "specialPrice": "110000",
@@ -13061,32 +13108,929 @@
         "note": "",
         "taxRate": 10
       },
-      "speakers": [],
+      "speakers": [
+        {
+          "id": "spk_1783135566799_4p58",
+          "brand": "GLADEN MOSCONI",
+          "brandLogo": "/images/Audio/logo/gladen-mosconi.webp",
+          "name": "RSX065 VB-CU+ATM4",
+          "image": "/images/Audio/sub/RSX065 VB-CU+ATM4.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "146960 ",
+          "fixedPriceOverride": "0 ",
+          "remarks": "6.5インチウーハーと専用BOX,モノラルDクラスアンプ。\n12AWGケーブルでのインストールです。\nダウンファイヤリング取り付け可能。",
+          "youtubeUrl": "",
+          "logoBg": "light",
+          "showCardSummary": true,
+          "cardSummaryItems": [
+            {
+              "title": "ハイレベルインプット対応",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "360cm（幅）",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "170cm（高）",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "250cm（奥）",
+              "desc": "",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "id": "spk_1783135567379_j96c",
+          "brand": "GLADEN MOSCONI",
+          "brandLogo": "/images/Audio/logo/gladen-mosconi.webp",
+          "name": "RSX08 VB-CU+ATM4",
+          "image": "/images/Audio/sub/RSX08 VB-CU+ATM4.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "157960",
+          "fixedPriceOverride": "0",
+          "remarks": "8インチウーハーと専用BOX,モノラルDクラスアンプ。\n12AWGケーブルでのインストールです。\nダウンファイヤリング取り付け可能。",
+          "youtubeUrl": "",
+          "logoBg": "light",
+          "showCardSummary": true,
+          "cardSummaryItems": [
+            {
+              "title": "ハイレベルインプット対応",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "470cm（幅）",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "170cm（高）",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "280cm（奥）",
+              "desc": "",
+              "value": ""
+            }
+          ]
+        }
+      ],
       "sections": [
         {
-          "id": "sec_hero_1779248121851_easy-bass-plus",
-          "type": "hero",
+          "id": "sec_banner_1783134939511_c0t2",
+          "type": "banner",
           "data": {
-            "badge": "本���低���",
             "title": "お手軽低音増強セット”プラス”",
-            "subtitle": "本格低音",
-            "desc": "プランの特徴や魅力を伝える紹介文を入力してください。",
-            "image": "/images/Audio/easy_bass_package_plus.webp",
-            "imageOpacity": 0.3,
-            "useDarkTheme": true,
-            "bgColor": ""
+            "badge": "AMP & SUBWOOFER",
+            "opacity": 0.4,
+            "height": "400px",
+            "image": "/images/Audio/sub/amp&swpac.webp"
           }
         },
         {
-          "id": "sec_pricing_1779248121851_easy-bass-plus",
-          "type": "pricing",
+          "id": "sec_text_1783135076015_6itp",
+          "type": "text",
           "data": {
-            "specialPrice": "110000",
-            "fixedPrice": 0,
-            "normalPriceText": "",
-            "savingsText": "",
-            "note": "",
-            "taxRate": 10
+            "title": "",
+            "content": "<p style=\"font-size:20px; text-align:center; line-height:1.8;\">\n手軽低音増強セットはスピーカー交換パッケージと同じく大人気のパッケージです。<br>\n手軽に追加できるパワードウーハーはシート下などの空きスペースを上手く活用することで音楽表現を一歩グレードアップしてくれます。<br>\nここで紹介するお手軽低音増強セット”プラス”では、パワードウーハーではなくアンプとウーハーを別々にセットアップすることでもう一歩本格的な低音体験を実現します。\n</p>"
+          }
+        },
+        {
+          "id": "sec_package_summary_1783135207308_f2xg",
+          "type": "package_summary",
+          "data": {
+            "title": "パッケージ全内容",
+            "subtitle": "",
+            "items": [
+              {
+                "title": "BOX+ウーハーのセットモデル",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "ウーハー用パワーアンプ",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "8AWGまたは12AWG電源（機種による)",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "ヘッドユニットに応じた入力信号ケーブル RCAもしくはスピーカーケーブル",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "ワイヤリング工賃",
+                "desc": "",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec_speakers_1783135366010_vuwi",
+          "type": "speakers",
+          "data": {
+            "title": "GLADEN MOSCONI",
+            "subtitle": "GLADEN MOSCONI",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1783135566799_4p58",
+                "brand": "GLADEN MOSCONI",
+                "brandLogo": "/images/Audio/logo/gladen-mosconi.webp",
+                "name": "RSX065 VB-CU+ATM4",
+                "image": "/images/Audio/sub/RSX065 VB-CU+ATM4.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "146960 ",
+                "fixedPriceOverride": "0 ",
+                "remarks": "6.5インチウーハーと専用BOX,モノラルDクラスアンプ。\n12AWGケーブルでのインストールです。\nダウンファイヤリング取り付け可能。",
+                "youtubeUrl": "",
+                "logoBg": "light",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "360cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "170cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "250cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "id": "spk_1783135567379_j96c",
+                "brand": "GLADEN MOSCONI",
+                "brandLogo": "/images/Audio/logo/gladen-mosconi.webp",
+                "name": "RSX08 VB-CU+ATM4",
+                "image": "/images/Audio/sub/RSX08 VB-CU+ATM4.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "157960",
+                "fixedPriceOverride": "0",
+                "remarks": "8インチウーハーと専用BOX,モノラルDクラスアンプ。\n12AWGケーブルでのインストールです。\nダウンファイヤリング取り付け可能。",
+                "youtubeUrl": "",
+                "logoBg": "light",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "470cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "170cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "280cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              }
+            ],
+            "columns": 2,
+            "subtitleFontSize": 22,
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald",
+            "subtitleColor": "#ea580c",
+            "sectionImage": "",
+            "content": "ダウンファイヤリング可能なウーハーボックスと専用アンプの組み合わせ。\n小型バスレフBOX。"
+          }
+        },
+        {
+          "id": "sec_speakers_1783145314836_b69e",
+          "type": "speakers",
+          "data": {
+            "title": "carrozzeria",
+            "subtitle": "carrozzeria",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1783145363254_sta6",
+                "brand": "carrozzeria",
+                "brandLogo": "/images/Audio/logo/carrozzeria.webp",
+                "name": "TS-WX2030+GM-D8100",
+                "image": "/images/Audio/sub/TS-WX2030+GM-D8100.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "93280",
+                "fixedPriceOverride": "0",
+                "remarks": "20㎝ウーハーと専用BOX,モノラルDクラスアンプ。",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "350cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "146cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "250cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "id": "spk_1783145759863_hlqo",
+                "brand": "carrozzeria",
+                "brandLogo": "/images/Audio/logo/carrozzeria.webp",
+                "name": "TS-WX2530+GM-D8100",
+                "image": "/images/Audio/sub/TS-WX2530+GM-D8100.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "98780",
+                "fixedPriceOverride": "0",
+                "remarks": "25㎝ウーハーと専用BOX,モノラルDクラスアンプ。",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "530cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "161cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "300cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "id": "spk_1783145769250_fbb7",
+                "brand": "carrozzeria",
+                "brandLogo": "/images/Audio/logo/carrozzeria.webp",
+                "name": "TS-WX3030+GM-D8100",
+                "image": "/images/Audio/sub/TS-WX3030+GM-D8100.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "104280",
+                "fixedPriceOverride": "0",
+                "remarks": "30㎝ウーハーと専用BOX,モノラルDクラスアンプ。",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "600cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "176cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "350cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              }
+            ],
+            "subtitleFont": "oswald",
+            "subtitleColor": "#ea580c",
+            "subtitleFontSize": 22,
+            "borderSpacing": "narrow",
+            "content": "薄型ボックスが便利！ウーハー下向き取り付けOK！\n深みがありパワフルな低音。"
+          }
+        },
+        {
+          "id": "sec_speakers_1783147144032_5pwi",
+          "type": "speakers",
+          "data": {
+            "title": "VIBE British Audio",
+            "subtitle": "VIBE British Audio",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1783147206102_hbps",
+                "brand": "VIBE British Audio",
+                "brandLogo": "/images/Audio/logo/VIBE British Audio.webp",
+                "name": "BA10SQ-V4+POWERBOX400.1M-V7",
+                "image": "/images/Audio/sub/BA10SQ-V4+POWERBOX400.1M-V7.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "169180",
+                "fixedPriceOverride": "0",
+                "remarks": "25㎝シールドウーハー2ΩDVC、モノラルDクラスアンプ。\n8AWGでのインストールです。\nダウンファイヤリング取り付け可能。",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "452cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "157cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "315cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "id": "spk_1783148080320_bt2y",
+                "brand": "VIBE British Audio",
+                "brandLogo": "/images/Audio/logo/VIBE British Audio.webp",
+                "name": "VA-SLICKCBR12-V7+POWERBOX400.1M-V7",
+                "image": "/images/Audio/sub/VA-SLICKCBR12-V7+POWERBOX400.1M-V7.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "174680",
+                "fixedPriceOverride": "0",
+                "remarks": "30㎝バスレフウーハー2ΩDVC、モノラルDクラスアンプ。\n8AWGでのインストールです。",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "550cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "354cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "425cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              }
+            ],
+            "subtitleFontSize": 22,
+            "subtitleColor": "#ea580c",
+            "subtitleFont": "oswald",
+            "columns": 2,
+            "borderSpacing": "narrow",
+            "content": "超小型の1Ωドライブ可能なモノラルDクラスアンプ。\nブリティッシュサウンドを体感できます。"
+          }
+        },
+        {
+          "id": "sec_speakers_1783148717019_n2gj",
+          "type": "speakers",
+          "data": {
+            "title": "Kicker",
+            "subtitle": "Kicker(キッカー)",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1783148905642_ypj0",
+                "brand": "Kicker",
+                "brandLogo": "/images/Audio/logo/kicker.webp",
+                "name": "VCWC122+CXA400.1 ",
+                "image": "/images/Audio/sub/VCWC122+CXA400.1.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "175780",
+                "fixedPriceOverride": "0",
+                "remarks": "2Ω30㎝ウーハーと専用BOX、モノラルDクラスアンプ。\n8AWGでのインストールです。",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "432cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "406cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "367cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "id": "spk_1783149642522_4z0g",
+                "brand": "Kicker",
+                "brandLogo": "/images/Audio/logo/kicker.webp",
+                "name": "TCWC104+CXA400.1 ",
+                "image": "/images/Audio/sub/TCWC104+CXA400.1.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "160380",
+                "fixedPriceOverride": "0",
+                "remarks": "4Ω25㎝ウーハーと専用BOX、モノラルDクラスアンプ。\n8AWGでのインストールです。",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "546cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "381cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "194cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "id": "spk_1783151043172_i4j5",
+                "brand": "Kicker",
+                "brandLogo": "/images/Audio/logo/kicker.webp",
+                "name": "CDF124+CXA400.1 ",
+                "image": "/images/Audio/sub/CDF124+CXA400.1.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "164780",
+                "fixedPriceOverride": "0",
+                "remarks": "4Ω30㎝ウーハーと専用BOX、モノラルDクラスアンプ。\n8AWGでのインストールです。\nダウンファイヤリング取り付け可能。",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "580cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "195cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "360cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "id": "spk_1783151361630_yw53",
+                "brand": "Kicker",
+                "brandLogo": "/images/Audio/logo/kicker.webp",
+                "name": "CDF104+CXA400.1 ",
+                "image": "/images/Audio/sub/CDF104+CXA400.1.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "175780",
+                "fixedPriceOverride": "0",
+                "remarks": "4Ω25㎝ウーハーと専用BOX、モノラルDクラスアンプ。\n8AWGでのインストールです。\nダウンファイヤリング取り付け可能。",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "525cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "179cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "310cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "id": "spk_1783151865648_hi4y",
+                "brand": "Kicker",
+                "brandLogo": "/images/Audio/logo/kicker.webp",
+                "name": "L7TDF122+CXA400.1 ",
+                "image": "/images/Audio/sub/L7TDF122+CXA400.1.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "224180",
+                "fixedPriceOverride": "0",
+                "remarks": "2Ω30㎝ウーハーと専用BOX、モノラルDクラスアンプ。\nL7シリーズウーハー搭載。\n8AWGでのインストールです。\nダウンファイヤリング取り付け可能。",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "605cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "167cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "380cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "id": "spk_1783152375748_jrzy",
+                "brand": "Kicker",
+                "brandLogo": "/images/Audio/logo/kicker.webp",
+                "name": "L7TDF82+CXA400.1 ",
+                "image": "/images/Audio/sub/L7TDF82+CXA400.1.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "199980",
+                "fixedPriceOverride": "0",
+                "remarks": "2Ω20㎝ウーハーと専用BOX、モノラルDクラスアンプ。\nL7シリーズウーハー搭載。\n8AWGでのインストールです。\nダウンファイヤリング取り付け可能。",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "588cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "132cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "340cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              }
+            ],
+            "subtitleFontSize": 22,
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald",
+            "subtitleColor": "#ea580c",
+            "content": "リアルベースサウンド”キッカー”で極太な低音！\nマッシブなサウンドを求める方にお勧め！"
+          }
+        },
+        {
+          "id": "sec_speakers_1783152676842_webw",
+          "type": "speakers",
+          "data": {
+            "title": "Rockford Fosgate",
+            "subtitle": "Rockford Fosgate(ロックフォード・フォスゲート)",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1783152792862_kpau",
+                "brand": "Rockford Fosgate",
+                "brandLogo": "/images/Audio/logo/ROCKFORD FOSGATE.webp",
+                "name": "P1-1x10+R2-500X1",
+                "image": "/images/Audio/sub/P1-1x10+R2-500X1.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "238480",
+                "fixedPriceOverride": "0",
+                "remarks": "25㎝ウーハー（4Ω）とバスレフBOX、モノラルDクラスアンプ。\n8AWGでのインストールです。\n",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "432cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "333cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "384cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ],
+                "logoBg": "light"
+              },
+              {
+                "id": "spk_1783153741172_5nvt",
+                "brand": "Rockford Fosgate",
+                "brandLogo": "/images/Audio/logo/ROCKFORD FOSGATE.webp",
+                "name": "R1-1x10+R2-500X1",
+                "image": "/images/Audio/sub/R1-1x10+R2-500X1.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "179080",
+                "fixedPriceOverride": "0",
+                "remarks": "25㎝ウーハーと専用BOX、モノラルDクラスアンプ。\n8AWGでのインストールです。\n",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "405cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "308cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "310cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ],
+                "logoBg": "light"
+              }
+            ],
+            "subtitleFontSize": 22,
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald",
+            "subtitleColor": "#ea580c",
+            "columns": 2,
+            "content": "アメリカンサウンドの代名詞ロックフォードのパワフルベースサウンドが手軽に楽しめる！"
+          }
+        },
+        {
+          "id": "sec_speakers_1783154039355_eozc",
+          "type": "speakers",
+          "data": {
+            "title": "AUDISON",
+            "subtitle": "AUDISON(オーディソン)",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1783154097707_kcsk",
+                "brand": "AUDISON",
+                "brandLogo": "/images/Audio/logo/audison.webp",
+                "name": "APBX 10DS+SR 1.500ver2",
+                "image": "/images/Audio/sub/APBX 10DS+SR 1.500ver2.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "163680",
+                "fixedPriceOverride": "0",
+                "remarks": "25㎝ウーハーと専用BOX、モノラルDクラスアンプ。\n8AWGでのインストールです。\nダウンファイヤリング取付可能。",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "472cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "120cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "334cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ],
+                "logoBg": "dark"
+              },
+              {
+                "id": "spk_1783154568712_lm7q",
+                "brand": "AUDISON",
+                "brandLogo": "/images/Audio/logo/audison.webp",
+                "name": "APBX 8DS+SR 1.500ver2",
+                "image": "/images/Audio/sub/APBX 8DS+SR 1.500ver2.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "152680",
+                "fixedPriceOverride": "0",
+                "remarks": "20㎝ウーハーと専用BOX、モノラルDクラスアンプ。\n8AWGでのインストールです。\nダウンファイヤリング取付可能。",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "ハイレベルインプット対応",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "377cm（幅）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "109cm（高）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "334cm（奥）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ],
+                "logoBg": "dark"
+              }
+            ],
+            "subtitleFontSize": 22,
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald",
+            "subtitleColor": "#ea580c",
+            "columns": 2,
+            "content": "イタリアンブランドのおーディソン、薄型バスレフBOXで省スペースの取り付けにも対応。"
+          }
+        },
+        {
+          "id": "sec_notes_1783135331391_y6qx",
+          "type": "notes",
+          "data": {
+            "title": "注意事項",
+            "items": [
+              "車種や仕様によりパッケージ価格に追加が必要な場合があります。\n使用するケーブルは弊社指定のものになります。\nアンプやBOX設置にボードが必要な場合は別途5500円～で製作いたします。\nアンプのアースはボディアースでの施工です。\n作業は１日お車をお預かりしますが無料代車をご用意していますのでご利用ください。"
+            ]
+          }
+        },
+        {
+          "id": "sec_floating_cta_1783135387234_gyjl",
+          "type": "floating_cta",
+          "data": {
+            "showLine": true,
+            "showReservation": true,
+            "theme": "audio"
           }
         }
       ],
@@ -14929,7 +15873,7 @@
                 "name": "CSS674",
                 "image": "/images/Audio/Speaker/CSS674.webp",
                 "standalonePrice": "40700",
-                "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。このCSシリーズは純正ナビなどの内蔵アンプでも駆動しやすく、張りのある小気味良い音が出るスピーカーです。ツィーターは純正位置への取り付けとなります。",
+                "remarks": "フロントスピーカ���をアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。このCSシリーズは純正ナビなどの内蔵アンプでも駆動しやすく、張りのある小気味良い音が出るスピーカーです。ツィーターは純正位置への取り付けとなります。",
                 "fixedPriceOverride": "20020",
                 "brandLogo": "/images/Audio/logo/kicker.webp",
                 "showCardSummary": true,
@@ -17435,7 +18379,7 @@
             "opacity": 0.5,
             "badge": "2015～",
             "bgColor": "",
-            "description": "JEEP RENEGADE/RENEGADE 4exに合わせたスピーカー交換プランです。できるだけコストを抑えつつ、効果的に音質アップができるようにプランニングしています。カーオーディオに興味が湧いたときには、さらにグレードアップすることも可能です。"
+            "description": "JEEP RENEGADE/RENEGADE 4exに合わせたスピーカー交換プランです。できるだけコストを抑えつつ、効果的に音質アップができるようにプランニングしています。カーオーディオに興味が湧いたときには、さらにグレードアップする��とも可能です。"
           }
         },
         {

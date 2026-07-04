@@ -2221,6 +2221,8 @@ const AudioPlanManager = () => {
                                     <option value="sans">標準ゴシック</option>
                                     <option value="serif">明朝体 (Serif)</option>
                                     <option value="mono">等幅 (Mono)</option>
+                                    <option value="montserrat">Montserrat (欧文)</option>
+                                    <option value="oswald">Oswald (欧文)</option>
                                 </select>
                             </div>
                         </div>
@@ -2457,7 +2459,7 @@ const AudioPlanManager = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+                                            <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
                                                 <div className="space-y-1.5">
                                                     <label className="block text-[9px] font-bold text-zinc-500">メーカー (Brand)</label>
                                                     <input 
@@ -2497,6 +2499,21 @@ const AudioPlanManager = () => {
                                                         className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-2.5 py-1.5 text-white text-xs font-bold"
                                                         placeholder="未指定時はテキスト表示"
                                                     />
+                                                </div>
+                                                <div className="space-y-1.5">
+                                                    <label className="block text-[9px] font-bold text-zinc-500">ロゴ背景色 (Logo BG)</label>
+                                                    <select
+                                                        value={spk.logoBg || 'dark'}
+                                                        onChange={e => {
+                                                            const next = [...speakersList];
+                                                            next[idx] = { ...spk, logoBg: e.target.value };
+                                                            updateSectionData(sIdx, { speakers: next });
+                                                        }}
+                                                        className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-2.5 py-1.5 text-white text-xs font-bold outline-none"
+                                                    >
+                                                        <option value="dark">ダーク (黒)</option>
+                                                        <option value="light">ライト (白)</option>
+                                                    </select>
                                                 </div>
                                                 <div className="space-y-1.5">
                                                     <label className="block text-[9px] font-bold text-zinc-500">スピーカー画像パス (Image)</label>
