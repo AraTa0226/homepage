@@ -115,7 +115,7 @@
         {
           "id": "line_1778978221406",
           "name": "スピーカー交換・BASIC line （セパレート） ",
-          "badge": "スピーカー交換パッケージ",
+          "badge": "���ピーカー交換パッケージ",
           "description": "ツィーター（高音）とミッドレンジ（中低音）が別々になったセパレートタイプのスピーカーに交換するパッケージです。カーオーディオのシステムアップが初めての方にもおすすめです。\nコストを抑えながらセパレートの良さを体感していただけるよう、ネットワーク（音域を分離するユニット）はインラインタイプを中心にラインアップしています。ツィーターは純正位置またはダッシュボード上へのマウント取り付けが基本です。",
           "link": "/basicsep",
           "features": [],
@@ -138,7 +138,7 @@
           "id": "line_1778924085764",
           "name": "スピーカー交換・PREMIUM line（10万円以上）",
           "badge": "スピーカー交換パッケージ",
-          "description": "10万円以上のスピーカーの中から、お気に入りの1本を選べるパッケージです。ドアチューニングとスピーカーケーブルの交換もセットで、本格的なサウンドを追求したい方のためのラインです。\nこの価格帯になると、各ブランドが素材や構造にまで独自のこだわりを注ぎ込んだモデルが揃います。情報量の多さ、音の質感、フォーカスの精度、ステレオイメージの広がり——スタンダードラインとは明らかに違う、一段上の音の世界を体感できます。\n一方で、どのブランドも「音作り優先」で設計されているため、インナーバッフルの加工やツィーターのオンダッシュマウントなど、取り付けに工夫が必要なモデルも少なくありません。スピーカー単体ではなく、どう取り付けるかまで含めて一緒に選ぶことが、このラインでは特に重要です。",
+          "description": "10万円以上のスピーカーの中から、お気に入りの1本を選べるパッケージです。ドアチューニングとスピーカーケーブルの交換もセットで、本格的なサウンドを追求したい方のためのラインです。\nこの価格帯になると、各ブランドが素材や構造にまで独自のこだわりを注ぎ込んだモデルが揃います。情報量の多さ、音の質感、フォーカスの精度、ステレオイメージの広がり——スタンダードラインとは明らかに違う、一段上の音の世界を体感できます。\n一方で、どのブランドも「音作り優先」で設計されているため、インナーバッフルの加工やツィーターのオンダッシュマウントな��、取り付けに工夫が必要なモデルも少なくありません。スピーカー単体ではなく、どう取り付けるかまで含めて一緒に選ぶことが、このラインでは特に重要です。",
           "link": "/sp-premium",
           "features": [],
           "price": "162800",
@@ -229,10 +229,10 @@
         },
         {
           "id": "compact-amp",
-          "name": "省スペース”小型”パワーアンプパッケージ",
+          "name": "省スペース”小型”パワーアンプ",
           "badge": "スマート導入",
           "description": "最近は小型省エネながら高音質なパワーアンプが数々登場してきました。パワーアンプの取り付けには取り付けスペースと消費電力アップなどの問題が絡んできます。\n\nとくに近年は充電制御された車両が多く、思ったほどバッテリーのリカバリーがスムーズにされない場合もあり、バッテリーあがりを懸念してパワーアンプ導入をためらうユーザーも少なくありません。ここでは省電力でなおかつ小型の高音質パワーアンプを取付込みにてご提案します。",
-          "link": "https://www.soundang.com/miniamp.html",
+          "link": "/miniamp",
           "features": [
             "コンパクト設置",
             "省電力設計",
@@ -242,10 +242,10 @@
         },
         {
           "id": "amp-package",
-          "name": "アンプインスト・パッケージ",
+          "name": "アンプインストベーシック",
           "badge": "駆動力UP",
           "description": "「スピーカーを変えたけど、もっと良くしたい」「音に力強さが欲しい」そんな方に次にお勧めするのがパワーアンプの追加です。\n\nパワーアンプの役割は、スピーカーをしっかりとコントロールしリニアなサウンドを再生することです。それにより微細な再現力が増加し、情報量がアップします。音像の輪郭や空気感、奥行きや音のハリ、スピード感が劇的に改善されます。\n\n大音量で鳴らすためだけではなく、通常のドライブでいい音楽を楽しむためにアンプを搭載することは、さらなる臨場感の獲得、今まで感じていた目の前の霧が晴れるようなサウンドを得るために非常に有効です。ブランドやモデルによっても音作りの狙いが異なり、様々な変化を楽しめるのも魅力です。",
-          "link": "https://www.soundang.com/ampbasic-inst.html",
+          "link": "/ampbasic-inst",
           "features": [
             "4chパワーアンプ",
             "バッ直配線工賃込",
@@ -268,8 +268,8 @@
           "id": "amplified-dsp",
           "name": "アンプ内蔵DSPパッケージ",
           "badge": "音像定位",
-          "description": "",
-          "link": "/amplified-dsp",
+          "description": "プランの特徴や魅力を伝える紹介文を入力してください。",
+          "link": "/ampDSP",
           "features": [
             "純正ナビ連動",
             "タイムアライメント調整",
@@ -373,7 +373,7 @@
       "id": "custom_install",
       "category": "カスタムインストール・造作",
       "type": "audio",
-      "description": "音を耳で楽しむだけでなく、**匠の技**で視覚的にも美しく。**ピラー加工**や**アウター��������ッフル**など、世界に一台のカスタムを。",
+      "description": "音を耳で楽しむだけでなく���**��の技**で視覚的にも美しく。**ピラー加工**や**アウター��������ッフル**など、世界に一台のカスタムを。",
       "showDescriptionInMenu": true,
       "showDescriptionInList": true,
       "items": [
@@ -477,7 +477,7 @@
             "1WAYスペアリモコン付属"
           ],
           "image": "/images/Security/model/grgo.webp",
-          "description": "ZVⅡの機能に加え、レッカー移動対策の傾斜センサーや衝撃検知を強化するトリプルセンサーを標準装備した、物理ガードの決定版。"
+          "description": "ZVⅡの機能に加え、レッカー移動対策の傾斜センサーや衝撃検���を強化するトリプルセンサーを標準装備した、物理ガードの決定版。"
         },
         {
           "name": "1VsⅡ",
@@ -490,7 +490,7 @@
             "ドア/トランク/ボンネット検知"
           ],
           "image": "/images/Security/model/grgo.webp",
-          "description": "純正スマートキーの操作に連動してセキュリティを起動. シンプルながらGrgoの高い信頼性を手軽に導入できるモデルです。"
+          "description": "純正スマートキーの操作に連動してセキュリティを起動. シンプルながらGrgoの高い信頼性を手軽に導入できるモ������ルです。"
         },
         {
           "name": "5VfⅡ",
@@ -528,7 +528,7 @@
           "price": "77000",
           "badge": "エントリー",
           "subType": "330v",
-          "description": "純正キーレス連動のベーシックモデル。必要十分な検知機能とイモビライザーで、高いコストパフォーマンスを実現。",
+          "description": "純正キーレス連動のベーシックモデル。必要十分な検知機能とイモビライザーで、高いコストパフォーマンスを実現��",
           "image": "/images/Security/model/330v.webp"
         }
       ],
@@ -979,7 +979,7 @@
             },
             {
               "title": "フルラミネーションディスプレイ",
-              "content": "カバーガラスと液晶の間の隙間をなくす加工により、光の乱反射を抑制。色の再現性が向上し、映り込みの少ないクリアな視界を実現しました。"
+              "content": "カバーガラスと液晶の間の隙���をなくす加工により、光の乱反射を抑制。色の再現性が向上し、映り込みの少ないクリアな視界を実現しました。"
             },
             {
               "title": "純正ミラー交換式・車種専用取付",
@@ -1013,7 +1013,7 @@
               "icon": "Camera"
             },
             {
-              "label": "夜間センサー",
+              "label": "夜間セン��ー",
               "value": "STARVIS 2 (前後)",
               "icon": "Zap"
             },
@@ -1095,7 +1095,7 @@
           "detailedSections": [
             {
               "title": "車外設置専用 WQHDリアカメラ",
-              "content": "リアカメラは車外設置に特化した370万画素の高精細仕様。リアガラスの汚れや反射の影響を受けず、後方の状況をダイレクトかつ鮮明に捉えます。"
+              "content": "リアカメラは車外設置に特化した370万画素の高精細仕様。リ��ガラスの汚れや反射の影響を受けず、後方の状況をダイレクトかつ鮮明に捉えます。"
             },
             {
               "title": "最新センサー STARVIS 2 搭載",
@@ -1300,7 +1300,7 @@
           "name": "Grgo ZVT II",
           "price": "219,800",
           "badge": "おすすめ",
-          "description": "傾斜・トリプルセンサーを同梱。ジャッキアップや車体へのあらゆる衝撃を逃さず検知する、Grgo最上位構成。",
+          "description": "傾斜・トリプルセンサーを同梱。ジャッキアップや車体へのあらゆる衝撃を逃さず検知する、Grgo最上位構��。",
           "triple": true,
           "tilt": true,
           "bonnet": false,
@@ -1996,7 +1996,7 @@
       "revisedAt": "2026-04-29T21:12:44.538Z",
       "category": "HIACE (200系) 専用パッケージ",
       "type": [],
-      "description": "<p>仕事からレジャーまで幅広く活躍するハイエース。狙われやすい車種だからこそ、センサー感度の追求と利便性を両立した専用プランをご用意しました。</p>",
+      "description": "<p>仕事からレジャーまで幅広く活躍するハイエース。狙われやすい車種だからこそ、センサー感度の追求と利便性を両立し���専用プランをご用意しました。</p>",
       "items": [
         {
           "fieldId": "item",
@@ -2157,7 +2157,7 @@
       "type": [
         "security"
       ],
-      "description": "<p>最新鋭のオフローダー。CANインベーダーやゲームボーイといった最新手口への完全対策が必須です。</p>",
+      "description": "<p>最���鋭のオフ���ーダー。CANインベーダーやゲームボーイといった最新手口への完全対策が必須です。</p>",
       "items": [
         {
           "fieldId": "item",
@@ -2313,14 +2313,14 @@
       "type": [
         "security"
       ],
-      "description": "<p>今なお狙われ続ける150系。スマートキー連動による最新の窃盗対策や、物理的なCANガードなど、年式に応じた最適な対��������������������������������をご提案します。</p>",
+      "description": "<p>今なお狙われ続ける150系。スマートキー連動による最新の窃盗対策や、物�����的なCANガードなど、年式に応じた最適な対���������������������������������をご提案します。</p>",
       "items": [
         {
           "fieldId": "item",
           "name": "Grgo ZVT II ＋ ������������������������������������������マ��������������������������������������������������連動/スマクロ",
           "price": "299,600",
           "badge": "おすすめ",
-          "description": "傾斜センサー含むフルセンサー構成にスマートキー連動をプラスし�������������������������������������������������������������������������������������������������������������������������������������������������������������������������������利便性を高めた一台。",
+          "description": "傾斜センサー含むフルセンサー構成にスマートキー連動をプラスし���������������������������������������������������������������������������������������������������������������������������������������������������������������������������������利便性を高めた一台。",
           "triple": true,
           "tilt": true,
           "bonnet": true,
@@ -2550,7 +2550,7 @@
         {
           "name": "プランB：AUX/HDMI外部入力",
           "price": "0",
-          "description": "既存ナビの外部入力を利用。HDMI入力があれば高音質伝送が可能。接続用ケーブルが別途必要です。"
+          "description": "既��ナビの外部入力を利用。HDMI入力があれば高音質伝送が可能。接続用ケーブルが別途必要です。"
         },
         {
           "name": "���ラ���C：USBトランスポート追加",
@@ -2644,7 +2644,7 @@
         "芸術的な表現力"
       ],
       "image": "https://picsum.photos/seed/hi-end-sp/800/600",
-      "description": "ハイエンドスピーカーをインストールするには・・・\n\n各ブランドの上位モデルでは、そのスペックをしっかりと活かせるインストレーションやケーブル選びが大切になります。ハイエンドスピーカーに施したいインストール、ケーブル選びなどをご紹介します。\n\nハイエンドスピーカーに興味を持ったらぜひご相談ください。オーナー様の理想を形にする最適なシステムをご提案いたします。",
+      "description": "ハイエンドスピーカーをインスト���ルするには・・・\n\n各ブランドの上位モデルでは、そのスペックをしっかりと活かせるインストレーションやケーブル選びが大切になります。ハイエンドスピーカーに施したいインストール、ケーブル選びなどをご紹介します。\n\nハイエンドスピーカーに興味を持ったらぜひご相談ください。オーナー様の理想を形にする最適なシステムをご提案いたします。",
       "category": "知識・ガイド",
       "packageDetails": {
         "standardPrice": "0",
@@ -2674,7 +2674,7 @@
         "notes": [
           "ハイエンドスピーカーはユニットの性能を引き出すための環境作りが不可欠です。",
           "インナーバッフルでの施工でも、市販品を避けスピーカーをしっかり受け止める製作が重要です。",
-          "試聴室ではスピーカーケーブルの比較も可能です。音の違いを体感して選べます。"
+          "試聴室では��ピーカーケーブルの比較も可能です。音の違いを体感して選べます。"
         ]
       },
       "lineup": [
@@ -2705,7 +2705,7 @@
         "ラゲッジ埋め込み"
       ],
       "image": "https://picsum.photos/seed/subwoofer/800/600",
-      "description": "とっても重要なサブウーハーの役割！可聴帯域のほんの一部ですが、建物の基礎と同じでここがしっかりしていないと全体のイメージが希薄になってしまいます。\n\n音は倍音で構成されていますので、サブウーハーが中心でないようなボーカルやピアノの音も、サブウーハーのオンオフで様変わりします。HiFiスタイルからパワーサウンド、重低音スタイルまで、自分だけの個室を好きなサウンドにアレンジして楽しみましょう！",
+      "description": "とっても重要なサブウーハーの役割！可聴帯域のほんの一部ですが、建物の基礎と同じでここがしっかりしていないと全体のイメージが希薄になってしまいます。\n\n音は倍音で構成されていますので、サブウーハーが中心でないようなボーカルやピアノの音も、サブウーハーのオンオフで様変わりします。HiFiスタイルからパワーサウンド、重低音スタイルまで、自分だけの個室を好きなサウン��にアレンジして楽しみましょう！",
       "category": "知識・ガイド",
       "packageDetails": {
         "standardPrice": "0",
@@ -2752,7 +2752,7 @@
         {
           "name": "フロア/スペアタイヤスペース埋め込み",
           "price": "0",
-          "description": "サブトランクやスペアタイヤスペースを利用してBOXを製作。"
+          "description": "サブトラ���クやスペアタイ���スペースを利用してBOXを製作。"
         },
         {
           "name": "カスタム・ショーアップインストール",
@@ -2784,7 +2784,7 @@
           },
           {
             "title": "造作・加工",
-            "description": "MDF、アクリル、パテ等を用いた高度な加工技術",
+            "description": "MDF、��クリル、パテ等を用いた高度な加工技術",
             "icon": "Wrench"
           },
           {
@@ -2828,7 +2828,7 @@
         {
           "name": "カスタムピラーインストール（3WAY対応）",
           "price": "80000",
-          "description": "フロント3WAYに欠かせないピラー加工. 左右でおよそ8万円〜。"
+          "description": "��ロント3WAYに欠かせないピラー加工. 左右でおよそ8万円〜。"
         }
       ]
     }
@@ -10160,7 +10160,7 @@
               }
             ],
             "title": "スピーカー交換例",
-            "description": "BMWの�����正シ�����テムはフロントに10cm程度のスぴーかー、ツィーターなし、シート下のウーハーで低音を補うという構成がほとんどです。 加工を抑えてコストを抑えた改善方法として、まずはフロントスピーカーの交換とツィーターの追加。さらに適合車種であればウーハーも交換することで、ハリのあるサウンドに生まれ変わります。このパッケージではトレードインで交換可能なスピーカーをご紹介しています。",
+            "description": "BMWの�������正シ�����テムはフロントに10cm程度のスぴーかー、ツィーターなし、シート下のウーハーで低音を補うという構成がほとんどです。 加工を抑えてコストを抑えた改善方法として、まずはフロントスピーカーの交換とツィーターの追加。さらに適合車種であればウーハーも交換することで、ハリのあるサウンドに生まれ変わります。このパッケージではトレードインで交換可能なスピーカーをご紹介しています。",
             "doorTuning": {
               "title": "ツイーター",
               "desc": "純正ツィーター非装着車の場合、別途純正部品が必要になる場合があります。",
@@ -13248,7 +13248,7 @@
           "type": "speakers",
           "data": {
             "title": "GLADEN MOSCONI",
-            "subtitle": "GLADEN MOSCONI",
+            "subtitle": "GLADEN MOSCONI\n（グラデン モスコニ）",
             "hideTitle": true,
             "hideSubtitle": false,
             "subtitleAlign": "center",
@@ -13347,7 +13347,7 @@
           "type": "speakers",
           "data": {
             "title": "carrozzeria",
-            "subtitle": "carrozzeria",
+            "subtitle": "carrozzeria\n（カロッツェリア）",
             "hideTitle": true,
             "hideSubtitle": false,
             "subtitleAlign": "center",
@@ -13480,7 +13480,7 @@
           "type": "speakers",
           "data": {
             "title": "VIBE British Audio",
-            "subtitle": "VIBE British Audio",
+            "subtitle": "VIBE British Audio\n（ヴァイブ・オーディオ）",
             "hideTitle": true,
             "hideSubtitle": false,
             "subtitleAlign": "center",
@@ -13576,7 +13576,7 @@
           "type": "speakers",
           "data": {
             "title": "Kicker",
-            "subtitle": "Kicker(キッカー)",
+            "subtitle": "Kicker\n(キッカー)",
             "hideTitle": true,
             "hideSubtitle": false,
             "subtitleAlign": "center",
@@ -13823,7 +13823,7 @@
           "type": "speakers",
           "data": {
             "title": "Rockford Fosgate",
-            "subtitle": "Rockford Fosgate(ロックフォード・フォスゲート)",
+            "subtitle": "Rockford Fosgate\n(ロックフォード・フォスゲート)",
             "hideTitle": true,
             "hideSubtitle": false,
             "subtitleAlign": "center",
@@ -13921,7 +13921,7 @@
           "type": "speakers",
           "data": {
             "title": "AUDISON",
-            "subtitle": "AUDISON(オーディソン)",
+            "subtitle": "AUDISON\n(オーディソン)",
             "hideTitle": true,
             "hideSubtitle": false,
             "subtitleAlign": "center",
@@ -14054,13 +14054,13 @@
     },
     {
       "id": "compact-amp",
-      "slug": "compact-amp",
-      "name": "省スペース”小型”パワーアンプパッケージ",
+      "slug": "miniamp",
+      "name": "省スペース”小型”パワーアンプ",
       "parentCategoryId": "bass_power",
       "publishStatus": "published",
       "showInMenu": true,
       "subType": "package",
-      "externalLink": "https://www.soundang.com/miniamp.html",
+      "externalLink": "",
       "header": {
         "badge": "スマート導入",
         "mainTitle": "省スペース”小型”パワーアンプパッケージ",
@@ -14075,32 +14075,636 @@
         "note": "",
         "taxRate": 10
       },
-      "speakers": [],
+      "speakers": [
+        {
+          "id": "spk_1783484157327_jo3r",
+          "brand": "VIBE",
+          "brandLogo": "/images/Audio/logo/VIBE British Audio.webp",
+          "name": "POWERBOX65.4M-V7",
+          "image": "/images/Audio/amp/POWERBOX65.4M-V7.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "102520",
+          "fixedPriceOverride": "0",
+          "remarks": "備考\n・アンプ本体はダッシュボード付近スペースへの設置となります。\n・施工内容や状況によっては追加が必要になることがあります。\n・ハイレベル・RCA入力対応です。\n・オールパスまたは80Hz固定ハイパス機能\n・オートターンオン (ハイレベル入力時)",
+          "youtubeUrl": "",
+          "showCardSummary": true,
+          "cardSummaryItems": [
+            {
+              "title": "定格出力：65W×4（4Ω）",
+              "desc": "※ブリッジ接続非対応",
+              "value": ""
+            },
+            {
+              "title": "ヒューズ容量：20A",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "サイズ（幅×奥行×高さ）：187×82×37mm",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "アンプ本体",
+              "desc": "",
+              "value": "70400"
+            },
+            {
+              "title": "ケーブル類（12AWG）",
+              "desc": "",
+              "value": ""
+            }
+          ]
+        }
+      ],
       "sections": [
         {
-          "id": "sec_hero_1779248121851_compact-amp",
-          "type": "hero",
+          "id": "sec_banner_1783483146847_dnql",
+          "type": "banner",
           "data": {
-            "badge": "スマート導入",
             "title": "省スペース”小型”パワーアンプパッケージ",
-            "subtitle": "スマート導入",
-            "desc": "最近は小型省エネながら高音質なパワーアンプが数々登場してきました。パワーアンプの取り付けには取り付けスペースと消費電力アップなどの問題が絡んできます。\n\nとくに近年は充電制御された車両が多く、思ったほどバッテリーのリカバリーがスムーズにされない場合もあり、バッテリーあがりを懸念してパワーアンプ導入をためらうユーザーも少なくありません。ここでは省電力でなおかつ小型の高音質パワーアンプを取付込みにてご提案します。",
-            "image": "/images/Audio/compact_amplifier_package.webp",
-            "imageOpacity": 0.3,
-            "useDarkTheme": true,
-            "bgColor": ""
+            "badge": "目立たない！省エネ！",
+            "opacity": 0.4,
+            "height": "400px",
+            "image": "/images/Audio/amp/nibiamp.webp"
           }
         },
         {
-          "id": "sec_pricing_1779248121851_compact-amp",
-          "type": "pricing",
+          "id": "sec_text_1783483263194_pwxh",
+          "type": "text",
           "data": {
-            "specialPrice": "33000",
-            "fixedPrice": 0,
-            "normalPriceText": "",
-            "savingsText": "",
-            "note": "",
-            "taxRate": 10
+            "title": "",
+            "content": "<p style=\"font-size:20px; text-align:center; line-height:1.8;\">\n最近は小型省エネながら高音質なパワーアンプが数々登場してきました。<br>\nパワーアンプの取り付けには取り付けスペースと消費電力アップなどの問題が絡んできます。<br>\nとくに近年は充電制御された車両が多く、思ったほどバッテリーのリカバリーがスムーズにされない場合もありバッテリーあがりを懸念してパワーアンプ導入をためらうユーザーも少なくありません。<br>\nここでは省電力でなおかつ小型の高音質パワーアンプを取付込みにてご提案します。\n</p>"
+          }
+        },
+        {
+          "id": "sec_package_summary_1783483509044_k6k6",
+          "type": "package_summary",
+          "data": {
+            "title": "パッケージ全内容",
+            "subtitle": "",
+            "items": [
+              {
+                "title": "パワーアンプ本体",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "バッ直を含めたワイヤリング工賃",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "電源ケーブル・ヒューズホルダなど",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "RCA・スピーカーケーブルなど",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "必要な端子類",
+                "desc": "",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec_speakers_1783484095773_txh9",
+          "type": "speakers",
+          "data": {
+            "title": "VIBE",
+            "subtitle": "VIBE",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "",
+            "speakers": [
+              {
+                "id": "spk_1783484157327_jo3r",
+                "brand": "VIBE",
+                "brandLogo": "/images/Audio/logo/VIBE British Audio.webp",
+                "name": "POWERBOX65.4M-V7",
+                "image": "/images/Audio/amp/POWERBOX65.4M-V7.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "102520",
+                "fixedPriceOverride": "0",
+                "remarks": "備考\n・アンプ本体はダッシュボード付近スペースへの設置となります。\n・施工内容や状況によっては追加が必要になることがあります。\n・ハイレベル・RCA入力対応です。\n・オールパスまたは80Hz固定ハイパス機能\n・オートターンオン (ハイレベル入力時)",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "定格出力：65W×4（4Ω）",
+                    "desc": "※ブリッジ接続非対応",
+                    "value": ""
+                  },
+                  {
+                    "title": "ヒューズ容量：20A",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "サイズ（幅×奥行×高さ）：187×82×37mm",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "アンプ本体",
+                    "desc": "",
+                    "value": "70400"
+                  },
+                  {
+                    "title": "ケーブル類（12AWG）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              }
+            ],
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald",
+            "subtitleFontSize": 22,
+            "columns": 2,
+            "sectionWidth": "half",
+            "content": "イギリスのブランドVIBEの手頃な小型アンプ。\n欧州車に便利なISOコネクター装備。"
+          }
+        },
+        {
+          "id": "sec_speakers_1783485982919_o62o",
+          "type": "speakers",
+          "data": {
+            "title": "carrozzeria",
+            "subtitle": "carrozzeria",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "",
+            "speakers": [
+              {
+                "id": "spk_1783485993345_8yu3",
+                "brand": "carrozzeria",
+                "brandLogo": "/images/Audio/logo/carrozzeria.webp",
+                "name": "GM-D2400",
+                "image": "/images/Audio/amp/GM-D2400.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "54120",
+                "fixedPriceOverride": "0",
+                "remarks": "備考\n・アンプ本体はダッシュボード付近スペースへの設置となります。\n・施工内容や状況によっては追加が必要になることがあります。\n・ハイレベル・RCA入力対応です。\n・HP/LP/OFF 選択可能 80Hz固定",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "定格：45W×4（4Ω）、45W×4（2Ω）、90W×2（4Ωブリッジ）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "ヒューズ：15A",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "サイズ（幅×奥行×高さ）：181×64×38mm",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "アンプ本体",
+                    "desc": "",
+                    "value": "オープン"
+                  },
+                  {
+                    "title": "ケーブル類（12AWG）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              }
+            ],
+            "subtitleFontSize": 22,
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald",
+            "sectionWidth": "half",
+            "columns": 2,
+            "subtitleColor": "#ea580c",
+            "content": "小型・省エネながらもカロッツェリアらしく音に妥協がなくブリッジ接続でウーハーまで対応可能。"
+          }
+        },
+        {
+          "id": "sec_speakers_1783486105484_kbhz",
+          "type": "speakers",
+          "data": {
+            "title": "match",
+            "subtitle": "match",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1783486137938_3nip",
+                "brand": "match",
+                "brandLogo": "/images/Audio/logo/MATCH.webp",
+                "name": "M-2.1AMP",
+                "image": "/images/Audio/amp/M-2.1AMP.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "120120",
+                "fixedPriceOverride": "0",
+                "remarks": "備考\n・アンプ本体はダッシュボード付近スペースへの設置となります。\n・施工内容や状況によっては追加が必要になることがあります。\n・RCA入力対応です。\n・グランドアイソレーション機能\n・オートターンオン・アイドリングストップ対応",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "定格：170W×2（4Ω）、350W×1（2Ωモノラル）",
+                    "desc": "ブリッジ接続不可",
+                    "value": ""
+                  },
+                  {
+                    "title": "ヒューズ：30A",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "サイズ（幅×奥行×高さ）：110×85×35mm",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "アンプ本体",
+                    "desc": "",
+                    "value": "88000"
+                  },
+                  {
+                    "title": "ケーブル類（12AWG）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              }
+            ],
+            "subtitleFontSize": 22,
+            "subtitleFont": "oswald",
+            "borderSpacing": "narrow",
+            "columns": 2,
+            "sectionWidth": "half",
+            "subtitleColor": "#ea580c",
+            "content": "ドイツのブランドMATCHの小型パワーアンプ。\nアイドリング電流で0.5A以下の省エネアンプながら音に抜かりなし。"
+          }
+        },
+        {
+          "id": "sec_speakers_1783487709189_zloq",
+          "type": "speakers",
+          "data": {
+            "title": "GROUND ZERO",
+            "subtitle": "GROUND ZERO",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "",
+            "speakers": [
+              {
+                "id": "spk_1783487770933_w7lj",
+                "brand": "GROUND ZERO",
+                "brandLogo": "/images/Audio/logo/groundzero.webp",
+                "name": "GZHA MINI FOUR",
+                "image": "/images/Audio/amp/GZHA MINI FOUR.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "119020",
+                "fixedPriceOverride": "0",
+                "remarks": "備考\n・アンプ本体はダッシュボード付近スペースへの設置となります。\n・施工内容や状況によっては追加が必要になることがあります。\n・ハイレベル・RCA入力対応です。\n・オートターンオン機能あり",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "定格：80W×4（4Ω）、130W×4（2Ω）、260W×2 (4Ωブリッジ) ",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "ヒューズ：40A",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "サイズ（幅×奥行×高さ）：210×135×52mm",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "アンプ本体",
+                    "desc": "",
+                    "value": "86900"
+                  },
+                  {
+                    "title": "ケーブル類（12AWG）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              }
+            ],
+            "columns": 2,
+            "sectionWidth": "half",
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald",
+            "subtitleFontSize": 22,
+            "content": "ドイツのブランド「グランドゼロ」通称”グラゼロ”の小型Dクラスアンプ。"
+          }
+        },
+        {
+          "id": "sec_speakers_1783488359920_dfef",
+          "type": "speakers",
+          "data": {
+            "title": "GROUND ZERO",
+            "subtitle": "GROUND ZERO",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "",
+            "speakers": [
+              {
+                "id": "spk_1783488427162_77r9",
+                "brand": "GROUND ZERO",
+                "brandLogo": "/images/Audio/logo/groundzero.webp",
+                "name": "GZCS A-4.80",
+                "image": "/images/Audio/amp/GZCS A-4.80.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "98120",
+                "fixedPriceOverride": "0",
+                "remarks": "備考\n・アンプ本体はダッシュボード付近スペースへの設置となります。\n・施工内容や状況によっては追加が必要になることがあります。\n・ハイレベル・RCA入力対応です。\n・オートターンオン機能あり",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "定格：60W×4（4Ω）80W×4（2Ω）160W×2（4Ωブリッジ）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "ヒューズ：30A",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "サイズ（幅×奥行×高さ）：171×82×40mm",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "アンプ本体",
+                    "desc": "",
+                    "value": "66000"
+                  },
+                  {
+                    "title": "ケーブル類（12AWG）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              }
+            ],
+            "subtitleFontSize": 22,
+            "borderSpacing": "narrow",
+            "subtitleColor": "#ea580c",
+            "columns": 2,
+            "sectionWidth": "half",
+            "subtitleFont": "oswald",
+            "content": "ドイツのブランド「グランドゼロ」通称”グラゼロ”の小型Dクラスアンプ。"
+          }
+        },
+        {
+          "id": "sec_speakers_1783488982282_k3k1",
+          "type": "speakers",
+          "data": {
+            "title": "KICKER",
+            "subtitle": "KICKER",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "",
+            "speakers": [
+              {
+                "id": "spk_1783489039041_2e3l",
+                "brand": "KICKER",
+                "brandLogo": "/images/Audio/logo/kicker.webp",
+                "name": "KEY200.4",
+                "image": "/images/Audio/amp/KEY200.4.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "110220",
+                "fixedPriceOverride": "0",
+                "remarks": "備考\n・アンプ本体はダッシュボード付近スペースへの設置となります。\n・施工内容や状況によっては追加が必要になることがあります。\n・ハイレベル・RCA入力対応です。\n・オールパスまたは60/80/120Hz固定ハイパス機能\n・オートターンオン",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "定格：50W×4（4Ω）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "ヒューズ：20A",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "サイズ（幅×奥行×高さ）：187×70×43mm",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "アンプ本体",
+                    "desc": "",
+                    "value": "78100"
+                  },
+                  {
+                    "title": "ケーブル類（12AWG）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              }
+            ],
+            "subtitleFontSize": 22,
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald",
+            "columns": 2,
+            "sectionWidth": "half",
+            "subtitleColor": "#ea580c",
+            "content": "アメリカのブランドKICKER。\n専用マイクで測定してオートで調整してくれるDSPが内蔵されたモデル。"
+          }
+        },
+        {
+          "id": "sec_speakers_1783490146587_6k87",
+          "type": "speakers",
+          "data": {
+            "title": "mosconi",
+            "subtitle": "mosconi",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1783490207111_clog",
+                "brand": "MOSCONI",
+                "brandLogo": "/images/Audio/logo/mosconi.webp",
+                "name": "Atomo 2",
+                "image": "/images/Audio/amp/Atomo 2.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "106920",
+                "fixedPriceOverride": "0",
+                "remarks": "備考\n・アンプ本体はダッシュボード付近スペースへの設置となります。\n・施工内容や状況によっては追加が必要になることがあります。\n・ハイレベル・RCA入力対応です。\n・HP/LP/OFF 選択可能 80Hz固定\n・オートターンオン",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "定格：100W×2 (40) , 110W×2 (20) , 220W×1 (40ブリッジ)",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "ヒューズ：15A",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "サイズ（幅×奥行×高さ）：86×65×34mm",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "アンプ本体",
+                    "desc": "",
+                    "value": "74800"
+                  },
+                  {
+                    "title": "ケーブル類（12AWG）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ],
+                "logoBg": "light"
+              }
+            ],
+            "subtitleFontSize": 22,
+            "subtitleFont": "oswald",
+            "borderSpacing": "narrow",
+            "columns": 2,
+            "sectionWidth": "half",
+            "subtitleColor": "#ea580c",
+            "content": "イタリアのブランド「モスコニ」の超小型アンプ。手のひらに収まるサイズながらウーハーにも使えるスグレモノ!"
+          }
+        },
+        {
+          "id": "sec_speakers_1783490697506_piab",
+          "type": "speakers",
+          "data": {
+            "title": "BEWITH",
+            "subtitle": "BEWITH",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1783490704896_o082",
+                "brand": "BEWITH",
+                "brandLogo": "/images/Audio/logo/plug&play.webp",
+                "name": "PLUG&PLAY POWER",
+                "image": "/images/Audio/amp/PLUG&PLAY POWER.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "75020",
+                "fixedPriceOverride": "0",
+                "remarks": "備考\n・アンプ本体はダッシュボード付近スペー��への設置となります。\n・施工内容や状況によっては追加が必要になることがあります。\n・ハイレベル・RCA入力対応です。",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "定格：70W×2 (4Ω) , 100W×2 (2Ω) , 200W×1 (40ブリッジ)",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "ヒューズ：20A",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "サイズ（幅×奥行×高さ）：124×75×36mm",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "アンプ本体",
+                    "desc": "",
+                    "value": "42900"
+                  },
+                  {
+                    "title": "ケーブル類（12AWG）",
+                    "desc": "",
+                    "value": ""
+                  }
+                ]
+              }
+            ],
+            "sectionWidth": "half",
+            "columns": 2,
+            "borderSpacing": "narrow",
+            "subtitleFontSize": 22,
+            "subtitleFont": "oswald",
+            "subtitleColor": "#ea580c",
+            "content": "国産ハイエンドブランドBEWITH社が手掛けるエントリーシリーズ。\n使い勝手の良いアンプで様々なシステムに適合。"
+          }
+        },
+        {
+          "id": "sec_notes_1783483606851_tyt1",
+          "type": "notes",
+          "data": {
+            "title": "注意事項",
+            "items": [
+              "スピーカーケーブルワイヤリングは純正スピーカーの場合はナビ裏まで、スピーカー交換済みの場合は付属のネットワークまでのワイヤリングとなります。\nドア通線を伴うワイヤリングが必要な場合は別途11,000円が必要となります。（ドア通線がカプラー方式の場合は別途加工賃が必要となります。）"
+            ]
+          }
+        },
+        {
+          "id": "sec_floating_cta_1783483489947_p2ek",
+          "type": "floating_cta",
+          "data": {
+            "showLine": true,
+            "showReservation": true,
+            "theme": "audio"
           }
         }
       ],
@@ -14124,13 +14728,13 @@
     },
     {
       "id": "amp-package",
-      "slug": "amp-package",
-      "name": "アンプインスト・パッケージ",
+      "slug": "ampbasic-inst",
+      "name": "アンプインストベーシック",
       "parentCategoryId": "bass_power",
       "publishStatus": "published",
       "showInMenu": true,
       "subType": "package",
-      "externalLink": "https://www.soundang.com/ampbasic-inst.html",
+      "externalLink": "",
       "header": {
         "badge": "駆動力UP",
         "mainTitle": "アンプインスト・パッケージ",
@@ -14145,32 +14749,681 @@
         "note": "",
         "taxRate": 10
       },
-      "speakers": [],
+      "speakers": [
+        {
+          "id": "spk_1783494148530_srz4",
+          "brand": "工賃38,600円＋アンプ代別",
+          "brandLogo": "",
+          "name": "",
+          "image": "/images/Audio/amp/386pict.webp",
+          "mountingHoleSize": "",
+          "depthSize": "",
+          "hasGrille": "",
+          "hasTweeterMount": "",
+          "standalonePrice": "",
+          "fixedPriceOverride": "0",
+          "remarks": "お好きなアンプをお選びください",
+          "youtubeUrl": "",
+          "showCardSummary": true,
+          "cardSummaryItems": [
+            {
+              "title": "8AWG電源ケーブル(オーディオテクニカ)",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "メインヒューズホルダ(オーディオテクニカ)",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "ヒューズ",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "入力用ケーブル(RCAまたはスピーカーケーブル)",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "出力用スピーカーケーブル（オリジナル）",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "その他リモートケーブル等",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "アンプ設置用ボード製作",
+              "desc": "",
+              "value": ""
+            },
+            {
+              "title": "上記インストール費用",
+              "desc": "",
+              "value": ""
+            }
+          ],
+          "prices": [
+            {
+              "label": "通常、61490円を",
+              "price": "38600"
+            }
+          ],
+          "logoBg": "light"
+        }
+      ],
       "sections": [
         {
-          "id": "sec_hero_1779248121851_amp-package",
-          "type": "hero",
+          "id": "sec_banner_1783492497857_gry0",
+          "type": "banner",
           "data": {
-            "badge": "駆動力UP",
-            "title": "アンプインスト・パッケージ",
-            "subtitle": "駆動力UP",
-            "desc": "「スピーカーを変えたけど、もっと良くしたい」「音に力強さが欲しい」そんな方に次にお勧めするのがパワーアンプの追加です。\n\nパワーアンプの役割は、スピーカーをしっかりとコントロールしリニアなサウンドを再生することです。それにより微細な再現力が増加し、情報量がアップします。音像の輪郭や空気感、奥行きや音のハリ、スピード感が劇的に改善されます。\n\n大音量で鳴らすためだけではなく、通常のドライブでいい音楽を楽しむためにアンプを搭載することは、さらなる臨場感の獲得、今まで感じていた目の前の霧が晴れるようなサウンドを得るために非常に有効です。ブランドやモデルによっても音作りの狙いが異なり、様々な変化を楽しめるのも魅力です。",
-            "image": "/images/Audio/amplifier_install_basic.webp",
-            "imageOpacity": 0.3,
-            "useDarkTheme": true,
-            "bgColor": ""
+            "title": "アンプインストベーシック",
+            "badge": "パワーアンプ",
+            "opacity": 0.4,
+            "height": "400px",
+            "image": "/images/Audio/amp/amp.webp"
           }
         },
         {
-          "id": "sec_pricing_1779248121851_amp-package",
-          "type": "pricing",
+          "id": "sec_text_1783492577702_9xgf",
+          "type": "text",
           "data": {
-            "specialPrice": "55000",
-            "fixedPrice": 0,
-            "normalPriceText": "",
-            "savingsText": "",
-            "note": "",
-            "taxRate": 10
+            "title": "",
+            "content": "<!-- ============================================================\n  パワーアンプ セクション（貼り付け用フラグメント）\n  ・スタイルはすべて .pa-amp-section 配下にスコープしてあるため、\n    他のセクションの h1 / p / body 等には影響しません。\n  ・そのまま既存ページの本文内（１か所）にコピー＆ペーストしてください。\n============================================================ -->\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link href=\"https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap\" rel=\"stylesheet\">\n\n<style>\n  .pa-amp-section{\n    --pa-bg:#ffffff;\n    --pa-panel:#f7f5f1;\n    --pa-line:#e3e0d9;\n    --pa-text:#26241f;\n    --pa-text-dim:#7a766c;\n    --pa-copper:#a8672f;\n    --pa-copper-dim:#c68a4e;\n\n    box-sizing:border-box;\n    width:100%;\n    max-width:680px;\n    margin:0 auto;\n    padding:56px 24px 60px;\n    text-align:center;\n    background:var(--pa-bg);\n    color:var(--pa-text);\n    font-family:'Noto Sans JP',sans-serif;\n    line-height:1.85;\n    -webkit-font-smoothing:antialiased;\n  }\n  .pa-amp-section *{\n    box-sizing:border-box;\n  }\n\n  .pa-amp-section .pa-eyebrow{\n    display:flex;\n    align-items:center;\n    justify-content:center;\n    gap:12px;\n    font-family:'Oswald',sans-serif;\n    font-size:14px;\n    letter-spacing:0.3em;\n    color:var(--pa-copper);\n    text-transform:uppercase;\n    margin:0 0 14px;\n  }\n  .pa-amp-section .pa-eyebrow::before,\n  .pa-amp-section .pa-eyebrow::after{\n    content:\"\";\n    width:26px;\n    height:1px;\n    background:var(--pa-copper-dim);\n  }\n  .pa-amp-section .pa-title{\n    font-family:'Noto Sans JP',sans-serif;\n    font-weight:700;\n    font-size:clamp(20px,4.4vw,27px);\n    line-height:1.65;\n    letter-spacing:0.02em;\n    color:#161512;\n    margin:0 auto;\n    max-width:460px;\n  }\n  .pa-amp-section .pa-title .pa-accent{\n    color:var(--pa-copper);\n  }\n  .pa-amp-section .pa-sub{\n    font-family:'Noto Sans JP',sans-serif;\n    font-weight:300;\n    font-size:16px;\n    letter-spacing:0.06em;\n    color:var(--pa-text-dim);\n    margin:8px 0 28px;\n  }\n\n  .pa-amp-section .pa-lead{\n    font-size:17px;\n    color:var(--pa-text);\n    max-width:520px;\n    margin:0 auto;\n  }\n\n  .pa-amp-section .pa-role{\n    margin-top:40px;\n  }\n  .pa-amp-section .pa-role-head{\n    font-family:'Oswald',sans-serif;\n    font-weight:500;\n    font-size:16px;\n    letter-spacing:0.08em;\n    color:var(--pa-copper);\n    margin-bottom:20px;\n  }\n  .pa-amp-section .pa-role-list{\n    display:flex;\n    flex-direction:column;\n    max-width:520px;\n    margin:0 auto;\n  }\n  .pa-amp-section .pa-role-item{\n    display:flex;\n    align-items:flex-start;\n    justify-content:center;\n    gap:14px;\n    padding:16px 4px;\n    border-top:1px solid var(--pa-line);\n    text-align:left;\n  }\n  .pa-amp-section .pa-role-list .pa-role-item:last-child{\n    border-bottom:1px solid var(--pa-line);\n  }\n  .pa-amp-section .pa-role-num{\n    font-family:'Oswald',sans-serif;\n    font-size:13px;\n    color:var(--pa-copper-dim);\n    letter-spacing:0.1em;\n    padding-top:3px;\n    flex-shrink:0;\n  }\n  .pa-amp-section .pa-role-text p{\n    color:var(--pa-text);\n    font-size:16px;\n    margin:0;\n  }\n\n  .pa-amp-section .pa-note{\n    margin-top:36px;\n    background:var(--pa-panel);\n    border:1px solid var(--pa-line);\n    border-radius:2px;\n    padding:24px 26px;\n  }\n  .pa-amp-section .pa-note p{\n    color:var(--pa-text-dim);\n    font-size:15.5px;\n    text-align:left;\n    margin:0;\n  }\n  .pa-amp-section .pa-note p + p{\n    margin-top:12px;\n  }\n  .pa-amp-section .pa-note strong{\n    color:var(--pa-copper);\n    font-weight:600;\n  }\n\n  .pa-amp-section .pa-keys{\n    display:flex;\n    flex-wrap:wrap;\n    justify-content:center;\n    gap:8px;\n    margin-top:18px;\n  }\n  .pa-amp-section .pa-keys span{\n    font-family:'Oswald',sans-serif;\n    font-size:12.5px;\n    letter-spacing:0.05em;\n    color:var(--pa-text-dim);\n    border:1px solid var(--pa-line);\n    background:#ffffff;\n    padding:6px 12px;\n    border-radius:20px;\n  }\n\n  @media (max-width:480px){\n    .pa-amp-section{padding:44px 18px 48px;}\n    .pa-amp-section .pa-note{padding:20px 18px;}\n  }\n</style>\n\n<div class=\"pa-amp-section\">\n\n  <div class=\"pa-eyebrow\">Set Price</div>\n  <p class=\"pa-title\">アンプ取り付けに必要な<br>ケーブルと<span class=\"pa-accent\">工賃をセット</span>にしました</p>\n\n  <p class=\"pa-lead\" style=\"margin-top:28px;\">\n    初めたばかりのカーオーディオユーザーの方から、早い段階でご相談いただくのが「パワーアンプ」です。\n  </p>\n\n  <div class=\"pa-role\">\n    <div class=\"pa-role-head\">パワーアンプの役割</div>\n\n    <div class=\"pa-role-list\">\n      <div class=\"pa-role-item\">\n        <div class=\"pa-role-num\">01</div>\n        <div class=\"pa-role-text\">\n          <p>スピーカーをしっかりとコントロールし、リニアなサウンドを再生します。</p>\n        </div>\n      </div>\n      <div class=\"pa-role-item\">\n        <div class=\"pa-role-num\">02</div>\n        <div class=\"pa-role-text\">\n          <p>それにより微細な再現力が増加。情報量がアップします。</p>\n        </div>\n      </div>\n      <div class=\"pa-role-item\">\n        <div class=\"pa-role-num\">03</div>\n        <div class=\"pa-role-text\">\n          <p>音像の輪郭や空気感、奥行きや音のハリ、スピード感が改善されます。</p>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"pa-note\">\n    <p>\n      大音量でパワフルに鳴らしたい、というわけでなければ、通常のドライブでいい音楽を楽しむために、市販されているアンプのワット数でパワーが足りないということはほとんどありません。\n    </p>\n    <p>\n      アンプを搭載するということは、さらなる臨場感の獲得。<strong>今まで感じていた目の前の霧が晴れるようなサウンド</strong>が得られます。そのためには<strong>ダンピングファクター</strong>や<strong>チャンネルセパレーション</strong>、<strong>S/N</strong>などが優れているものほどその効果が高く現れますし、ブランドやモデルによっても音作りの狙いによって様々な変化が楽しめます。\n    </p>\n    <div class=\"pa-keys\">\n      <span>Damping Factor</span>\n      <span>Channel Separation</span>\n      <span>S/N Ratio</span>\n    </div>\n  </div>\n\n</div>"
+          }
+        },
+        {
+          "id": "sec_package_summary_1783493839965_ae6s",
+          "type": "package_summary",
+          "data": {
+            "title": "アンプを取り付けるには",
+            "subtitle": "",
+            "items": [
+              {
+                "title": "まずはアンプ",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "電源ケーブルとバッテリー側のメインヒューズ",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "音声入力ケーブル(RCAまたはSPケーブル)",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "音声出力ケーブル(SPケーブル)",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "ワイヤリング(脱着等)工賃",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "アンプ設置ボード等製作",
+                "desc": "",
+                "value": ""
+              },
+              {
+                "title": "その他リモートケーブルや端子類",
+                "desc": "",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec_speakers_1783494049934_lkem",
+          "type": "speakers",
+          "data": {
+            "title": "386",
+            "subtitle": "386セット",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1783494148530_srz4",
+                "brand": "工賃38,600円＋アンプ代別",
+                "brandLogo": "",
+                "name": "",
+                "image": "/images/Audio/amp/386pict.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "",
+                "fixedPriceOverride": "0",
+                "remarks": "お好きなアンプをお選びください",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "8AWG電源ケーブル(オーディオテクニカ)",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "メインヒューズホルダ(オーディオテクニカ)",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "ヒューズ",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "入力用ケーブル(RCAまたはスピーカーケーブル)",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "出力用スピーカーケーブル（オリジナル）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "その他リモートケーブル等",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "アンプ設置用ボード製作",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "上記インストール費用",
+                    "desc": "",
+                    "value": ""
+                  }
+                ],
+                "prices": [
+                  {
+                    "label": "通常、61490円を",
+                    "price": "38600"
+                  }
+                ],
+                "logoBg": "light"
+              }
+            ],
+            "columns": 3,
+            "sectionWidth": "half",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald",
+            "subtitleFontSize": 22,
+            "subtitleColor": "#ea580c",
+            "content": "アンプ取り付けに必要なケーブル類と取り付け工賃がセット!"
+          }
+        },
+        {
+          "id": "sec_speakers_1783495367663_mvvx",
+          "type": "speakers",
+          "data": {
+            "title": "486",
+            "subtitle": "486セット",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1783495373488_xxw4",
+                "brand": "工賃48,600円＋アンプ代別",
+                "brandLogo": "",
+                "name": "",
+                "image": "/images/Audio/amp/486pict.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "",
+                "fixedPriceOverride": "0",
+                "remarks": "お好きなアンプをお選びください",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "4AWG電源ケーブル(オーディオテクニカ)",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "メインヒューズホルダ(オーディオテクニカ)",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "ヒューズ",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "入力用ケーブル(RCAまたはスピーカーケーブル)",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "出力用スピーカーケーブル（オリジナル）",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "その他リモートケーブル等",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "アンプ設置用ボード製作",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "上記インストール費用",
+                    "desc": "",
+                    "value": ""
+                  }
+                ],
+                "prices": [
+                  {
+                    "label": "通常、70565円を",
+                    "price": "48600"
+                  }
+                ],
+                "logoBg": "light"
+              }
+            ],
+            "columns": 3,
+            "subtitleFont": "oswald",
+            "borderSpacing": "narrow",
+            "subtitleColor": "#ea580c",
+            "content": "アンプ取り付けに必要なケーブル類と取り付け工賃がセット!",
+            "subtitleFontSize": 22,
+            "sectionWidth": "half"
+          }
+        },
+        {
+          "id": "sec_speakers_1783495752296_c34v",
+          "type": "speakers",
+          "data": {
+            "title": "864",
+            "subtitle": "864セット",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1783495800127_caj3",
+                "brand": "工賃86,400円＋アンプ代別",
+                "brandLogo": "",
+                "name": "",
+                "image": "/images/Audio/amp/864pict.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "",
+                "fixedPriceOverride": "0",
+                "remarks": "お好きなアンプをお選びください\n\n※486セットよりさらに RCAケーブル & スピーカーケーブルをグレードアップ!!",
+                "youtubeUrl": "",
+                "showCardSummary": true,
+                "cardSummaryItems": [
+                  {
+                    "title": "4AWG電源ケーブル(オーディオテクニカ)",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "メインヒューズホルダ(オーディオテクニカ)",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "ヒューズ",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "入力用ケーブル(RCAまたはスピーカーケーブル)",
+                    "desc": "RCAケーブル audiotechnica AT-RS250/5.0m 2セット",
+                    "value": ""
+                  },
+                  {
+                    "title": "出力用スピーカーケーブル（オリジナル）",
+                    "desc": "スピーカーケーブル audiotechnica AT-RS180P",
+                    "value": ""
+                  },
+                  {
+                    "title": "その他リモートケーブル等",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "アンプ設置用ボード製作",
+                    "desc": "",
+                    "value": ""
+                  },
+                  {
+                    "title": "上記インストール費用",
+                    "desc": "",
+                    "value": ""
+                  }
+                ],
+                "prices": [
+                  {
+                    "label": "通常、122375円を",
+                    "price": "86400"
+                  }
+                ],
+                "logoBg": "light"
+              }
+            ],
+            "sectionWidth": "half",
+            "columns": 3,
+            "subtitleFontSize": 22,
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald",
+            "subtitleColor": "#ea580c",
+            "content": "アンプ取り付けに必要なケーブル類と取り付け工賃がセット!"
+          }
+        },
+        {
+          "id": "sec_notes_1783494859212_rvf5",
+          "type": "notes",
+          "data": {
+            "title": "注意事項",
+            "items": [
+              "5万円(税抜)以上のアンプを同時購入される場合にのみパッケージ価格が適用となります。\n※4chアンプを想定したパッケージ内容です。4スピーカー分のスピーカーケーブル、RCAケーブルが含まれます。\nケーブルのグレードアップやシステムにあわせた内容変更などご相談ください。柔軟に対応します。\n車種により上記価格に追加が必要な場合があります。\n実際に使用するケーブルは写真のものとは異なる場合があります。異なる場合も同等クラス同等価格のものとなります。\nヘッドユニットにRCA出力がない場合はハイレベル(スピーカー)入力に対応したアンプがお勧めです。\n別途ハイローコンバーターなどを使用することも可能です。\n注)このパッケージは現金でのお支払いとなります。詳しくはお問い合わせまたはご来店ください。\n作業は１~2日お車をお預かりしますが無料代車をご用意していますのでご利用ください。"
+            ]
+          }
+        },
+        {
+          "id": "sec_speakers_1783496268692_h9bu",
+          "type": "speakers",
+          "data": {
+            "title": "おすすめアンプ",
+            "subtitle": "おすすめアンプ",
+            "hideTitle": true,
+            "hideSubtitle": false,
+            "subtitleAlign": "center",
+            "fixedPrice": "30000",
+            "speakers": [
+              {
+                "id": "spk_1783496392396_4y15",
+                "brand": "ZAPCO",
+                "brandLogo": "/images/Audio/logo/zapco.webp",
+                "name": "ST-4X SQ",
+                "image": "/images/Audio/amp/ST-4X SQ.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "60500",
+                "fixedPriceOverride": "0",
+                "remarks": "定格65WX4ch: ハイレベルインプットあり",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1783496586659_keqn",
+                "brand": "HELIX",
+                "brandLogo": "/images/Audio/logo/helix.webp",
+                "name": "M-FOUR",
+                "image": "/images/Audio/amp/M-FOUR.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "66000",
+                "fixedPriceOverride": "0",
+                "remarks": "定格100W×4chハイレベルインプットあり",
+                "youtubeUrl": "",
+                "logoBg": "light"
+              },
+              {
+                "id": "spk_1783496587715_0vtp",
+                "brand": "KICKER",
+                "brandLogo": "/images/Audio/logo/kicker.webp",
+                "name": "CXA360.4",
+                "image": "/images/Audio/amp/CXA360.4.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "71500",
+                "fixedPriceOverride": "0",
+                "remarks": "定格65WX4ch: ハイレベルインプットあり",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1783497689145_5b3s",
+                "brand": "MOSCONI",
+                "brandLogo": "/images/Audio/logo/mosconi.webp",
+                "name": "ATOMO2",
+                "image": "/images/Audio/amp/Atomo 2.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "74800",
+                "fixedPriceOverride": "0",
+                "remarks": "100wx2ch, 220wx1ch: ハイレベルインプットあり RCA入力時はEXT2RCA (4,950円)が必要",
+                "youtubeUrl": "",
+                "logoBg": "light"
+              },
+              {
+                "id": "spk_1783497689783_76lc",
+                "brand": "ETON",
+                "brandLogo": "/images/Audio/logo/ETON.webp",
+                "name": "POWER-220.4",
+                "image": "/images/Audio/amp/POWER-220.4.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "85800",
+                "fixedPriceOverride": "0",
+                "remarks": "定格145WX4chハイレベルインプットあり",
+                "youtubeUrl": "",
+                "logoBg": "light"
+              },
+              {
+                "id": "spk_1783497690327_n2ga",
+                "brand": "Groundzero",
+                "brandLogo": "/images/Audio/logo/groundzero.webp",
+                "name": "GZHA mini four",
+                "image": "/images/Audio/amp/GZHA MINI FOUR.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "86900",
+                "fixedPriceOverride": "0",
+                "remarks": "定格80WX4ch:ハイレベルインプットあり",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1783498556497_dh0i",
+                "brand": "carrozzeria",
+                "brandLogo": "/images/Audio/logo/carrozzeria.webp",
+                "name": "PRS-D800×2台",
+                "image": "/images/Audio/amp/PRS-D800.png",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "77000",
+                "fixedPriceOverride": "0",
+                "remarks": "定格125WX2ch",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1783498557223_5vzf",
+                "brand": "ARC AUDIO",
+                "brandLogo": "/images/Audio/logo/arc audio.webp",
+                "name": "XDi600.4JE",
+                "image": "/images/Audio/amp/XDi600.4JE.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "79200",
+                "fixedPriceOverride": "0",
+                "remarks": "定格150WX4ch",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1783498557775_6xxw",
+                "brand": "MOSCONI",
+                "brandLogo": "/images/Audio/logo/mosconi.webp",
+                "name": "ATOMO4",
+                "image": "/images/Audio/amp/ATOMO4.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "91300",
+                "fixedPriceOverride": "0",
+                "remarks": "60wx4ch, 150wx2ch: ハイレベルインプットあり RCA入力時はEXT4RCA (6,050円)が必要",
+                "youtubeUrl": "",
+                "logoBg": "light"
+              },
+              {
+                "id": "spk_1783498794964_1gje",
+                "brand": "MTX",
+                "brandLogo": "/images/Audio/logo/MTX.webp",
+                "name": "JH3004",
+                "image": "/images/Audio/amp/MTX-JH3004.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "102300",
+                "fixedPriceOverride": "0",
+                "remarks": "定格60WX4ch: ハイレベルインプットあり",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1783498795438_64w4",
+                "brand": "Rockford",
+                "brandLogo": "/images/Audio/logo/ROCKFORD FOSGATE.webp",
+                "name": "P400X4",
+                "image": "/images/Audio/amp/P400X4.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "139700",
+                "fixedPriceOverride": "0",
+                "remarks": "定格50WX4ch",
+                "youtubeUrl": "",
+                "logoBg": "light"
+              },
+              {
+                "id": "spk_1783498795862_zbgp",
+                "brand": "DLS",
+                "brandLogo": "/images/Audio/logo/dls.webp",
+                "name": "CCi44",
+                "image": "/images/Audio/amp/CCi44.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "143000",
+                "fixedPriceOverride": "0",
+                "remarks": "定格85WX4ch:ハイレベルインプットあり",
+                "youtubeUrl": "",
+                "logoBg": "light"
+              },
+              {
+                "id": "spk_1783499077857_vhjr",
+                "brand": "ZAPCO",
+                "brandLogo": "/images/Audio/logo/zapco.webp",
+                "name": "Z-150.4 ||",
+                "image": "/images/Audio/amp/Z-150.4 II.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "176000",
+                "fixedPriceOverride": "0",
+                "remarks": "定格165WX4ch",
+                "youtubeUrl": ""
+              },
+              {
+                "id": "spk_1783499078416_f92e",
+                "brand": "Rockford",
+                "brandLogo": "/images/Audio/logo/ROCKFORD FOSGATE.webp",
+                "name": "T400X4ad",
+                "image": "/images/Audio/amp/T400X4ad.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "198000",
+                "fixedPriceOverride": "0",
+                "remarks": "定格100WX4ch: ハイレベルインプットあり",
+                "youtubeUrl": "",
+                "logoBg": "light"
+              },
+              {
+                "id": "spk_1783499078977_icao",
+                "brand": "MOSCONI",
+                "brandLogo": "/images/Audio/logo/mosconi.webp",
+                "name": " PRO 4/10",
+                "image": "/images/Audio/amp/PRO 4-10.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "184800",
+                "fixedPriceOverride": "0",
+                "remarks": "定格120WX4ch: ハイレベルインプットあり",
+                "youtubeUrl": "",
+                "logoBg": "light"
+              },
+              {
+                "id": "spk_1783499286997_5feo",
+                "brand": "Rockford",
+                "brandLogo": "/images/Audio/logo/ROCKFORD FOSGATE.webp",
+                "name": "T600-4",
+                "image": "/images/Audio/amp/T600-4.webp",
+                "mountingHoleSize": "",
+                "depthSize": "",
+                "hasGrille": "",
+                "hasTweeterMount": "",
+                "standalonePrice": "253000",
+                "fixedPriceOverride": "0",
+                "remarks": "定格100WX4ch: ハイレベルインプットあり",
+                "youtubeUrl": "",
+                "logoBg": "light"
+              }
+            ],
+            "subtitleFontSize": 22,
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald",
+            "displayMode": "image_text"
+          }
+        },
+        {
+          "id": "sec_floating_cta_1783496277304_lqmm",
+          "type": "floating_cta",
+          "data": {
+            "showLine": true,
+            "showReservation": true,
+            "theme": "audio"
           }
         }
       ],
@@ -14194,7 +15447,7 @@
     },
     {
       "id": "amplified-dsp",
-      "slug": "amplified-dsp",
+      "slug": "ampDSP",
       "name": "アンプ内蔵DSPパッケージ",
       "parentCategoryId": "digital_source",
       "publishStatus": "published",
@@ -14217,29 +15470,22 @@
       "speakers": [],
       "sections": [
         {
-          "id": "sec_hero_1779248121851_amplified-dsp",
-          "type": "hero",
+          "id": "sec_banner_1783563967466_ji73",
+          "type": "banner",
           "data": {
-            "badge": "音像定位",
             "title": "アンプ内蔵DSPパッケージ",
-            "subtitle": "音像定位",
-            "desc": "プランの特徴や魅力を伝える紹介文を入力してください。",
-            "image": "/images/Audio/amplified_dsp.webp",
-            "imageOpacity": 0.3,
-            "useDarkTheme": true,
-            "bgColor": ""
+            "badge": "Amp Built-in DSP",
+            "opacity": 0.4,
+            "height": "400px",
+            "image": "/images/Audio/Speaker/door-b.webp"
           }
         },
         {
-          "id": "sec_pricing_1779248121851_amplified-dsp",
-          "type": "pricing",
+          "id": "sec_text_1783563952664_cah0",
+          "type": "text",
           "data": {
-            "specialPrice": "110000",
-            "fixedPrice": 0,
-            "normalPriceText": "",
-            "savingsText": "",
-            "note": "",
-            "taxRate": 10
+            "title": "",
+            "content": "<!-- ============================================================\n  アンプ内蔵DSP セクション（貼り付け用フラグメント）\n  ・スタイルはすべて .pa-dsp-section 配下にスコープしてあるため、\n    他のセクション（h1 / p / body 等）には影響しません。\n  ・そのまま既存ページの本文内にコピー＆ペーストしてください。\n============================================================ -->\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link href=\"https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap\" rel=\"stylesheet\">\n\n<style>\n  .pa-dsp-section{\n    --pd-bg:#ffffff;\n    --pd-panel:#f7f5f1;\n    --pd-line:#e3e0d9;\n    --pd-text:#26241f;\n    --pd-text-dim:#7a766c;\n    --pd-copper:#a8672f;\n    --pd-copper-dim:#c68a4e;\n\n    box-sizing:border-box;\n    width:100%;\n    max-width:760px;\n    margin:0 auto;\n    padding:56px 24px 60px;\n    text-align:center;\n    background:var(--pd-bg);\n    color:var(--pd-text);\n    font-family:'Noto Sans JP',sans-serif;\n    line-height:1.85;\n    -webkit-font-smoothing:antialiased;\n  }\n  .pa-dsp-section *{\n    box-sizing:border-box;\n  }\n\n  /* ---- Hero ---- */\n  .pa-dsp-section .pd-eyebrow{\n    display:flex;\n    align-items:center;\n    justify-content:center;\n    gap:12px;\n    font-family:'Oswald',sans-serif;\n    font-size:14px;\n    letter-spacing:0.3em;\n    color:var(--pd-copper);\n    text-transform:uppercase;\n    margin:0 0 14px;\n  }\n  .pa-dsp-section .pd-eyebrow::before,\n  .pa-dsp-section .pd-eyebrow::after{\n    content:\"\";\n    width:26px;\n    height:1px;\n    background:var(--pd-copper-dim);\n  }\n  .pa-dsp-section .pd-title{\n    font-family:'Noto Sans JP',sans-serif;\n    font-weight:700;\n    font-size:clamp(21px,4.4vw,28px);\n    line-height:1.65;\n    letter-spacing:0.02em;\n    color:#161512;\n    margin:0 auto;\n    max-width:560px;\n  }\n  .pa-dsp-section .pd-title .pd-accent{\n    color:var(--pd-copper);\n  }\n\n  /* ---- Scenario cards ---- */\n  .pa-dsp-section .pd-scenarios{\n    margin-top:48px;\n    display:grid;\n    grid-template-columns:1fr 1fr;\n    gap:16px;\n    text-align:left;\n  }\n  .pa-dsp-section .pd-card{\n    background:var(--pd-panel);\n    border:1px solid var(--pd-line);\n    border-radius:4px;\n    padding:22px 22px 20px;\n  }\n  .pa-dsp-section .pd-card-q{\n    display:flex;\n    gap:10px;\n    align-items:baseline;\n    font-weight:700;\n    font-size:15.5px;\n    color:var(--pd-text);\n    margin-bottom:10px;\n  }\n  .pa-dsp-section .pd-card-q::before{\n    content:\"Q\";\n    font-family:'Oswald',sans-serif;\n    font-size:14px;\n    color:#fff;\n    background:var(--pd-copper);\n    width:22px;\n    height:22px;\n    flex-shrink:0;\n    border-radius:50%;\n    display:flex;\n    align-items:center;\n    justify-content:center;\n  }\n  .pa-dsp-section .pd-card-a{\n    font-size:14.5px;\n    color:var(--pd-text-dim);\n    padding-left:32px;\n  }\n\n  /* ---- Feature list ---- */\n  .pa-dsp-section .pd-features{\n    margin-top:44px;\n    max-width:560px;\n    margin-left:auto;\n    margin-right:auto;\n    display:flex;\n    flex-direction:column;\n    text-align:left;\n  }\n  .pa-dsp-section .pd-feature{\n    display:flex;\n    align-items:flex-start;\n    gap:14px;\n    padding:15px 4px;\n    border-top:1px solid var(--pd-line);\n  }\n  .pa-dsp-section .pd-features .pd-feature:last-child{\n    border-bottom:1px solid var(--pd-line);\n  }\n  .pa-dsp-section .pd-feature-mark{\n    flex-shrink:0;\n    width:20px;\n    height:20px;\n    margin-top:2px;\n    border-radius:50%;\n    border:1.5px solid var(--pd-copper);\n    position:relative;\n  }\n  .pa-dsp-section .pd-feature-mark::after{\n    content:\"\";\n    position:absolute;\n    top:50%;\n    left:50%;\n    width:8px;\n    height:5px;\n    border-left:2px solid var(--pd-copper);\n    border-bottom:2px solid var(--pd-copper);\n    transform:translate(-50%,-65%) rotate(-45deg);\n  }\n  .pa-dsp-section .pd-feature p{\n    font-size:15.5px;\n    color:var(--pd-text);\n    margin:0;\n  }\n\n  /* ---- Package section ---- */\n  .pa-dsp-section .pd-package{\n    margin-top:64px;\n    padding-top:48px;\n    border-top:1px solid var(--pd-line);\n  }\n  .pa-dsp-section .pd-package-title{\n    font-family:'Noto Sans JP',sans-serif;\n    font-weight:700;\n    font-size:clamp(19px,3.6vw,24px);\n    color:#161512;\n    margin-bottom:10px;\n  }\n  .pa-dsp-section .pd-package-sub{\n    font-size:14.5px;\n    color:var(--pd-text-dim);\n    max-width:480px;\n    margin:0 auto 28px;\n  }\n\n  .pa-dsp-section .pd-includes{\n    max-width:480px;\n    margin:0 auto;\n    text-align:left;\n    background:var(--pd-panel);\n    border:1px solid var(--pd-line);\n    border-radius:4px;\n    padding:28px 30px;\n  }\n  .pa-dsp-section .pd-includes ul{\n    list-style:none;\n    margin:0;\n    padding:0;\n    display:flex;\n    flex-direction:column;\n    gap:12px;\n  }\n  .pa-dsp-section .pd-includes li{\n    display:flex;\n    align-items:flex-start;\n    gap:10px;\n    font-size:15px;\n    color:var(--pd-text);\n  }\n  .pa-dsp-section .pd-includes li::before{\n    content:\"\";\n    flex-shrink:0;\n    width:6px;\n    height:6px;\n    border-radius:50%;\n    background:var(--pd-copper);\n    margin-top:8px;\n  }\n  .pa-dsp-section .pd-note-small{\n    margin-top:20px;\n    padding-top:16px;\n    border-top:1px dashed var(--pd-line);\n    font-size:13px;\n    color:var(--pd-text-dim);\n    text-align:left;\n  }\n\n  /* ---- Closing note ---- */\n  .pa-dsp-section .pd-closing{\n    margin-top:44px;\n    text-align:left;\n    max-width:640px;\n    margin-left:auto;\n    margin-right:auto;\n    background:#ffffff;\n    border-left:3px solid var(--pd-copper);\n    padding:4px 0 4px 22px;\n  }\n  .pa-dsp-section .pd-closing p{\n    font-size:14.5px;\n    color:var(--pd-text-dim);\n    margin:0;\n  }\n  .pa-dsp-section .pd-closing strong{\n    color:var(--pd-copper);\n    font-weight:600;\n  }\n\n  @media (max-width:600px){\n    .pa-dsp-section{padding:44px 18px 48px;}\n    .pa-dsp-section .pd-scenarios{grid-template-columns:1fr;}\n    .pa-dsp-section .pd-includes{padding:22px 20px;}\n  }\n</style>\n\n<div class=\"pa-dsp-section\">\n\n  <div class=\"pd-eyebrow\">Amp Built-in DSP</div>\n  <p class=\"pd-title\">今のナビはそのままに<br><span class=\"pd-accent\">音質をグレードアップ</span>できるのが<br>「アンプ内蔵タイプのDSP」です</p>\n\n  <div class=\"pd-scenarios\">\n    <div class=\"pd-card\">\n      <div class=\"pd-card-q\">今のナビ・ヘッドユニットのまま音質アップしたい</div>\n      <div class=\"pd-card-a\">ナビの機能に不満がなく替える必要がない場合や、そもそもMOPナビ（社外ナビに交換できないナビ）で純正を活かさなくてはいけない場合でもOKです。</div>\n    </div>\n    <div class=\"pd-card\">\n      <div class=\"pd-card-q\">大画面ナビは欲しいけど音質には不満・・・</div>\n      <div class=\"pd-card-a\">音質はDSPにまかせることで、心置きなく大画面ナビを選ぶことができます。</div>\n    </div>\n    <div class=\"pd-card\">\n      <div class=\"pd-card-q\">フロント3WAYシステムを手軽に始めたい</div>\n      <div class=\"pd-card-a\">アンプ内蔵DSPには6chや8chアンプを内蔵しているモデルがあり、フロント3WAYシステムへ発展させやすいのが特長です。</div>\n    </div>\n    <div class=\"pd-card\">\n      <div class=\"pd-card-q\">フロントは高音質なマルチ接続に、でもリアも使いたい</div>\n      <div class=\"pd-card-a\">高音質ナビでフロントマルチ接続を選ぶとリアスピーカーが使えなくなりますが、DSPユニットを追加すればフロントマルチ接続＋リアスピーカーの両立が可能になります。</div>\n    </div>\n  </div>\n\n  <div class=\"pd-features\">\n    <div class=\"pd-feature\">\n      <div class=\"pd-feature-mark\"></div>\n      <p>特別な操作の必要はなし。操作性は今までと変わりません。</p>\n    </div>\n    <div class=\"pd-feature\">\n      <div class=\"pd-feature-mark\"></div>\n      <p>前方に臨場感豊かなステージが出現したかのようなサウンドになります。</p>\n    </div>\n    <div class=\"pd-feature\">\n      <div class=\"pd-feature-mark\"></div>\n      <p>高音質なアンプが搭載されているので、アンプ追加を検討中の方にもおすすめです。</p>\n    </div>\n    <div class=\"pd-feature\">\n      <div class=\"pd-feature-mark\"></div>\n      <p>ハイエンドオーディオ機に匹敵するほどの調整機能を備えています。</p>\n    </div>\n  </div>\n\n  <div class=\"pd-package\">\n    <div class=\"pd-package-title\">お得な取付込みのパッケージを用意しました</div>\n    <p class=\"pd-package-sub\">商品代金・ワイヤリング工賃・ケーブル代・調整代を含めた価格です。</p>\n\n    <div class=\"pd-includes\">\n      <ul>\n        <li>電源ケーブル（プラス・マイナス）</li>\n        <li>ヒューズホルダー及びヒューズ</li>\n        <li>入力信号用ケーブル</li>\n        <li>出力信号ケーブル（スピーカーケーブル）</li>\n        <li>インストール工賃</li>\n        <li>サウンドチューニング費用</li>\n      </ul>\n      <div class=\"pd-note-small\">\n        上記内容がパッケージに含まれます。<br>\n        注）ドア通線などが必要な車両は別途追加が必要です。\n      </div>\n    </div>\n  </div>\n\n  <div class=\"pd-closing\">\n    <p>\n      DSPを選ぶ時は、システムに必要な<strong>アンプの出力チャンネル</strong>、DSPに入力させたいソースの接続方法とチャンネル、純正マルチシステムなどでは<strong>チャンネル合成機能（サミング）</strong>ができるかどうかなどの確認が必要です。また調整に必要な調整ソフトも音作りには欠かせない存在ですので、使いやすさや安定感なども重要となります。商品選びはぜひご来店の上、お気軽にお尋ねください。\n    </p>\n  </div>\n\n</div>"
           }
         }
       ],
@@ -15253,7 +16499,7 @@
                 "name": "CSS674",
                 "image": "/images/Audio/Speaker/CSS674.webp",
                 "standalonePrice": "40700",
-                "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。このCSシリーズは純正ナビなどの内蔵アンプでも駆動しやすく、張りのある小気味良い音が出るスピーカーです。ツィーターは純正位置への取り付けとなります。",
+                "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。このCSシリーズは純正ナビなどの内蔵アンプでも駆動しやすく、張りのある小気味良い音が出るスピー��ーです。ツィーターは純正位置への取り付けとなります。",
                 "fixedPriceOverride": "19250",
                 "showCardSummary": true,
                 "cardSummaryItems": [
@@ -17785,7 +19031,7 @@
                 "hasTweeterMount": "",
                 "standalonePrice": "70620",
                 "fixedPriceOverride": "18150",
-                "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。取り付けにはプリウス専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。",
+                "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アッ��。取り付けにはプリウス専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。",
                 "youtubeUrl": "",
                 "showCardSummary": true,
                 "cardSummaryItems": [
