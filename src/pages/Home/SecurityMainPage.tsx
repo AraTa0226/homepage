@@ -374,48 +374,43 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
             </section>
 
             {/* Professional Standards Section */}
-            <section className="py-32 relative overflow-hidden bg-[#0c1412]">
-                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-500/20 to-transparent"></div>
-                <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'linear-gradient(#10b981 1px, transparent 1px), linear-gradient(90deg, #10b981 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
-
+            <section className="py-24 md:py-32 relative overflow-hidden bg-gray-50 text-gray-900 border-t border-b border-gray-100">
                 <div className="max-w-7xl mx-auto px-4 relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
                         <div className="lg:col-span-5 lg:sticky lg:top-32">
                             <div className="space-y-8">
-                                <span className="text-emerald-500 font-black tracking-[0.5em] uppercase text-[12px] block">The Protocol of Trust</span>
-                                <h2 className="text-5xl md:text-6xl font-black text-white leading-[1.1] tracking-tighter italic">
+                                <span className="text-emerald-600 font-black tracking-[0.5em] uppercase text-[12px] block">The Protocol of Trust</span>
+                                <h2 className="text-5xl md:text-6xl font-black text-gray-900 leading-[1.1] tracking-tighter italic">
                                     THE <br />
-                                    <span className="text-emerald-500 shadow-emerald-500/20 [text-shadow:_0_0_20px_rgb(16_185_129_/_0.3)]">STANDARDS.</span>
+                                    <span className="text-emerald-600">STANDARDS.</span>
                                 </h2>
-                                <p className="text-gray-400 font-bold text-lg leading-relaxed max-w-sm">
+                                <p className="text-gray-600 font-bold text-lg leading-relaxed max-w-sm">
                                     メーカーの認めた技術と、確かなツール。当店が維持し続ける、カーセキュリティーの「正解」です。
                                 </p>
-                                <div className="relative rounded-[2.5rem] overflow-hidden border border-white/10 group aspect-square lg:aspect-auto lg:h-[400px]">
+                                <div className="relative rounded-[2.5rem] overflow-hidden border-4 border-white shadow-2xl group aspect-square lg:aspect-auto lg:h-[400px]">
                                     <SafeImage
                                         src="/images/Security/snapon.webp"
                                         alt="Professional Installation Tools"
-                                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="lg:col-span-7 space-y-20">
+                        <div className="lg:col-span-7 space-y-12">
                             {securityData.home?.standards?.points?.map((point: any, idx: number) => {
                                 const IconComp = iconMap[point.icon] || ShieldCheck;
-                                const colors = idx === 0 ? 'emerald' : idx === 1 ? 'blue' : 'white';
                                 return (
-                                    <div key={point.id} className="relative pl-12">
-                                        <div className={`absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-${colors}-500 via-${colors}-500/10 to-transparent`}></div>
-                                        <div className={`absolute left-[-4px] top-0 w-2 h-2 rounded-full bg-${colors === 'white' ? 'white' : colors + '-500'} shadow-[0_0_15px_rgba(16,185,129,0.8)]`}></div>
+                                    <div key={point.id} className="relative pl-8 md:pl-12 bg-white p-8 md:p-10 rounded-[2.5rem] shadow-xl border border-gray-100/80 transition-all hover:shadow-2xl hover:border-emerald-500/30">
                                         <div className="space-y-4">
                                             <div className="flex items-center gap-4">
-                                                <IconComp className={`w-8 h-8 text-${colors === 'white' ? 'white' : colors + '-500'}`} />
-                                                <span className={`text-${colors === 'white' ? 'white' : colors + '-500'} font-black text-[12px] tracking-widest uppercase italic`}>{point.id} / Standard</span>
+                                                <div className="w-12 h-12 rounded-2xl bg-emerald-50 flex items-center justify-center text-emerald-600">
+                                                    <IconComp className="w-6 h-6" />
+                                                </div>
+                                                <span className="text-emerald-600 font-black text-[12px] tracking-widest uppercase italic">{point.id} / Standard</span>
                                             </div>
-                                            <h3 className="text-3xl font-black text-white tracking-tight">{point.title}</h3>
-                                            <p className="text-gray-400 font-bold leading-relaxed text-[15px]">
+                                            <h3 className="text-2xl md:text-3xl font-black text-gray-900 tracking-tight">{point.title}</h3>
+                                            <p className="text-gray-600 font-bold leading-relaxed text-[15px]">
                                                 {point.desc}
                                             </p>
                                         </div>
