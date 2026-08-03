@@ -218,7 +218,7 @@
         {
           "id": "easy-bass-plus",
           "name": "お手軽低音増強セット”プラス”",
-          "badge": "本���低���",
+          "badge": "本低",
           "description": "プランの特徴や魅力を伝える紹介文を入力してください。",
           "link": "/ampswpac",
           "features": [
@@ -377,7 +377,7 @@
       "id": "custom_install",
       "category": "カスタムインストール・造作",
       "type": "audio",
-      "description": "音を耳で楽しむだけでなく���**��の技**で視覚的にも美しく。**ピラー加工**や**アウター��������ッフル**など、世界に一台のカスタムを。",
+      "description": "音を耳で楽しむだけでなく**の技**で視覚的にも美しく。**ピラー加工**や**アウターッフル**など、世界に一台のカスタムを。",
       "showDescriptionInMenu": true,
       "showDescriptionInList": true,
       "items": [
@@ -411,7 +411,7 @@
           "id": "custom-install",
           "name": "カスタムインストール",
           "badge": "完全オーダー",
-          "description": "プランの特徴や魅力を伝える紹介文を入力��てください。",
+          "description": "プランの特徴や魅力を伝える紹介文を入力てください。",
           "link": "/custominst",
           "features": [
             "トランクカスタム",
@@ -482,7 +482,7 @@
             "1WAYスペアリモコン付属"
           ],
           "image": "/images/Security/model/grgo.webp",
-          "description": "ZVⅡの機能に加え、レッカー移動対策の傾斜センサー���衝撃検���を強化するトリプルセンサーを標準装備した、物理ガードの決定版。"
+          "description": "ZVⅡの機能に加え、レッカー移動対策の傾斜センサー衝撃検を強化するトリプルセンサーを標準装備した、物理ガードの決定版。"
         },
         {
           "name": "1VsⅡ",
@@ -495,7 +495,7 @@
             "ドア/トランク/ボンネット検知"
           ],
           "image": "/images/Security/model/grgo.webp",
-          "description": "純正スマートキーの操作に連動してセキュリティを起動. シ���プルながらGrgoの高い信頼性を手軽に導入できるモ������ルです。"
+          "description": "純正スマートキーの操作に連動してセキュリティを起動. シプルながらGrgoの高い信頼性を手軽に導入できるモルです。"
         },
         {
           "name": "5VfⅡ",
@@ -533,7 +533,7 @@
           "price": "77000",
           "badge": "エントリー",
           "subType": "330v",
-          "description": "純正キーレス連動のベーシックモデル。必要十分な検知機能とイモビライザーで、高いコストパフォーマンスを実現��",
+          "description": "純正キーレス連動のベーシックモデル。必要十分な検知機能とイモビライザーで、高いコストパフォーマンスを実現",
           "image": "/images/Security/model/330v.webp"
         }
       ],
@@ -984,7 +984,7 @@
             },
             {
               "title": "フルラミネーションディスプレイ",
-              "content": "カバーガラスと液晶の間の隙���をなくす加工により、光の乱反射を抑制。色の再現性が向上し、映り込みの少ないクリアな視界を実現しました。"
+              "content": "カバーガラスと液晶の間の隙をなくす加工により、光の乱反射を抑制。色の再現性が向上し、映り込みの少ないクリアな視界を実現しました。"
             },
             {
               "title": "純正ミラー交換式・車種専用取付",
@@ -993,7 +993,7 @@
           ]
         },
         {
-          "name": "純正交換タイプ 10型ドラレコミラー\n「車���用リアカメラ」",
+          "name": "純正交換タイプ 10型ドラレコミラー\n「車用リアカメラ」",
           "price": "0",
           "badge": "NEW 4月下旬発売",
           "image": "/images/Security/d-mirror/dvr-dm1000a2-ic.webp",
@@ -1018,7 +1018,7 @@
               "icon": "Camera"
             },
             {
-              "label": "夜間セン��ー",
+              "label": "夜間センー",
               "value": "STARVIS 2 (前後)",
               "icon": "Zap"
             },
@@ -1069,7 +1069,7 @@
             "純正ミラー交換タイプ",
             "駐車録画モード標準装備"
           ],
-          "description": "後方視界を確実に映すアルパインの最新10型デジタルミラー。���������外設置専用のWQHD（370万画素）カメラを採用。雨天時や夜間のスモークガラス越しでは困難な視認性も、車外カメラなら常にクリアに確保。STARVIS 2搭載により、あらゆる環境下で自然で鮮明な映像を提供します。",
+          "description": "後方視界を確実に映すアルパインの最新10型デジタルミラー。外設置専用のWQHD（370万画素）カメラを採用。雨天時や夜間のスモークガラス越しでは困難な視認性も、車外カメラなら常にクリアに確保。STARVIS 2搭載により、あらゆる環境下で自然で鮮明な映像を提供します。",
           "specSummary": [
             {
               "label": "液晶サイズ",
@@ -1078,7 +1078,7 @@
             },
             {
               "label": "リア解像度",
-              "value": "370万���素 WQHD",
+              "value": "370万素 WQHD",
               "icon": "Camera"
             },
             {
@@ -1100,7 +1100,7 @@
           "detailedSections": [
             {
               "title": "車外設置専用 WQHDリアカメラ",
-              "content": "リアカメラは車外設置に特化した370万画素の高精細仕様。リ��ガラスの汚れや反射の影響を受けず、後方の状況をダイレクトかつ鮮明に捉えます。"
+              "content": "リアカメラは車外設置に特化した370万画素の高精細仕様。リガラスの汚れや反射の影響を受けず、後方の状況をダイレクトかつ鮮明に捉えます。"
             },
             {
               "title": "最新センサー STARVIS 2 搭載",
@@ -1197,7 +1197,7 @@
       "updatedAt": "2026-05-01T13:51:05.224Z",
       "publishedAt": "2026-04-29T21:58:18.755Z",
       "revisedAt": "2026-05-01T13:51:05.224Z",
-      "category": "HIACE (200系) フルライン��ップ",
+      "category": "HIACE (200系) フルラインップ",
       "type": [],
       "description": "<p>仕事からレジャーまで幅広く活躍するハイエース。狙われやすい車種だからこそ、センサー感度の追求と利便性を両立した専用プランをご用意しました。</p>",
       "items": [
@@ -1305,7 +1305,7 @@
           "name": "Grgo ZVT II",
           "price": "219,800",
           "badge": "おすすめ",
-          "description": "傾斜・トリプルセンサーを同梱。ジャッキアップや車体へのあらゆる衝撃を逃さず検知する、Grgo最上位構��。",
+          "description": "傾斜・トリプルセンサーを同梱。ジャッキアップや車体へのあらゆる衝撃を逃さず検知する、Grgo最上位構。",
           "triple": true,
           "tilt": true,
           "bonnet": false,
@@ -1406,7 +1406,7 @@
           "name": "Panthera Z306 ＋ CANガード",
           "price": "396,800",
           "badge": "推奨構成",
-          "description": "傾斜センサ���標準装備の人気モデル。クラウンのあらゆる弱点を補い、誤作動を排した高度な警備を実現。",
+          "description": "傾斜センサ標準装備の人気モデル。クラウンのあらゆる弱点を補い、誤作動を排した高度な警備を実現。",
           "triple": true,
           "tilt": true,
           "bonnet": true,
@@ -1521,7 +1521,7 @@
           "name": "Panthera Z706",
           "price": "425,800",
           "badge": "最強プラン",
-          "description": "全センサー装備の最���峰。70を守り抜くANGのフルスペックパッケージ。",
+          "description": "全センサー装備の最峰。70を守り抜くANGのフルスペックパッケージ。",
           "triple": true,
           "tilt": true,
           "bonnet": false,
@@ -1628,7 +1628,7 @@
       "revisedAt": "2026-04-29T21:58:14.950Z",
       "category": "LEXUS LBX 専用パッケージ",
       "type": [],
-      "description": "<p>「高級車の概念を変える」コ��パクトSUV。小型車ながら狙われやすいため、確実なデジタル対策が必要です。</p>",
+      "description": "<p>「高級車の概念を変える」コパクトSUV。小型車ながら狙われやすいため、確実なデジタル対策が必要です。</p>",
       "items": [
         {
           "fieldId": "item",
@@ -1712,7 +1712,7 @@
       "updatedAt": "2026-04-30T07:29:55.047Z",
       "publishedAt": "2026-04-29T21:58:14.144Z",
       "revisedAt": "2026-04-30T07:29:55.047Z",
-      "category": "LEXUS LX600 専用��ッケージ",
+      "category": "LEXUS LX600 専用ッケージ",
       "type": [
         "security"
       ],
@@ -2001,7 +2001,7 @@
       "revisedAt": "2026-04-29T21:12:44.538Z",
       "category": "HIACE (200系) 専用パッケージ",
       "type": [],
-      "description": "<p>仕事からレジャーまで幅広く活躍するハイエース。狙われやすい車種だからこそ、センサー感度の追求と利便性を両立し���専用プランをご用意しました。</p>",
+      "description": "<p>仕事からレジャーまで幅広く活躍するハイエース。狙われやすい車種だからこそ、センサー感度の追求と利便性を両立し専用プランをご用意しました。</p>",
       "items": [
         {
           "fieldId": "item",
@@ -2066,7 +2066,7 @@
           "name": "Panthera Z306",
           "price": "318,800",
           "badge": "推奨構成",
-          "description": "トリプルセンサーと傾斜センサーが同梱。ジムニーの人気���ス������パー������������������������������タイヤ・ホイールも死角なくガード。",
+          "description": "トリプルセンサーと傾斜センサーが同梱。ジムニーの人気スパータイヤ・ホイールも死角なくガード。",
           "triple": true,
           "tilt": true,
           "bonnet": true,
@@ -2100,9 +2100,9 @@
       "updatedAt": "2026-04-29T21:12:43.111Z",
       "publishedAt": "2026-04-29T21:12:43.111Z",
       "revisedAt": "2026-04-29T21:12:43.111Z",
-      "category": "HARRIER (80系) 専用パッケ����",
+      "category": "HARRIER (80系) 専用パッケ",
       "type": [],
-      "description": "<p>高い��気��誇るSUV。最新の盗難手口に対し、スマクロ機能や物理CANガードを組み合わせた、都市部でも安心のセキュリティをご提供します。</p>",
+      "description": "<p>高い気誇るSUV。最新の盗難手口に対し、スマクロ機能や物理CANガードを組み合わせた、都市部でも安心のセキュリティをご提供します。</p>",
       "items": [
         {
           "fieldId": "item",
@@ -2162,7 +2162,7 @@
       "type": [
         "security"
       ],
-      "description": "<p>最���鋭のオフ���ーダー。CANインベーダーやゲームボーイといった最新手口への完全対策が必須です。</p>",
+      "description": "<p>最鋭のオフーダー。CANインベーダーやゲームボーイといった最新手口への完全対策が必須です。</p>",
       "items": [
         {
           "fieldId": "item",
@@ -2182,7 +2182,7 @@
           "fieldId": "item",
           "name": "Grgo ZVT II ＋ CANガード ＋ マイクロ波 ＋ ボンネット",
           "price": "373,800",
-          "description": "傾斜・トリプルセ���サー標準������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������にマ���������������������������������������������������������ク��������������波��������追��しました。。CANガー��と1WAYリモ����������������ン��������������������付属。",
+          "description": "傾斜・トリプルセサー標準にマク波追しました。。CANガーと1WAYリモン付属。",
           "triple": true,
           "tilt": true,
           "bonnet": true,
@@ -2196,7 +2196,7 @@
           "fieldId": "item",
           "name": "Panthera Z106 ＋ CANガード ＋ マイクロ波 ＋ トリプル",
           "price": "412,000",
-          "description": "最高峰のセキュリティーパンテーラのス���ートモ���ルに、マイクロ波、����プルを追��し��プランです。",
+          "description": "最高峰のセキュリティーパンテーラのスートモルに、マイクロ波、プルを追しプランです。",
           "triple": true,
           "tilt": false,
           "bonnet": true,
@@ -2258,14 +2258,14 @@
       "type": [
         "security"
       ],
-      "description": "<p>高い人気を誇る���グジュア��ーSUV。スマートキーの利便性を活かしつつ、CANガード等で最新の盗難手口から死角なく守ります。</p>",
+      "description": "<p>高い人気を誇るグジュアーSUV。スマートキーの利便性を活かしつつ、CANガード等で最新の盗難手口から死角なく守ります。</p>",
       "items": [
         {
           "fieldId": "item",
           "name": "Grgo ZVT II ＋ CANガード",
           "price": "336,600",
           "badge": "おすすめ",
-          "description": "傾斜センサーとCANガー����������������������������������1WAYリモコンも付属した上位モデル。",
+          "description": "傾斜センサーとCANガー1WAYリモコンも付属した上位モデル。",
           "triple": true,
           "tilt": true,
           "bonnet": true,
@@ -2295,7 +2295,7 @@
           "name": "Panthera Z706 ＋ CANガード",
           "price": "486,800",
           "badge": "最強プラン",
-          "description": "あらゆる手口か����車を守る、ANGノウハウの結晶プラン。",
+          "description": "あらゆる手口か車を守る、ANGノウハウの結晶プラン。",
           "triple": true,
           "tilt": true,
           "bonnet": true,
@@ -2318,14 +2318,14 @@
       "type": [
         "security"
       ],
-      "description": "<p>今なお狙われ続ける150系。スマートキー連動による最新の窃盗�����������������������������策�����������������������������������������������������������������������������������������、物�����的なCANガードなど、年式に応じた最適な対���������������������������������をご提案します。</p>",
+      "description": "<p>今なお狙われ続ける150系。スマートキー連動による最新の窃盗策、物的なCANガードなど、年式に応じた最適な対をご提案します。</p>",
       "items": [
         {
           "fieldId": "item",
-          "name": "Grgo ZVT II ＋ ������������������������������������������マ��������������������������������������������������連動/スマクロ",
+          "name": "Grgo ZVT II ＋ マ連動/スマクロ",
           "price": "299,600",
           "badge": "おすすめ",
-          "description": "傾斜センサー含むフルセンサー構成にスマートキー連動をプラスし�����������������������������������������������������������������������������������������������������������������������������������������������������������������������������������利便性を高めた一台。",
+          "description": "傾斜センサー含むフルセンサー構成にスマートキー連動をプラスし利便性を高めた一台。",
           "triple": true,
           "tilt": true,
           "bonnet": true,
@@ -2354,7 +2354,7 @@
           "name": "Panthera Z706 ＋ CANガード",
           "price": "449,800",
           "badge": "最強プラン",
-          "description": "ANG最強の組み合わせ。バックアップサイレン、全センサー、物理CAN対���の集大成。",
+          "description": "ANG最強の組み合わせ。バックアップサイレン、全センサー、物理CAN対の集大成。",
           "triple": true,
           "tilt": true,
           "bonnet": true,
@@ -2510,7 +2510,7 @@
         "DAP/スマホ連携"
       ],
       "image": "/images/Audio/column/hires.webp",
-      "description": "<!DOCTYPE html>\n<html lang=\"ja\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>ハイレゾで、音楽はもっと豊かになる</title>\n<link href=\"https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Bebas+Neue&display=swap\" rel=\"stylesheet\">\n<style>\n  /* スコープ化: 背景白・文字ダークグレー版（全プラン収録） */\n  #hires-guide-wrapper {\n    --bg-white: #ffffff;\n    --bg-light: #f9f9f9;\n    --text-main: #333333;   /* ダークグレー */\n    --text-sub: #666666;    /* グレー */\n    --card-bg: #ffffff;\n    --border: #e0e0e0;\n    --gold: #b38e2d;        /* 視認性を高めた濃いめのゴールド */\n    --gold-light: #d4af37;\n    --radius: 4px;\n\n    background: var(--bg-white);\n    color: var(--text-main);\n    font-family: 'Noto Sans JP', sans-serif;\n    font-weight: 300;\n    line-height: 1.8;\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n  }\n\n  #hires-guide-wrapper * { \n    box-sizing: border-box; \n    margin: 0; \n    padding: 0; \n  }\n\n  /* HERO */\n  #hires-guide-wrapper .hero {\n    min-height: 60vh;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    padding: 80px 24px;\n    position: relative;\n    overflow: hidden;\n    background: var(--bg-white);\n  }\n\n  #hires-guide-wrapper .hero::before {\n    content: '';\n    position: absolute;\n    inset: 0;\n    background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(179,142,45,0.06) 0%, transparent 70%);\n    pointer-events: none;\n  }\n\n  #hires-guide-wrapper .hero-waves {\n    position: absolute;\n    inset: 0;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    opacity: 0.15;\n    pointer-events: none;\n  }\n  #hires-guide-wrapper .hero-waves svg {\n    width: 100%;\n    height: 100%;\n    position: absolute;\n  }\n\n  #hires-guide-wrapper .hero-inner { position: relative; z-index: 1; max-width: 720px; }\n\n  #hires-guide-wrapper .hero-label {\n    display: inline-block;\n    font-size: 11px;\n    letter-spacing: 0.25em;\n    color: var(--gold);\n    border: 1px solid var(--gold);\n    padding: 4px 14px;\n    margin-bottom: 32px;\n    text-transform: uppercase;\n  }\n\n  #hires-guide-wrapper .hero h1 {\n    font-family: 'Noto Sans JP', sans-serif;\n    font-weight: 700;\n    font-size: clamp(2rem, 6vw, 3.5rem);\n    line-height: 1.25;\n    letter-spacing: -0.01em;\n    margin-bottom: 20px;\n    color: var(--text-main);\n  }\n\n  #hires-guide-wrapper .hero h1 span { color: var(--gold); }\n\n  #hires-guide-wrapper .hero p {\n    font-size: 1rem;\n    color: var(--text-sub);\n    max-width: 520px;\n    margin: 0 auto 40px;\n  }\n\n  #hires-guide-wrapper .btn-primary {\n    display: inline-block;\n    background: var(--gold);\n    color: #fff;\n    font-family: 'Noto Sans JP', sans-serif;\n    font-weight: 700;\n    font-size: 0.9rem;\n    letter-spacing: 0.05em;\n    padding: 14px 36px;\n    text-decoration: none;\n    transition: background 0.2s;\n  }\n  #hires-guide-wrapper .btn-primary:hover { background: var(--gold-light); }\n\n  /* SECTION BASE */\n  #hires-guide-wrapper section { padding: 80px 24px; }\n  #hires-guide-wrapper .container { max-width: 860px; margin: 0 auto; }\n\n  #hires-guide-wrapper .section-label {\n    font-size: 11px;\n    letter-spacing: 0.25em;\n    color: var(--gold);\n    text-transform: uppercase;\n    margin-bottom: 12px;\n  }\n\n  #hires-guide-wrapper .section-title {\n    font-weight: 700;\n    font-size: clamp(1.4rem, 3vw, 2rem);\n    margin-bottom: 24px;\n    line-height: 1.4;\n    color: var(--text-main);\n  }\n\n  /* WHAT IS HIRES */\n  #hires-guide-wrapper .what-section { background: var(--bg-light); border-top: 1px solid var(--border); }\n\n  #hires-guide-wrapper .what-grid {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    gap: 40px;\n    margin-top: 40px;\n  }\n  @media (max-width: 600px) { #hires-guide-wrapper .what-grid { grid-template-columns: 1fr; } }\n\n  #hires-guide-wrapper .stat-box {\n    border: 1px solid var(--border);\n    padding: 28px;\n    background: var(--card-bg);\n  }\n  #hires-guide-wrapper .stat-num {\n    font-family: 'Bebas Neue', sans-serif;\n    font-size: 3.5rem;\n    color: var(--gold);\n    line-height: 1;\n    margin-bottom: 8px;\n    letter-spacing: 0.02em;\n  }\n  #hires-guide-wrapper .stat-label { font-size: 0.85rem; color: var(--text-sub); }\n\n  #hires-guide-wrapper .what-text { font-size: 0.95rem; color: var(--text-main); line-height: 1.9; }\n  #hires-guide-wrapper .what-text + .what-text { margin-top: 16px; }\n\n  #hires-guide-wrapper .img-placeholder {\n    width: 100%;\n    aspect-ratio: 16/7;\n    background: #eee;\n    border: 1px dashed var(--border);\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    color: var(--text-sub);\n    font-size: 0.85rem;\n    letter-spacing: 0.1em;\n    margin: 40px 0;\n  }\n\n  /* PLANS */\n  #hires-guide-wrapper .plans-section { background: var(--bg-white); }\n\n  #hires-guide-wrapper .plan-intro {\n    font-size: 0.95rem;\n    color: var(--text-sub);\n    margin-bottom: 16px;\n    max-width: 640px;\n  }\n\n  #hires-guide-wrapper .level-tabs {\n    display: flex;\n    gap: 8px;\n    margin: 32px 0 40px;\n    flex-wrap: wrap;\n  }\n  #hires-guide-wrapper .level-tab {\n    padding: 8px 20px;\n    font-size: 0.8rem;\n    letter-spacing: 0.08em;\n    border: 1px solid var(--border);\n    color: var(--text-sub);\n    cursor: pointer;\n    transition: all 0.2s;\n    background: transparent;\n    font-family: 'Noto Sans JP', sans-serif;\n  }\n  #hires-guide-wrapper .level-tab:hover, #hires-guide-wrapper .level-tab.active {\n    border-color: var(--gold);\n    color: var(--gold);\n    background: #fffdf5;\n  }\n\n  #hires-guide-wrapper .plan-card {\n    border: 1px solid var(--border);\n    background: var(--card-bg);\n    margin-bottom: 20px;\n    overflow: hidden;\n    transition: all 0.2s;\n  }\n  #hires-guide-wrapper .plan-card:hover { border-color: var(--gold); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }\n\n  #hires-guide-wrapper .plan-header {\n    display: flex;\n    align-items: center;\n    gap: 20px;\n    padding: 24px 28px;\n    cursor: pointer;\n    user-select: none;\n  }\n\n  #hires-guide-wrapper .plan-badge {\n    font-family: 'Bebas Neue', sans-serif;\n    font-size: 1.6rem;\n    color: var(--gold);\n    min-width: 44px;\n    letter-spacing: 0.04em;\n  }\n\n  #hires-guide-wrapper .plan-title-wrap { flex: 1; }\n  #hires-guide-wrapper .plan-title {\n    font-weight: 700;\n    font-size: 1rem;\n    margin-bottom: 2px;\n    color: var(--text-main);\n  }\n  #hires-guide-wrapper .plan-subtitle { font-size: 0.8rem; color: var(--text-sub); }\n\n  #hires-guide-wrapper .plan-tag {\n    font-size: 0.7rem;\n    letter-spacing: 0.1em;\n    padding: 3px 10px;\n    border: 1px solid;\n    white-space: nowrap;\n  }\n  #hires-guide-wrapper .tag-easy { border-color: #4caf7d; color: #4caf7d; }\n  #hires-guide-wrapper .tag-mid  { border-color: var(--gold); color: var(--gold); }\n  #hires-guide-wrapper .tag-pro  { border-color: #e06060; color: #e06060; }\n\n  #hires-guide-wrapper .plan-toggle {\n    color: var(--text-sub);\n    font-size: 1.2rem;\n    transition: transform 0.3s;\n    min-width: 20px;\n    text-align: center;\n  }\n  #hires-guide-wrapper .plan-card.open .plan-toggle { transform: rotate(45deg); color: var(--gold); }\n\n  #hires-guide-wrapper .plan-body {\n    display: none;\n    padding: 0 28px 28px;\n    border-top: 1px solid var(--border);\n    background: #fcfcfc;\n  }\n  #hires-guide-wrapper .plan-card.open .plan-body { display: block; }\n\n  #hires-guide-wrapper .plan-body p {\n    font-size: 0.9rem;\n    color: var(--text-main);\n    margin: 20px 0 16px;\n    line-height: 1.9;\n  }\n\n  #hires-guide-wrapper .needs-title {\n    font-size: 0.75rem;\n    letter-spacing: 0.15em;\n    color: var(--gold);\n    text-transform: uppercase;\n    margin-bottom: 10px;\n    font-weight: 700;\n  }\n\n  #hires-guide-wrapper .needs-list {\n    list-style: none;\n    border-left: 2px solid var(--gold);\n    padding-left: 16px;\n    margin-bottom: 20px;\n  }\n  #hires-guide-wrapper .needs-list li {\n    font-size: 0.85rem;\n    color: var(--text-sub);\n    padding: 4px 0;\n  }\n  #hires-guide-wrapper .needs-list li::before {\n    content: '— ';\n    color: var(--gold);\n  }\n\n  #hires-guide-wrapper .plan-cta {\n    display: inline-block;\n    font-size: 0.8rem;\n    color: var(--gold);\n    border-bottom: 1px solid var(--gold);\n    text-decoration: none;\n    letter-spacing: 0.05em;\n    padding-bottom: 2px;\n    transition: color 0.2s;\n    font-weight: 500;\n  }\n  #hires-guide-wrapper .plan-cta:hover { color: var(--gold-light); border-color: var(--gold-light); }\n\n  /* PHOTO SECTION */\n  #hires-guide-wrapper .photo-section {\n    background: var(--bg-light);\n    border-top: 1px solid var(--border);\n    padding: 60px 24px;\n  }\n  #hires-guide-wrapper .photo-grid {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    gap: 12px;\n    margin-top: 32px;\n  }\n  @media (max-width: 600px) { #hires-guide-wrapper .photo-grid { grid-template-columns: 1fr; } }\n\n  #hires-guide-wrapper .photo-slot {\n    aspect-ratio: 4/3;\n    background: #fff;\n    border: 1px solid var(--border);\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    color: var(--text-sub);\n    font-size: 0.75rem;\n    letter-spacing: 0.1em;\n  }\n\n  /* CTA SECTION */\n  #hires-guide-wrapper .cta-section {\n    background: var(--bg-white);\n    border-top: 1px solid var(--border);\n    text-align: center;\n    padding: 80px 24px;\n  }\n\n  #hires-guide-wrapper .cta-section h2 {\n    font-weight: 700;\n    font-size: clamp(1.4rem, 3vw, 2rem);\n    margin-bottom: 16px;\n    color: var(--text-main);\n  }\n\n  #hires-guide-wrapper .cta-section p {\n    color: var(--text-sub);\n    font-size: 0.95rem;\n    max-width: 480px;\n    margin: 0 auto 36px;\n  }\n\n  #hires-guide-wrapper .cta-buttons {\n    display: flex;\n    gap: 16px;\n    justify-content: center;\n    flex-wrap: wrap;\n  }\n\n  #hires-guide-wrapper .btn-secondary {\n    display: inline-block;\n    border: 1px solid var(--gold);\n    color: var(--gold);\n    font-family: 'Noto Sans JP', sans-serif;\n    font-weight: 500;\n    font-size: 0.9rem;\n    letter-spacing: 0.05em;\n    padding: 13px 32px;\n    text-decoration: none;\n    transition: all 0.2s;\n  }\n  #hires-guide-wrapper .btn-secondary:hover {\n    background: #fffaf0;\n    border-color: var(--gold-light);\n  }\n\n  /* FAQ */\n  #hires-guide-wrapper .faq-section {\n    background: var(--bg-light);\n    border-top: 1px solid var(--border);\n  }\n\n  #hires-guide-wrapper .faq-item {\n    border-bottom: 1px solid var(--border);\n    padding: 20px 0;\n    cursor: pointer;\n  }\n  #hires-guide-wrapper .faq-q {\n    font-weight: 500;\n    font-size: 0.95rem;\n    display: flex;\n    justify-content: space-between;\n    gap: 16px;\n    align-items: center;\n    color: var(--text-main);\n  }\n  #hires-guide-wrapper .faq-q span { color: var(--gold); font-size: 1rem; transition: transform 0.3s; }\n  #hires-guide-wrapper .faq-item.open .faq-q span { transform: rotate(45deg); }\n  #hires-guide-wrapper .faq-a {\n    display: none;\n    font-size: 0.875rem;\n    color: var(--text-sub);\n    margin-top: 12px;\n    line-height: 1.9;\n  }\n  #hires-guide-wrapper .faq-item.open .faq-a { display: block; }\n\n  #hires-guide-wrapper .gold-divider {\n    width: 40px;\n    height: 2px;\n    background: var(--gold);\n    margin: 20px 0 32px;\n  }\n\n  /* SCROLL REVEAL */\n  #hires-guide-wrapper .reveal {\n    opacity: 0;\n    transform: translateY(24px);\n    transition: opacity 0.6s ease, transform 0.6s ease;\n  }\n  #hires-guide-wrapper .reveal.visible {\n    opacity: 1;\n    transform: none;\n  }\n</style>\n</head>\n<body>\n\n<div id=\"hires-guide-wrapper\">\n  <section class=\"hero\">\n    <div class=\"hero-waves\">\n      <svg viewBox=\"0 0 1200 400\" preserveAspectRatio=\"xMidYMid slice\">\n        <path d=\"M0,200 Q150,120 300,200 T600,200 T900,200 T1200,200\" fill=\"none\" stroke=\"#b38e2d\" stroke-width=\"1\"/>\n        <path d=\"M0,200 Q150,80 300,200 T600,200 T900,200 T1200,200\" fill=\"none\" stroke=\"#b38e2d\" stroke-width=\"0.5\"/>\n      </svg>\n    </div>\n    <div class=\"hero-inner\">\n      <div class=\"hero-label\">Hi-Res Audio Guide</div>\n      <h1>車の中で、<span>もっといい音</span>を<br>楽しんでみませんか？</h1>\n      <p>ハイレゾとは何か、どうすれば始められるか。<br>あなたに合ったプランをわかりやすくご紹介します。</p>\n      <a href=\"https://page.line.me/312qjhsq?openQrModal=true\" class=\"btn-primary\">まずは相談してみる</a>\n    </div>\n  </section>\n\n  <section class=\"what-section\">\n    <div class=\"container\">\n      <div class=\"reveal\">\n        <p class=\"section-label\">What is Hi-Res?</p>\n        <h2 class=\"section-title\">「ハイレゾ」って、<br>どんな音？</h2>\n        <div class=\"gold-divider\"></div>\n      </div>\n      <div class=\"reveal\">\n        <p class=\"what-text\">一言でいうと、CDよりもずっと情報量の多い、高音質な音楽フォーマットです。CDでは拾いきれなかった空気感やアーティストの息遣いまでが自然に聞こえてくる——それがハイレゾ最大の魅力です。アナログテレビが4Kテレビになったときの感動を、音で体感できるイメージです。</p>\n      </div>\n      <div class=\"what-grid reveal\">\n        <div class=\"stat-box\">\n          <div class=\"stat-num\">3〜6.5<span style=\"font-size:1.5rem\">×</span></div>\n          <div class=\"stat-label\">CDと比べた情報量の増加倍率</div>\n        </div>\n        <div class=\"stat-box\">\n          <div class=\"stat-num\">192<span style=\"font-size:1.5rem\">kHz</span></div>\n          <div class=\"stat-label\">最大サンプリング周波数</div>\n        </div>\n      </div>\n      <div class=\"reveal\" style=style=\"margin: 40px 0;\">\n        <img src=\"/images/Audio/column/tennai.webp\" alt=\"店内の風景\" style=\"width: 100%; border-radius: 8px;\">\n      </div>\n    </div>\n  </section>\n\n  <section class=\"plans-section\">\n    <div class=\"container\">\n      <div class=\"reveal\">\n        <p class=\"section-label\">How to Start</p>\n        <h2 class=\"section-title\">あなたに合ったプランで<br>始めてみましょう</h2>\n        <div class=\"gold-divider\"></div>\n        <p class=\"plan-intro\">「まず試したい」から「本格的に組みたい」まで、7つのプランをご用意しています。</p>\n      </div>\n\n      <div class=\"level-tabs reveal\">\n        <button class=\"level-tab active\" onclick=\"filterPlans('all', this)\">すべて</button>\n        <button class=\"level-tab\" onclick=\"filterPlans('easy', this)\">かんたん</button>\n        <button class=\"level-tab\" onclick=\"filterPlans('mid', this)\">こだわり</button>\n        <button class=\"level-tab\" onclick=\"filterPlans('pro', this)\">本格派</button>\n      </div>\n\n      <div class=\"plan-card reveal\" data-level=\"easy\">\n        <div class=\"plan-header\" onclick=\"togglePlan(this)\">\n          <div class=\"plan-badge\">A</div>\n          <div class=\"plan-title-wrap\">\n            <div class=\"plan-title\">Bluetooth接続でまず試してみる</div>\n            <div class=\"plan-subtitle\">スマホ・ナビそのまま使える</div>\n          </div>\n          <span class=\"plan-tag tag-easy\">かんたん</span>\n          <div class=\"plan-toggle\">+</div>\n        </div>\n        <div class=\"plan-body\">\n          <p>スマホやDAPからBluetoothで飛ばすだけ。ケーブル不要、工事不要。今日からでも始められる一番お手軽なプランです。</p>\n          <div class=\"needs-title\">必���なもの</div>\n          <ul class=\"needs-list\">\n            <li>Bluetooth機能付きのナビまたはプレーヤー</li>\n            <li>スマホやDAP</li>\n            <li>ハイレゾ音源</li>\n          </ul>\n          <a href=\"#contact\" class=\"plan-cta\">当店でデモを体験する →</a>\n        </div>\n      </div>\n\n      <div class=\"plan-card reveal\" data-level=\"easy\">\n        <div class=\"plan-header\" onclick=\"togglePlan(this)\">\n          <div class=\"plan-badge\">B</div>\n          <div class=\"plan-title-wrap\">\n            <div class=\"plan-title\">AUX/HDMI外部入力で手軽に高音質化</div>\n            <div class=\"plan-subtitle\">今のナビをそのまま活かせる</div>\n          </div>\n          <span class=\"plan-tag tag-easy\">かんたん</span>\n          <div class=\"plan-toggle\">+</div>\n        </div>\n        <div class=\"plan-body\">\n          <p>既存のナビのAUXやHDMI入力にスマホやDAPをケーブルでつなぐ方法です。ナビを買い替えずに今すぐ始められます。</p>\n          <div class=\"needs-title\">必要なもの</div>\n          <ul class=\"needs-list\">\n            <li>AUXまたはHDMI入力付きのナビ</li>\n            <li>スマホやDAP</li>\n            <li>対応ケーブル</li>\n          </ul>\n          <a href=\"#contact\" class=\"plan-cta\">ケーブル選びを相談する →</a>\n        </div>\n      </div>\n\n      <div class=\"plan-card reveal\" data-level=\"mid\">\n        <div class=\"plan-header\" onclick=\"togglePlan(this)\">\n          <div class=\"plan-badge\">C</div>\n          <div class=\"plan-title-wrap\">\n            <div class=\"plan-title\">D/Aコンバーター追加でさらに高音質に</div>\n            <div class=\"plan-subtitle\">プランBにひと手間プラス</div>\n          </div>\n          <span class=\"plan-tag tag-mid\">こだわり</span>\n          <div class=\"plan-toggle\">+</div>\n        </div>\n        <div class=\"plan-body\">\n          <p>高品位なUSB→RCA変換ユニットを追加することで、D/A変換の品質が向上し、より鮮明なサウンドが得られます。</p>\n          <div class=\"needs-title\">必要なもの</div>\n          <ul class=\"needs-list\">\n            <li>AUXまたは外部入力付きのナビ</li>\n            <li>USB→RCA変換ユニット</li>\n            <li>ハイレゾ音源</li>\n          </ul>\n          <a href=\"#contact\" class=\"plan-cta\">最適な機種を相談する →</a>\n        </div>\n      </div>\n\n      <div class=\"plan-card reveal\" data-level=\"mid\">\n        <div class=\"plan-header\" onclick=\"togglePlan(this)\">\n          <div class=\"plan-badge\">D</div>\n          <div class=\"plan-title-wrap\">\n            <div class=\"plan-title\">ハイレゾ対応ナビで操作も音質もスマートに</div>\n            <div class=\"plan-subtitle\">差し込むだけ、一番シンプルな方法</div>\n          </div>\n          <span class=\"plan-tag tag-mid\">こだわり</span>\n          <div class=\"plan-toggle\">+</div>\n        </div>\n        <div class=\"plan-body\">\n          <p>ハイレゾ対応ナビにSDカードやUSBメモリを差し込むだけ。操作性・手軽さのバランスが一番いいプランです。</p>\n          <div class=\"needs-title\">必要なもの</div>\n          <ul class=\"needs-list\">\n            <li>ハイレゾ再生対応ナビ</li>\n            <li>SDカードまたはUSBメモリ</li>\n            <li>ハイレゾ音源</li>\n          </ul>\n          <a href=\"#contact\" class=\"plan-cta\">対応ナビを見に来る →</a>\n        </div>\n      </div>\n\n      <div class=\"plan-card reveal\" data-level=\"pro\">\n        <div class=\"plan-header\" onclick=\"togglePlan(this)\">\n          <div class=\"plan-badge\">E</div>\n          <div class=\"plan-title-wrap\">\n            <div class=\"plan-title\">ハイレゾ対応DSPで本格サウンドを構築</div>\n            <div class=\"plan-subtitle\">こだわる人の定番構成</div>\n          </div>\n          <span class=\"plan-tag tag-pro\">本格派</span>\n          <div class=\"plan-toggle\">+</div>\n        </div>\n        <div class=\"plan-body\">\n          <p>デジタル信号のままDSPに送り、DSP内蔵DACでアナログ変換。信号の劣化を最小限に抑えたクリアなサウンドが楽しめます。</p>\n          <div class=\"needs-title\">必要なもの</div>\n          <ul class=\"needs-list\">\n            <li>スマホやDAP</li>\n            <li>ハイレゾ対応DSP</li>\n            <li>ハイレゾ音源</li>\n          </ul>\n          <a href=\"#contact\" class=\"plan-cta\">システム構成を相談する →</a>\n        </div>\n      </div>\n\n      <div class=\"plan-card reveal\" data-level=\"pro\">\n        <div class=\"plan-header\" onclick=\"togglePlan(this)\">\n          <div class=\"plan-badge\">F</div>\n          <div class=\"plan-title-wrap\">\n            <div class=\"plan-title\">LDAC対応DAPでワイヤレスのままハイレゾを</div>\n            <div class=\"plan-subtitle\">ケーブルなしで高音質を両立</div>\n          </div>\n          <span class=\"plan-tag tag-pro\">本格派</span>\n          <div class=\"plan-toggle\">+</div>\n        </div>\n        <div class=\"plan-body\">\n          <p>LDAC対応機器を使うことで、Bluetoothのまま96kHz/24bitのハイレゾ再生が可能になります。</p>\n          <div class=\"needs-title\">必要なもの</div>\n          <ul class=\"needs-list\">\n            <li>LDAC対応のスマホまたはDAP</li>\n            <li>LDAC対応のBluetooth受信ユニット</li>\n          </ul>\n          <a href=\"#contact\" class=\"plan-cta\">対応状況を確認しに来る →</a>\n        </div>\n      </div>\n\n      <div class=\"plan-card reveal\" data-level=\"pro\">\n        <div class=\"plan-header\" onclick=\"togglePlan(this)\">\n          <div class=\"plan-badge\">G</div>\n          <div class=\"plan-title-wrap\">\n            <div class=\"plan-title\">メディアプレーヤー導入で究極のオーディオへ</div>\n            <div class=\"plan-subtitle\">ライブラリごと車に持ち込む</div>\n          </div>\n          <span class=\"plan-tag tag-pro\">本格派</span>\n          <div class=\"plan-toggle\">+</div>\n        </div>\n        <div class=\"plan-body\">\n          <p>大容量SSDに音源ライブラリを収め、車内で丸ごと楽しめるのがメディアプレーヤーの魅力です。</p>\n          <div class=\"needs-title\">必要なもの</div>\n          <ul class=\"needs-list\">\n            <li>音源の入ったUSBまたはSSD</li>\n            <li>ハイレゾ対応メディアプレーヤー</li>\n            <li>ハイレゾ対応DSP</li>\n          </ul>\n          <a href=\"#contact\" class=\"plan-cta\">デモ機を触りに来る →</a>\n        </div>\n      </div>\n\n    </div>\n  </section>\n\n  <section class=\"faq-section\">\n    <div class=\"container\">\n      <div class=\"reveal\">\n        <p class=\"section-label\">FAQ</p>\n        <h2 class=\"section-title\">よくあるご質問</h2>\n        <div class=\"gold-divider\"></div>\n      </div>\n      <div class=\"reveal\">\n        <div class=\"faq-item\" onclick=\"toggleFaq(this)\">\n          <div class=\"faq-q\">今のナビのまま使えますか？<span>+</span></div>\n          <div class=\"faq-a\">Bluetooth機能またはAUX/HDMI入力があれば、ナビを買い替えずに始められるプランがあります。</div>\n        </div>\n        <div class=\"faq-item\" onclick=\"toggleFaq(this)\">\n          <div class=\"faq-q\">予算はどのくらい必要ですか？<span>+</span></div>\n          <div class=\"faq-a\">プランAなら追加費用はほぼゼロから、本格的なDSPシステムでは数万円〜になります。</div>\n        </div>\n      </div>\n    </div>\n  </section>\n\n  <section class=\"cta-section\" id=\"contact\">\n    <div class=\"container\">\n      <div class=\"reveal\">\n        <p class=\"section-label\">Contact</p>\n        <h2>迷ったら、まずご相談を</h2>\n        <div class=\"gold-divider\" style=\"margin: 20px auto 24px;\"></div>\n        <div class=\"cta-buttons\">\n          <a href=\"tel:092-503-5421\" class=\"btn-primary\">電話で問い合わせる</a>\n          <a href=\"https://page.line.me/312qjhsq?openQrModal=true\" class=\"btn-secondary\">LINEで相談する</a>\n        </div>\n      </div>\n    </div>\n  </section>\n</div>\n\n<script>\n  function togglePlan(header) {\n    header.parentElement.classList.toggle('open');\n  }\n\n  function filterPlans(level, btn) {\n    const wrapper = btn.closest('#hires-guide-wrapper');\n    wrapper.querySelectorAll('.level-tab').forEach(t => t.classList.remove('active'));\n    btn.classList.add('active');\n    wrapper.querySelectorAll('.plan-card').forEach(card => {\n      card.style.display = (level === 'all' || card.dataset.level === level) ? '' : 'none';\n    });\n  }\n\n  function toggleFaq(item) {\n    item.classList.toggle('open');\n  }\n\n  const observer = new IntersectionObserver((entries) => {\n    entries.forEach(e => {\n      if (e.isIntersecting) {\n        e.target.classList.add('visible');\n        observer.unobserve(e.target);\n      }\n    });\n  }, { threshold: 0.1 });\n\n  document.querySelectorAll('#hires-guide-wrapper .reveal').forEach(el => observer.observe(el));\n</script>\n</body>\n</html>",
+      "description": "<!DOCTYPE html>\n<html lang=\"ja\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>ハイレゾで、音楽はもっと豊かになる</title>\n<link href=\"https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Bebas+Neue&display=swap\" rel=\"stylesheet\">\n<style>\n  /* スコープ化: 背景白・文字ダークグレー版（全プラン収録） */\n  #hires-guide-wrapper {\n    --bg-white: #ffffff;\n    --bg-light: #f9f9f9;\n    --text-main: #333333;   /* ダークグレー */\n    --text-sub: #666666;    /* グレー */\n    --card-bg: #ffffff;\n    --border: #e0e0e0;\n    --gold: #b38e2d;        /* 視認性を高めた濃いめのゴールド */\n    --gold-light: #d4af37;\n    --radius: 4px;\n\n    background: var(--bg-white);\n    color: var(--text-main);\n    font-family: 'Noto Sans JP', sans-serif;\n    font-weight: 300;\n    line-height: 1.8;\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n  }\n\n  #hires-guide-wrapper * { \n    box-sizing: border-box; \n    margin: 0; \n    padding: 0; \n  }\n\n  /* HERO */\n  #hires-guide-wrapper .hero {\n    min-height: 60vh;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    padding: 80px 24px;\n    position: relative;\n    overflow: hidden;\n    background: var(--bg-white);\n  }\n\n  #hires-guide-wrapper .hero::before {\n    content: '';\n    position: absolute;\n    inset: 0;\n    background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(179,142,45,0.06) 0%, transparent 70%);\n    pointer-events: none;\n  }\n\n  #hires-guide-wrapper .hero-waves {\n    position: absolute;\n    inset: 0;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    opacity: 0.15;\n    pointer-events: none;\n  }\n  #hires-guide-wrapper .hero-waves svg {\n    width: 100%;\n    height: 100%;\n    position: absolute;\n  }\n\n  #hires-guide-wrapper .hero-inner { position: relative; z-index: 1; max-width: 720px; }\n\n  #hires-guide-wrapper .hero-label {\n    display: inline-block;\n    font-size: 11px;\n    letter-spacing: 0.25em;\n    color: var(--gold);\n    border: 1px solid var(--gold);\n    padding: 4px 14px;\n    margin-bottom: 32px;\n    text-transform: uppercase;\n  }\n\n  #hires-guide-wrapper .hero h1 {\n    font-family: 'Noto Sans JP', sans-serif;\n    font-weight: 700;\n    font-size: clamp(2rem, 6vw, 3.5rem);\n    line-height: 1.25;\n    letter-spacing: -0.01em;\n    margin-bottom: 20px;\n    color: var(--text-main);\n  }\n\n  #hires-guide-wrapper .hero h1 span { color: var(--gold); }\n\n  #hires-guide-wrapper .hero p {\n    font-size: 1rem;\n    color: var(--text-sub);\n    max-width: 520px;\n    margin: 0 auto 40px;\n  }\n\n  #hires-guide-wrapper .btn-primary {\n    display: inline-block;\n    background: var(--gold);\n    color: #fff;\n    font-family: 'Noto Sans JP', sans-serif;\n    font-weight: 700;\n    font-size: 0.9rem;\n    letter-spacing: 0.05em;\n    padding: 14px 36px;\n    text-decoration: none;\n    transition: background 0.2s;\n  }\n  #hires-guide-wrapper .btn-primary:hover { background: var(--gold-light); }\n\n  /* SECTION BASE */\n  #hires-guide-wrapper section { padding: 80px 24px; }\n  #hires-guide-wrapper .container { max-width: 860px; margin: 0 auto; }\n\n  #hires-guide-wrapper .section-label {\n    font-size: 11px;\n    letter-spacing: 0.25em;\n    color: var(--gold);\n    text-transform: uppercase;\n    margin-bottom: 12px;\n  }\n\n  #hires-guide-wrapper .section-title {\n    font-weight: 700;\n    font-size: clamp(1.4rem, 3vw, 2rem);\n    margin-bottom: 24px;\n    line-height: 1.4;\n    color: var(--text-main);\n  }\n\n  /* WHAT IS HIRES */\n  #hires-guide-wrapper .what-section { background: var(--bg-light); border-top: 1px solid var(--border); }\n\n  #hires-guide-wrapper .what-grid {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    gap: 40px;\n    margin-top: 40px;\n  }\n  @media (max-width: 600px) { #hires-guide-wrapper .what-grid { grid-template-columns: 1fr; } }\n\n  #hires-guide-wrapper .stat-box {\n    border: 1px solid var(--border);\n    padding: 28px;\n    background: var(--card-bg);\n  }\n  #hires-guide-wrapper .stat-num {\n    font-family: 'Bebas Neue', sans-serif;\n    font-size: 3.5rem;\n    color: var(--gold);\n    line-height: 1;\n    margin-bottom: 8px;\n    letter-spacing: 0.02em;\n  }\n  #hires-guide-wrapper .stat-label { font-size: 0.85rem; color: var(--text-sub); }\n\n  #hires-guide-wrapper .what-text { font-size: 0.95rem; color: var(--text-main); line-height: 1.9; }\n  #hires-guide-wrapper .what-text + .what-text { margin-top: 16px; }\n\n  #hires-guide-wrapper .img-placeholder {\n    width: 100%;\n    aspect-ratio: 16/7;\n    background: #eee;\n    border: 1px dashed var(--border);\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    color: var(--text-sub);\n    font-size: 0.85rem;\n    letter-spacing: 0.1em;\n    margin: 40px 0;\n  }\n\n  /* PLANS */\n  #hires-guide-wrapper .plans-section { background: var(--bg-white); }\n\n  #hires-guide-wrapper .plan-intro {\n    font-size: 0.95rem;\n    color: var(--text-sub);\n    margin-bottom: 16px;\n    max-width: 640px;\n  }\n\n  #hires-guide-wrapper .level-tabs {\n    display: flex;\n    gap: 8px;\n    margin: 32px 0 40px;\n    flex-wrap: wrap;\n  }\n  #hires-guide-wrapper .level-tab {\n    padding: 8px 20px;\n    font-size: 0.8rem;\n    letter-spacing: 0.08em;\n    border: 1px solid var(--border);\n    color: var(--text-sub);\n    cursor: pointer;\n    transition: all 0.2s;\n    background: transparent;\n    font-family: 'Noto Sans JP', sans-serif;\n  }\n  #hires-guide-wrapper .level-tab:hover, #hires-guide-wrapper .level-tab.active {\n    border-color: var(--gold);\n    color: var(--gold);\n    background: #fffdf5;\n  }\n\n  #hires-guide-wrapper .plan-card {\n    border: 1px solid var(--border);\n    background: var(--card-bg);\n    margin-bottom: 20px;\n    overflow: hidden;\n    transition: all 0.2s;\n  }\n  #hires-guide-wrapper .plan-card:hover { border-color: var(--gold); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }\n\n  #hires-guide-wrapper .plan-header {\n    display: flex;\n    align-items: center;\n    gap: 20px;\n    padding: 24px 28px;\n    cursor: pointer;\n    user-select: none;\n  }\n\n  #hires-guide-wrapper .plan-badge {\n    font-family: 'Bebas Neue', sans-serif;\n    font-size: 1.6rem;\n    color: var(--gold);\n    min-width: 44px;\n    letter-spacing: 0.04em;\n  }\n\n  #hires-guide-wrapper .plan-title-wrap { flex: 1; }\n  #hires-guide-wrapper .plan-title {\n    font-weight: 700;\n    font-size: 1rem;\n    margin-bottom: 2px;\n    color: var(--text-main);\n  }\n  #hires-guide-wrapper .plan-subtitle { font-size: 0.8rem; color: var(--text-sub); }\n\n  #hires-guide-wrapper .plan-tag {\n    font-size: 0.7rem;\n    letter-spacing: 0.1em;\n    padding: 3px 10px;\n    border: 1px solid;\n    white-space: nowrap;\n  }\n  #hires-guide-wrapper .tag-easy { border-color: #4caf7d; color: #4caf7d; }\n  #hires-guide-wrapper .tag-mid  { border-color: var(--gold); color: var(--gold); }\n  #hires-guide-wrapper .tag-pro  { border-color: #e06060; color: #e06060; }\n\n  #hires-guide-wrapper .plan-toggle {\n    color: var(--text-sub);\n    font-size: 1.2rem;\n    transition: transform 0.3s;\n    min-width: 20px;\n    text-align: center;\n  }\n  #hires-guide-wrapper .plan-card.open .plan-toggle { transform: rotate(45deg); color: var(--gold); }\n\n  #hires-guide-wrapper .plan-body {\n    display: none;\n    padding: 0 28px 28px;\n    border-top: 1px solid var(--border);\n    background: #fcfcfc;\n  }\n  #hires-guide-wrapper .plan-card.open .plan-body { display: block; }\n\n  #hires-guide-wrapper .plan-body p {\n    font-size: 0.9rem;\n    color: var(--text-main);\n    margin: 20px 0 16px;\n    line-height: 1.9;\n  }\n\n  #hires-guide-wrapper .needs-title {\n    font-size: 0.75rem;\n    letter-spacing: 0.15em;\n    color: var(--gold);\n    text-transform: uppercase;\n    margin-bottom: 10px;\n    font-weight: 700;\n  }\n\n  #hires-guide-wrapper .needs-list {\n    list-style: none;\n    border-left: 2px solid var(--gold);\n    padding-left: 16px;\n    margin-bottom: 20px;\n  }\n  #hires-guide-wrapper .needs-list li {\n    font-size: 0.85rem;\n    color: var(--text-sub);\n    padding: 4px 0;\n  }\n  #hires-guide-wrapper .needs-list li::before {\n    content: '— ';\n    color: var(--gold);\n  }\n\n  #hires-guide-wrapper .plan-cta {\n    display: inline-block;\n    font-size: 0.8rem;\n    color: var(--gold);\n    border-bottom: 1px solid var(--gold);\n    text-decoration: none;\n    letter-spacing: 0.05em;\n    padding-bottom: 2px;\n    transition: color 0.2s;\n    font-weight: 500;\n  }\n  #hires-guide-wrapper .plan-cta:hover { color: var(--gold-light); border-color: var(--gold-light); }\n\n  /* PHOTO SECTION */\n  #hires-guide-wrapper .photo-section {\n    background: var(--bg-light);\n    border-top: 1px solid var(--border);\n    padding: 60px 24px;\n  }\n  #hires-guide-wrapper .photo-grid {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    gap: 12px;\n    margin-top: 32px;\n  }\n  @media (max-width: 600px) { #hires-guide-wrapper .photo-grid { grid-template-columns: 1fr; } }\n\n  #hires-guide-wrapper .photo-slot {\n    aspect-ratio: 4/3;\n    background: #fff;\n    border: 1px solid var(--border);\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    color: var(--text-sub);\n    font-size: 0.75rem;\n    letter-spacing: 0.1em;\n  }\n\n  /* CTA SECTION */\n  #hires-guide-wrapper .cta-section {\n    background: var(--bg-white);\n    border-top: 1px solid var(--border);\n    text-align: center;\n    padding: 80px 24px;\n  }\n\n  #hires-guide-wrapper .cta-section h2 {\n    font-weight: 700;\n    font-size: clamp(1.4rem, 3vw, 2rem);\n    margin-bottom: 16px;\n    color: var(--text-main);\n  }\n\n  #hires-guide-wrapper .cta-section p {\n    color: var(--text-sub);\n    font-size: 0.95rem;\n    max-width: 480px;\n    margin: 0 auto 36px;\n  }\n\n  #hires-guide-wrapper .cta-buttons {\n    display: flex;\n    gap: 16px;\n    justify-content: center;\n    flex-wrap: wrap;\n  }\n\n  #hires-guide-wrapper .btn-secondary {\n    display: inline-block;\n    border: 1px solid var(--gold);\n    color: var(--gold);\n    font-family: 'Noto Sans JP', sans-serif;\n    font-weight: 500;\n    font-size: 0.9rem;\n    letter-spacing: 0.05em;\n    padding: 13px 32px;\n    text-decoration: none;\n    transition: all 0.2s;\n  }\n  #hires-guide-wrapper .btn-secondary:hover {\n    background: #fffaf0;\n    border-color: var(--gold-light);\n  }\n\n  /* FAQ */\n  #hires-guide-wrapper .faq-section {\n    background: var(--bg-light);\n    border-top: 1px solid var(--border);\n  }\n\n  #hires-guide-wrapper .faq-item {\n    border-bottom: 1px solid var(--border);\n    padding: 20px 0;\n    cursor: pointer;\n  }\n  #hires-guide-wrapper .faq-q {\n    font-weight: 500;\n    font-size: 0.95rem;\n    display: flex;\n    justify-content: space-between;\n    gap: 16px;\n    align-items: center;\n    color: var(--text-main);\n  }\n  #hires-guide-wrapper .faq-q span { color: var(--gold); font-size: 1rem; transition: transform 0.3s; }\n  #hires-guide-wrapper .faq-item.open .faq-q span { transform: rotate(45deg); }\n  #hires-guide-wrapper .faq-a {\n    display: none;\n    font-size: 0.875rem;\n    color: var(--text-sub);\n    margin-top: 12px;\n    line-height: 1.9;\n  }\n  #hires-guide-wrapper .faq-item.open .faq-a { display: block; }\n\n  #hires-guide-wrapper .gold-divider {\n    width: 40px;\n    height: 2px;\n    background: var(--gold);\n    margin: 20px 0 32px;\n  }\n\n  /* SCROLL REVEAL */\n  #hires-guide-wrapper .reveal {\n    opacity: 0;\n    transform: translateY(24px);\n    transition: opacity 0.6s ease, transform 0.6s ease;\n  }\n  #hires-guide-wrapper .reveal.visible {\n    opacity: 1;\n    transform: none;\n  }\n</style>\n</head>\n<body>\n\n<div id=\"hires-guide-wrapper\">\n  <section class=\"hero\">\n    <div class=\"hero-waves\">\n      <svg viewBox=\"0 0 1200 400\" preserveAspectRatio=\"xMidYMid slice\">\n        <path d=\"M0,200 Q150,120 300,200 T600,200 T900,200 T1200,200\" fill=\"none\" stroke=\"#b38e2d\" stroke-width=\"1\"/>\n        <path d=\"M0,200 Q150,80 300,200 T600,200 T900,200 T1200,200\" fill=\"none\" stroke=\"#b38e2d\" stroke-width=\"0.5\"/>\n      </svg>\n    </div>\n    <div class=\"hero-inner\">\n      <div class=\"hero-label\">Hi-Res Audio Guide</div>\n      <h1>車の中で、<span>もっといい音</span>を<br>楽しんでみませんか？</h1>\n      <p>ハイレゾとは何か、どうすれば始められるか。<br>あなたに合ったプランをわかりやすくご紹介します。</p>\n      <a href=\"https://page.line.me/312qjhsq?openQrModal=true\" class=\"btn-primary\">まずは相談してみる</a>\n    </div>\n  </section>\n\n  <section class=\"what-section\">\n    <div class=\"container\">\n      <div class=\"reveal\">\n        <p class=\"section-label\">What is Hi-Res?</p>\n        <h2 class=\"section-title\">「ハイレゾ」って、<br>どんな音？</h2>\n        <div class=\"gold-divider\"></div>\n      </div>\n      <div class=\"reveal\">\n        <p class=\"what-text\">一言でいうと、CDよりもずっと情報量の多い、高音質な音楽フォーマットです。CDでは拾いきれなかった空気感やアーティストの息遣いまでが自然に聞こえてくる——それがハイレゾ最大の魅力です。アナログテレビが4Kテレビになったときの感動を、音で体感できるイメージです。</p>\n      </div>\n      <div class=\"what-grid reveal\">\n        <div class=\"stat-box\">\n          <div class=\"stat-num\">3〜6.5<span style=\"font-size:1.5rem\">×</span></div>\n          <div class=\"stat-label\">CDと比べた情報量の増加倍率</div>\n        </div>\n        <div class=\"stat-box\">\n          <div class=\"stat-num\">192<span style=\"font-size:1.5rem\">kHz</span></div>\n          <div class=\"stat-label\">最大サンプリング周波数</div>\n        </div>\n      </div>\n      <div class=\"reveal\" style=style=\"margin: 40px 0;\">\n        <img src=\"/images/Audio/column/tennai.webp\" alt=\"店内の風景\" style=\"width: 100%; border-radius: 8px;\">\n      </div>\n    </div>\n  </section>\n\n  <section class=\"plans-section\">\n    <div class=\"container\">\n      <div class=\"reveal\">\n        <p class=\"section-label\">How to Start</p>\n        <h2 class=\"section-title\">あなたに合ったプランで<br>始めてみましょう</h2>\n        <div class=\"gold-divider\"></div>\n        <p class=\"plan-intro\">「まず試したい」から「本格的に組みたい」まで、7つのプランをご用意しています。</p>\n      </div>\n\n      <div class=\"level-tabs reveal\">\n        <button class=\"level-tab active\" onclick=\"filterPlans('all', this)\">すべて</button>\n        <button class=\"level-tab\" onclick=\"filterPlans('easy', this)\">かんたん</button>\n        <button class=\"level-tab\" onclick=\"filterPlans('mid', this)\">こだわり</button>\n        <button class=\"level-tab\" onclick=\"filterPlans('pro', this)\">本格派</button>\n      </div>\n\n      <div class=\"plan-card reveal\" data-level=\"easy\">\n        <div class=\"plan-header\" onclick=\"togglePlan(this)\">\n          <div class=\"plan-badge\">A</div>\n          <div class=\"plan-title-wrap\">\n            <div class=\"plan-title\">Bluetooth接続でまず試してみる</div>\n            <div class=\"plan-subtitle\">スマホ・ナビそのまま使える</div>\n          </div>\n          <span class=\"plan-tag tag-easy\">かんたん</span>\n          <div class=\"plan-toggle\">+</div>\n        </div>\n        <div class=\"plan-body\">\n          <p>スマホやDAPからBluetoothで飛ばすだけ。ケーブル不要、工事不要。今日からでも始められる一番お手軽なプランです。</p>\n          <div class=\"needs-title\">必なもの</div>\n          <ul class=\"needs-list\">\n            <li>Bluetooth機能付きのナビまたはプレーヤー</li>\n            <li>スマホやDAP</li>\n            <li>ハイレゾ音源</li>\n          </ul>\n          <a href=\"#contact\" class=\"plan-cta\">当店でデモを体験する →</a>\n        </div>\n      </div>\n\n      <div class=\"plan-card reveal\" data-level=\"easy\">\n        <div class=\"plan-header\" onclick=\"togglePlan(this)\">\n          <div class=\"plan-badge\">B</div>\n          <div class=\"plan-title-wrap\">\n            <div class=\"plan-title\">AUX/HDMI外部入力で手軽に高音質化</div>\n            <div class=\"plan-subtitle\">今のナビをそのまま活かせる</div>\n          </div>\n          <span class=\"plan-tag tag-easy\">かんたん</span>\n          <div class=\"plan-toggle\">+</div>\n        </div>\n        <div class=\"plan-body\">\n          <p>既存のナビのAUXやHDMI入力にスマホやDAPをケーブルでつなぐ方法です。ナビを買い替えずに今すぐ始められます。</p>\n          <div class=\"needs-title\">必要なもの</div>\n          <ul class=\"needs-list\">\n            <li>AUXまたはHDMI入力付きのナビ</li>\n            <li>スマホやDAP</li>\n            <li>対応ケーブル</li>\n          </ul>\n          <a href=\"#contact\" class=\"plan-cta\">ケーブル選びを相談する →</a>\n        </div>\n      </div>\n\n      <div class=\"plan-card reveal\" data-level=\"mid\">\n        <div class=\"plan-header\" onclick=\"togglePlan(this)\">\n          <div class=\"plan-badge\">C</div>\n          <div class=\"plan-title-wrap\">\n            <div class=\"plan-title\">D/Aコンバーター追加でさらに高音質に</div>\n            <div class=\"plan-subtitle\">プランBにひと手間プラス</div>\n          </div>\n          <span class=\"plan-tag tag-mid\">こだわり</span>\n          <div class=\"plan-toggle\">+</div>\n        </div>\n        <div class=\"plan-body\">\n          <p>高品位なUSB→RCA変換ユニットを追加することで、D/A変換の品質が向上し、より鮮明なサウンドが得られます。</p>\n          <div class=\"needs-title\">必要なもの</div>\n          <ul class=\"needs-list\">\n            <li>AUXまたは外部入力付きのナビ</li>\n            <li>USB→RCA変換ユニット</li>\n            <li>ハイレゾ音源</li>\n          </ul>\n          <a href=\"#contact\" class=\"plan-cta\">最適な機種を相談する →</a>\n        </div>\n      </div>\n\n      <div class=\"plan-card reveal\" data-level=\"mid\">\n        <div class=\"plan-header\" onclick=\"togglePlan(this)\">\n          <div class=\"plan-badge\">D</div>\n          <div class=\"plan-title-wrap\">\n            <div class=\"plan-title\">ハイレゾ対応ナビで操作も音質もスマートに</div>\n            <div class=\"plan-subtitle\">差し込むだけ、一番シンプルな方法</div>\n          </div>\n          <span class=\"plan-tag tag-mid\">こだわり</span>\n          <div class=\"plan-toggle\">+</div>\n        </div>\n        <div class=\"plan-body\">\n          <p>ハイレゾ対応ナビにSDカードやUSBメモリを差し込むだけ。操作性・手軽さのバランスが一番いいプランです。</p>\n          <div class=\"needs-title\">必要なもの</div>\n          <ul class=\"needs-list\">\n            <li>ハイレゾ再生対応ナビ</li>\n            <li>SDカードまたはUSBメモリ</li>\n            <li>ハイレゾ音源</li>\n          </ul>\n          <a href=\"#contact\" class=\"plan-cta\">対応ナビを見に来る →</a>\n        </div>\n      </div>\n\n      <div class=\"plan-card reveal\" data-level=\"pro\">\n        <div class=\"plan-header\" onclick=\"togglePlan(this)\">\n          <div class=\"plan-badge\">E</div>\n          <div class=\"plan-title-wrap\">\n            <div class=\"plan-title\">ハイレゾ対応DSPで本格サウンドを構築</div>\n            <div class=\"plan-subtitle\">こだわる人の定番構成</div>\n          </div>\n          <span class=\"plan-tag tag-pro\">本格派</span>\n          <div class=\"plan-toggle\">+</div>\n        </div>\n        <div class=\"plan-body\">\n          <p>デジタル信号のままDSPに送り、DSP内蔵DACでアナログ変換。信号の劣化を最小限に抑えたクリアなサウンドが楽しめます。</p>\n          <div class=\"needs-title\">必要なもの</div>\n          <ul class=\"needs-list\">\n            <li>スマホやDAP</li>\n            <li>ハイレゾ対応DSP</li>\n            <li>ハイレゾ音源</li>\n          </ul>\n          <a href=\"#contact\" class=\"plan-cta\">システム構成を相談する →</a>\n        </div>\n      </div>\n\n      <div class=\"plan-card reveal\" data-level=\"pro\">\n        <div class=\"plan-header\" onclick=\"togglePlan(this)\">\n          <div class=\"plan-badge\">F</div>\n          <div class=\"plan-title-wrap\">\n            <div class=\"plan-title\">LDAC対応DAPでワイヤレスのままハイレゾを</div>\n            <div class=\"plan-subtitle\">ケーブルなしで高音質を両立</div>\n          </div>\n          <span class=\"plan-tag tag-pro\">本格派</span>\n          <div class=\"plan-toggle\">+</div>\n        </div>\n        <div class=\"plan-body\">\n          <p>LDAC対応機器を使うことで、Bluetoothのまま96kHz/24bitのハイレゾ再生が可能になります。</p>\n          <div class=\"needs-title\">必要なもの</div>\n          <ul class=\"needs-list\">\n            <li>LDAC対応のスマホまたはDAP</li>\n            <li>LDAC対応のBluetooth受信ユニット</li>\n          </ul>\n          <a href=\"#contact\" class=\"plan-cta\">対応状況を確認しに来る →</a>\n        </div>\n      </div>\n\n      <div class=\"plan-card reveal\" data-level=\"pro\">\n        <div class=\"plan-header\" onclick=\"togglePlan(this)\">\n          <div class=\"plan-badge\">G</div>\n          <div class=\"plan-title-wrap\">\n            <div class=\"plan-title\">メディアプレーヤー導入で究極のオーディオへ</div>\n            <div class=\"plan-subtitle\">ライブラリごと車に持ち込む</div>\n          </div>\n          <span class=\"plan-tag tag-pro\">本格派</span>\n          <div class=\"plan-toggle\">+</div>\n        </div>\n        <div class=\"plan-body\">\n          <p>大容量SSDに音源ライブラリを収め、車内で丸ごと楽しめるのがメディアプレーヤーの魅力です。</p>\n          <div class=\"needs-title\">必要なもの</div>\n          <ul class=\"needs-list\">\n            <li>音源の入ったUSBまたはSSD</li>\n            <li>ハイレゾ対応メディアプレーヤー</li>\n            <li>ハイレゾ対応DSP</li>\n          </ul>\n          <a href=\"#contact\" class=\"plan-cta\">デモ機を触りに来る →</a>\n        </div>\n      </div>\n\n    </div>\n  </section>\n\n  <section class=\"faq-section\">\n    <div class=\"container\">\n      <div class=\"reveal\">\n        <p class=\"section-label\">FAQ</p>\n        <h2 class=\"section-title\">よくあるご質問</h2>\n        <div class=\"gold-divider\"></div>\n      </div>\n      <div class=\"reveal\">\n        <div class=\"faq-item\" onclick=\"toggleFaq(this)\">\n          <div class=\"faq-q\">今のナビのまま使えますか？<span>+</span></div>\n          <div class=\"faq-a\">Bluetooth機能またはAUX/HDMI入力があれば、ナビを買い替えずに始められるプランがあります。</div>\n        </div>\n        <div class=\"faq-item\" onclick=\"toggleFaq(this)\">\n          <div class=\"faq-q\">予算はどのくらい必要ですか？<span>+</span></div>\n          <div class=\"faq-a\">プランAなら追加費用はほぼゼロから、本格的なDSPシステムでは数万円〜になります。</div>\n        </div>\n      </div>\n    </div>\n  </section>\n\n  <section class=\"cta-section\" id=\"contact\">\n    <div class=\"container\">\n      <div class=\"reveal\">\n        <p class=\"section-label\">Contact</p>\n        <h2>迷ったら、まずご相談を</h2>\n        <div class=\"gold-divider\" style=\"margin: 20px auto 24px;\"></div>\n        <div class=\"cta-buttons\">\n          <a href=\"tel:092-503-5421\" class=\"btn-primary\">電話で問い合わせる</a>\n          <a href=\"https://page.line.me/312qjhsq?openQrModal=true\" class=\"btn-secondary\">LINEで相談する</a>\n        </div>\n      </div>\n    </div>\n  </section>\n</div>\n\n<script>\n  function togglePlan(header) {\n    header.parentElement.classList.toggle('open');\n  }\n\n  function filterPlans(level, btn) {\n    const wrapper = btn.closest('#hires-guide-wrapper');\n    wrapper.querySelectorAll('.level-tab').forEach(t => t.classList.remove('active'));\n    btn.classList.add('active');\n    wrapper.querySelectorAll('.plan-card').forEach(card => {\n      card.style.display = (level === 'all' || card.dataset.level === level) ? '' : 'none';\n    });\n  }\n\n  function toggleFaq(item) {\n    item.classList.toggle('open');\n  }\n\n  const observer = new IntersectionObserver((entries) => {\n    entries.forEach(e => {\n      if (e.isIntersecting) {\n        e.target.classList.add('visible');\n        observer.unobserve(e.target);\n      }\n    });\n  }, { threshold: 0.1 });\n\n  document.querySelectorAll('#hires-guide-wrapper .reveal').forEach(el => observer.observe(el));\n</script>\n</body>\n</html>",
       "category": "知識・ガイド",
       "link": "https://www.soundang.com/hires.html",
       "packageDetails": {
@@ -2539,8 +2539,8 @@
           }
         ],
         "notes": [
-          "ハイレゾ再生には対応した機材（���ビ���DSP、DAP等）が必要です。",
-          "従来のCDプレーヤーやナビ��は���������������生できない場合があります。",
+          "ハイレゾ再生には対応した機材（ビDSP、DAP等）が必要です。",
+          "従来のCDプレーヤーやナビは生できない場合があります。",
           "FLAC, WAV, DSDなど、機材に合ったフォーマットの選定が重要です。",
           "スピーカー交換などの再生環境を整えることで、より効果を実感できます。",
           "当店ディスプレイにて各プランのデモが可能です。お気軽にお試しください。"
@@ -2555,22 +2555,22 @@
         {
           "name": "プランB：AUX/HDMI外部入力",
           "price": "0",
-          "description": "既��ナビの外部入力を利用。HDMI入力があれば高音質伝送が可能。接続用ケーブルが別途必要です。"
+          "description": "既ナビの外部入力を利用。HDMI入力があれば高音質伝送が可能。接続用ケーブルが別途必要です。"
         },
         {
-          "name": "���ラ���C：USBトランスポート追加",
+          "name": "ラC：USBトランスポート追加",
           "price": "0",
           "description": "デジタル信号のまま取り出し、高音質なD/Aコンバーターを通して接続。音質が大きく改善されます。"
         },
         {
           "name": "プランD：ハイレゾ対応ナビ導入",
           "price": "0",
-          "description": "操作性も音質も��群。SDカードやUSBメモリを差し込むだけでスマートに再生。タッチパネル操作も可能。"
+          "description": "操作性も音質も群。SDカードやUSBメモリを差し込むだけでスマートに再生。タッチパネル操作も可能。"
         },
         {
           "name": "プランE：ハイレゾ対応DSP構築",
           "price": "0",
-          "description": "現在の主流。デジタル信号のままDSPへ入力し、内蔵の高���質DACで変換。ロスの極めて少ないシステム。"
+          "description": "現在の主流。デジタル信号のままDSPへ入力し、内蔵の高質DACで変換。ロスの極めて少ないシステム。"
         },
         {
           "name": "プランF：LDACワイヤレス接続",
@@ -2580,7 +2580,7 @@
         {
           "name": "プランG：メディアプレーヤー導入",
           "price": "0",
-          "description": "大容量SSD等に対応した専用機。究極を求めるユーザーに人気. ライ���ラ���ーを丸ごと持ち歩けます。"
+          "description": "大容量SSD等に対応した専用機。究極を求めるユーザーに人気. ライラーを丸ごと持ち歩けます。"
         }
       ]
     },
@@ -2649,7 +2649,7 @@
         "芸術的な表現力"
       ],
       "image": "https://picsum.photos/seed/hi-end-sp/800/600",
-      "description": "ハイエンドスピーカーをインスト���ルするには・・・\n\n各ブランドの上位モデルでは、そのスペックをしっかりと活かせるインストレーションやケーブル選びが大切になります。ハイエンドスピーカーに施したいインストール、ケーブル選びなどをご紹介します。\n\nハイエンドスピーカーに興味を持ったらぜひご相談ください。オーナー様の理想を形にする最適なシステムをご提案いたします。",
+      "description": "ハイエンドスピーカーをインストルするには・・・\n\n各ブランドの上位モデルでは、そのスペックをしっかりと活かせるインストレーションやケーブル選びが大切になります。ハイエンドスピーカーに施したいインストール、ケーブル選びなどをご紹介します。\n\nハイエンドスピーカーに興味を持ったらぜひご相談ください。オーナー様の理想を形にする最適なシステムをご提案いたします。",
       "category": "知識・ガイド",
       "packageDetails": {
         "standardPrice": "0",
@@ -2661,7 +2661,7 @@
             "icon": "Activity"
           },
           {
-            "title": "ドアスピーカー���付",
+            "title": "ドアスピーカー付",
             "description": "抜けを良くする アウターバッフルや強固なバッフル製作",
             "icon": "Wrench"
           },
@@ -2679,7 +2679,7 @@
         "notes": [
           "ハイエンドスピーカーはユニットの性能を引き出すための環境作りが不可欠です。",
           "インナーバッフルでの施工でも、市販品を避けスピーカーをしっかり受け止める製作が重要です。",
-          "試聴室では��ピーカーケーブルの比較も可能です。音の違いを体感して選べます。"
+          "試聴室ではピーカーケーブルの比較も可能です。音の違いを体感して選べます。"
         ]
       },
       "lineup": [
@@ -2710,7 +2710,7 @@
         "ラゲッジ埋め込み"
       ],
       "image": "https://picsum.photos/seed/subwoofer/800/600",
-      "description": "とっても重要なサブウーハーの役割！可聴帯域のほんの一部ですが、建物の基礎と同じでここがしっかりしていないと全体のイメージが希薄になってしまいます。\n\n音は倍音で構成されていますので、サブウーハーが中心でないようなボーカルやピアノの音も、サブウーハーのオンオフで様変わりします。HiFiスタイルからパワーサウンド、重低音スタイルまで、自分だけの個室を好きなサウン��にアレンジして楽しみましょう！",
+      "description": "とっても重要なサブウーハーの役割！可聴帯域のほんの一部ですが、建物の基礎と同じでここがしっかりしていないと全体のイメージが希薄になってしまいます。\n\n音は倍音で構成されていますので、サブウーハーが中心でないようなボーカルやピアノの音も、サブウーハーのオンオフで様変わりします。HiFiスタイルからパワーサウンド、重低音スタイルまで、自分だけの個室を好きなサウンにアレンジして楽しみましょう！",
       "category": "知識・ガイド",
       "packageDetails": {
         "standardPrice": "0",
@@ -2757,7 +2757,7 @@
         {
           "name": "フロア/スペアタイヤスペース埋め込み",
           "price": "0",
-          "description": "サブトラ���クやスペアタイ���スペースを利用してBOXを製作。"
+          "description": "サブトラクやスペアタイスペースを利用してBOXを製作。"
         },
         {
           "name": "カスタム・ショーアップインストール",
@@ -2789,7 +2789,7 @@
           },
           {
             "title": "造作・加工",
-            "description": "MDF、��クリル、パテ等を用いた高度な加工技術",
+            "description": "MDF、クリル、パテ等を用いた高度な加工技術",
             "icon": "Wrench"
           },
           {
@@ -2833,7 +2833,7 @@
         {
           "name": "カスタムピラーインストール（3WAY対応）",
           "price": "80000",
-          "description": "��ロント3WAYに欠かせないピラー加工. 左右でおよそ8万円〜。"
+          "description": "ロント3WAYに欠かせないピラー加工. 左右でおよそ8万円〜。"
         }
       ]
     }
@@ -6197,7 +6197,7 @@
             "id": "kcar-panthera-z306",
             "brand": "Panthera",
             "grade": "Z306 ＋ 純正ロック連動/スマクロ",
-            "description": "人気センサーを網羅したZ306に���マクロを追加。ホイール盗難からイタズラまで、全方位で車両を監視。",
+            "description": "人気センサーを網羅したZ306にマクロを追加。ホイール盗難からイタズラまで、全方位で車両を監視。",
             "price": "315,800",
             "priceTax": "347,380",
             "isRecommended": true,
@@ -10162,7 +10162,7 @@
             "opacity": 0.5,
             "badge": "スピーカー交換パッケージ",
             "bgColor": "",
-            "description": "輸入車の中でも、音質改善のご相談が特に多いのがBMWです。グレードを問わず純正システムの構成はほぼ同じで、多くのオーナー様が同じお悩みを抱えています。純正の見た目を崩さず、加工を抑えた方法で音質改善できるパッケージを����用意しています。"
+            "description": "輸入車の中でも、音質改善のご相談が特に多いのがBMWです。グレードを問わず純正システムの構成はほぼ同じで、多くのオーナー様が同じお悩みを抱えています。純正の見た目を崩さず、加工を抑えた方法で音質改善できるパッケージをご用意しています。"
           }
         },
         {
@@ -10177,7 +10177,7 @@
               },
               {
                 "title": "ツイーター",
-                "desc": "純正ツィーター非装着車���場合、別途純正部品が必要になる場合があります。（おおよそ15000円前後)",
+                "desc": "純正ツィーター非装着車の場合、別途純正部品が必要になる場合があります。（おおよそ15000円前後)",
                 "image": "/images/Audio/Speaker/bmw-tw2.webp"
               },
               {
@@ -10187,20 +10187,7 @@
               }
             ],
             "title": "スピーカー交換例",
-            "description": "BMWの�������������������������������正シ�����テムはフロントに10cm程度のスぴーかー、ツィーターなし、シート下のウーハーで低音を補うという構成がほとんどです。 加工を抑えてコストを抑えた改善方法として、まずはフロントスピーカーの交換とツィーターの追加。さらに適合車種であればウーハーも交換することで、ハリのあるサウンドに生まれ変わります。このパッケージではトレードインで交換可能なスピーカーをご紹介しています。",
-            "doorTuning": {
-              "title": "ツイーター",
-              "desc": "純正ツィーター非装着車の場合、別途純正部品が必要になる場合があります。",
-              "image": "/images/Audio/Speaker/bmw-tw2.webp"
-            },
-            "baffle": {
-              "title": "ドアスピーカー",
-              "image": "/images/Audio/Speaker/bmw-door.webp"
-            },
-            "cable": {
-              "title": "シート下ウーハー",
-              "image": "/images/Audio/Speaker/bmw-woofer.webp"
-            }
+            "description": "BMWの標準オーディオシステムはフロントに10cm程度のスピーカー、ツイーターなし、シート下のウーハーで低音を補うという構成がほとんどです。加工を抑えてコストを抑えた改善方法として、まずはフロントスピーカーの交換とツイーターの追加。さらに適合車種であればウーハーも交換することで、ハリのあるサウンドに生まれ変わります。このパッケージではトレードインで交換可能なスピーカーをご紹介しています。"
           }
         },
         {
@@ -12346,7 +12333,7 @@
                 "hasTweeterMount": "",
                 "standalonePrice": "86000",
                 "fixedPriceOverride": "0",
-                "remarks": "高音質なAB級アンプを採用。\n24db/octのクロスや0～180°のバリアブルな��相設定��可��。",
+                "remarks": "高音質なAB級アンプを採用。\n24db/octのクロスや0～180°のバリアブルな相設定可。",
                 "youtubeUrl": "",
                 "showCardSummary": true,
                 "cardSummaryItems": [
@@ -13122,7 +13109,7 @@
       "showInMenu": true,
       "subType": "package",
       "header": {
-        "badge": "本���低���",
+        "badge": "本低",
         "mainTitle": "お手軽低音増強セット”プラス”",
         "subTitle": "本格低音",
         "description": "プランの特徴や魅力を伝える紹介文を入力してください。"
@@ -14674,7 +14661,7 @@
                 "hasTweeterMount": "",
                 "standalonePrice": "75020",
                 "fixedPriceOverride": "0",
-                "remarks": "備考\n・アンプ本体はダッシュボード付近スペー��への設置となります。\n・施工内容や状況によっては追加が必要になることがあります。\n・ハイレベル・RCA入力対応です。",
+                "remarks": "備考\n・アンプ本体はダッシュボード付近スペーへの設置となります。\n・施工内容や状況によっては追加が必要になることがあります。\n・ハイレベル・RCA入力対応です。",
                 "youtubeUrl": "",
                 "showCardSummary": true,
                 "cardSummaryItems": [
@@ -17546,7 +17533,7 @@
               "price": "371910"
             },
             {
-              "label": "���グ���ッ���ワ���ヤ���ン���プ���ン",
+              "label": "グッワヤンプン",
               "price": "407000"
             }
           ],
@@ -17830,7 +17817,7 @@
           "type": "text",
           "data": {
             "title": "",
-            "content": "<!-- ============================================================\n  アンプ内蔵DSP + 取り付けプラン セクション（貼り付け用フラグメント）\n  ・スタイルはすべて .pa-dw-section 配下にスコープしてあるため、\n    他のセクション（h1 / p / body 等）には影響しません。\n  ・そのまま既存ページの本文内にコピー＆ペーストしてください。\n  ・この直後に「おすすめのDSP」セクションを続ける想定です。\n============================================================ -->\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link href=\"https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap\" rel=\"stylesheet\">\n\n<style>\n  .pa-dw-section{\n    --dw-bg:#ffffff;\n    --dw-panel:#f7f5f1;\n    --dw-line:#e3e0d9;\n    --dw-text:#26241f;\n    --dw-text-dim:#7a766c;\n    --dw-copper:#a8672f;\n    --dw-copper-dim:#c68a4e;\n    --dw-dark:#1c1a17;\n\n    box-sizing:border-box;\n    width:100%;\n    max-width:820px;\n    margin:0 auto;\n    padding:56px 24px 60px;\n    text-align:center;\n    background:var(--dw-bg);\n    color:var(--dw-text);\n    font-family:'Noto Sans JP',sans-serif;\n    line-height:1.8;\n    -webkit-font-smoothing:antialiased;\n  }\n  .pa-dw-section *{\n    box-sizing:border-box;\n  }\n\n  /* ---- Hero ---- */\n  .pa-dw-section .dw-eyebrow{\n    display:flex;\n    align-items:center;\n    justify-content:center;\n    gap:12px;\n    font-family:'Oswald',sans-serif;\n    font-size:13px;\n    letter-spacing:0.3em;\n    color:var(--dw-copper);\n    text-transform:uppercase;\n    margin:0 0 14px;\n  }\n  .pa-dw-section .dw-eyebrow::before,\n  .pa-dw-section .dw-eyebrow::after{\n    content:\"\";\n    width:26px;\n    height:1px;\n    background:var(--dw-copper-dim);\n  }\n  .pa-dw-section .dw-title{\n    font-weight:700;\n    font-size:clamp(21px,4.2vw,27px);\n    line-height:1.6;\n    letter-spacing:0.02em;\n    color:#161512;\n    margin:0 auto;\n    max-width:560px;\n  }\n  .pa-dw-section .dw-title .dw-accent{\n    color:var(--dw-copper);\n  }\n  .pa-dw-section .dw-lead{\n    font-size:14.5px;\n    color:var(--dw-text-dim);\n    max-width:520px;\n    margin:16px auto 0;\n  }\n\n  /* ---- Section label ---- */\n  .pa-dw-section .dw-label{\n    font-family:'Oswald',sans-serif;\n    font-weight:600;\n    font-size:13.5px;\n    letter-spacing:0.08em;\n    color:var(--dw-copper);\n    margin-bottom:16px;\n    text-align:center;\n  }\n\n  /* ---- Two compact check-lists (こんな方に / 特長) ---- */\n  .pa-dw-section .dw-checks{\n    margin-top:44px;\n    max-width:620px;\n    margin-left:auto;\n    margin-right:auto;\n  }\n  .pa-dw-section .dw-check-grid{\n    display:grid;\n    grid-template-columns:1fr 1fr;\n    gap:8px 24px;\n    text-align:left;\n  }\n  .pa-dw-section .dw-check{\n    display:flex;\n    align-items:flex-start;\n    gap:10px;\n    padding:10px 0;\n    border-top:1px solid var(--dw-line);\n  }\n  .pa-dw-section .dw-check-mark{\n    flex-shrink:0;\n    width:16px;\n    height:16px;\n    margin-top:3px;\n    border-radius:50%;\n    border:1.5px solid var(--dw-copper);\n    position:relative;\n  }\n  .pa-dw-section .dw-check-mark::after{\n    content:\"\";\n    position:absolute;\n    top:50%;\n    left:50%;\n    width:6px;\n    height:4px;\n    border-left:1.5px solid var(--dw-copper);\n    border-bottom:1.5px solid var(--dw-copper);\n    transform:translate(-50%,-65%) rotate(-45deg);\n  }\n  .pa-dw-section .dw-check p{\n    font-size:13.5px;\n    color:var(--dw-text);\n    margin:0;\n  }\n\n  /* ---- Plan section ---- */\n  .pa-dw-section .dw-plans{\n    margin-top:56px;\n    padding-top:44px;\n    border-top:1px solid var(--dw-line);\n  }\n  .pa-dw-section .dw-plans-title{\n    font-weight:700;\n    font-size:clamp(18px,3.4vw,21px);\n    color:var(--dw-text);\n    margin-bottom:6px;\n  }\n  .pa-dw-section .dw-plans-sub{\n    font-size:13px;\n    color:var(--dw-text-dim);\n    margin-bottom:28px;\n  }\n\n  .pa-dw-section .dw-common{\n    background:var(--dw-panel);\n    border:1px solid var(--dw-line);\n    border-radius:6px;\n    padding:20px 24px;\n    margin-bottom:28px;\n    text-align:left;\n  }\n  .pa-dw-section .dw-common-row{\n    display:flex;\n    gap:16px;\n    font-size:13px;\n    color:var(--dw-text-dim);\n  }\n  .pa-dw-section .dw-common-row + .dw-common-row{\n    margin-top:8px;\n  }\n  .pa-dw-section .dw-common-row b{\n    flex-shrink:0;\n    width:110px;\n    color:var(--dw-copper);\n    font-weight:600;\n  }\n  .pa-dw-section .dw-common-row span{\n    color:var(--dw-text);\n  }\n\n  .pa-dw-section .dw-table{\n    width:100%;\n    border-collapse:collapse;\n    border:1px solid var(--dw-line);\n    border-radius:6px;\n    overflow:hidden;\n  }\n  .pa-dw-section .dw-table th,\n  .pa-dw-section .dw-table td{\n    border:1px solid var(--dw-line);\n    padding:14px 14px;\n    text-align:left;\n    vertical-align:top;\n    font-size:13px;\n  }\n  .pa-dw-section .dw-table thead th{\n    background:var(--dw-dark);\n    color:#fff;\n    font-family:'Oswald',sans-serif;\n    font-weight:600;\n    font-size:12.5px;\n  }\n  .pa-dw-section .dw-th-badge{\n    display:inline-block;\n    margin-left:6px;\n    font-size:9.5px;\n    letter-spacing:0.05em;\n    color:var(--dw-copper-dim);\n    border:1px solid var(--dw-copper-dim);\n    border-radius:20px;\n    padding:1px 8px;\n  }\n  .pa-dw-section .dw-table tbody th{\n    background:var(--dw-panel);\n    font-family:'Oswald',sans-serif;\n    font-weight:600;\n    font-size:11px;\n    letter-spacing:0.06em;\n    color:var(--dw-copper);\n    width:110px;\n  }\n  .pa-dw-section .dw-table td.is-strong{\n    font-weight:700;\n    color:var(--dw-text);\n  }\n  .pa-dw-section .dw-table .is-mid{\n    background:rgba(168,103,47,0.06);\n  }\n  .pa-dw-section .dw-table thead th.is-mid{\n    background:#3a2c1e;\n    color:#fff;\n  }\n\n  /* ---- mobile stacked plan cards ---- */\n  @media (max-width:640px){\n    .pa-dw-section .dw-table{display:none;}\n    .pa-dw-section .dw-mobile-plans{\n      display:flex;\n      flex-direction:column;\n      gap:14px;\n    }\n    .pa-dw-section .dw-mplan{\n      border:1px solid var(--dw-line);\n      border-radius:6px;\n      overflow:hidden;\n      text-align:left;\n    }\n    .pa-dw-section .dw-mplan-head{\n      background:var(--dw-dark);\n      color:#fff;\n      padding:12px 14px;\n      font-size:13px;\n      font-weight:600;\n    }\n    .pa-dw-section .dw-mplan-body{\n      padding:12px 14px 14px;\n      font-size:13px;\n    }\n    .pa-dw-section .dw-mplan-body div + div{margin-top:6px;}\n    .pa-dw-section .dw-mplan-body b{color:var(--dw-copper);font-weight:600;}\n  }\n  @media (min-width:641px){\n    .pa-dw-section .dw-mobile-plans{display:none;}\n  }\n\n  /* ---- Closing ---- */\n  .pa-dw-section .dw-closing{\n    margin-top:36px;\n    text-align:left;\n    background:var(--dw-panel);\n    border-left:3px solid var(--dw-copper);\n    border-radius:2px;\n    padding:16px 20px;\n  }\n  .pa-dw-section .dw-closing p{\n    font-size:13px;\n    color:var(--dw-text-dim);\n    margin:0;\n  }\n  .pa-dw-section .dw-closing strong{\n    color:var(--dw-copper);\n    font-weight:600;\n  }\n\n  @media (max-width:560px){\n    .pa-dw-section{padding:44px 18px 48px;}\n    .pa-dw-section .dw-check-grid{grid-template-columns:1fr;}\n  }\n</style>\n\n<div class=\"pa-dw-section\">\n\n  <div class=\"dw-eyebrow\">Amp Built-in DSP</div>\n  <p class=\"dw-title\">今のナビはそのままに<br><span class=\"dw-accent\">音質をグレードアップ</span>できる<br>「アンプ内蔵タイプのDSP」</p>\n  <p class=\"dw-lead\">ナビやヘッドユニットを替えずに、音質だけを大きく引き上げられます。取り付け工賃・ケーブル・調整費用までまとめてご用意しています。</p>\n\n  <!-- こんな方に + 特長：チェックリストで圧縮 -->\n  <div class=\"dw-checks\">\n    <div class=\"dw-label\">こんな方におすすめです</div>\n    <div class=\"dw-check-grid\">\n      <div class=\"dw-check\"><div class=\"dw-check-mark\"></div><p>今のナビ／MOPナビのまま音質だけアップしたい</p></div>\n      <div class=\"dw-check\"><div class=\"dw-check-mark\"></div><p>大画面ナビを音質を気にせず選びたい</p></div>\n      <div class=\"dw-check\"><div class=\"dw-check-mark\"></div><p>フロント3WAYシステムを手軽に始めたい</p></div>\n      <div class=\"dw-check\"><div class=\"dw-check-mark\"></div><p>フロントマルチ接続とリアスピーカーを両立したい</p></div>\n    </div>\n  </div>\n\n  <div class=\"dw-checks\" style=\"margin-top:28px;\">\n    <div class=\"dw-label\">DSPの特長</div>\n    <div class=\"dw-check-grid\">\n      <div class=\"dw-check\"><div class=\"dw-check-mark\"></div><p>操作���法は今までと変わりません</p></div>\n      <div class=\"dw-check\"><div class=\"dw-check-mark\"></div><p>前方に臨場感豊かなステージが広がります</p></div>\n      <div class=\"dw-check\"><div class=\"dw-check-mark\"></div><p>高音質アンプ内蔵、アンプ追加検討中の方にも</p></div>\n      <div class=\"dw-check\"><div class=\"dw-check-mark\"></div><p>ハイエンド機に匹敵する調整機能を搭載</p></div>\n    </div>\n  </div>\n\n  <!-- 取り付けプラン比較 -->\n  <div class=\"dw-plans\">\n    <div class=\"dw-plans-title\">取り付け込みのプランからお選びいただけます</div>\n    <p class=\"dw-plans-sub\">DSP本体は下記「おすすめのDSP」から。ここでは取り付け・配線内容の違いだけを比較しています。</p>\n\n    <div class=\"dw-common\">\n      <div class=\"dw-common-row\"><b>設置場所の想定</b><span>シート下／ダッシュボード奥／フロアカーペット下 など</span></div>\n      <div class=\"dw-common-row\"><b>共通で含むもの</b><span>インストール工賃／専用ハーネス・ギボシ等の部品／DSP調整費用</span></div>\n    </div>\n\n    <table class=\"dw-table\">\n      <thead>\n        <tr>\n          <th></th>\n          <th>シンプルプラン</th>\n          <th class=\"is-mid\">プレミアムプラン<span class=\"dw-th-badge\">12AWG</span></th>\n          <th>レグザットプラン<span class=\"dw-th-badge\">14AWG</span></th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr>\n          <th>電源の取り出し方</th>\n          <td>ナビ裏などから</td>\n          <td class=\"is-strong is-mid\">バッテリーから直接（＋／－）</td>\n          <td class=\"is-strong\">バッテリーから直接（＋／－）</td>\n        </tr>\n        <tr>\n          <th>電源ケーブル</th>\n          <td>指定なし</td>\n          <td class=\"is-strong is-mid\">12AWG</td>\n          <td class=\"is-strong\">14AWG／レグザット AT-RX3514P</td>\n        </tr>\n      </tbody>\n    </table>\n\n    <div class=\"dw-mobile-plans\">\n      <div class=\"dw-mplan\">\n        <div class=\"dw-mplan-head\">シンプルプラン</div>\n        <div class=\"dw-mplan-body\">\n          <div><b>電源の取り出し方：</b>ナビ裏などから</div>\n          <div><b>電源ケーブル：</b>指定なし</div>\n        </div>\n      </div>\n      <div class=\"dw-mplan\">\n        <div class=\"dw-mplan-head\">プレミアムプラン（12AWG）</div>\n        <div class=\"dw-mplan-body\">\n          <div><b>電源の取り出し方：</b>バッテリーから直接（＋／－）</div>\n          <div><b>電源ケーブル：</b>12AWG</div>\n        </div>\n      </div>\n      <div class=\"dw-mplan\">\n        <div class=\"dw-mplan-head\">レグザットプラン（14AWG）</div>\n        <div class=\"dw-mplan-body\">\n          <div><b>電源の取り出し方：</b>バッテリーから直接（＋／－）</div>\n          <div><b>電源ケーブル：</b>14AWG／レグザット AT-RX3514P</div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"dw-closing\">\n    <p>\n      DSP選びでは<strong>アンプの出力チャンネル</strong>や<strong>チャンネル合成機能（サミング）</strong>の対応可否がポイントです。ドア通線などが必要な車両は別途費用となります。商品選びはお気軽にご来店の上お尋ねください。\n    </p>\n  </div>\n\n</div>"
+            "content": "<!-- ============================================================\n  アンプ内蔵DSP + 取り付けプラン セクション（貼り付け用フラグメント）\n  ・スタイルはすべて .pa-dw-section 配下にスコープしてあるため、\n    他のセクション（h1 / p / body 等）には影響しません。\n  ・そのまま既存ページの本文内にコピー＆ペーストしてください。\n  ・この直後に「おすすめのDSP」セクションを続ける想定です。\n============================================================ -->\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link href=\"https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap\" rel=\"stylesheet\">\n\n<style>\n  .pa-dw-section{\n    --dw-bg:#ffffff;\n    --dw-panel:#f7f5f1;\n    --dw-line:#e3e0d9;\n    --dw-text:#26241f;\n    --dw-text-dim:#7a766c;\n    --dw-copper:#a8672f;\n    --dw-copper-dim:#c68a4e;\n    --dw-dark:#1c1a17;\n\n    box-sizing:border-box;\n    width:100%;\n    max-width:820px;\n    margin:0 auto;\n    padding:56px 24px 60px;\n    text-align:center;\n    background:var(--dw-bg);\n    color:var(--dw-text);\n    font-family:'Noto Sans JP',sans-serif;\n    line-height:1.8;\n    -webkit-font-smoothing:antialiased;\n  }\n  .pa-dw-section *{\n    box-sizing:border-box;\n  }\n\n  /* ---- Hero ---- */\n  .pa-dw-section .dw-eyebrow{\n    display:flex;\n    align-items:center;\n    justify-content:center;\n    gap:12px;\n    font-family:'Oswald',sans-serif;\n    font-size:13px;\n    letter-spacing:0.3em;\n    color:var(--dw-copper);\n    text-transform:uppercase;\n    margin:0 0 14px;\n  }\n  .pa-dw-section .dw-eyebrow::before,\n  .pa-dw-section .dw-eyebrow::after{\n    content:\"\";\n    width:26px;\n    height:1px;\n    background:var(--dw-copper-dim);\n  }\n  .pa-dw-section .dw-title{\n    font-weight:700;\n    font-size:clamp(21px,4.2vw,27px);\n    line-height:1.6;\n    letter-spacing:0.02em;\n    color:#161512;\n    margin:0 auto;\n    max-width:560px;\n  }\n  .pa-dw-section .dw-title .dw-accent{\n    color:var(--dw-copper);\n  }\n  .pa-dw-section .dw-lead{\n    font-size:14.5px;\n    color:var(--dw-text-dim);\n    max-width:520px;\n    margin:16px auto 0;\n  }\n\n  /* ---- Section label ---- */\n  .pa-dw-section .dw-label{\n    font-family:'Oswald',sans-serif;\n    font-weight:600;\n    font-size:13.5px;\n    letter-spacing:0.08em;\n    color:var(--dw-copper);\n    margin-bottom:16px;\n    text-align:center;\n  }\n\n  /* ---- Two compact check-lists (こんな方に / 特長) ---- */\n  .pa-dw-section .dw-checks{\n    margin-top:44px;\n    max-width:620px;\n    margin-left:auto;\n    margin-right:auto;\n  }\n  .pa-dw-section .dw-check-grid{\n    display:grid;\n    grid-template-columns:1fr 1fr;\n    gap:8px 24px;\n    text-align:left;\n  }\n  .pa-dw-section .dw-check{\n    display:flex;\n    align-items:flex-start;\n    gap:10px;\n    padding:10px 0;\n    border-top:1px solid var(--dw-line);\n  }\n  .pa-dw-section .dw-check-mark{\n    flex-shrink:0;\n    width:16px;\n    height:16px;\n    margin-top:3px;\n    border-radius:50%;\n    border:1.5px solid var(--dw-copper);\n    position:relative;\n  }\n  .pa-dw-section .dw-check-mark::after{\n    content:\"\";\n    position:absolute;\n    top:50%;\n    left:50%;\n    width:6px;\n    height:4px;\n    border-left:1.5px solid var(--dw-copper);\n    border-bottom:1.5px solid var(--dw-copper);\n    transform:translate(-50%,-65%) rotate(-45deg);\n  }\n  .pa-dw-section .dw-check p{\n    font-size:13.5px;\n    color:var(--dw-text);\n    margin:0;\n  }\n\n  /* ---- Plan section ---- */\n  .pa-dw-section .dw-plans{\n    margin-top:56px;\n    padding-top:44px;\n    border-top:1px solid var(--dw-line);\n  }\n  .pa-dw-section .dw-plans-title{\n    font-weight:700;\n    font-size:clamp(18px,3.4vw,21px);\n    color:var(--dw-text);\n    margin-bottom:6px;\n  }\n  .pa-dw-section .dw-plans-sub{\n    font-size:13px;\n    color:var(--dw-text-dim);\n    margin-bottom:28px;\n  }\n\n  .pa-dw-section .dw-common{\n    background:var(--dw-panel);\n    border:1px solid var(--dw-line);\n    border-radius:6px;\n    padding:20px 24px;\n    margin-bottom:28px;\n    text-align:left;\n  }\n  .pa-dw-section .dw-common-row{\n    display:flex;\n    gap:16px;\n    font-size:13px;\n    color:var(--dw-text-dim);\n  }\n  .pa-dw-section .dw-common-row + .dw-common-row{\n    margin-top:8px;\n  }\n  .pa-dw-section .dw-common-row b{\n    flex-shrink:0;\n    width:110px;\n    color:var(--dw-copper);\n    font-weight:600;\n  }\n  .pa-dw-section .dw-common-row span{\n    color:var(--dw-text);\n  }\n\n  .pa-dw-section .dw-table{\n    width:100%;\n    border-collapse:collapse;\n    border:1px solid var(--dw-line);\n    border-radius:6px;\n    overflow:hidden;\n  }\n  .pa-dw-section .dw-table th,\n  .pa-dw-section .dw-table td{\n    border:1px solid var(--dw-line);\n    padding:14px 14px;\n    text-align:left;\n    vertical-align:top;\n    font-size:13px;\n  }\n  .pa-dw-section .dw-table thead th{\n    background:var(--dw-dark);\n    color:#fff;\n    font-family:'Oswald',sans-serif;\n    font-weight:600;\n    font-size:12.5px;\n  }\n  .pa-dw-section .dw-th-badge{\n    display:inline-block;\n    margin-left:6px;\n    font-size:9.5px;\n    letter-spacing:0.05em;\n    color:var(--dw-copper-dim);\n    border:1px solid var(--dw-copper-dim);\n    border-radius:20px;\n    padding:1px 8px;\n  }\n  .pa-dw-section .dw-table tbody th{\n    background:var(--dw-panel);\n    font-family:'Oswald',sans-serif;\n    font-weight:600;\n    font-size:11px;\n    letter-spacing:0.06em;\n    color:var(--dw-copper);\n    width:110px;\n  }\n  .pa-dw-section .dw-table td.is-strong{\n    font-weight:700;\n    color:var(--dw-text);\n  }\n  .pa-dw-section .dw-table .is-mid{\n    background:rgba(168,103,47,0.06);\n  }\n  .pa-dw-section .dw-table thead th.is-mid{\n    background:#3a2c1e;\n    color:#fff;\n  }\n\n  /* ---- mobile stacked plan cards ---- */\n  @media (max-width:640px){\n    .pa-dw-section .dw-table{display:none;}\n    .pa-dw-section .dw-mobile-plans{\n      display:flex;\n      flex-direction:column;\n      gap:14px;\n    }\n    .pa-dw-section .dw-mplan{\n      border:1px solid var(--dw-line);\n      border-radius:6px;\n      overflow:hidden;\n      text-align:left;\n    }\n    .pa-dw-section .dw-mplan-head{\n      background:var(--dw-dark);\n      color:#fff;\n      padding:12px 14px;\n      font-size:13px;\n      font-weight:600;\n    }\n    .pa-dw-section .dw-mplan-body{\n      padding:12px 14px 14px;\n      font-size:13px;\n    }\n    .pa-dw-section .dw-mplan-body div + div{margin-top:6px;}\n    .pa-dw-section .dw-mplan-body b{color:var(--dw-copper);font-weight:600;}\n  }\n  @media (min-width:641px){\n    .pa-dw-section .dw-mobile-plans{display:none;}\n  }\n\n  /* ---- Closing ---- */\n  .pa-dw-section .dw-closing{\n    margin-top:36px;\n    text-align:left;\n    background:var(--dw-panel);\n    border-left:3px solid var(--dw-copper);\n    border-radius:2px;\n    padding:16px 20px;\n  }\n  .pa-dw-section .dw-closing p{\n    font-size:13px;\n    color:var(--dw-text-dim);\n    margin:0;\n  }\n  .pa-dw-section .dw-closing strong{\n    color:var(--dw-copper);\n    font-weight:600;\n  }\n\n  @media (max-width:560px){\n    .pa-dw-section{padding:44px 18px 48px;}\n    .pa-dw-section .dw-check-grid{grid-template-columns:1fr;}\n  }\n</style>\n\n<div class=\"pa-dw-section\">\n\n  <div class=\"dw-eyebrow\">Amp Built-in DSP</div>\n  <p class=\"dw-title\">今のナビはそのままに<br><span class=\"dw-accent\">音質をグレードアップ</span>できる<br>「アンプ内蔵タイプのDSP」</p>\n  <p class=\"dw-lead\">ナビやヘッドユニットを替えずに、音質だけを大きく引き上げられます。取り付け工賃・ケーブル・調整費用までまとめてご用意しています。</p>\n\n  <!-- こんな方に + 特長：チェックリストで圧縮 -->\n  <div class=\"dw-checks\">\n    <div class=\"dw-label\">こんな方におすすめです</div>\n    <div class=\"dw-check-grid\">\n      <div class=\"dw-check\"><div class=\"dw-check-mark\"></div><p>今のナビ／MOPナビのまま音質だけアップしたい</p></div>\n      <div class=\"dw-check\"><div class=\"dw-check-mark\"></div><p>大画面ナビを音質を気にせず選びたい</p></div>\n      <div class=\"dw-check\"><div class=\"dw-check-mark\"></div><p>フロント3WAYシステムを手軽に始めたい</p></div>\n      <div class=\"dw-check\"><div class=\"dw-check-mark\"></div><p>フロントマルチ接続とリアスピーカーを両立したい</p></div>\n    </div>\n  </div>\n\n  <div class=\"dw-checks\" style=\"margin-top:28px;\">\n    <div class=\"dw-label\">DSPの特長</div>\n    <div class=\"dw-check-grid\">\n      <div class=\"dw-check\"><div class=\"dw-check-mark\"></div><p>操作法は今までと変わりません</p></div>\n      <div class=\"dw-check\"><div class=\"dw-check-mark\"></div><p>前方に臨場感豊かなステージが広がります</p></div>\n      <div class=\"dw-check\"><div class=\"dw-check-mark\"></div><p>高音質アンプ内蔵、アンプ追加検討中の方にも</p></div>\n      <div class=\"dw-check\"><div class=\"dw-check-mark\"></div><p>ハイエンド機に匹敵する調整機能を搭載</p></div>\n    </div>\n  </div>\n\n  <!-- 取り付けプラン比較 -->\n  <div class=\"dw-plans\">\n    <div class=\"dw-plans-title\">取り付け込みのプランからお選びいただけます</div>\n    <p class=\"dw-plans-sub\">DSP本体は下記「おすすめのDSP」から。ここでは取り付け・配線内容の違いだけを比較しています。</p>\n\n    <div class=\"dw-common\">\n      <div class=\"dw-common-row\"><b>設置場所の想定</b><span>シート下／ダッシュボード奥／フロアカーペット下 など</span></div>\n      <div class=\"dw-common-row\"><b>共通で含むもの</b><span>インストール工賃／専用ハーネス・ギボシ等の部品／DSP調整費用</span></div>\n    </div>\n\n    <table class=\"dw-table\">\n      <thead>\n        <tr>\n          <th></th>\n          <th>シンプルプラン</th>\n          <th class=\"is-mid\">プレミアムプラン<span class=\"dw-th-badge\">12AWG</span></th>\n          <th>レグザットプラン<span class=\"dw-th-badge\">14AWG</span></th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr>\n          <th>電源の取り出し方</th>\n          <td>ナビ裏などから</td>\n          <td class=\"is-strong is-mid\">バッテリーから直接（＋／－）</td>\n          <td class=\"is-strong\">バッテリーから直接（＋／－）</td>\n        </tr>\n        <tr>\n          <th>電源ケーブル</th>\n          <td>指定なし</td>\n          <td class=\"is-strong is-mid\">12AWG</td>\n          <td class=\"is-strong\">14AWG／レグザット AT-RX3514P</td>\n        </tr>\n      </tbody>\n    </table>\n\n    <div class=\"dw-mobile-plans\">\n      <div class=\"dw-mplan\">\n        <div class=\"dw-mplan-head\">シンプルプラン</div>\n        <div class=\"dw-mplan-body\">\n          <div><b>電源の取り出し方：</b>ナビ裏などから</div>\n          <div><b>電源ケーブル：</b>指定なし</div>\n        </div>\n      </div>\n      <div class=\"dw-mplan\">\n        <div class=\"dw-mplan-head\">プレミアムプラン（12AWG）</div>\n        <div class=\"dw-mplan-body\">\n          <div><b>電源の取り出し方：</b>バッテリーから直接（＋／－）</div>\n          <div><b>電源ケーブル：</b>12AWG</div>\n        </div>\n      </div>\n      <div class=\"dw-mplan\">\n        <div class=\"dw-mplan-head\">レグザットプラン（14AWG）</div>\n        <div class=\"dw-mplan-body\">\n          <div><b>電源の取り出し方：</b>バッテリーから直接（＋／－）</div>\n          <div><b>電源ケーブル：</b>14AWG／レグザット AT-RX3514P</div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"dw-closing\">\n    <p>\n      DSP選びでは<strong>アンプの出力チャンネル</strong>や<strong>チャンネル合成機能（サミング）</strong>の対応可否がポイントです。ドア通線などが必要な車両は別途費用となります。商品選びはお気軽にご来店の上お尋ねください。\n    </p>\n  </div>\n\n</div>"
           }
         },
         {
@@ -19539,7 +19526,7 @@
                   {
                     "image": "/images/Audio/dsp/DRC AC.webp",
                     "name": "DRC-AC",
-                    "text": "AFシリー��専用の��ジタル��ントロ��ラー。",
+                    "text": "AFシリー専用のジタルントロラー。",
                     "price": "26400"
                   }
                 ]
@@ -21675,7 +21662,7 @@
               "value": ""
             },
             {
-              "title": "・最大各ポー��1TBのSSD、HDD、USB��モリに��応",
+              "title": "・最大各ポー1TBのSSD、HDD、USBモリに応",
               "desc": "",
               "value": ""
             },
@@ -22626,7 +22613,7 @@
                   {
                     "image": "/images/Audio/dsp/GOLDHORN Panel Controller.webp",
                     "name": "Panel Controller",
-                    "text": "音量調節、ソース切替、8件のプリセット切替、選曲などが可能になりま��。漢字表示対応。",
+                    "text": "音量調節、ソース切替、8件のプリセット切替、選曲などが可能になりま。漢字表示対応。",
                     "price": "33000"
                   }
                 ]
@@ -23303,7 +23290,7 @@
             "subtitleFont": "oswald",
             "columns": 2,
             "subtitleColor": "#ea580c",
-            "content": "<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link href=\"https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap\" rel=\"stylesheet\">\n\n<style>\n  /* 親のラッパー要素（max-w-4xlのdiv）を中央寄せにする設定 */\n  div:has(> .pa-cn912b-section) {\n    margin-left: auto !important;\n    margin-right: auto !important;\n  }\n\n  .pa-cn912b-section{\n    --cb-bg:#ffffff;\n    --cb-panel:#f7f5f1;\n    --cb-line:#e3e0d9;\n    --cb-text:#26241f;\n    --cb-text-dim:#7a766c;\n    --cb-copper:#a8672f;\n    --cb-copper-dim:#c68a4e;\n    --cb-dark:#1c1a17;\n\n    box-sizing:border-box;\n    width:100%;\n    max-width:760px;\n    margin:0 auto;\n    padding:56px 24px 60px;\n    background:var(--cb-bg);\n    color:var(--cb-text);\n    font-family:'Noto Sans JP',sans-serif;\n    line-height:1.85;\n    -webkit-font-smoothing:antialiased;\n  }\n  .pa-cn912b-section *{\n    box-sizing:border-box;\n  }\n\n  /* ---- Photo ---- */\n  .pa-cn912b-section .cb-photo{\n    position:relative;\n    border-radius:8px;\n    overflow:hidden;\n    margin-bottom:24px;\n    background:var(--cb-dark);\n  }\n  .pa-cn912b-section .cb-photo img{\n    width:100%;\n    display:block;\n  }\n  .pa-cn912b-section .cb-photo-placeholder{\n    display:flex;\n    align-items:center;\n    justify-content:center;\n    width:100%;\n    height:180px;\n    color:#8a867c;\n    font-size:13px;\n  }\n\n  /* ---- Header band ---- */\n  .pa-cn912b-section .cb-band{\n    display:flex;\n    flex-wrap:wrap;\n    align-items:center;\n    gap:10px 16px;\n    background:var(--cb-dark);\n    border-radius:6px;\n    padding:16px 20px;\n    margin-bottom:28px;\n  }\n  .pa-cn912b-section .cb-band-model{\n    font-family:'Oswald',sans-serif;\n    font-weight:700;\n    font-size:clamp(17px,3.4vw,21px);\n    color:#ffffff;\n    letter-spacing:0.02em;\n  }\n  .pa-cn912b-section .cb-band-model span{\n    color:var(--cb-copper-dim);\n  }\n  .pa-cn912b-section .cb-band-tag{\n    margin-left:auto;\n    font-family:'Oswald',sans-serif;\n    font-size:11px;\n    letter-spacing:0.1em;\n    color:var(--cb-dark);\n    background:var(--cb-copper-dim);\n    border-radius:20px;\n    padding:5px 14px;\n  }\n  .pa-cn912b-section .cb-band-sub{\n    width:100%;\n    font-size:12.5px;\n    color:#c9c5bc;\n  }\n\n  /* ---- Size variants ---- */\n  .pa-cn912b-section .cb-sizes{\n    display:flex;\n    flex-wrap:wrap;\n    gap:8px;\n    justify-content:center;\n    margin-bottom:32px;\n  }\n  .pa-cn912b-section .cb-sizes span{\n    font-family:'Oswald',sans-serif;\n    font-size:12px;\n    letter-spacing:0.05em;\n    color:var(--cb-text-dim);\n    border:1px solid var(--cb-line);\n    border-radius:20px;\n    padding:6px 14px;\n  }\n\n  /* ---- Includes panel ---- */\n  .pa-cn912b-section .cb-includes{\n    background:var(--cb-panel);\n    border:1px solid var(--cb-line);\n    border-radius:6px;\n    padding:26px 28px;\n  }\n  .pa-cn912b-section .cb-includes-lead{\n    font-size:14px;\n    color:var(--cb-text-dim);\n    margin-bottom:18px;\n    text-align:left;\n  }\n  .pa-cn912b-section .cb-includes ul{\n    list-style:none;\n    margin:0;\n    padding:0;\n    display:flex;\n    flex-direction:column;\n  }\n  .pa-cn912b-section .cb-includes li{\n    display:flex;\n    align-items:flex-start;\n    gap:10px;\n    font-size:14.5px;\n    color:var(--cb-text);\n    text-align:left;\n    padding:12px 0;\n    border-top:1px solid var(--cb-line);\n  }\n  .pa-cn912b-section .cb-includes li:first-child{\n    border-top:none;\n  }\n  .pa-cn912b-section .cb-includes li::before{\n    content:\"\";\n    flex-shrink:0;\n    width:6px;\n    height:6px;\n    border-radius:50%;\n    background:var(--cb-copper);\n    margin-top:8px;\n  }\n  .pa-cn912b-section .cb-includes li b{\n    color:var(--cb-copper);\n    font-weight:600;\n  }\n\n  .pa-cn912b-section .cb-note{\n    margin-top:18px;\n    padding-top:16px;\n    border-top:1px dashed var(--cb-line);\n    font-size:12.5px;\n    color:var(--cb-text-dim);\n    text-align:left;\n  }\n\n  @media (max-width:520px){\n    .pa-cn912b-section{padding:44px 18px 48px;}\n    .pa-cn912b-section .cb-band-tag{margin-left:0;}\n    .pa-cn912b-section .cb-includes{padding:20px 20px;}\n  }\n</style>\n\n<div class=\"pa-cn912b-section\">\n\n  <div class=\"cb-photo\">\n    <img src=\"/images/Audio/912-4.webp\" alt=\"CYBER NAVI 912-Ⅳ Series\">\n  </div>\n\n  <div class=\"cb-band\">\n    <div class=\"cb-band-model\">CYBER NAVI <span>912-Ⅳ</span> Series</div>\n    <div class=\"cb-band-tag\">取付調整込</div>\n    <div class=\"cb-band-sub\">ネットワークスティックレスモデル</div>\n  </div>\n\n  <div class=\"cb-sizes\">\n    <span>9インチ</span>\n    <span>8インチ</span>\n    <span>7インチワイド</span>\n    <span>7インチ</span>\n  </div>\n\n  <div class=\"cb-includes\">\n    <div class=\"cb-includes-lead\">\n      サイバーナビ912Ⅳシリーズ（ネットワークスティックレスモデル）。ナビインストール費用とサイバーナビ調整費用が含まれています。\n    </div>\n    <ul>\n      <li><b>ナビ：</b>サイバーナビ 912-��� シリーズ</li>\n      <li>ナビ取り付け工賃</li>\n      <li>サイバーナビ調整込み</li>\n    </ul>\n    <div class=\"cb-note\">\n      車種ごとの取付金具・配線が別途必要です。ネットワークスティックは後で追加することも可能です。\n    </div>\n  </div>\n\n</div>"
+            "content": "<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link href=\"https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap\" rel=\"stylesheet\">\n\n<style>\n  /* 親のラッパー要素（max-w-4xlのdiv）を中央寄せにする設定 */\n  div:has(> .pa-cn912b-section) {\n    margin-left: auto !important;\n    margin-right: auto !important;\n  }\n\n  .pa-cn912b-section{\n    --cb-bg:#ffffff;\n    --cb-panel:#f7f5f1;\n    --cb-line:#e3e0d9;\n    --cb-text:#26241f;\n    --cb-text-dim:#7a766c;\n    --cb-copper:#a8672f;\n    --cb-copper-dim:#c68a4e;\n    --cb-dark:#1c1a17;\n\n    box-sizing:border-box;\n    width:100%;\n    max-width:760px;\n    margin:0 auto;\n    padding:56px 24px 60px;\n    background:var(--cb-bg);\n    color:var(--cb-text);\n    font-family:'Noto Sans JP',sans-serif;\n    line-height:1.85;\n    -webkit-font-smoothing:antialiased;\n  }\n  .pa-cn912b-section *{\n    box-sizing:border-box;\n  }\n\n  /* ---- Photo ---- */\n  .pa-cn912b-section .cb-photo{\n    position:relative;\n    border-radius:8px;\n    overflow:hidden;\n    margin-bottom:24px;\n    background:var(--cb-dark);\n  }\n  .pa-cn912b-section .cb-photo img{\n    width:100%;\n    display:block;\n  }\n  .pa-cn912b-section .cb-photo-placeholder{\n    display:flex;\n    align-items:center;\n    justify-content:center;\n    width:100%;\n    height:180px;\n    color:#8a867c;\n    font-size:13px;\n  }\n\n  /* ---- Header band ---- */\n  .pa-cn912b-section .cb-band{\n    display:flex;\n    flex-wrap:wrap;\n    align-items:center;\n    gap:10px 16px;\n    background:var(--cb-dark);\n    border-radius:6px;\n    padding:16px 20px;\n    margin-bottom:28px;\n  }\n  .pa-cn912b-section .cb-band-model{\n    font-family:'Oswald',sans-serif;\n    font-weight:700;\n    font-size:clamp(17px,3.4vw,21px);\n    color:#ffffff;\n    letter-spacing:0.02em;\n  }\n  .pa-cn912b-section .cb-band-model span{\n    color:var(--cb-copper-dim);\n  }\n  .pa-cn912b-section .cb-band-tag{\n    margin-left:auto;\n    font-family:'Oswald',sans-serif;\n    font-size:11px;\n    letter-spacing:0.1em;\n    color:var(--cb-dark);\n    background:var(--cb-copper-dim);\n    border-radius:20px;\n    padding:5px 14px;\n  }\n  .pa-cn912b-section .cb-band-sub{\n    width:100%;\n    font-size:12.5px;\n    color:#c9c5bc;\n  }\n\n  /* ---- Size variants ---- */\n  .pa-cn912b-section .cb-sizes{\n    display:flex;\n    flex-wrap:wrap;\n    gap:8px;\n    justify-content:center;\n    margin-bottom:32px;\n  }\n  .pa-cn912b-section .cb-sizes span{\n    font-family:'Oswald',sans-serif;\n    font-size:12px;\n    letter-spacing:0.05em;\n    color:var(--cb-text-dim);\n    border:1px solid var(--cb-line);\n    border-radius:20px;\n    padding:6px 14px;\n  }\n\n  /* ---- Includes panel ---- */\n  .pa-cn912b-section .cb-includes{\n    background:var(--cb-panel);\n    border:1px solid var(--cb-line);\n    border-radius:6px;\n    padding:26px 28px;\n  }\n  .pa-cn912b-section .cb-includes-lead{\n    font-size:14px;\n    color:var(--cb-text-dim);\n    margin-bottom:18px;\n    text-align:left;\n  }\n  .pa-cn912b-section .cb-includes ul{\n    list-style:none;\n    margin:0;\n    padding:0;\n    display:flex;\n    flex-direction:column;\n  }\n  .pa-cn912b-section .cb-includes li{\n    display:flex;\n    align-items:flex-start;\n    gap:10px;\n    font-size:14.5px;\n    color:var(--cb-text);\n    text-align:left;\n    padding:12px 0;\n    border-top:1px solid var(--cb-line);\n  }\n  .pa-cn912b-section .cb-includes li:first-child{\n    border-top:none;\n  }\n  .pa-cn912b-section .cb-includes li::before{\n    content:\"\";\n    flex-shrink:0;\n    width:6px;\n    height:6px;\n    border-radius:50%;\n    background:var(--cb-copper);\n    margin-top:8px;\n  }\n  .pa-cn912b-section .cb-includes li b{\n    color:var(--cb-copper);\n    font-weight:600;\n  }\n\n  .pa-cn912b-section .cb-note{\n    margin-top:18px;\n    padding-top:16px;\n    border-top:1px dashed var(--cb-line);\n    font-size:12.5px;\n    color:var(--cb-text-dim);\n    text-align:left;\n  }\n\n  @media (max-width:520px){\n    .pa-cn912b-section{padding:44px 18px 48px;}\n    .pa-cn912b-section .cb-band-tag{margin-left:0;}\n    .pa-cn912b-section .cb-includes{padding:20px 20px;}\n  }\n</style>\n\n<div class=\"pa-cn912b-section\">\n\n  <div class=\"cb-photo\">\n    <img src=\"/images/Audio/912-4.webp\" alt=\"CYBER NAVI 912-Ⅳ Series\">\n  </div>\n\n  <div class=\"cb-band\">\n    <div class=\"cb-band-model\">CYBER NAVI <span>912-Ⅳ</span> Series</div>\n    <div class=\"cb-band-tag\">取付調整込</div>\n    <div class=\"cb-band-sub\">ネットワークスティックレスモデル</div>\n  </div>\n\n  <div class=\"cb-sizes\">\n    <span>9インチ</span>\n    <span>8インチ</span>\n    <span>7インチワイド</span>\n    <span>7インチ</span>\n  </div>\n\n  <div class=\"cb-includes\">\n    <div class=\"cb-includes-lead\">\n      サイバーナビ912Ⅳシリーズ（ネットワークスティックレスモデル）。ナビインストール費用とサイバーナビ調整費用が含まれています。\n    </div>\n    <ul>\n      <li><b>ナビ：</b>サイバーナビ 912- シリーズ</li>\n      <li>ナビ取り付け工賃</li>\n      <li>サイバーナビ調整込み</li>\n    </ul>\n    <div class=\"cb-note\">\n      車種ごとの取付金具・配線が別途必要です。ネットワークスティックは後で追加することも可能です。\n    </div>\n  </div>\n\n</div>"
           }
         },
         {
@@ -23312,7 +23299,7 @@
           "data": {
             "title": "注意事項",
             "items": [
-              "パ��ケージに��、カロッ��ェリアCYBERナビ、ナビ取付工賃・調整料金が含まれています。\n別途車種ごとの取付金具が必要になります。９インチ・８インチは電源ケーブルが同梱されていませんので別途必要です。９インチ・８インチ・７インチワイド(200mm)・７インチとありますのでお車に適合するものを取り付ける内容となっていますが、適合不可な場合でも加工することで他のサイズを施工することができる車種もありますので詳しくはご相談ください。また車種により追加が発生することがあります。\nサイバーナビはスピーカー接続を通常のフロント・リア接続、もしくはフロントマルチ接続が可能です。"
+              "パケージに、カロッェリアCYBERナビ、ナビ取付工賃・調整料金が含まれています。\n別途車種ごとの取付金具が必要になります。９インチ・８インチは電源ケーブルが同梱されていませんので別途必要です。９インチ・８インチ・７インチワイド(200mm)・７インチとありますのでお車に適合するものを取り付ける内容となっていますが、適合不可な場合でも加工することで他のサイズを施工することができる車種もありますので詳しくはご相談ください。また車種により追加が発生することがあります。\nサイバーナビはスピーカー接続を通常のフロント・リア接続、もしくはフロントマルチ接続が可能です。"
             ]
           }
         },
@@ -25705,7 +25692,7 @@
         "badge": "完全オーダー",
         "mainTitle": "カスタムインストール・ワンオフ製作",
         "subTitle": "完全オーダー",
-        "description": "プランの特徴や魅力を伝える紹介文を入力��てください。"
+        "description": "プランの特徴や魅力を伝える紹介文を入力てください。"
       },
       "pricing": {
         "specialPrice": "ASK",
@@ -26368,7 +26355,7 @@
                 "name": "CSS674",
                 "image": "/images/Audio/Speaker/CSS674.webp",
                 "standalonePrice": "40700",
-                "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。このCSシリーズは純正ナビなどの内蔵アンプでも駆動しやすく、張りのある小気味良い音が出るスピー��ーです。ツィーターは純正位置への取り付けとなります。",
+                "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。このCSシリーズは純正ナビなどの内蔵アンプでも駆動しやすく、張りのある小気味良い音が出るスピーーです。ツィーターは純正位置への取り付けとなります。",
                 "fixedPriceOverride": "19250",
                 "showCardSummary": true,
                 "cardSummaryItems": [
@@ -26988,7 +26975,7 @@
                 "name": "CSS674",
                 "image": "/images/Audio/Speaker/CSS674.webp",
                 "standalonePrice": "40700",
-                "remarks": "フロントスピーカ���をアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。このCSシリーズは純正ナビなどの内蔵アンプでも駆動しやすく、張りのある小気味良い音が出るスピーカーです。ツィーターは純正位置への取り付けとなります。",
+                "remarks": "フロントスピーカをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。このCSシリーズは純正ナビなどの内蔵アンプでも駆動しやすく、張りのある小気味良い音が出るスピーカーです。ツィーターは純正位置への取り付けとなります。",
                 "fixedPriceOverride": "20020",
                 "brandLogo": "/images/Audio/logo/kicker.webp",
                 "showCardSummary": true,
@@ -27110,7 +27097,7 @@
           "showCardSummary": true,
           "cardSummaryItems": [
             {
-              "title": "スピー��ー本体",
+              "title": "スピーー本体",
               "desc": "",
               "value": "40700"
             },
@@ -27474,7 +27461,7 @@
           "hasTweeterMount": "",
           "standalonePrice": "62700",
           "fixedPriceOverride": "０",
-          "remarks": "フロントスピーカーをカロッツェリアの製品に交換し、再生能力をアップします。上位モデルの技術を受け継いだ高い解像度のサウ��ドが楽しめます。純正ツィーターはダッシュボード上への設置となります。",
+          "remarks": "フロントスピーカーをカロッツェリアの製品に交換し、再生能力をアップします。上位モデルの技術を受け継いだ高い解像度のサウドが楽しめます。純正ツィーターはダッシュボード上への設置となります。",
           "youtubeUrl": "",
           "brandLogo": "/images/Audio/logo/carrozzeria.webp",
           "showCardSummary": true,
@@ -27656,7 +27643,7 @@
                 "hasTweeterMount": "",
                 "standalonePrice": "88000",
                 "fixedPriceOverride": "15400",
-                "remarks": "フロントスピーカーを国産ブランド「BLUEMOON AUDIO」の製品に交換し、再生能力をアップ���ます。このパッケージはジムニー専用キットとして開発されており、アルミ削り出しのバッフルや厳選されたパーツを使ったネットワークで、ジムニーのサウンドを激変させます。ツィーターはドアミラー裏のパネルへのネジ止め、またはオンダッシュ取り付けとなります",
+                "remarks": "フロントスピーカーを国産ブランド「BLUEMOON AUDIO」の製品に交換し、再生能力をアップます。このパッケージはジムニー専用キットとして開発されており、アルミ削り出しのバッフルや厳選されたパーツを使ったネットワークで、ジムニーのサウンドを激変させます。ツィーターはドアミラー裏のパネルへのネジ止め、またはオンダッシュ取り付けとなります",
                 "youtubeUrl": "",
                 "showCardSummary": true,
                 "cardSummaryItems": [
@@ -27994,7 +27981,7 @@
                 "hasTweeterMount": "",
                 "standalonePrice": "116820",
                 "fixedPriceOverride": "31900",
-                "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。ランドクルーザー300の純正スピーカーは6x9インチサイズのオーバルスピーカーですのでそのメリットを活かすべくオーバルスピーカーをチョイスしています。取り付けにはラ��ドクルーザー300専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。Aピラーツィーター、ダッシュボード両サイド、ドアスピーカーの交換となります。",
+                "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。ランドクルーザー300の純正スピーカーは6x9インチサイズのオーバルスピーカーですのでそのメリットを活かすべくオーバルスピーカーをチョイスしています。取り付けにはラドクルーザー300専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。Aピラーツィーター、ダッシュボード両サイド、ドアスピーカーの交換となります。",
                 "youtubeUrl": "",
                 "showCardSummary": true,
                 "cardSummaryItems": [
@@ -28177,7 +28164,7 @@
                 "hasTweeterMount": "",
                 "standalonePrice": "83600",
                 "fixedPriceOverride": "60225",
-                "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。A��ラーツィーター、ダッシュ左右スピーカー、ドアウーハー、ダッシュセンタースピーカーの計4箇所を交換します。",
+                "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。Aラーツィーター、ダッシュ左右スピーカー、ドアウーハー、ダッシュセンタースピーカーの計4箇所を交換します。",
                 "youtubeUrl": "",
                 "brandLogo": "/images/Audio/logo/kicker.webp",
                 "showCardSummary": true,
@@ -28425,7 +28412,7 @@
           "hasTweeterMount": "",
           "standalonePrice": "83600",
           "fixedPriceOverride": "60225",
-          "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。A��ラーツィーター、ダッシュ左右スピーカー、ドアウーハー、ダッシュセンタースピーカーの計4箇所を交換します。",
+          "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。Aラーツィーター、ダッシュ左右スピーカー、ドアウーハー、ダッシュセンタースピーカーの計4箇所を交換します。",
           "youtubeUrl": "",
           "brandLogo": "/images/Audio/logo/kicker.webp",
           "showCardSummary": true,
@@ -28900,7 +28887,7 @@
                 "hasTweeterMount": "",
                 "standalonePrice": "70620",
                 "fixedPriceOverride": "18150",
-                "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アッ��。取り付けにはプリウス専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。",
+                "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アッ。取り付けにはプリウス専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。",
                 "youtubeUrl": "",
                 "showCardSummary": true,
                 "cardSummaryItems": [
@@ -29040,7 +29027,7 @@
           "hasTweeterMount": "",
           "standalonePrice": "70620",
           "fixedPriceOverride": "18150",
-          "remarks": "フ���ントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。取り付けにはプリウス専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。",
+          "remarks": "フントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。取り付けにはプリウス専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。",
           "youtubeUrl": "",
           "showCardSummary": true,
           "cardSummaryItems": [
@@ -29263,7 +29250,7 @@
           "hasTweeterMount": "",
           "standalonePrice": "78100",
           "fixedPriceOverride": "18700",
-          "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換���て再生能力アップ。取り付けにはプリウス専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。",
+          "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換て再生能力アップ。取り付けにはプリウス専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。",
           "youtubeUrl": "",
           "showCardSummary": true,
           "cardSummaryItems": [
@@ -29494,7 +29481,7 @@
             "opacity": 0.5,
             "badge": "2015～",
             "bgColor": "",
-            "description": "JEEP RENEGADE/RENEGADE 4exに合わせたスピーカー交換プランです。できるだけコストを抑えつつ、効果的に音質アップができるようにプランニングしています。カーオーディオに興味が湧いたときには、さらにグレードアップする��とも可能です。"
+            "description": "JEEP RENEGADE/RENEGADE 4exに合わせたスピーカー交換プランです。できるだけコストを抑えつつ、効果的に音質アップができるようにプランニングしています。カーオーディオに興味が湧いたときには、さらにグレードアップするとも可能です。"
           }
         },
         {
@@ -29601,7 +29588,7 @@
           "hasTweeterMount": "",
           "standalonePrice": "72600 ",
           "fixedPriceOverride": "18700",
-          "remarks": "フロ��トスピーカーをアメリカのブランドKICKERへ交換して再生能力アップ。純正スピーカーとのトレードイン交換取り付けで車両との親和性が高く、ダッシュに取り付けるスピーカーはワイドレンジなので情報量アップで音質の差は歴然！",
+          "remarks": "フロトスピーカーをアメリカのブランドKICKERへ交換して再生能力アップ。純正スピーカーとのトレードイン交換取り付けで車両との親和性が高く、ダッシュに取り付けるスピーカーはワイドレンジなので情報量アップで音質の差は歴然！",
           "youtubeUrl": "",
           "showCardSummary": true,
           "cardSummaryItems": [
@@ -29641,7 +29628,7 @@
         "mainTitle": "タント専用プラン",
         "subTitle": "ベーシックライン",
         "badge": "スピーカー交換パッケージ",
-        "description": "コストを抑えながら、効果的に音質アップできるタント専用のスピーカー交換プランです。\nダイハ���　タント(LA650S/LA660S) (R1.7～) \nダイハツ　タント(LA600S/LA610S)　(H25.10��R1.7)"
+        "description": "コストを抑えながら、効果的に音質アップできるタント専用のスピーカー交換プランです。\nダイハ　タント(LA650S/LA660S) (R1.7～) \nダイハツ　タント(LA600S/LA610S)　(H25.10R1.7)"
       },
       "pricing": {
         "specialPrice": "81840",
@@ -29860,7 +29847,7 @@
                 "value": ""
               },
               {
-                "title": "ツイータ��取り付け",
+                "title": "ツイータ取り付け",
                 "desc": "純正位置もしくはオンダッシュ取り付け",
                 "value": ""
               }
