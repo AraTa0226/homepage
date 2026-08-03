@@ -499,7 +499,7 @@ export const MainPage: React.FC<MainPageProps> = ({
                                         transition={{ delay: idx * 0.1 }}
                                         className="group relative bg-white/5 backdrop-blur-sm rounded-[2rem] border border-white/10 overflow-hidden flex flex-col justify-between hover:bg-white/10 hover:border-blue-500/40 transition-all duration-300 shadow-xl"
                                     >
-                                        <div className="aspect-[4/3] relative overflow-hidden bg-zinc-800">
+                                        <div className="aspect-[4/3] relative overflow-hidden bg-zinc-950 flex items-center justify-center p-0.5">
                                             <SafeImage
                                                 src={speaker.image}
                                                 alt={speaker.brand}
@@ -570,7 +570,7 @@ export const MainPage: React.FC<MainPageProps> = ({
                                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 pt-2">
                                                     {bGroup.units.map((unit, uIdx) => (
                                                         <div key={uIdx} className="bg-black/40 p-4 md:p-5 rounded-2xl border border-white/10 flex items-center gap-4 hover:bg-white/10 transition-all group">
-                                                            <div className="w-20 h-20 md:w-24 md:h-24 rounded-xl overflow-hidden bg-zinc-800 shrink-0 relative">
+                                                            <div className="w-20 h-20 md:w-24 md:h-24 aspect-square rounded-xl overflow-hidden bg-zinc-950 shrink-0 relative border border-white/10 flex items-center justify-center">
                                                                 <SafeImage
                                                                     src={unit.image}
                                                                     alt={unit.model}
