@@ -13,6 +13,7 @@ import {
   Navigate
 } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
+import { resolveMenuNavigation } from './utils/navigation';
 
 // Contexts
 import { PriceProvider, usePrices } from './contexts/PriceContext';
@@ -95,7 +96,8 @@ function AppContent() {
     setSelectedCategory,
     auditionSpeakers,
     findSlugByFlexibleName,
-    securityKnowledge
+    securityKnowledge,
+    securityData
   } = usePrices();
 
   const [posts, setPosts] = useState<BlogPost[]>([]);
@@ -116,141 +118,13 @@ function AppContent() {
 
     const handleMenuClick = (item: any) => {
         setShowMegaMenu(false);
-
-        // Prioritize direct link/path if available
-        const directPath = item.link || item.path || item.url;
-        if (directPath) {
-            if (typeof directPath === 'string' && directPath.startsWith('http')) {
-                window.open(directPath, '_blank');
-            } else {
-                navigate(directPath);
-            }
-            return;
-        }
-
-        if (item.isExternal) {
-            window.open(item.url || item.path, '_blank');
-            return;
-        }
-        if (item.isAnchor) {
-            const element = document.getElementById(item.id);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
-            return;
-        }
-
-        // Handle security vehicle navigation
-        if (item.id === 'security_car') {
-            const slug = findSlugByFlexibleName(item.name) || 'special-model';
-            navigate(`/security/vehicle/${slug}`);
-            return;
-        }
-
-        // Search for category to resolve generic item clicks
-        const category = plans.find(p => p.id === item.id || p.id === item.parentId);
-        if (category) {
-            setSelectedCategory(category);
-            const targetId = item.planId || item.planName || item.name || item.slug;
-            
-            if (category.type === 'audio') {
-                const targetIdStr = String(targetId);
-                
-                // 1. Precise Match with audioLPs
-                const matchedLP = audioLPs?.find(lp => {
-                    if (!lp) return false;
-                    return (item.id && lp.id === item.id) || 
-                           (item.slug && lp.slug === item.slug) ||
-                           (lp.name === targetIdStr);
-                });
-                
-                if (matchedLP && matchedLP.slug) {
-                    navigate(`/${matchedLP.slug}`);
-                    return;
-                }
-
-                if (
-                    targetIdStr === 'スピーカー交換STANDARD line（10万円まで）' || 
-                    targetIdStr === 'STANDARD line' ||
-                    targetIdStr === 'standard-line' ||
-                    (typeof targetIdStr === 'string' && targetIdStr.includes('STANDARD line')) ||
-                    (typeof targetIdStr === 'string' && targetIdStr.includes('スタンダード'))
-                ) {
-                    navigate('/sp-standard');
-                } else if (
-                    targetIdStr.includes('BASIC') || 
-                    targetIdStr.includes('ベーシック')
-                ) {
-                    // Try to find the basic LP slug
-                    const basicLP = audioLPs?.find(lp => lp.slug?.includes('basic') || lp.name?.includes('ベーシック'));
-                    if (basicLP) {
-                        navigate(`/${basicLP.slug}`);
-                    } else {
-                        navigate(`/audio/plan/${encodeURIComponent(targetIdStr)}`);
-                    }
-                } else {
-                    navigate(`/audio/plan/${encodeURIComponent(targetIdStr)}`);
-                }
-            } else {
-                // If it's a security category without a specific path, go to security-home
-                navigate('/security-home');
-            }
-            return;
-        }
-
-        // Fallback for known brand IDs or specific Japanese names
-        const pathMap: Record<string, string> = {
-            'security_panthera': '/security/panthera',
-            'security_grgo': '/security/grgo',
-            'security_grgo_v2': '/security/grgo-v2',
-            'security_viper': '/security/viper',
-            'security_clifford': '/security/clifford',
-            'dashcam': '/security/drive_recorder',
-            'security_radar': '/security/radar',
-            'digital_mirror': '/security/digital_mirror',
-            // Japanese Name Mappings
-            'スピーカー交換STANDARD line（10万円まで）': '/sp-standard',
-            'STANDARD line': '/sp-standard',
-            'Panthera': '/security/panthera',
-            'V2': '/security/grgo-v2',
-            'VⅡ': '/security/grgo',
-            'Grgo': '/security/grgo',
-            'Viper': '/security/viper',
-            'Clifford': '/security/clifford',
-            'ドライブレコーダー': '/security/drive_recorder',
-            'レーダー探知機': '/security/radar',
-            'デジタルインナーミラー': '/security/digital_mirror',
-            'リレーアタック': '/security/relay-attack',
-            'CANインベーダー': '/security/can-invader',
-            'キーエミュレーター': '/security/key-emulator',
-            'セキュリティー診断サービス': '/security/maintain',
-            'よくあるご質問 (FAQ)': '/faq',
-            '置き去り防止': '/security/okizariboushi'
-        };
-
-        // Check for dynamic theft methods
-        if (securityKnowledge?.theftMethods) {
-            if (item.name === "過去の盗難手口をもっと見る") {
-                navigate('/security/knowledge');
-                return;
-            }
-            const dynamicMatch = securityKnowledge.theftMethods.find((m: any) => m.title === item.name);
-            if (dynamicMatch) {
-                const target = dynamicMatch.link || `/security/knowledge/${dynamicMatch.slug}`;
-                if (target.startsWith('http')) {
-                    window.open(target, '_blank');
-                } else {
-                    navigate(target);
-                }
-                return;
-            }
-        }
-
-        const targetPath = pathMap[item.id] || (item.name && Object.entries(pathMap).find(([key]) => item.name.includes(key))?.[1]);
-
-        if (targetPath) {
-            navigate(targetPath);
-        }
+        resolveMenuNavigation(item, {
+            plans,
+            audioLPs,
+            securityData,
+            findSlugByFlexibleName,
+            navigate
+        });
     };
 
   useEffect(() => {

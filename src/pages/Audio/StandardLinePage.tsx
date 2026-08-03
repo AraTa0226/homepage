@@ -4,6 +4,7 @@ import { Check, ShieldCheck, Music, Settings, Zap, ArrowRight, Info, Wrench, Mes
 import { usePrices } from '../../contexts/PriceContext';
 import { MegaMenu } from '../../components/Menu/MegaMenu';
 import { FloatingCTA } from '../../components/Shared/FloatingCTA';
+import { resolveMenuNavigation } from '../../utils/navigation';
 
 export const StandardLinePage: React.FC = () => {
   const navigate = useNavigate();
@@ -105,21 +106,23 @@ export const StandardLinePage: React.FC = () => {
       {data.sections && data.sections.length > 0 ? (
         <>
           {/* Navigation Overlay (Fixed) */}
-          <div className="fixed top-8 right-8 z-50 flex items-center gap-4">
+          <div className="fixed top-8 left-8 z-50">
             <button 
               onClick={() => navigate('/')}
-              className="bg-white/90 backdrop-blur-md shadow-lg text-gray-900 font-bold text-sm px-4 py-2.5 rounded-xl flex items-center gap-2 border border-gray-100"
+              className="bg-white/90 backdrop-blur-md shadow-lg text-gray-900 font-bold text-sm px-4 py-2.5 rounded-xl flex items-center gap-2 border border-gray-100 hover:bg-white transition-all hover:scale-105"
             >
               <ArrowRight className="w-3.5 h-3.5 rotate-180" /> HOME
             </button>
+          </div>
+          <div className="fixed top-8 right-8 z-50">
             <div className="relative group/nav" ref={menuRef} onMouseEnter={() => setIsMenuOpen(true)} onMouseLeave={() => setIsMenuOpen(false)}>
               <button 
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="bg-gray-900 shadow-xl text-white font-bold text-sm px-4 py-2.5 rounded-xl flex items-center gap-2 transition-colors border border-gray-800"
+                className="bg-white/90 backdrop-blur-md shadow-lg text-gray-900 font-bold text-sm px-4 py-2.5 rounded-xl flex items-center gap-2 border border-gray-100 hover:bg-white transition-all hover:scale-105"
               >
                 <MenuIcon className="w-3.5 h-3.5" /> MENU <ChevronDown className={"w-3.5 h-3.5 transition-transform " + (isMenuOpen ? 'rotate-180' : '')} />
               </button>
-              <MegaMenu show={isMenuOpen} categories={audioCategories} theme="dark" onClose={() => setIsMenuOpen(false)} navigate={navigate} handleMenuClick={(item) => { setIsMenuOpen(false); navigate(item.path || `/audio/plan/${item.name}`); }} positionClassName="right-0 -mr-4 md:right-0 md:mr-0" />
+              <MegaMenu show={isMenuOpen} categories={audioCategories} theme="dark" onClose={() => setIsMenuOpen(false)} navigate={navigate} handleMenuClick={(item: any) => resolveMenuNavigation(item, { plans, audioLPs, navigate, onClose: () => setIsMenuOpen(false) })} positionClassName="right-0 -mr-4 md:right-0 md:mr-0" />
             </div>
           </div>
 
@@ -371,13 +374,14 @@ export const StandardLinePage: React.FC = () => {
                 const totalSpeakers = speakersList.length;
                 const cols = section.data?.columns || 3;
                 let gridColsClass = "lg:grid-cols-3";
+                if (cols === 1) gridColsClass = "grid-cols-1";
                 if (cols === 2) gridColsClass = "lg:grid-cols-2";
                 if (cols === 4) gridColsClass = "lg:grid-cols-4";
                 let gridContainerClass = `grid grid-cols-1 md:grid-cols-2 ${gridColsClass} gap-10`;
                 if (sectionWidth !== 'full') {
                   gridContainerClass = "grid grid-cols-1 gap-6 w-full";
-                } else if (totalSpeakers === 1) {
-                  gridContainerClass = "max-w-md mx-auto";
+                } else if (cols === 1 || totalSpeakers === 1) {
+                  gridContainerClass = "max-w-2xl mx-auto w-full";
                 } else if (totalSpeakers === 2) {
                   gridContainerClass = "grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto";
                 }
@@ -434,16 +438,20 @@ export const StandardLinePage: React.FC = () => {
                           })()}
                         </div>
                       )}
-                      {section.data?.content && (
-                        <div 
-                          className="text-gray-600 font-bold text-[16px] leading-relaxed mb-12 max-w-4xl"
-                          dangerouslySetInnerHTML={{ 
-                            __html: section.data.content.includes('\n') 
-                              ? section.data.content.replace(/\n/g, '<br />') 
-                              : section.data.content 
-                          }}
-                        />
-                      )}
+                      {(() => {
+                        const descriptionText = section.data?.description || section.data?.content || section.data?.desc;
+                        if (!descriptionText) return null;
+                        return (
+                          <div 
+                            className="text-gray-600 font-bold text-[16px] leading-relaxed mb-12 max-w-4xl mx-auto text-center"
+                            dangerouslySetInnerHTML={{ 
+                              __html: descriptionText.includes('\n') 
+                                ? descriptionText.replace(/\n/g, '<br />') 
+                                : descriptionText 
+                            }}
+                          />
+                        );
+                      })()}
                       {section.data?.sectionImage && (
                         <div className="flex justify-center mb-20 w-full">
                           <div className="aspect-[16/10] w-full max-w-2xl rounded-[2.5rem] overflow-hidden border border-zinc-200/80 shadow-[0_15px_45px_-20px_rgba(0,0,0,0.08)] bg-zinc-50/50 p-6 md:p-12 flex items-center justify-center">
@@ -469,12 +477,15 @@ export const StandardLinePage: React.FC = () => {
                             </div>
                           </div>
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            {(section.data.packageSummaryItems || []).map((item: any, i: number) => (
+{(section.data.packageSummaryItems || []).map((item: any, i: number) => (
                               <div key={i} className="flex gap-5 p-6 rounded-3xl bg-gray-50 border border-gray-100 items-center justify-between hover:bg-white hover:shadow-xl transition-all group">
                                 <div className="flex gap-5 items-center">
                                   <div className="text-2xl font-black text-blue-200 group-hover:text-blue-400 italic transition-colors">0{i+1}</div>
                                   <div>
-                                    <h4 className="font-black text-gray-900 text-lg leading-tight">{item.title}</h4>
+                                    <h4 className="font-black text-gray-900 text-lg leading-tight flex items-center gap-2.5">
+                                      <div className="w-2 h-5 bg-blue-600 rounded-full shrink-0"></div>
+                                      <span>{item.title}</span>
+                                    </h4>
                                     {item.desc && <p className="text-[15px] text-gray-500 font-bold mt-1">{item.desc}</p>}
                                   </div>
                                 </div>
@@ -485,161 +496,249 @@ export const StandardLinePage: React.FC = () => {
                         </div>
                       )}
                     </div>
-                    <div className={gridContainerClass + (sectionWidth !== 'full' ? " flex-grow flex flex-col" : "")}>
-                      {speakersList.map((spk: any, i: number) => {
-                        const rawBrand = (spk.brand || '').trim();
-                        const displayBrand = rawBrand === 'ICKER' ? 'KICKER' : rawBrand;
-                        return (
-                          <div key={i} className="group flex flex-col h-full bg-white border border-zinc-200/80 rounded-[2.5rem] overflow-hidden shadow-[0_15px_45px_-20px_rgba(0,0,0,0.06)] hover:shadow-[0_30px_60px_-15px_rgba(59,130,246,0.1),0_15px_30px_-10px_rgba(0,0,0,0.04)] hover:border-blue-500/30 hover:-translate-y-2 transition-all duration-500 ease-out">
-                            {displayMode !== 'no_image' && displayMode !== 'text_only' && (
-                              <div className="aspect-square relative overflow-hidden bg-zinc-50/50 flex items-center justify-center p-12 group-hover:bg-zinc-100/50 border-b border-zinc-100 transition-colors duration-500">
-                                {spk.image && (
-                                  <img src={spk.image} alt={`${displayBrand} ${spk.name}`} className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 drop-shadow-xl" />
-                                )}
-                                <div className="absolute top-6 left-6 animate-fade-in">
-                                  {spk.brandLogo ? (
-                                    <div className={`backdrop-blur-md px-4 py-2 rounded-2xl h-11 flex items-center justify-center shadow-lg border ${
-                                      spk.logoBg === 'light' 
-                                        ? 'bg-zinc-100/95 border-zinc-200/80' 
-                                        : 'bg-black/80 border-white/20'
-                                    }`}>
-                                      <img 
-                                        src={spk.brandLogo} 
-                                        alt={displayBrand} 
-                                        className="h-full object-contain max-w-[110px]" 
-                                      />
+                    {(() => {
+                      const isUniformPriceSection = !!section.data?.summaryPriceText || (
+                        speakersList 
+                        && speakersList.length > 1 
+                        && speakersList.every((s: any) => {
+                          const p = calculateAppliedPriceForSection(s);
+                          return p > 0 && p === calculateAppliedPriceForSection(speakersList[0]);
+                        })
+                      );
+
+                      const rawSummaryPrice = section.data?.summaryPriceText 
+                        || (isUniformPriceSection && speakersList?.[0] && calculateAppliedPriceForSection(speakersList[0]) > 0 
+                            ? `${calculateAppliedPriceForSection(speakersList[0])}` 
+                            : '');
+
+                      const priceVal = parsePrice(rawSummaryPrice);
+                      const summaryPriceDisplayText = (priceVal > 0 || (section.data?.summaryPriceText && section.data.summaryPriceText.trim() !== '' && section.data.summaryPriceText !== '0')) 
+                        ? rawSummaryPrice 
+                        : '';
+
+                      const isCardPriceHidden = !!section.data?.hideCardPrice || !!summaryPriceDisplayText;
+
+                      return (
+                        <>
+                          <div className={gridContainerClass + (sectionWidth !== 'full' ? " flex-grow flex flex-col" : "")}>
+                            {speakersList.map((spk: any, i: number) => {
+                              const rawBrand = (spk.brand || '').trim();
+                              const displayBrand = rawBrand === 'ICKER' ? 'KICKER' : rawBrand;
+
+                              const hasBrandText = (displayMode === 'no_image' || displayMode === 'text_only') && !!displayBrand && !isSingleBrandSection;
+                              const hasName = !!(spk.name && spk.name.trim());
+                              const hasYoutubeInBody = !!spk.youtubeUrl && (displayMode === 'no_image' || displayMode === 'text_only');
+                              const hasSpecs = (displayMode === 'standard' || displayMode === 'no_image') && !!(spk.mountingHoleSize || spk.depthSize || spk.hasGrille || spk.hasTweeterMount);
+                              const hasCardSummary = !!spk.showCardSummary && !!(spk.cardSummaryItems && spk.cardSummaryItems.length > 0);
+                              const hasRemarks = !!(spk.remarks && spk.remarks.trim());
+                              const hasPriceInCard = !isCardPriceHidden;
+
+                              const hasTopContentInBody = hasBrandText || hasName || hasYoutubeInBody || hasSpecs || hasCardSummary || hasRemarks;
+                              const hasBodyContent = hasTopContentInBody || hasPriceInCard;
+
+                              return (
+                                <div key={i} className={`group flex flex-col bg-white border border-zinc-200/80 rounded-[2.5rem] overflow-hidden shadow-[0_15px_45px_-20px_rgba(0,0,0,0.06)] hover:shadow-[0_30px_60px_-15px_rgba(59,130,246,0.1),0_15px_30px_-10px_rgba(0,0,0,0.04)] hover:border-blue-500/30 hover:-translate-y-2 transition-all duration-500 ease-out ${isCardPriceHidden || !hasBodyContent ? 'h-auto' : 'h-full'}`}>
+                                  {displayMode !== 'no_image' && displayMode !== 'text_only' && (
+                                    <div className={`aspect-square relative overflow-hidden bg-zinc-50/50 flex items-center justify-center ${hasBodyContent ? 'p-12' : 'p-4 md:p-6'} group-hover:bg-zinc-100/50 transition-colors duration-500 ${hasBodyContent && hasTopContentInBody ? 'border-b border-zinc-100' : ''}`}>
+                                      {spk.image && (
+                                        <img src={spk.image} alt={`${displayBrand} ${spk.name || ''}`} className={`w-full h-full ${hasBodyContent ? 'object-contain drop-shadow-xl' : 'object-cover rounded-2xl shadow-sm'} transition-transform duration-700 group-hover:scale-110`} />
+                                      )}
+                                      {!section.data?.hideCardBadge && (
+                                        <div className="absolute top-6 left-6 animate-fade-in">
+                                          {spk.brandLogo ? (
+                                            <div className={`backdrop-blur-md px-4 py-2 rounded-2xl h-11 flex items-center justify-center shadow-lg border ${
+                                              spk.logoBg === 'light' 
+                                                ? 'bg-zinc-100/95 border-zinc-200/80' 
+                                                : 'bg-black/80 border-white/20'
+                                            }`}>
+                                              <img 
+                                                src={spk.brandLogo} 
+                                                alt={displayBrand} 
+                                                className="h-full object-contain max-w-[110px]" 
+                                              />
+                                            </div>
+                                          ) : (
+                                            <div className="bg-black/80 backdrop-blur-md text-white text-[12px] font-black px-4 py-2 rounded-full tracking-widest uppercase border border-white/20 shadow-lg">{displayBrand}</div>
+                                          )}
+                                        </div>
+                                      )}
+                                      {spk.youtubeUrl && (
+                                        <a 
+                                          href={spk.youtubeUrl} 
+                                          target="_blank" 
+                                          rel="noopener noreferrer" 
+                                          onClick={(e) => e.stopPropagation()}
+                                          className="absolute top-6 right-6 z-10 w-11 h-11 bg-black/60 hover:bg-[#FF0000] backdrop-blur-md text-white hover:text-white border border-white/10 rounded-full flex items-center justify-center shadow-lg hover:shadow-red-600/40 transition-all duration-300 hover:scale-110 active:scale-95"
+                                          title="YouTubeで試聴音源を聴く"
+                                        >
+                                          <Youtube className="w-5 h-5 shrink-0" />
+                                        </a>
+                                      )}
                                     </div>
-                                  ) : (
-                                    <div className="bg-black/80 backdrop-blur-md text-white text-[12px] font-black px-4 py-2 rounded-full tracking-widest uppercase border border-white/20 shadow-lg">{displayBrand}</div>
                                   )}
-                                </div>
-                                {spk.youtubeUrl && (
-                                  <a 
-                                    href={spk.youtubeUrl} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
-                                    onClick={(e) => e.stopPropagation()}
-                                    className="absolute top-6 right-6 z-10 w-11 h-11 bg-black/60 hover:bg-[#FF0000] backdrop-blur-md text-white hover:text-white border border-white/10 rounded-full flex items-center justify-center shadow-lg hover:shadow-red-600/40 transition-all duration-300 hover:scale-110 active:scale-95"
-                                    title="YouTubeで試聴音源を聴く"
-                                  >
-                                    <Youtube className="w-5 h-5 shrink-0" />
-                                  </a>
-                                )}
-                              </div>
-                            )}
-                            <div className="p-8 flex flex-col flex-grow justify-between">
-                            {(displayMode === 'no_image' || displayMode === 'text_only') && displayBrand && !isSingleBrandSection && (
-                              <div className="text-xs font-bold text-blue-600 tracking-wider uppercase mb-1">{displayBrand}</div>
-                            )}
-                            <h3 className="text-2xl font-black text-gray-900 mb-2 leading-tight">{spk.name}</h3>
-                            
-                            {spk.youtubeUrl && (displayMode === 'no_image' || displayMode === 'text_only') && (
-                              <a 
-                                href={spk.youtubeUrl} 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
-                                onClick={(e) => e.stopPropagation()}
-                                className="inline-flex items-center gap-1.5 text-xs font-black text-red-600 hover:text-red-500 mb-4 transition-colors w-fit"
-                                title="YouTubeで試聴音源を聴く"
-                              >
-                                <Youtube className="w-4 h-4 shrink-0" />
-                                <span>YouTubeで試聴</span>
-                              </a>
-                            )}
+                                  {hasBodyContent && (
+                                    <div className={`${isCardPriceHidden ? 'p-5' : (hasTopContentInBody ? 'p-8' : 'p-6')} flex flex-col flex-grow justify-between`}>
+                                      {hasBrandText && (
+                                        <div className="text-xs font-bold text-blue-600 tracking-wider uppercase mb-1">{displayBrand}</div>
+                                      )}
+                                      {spk.name && <h3 className="text-2xl font-black text-gray-900 mb-2 leading-tight">{spk.name}</h3>}
+                                      
+                                      {spk.youtubeUrl && (displayMode === 'no_image' || displayMode === 'text_only') && (
+                                        <a 
+                                          href={spk.youtubeUrl} 
+                                          target="_blank" 
+                                          rel="noopener noreferrer" 
+                                          onClick={(e) => e.stopPropagation()}
+                                          className="inline-flex items-center gap-1.5 text-xs font-black text-red-600 hover:text-red-500 mb-4 transition-colors w-fit"
+                                          title="YouTubeで試聴音源を聴く"
+                                        >
+                                          <Youtube className="w-4 h-4 shrink-0" />
+                                          <span>YouTubeで試聴</span>
+                                        </a>
+                                      )}
 
-                            {/* Technical Specs */}
-                            {(displayMode === 'standard' || displayMode === 'no_image') && (
-                              <div className="grid grid-cols-2 gap-x-6 gap-y-3 mb-8">
-                                {spk.mountingHoleSize && (
-                                  <div className="flex justify-between items-center border-b border-gray-100 pb-1.5">
-                                    <span className="text-xs font-bold text-gray-500 uppercase tracking-tighter">取付穴径</span>
-                                    <span className="text-base font-black text-gray-800">{spk.mountingHoleSize}</span>
-                                  </div>
-                                )}
-                                {spk.depthSize && (
-                                  <div className="flex justify-between items-center border-b border-gray-100 pb-1.5">
-                                    <span className="text-xs font-bold text-gray-500 uppercase tracking-tighter">取付奥行</span>
-                                    <span className="text-base font-black text-gray-800">{spk.depthSize}</span>
-                                  </div>
-                                )}
-                                {spk.hasGrille && (
-                                  <div className="flex justify-between items-center border-b border-gray-100 pb-1.5">
-                                    <span className="text-xs font-bold text-gray-500 uppercase tracking-tighter">グリル</span>
-                                    <span className="text-base font-black text-gray-800">{spk.hasGrille}</span>
-                                  </div>
-                                )}
-                                {spk.hasTweeterMount && (
-                                  <div className="flex justify-between items-center border-b border-gray-100 pb-1.5">
-                                    <span className="text-xs font-bold text-gray-500 uppercase tracking-tighter">TWマウント</span>
-                                    <span className="text-base font-black text-gray-800">{spk.hasTweeterMount}</span>
-                                  </div>
-                                )}
-                              </div>
-                            )}
+                                      {/* Technical Specs */}
+                                      {(displayMode === 'standard' || displayMode === 'no_image') && hasSpecs && (
+                                        <div className="grid grid-cols-2 gap-x-6 gap-y-3 mb-6">
+                                          {spk.mountingHoleSize && (
+                                            <div className="flex justify-between items-center border-b border-gray-100 pb-1.5">
+                                              <span className="text-xs font-bold text-gray-500 uppercase tracking-tighter">取付穴径</span>
+                                              <span className="text-base font-black text-gray-800">{spk.mountingHoleSize}</span>
+                                            </div>
+                                          )}
+                                          {spk.depthSize && (
+                                            <div className="flex justify-between items-center border-b border-gray-100 pb-1.5">
+                                              <span className="text-xs font-bold text-gray-500 uppercase tracking-tighter">取付奥行</span>
+                                              <span className="text-base font-black text-gray-800">{spk.depthSize}</span>
+                                            </div>
+                                          )}
+                                          {spk.hasGrille && (
+                                            <div className="flex justify-between items-center border-b border-gray-100 pb-1.5">
+                                              <span className="text-xs font-bold text-gray-500 uppercase tracking-tighter">グリル</span>
+                                              <span className="text-base font-black text-gray-800">{spk.hasGrille}</span>
+                                            </div>
+                                          )}
+                                          {spk.hasTweeterMount && (
+                                            <div className="flex justify-between items-center border-b border-gray-100 pb-1.5">
+                                              <span className="text-xs font-bold text-gray-500 uppercase tracking-tighter">TWマウント</span>
+                                              <span className="text-base font-black text-gray-800">{spk.hasTweeterMount}</span>
+                                            </div>
+                                          )}
+                                        </div>
+                                      )}
 
-                            {spk.showCardSummary && (
-                              <div className="mb-6 bg-gray-50/50 rounded-2xl border border-gray-100 p-4 space-y-2 text-left">
-                                <div className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1.5">パッケージ内容</div>
-                                <div className="space-y-1.5">
-                                  {(spk.cardSummaryItems || []).map((item: any, cIdx: number) => (
-                                    <div key={cIdx} className="flex justify-between items-center text-sm text-gray-700 font-bold border-b border-gray-100/50 last:border-0 pb-1.5 last:pb-0">
-                                      <div>
-                                        <span className="font-bold text-gray-800">{item.title}</span>
-                                        {item.desc && <span className="text-xs text-gray-400 font-normal ml-2">({item.desc})</span>}
-                                      </div>
-                                      {item.value && <span className="text-xs text-gray-500 font-black">{item.value}</span>}
-                                    </div>
-                                  ))}
-                                </div>
-                              </div>
-                            )}
-
-                            {spk.remarks && <p className="text-gray-600 text-base font-bold mb-8 flex-grow leading-relaxed" dangerouslySetInnerHTML={{ __html: '● ' + spk.remarks.replace(/\n/g, '<br />') }} />}
-                            
-                            <div className="pt-6 border-t border-gray-100">
-                              {spk.prices && spk.prices.length > 0 ? (
-                                <div className="space-y-4">
-                                  {spk.prices.map((pItem: any, pIdx: number) => {
-                                    const priceVal = parsePrice(pItem.price);
-                                    const taxExcluded = Math.round(priceVal / (1 + (data.pricing?.taxRate || 10) / 100));
-                                    return (
-                                      <div key={pIdx} className="border-b border-gray-100 last:border-0 pb-3 last:pb-0">
-                                        <div className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">{pItem.label || 'パッケージ合計 (税込)'}</div>
-                                        <div className="flex justify-between items-end">
-                                          <div className="flex items-baseline gap-2">
-                                            <div className="text-2xl font-black text-blue-600 tracking-tighter">¥{priceVal.toLocaleString()}</div>
-                                            <div className="text-xs text-gray-400 uppercase italic">incl. tax</div>
-                                          </div>
-                                          <div className="text-right">
-                                            <span className="text-xs text-gray-400 uppercase tracking-tighter mr-1">(税別)</span>
-                                            <span className="text-base font-black text-gray-600 italic">¥{taxExcluded.toLocaleString()}</span>
+                                      {spk.showCardSummary && (
+                                        <div className="mb-6 bg-gray-50/50 rounded-2xl border border-gray-100 p-4 space-y-2 text-left">
+                                          <div className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1.5">パッケージ内容</div>
+                                          <div className="space-y-1.5">
+                                            {(spk.cardSummaryItems || []).map((item: any, cIdx: number) => (
+                                              <div key={cIdx} className="flex justify-between items-center text-sm text-gray-700 font-bold border-b border-gray-100/50 last:border-0 pb-1.5 last:pb-0">
+                                                <div>
+                                                  <span className="font-bold text-gray-800">{item.title}</span>
+                                                  {item.desc && <span className="text-xs text-gray-400 font-normal ml-2">({item.desc})</span>}
+                                                </div>
+                                                {item.value && <span className="text-xs text-gray-500 font-black">{item.value}</span>}
+                                              </div>
+                                            ))}
                                           </div>
                                         </div>
+                                      )}
+
+                                      {spk.remarks && <p className="text-gray-600 text-base font-bold mb-6 flex-grow leading-relaxed" dangerouslySetInnerHTML={{ __html: '● ' + spk.remarks.replace(/\n/g, '<br />') }} />}
+                                      
+                                      {!isCardPriceHidden && (
+                                        <div className={hasTopContentInBody ? "pt-6 border-t border-gray-100" : ""}>
+                                          {spk.prices && spk.prices.length > 0 ? (
+                                            <div className="space-y-4">
+                                              {spk.prices.map((pItem: any, pIdx: number) => {
+                                                const priceVal = parsePrice(pItem.price);
+                                                const taxExcluded = Math.round(priceVal / (1 + (data.pricing?.taxRate || 10) / 100));
+                                                return (
+                                                  <div key={pIdx} className="border-b border-gray-100 last:border-0 pb-3 last:pb-0">
+                                                    <div className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">{pItem.label || 'パッケージ合計 (税込)'}</div>
+                                                    <div className="flex justify-between items-end">
+                                                      <div className="flex items-baseline gap-2">
+                                                        <div className="text-2xl font-black text-blue-600 tracking-tighter">¥{priceVal.toLocaleString()}</div>
+                                                        <div className="text-xs text-gray-400 uppercase italic">incl. tax</div>
+                                                      </div>
+                                                      <div className="text-right">
+                                                        <span className="text-xs text-gray-400 uppercase tracking-tighter mr-1">(税別)</span>
+                                                        <span className="text-base font-black text-gray-600 italic">¥{taxExcluded.toLocaleString()}</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                );
+                                              })}
+                                            </div>
+                                          ) : (
+                                            <div className="flex justify-between items-end">
+                                              <div>
+                                                <div className="text-base font-bold text-gray-500 tracking-widest uppercase mb-1">パッケージ合計 (税込)</div>
+                                                <div className="flex items-baseline gap-2">
+                                                  <div className="text-3xl font-black text-blue-600 tracking-tighter">¥{calculateAppliedPriceForSection(spk).toLocaleString()}</div>
+                                                  <div className="text-xs text-gray-400 uppercase italic">incl. tax</div>
+                                                </div>
+                                              </div>
+                                              <div className="text-right pb-1">
+                                                <div className="text-xs text-gray-400 uppercase tracking-tighter">(税別)</div>
+                                                <div className="text-base font-black text-gray-600 italic">¥{Math.round(calculateAppliedPriceForSection(spk) / (1 + (data.pricing.taxRate || 10) / 100)).toLocaleString()}</div>
+                                              </div>
+                                            </div>
+                                          )}
+                                        </div>
+                                      )}
+                                    </div>
+                                  )}
+                                </div>
+                              );
+                            })}
+                          </div>
+
+                          {summaryPriceDisplayText && (
+                            <div className="mt-12 w-full max-w-4xl mx-auto">
+                              <div className="bg-white border border-gray-200/90 rounded-3xl p-6 md:p-8 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+                                <div className="flex items-center gap-4 text-left">
+                                  <div className="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center shrink-0">
+                                    <Music className="w-6 h-6" />
+                                  </div>
+                                  <h4 className="text-lg md:text-xl font-black text-gray-900 leading-tight">
+                                    {section.data.summaryPriceTitle || (section.data.title ? `${section.data.title} 施工パッケージ` : '施工パッケージ')}
+                                  </h4>
+                                </div>
+                                
+                                <div className="text-right shrink-0 flex flex-col md:items-end gap-1">
+                                  {(() => {
+                                    const priceVal = parsePrice(summaryPriceDisplayText);
+                                    if (priceVal > 0) {
+                                      const taxExcluded = Math.round(priceVal / (1 + (data.pricing?.taxRate || 10) / 100));
+                                      return (
+                                        <>
+                                          <div className="flex items-baseline gap-2 justify-end">
+                                            <div className="text-3xl md:text-4xl font-black text-blue-600 tracking-tighter">
+                                              ¥{priceVal.toLocaleString()}
+                                            </div>
+                                            <div className="text-xs font-bold text-gray-400">（税込）</div>
+                                          </div>
+                                          <div className="text-xs text-gray-500 font-bold text-right">
+                                            <span className="uppercase tracking-tighter mr-1">(税別)</span>
+                                            <span className="font-black italic">¥{taxExcluded.toLocaleString()}</span>
+                                          </div>
+                                        </>
+                                      );
+                                    }
+                                    return (
+                                      <div className="text-2xl md:text-4xl font-black text-blue-600 tracking-tighter">
+                                        {summaryPriceDisplayText}
                                       </div>
                                     );
-                                  })}
+                                  })()}
                                 </div>
-                              ) : (
-                                <div className="flex justify-between items-end">
-                                  <div>
-                                    <div className="text-base font-bold text-gray-500 tracking-widest uppercase mb-1">パッケージ合計 (税込)</div>
-                                    <div className="flex items-baseline gap-2">
-                                      <div className="text-3xl font-black text-blue-600 tracking-tighter">¥{calculateAppliedPriceForSection(spk).toLocaleString()}</div>
-                                      <div className="text-xs text-gray-400 uppercase italic">incl. tax</div>
-                                    </div>
-                                  </div>
-                                  <div className="text-right pb-1">
-                                    <div className="text-xs text-gray-400 uppercase tracking-tighter">(税別)</div>
-                                    <div className="text-base font-black text-gray-600 italic">¥{Math.round(calculateAppliedPriceForSection(spk) / (1 + (data.pricing.taxRate || 10) / 100)).toLocaleString()}</div>
-                                  </div>
-                                </div>
-                              )}
+                              </div>
                             </div>
-                          </div>
-                        </div>
+                          )}
+                        </>
                       );
-                    })}
-                    </div>
+                    })()}
                   </div>
                 );
               }
@@ -791,19 +890,115 @@ export const StandardLinePage: React.FC = () => {
                     </div>
                   </div>
                 );
-              case 'gallery':
+              case 'gallery': {
+                const rawImages = section.data?.images || [];
+                let groups: any[] = section.data?.groups;
+                
+                if (!groups || groups.length === 0) {
+                  const items = rawImages.map((img: any) => {
+                    if (typeof img === 'string') {
+                      return { url: img, title: '', caption: '' };
+                    }
+                    return { url: img.url || '', title: img.title || '', caption: img.caption || '' };
+                  });
+                  if (items.length > 0) {
+                    groups = [{ id: 'grp_default', title: '', items }];
+                  } else {
+                    groups = [];
+                  }
+                }
+
+                const totalItems = groups.reduce((acc: number, grp: any) => acc + (grp.items?.length || 0), 0);
+                if (totalItems === 0) return null;
+
+                const columns = section.data?.columns || 3;
+                let gridColsClass = "grid-cols-1 md:grid-cols-3";
+                if (columns === 2) gridColsClass = "grid-cols-1 md:grid-cols-2";
+                if (columns === 4) gridColsClass = "grid-cols-2 md:grid-cols-4";
+
+                const aspectRatioSetting = section.data?.aspectRatio || '4:3';
+                let aspectClass = "aspect-[4/3]";
+                let objectFitClass = "object-cover";
+
+                if (aspectRatioSetting === '1:1' || aspectRatioSetting === 'square') {
+                  aspectClass = "aspect-square";
+                  objectFitClass = "object-cover";
+                } else if (aspectRatioSetting === 'contain' || aspectRatioSetting === 'auto') {
+                  aspectClass = "aspect-[4/3]";
+                  objectFitClass = "object-contain bg-zinc-100/60";
+                } else {
+                  aspectClass = "aspect-[4/3]";
+                  objectFitClass = "object-cover";
+                }
+
                 return (
-                  <div key={section.id} className="max-w-7xl mx-auto px-6 py-20">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                      {(section.data.images || []).map((img:string, i:number) => (
-                        <div key={i} className={`relative overflow-hidden rounded-3xl aspect-square group ${i % 5 === 0 ? 'md:col-span-2 md:row-span-2' : ''}`}>
-                          <img src={img} alt={`Gallery ${i}`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                          <div className="absolute inset-0 bg-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                        </div>
-                      ))}
+                  <div key={section.id} className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-20 border-b border-gray-100">
+                    {(section.data?.title || section.data?.subtitle) && (
+                      <div className="flex flex-col md:flex-row items-baseline justify-between gap-4 mb-12 border-b-4 border-gray-900 pb-8">
+                        {section.data.title && (
+                          <h2 className="text-3xl md:text-5xl font-black text-gray-900 italic tracking-tighter uppercase leading-none" dangerouslySetInnerHTML={{ __html: section.data.title.includes('<br') || section.data.title.includes('\n') ? section.data.title.replace(/\n/g, '<br />') : section.data.title }} />
+                        )}
+                        {section.data.subtitle && (
+                          <p className="text-gray-500 font-black tracking-widest uppercase text-[15px]">{section.data.subtitle}</p>
+                        )}
+                      </div>
+                    )}
+                    <div className="space-y-12">
+                      {groups.map((group: any, gIdx: number) => {
+                        const items = group.items || [];
+                        if (items.length === 0) return null;
+                        return (
+                          <div key={group.id || gIdx} className="space-y-6">
+                            {(group.title || group.description || group.desc) && (
+                              <div className="space-y-2">
+                                {group.title && (
+                                  <h3 className="text-xl md:text-2xl font-black text-gray-800 leading-snug flex items-center gap-3">
+                                    <div className="w-2 h-7 bg-blue-600 rounded-full shrink-0"></div>
+                                    <span>{group.title}</span>
+                                  </h3>
+                                )}
+                                {(group.description || group.desc) && (
+                                  <p 
+                                    className="text-gray-600 font-bold leading-relaxed text-sm md:text-base whitespace-pre-line pl-5"
+                                    dangerouslySetInnerHTML={{ 
+                                      __html: (group.description || group.desc).includes('\n') 
+                                        ? (group.description || group.desc).replace(/\n/g, '<br />') 
+                                        : (group.description || group.desc) 
+                                    }}
+                                  />
+                                )}
+                              </div>
+                            )}
+                            <div className={`grid ${gridColsClass} gap-6 md:gap-8`}>
+                              {items.map((item: any, i: number) => {
+                                const imageUrl = typeof item === 'string' ? item : item.url;
+                                if (!imageUrl) return null;
+                                return (
+                                  <div key={i} className="group flex flex-col bg-white border border-zinc-200/80 rounded-[2.5rem] overflow-hidden shadow-[0_15px_45px_-20px_rgba(0,0,0,0.06)] hover:shadow-2xl hover:border-blue-500/30 hover:-translate-y-2 transition-all duration-500 ease-out">
+                                    <div className={`${aspectClass} relative overflow-hidden bg-zinc-50 flex items-center justify-center p-3 md:p-4`}>
+                                      <img 
+                                        src={imageUrl} 
+                                        alt={item.title || `Gallery image ${i+1}`} 
+                                        className={`w-full h-full ${objectFitClass} rounded-2xl shadow-sm transition-transform duration-700 group-hover:scale-110`} 
+                                      />
+                                    </div>
+                                    {(item.title || item.caption) && (
+                                      <div className="p-6 border-t border-gray-100 flex flex-col justify-between">
+                                        {item.title && <h4 className="text-lg font-black text-gray-900 mb-1">{item.title}</h4>}
+                                        {item.caption && <p className="text-sm font-bold text-gray-500 leading-relaxed">{item.caption}</p>}
+                                      </div>
+                                    )}
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        );
+                      })}
                     </div>
                   </div>
                 );
+              }
               case 'package_summary':
                 return (
                   <div key={section.id} className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-20">
@@ -824,7 +1019,10 @@ export const StandardLinePage: React.FC = () => {
                           <div className="flex gap-5 items-center">
                             <div className="text-2xl font-black text-blue-200 group-hover:text-blue-400 italic transition-colors">0{i+1}</div>
                             <div>
-                              <h3 className="font-black text-gray-900 text-lg leading-tight">{item.title}</h3>
+                              <h3 className="font-black text-gray-900 text-lg leading-tight flex items-center gap-2.5">
+                                <div className="w-2 h-5 bg-blue-600 rounded-full shrink-0"></div>
+                                <span>{item.title}</span>
+                              </h3>
                               <p className="text-[15px] text-gray-500 font-bold mt-1">{item.desc}</p>
                             </div>
                           </div>
@@ -901,8 +1099,8 @@ export const StandardLinePage: React.FC = () => {
               <div className="flex justify-between items-center mb-10 relative z-20">
                 <button onClick={() => navigate('/')} className="text-gray-400 hover:text-white font-bold text-[15px] flex items-center gap-2 transition-colors group"><ArrowRight className="w-4 h-4 rotate-180 group-hover:-translate-x-1 transition-transform" />トップページへ戻る</button>
                 <div className="relative group/nav" ref={menuRef} onMouseEnter={() => setIsMenuOpen(true)} onMouseLeave={() => setIsMenuOpen(false)}>
-                  <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="bg-gray-800 hover:bg-gray-700 text-white font-bold text-[15px] px-4 py-2.5 rounded-xl flex items-center gap-2 transition-colors border border-gray-700 shadow-sm"><MenuIcon className="w-4 h-4" /><span className="hidden sm:inline">MENU (他のプラン)</span><span className="sm:hidden">Menu</span><ChevronDown className={"w-4 h-4 transition-transform ml-1 " + (isMenuOpen ? 'rotate-180' : '')} /></button>
-                  <MegaMenu show={isMenuOpen} categories={audioCategories} theme="dark" onClose={() => setIsMenuOpen(false)} navigate={navigate} handleMenuClick={(item) => { setIsMenuOpen(false); navigate(item.path || `/audio/plan/${item.name}`); }} positionClassName="right-0 -mr-4 md:right-0 md:mr-0" />
+                  <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="bg-white/90 hover:bg-white text-gray-900 font-bold text-[15px] px-4 py-2.5 rounded-xl flex items-center gap-2 transition-colors border border-gray-100 shadow-md"><MenuIcon className="w-4 h-4" /><span className="hidden sm:inline">MENU (他のプラン)</span><span className="sm:hidden">Menu</span><ChevronDown className={"w-4 h-4 transition-transform ml-1 " + (isMenuOpen ? 'rotate-180' : '')} /></button>
+                  <MegaMenu show={isMenuOpen} categories={audioCategories} theme="dark" onClose={() => setIsMenuOpen(false)} navigate={navigate} handleMenuClick={(item: any) => resolveMenuNavigation(item, { plans, audioLPs, navigate, onClose: () => setIsMenuOpen(false) })} positionClassName="right-0 -mr-4 md:right-0 md:mr-0" />
                 </div>
               </div>
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-6"><div className="text-3xl md:text-4xl font-black italic tracking-[0.3em] text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">SOUND ANG</div><div className="text-left md:text-right"><div className="text-[15px] md:text-base font-bold text-gray-400 tracking-widest uppercase">Speaker Installation Package</div></div></div>

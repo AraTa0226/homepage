@@ -2069,7 +2069,7 @@ const AudioPlanManager = () => {
 
                 return (
                     <div className="space-y-6">
-                        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                        <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
                             <div className="space-y-1.5">
                                 <label className="block text-[10px] font-bold text-zinc-400">セクションタイトル</label>
                                 <input 
@@ -2086,6 +2086,26 @@ const AudioPlanManager = () => {
                                     onChange={e => updateSectionData(sIdx, { subtitle: e.target.value })}
                                     rows={2}
                                     className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-white text-xs font-bold focus:border-blue-500 outline-none"
+                                />
+                            </div>
+                            <div className="space-y-1.5">
+                                <label className="block text-[10px] font-bold text-zinc-400">一律料金カード タイトル (任意)</label>
+                                <input 
+                                    type="text"
+                                    value={section.data.summaryPriceTitle || ''}
+                                    onChange={e => updateSectionData(sIdx, { summaryPriceTitle: e.target.value })}
+                                    className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-white text-xs font-bold"
+                                    placeholder="例: プランB 施工パッケージ"
+                                />
+                            </div>
+                            <div className="space-y-1.5">
+                                <label className="block text-[10px] font-bold text-zinc-400">一律料金テキスト (任意)</label>
+                                <input 
+                                    type="text"
+                                    value={section.data.summaryPriceText || ''}
+                                    onChange={e => updateSectionData(sIdx, { summaryPriceText: e.target.value })}
+                                    className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-blue-400 text-xs font-bold"
+                                    placeholder="例: 69300 または ¥69,300"
                                 />
                             </div>
                             <div className="space-y-1.5">
@@ -2111,6 +2131,24 @@ const AudioPlanManager = () => {
                         </div>
 
                         <div className="flex flex-wrap items-center gap-6 pt-2">
+                            <label className="flex items-center gap-2 cursor-pointer bg-black/40 border border-zinc-800 px-3 py-1.5 rounded-lg">
+                                <input 
+                                    type="checkbox"
+                                    checked={!!section.data.hideCardPrice}
+                                    onChange={e => updateSectionData(sIdx, { hideCardPrice: e.target.checked })}
+                                    className="rounded border-zinc-800 bg-zinc-900 text-blue-600 focus:ring-0"
+                                />
+                                <span className="text-[10px] font-bold text-zinc-300">カード内の金額を隠す (非表示)</span>
+                            </label>
+                            <label className="flex items-center gap-2 cursor-pointer bg-black/40 border border-zinc-800 px-3 py-1.5 rounded-lg">
+                                <input 
+                                    type="checkbox"
+                                    checked={!!section.data.hideCardBadge}
+                                    onChange={e => updateSectionData(sIdx, { hideCardBadge: e.target.checked })}
+                                    className="rounded border-zinc-800 bg-zinc-900 text-blue-600 focus:ring-0"
+                                />
+                                <span className="text-[10px] font-bold text-zinc-300">カード内のバッジを隠す (非表示)</span>
+                            </label>
                             <label className="flex items-center gap-2 cursor-pointer">
                                 <input 
                                     type="checkbox"
@@ -2184,6 +2222,7 @@ const AudioPlanManager = () => {
                                     onChange={e => updateSectionData(sIdx, { columns: parseInt(e.target.value) })}
                                     className="bg-black border border-zinc-800 rounded px-2 py-1 text-white text-[10px] font-bold outline-none"
                                 >
+                                    <option value={1}>1列 (1 Column)</option>
                                     <option value={2}>2列 (2 Columns)</option>
                                     <option value={3}>3列 (3 Columns)</option>
                                     <option value={4}>4列 (4 Columns)</option>
@@ -2641,6 +2680,149 @@ const AudioPlanManager = () => {
                                                 />
                                             </div>
 
+                                            {/* Option Item Settings */}
+                                            <div className="space-y-3 pt-3 border-t border-zinc-800/40">
+                                                <div className="flex items-center justify-between">
+                                                    <div className="flex items-center gap-2">
+                                                        <span className="text-[9px] font-bold text-zinc-500">カード内にオプション品を表示する</span>
+                                                        <button 
+                                                            type="button"
+                                                            onClick={() => {
+                                                                const next = [...speakersList];
+                                                                next[idx] = { ...spk, showOption: !spk.showOption };
+                                                                updateSectionData(sIdx, { speakers: next });
+                                                            }}
+                                                            className={`px-3 py-1 rounded text-[8px] font-bold transition-all ${
+                                                                spk.showOption ? 'bg-blue-600 text-white' : 'bg-zinc-900 border border-zinc-800 text-zinc-500'
+                                                            }`}
+                                                        >
+                                                            {spk.showOption ? 'ON' : 'OFF'}
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+                                                {spk.showOption && (() => {
+                                                    const currentOptions = Array.isArray(spk.options) ? spk.options : (spk.optionName || spk.optionText || spk.optionPrice || spk.optionImage ? [{
+                                                        image: spk.optionImage || '',
+                                                        name: spk.optionName || '',
+                                                        text: spk.optionText || '',
+                                                        price: spk.optionPrice || ''
+                                                    }] : []);
+
+                                                    return (
+                                                        <div className="space-y-4">
+                                                            <div className="flex justify-between items-center">
+                                                                <span className="text-[9px] font-bold text-zinc-500">オプション品リスト (最大4個)</span>
+                                                                {currentOptions.length < 4 && (
+                                                                    <button 
+                                                                        type="button"
+                                                                        onClick={() => {
+                                                                            const next = [...speakersList];
+                                                                            const options = [...currentOptions, { image: '', name: '', text: '', price: '' }];
+                                                                            next[idx] = { ...spk, options };
+                                                                            updateSectionData(sIdx, { speakers: next });
+                                                                        }}
+                                                                        className="px-2 py-0.5 bg-zinc-900 border border-zinc-700 hover:bg-zinc-800 text-white rounded text-[8px] font-bold transition-colors"
+                                                                    >
+                                                                        オプションを追加
+                                                                    </button>
+                                                                )}
+                                                            </div>
+
+                                                            <div className="space-y-3">
+                                                                {currentOptions.map((opt: any, optIdx: number) => (
+                                                                    <div key={optIdx} className="bg-zinc-900/40 p-3 rounded-lg border border-zinc-800/60 relative space-y-3">
+                                                                        <div className="flex justify-between items-center border-b border-zinc-800/40 pb-1.5">
+                                                                            <span className="text-[8px] font-bold text-blue-400">オプション #{optIdx + 1}</span>
+                                                                            <button 
+                                                                                type="button"
+                                                                                onClick={() => {
+                                                                                    const next = [...speakersList];
+                                                                                    const options = currentOptions.filter((_: any, i: number) => i !== optIdx);
+                                                                                    next[idx] = { ...spk, options };
+                                                                                    updateSectionData(sIdx, { speakers: next });
+                                                                                }}
+                                                                                className="text-zinc-600 hover:text-red-400 p-0.5"
+                                                                                title="オプションを削除"
+                                                                            >
+                                                                                <Trash2 className="w-3.5 h-3.5" />
+                                                                            </button>
+                                                                        </div>
+
+                                                                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                                                            <div className="space-y-1.5">
+                                                                                <label className="block text-[8px] font-bold text-zinc-500">オプション画像パス</label>
+                                                                                <input 
+                                                                                    type="text"
+                                                                                    value={opt.image || ''}
+                                                                                    onChange={e => {
+                                                                                        const next = [...speakersList];
+                                                                                        const options = [...currentOptions];
+                                                                                        options[optIdx] = { ...opt, image: cleanPathInput(e.target.value) };
+                                                                                        next[idx] = { ...spk, options };
+                                                                                        updateSectionData(sIdx, { speakers: next });
+                                                                                    }}
+                                                                                    className="w-full bg-zinc-900 border border-zinc-800 rounded px-2 py-1 text-white text-[10px] font-bold"
+                                                                                    placeholder="/images/..."
+                                                                                />
+                                                                            </div>
+                                                                            <div className="space-y-1.5">
+                                                                                <label className="block text-[8px] font-bold text-zinc-500">商品名</label>
+                                                                                <input 
+                                                                                    type="text"
+                                                                                    value={opt.name || ''}
+                                                                                    onChange={e => {
+                                                                                        const next = [...speakersList];
+                                                                                        const options = [...currentOptions];
+                                                                                        options[optIdx] = { ...opt, name: e.target.value };
+                                                                                        next[idx] = { ...spk, options };
+                                                                                        updateSectionData(sIdx, { speakers: next });
+                                                                                    }}
+                                                                                    className="w-full bg-zinc-900 border border-zinc-800 rounded px-2 py-1 text-white text-[10px] font-bold"
+                                                                                    placeholder="例: アルミインナーバッフル"
+                                                                                />
+                                                                            </div>
+                                                                            <div className="space-y-1.5">
+                                                                                <label className="block text-[8px] font-bold text-zinc-500">オプション価格 (税込)</label>
+                                                                                <input 
+                                                                                    type="text"
+                                                                                    value={opt.price || ''}
+                                                                                    onChange={e => {
+                                                                                        const next = [...speakersList];
+                                                                                        const options = [...currentOptions];
+                                                                                        options[optIdx] = { ...opt, price: e.target.value };
+                                                                                        next[idx] = { ...spk, options };
+                                                                                        updateSectionData(sIdx, { speakers: next });
+                                                                                    }}
+                                                                                    className="w-full bg-zinc-900 border border-zinc-800 rounded px-2 py-1 text-white text-[10px] font-bold"
+                                                                                    placeholder="例: ¥11,000"
+                                                                                />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div className="space-y-1.5">
+                                                                            <label className="block text-[8px] font-bold text-zinc-500">オプションテキスト (改行対応)</label>
+                                                                            <textarea 
+                                                                                value={opt.text || ''}
+                                                                                onChange={e => {
+                                                                                    const next = [...speakersList];
+                                                                                    const options = [...currentOptions];
+                                                                                    options[optIdx] = { ...opt, text: e.target.value };
+                                                                                    next[idx] = { ...spk, options };
+                                                                                    updateSectionData(sIdx, { speakers: next });
+                                                                                }}
+                                                                                rows={2}
+                                                                                className="w-full bg-zinc-900 border border-zinc-800 rounded px-2 py-1 text-white text-[10px] font-bold focus:border-blue-500 outline-none"
+                                                                                placeholder="説明文を入力（改行可能、空欄でも可）"
+                                                                            />
+                                                                        </div>
+                                                                    </div>
+                                                                ))}
+                                                            </div>
+                                                        </div>
+                                                    );
+                                                })()}
+                                            </div>
+
                                             {/* Card Specific Package Summary */}
                                             <div className="space-y-3 pt-3 border-t border-zinc-800/40">
                                                 <div className="flex items-center justify-between">
@@ -2678,62 +2860,79 @@ const AudioPlanManager = () => {
                                                 </div>
 
                                                 {spk.showCardSummary && (
-                                                    <div className="space-y-2 pl-2 border-l border-zinc-800">
-                                                        {(spk.cardSummaryItems || []).map((cItem: any, cIdx: number) => (
-                                                            <div key={cIdx} className="flex gap-2 items-center">
-                                                                <input 
-                                                                    type="text"
-                                                                    value={cItem.title || ''}
-                                                                    onChange={e => {
-                                                                        const next = [...speakersList];
-                                                                        const cardSummaryItems = [...spk.cardSummaryItems];
-                                                                        cardSummaryItems[cIdx] = { ...cItem, title: e.target.value };
-                                                                        next[idx] = { ...spk, cardSummaryItems };
-                                                                        updateSectionData(sIdx, { speakers: next });
-                                                                    }}
-                                                                    placeholder="項目名 (例: スピーカー本体)"
-                                                                    className="w-1/3 bg-zinc-900 border border-zinc-800 rounded px-2 py-1 text-white text-[9px] font-bold focus:border-blue-500 outline-none"
-                                                                />
-                                                                <input 
-                                                                    type="text"
-                                                                    value={cItem.desc || ''}
-                                                                    onChange={e => {
-                                                                        const next = [...speakersList];
-                                                                        const cardSummaryItems = [...spk.cardSummaryItems];
-                                                                        cardSummaryItems[cIdx] = { ...cItem, desc: e.target.value };
-                                                                        next[idx] = { ...spk, cardSummaryItems };
-                                                                        updateSectionData(sIdx, { speakers: next });
-                                                                    }}
-                                                                    placeholder="補足 (例: UD-K124付属)"
-                                                                    className="flex-1 bg-zinc-900 border border-zinc-800 rounded px-2 py-1 text-white text-[9px] font-bold focus:border-blue-500 outline-none"
-                                                                />
-                                                                <input 
-                                                                    type="text"
-                                                                    value={cItem.value || ''}
-                                                                    onChange={e => {
-                                                                        const next = [...speakersList];
-                                                                        const cardSummaryItems = [...spk.cardSummaryItems];
-                                                                        cardSummaryItems[cIdx] = { ...cItem, value: e.target.value };
-                                                                        next[idx] = { ...spk, cardSummaryItems };
-                                                                        updateSectionData(sIdx, { speakers: next });
-                                                                    }}
-                                                                    placeholder="値"
-                                                                    className="w-20 bg-zinc-900 border border-zinc-800 rounded px-2 py-1 text-white text-[9px] font-bold text-right focus:border-blue-500 outline-none"
-                                                                />
-                                                                <button 
-                                                                    type="button"
-                                                                    onClick={() => {
-                                                                        const next = [...speakersList];
-                                                                        const cardSummaryItems = spk.cardSummaryItems.filter((_: any, i: number) => i !== cIdx);
-                                                                        next[idx] = { ...spk, cardSummaryItems };
-                                                                        updateSectionData(sIdx, { cardSummaryItems });
-                                                                    }}
-                                                                    className="p-1 text-zinc-600 hover:text-red-400"
-                                                                >
-                                                                    <Trash2 className="w-3.5 h-3.5" />
-                                                                </button>
-                                                            </div>
-                                                        ))}
+                                                    <div className="space-y-4 pl-2 border-l border-zinc-800">
+                                                        <div className="space-y-1.5 max-w-sm pb-2 border-b border-zinc-900/60">
+                                                            <label className="block text-[9px] font-bold text-zinc-500">見出しテキスト (デフォルト: パッケージ内容)</label>
+                                                            <input 
+                                                                type="text"
+                                                                value={spk.cardSummaryTitle || ''}
+                                                                onChange={e => {
+                                                                    const next = [...speakersList];
+                                                                    next[idx] = { ...spk, cardSummaryTitle: e.target.value };
+                                                                    updateSectionData(sIdx, { speakers: next });
+                                                                }}
+                                                                placeholder="パッケージ内容"
+                                                                className="w-full bg-zinc-900 border border-zinc-800 rounded px-2.5 py-1 text-white text-[10px] font-bold focus:border-blue-500/50 outline-none"
+                                                            />
+                                                        </div>
+
+                                                        <div className="space-y-2">
+                                                            {(spk.cardSummaryItems || []).map((cItem: any, cIdx: number) => (
+                                                                <div key={cIdx} className="flex gap-2 items-center">
+                                                                    <input 
+                                                                        type="text"
+                                                                        value={cItem.title || ''}
+                                                                        onChange={e => {
+                                                                            const next = [...speakersList];
+                                                                            const cardSummaryItems = [...spk.cardSummaryItems];
+                                                                            cardSummaryItems[cIdx] = { ...cItem, title: e.target.value };
+                                                                            next[idx] = { ...spk, cardSummaryItems };
+                                                                            updateSectionData(sIdx, { speakers: next });
+                                                                        }}
+                                                                        placeholder="項目名 (例: スピーカー本体)"
+                                                                        className="w-1/3 bg-zinc-900 border border-zinc-800 rounded px-2 py-1 text-white text-[9px] font-bold focus:border-blue-500 outline-none"
+                                                                    />
+                                                                    <input 
+                                                                        type="text"
+                                                                        value={cItem.desc || ''}
+                                                                        onChange={e => {
+                                                                            const next = [...speakersList];
+                                                                            const cardSummaryItems = [...spk.cardSummaryItems];
+                                                                            cardSummaryItems[cIdx] = { ...cItem, desc: e.target.value };
+                                                                            next[idx] = { ...spk, cardSummaryItems };
+                                                                            updateSectionData(sIdx, { speakers: next });
+                                                                        }}
+                                                                        placeholder="補足 (例: UD-K124付属)"
+                                                                        className="flex-1 bg-zinc-900 border border-zinc-800 rounded px-2 py-1 text-white text-[9px] font-bold focus:border-blue-500 outline-none"
+                                                                    />
+                                                                    <input 
+                                                                        type="text"
+                                                                        value={cItem.value || ''}
+                                                                        onChange={e => {
+                                                                            const next = [...speakersList];
+                                                                            const cardSummaryItems = [...spk.cardSummaryItems];
+                                                                            cardSummaryItems[cIdx] = { ...cItem, value: e.target.value };
+                                                                            next[idx] = { ...spk, cardSummaryItems };
+                                                                            updateSectionData(sIdx, { speakers: next });
+                                                                        }}
+                                                                        placeholder="値"
+                                                                        className="w-20 bg-zinc-900 border border-zinc-800 rounded px-2 py-1 text-white text-[9px] font-bold text-right focus:border-blue-500 outline-none"
+                                                                    />
+                                                                    <button 
+                                                                        type="button"
+                                                                        onClick={() => {
+                                                                            const next = [...speakersList];
+                                                                            const cardSummaryItems = spk.cardSummaryItems.filter((_: any, i: number) => i !== cIdx);
+                                                                            next[idx] = { ...spk, cardSummaryItems };
+                                                                            updateSectionData(sIdx, { speakers: next });
+                                                                        }}
+                                                                        className="p-1 text-zinc-600 hover:text-red-400"
+                                                                    >
+                                                                        <Trash2 className="w-3.5 h-3.5" />
+                                                                    </button>
+                                                                </div>
+                                                            ))}
+                                                        </div>
                                                     </div>
                                                 )}
                                             </div>
@@ -2747,7 +2946,7 @@ const AudioPlanManager = () => {
                                                         onClick={() => {
                                                             const next = [...speakersList];
                                                             const prices = spk.prices ? [...spk.prices] : [];
-                                                            prices.push({ label: '', price: '' });
+                                                            prices.push({ label: '', price: '', isSetDiscount: false });
                                                             next[idx] = { ...spk, prices };
                                                             updateSectionData(sIdx, { speakers: next });
                                                         }}
@@ -2756,48 +2955,117 @@ const AudioPlanManager = () => {
                                                         価格を追加
                                                     </button>
                                                 </div>
-                                                {(spk.prices || []).map((pItem: any, pIdx: number) => (
-                                                    <div key={pIdx} className="flex gap-2 items-center">
-                                                        <input 
-                                                            type="text"
-                                                            value={pItem.label || ''}
-                                                            onChange={e => {
-                                                                const next = [...speakersList];
-                                                                const prices = [...spk.prices];
-                                                                prices[pIdx] = { ...pItem, label: e.target.value };
-                                                                next[idx] = { ...spk, prices };
-                                                                updateSectionData(sIdx, { speakers: next });
-                                                            }}
-                                                            placeholder="例: アルファード・ヴェルファイア(Z)"
-                                                            className="flex-1 bg-zinc-900 border border-zinc-800 rounded px-2.5 py-1.5 text-white text-[10px] font-bold focus:border-blue-500 outline-none"
-                                                        />
-                                                        <input 
-                                                            type="text"
-                                                            value={pItem.price || ''}
-                                                            onChange={e => {
-                                                                const next = [...speakersList];
-                                                                const prices = [...spk.prices];
-                                                                prices[pIdx] = { ...pItem, price: e.target.value };
-                                                                next[idx] = { ...spk, prices };
-                                                                updateSectionData(sIdx, { speakers: next });
-                                                            }}
-                                                            placeholder="価格 (例: 99550)"
-                                                            className="w-28 bg-zinc-900 border border-zinc-800 rounded px-2.5 py-1.5 text-white text-[10px] font-bold text-right focus:border-blue-500 outline-none"
-                                                        />
-                                                        <button 
-                                                            type="button"
-                                                            onClick={() => {
-                                                                const next = [...speakersList];
-                                                                const prices = spk.prices.filter((_: any, i: number) => i !== pIdx);
-                                                                next[idx] = { ...spk, prices };
-                                                                updateSectionData(sIdx, { speakers: next });
-                                                            }}
-                                                            className="p-1 text-zinc-600 hover:text-red-400"
-                                                        >
-                                                            <Trash2 className="w-3.5 h-3.5" />
-                                                        </button>
-                                                    </div>
-                                                ))}
+                                                {(spk.prices || []).map((pItem: any, pIdx: number) => {
+                                                    let initialCourse = pItem.courseName;
+                                                    let displayLabel = pItem.label || '';
+                                                    if (initialCourse === undefined && displayLabel) {
+                                                        const match = displayLabel.match(/[（\(]([^）\)]+)[）\)]/);
+                                                        if (match && match[1]) {
+                                                            initialCourse = match[1].trim();
+                                                        }
+                                                    }
+
+                                                    const currentType = (pItem.isAdd || pItem.priceType === 'add')
+                                                        ? 'add' 
+                                                        : (pItem.isSetDiscount || pItem.priceType === 'set' ? 'set' : 'normal');
+
+                                                    return (
+                                                        <div key={pIdx} className="flex gap-2 items-center">
+                                                            <input 
+                                                                type="text"
+                                                                value={pItem.courseName !== undefined ? pItem.courseName : (initialCourse || '')}
+                                                                onChange={e => {
+                                                                    const next = [...speakersList];
+                                                                    const prices = [...spk.prices];
+                                                                    prices[pIdx] = { ...pItem, courseName: e.target.value };
+                                                                    next[idx] = { ...spk, prices };
+                                                                    updateSectionData(sIdx, { speakers: next });
+                                                                }}
+                                                                placeholder="コース名 (例: デッドニング＆遮音)"
+                                                                className="w-44 bg-zinc-900 border border-zinc-800 rounded px-2.5 py-1.5 text-blue-400 text-[10px] font-bold focus:border-blue-500 outline-none"
+                                                                title="コース名・グループ名"
+                                                            />
+                                                            <input 
+                                                                type="text"
+                                                                value={pItem.label || ''}
+                                                                onChange={e => {
+                                                                    const next = [...speakersList];
+                                                                    const prices = [...spk.prices];
+                                                                    prices[pIdx] = { ...pItem, label: e.target.value };
+                                                                    next[idx] = { ...spk, prices };
+                                                                    updateSectionData(sIdx, { speakers: next });
+                                                                }}
+                                                                placeholder="車種・ラベル (例: 軽自動車・コンパクトカー...)"
+                                                                className="flex-1 bg-zinc-900 border border-zinc-800 rounded px-2.5 py-1.5 text-white text-[10px] font-bold focus:border-blue-500 outline-none"
+                                                            />
+                                                            <button
+                                                                type="button"
+                                                                onClick={() => {
+                                                                    const next = [...speakersList];
+                                                                    const prices = [...spk.prices];
+                                                                    let nextItem = { ...pItem };
+                                                                    if (currentType === 'normal') {
+                                                                        nextItem.isSetDiscount = true;
+                                                                        nextItem.isAdd = false;
+                                                                        nextItem.priceType = 'set';
+                                                                    } else if (currentType === 'set') {
+                                                                        nextItem.isSetDiscount = false;
+                                                                        nextItem.isAdd = true;
+                                                                        nextItem.priceType = 'add';
+                                                                    } else {
+                                                                        nextItem.isSetDiscount = false;
+                                                                        nextItem.isAdd = false;
+                                                                        nextItem.priceType = 'normal';
+                                                                    }
+                                                                    prices[pIdx] = nextItem;
+                                                                    next[idx] = { ...spk, prices };
+                                                                    updateSectionData(sIdx, { speakers: next });
+                                                                }}
+                                                                className={`px-2.5 py-1.5 rounded text-[9px] font-bold border transition-colors shrink-0 ${
+                                                                    currentType === 'set'
+                                                                        ? 'bg-red-950/80 border-red-600 text-red-400 font-black' 
+                                                                        : currentType === 'add'
+                                                                            ? 'bg-emerald-950/80 border-emerald-600 text-emerald-400 font-black'
+                                                                            : 'bg-zinc-900 border-zinc-800 text-zinc-500 hover:bg-zinc-800'
+                                                                }`}
+                                                                title="価格タイプの切り替え (通常 ⇄ セット割り ⇄ 追加)"
+                                                            >
+                                                                {currentType === 'set' ? 'セット割り' : currentType === 'add' ? '追加' : '通常'}
+                                                            </button>
+                                                            <input 
+                                                                type="text"
+                                                                value={pItem.price || ''}
+                                                                onChange={e => {
+                                                                    const next = [...speakersList];
+                                                                    const prices = [...spk.prices];
+                                                                    prices[pIdx] = { ...pItem, price: e.target.value };
+                                                                    next[idx] = { ...spk, prices };
+                                                                    updateSectionData(sIdx, { speakers: next });
+                                                                }}
+                                                                placeholder="価格 (例: 99550)"
+                                                                className={`w-28 bg-zinc-900 border rounded px-2.5 py-1.5 text-[10px] font-bold text-right outline-none ${
+                                                                    currentType === 'set' 
+                                                                        ? 'text-red-400 border-red-900/60 focus:border-red-500' 
+                                                                        : currentType === 'add'
+                                                                            ? 'text-emerald-400 border-emerald-900/60 focus:border-emerald-500'
+                                                                            : 'text-white border-zinc-800 focus:border-blue-500'
+                                                                }`}
+                                                            />
+                                                            <button 
+                                                                type="button"
+                                                                onClick={() => {
+                                                                    const next = [...speakersList];
+                                                                    const prices = spk.prices.filter((_: any, i: number) => i !== pIdx);
+                                                                    next[idx] = { ...spk, prices };
+                                                                    updateSectionData(sIdx, { speakers: next });
+                                                                }}
+                                                                className="p-1 text-zinc-600 hover:text-red-400"
+                                                            >
+                                                                <Trash2 className="w-3.5 h-3.5" />
+                                                            </button>
+                                                        </div>
+                                                    );
+                                                })}
                                             </div>
 
                                             {/* Price calculations indicators */}
@@ -2817,6 +3085,50 @@ const AudioPlanManager = () => {
                                         </div>
                                     );
                                 })}
+                            </div>
+
+                            {/* セクション最下部の追加・ペーストボタン */}
+                            <div className="flex justify-end gap-3 pt-4 border-t border-zinc-800/40">
+                                {copiedSpeaker ? (
+                                    <button 
+                                        type="button"
+                                        onClick={() => {
+                                            const newSpk = Object.assign({}, copiedSpeaker || {}, {
+                                                id: "spk_" + Date.now() + "_" + Math.random().toString(36).substring(2,6)
+                                            });
+                                            const nextSpks = speakersList.concat([newSpk]);
+                                            updateSectionData(sIdx, { speakers: nextSpks });
+                                        }}
+                                        className="flex items-center gap-1.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-white px-2.5 py-1.5 rounded-lg text-[10px] font-black"
+                                    >
+                                        <Plus className="w-3.5 h-3.5 text-green-400" /> Paste Speaker
+                                    </button>
+                                ) : null}
+                                <button 
+                                    type="button"
+                                    onClick={() => {
+                                        const newSpk = {
+                                            id: `spk_${Date.now()}_${Math.random().toString(36).substring(2,6)}`,
+                                            brand: 'メーカー名',
+                                            brandLogo: '',
+                                            name: '製品名',
+                                            image: '/images/Top/speaker.webp',
+                                            mountingHoleSize: '140mm',
+                                            depthSize: '50mm',
+                                            hasGrille: '付属',
+                                            hasTweeterMount: '付属',
+                                            standalonePrice: '¥30,000',
+                                            fixedPriceOverride: '',
+                                            remarks: '',
+                                            youtubeUrl: ''
+                                        };
+                                        const nextSpks = [...speakersList, newSpk];
+                                        updateSectionData(sIdx, { speakers: nextSpks });
+                                    }}
+                                    className="flex items-center gap-1.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-white px-2.5 py-1.5 rounded-lg text-[10px] font-black"
+                                >
+                                    <Plus className="w-3.5 h-3.5 text-blue-400" /> スピーカーを追加
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -3246,63 +3558,237 @@ const AudioPlanManager = () => {
                 );
             }
             case 'gallery': {
-                const galleryImages = section.data.images || [];
+                const rawImages = section.data.images || [];
+                const columns = section.data.columns || 4;
+                
+                let groups: any[] = section.data.groups;
+                if (!groups) {
+                    const items = rawImages.map((img: any) => {
+                        if (typeof img === 'string') {
+                            return { url: img, title: '', caption: '' };
+                        }
+                        return { url: img.url || '', title: img.title || '', caption: img.caption || '' };
+                    });
+                    groups = [{ id: 'grp_default', title: '', items }];
+                }
+
                 return (
                     <div className="space-y-6">
-                        <div className="space-y-1.5">
-                            <label className="block text-[10px] font-bold text-zinc-400">セクションタイトル</label>
-                            <input 
-                                type="text"
-                                value={section.data.title || ''}
-                                onChange={e => updateSectionData(sIdx, { title: e.target.value })}
-                                className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-white text-xs font-bold"
-                            />
+                        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                            <div className="space-y-1.5 md:col-span-1">
+                                <label className="block text-[10px] font-bold text-zinc-400">セクションタイトル</label>
+                                <input 
+                                    type="text"
+                                    value={section.data.title || ''}
+                                    onChange={e => updateSectionData(sIdx, { title: e.target.value })}
+                                    placeholder="例: 施工ギャラリー"
+                                    className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-white text-xs font-bold"
+                                />
+                            </div>
+                            <div className="space-y-1.5 md:col-span-1">
+                                <label className="block text-[10px] font-bold text-zinc-400">サブタイトル (任意)</label>
+                                <input 
+                                    type="text"
+                                    value={section.data.subtitle || ''}
+                                    onChange={e => updateSectionData(sIdx, { subtitle: e.target.value })}
+                                    placeholder="例: 当社の施工実績一覧"
+                                    className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-white text-xs font-bold"
+                                />
+                            </div>
+                            <div className="space-y-1.5 md:col-span-1">
+                                <label className="block text-[10px] font-bold text-zinc-400">横並びの個数 (カラム数)</label>
+                                <select
+                                    value={columns}
+                                    onChange={e => updateSectionData(sIdx, { columns: parseInt(e.target.value) || 4 })}
+                                    className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-white text-xs font-bold outline-none"
+                                >
+                                    <option value={2}>2列 (大きめ表示)</option>
+                                    <option value={3}>3列 (標準)</option>
+                                    <option value={4}>4列 (コンパクト)</option>
+                                </select>
+                            </div>
+                            <div className="space-y-1.5 md:col-span-1">
+                                <label className="block text-[10px] font-bold text-zinc-400">画像アスペクト比</label>
+                                <select
+                                    value={section.data.aspectRatio || '4:3'}
+                                    onChange={e => updateSectionData(sIdx, { aspectRatio: e.target.value })}
+                                    className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-white text-xs font-bold outline-none"
+                                >
+                                    <option value="4:3">4:3 (400×300 横長)</option>
+                                    <option value="1:1">1:1 (正方形)</option>
+                                    <option value="contain">全体表示 (切抜きなし)</option>
+                                </select>
+                            </div>
                         </div>
 
-                        <div className="space-y-4 pt-4 border-t border-zinc-800/60">
+                        <div className="space-y-6 pt-4 border-t border-zinc-800/60">
                             <div className="flex justify-between items-center">
-                                <label className="block text-[10px] font-black text-zinc-400">施工画像一覧</label>
+                                <label className="block text-[11px] font-black text-zinc-300">施工グループ管理</label>
                                 <button 
                                     type="button"
                                     onClick={() => {
-                                        const images = [...galleryImages];
-                                        images.push('/images/Top/speaker.webp');
-                                        updateSectionData(sIdx, { images });
+                                        const newGroups = [...groups];
+                                        newGroups.push({
+                                            id: `grp_${Date.now()}_${Math.random().toString(36).substring(2,6)}`,
+                                            title: '新しい施工グループ',
+                                            items: []
+                                        });
+                                        updateSectionData(sIdx, { groups: newGroups });
                                     }}
-                                    className="flex items-center gap-1.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-white px-2.5 py-1.5 rounded-lg text-[10px] font-black"
+                                    className="flex items-center gap-1.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-white px-3 py-1.5 rounded-lg text-[10px] font-black"
                                 >
-                                    <Plus className="w-3.5 h-3.5 text-blue-400" /> 画像を追加
+                                    <Plus className="w-3.5 h-3.5 text-blue-400" /> グループを追加
                                 </button>
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                {galleryImages.map((img: string, imgIdx: number) => (
-                                    <div key={imgIdx} className="bg-black/40 border border-zinc-800 p-4 rounded-xl flex items-center gap-4 relative">
-                                        <button 
-                                            type="button"
-                                            onClick={() => {
-                                                const images = galleryImages.filter((_: any, i: number) => i !== imgIdx);
-                                                updateSectionData(sIdx, { images });
-                                            }}
-                                            className="absolute top-2 right-2 p-1 text-zinc-600 hover:text-red-400 hover:bg-red-500/10 rounded transition-all"
-                                        >
-                                            <Trash2 className="w-3.5 h-3.5" />
-                                        </button>
-                                        <div className="w-16 h-16 bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden shrink-0 flex items-center justify-center">
-                                            <img src={img} alt="Preview" className="w-full h-full object-cover" />
+                            <div className="space-y-6">
+                                {groups.map((grp: any, gIdx: number) => (
+                                    <div key={grp.id || gIdx} className="bg-black/30 border border-zinc-800/80 rounded-2xl p-4 space-y-4">
+                                        <div className="flex justify-between items-center gap-4">
+                                            <div className="flex-1 space-y-2">
+                                                <div>
+                                                    <label className="block text-[9px] font-bold text-zinc-500 mb-1">グループ名 (例: ドアチューニング施工)</label>
+                                                    <input 
+                                                        type="text"
+                                                        value={grp.title || ''}
+                                                        onChange={e => {
+                                                            const newGroups = [...groups];
+                                                            newGroups[gIdx] = { ...grp, title: e.target.value };
+                                                            updateSectionData(sIdx, { groups: newGroups });
+                                                        }}
+                                                        placeholder="例: フロントドア防音施工"
+                                                        className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-1.5 text-white text-xs font-bold focus:border-blue-500 outline-none"
+                                                    />
+                                                </div>
+                                                <div>
+                                                    <label className="block text-[9px] font-bold text-zinc-500 mb-1">グループ説明文 (改行可)</label>
+                                                    <textarea 
+                                                        rows={2}
+                                                        value={grp.description || grp.desc || ''}
+                                                        onChange={e => {
+                                                            const newGroups = [...groups];
+                                                            newGroups[gIdx] = { ...grp, description: e.target.value };
+                                                            updateSectionData(sIdx, { groups: newGroups });
+                                                        }}
+                                                        placeholder="例: お客様のご要望に応じてカスタム可能ですのでお気軽にご相談ください。"
+                                                        className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-1.5 text-white text-xs font-bold focus:border-blue-500 outline-none resize-y"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div className="flex items-center gap-2 pt-4">
+                                                <button 
+                                                    type="button"
+                                                    onClick={() => {
+                                                        const newGroups = [...groups];
+                                                        const items = [...(grp.items || [])];
+                                                        items.push({ url: '/images/Top/speaker.webp', title: '', caption: '' });
+                                                        newGroups[gIdx] = { ...grp, items };
+                                                        updateSectionData(sIdx, { groups: newGroups });
+                                                    }}
+                                                    className="flex items-center gap-1 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-white px-2.5 py-1.5 rounded-lg text-[10px] font-bold"
+                                                >
+                                                    <Plus className="w-3 h-3 text-blue-400" /> 画像追加
+                                                </button>
+                                                {groups.length > 1 && (
+                                                    <button 
+                                                        type="button"
+                                                        onClick={() => {
+                                                            const newGroups = groups.filter((_: any, i: number) => i !== gIdx);
+                                                            updateSectionData(sIdx, { groups: newGroups });
+                                                        }}
+                                                        className="p-1.5 text-zinc-600 hover:text-red-400 hover:bg-red-500/10 rounded-lg transition-all"
+                                                        title="グループを削除"
+                                                    >
+                                                        <Trash2 className="w-4 h-4" />
+                                                    </button>
+                                                )}
+                                            </div>
                                         </div>
-                                        <div className="flex-1 space-y-1">
-                                            <label className="block text-[9px] font-bold text-zinc-500">画像パス</label>
-                                            <input 
-                                                type="text"
-                                                value={img}
-                                                onChange={e => {
-                                                    const images = [...galleryImages];
-                                                    images[imgIdx] = cleanPathInput(e.target.value);
-                                                    updateSectionData(sIdx, { images });
-                                                }}
-                                                className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-2.5 py-1 text-white text-xs font-bold pr-8"
-                                            />
+
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
+                                            {(grp.items || []).map((item: any, itemIdx: number) => {
+                                                const imgUrl = typeof item === 'string' ? item : item.url;
+                                                const itemTitle = typeof item === 'string' ? '' : (item.title || '');
+                                                const itemCaption = typeof item === 'string' ? '' : (item.caption || '');
+
+                                                return (
+                                                    <div key={itemIdx} className="bg-zinc-900/90 border border-zinc-800/80 p-3 rounded-xl flex items-start gap-3 relative">
+                                                        <button 
+                                                            type="button"
+                                                            onClick={() => {
+                                                                const newGroups = [...groups];
+                                                                const newItems = grp.items.filter((_: any, i: number) => i !== itemIdx);
+                                                                newGroups[gIdx] = { ...grp, items: newItems };
+                                                                updateSectionData(sIdx, { groups: newGroups });
+                                                            }}
+                                                            className="absolute top-2 right-2 p-1 text-zinc-600 hover:text-red-400 hover:bg-red-500/10 rounded transition-all"
+                                                            title="画像削除"
+                                                        >
+                                                            <Trash2 className="w-3.5 h-3.5" />
+                                                        </button>
+
+                                                        <div className="w-20 h-20 bg-black border border-zinc-800 rounded-lg overflow-hidden shrink-0 flex items-center justify-center mt-1">
+                                                            <img src={imgUrl} alt="Preview" className="w-full h-full object-cover" />
+                                                        </div>
+
+                                                        <div className="flex-1 space-y-2 pr-6">
+                                                            <div>
+                                                                <label className="block text-[8px] font-bold text-zinc-500">画像パス</label>
+                                                                <input 
+                                                                    type="text"
+                                                                    value={imgUrl}
+                                                                    onChange={e => {
+                                                                        const newGroups = [...groups];
+                                                                        const newItems = [...grp.items];
+                                                                        const current = typeof item === 'string' ? { url: item, title: '', caption: '' } : { ...item };
+                                                                        newItems[itemIdx] = { ...current, url: cleanPathInput(e.target.value) };
+                                                                        newGroups[gIdx] = { ...grp, items: newItems };
+                                                                        updateSectionData(sIdx, { groups: newGroups });
+                                                                    }}
+                                                                    className="w-full bg-black/60 border border-zinc-800 rounded px-2 py-1 text-white text-[10px] font-bold"
+                                                                    placeholder="/images/..."
+                                                                />
+                                                            </div>
+
+                                                            <div>
+                                                                <label className="block text-[8px] font-bold text-zinc-500">画像タイトル (任意)</label>
+                                                                <input 
+                                                                    type="text"
+                                                                    value={itemTitle}
+                                                                    onChange={e => {
+                                                                        const newGroups = [...groups];
+                                                                        const newItems = [...grp.items];
+                                                                        const current = typeof item === 'string' ? { url: item, title: '', caption: '' } : { ...item };
+                                                                        newItems[itemIdx] = { ...current, title: e.target.value };
+                                                                        newGroups[gIdx] = { ...grp, items: newItems };
+                                                                        updateSectionData(sIdx, { groups: newGroups });
+                                                                    }}
+                                                                    className="w-full bg-black/60 border border-zinc-800 rounded px-2 py-1 text-white text-[10px] font-bold"
+                                                                    placeholder="例: フロントドア制振処理"
+                                                                />
+                                                            </div>
+
+                                                            <div>
+                                                                <label className="block text-[8px] font-bold text-zinc-500">画像説明文 (任意)</label>
+                                                                <input 
+                                                                    type="text"
+                                                                    value={itemCaption}
+                                                                    onChange={e => {
+                                                                        const newGroups = [...groups];
+                                                                        const newItems = [...grp.items];
+                                                                        const current = typeof item === 'string' ? { url: item, title: '', caption: '' } : { ...item };
+                                                                        newItems[itemIdx] = { ...current, caption: e.target.value };
+                                                                        newGroups[gIdx] = { ...grp, items: newItems };
+                                                                        updateSectionData(sIdx, { groups: newGroups });
+                                                                    }}
+                                                                    className="w-full bg-black/60 border border-zinc-800 rounded px-2 py-1 text-white text-[10px] font-bold"
+                                                                    placeholder="例: アウターパネルに制振シートを密着施工"
+                                                                />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                );
+                                            })}
                                         </div>
                                     </div>
                                 ))}

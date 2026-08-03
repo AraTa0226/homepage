@@ -74,6 +74,7 @@ export const MainPage: React.FC<MainPageProps> = ({
 
     const audioCategories = (Array.isArray(plans) ? plans : []).filter(p => p && p.type === 'audio').map(p => ({
         ...p,
+        title: p.title || p.category || p.name || '',
         items: (Array.isArray(p.items) ? p.items : []).map((item: any) => {
             if (typeof item === 'string') return item;
             return item;

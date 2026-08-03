@@ -50,12 +50,12 @@ export const VaultGrid: React.FC<VaultGridProps> = ({ categories, onCategoryClic
                     {/* Content HUD */}
                     <div className="relative z-10 p-6 md:p-10 flex flex-col min-h-full">
                         <div className={`mb-2 md:mb-4 flex items-center gap-2 ${theme === 'dark' ? 'text-emerald-400' : 'text-blue-600'}`}>
-                            <span className="text-[10px] font-black uppercase tracking-[0.3em]">{cat.subtitle}</span>
+                            <span className="text-[10px] font-black uppercase tracking-[0.3em]">{cat.subtitle || 'AUDIO PLAN'}</span>
                             <div className="h-[1px] flex-grow bg-current opacity-30" />
                         </div>
 
-                        <h3 className={`text-2xl md:text-5xl font-black tracking-tighter mb-6 md:mb-8 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                            {cat.title}
+                        <h3 className={`text-base md:text-lg font-black tracking-tight mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                            {cat.title || cat.category || cat.name || ''}
                         </h3>
 
                         {/* Standard Items or Groups */}
@@ -98,10 +98,10 @@ export const VaultGrid: React.FC<VaultGridProps> = ({ categories, onCategoryClic
                             </div>
                         ) : (
                             <div className="relative z-10 flex flex-col flex-grow pb-4 max-w-[95%]">
-                                <div className={`flex items-center gap-3 mb-6 border-b-2 pb-2 ${theme === 'dark' ? 'border-white/20' : 'border-gray-200'}`}>
-                                    <div className={`w-2 h-2 rounded-full ${theme === 'dark' ? 'bg-emerald-500' : 'bg-blue-600 shadow-[0_0_10px_rgba(37,99,235,0.4)]'}`} />
-                                    <span className={`text-xs md:text-sm font-black tracking-[0.2em] uppercase ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                                        Menu Lineup
+                                <div className={`flex items-center gap-2.5 mb-5 border-b pb-2 ${theme === 'dark' ? 'border-white/10' : 'border-gray-100'}`}>
+                                    <div className={`w-1.5 h-1.5 rounded-full ${theme === 'dark' ? 'bg-emerald-500' : 'bg-blue-600 shadow-[0_0_10px_rgba(37,99,235,0.4)]'}`} />
+                                    <span className={`text-xs font-black tracking-[0.2em] uppercase ${theme === 'dark' ? 'text-emerald-400' : 'text-blue-600'}`}>
+                                        LINEUP
                                     </span>
                                 </div>
                                 <div className="space-y-3">

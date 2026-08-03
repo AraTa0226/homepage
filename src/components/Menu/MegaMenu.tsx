@@ -11,7 +11,7 @@ export const MegaMenu = ({ show, categories, theme, onClose, navigate, handleMen
                     exit={{ opacity: 0, y: 10 }}
                     className={`absolute top-full pt-4 z-50 pointer-events-auto ${positionClassName}`}
                 >
-                    <div className={`rounded-3xl shadow-2xl overflow-hidden border ${theme === 'dark' ? 'bg-black border-emerald-500/20' : 'bg-white border-gray-100'} p-10 w-[1100px]`}>
+                    <div className="rounded-3xl shadow-2xl overflow-hidden border border-gray-200/80 bg-white p-10 w-[1100px]">
                         <div className="grid grid-cols-5 gap-8">
                             {categories.map((cat: any) => (
                                 <div key={cat.id} className="flex flex-col gap-4">
@@ -31,10 +31,10 @@ export const MegaMenu = ({ show, categories, theme, onClose, navigate, handleMen
                                                 }
                                             }
                                         }}
-                                        className={`flex flex-col gap-1 border-b ${theme === 'dark' ? 'border-emerald-500/10' : 'border-gray-100'} pb-3 group/header ${(cat.groups || ['security_car', 'security_options', 'maintenance', 'security_full'].includes(cat.id)) ? 'cursor-default' : 'cursor-pointer'}`}
+                                        className={`flex flex-col gap-1 border-b border-gray-100 pb-3 group/header ${(cat.groups || ['security_car', 'security_options', 'maintenance', 'security_full'].includes(cat.id)) ? 'cursor-default' : 'cursor-pointer'}`}
                                     >
-                                        <span className={`text-[9px] font-black tracking-[0.2em] ${theme === 'dark' ? 'text-emerald-500' : 'text-blue-600'} uppercase`}>{cat.subtitle}</span>
-                                        <span className={`text-[13px] font-black tracking-tight transition-colors ${theme === 'dark' ? 'text-white group-hover/header:text-emerald-500' : 'text-gray-900 group-hover/header:text-blue-600'}`}>
+                                        <span className={`text-[9px] font-black tracking-[0.2em] ${theme === 'dark' ? 'text-emerald-600' : 'text-blue-600'} uppercase`}>{cat.subtitle}</span>
+                                        <span className={`text-[13px] font-black tracking-tight text-gray-900 transition-colors ${theme === 'dark' ? 'group-hover/header:text-emerald-600' : 'group-hover/header:text-blue-600'}`}>
                                             {(cat.title || cat.category || '').split('・')[0]}
                                         </span>
                                     </div>
@@ -43,7 +43,7 @@ export const MegaMenu = ({ show, categories, theme, onClose, navigate, handleMen
                                             <div className="grid grid-cols-1 gap-6 py-2">
                                                 {cat.groups.map((group: any, gIdx: number) => (
                                                     <div key={gIdx} className="space-y-2">
-                                                        <div className={`text-[9px] font-black ${theme === 'dark' ? 'text-emerald-500/60 border-emerald-500/5' : 'text-gray-500/50 border-gray-100'} tracking-[0.2em] border-b pb-1 mb-2 uppercase`}>
+                                                        <div className="text-[9px] font-black text-gray-400 border-gray-100 tracking-[0.2em] border-b pb-1 mb-2 uppercase">
                                                             {group.name}
                                                         </div>
                                                         <div className="flex flex-col gap-1.5">
@@ -59,9 +59,9 @@ export const MegaMenu = ({ show, categories, theme, onClose, navigate, handleMen
                                                                             onClose();
                                                                             handleMenuClick({ id: cat.id, name: item });
                                                                         }}
-                                                                        className={`text-left text-[11px] font-bold ${theme === 'dark' ? 'text-gray-500 hover:text-emerald-600' : 'text-gray-400 hover:text-blue-600'} transition-colors flex items-center gap-2 group/mlink`}
+                                                                        className={`text-left text-[11px] font-bold text-gray-600 ${theme === 'dark' ? 'hover:text-emerald-600' : 'hover:text-blue-600'} transition-colors flex items-center gap-2 group/mlink`}
                                                                     >
-                                                                        <div className={`w-1 h-1 rounded-full bg-gray-100 ${theme === 'dark' ? 'group-hover/mlink:bg-emerald-400' : 'group-hover/mlink:bg-blue-400'} transition-colors`} />
+                                                                        <div className={`w-1.5 h-1.5 rounded-full bg-gray-200 ${theme === 'dark' ? 'group-hover/mlink:bg-emerald-500' : 'group-hover/mlink:bg-blue-500'} transition-colors`} />
                                                                         {displayName}
                                                                     </button>
                                                                 );
@@ -81,14 +81,13 @@ export const MegaMenu = ({ show, categories, theme, onClose, navigate, handleMen
                                                             if (cat.isExternal) {
                                                                 window.open(cat.path, '_blank');
                                                             } else {
-                                                                // Pass the full item object if it's an object, otherwise construct one
                                                                 const clickItem = typeof item === 'object' && item !== null ? { ...(item as object), parentId: cat.id } : { id: cat.id, name: item };
                                                                 handleMenuClick(clickItem);
                                                             }
                                                         }}
-                                                        className={`text-[11px] font-bold ${theme === 'dark' ? 'text-gray-400 hover:text-emerald-500' : 'text-gray-400 hover:text-blue-600'} transition-all hover:translate-x-1 text-left flex items-center gap-2 group/link`}
+                                                        className={`text-[11px] font-bold text-gray-600 ${theme === 'dark' ? 'hover:text-emerald-600' : 'hover:text-blue-600'} transition-all hover:translate-x-1 text-left flex items-center gap-2 group/link`}
                                                     >
-                                                        <div className={`w-1 h-1 rounded-full bg-gray-200 ${theme === 'dark' ? 'group-hover/link:bg-emerald-400' : 'group-hover/link:bg-blue-400'} transition-colors`} />
+                                                        <div className={`w-1.5 h-1.5 rounded-full bg-gray-200 ${theme === 'dark' ? 'group-hover/link:bg-emerald-500' : 'group-hover/link:bg-blue-500'} transition-colors`} />
                                                         {itemName}
                                                     </button>
                                                 )
