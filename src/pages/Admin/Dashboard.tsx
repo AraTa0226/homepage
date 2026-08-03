@@ -4018,8 +4018,20 @@ const AudioPlanManager = () => {
                     ];
 
                     return (
-                            <div key={cat.id} className="space-y-4">
-                            <div className="text-[11px] font-black text-zinc-400 uppercase tracking-widest pl-1 border-b border-zinc-800/50 pb-2">{cat.name}</div>
+                            <div key={cat.id} className="space-y-4 bg-zinc-900/20 border border-zinc-800/60 p-4 rounded-2xl mb-6">
+                                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-zinc-800/50 pb-3">
+                                    <div className="text-[12px] font-black text-white uppercase tracking-widest pl-1">{cat.name}</div>
+                                    <div className="flex items-center gap-2 flex-1 md:max-w-md">
+                                        <span className="text-[10px] font-black text-blue-400 shrink-0">MENUカード背景画像:</span>
+                                        <input 
+                                            type="text"
+                                            value={(plans.find(p => p.id === cat.id)?.image) || ''}
+                                            onChange={e => updateCategory(cat.id, { image: e.target.value })}
+                                            placeholder="例: /images/Audio/Speaker/door-b.webp"
+                                            className="w-full bg-black border border-zinc-800 rounded-lg px-3 py-1.5 text-white text-xs font-bold focus:border-blue-500 outline-none"
+                                        />
+                                    </div>
+                                </div>
                             <div className="space-y-4 pl-2">
                                 {subGroups.map(sub => {
                                     const groupLPs = catLPs.filter(p => getLPType(p) === sub.id);
