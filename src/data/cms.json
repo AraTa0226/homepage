@@ -474,7 +474,7 @@
         {
           "name": "ZVTⅡ",
           "price": "198000",
-          "badge": "最上位フルガード",
+          "badge": "最���位フルガード",
           "features": [
             "デジタル傾斜センサー標準装備",
             "トリプルセンサー標準装備",
@@ -2941,12 +2941,13 @@
       "origin": "Italy",
       "units": [
         {
-          "model": "APK165Ω2",
+          "model": "APK165Ω2",
           "price": "30800",
           "taxExcluded": "28000",
           "status": "Available",
           "youtube": "https://youtu.be/dES5PZXkKIY",
-          "image": "\"C:\\Users\\Taiji\\Desktop\\Ai-projects\\ang-homepage\\public\\images\\Demo\\D-APK165.jpg"
+          "image": "/images/Demo/D-APK165.jpg",
+          "name": "APK165Ω2"
         }
       ]
     },
@@ -2999,7 +3000,7 @@
           "taxExcluded": "125000",
           "status": "Available",
           "youtube": "https://youtu.be/1WssbN3bELQ",
-          "image": "/images/Demo/VX165.webp"
+          "image": "/images/Demo/VX165.jpg"
         }
       ]
     },
@@ -3013,7 +3014,7 @@
           "taxExcluded": "700000",
           "status": "Demo Car",
           "youtube": "",
-          "image": "/images/Demo/D-TS-Z1GR.webp"
+          "image": "/images/Demo/D-TS-Z1GR.jpg"
         },
         {
           "model": "TS-Z900PRS",
@@ -3021,14 +3022,14 @@
           "taxExcluded": "128000",
           "status": "Available",
           "youtube": "https://youtu.be/t28f99h0aM0",
-          "image": "/images/Demo/D-TS-Z900PRS.webp"
+          "image": "/images/Demo/D-TS-Z900PRS.jpg"
         },
         {
           "model": "TS-C1740S",
           "price": "Open",
           "status": "Available",
           "youtube": "https://youtu.be/ToQVJV9jK-g",
-          "image": "/images/Demo/D-TS-C1740S.webp"
+          "image": "/images/Demo/D-TS-C1740S.jpg"
         },
         {
           "model": "TS-V174S",
@@ -3036,7 +3037,7 @@
           "taxExcluded": "72000",
           "status": "Available",
           "youtube": "https://youtu.be/XVG-UxCukkM",
-          "image": "/images/Demo/D-TS-V174S.webp"
+          "image": "/images/Demo/D-TS-V174S.jpg"
         },
         {
           "model": "TS-Z1000RS",
@@ -3044,7 +3045,7 @@
           "taxExcluded": "350000",
           "status": "Available",
           "youtube": "https://youtu.be/SVViqmUHM_4",
-          "image": "/images/Demo/D-TS-Z1000RS.webp"
+          "image": "/images/Demo/D-TS-Z1000RS.jpg"
         }
       ]
     },

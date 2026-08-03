@@ -97,24 +97,30 @@ export const MainPage: React.FC<MainPageProps> = ({
         'BLUEMOONAUDIO': '/images/Audio/Speaker/ang-cable.webp'
     };
 
-    const formattedAuditionSpeakers = (Array.isArray(auditionSpeakers) ? auditionSpeakers : []).map((b: any) => {
+    const formattedAuditionSpeakers = (Array.isArray(auditionSpeakers) ? auditionSpeakers : []).flatMap((b: any) => {
         const brandName = b.brand || b.name || 'AUDIO BRAND';
-        const firstUnit = Array.isArray(b.units) && b.units.length > 0 ? b.units[0] : null;
-        const unitName = b.name || firstUnit?.model || firstUnit?.name || `${brandName} 試聴ユニット`;
-        const unitImage = b.image || firstUnit?.image || defaultAuditionImages[brandName] || '/images/Top/speaker.webp';
-        const statusText = b.status || firstUnit?.status || 'ON DEMAND';
-        const youtube = b.youtubeId || b.youtube || firstUnit?.youtube;
-        const descText = b.desc || b.description || (b.origin ? `原産国: ${b.origin}` : '店内常時試聴可能ユニット');
+        const originDesc = b.origin ? `原産国: ${b.origin}` : (b.desc || b.description || '店内常時試聴可能ユニット');
+        const defaultImg = b.image || defaultAuditionImages[brandName] || '/images/Top/speaker.webp';
 
-        return {
-            ...b,
+        if (Array.isArray(b.units) && b.units.length > 0) {
+            return b.units.map((unit: any) => ({
+                brand: brandName,
+                name: unit.model || unit.name || `${brandName} 試聴ユニット`,
+                image: unit.image || defaultImg,
+                status: unit.status || b.status || 'Available',
+                youtubeId: unit.youtube || unit.youtubeId || b.youtubeId || b.youtube,
+                desc: unit.desc || unit.description || (unit.price ? `税込価格: ¥${parseInt(unit.price).toLocaleString()}` : originDesc)
+            }));
+        }
+
+        return [{
             brand: brandName,
-            name: unitName,
-            image: unitImage,
-            status: statusText,
-            youtubeId: youtube,
-            desc: descText
-        };
+            name: b.name || b.model || `${brandName} 試聴ユニット`,
+            image: b.image || defaultImg,
+            status: b.status || 'Available',
+            youtubeId: b.youtubeId || b.youtube,
+            desc: b.desc || b.description || originDesc
+        }];
     });
 
     const handleYoutubeClick = (urlOrId: string) => {
