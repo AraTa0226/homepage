@@ -570,7 +570,7 @@ export const MainPage: React.FC<MainPageProps> = ({
                                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 pt-2">
                                                     {bGroup.units.map((unit, uIdx) => (
                                                         <div key={uIdx} className="bg-black/40 p-4 md:p-5 rounded-2xl border border-white/10 flex items-center gap-4 hover:bg-white/10 transition-all group">
-                                                            <div className="w-20 h-20 md:w-24 md:h-24 aspect-square rounded-xl overflow-hidden bg-zinc-950 shrink-0 relative border border-white/10 flex items-center justify-center">
+                                                            <div className="w-24 md:w-32 aspect-[4/3] rounded-xl overflow-hidden bg-zinc-950 shrink-0 relative border border-white/10 flex items-center justify-center">
                                                                 <SafeImage
                                                                     src={unit.image}
                                                                     alt={unit.model}
