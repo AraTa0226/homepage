@@ -304,8 +304,7 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
 
                 <div className="relative max-w-7xl mx-auto px-4 w-full">
                     <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }}>
-                        <div className="flex flex-col gap-4 mb-10">
-                            {heroAlert?.active && (
+                        {heroAlert?.active && (
                                 <motion.div
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
@@ -323,35 +322,24 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                 </motion.div>
                             )}
 
-                            <div className="inline-flex items-center gap-3 w-fit px-6 py-2.5 bg-emerald-600 text-white rounded-full shadow-lg shadow-emerald-500/20">
-                                <Lock className="w-3.5 h-3.5" />
-                                <span className="text-sm md:text-[15px] font-black uppercase tracking-[0.15em] whitespace-nowrap">
-                                    {securityData.home?.hero?.subTitle}
-                                </span>
-                            </div>
-                        </div>
-
-                        <h1 className="text-4xl md:text-7xl font-black text-gray-900 mb-8 leading-[1.1] tracking-tighter italic">
-                            {securityData.home?.hero?.mainTitle?.split('\n').map((line: string, i: number) => (
-                                <React.Fragment key={i}>
-                                    {i === 1 ? <span className="text-emerald-600">{line}</span> : line}
-                                    {i === 0 && <br />}
-                                </React.Fragment>
-                            ))}
+                        {/* メインコピー */}
+                        <h1 className="text-4xl md:text-7xl font-black text-gray-900 mb-8 leading-[1.25] tracking-tighter">
+                            <span className="text-emerald-600 block text-xl md:text-4xl font-black tracking-wider mb-2 not-italic">福岡のカーセキュリティー専門店</span>
+                            <span className="text-gray-900 block text-4xl md:text-8xl font-black tracking-tight not-italic">オートセキュリティエナジー</span>
                         </h1>
 
-                        <div className="flex flex-col gap-4 mb-12">
-                            {securityData.home?.hero?.features?.map((item: any, i: number) => {
-                                const IconComp = iconMap[item.icon] || ShieldCheck;
-                                return (
-                                    <div key={i} className="flex items-center gap-4 group/hitem cursor-default">
-                                        <div className="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center border border-gray-100 group-hover/hitem:border-emerald-500/50 transition-colors">
-                                            <IconComp className="w-5 h-5 text-emerald-500" />
-                                        </div>
-                                        <span className="text-lg md:text-xl font-bold text-gray-700">{item.text}</span>
-                                    </div>
-                                );
-                            })}
+                        {/* サブコピー */}
+                        <div className="space-y-3 mb-10 max-w-3xl">
+                            <div className="flex items-center gap-3">
+                                <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.8)] shrink-0" />
+                                <p className="text-emerald-600 text-lg md:text-2xl font-black tracking-tight">
+                                    SPS取得のPanthera / Grgo 正規認定店
+                                </p>
+                            </div>
+                            <p className="text-gray-700 text-base md:text-xl font-bold leading-relaxed pl-5">
+                                最新の盗難手口(ゲームボーイ・CANインベーダー等)にも対応<br />
+                                30年以上の実績で、あなたの愛車を守ります
+                            </p>
                         </div>
 
                         <div className="flex flex-col gap-6 mt-8">
