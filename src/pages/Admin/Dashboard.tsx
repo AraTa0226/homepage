@@ -5301,7 +5301,30 @@ const PeripheralProductManager = () => {
                         </div>
                     </div>
 
-                <div className="space-y-4">
+                <div className="space-y-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="space-y-2">
+                            <label className="text-[10px] font-black text-zinc-500 uppercase tracking-widest ml-2">Category Name</label>
+                            <input 
+                                type="text"
+                                value={currentCat.category || ''}
+                                onChange={(e) => updateCategory(currentCat.id, { category: e.target.value, title: e.target.value })}
+                                className="w-full bg-black/40 border border-zinc-800 rounded-2xl px-6 py-3.5 text-white text-sm font-bold outline-none focus:border-blue-500"
+                                placeholder="カテゴリー名"
+                            />
+                        </div>
+                        <div className="space-y-2">
+                            <label className="text-[10px] font-black text-zinc-500 uppercase tracking-widest ml-2">Card Background Image (MENU背景画像パス)</label>
+                            <input 
+                                type="text"
+                                value={currentCat.image || ''}
+                                onChange={(e) => updateCategory(currentCat.id, { image: e.target.value })}
+                                className="w-full bg-black/40 border border-zinc-800 rounded-2xl px-6 py-3.5 text-white text-sm font-bold outline-none focus:border-blue-500"
+                                placeholder="例: /images/Audio/Speaker/door-b.webp"
+                            />
+                        </div>
+                    </div>
+
                     <div className="space-y-2">
                         <label className="text-[10px] font-black text-zinc-500 uppercase tracking-widest ml-2">Category Description</label>
                         <textarea 

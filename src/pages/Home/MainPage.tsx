@@ -72,9 +72,18 @@ export const MainPage: React.FC<MainPageProps> = ({
 
     const { plans, securityData } = usePrices();
 
-    const audioCategories = (Array.isArray(plans) ? plans : []).filter(p => p && p.type === 'audio').map(p => ({
+    const defaultCategoryImages: Record<string, string> = {
+        'sp_standard': '/images/Audio/Speaker/door-b.webp',
+        'subwoofer': '/images/Audio/912-4.webp',
+        'dsp': '/images/Audio/dsp/ampdsp.webp',
+        'deadening': '/images/Audio/door-turning/door.webp',
+        'custom': '/images/Audio/mount/tw-mount.webp'
+    };
+
+    const audioCategories = (Array.isArray(plans) ? plans : []).filter(p => p && p.type === 'audio').map((p, idx) => ({
         ...p,
         title: p.title || p.category || p.name || '',
+        image: p.image || defaultCategoryImages[p.id] || Object.values(defaultCategoryImages)[idx % 5],
         items: (Array.isArray(p.items) ? p.items : []).map((item: any) => {
             if (typeof item === 'string') return item;
             return item;
