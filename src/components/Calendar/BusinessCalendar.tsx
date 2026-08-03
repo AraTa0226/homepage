@@ -169,9 +169,8 @@ export const BusinessCalendar: React.FC<BusinessCalendarProps> = ({ theme = 'lig
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                className={`${isDark ? 'bg-white/5 border-white/10' : 'bg-white border-green-50 shadow-green-500/10'} flex items-center gap-6 p-6 rounded-[2rem] shadow-xl transition-all group cursor-pointer relative overflow-hidden mb-10 border`}
+                className={`${isDark ? 'bg-white/5 border-white/10' : 'bg-white border-green-100 shadow-green-500/5'} flex items-center gap-6 p-6 rounded-[2rem] shadow-xl transition-all group cursor-pointer relative overflow-hidden mb-10 border`}
               >
-                <div className={`absolute top-0 right-0 w-24 h-24 rounded-full -mr-8 -mt-8 opacity-50 group-hover:scale-110 transition-transform ${isDark ? 'bg-emerald-500/10' : 'bg-green-50'}`}></div>
                 <div className="flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-105 relative z-10">
                   <img
                     src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
