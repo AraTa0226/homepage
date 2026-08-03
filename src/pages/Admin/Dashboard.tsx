@@ -5123,6 +5123,27 @@ const KnowledgeManager = () => {
 
 const AssetManager = () => {
     const { assets, updateAssets } = useSite();
+    const { securityData, setSecurityData } = usePrices();
+
+    const menuCategories = securityData?.menu?.categories || [];
+
+    const handleUpdateMenuCatImage = (catId: string, imagePath: string) => {
+        if (!securityData?.menu?.categories) return;
+        const newCategories = securityData.menu.categories.map((cat: any) => {
+            if (cat.id === catId) {
+                return { ...cat, image: cleanPathInput(imagePath) };
+            }
+            return cat;
+        });
+        setSecurityData({
+            ...securityData,
+            menu: {
+                ...securityData.menu,
+                categories: newCategories
+            }
+        });
+    };
+
     return (
         <div className="bg-zinc-900/40 border border-zinc-800 rounded-[2.5rem] p-10 space-y-10">
             <div>
@@ -5130,6 +5151,23 @@ const AssetManager = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <Input field="Hero Main Image" value={assets?.heroImage || ''} onChange={(v: string) => updateAssets({ heroImage: cleanPathInput(v) })} />
                     <Input field="Security Hero Image" value={assets?.securityHeroImage || ''} onChange={(v: string) => updateAssets({ securityHeroImage: cleanPathInput(v) })} />
+                </div>
+            </div>
+
+            {/* セキュリティMENU枠 背景画像管理 */}
+            <div className="pt-8 border-t border-zinc-800/80">
+                <h3 className="text-xl font-black text-emerald-400 italic tracking-tighter uppercase mb-2">セキュリティMENU枠 背景画像 (MENUドロップダウン)</h3>
+                <p className="text-xs text-zinc-500 font-bold mb-6">ヘッダーの「MENU (セキュリティ一覧)」やメガメニュー内に表示される各カード枠の背景画像パスを自由に変更できます。</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {menuCategories.map((cat: any) => (
+                        <Input
+                            key={cat.id}
+                            field={`「${cat.category || cat.title || cat.id}」背景画像`}
+                            value={cat.image || ''}
+                            placeholder="例: /images/Security/pit.webp"
+                            onChange={(v: string) => handleUpdateMenuCatImage(cat.id, v)}
+                        />
+                    ))}
                 </div>
             </div>
 
