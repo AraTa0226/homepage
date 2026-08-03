@@ -501,21 +501,35 @@ export const MainPage: React.FC<MainPageProps> = ({
                                         exit={{ opacity: 0, height: 0 }}
                                         className="mt-16 overflow-hidden"
                                     >
-                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                             {formattedAuditionSpeakers.slice(4).map((speaker, idx) => (
-                                                <div key={idx} className="bg-white/5 p-6 rounded-2xl border border-white/5 flex items-center justify-between hover:bg-white/10 transition-colors">
-                                                    <div className="flex flex-col">
-                                                        <span className="text-[12px] font-black text-blue-400 uppercase tracking-widest">{speaker.brand}</span>
-                                                        <span className="font-black text-[15px]">{speaker.name}</span>
+                                                <div key={idx} className="bg-white/5 p-4 md:p-5 rounded-2xl border border-white/10 flex items-center gap-4 hover:bg-white/10 transition-all group">
+                                                    <div className="w-20 h-20 md:w-24 md:h-24 rounded-xl overflow-hidden bg-zinc-800 shrink-0 relative">
+                                                        <SafeImage
+                                                            src={speaker.image}
+                                                            alt={speaker.brand}
+                                                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100"
+                                                        />
                                                     </div>
-                                                    {speaker.youtubeId && (
-                                                        <button
-                                                            onClick={() => setActiveYoutubeId(speaker.youtubeId)}
-                                                            className="text-gray-500 hover:text-red-500 transition-colors"
-                                                        >
-                                                            <Youtube className="w-5 h-5" />
-                                                        </button>
-                                                    )}
+                                                    <div className="flex-1 min-w-0 flex flex-col justify-between h-full py-0.5">
+                                                        <div>
+                                                            <span className="text-[11px] font-black text-blue-400 uppercase tracking-widest block truncate">{speaker.brand}</span>
+                                                            <h4 className="font-black text-sm md:text-base text-white truncate mb-1">{speaker.name}</h4>
+                                                            <p className="text-[10px] text-gray-400 font-bold line-clamp-1">{speaker.desc}</p>
+                                                        </div>
+                                                        <div className="flex items-center justify-between mt-2 pt-2 border-t border-white/10">
+                                                            <span className="text-[10px] font-black tracking-widest text-emerald-400">{speaker.status || 'Available'}</span>
+                                                            {speaker.youtubeId && (
+                                                                <button
+                                                                    onClick={() => setActiveYoutubeId(speaker.youtubeId)}
+                                                                    className="w-7 h-7 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 transition-transform shadow-md shadow-red-600/30 shrink-0"
+                                                                    title="試聴動画を見る"
+                                                                >
+                                                                    <Youtube className="w-3.5 h-3.5 text-white" />
+                                                                </button>
+                                                            )}
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             ))}
                                         </div>
