@@ -325,7 +325,7 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                         {/* メインコピー */}
                         <h1 className="text-4xl md:text-7xl font-black mb-8 leading-[1.25] tracking-tighter">
                             <span className="text-emerald-600 block text-xl md:text-4xl font-black tracking-wider mb-2 not-italic">福岡のカーセキュリティー専門店</span>
-                            <span className="text-gray-900 block text-4xl md:text-8xl font-black tracking-tight not-italic">オートセキュリティーエナジー</span>
+                            <span className="bg-gradient-to-r from-slate-700 via-gray-600 to-slate-800 bg-clip-text text-transparent block text-4xl md:text-8xl font-black tracking-tight not-italic">オートセキュリティーエナジー</span>
                         </h1>
 
                         {/* サブコピー */}
