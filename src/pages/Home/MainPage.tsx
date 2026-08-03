@@ -652,7 +652,7 @@ export const MainPage: React.FC<MainPageProps> = ({
                         <div className="space-y-8 lg:sticky lg:top-32">
                             <div className="relative aspect-square rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/10 hover:border-blue-500/30 transition-all duration-700">
                                 <iframe
-                                    src="https://maps.google.com/maps?q=%E7%A6%8F%E5%B2%A1%E7%9C%8C%E5%A4%A7%E9%87%8E%E5%9F%8E%E5%B8%82%E5%BE%A1%E7%AC%A0%E5%B7%9D5-4-14%20Sound%20ANG&t=&z=16&ie=UTF8&iwloc=near&output=embed"
+                                    src="https://maps.google.com/maps?q=33.545755,130.485122&hl=ja&z=16&output=embed"
                                     className="w-full h-full border-0"
                                     loading="lazy"
                                     title="Sound ANG Location Map"
