@@ -51,6 +51,16 @@ import { usePrices } from '../../contexts/PriceContext';
 import { useSite } from '../../contexts/SiteContext';
 import { useNavigate } from 'react-router-dom';
 
+const cleanPathInput = (val: string): string => {
+    if (!val) return '';
+    let p = val.replace(/^["']|["']$/g, '').replace(/\\/g, '/');
+    const pubIdx = p.indexOf('/public/');
+    if (pubIdx !== -1) return p.substring(pubIdx + 7);
+    const imgIdx = p.indexOf('/images/');
+    if (imgIdx !== -1) return p.substring(imgIdx);
+    return val.replace(/^["']|["']$/g, '');
+};
+
 const AdminDashboard: React.FC = () => {
   const navigate = useNavigate();
   const { 
@@ -4026,7 +4036,7 @@ const AudioPlanManager = () => {
                                         <input 
                                             type="text"
                                             value={(plans.find(p => p.id === cat.id)?.image) || ''}
-                                            onChange={e => updateCategory(cat.id, { image: e.target.value })}
+                                            onChange={e => updateCategory(cat.id, { image: cleanPathInput(e.target.value) })}
                                             placeholder="例: /images/Audio/Speaker/door-b.webp"
                                             className="w-full bg-black border border-zinc-800 rounded-lg px-3 py-1.5 text-white text-xs font-bold focus:border-blue-500 outline-none"
                                         />
@@ -5118,8 +5128,8 @@ const AssetManager = () => {
             <div>
                 <h3 className="text-2xl font-black text-white italic tracking-tighter uppercase mb-6">Global Site Assets</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <Input field="Hero Main Image" value={assets?.heroImage || ''} onChange={(v: string) => updateAssets({ heroImage: v })} />
-                    <Input field="Security Hero Image" value={assets?.securityHeroImage || ''} onChange={(v: string) => updateAssets({ securityHeroImage: v })} />
+                    <Input field="Hero Main Image" value={assets?.heroImage || ''} onChange={(v: string) => updateAssets({ heroImage: cleanPathInput(v) })} />
+                    <Input field="Security Hero Image" value={assets?.securityHeroImage || ''} onChange={(v: string) => updateAssets({ securityHeroImage: cleanPathInput(v) })} />
                 </div>
             </div>
 
@@ -5127,10 +5137,10 @@ const AssetManager = () => {
                 <h3 className="text-xl font-black text-white italic tracking-tighter uppercase mb-2">ショップ Info (店舗施設ギャラリー画像)</h3>
                 <p className="text-xs text-zinc-500 font-bold mb-6">トップページおよび各ページの「SHOP INFO」セクションに表示される店舗ギャラリー写真のパスを設定できます。</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <Input field="ショールーム画像 (Showroom)" value={assets?.showroomImage || ''} placeholder="例: /images/Top/showroom.webp" onChange={(v: string) => updateAssets({ showroomImage: v })} />
-                    <Input field="ピット画像 (Pit)" value={assets?.pitImage || ''} placeholder="例: /images/Top/pit.webp" onChange={(v: string) => updateAssets({ pitImage: v })} />
-                    <Input field="ワークスペース画像 (Workspace)" value={assets?.workspaceImage || ''} placeholder="例: /images/Top/workspace.webp" onChange={(v: string) => updateAssets({ workspaceImage: v })} />
-                    <Input field="試聴室画像 (Audition Room)" value={assets?.auditionRoomImage || ''} placeholder="例: /images/Top/auditionRoom.webp" onChange={(v: string) => updateAssets({ auditionRoomImage: v })} />
+                    <Input field="ショールーム画像 (Showroom)" value={assets?.showroomImage || ''} placeholder="例: /images/Top/showroom.webp" onChange={(v: string) => updateAssets({ showroomImage: cleanPathInput(v) })} />
+                    <Input field="ピット画像 (Pit)" value={assets?.pitImage || ''} placeholder="例: /images/Top/pit.webp" onChange={(v: string) => updateAssets({ pitImage: cleanPathInput(v) })} />
+                    <Input field="ワークスペース画像 (Workspace)" value={assets?.workspaceImage || ''} placeholder="例: /images/Top/workspace.webp" onChange={(v: string) => updateAssets({ workspaceImage: cleanPathInput(v) })} />
+                    <Input field="試聴室画像 (Audition Room)" value={assets?.auditionRoomImage || ''} placeholder="例: /images/Top/auditionRoom.webp" onChange={(v: string) => updateAssets({ auditionRoomImage: cleanPathInput(v) })} />
                 </div>
             </div>
         </div>
@@ -5218,7 +5228,7 @@ const AuditionSpeakerManager = () => {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <Input field="ブランド名 (Brand)" value={b.brand || ''} onChange={(v: string) => handleUpdateBrand(bIdx, { brand: v })} />
                             <Input field="原産国 / 説明 (Origin)" value={b.origin || ''} onChange={(v: string) => handleUpdateBrand(bIdx, { origin: v })} />
-                            <Input field="カード表示画像パス (Image)" value={b.image || ''} placeholder="例: /images/Audio/Speaker/door-b.webp" onChange={(v: string) => handleUpdateBrand(bIdx, { image: v })} />
+                            <Input field="カード表示画像パス (Image)" value={b.image || ''} placeholder="例: /images/Audio/Speaker/door-b.webp" onChange={(v: string) => handleUpdateBrand(bIdx, { image: cleanPathInput(v) })} />
                         </div>
 
                         {/* Units list */}
@@ -5247,7 +5257,7 @@ const AuditionSpeakerManager = () => {
                                             <Input field="価格 (税込)" value={unit.price || ''} onChange={(v: string) => handleUpdateUnit(bIdx, uIdx, { price: v })} />
                                         </div>
                                         <div className="grid grid-cols-2 gap-3">
-                                            <Input field="ユニット画像パス" value={unit.image || ''} placeholder="例: /images/Top/speaker.webp" onChange={(v: string) => handleUpdateUnit(bIdx, uIdx, { image: v })} />
+                                            <Input field="ユニット画像パス" value={unit.image || ''} placeholder="例: /images/Top/speaker.webp" onChange={(v: string) => handleUpdateUnit(bIdx, uIdx, { image: cleanPathInput(v) })} />
                                             <Input field="YouTube URL" value={unit.youtube || ''} placeholder="https://..." onChange={(v: string) => handleUpdateUnit(bIdx, uIdx, { youtube: v })} />
                                         </div>
                                     </div>
@@ -5454,7 +5464,7 @@ const PeripheralProductManager = () => {
                             <input 
                                 type="text"
                                 value={currentCat.image || ''}
-                                onChange={(e) => updateCategory(currentCat.id, { image: e.target.value })}
+                                onChange={(e) => updateCategory(currentCat.id, { image: cleanPathInput(e.target.value) })}
                                 className="w-full bg-black/40 border border-zinc-800 rounded-2xl px-6 py-3.5 text-white text-sm font-bold outline-none focus:border-blue-500"
                                 placeholder="例: /images/Audio/Speaker/door-b.webp"
                             />
