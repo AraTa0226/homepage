@@ -323,8 +323,11 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                 </motion.div>
                             )}
 
-                        {/* メインコピー (バッジ廃止・改行なし1行フィット) */}
-                        <div className="mb-8 max-w-5xl">
+                        {/* メインコピー (上部テキスト ＋ 店舗名) */}
+                        <div className="mb-8 max-w-5xl space-y-2">
+                            <p className="text-emerald-400 font-black text-xl md:text-3xl tracking-wider uppercase [text-shadow:_0_2px_8px_rgba(0,0,0,0.8)]">
+                                福岡のカーセキュリティー専門店
+                            </p>
                             <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight tracking-tight not-italic whitespace-nowrap [text-shadow:_0_3px_12px_rgba(0,0,0,0.8),_0_0_20px_rgba(0,0,0,0.6)]">
                                 オートセキュリティーエナジー
                             </h1>
