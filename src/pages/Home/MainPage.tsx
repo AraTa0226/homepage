@@ -652,10 +652,10 @@ export const MainPage: React.FC<MainPageProps> = ({
                         <div className="space-y-8 lg:sticky lg:top-32">
                             <div className="relative aspect-square rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/10 hover:border-blue-500/30 transition-all duration-700">
                                 <iframe
-                                    src="https://maps.google.com/maps?q=33.545755,130.485122&hl=ja&z=16&output=embed"
+                                    src="https://maps.google.com/maps?q=%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%82%A8%E3%83%8A%E3%82%B8%E3%83%BC%2F%E3%82%AA%E3%83%BC%E3%83%88%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%83%BC%E3%82%A8%E3%83%8A%E3%82%B8%E3%83%BC&t=&z=16&ie=UTF8&output=embed"
                                     className="w-full h-full border-0"
                                     loading="lazy"
-                                    title="Sound ANG Location Map"
+                                    title="サウンドエナジー/オートセキュリティーエナジー Location Map"
                                 />
                             </div>
 
@@ -674,7 +674,7 @@ export const MainPage: React.FC<MainPageProps> = ({
                                 </div>
 
                                 <a
-                                    href="https://maps.google.com/?q=%E7%A6%8F%E5%B2%A1%E7%9C%8C%E5%A4%A7%E9%87%8E%E5%9F%8E%E5%B8%82%E5%BE%A1%E7%AC%A0%E5%B7%9D5-4-14%20Sound%20ANG"
+                                    href="https://maps.google.com/?q=%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%82%A8%E3%83%8A%E3%82%B8%E3%83%BC%2F%E3%82%AA%E3%83%BC%E3%83%88%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%83%BC%E3%82%A8%E3%83%8A%E3%82%B8%E3%83%BC"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center justify-center gap-3 w-full py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-2xl font-black text-sm tracking-wider uppercase transition-all shadow-lg shadow-blue-600/20 group"
