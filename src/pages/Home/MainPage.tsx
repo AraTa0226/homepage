@@ -459,15 +459,15 @@ export const MainPage: React.FC<MainPageProps> = ({
                                 </div>
                             </div>
 
-                            {/* Top 4 Spotlight */}
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-                                {formattedAuditionSpeakers.slice(0, 4).map((speaker, idx) => (
+                            {/* All Audition Speakers Grid */}
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                                {formattedAuditionSpeakers.map((speaker, idx) => (
                                     <motion.div
                                         key={idx}
-                                        initial={{ opacity: 0, scale: 0.9 }}
-                                        whileInView={{ opacity: 1, scale: 1 }}
-                                        transition={{ delay: idx * 0.1 }}
-                                        className="group relative bg-white/5 backdrop-blur-sm rounded-[2rem] border border-white/10 overflow-hidden flex flex-col justify-between"
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: (idx % 8) * 0.05 }}
+                                        className="group relative bg-white/5 backdrop-blur-sm rounded-[2rem] border border-white/10 overflow-hidden flex flex-col justify-between hover:bg-white/10 hover:border-blue-500/40 transition-all duration-300 shadow-xl"
                                     >
                                         <div className="aspect-[4/3] relative overflow-hidden bg-zinc-800">
                                             <SafeImage
@@ -499,60 +499,6 @@ export const MainPage: React.FC<MainPageProps> = ({
                                     </motion.div>
                                 ))}
                             </div>
-
-                            <div className="text-center">
-                                <button
-                                    onClick={() => setShowFullAuditionList(!showFullAuditionList)}
-                                    className="group inline-flex items-center gap-4 bg-white text-gray-900 px-10 py-5 rounded-2xl font-black text-[15px] tracking-[0.2em] hover:bg-blue-600 hover:text-white transition-all shadow-2xl"
-                                >
-                                    {showFullAuditionList ? 'CLOSE LIST' : 'VIEW ALL SPEAKERS'}
-                                    <ChevronRight className={`w-5 h-5 transition-transform ${showFullAuditionList ? 'rotate-90' : 'group-hover:translate-x-1'}`} />
-                                </button>
-                            </div>
-
-                            <AnimatePresence>
-                                {showFullAuditionList && (
-                                    <motion.div
-                                        initial={{ opacity: 0, height: 0 }}
-                                        animate={{ opacity: 1, height: 'auto' }}
-                                        exit={{ opacity: 0, height: 0 }}
-                                        className="mt-16 overflow-hidden"
-                                    >
-                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                            {formattedAuditionSpeakers.slice(4).map((speaker, idx) => (
-                                                <div key={idx} className="bg-white/5 p-4 md:p-5 rounded-2xl border border-white/10 flex items-center gap-4 hover:bg-white/10 transition-all group">
-                                                    <div className="w-20 h-20 md:w-24 md:h-24 rounded-xl overflow-hidden bg-zinc-800 shrink-0 relative">
-                                                        <SafeImage
-                                                            src={speaker.image}
-                                                            alt={speaker.brand}
-                                                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100"
-                                                        />
-                                                    </div>
-                                                    <div className="flex-1 min-w-0 flex flex-col justify-between h-full py-0.5">
-                                                        <div>
-                                                            <span className="text-[11px] font-black text-blue-400 uppercase tracking-widest block truncate">{speaker.brand}</span>
-                                                            <h4 className="font-black text-sm md:text-base text-white truncate mb-1">{speaker.name}</h4>
-                                                            <p className="text-[10px] text-gray-400 font-bold line-clamp-1">{speaker.desc}</p>
-                                                        </div>
-                                                        <div className="flex items-center justify-between mt-2 pt-2 border-t border-white/10">
-                                                            <span className="text-[10px] font-black tracking-widest text-emerald-400">{speaker.status || 'Available'}</span>
-                                                            {speaker.youtubeId && (
-                                                                <button
-                                                                    onClick={() => handleYoutubeClick(speaker.youtubeId)}
-                                                                    className="w-7 h-7 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 transition-transform shadow-md shadow-red-600/30 shrink-0"
-                                                                    title="試聴動画を見る"
-                                                                >
-                                                                    <Youtube className="w-3.5 h-3.5 text-white" />
-                                                                </button>
-                                                            )}
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </motion.div>
-                                )}
-                            </AnimatePresence>
                         </div>
                     </section>
                 )
