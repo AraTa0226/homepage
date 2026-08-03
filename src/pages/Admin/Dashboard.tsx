@@ -17,6 +17,7 @@ import {
   Megaphone, 
   X, 
   Music,
+  Volume2,
   Trash2,
   AlertCircle,
   Zap,
@@ -98,7 +99,7 @@ const AdminDashboard: React.FC = () => {
     updateAssets
   } = useSite();
 
-  const [activeTab, setActiveTab] = useState<'vehicles' | 'security' | 'announcements' | 'recruitment' | 'events' | 'knowledge' | 'templates' | 'audio' | 'partners' | 'calendar' | 'assets' | 'others'>('vehicles');
+  const [activeTab, setActiveTab] = useState<'vehicles' | 'security' | 'announcements' | 'recruitment' | 'events' | 'knowledge' | 'templates' | 'audio' | 'audition' | 'partners' | 'calendar' | 'assets' | 'others'>('vehicles');
   const [searchTerm, setSearchTerm] = useState('');
 
   // Strict Authentication check: Always start as false on load
@@ -118,7 +119,7 @@ const AdminDashboard: React.FC = () => {
     setIsAuthenticated(false);
     sessionStorage.clear();
     localStorage.clear();
-    window.location.href = '/'; // Hard redirect to home
+    window.location.reload();
   };
 
   const forceReset = () => {
@@ -129,54 +130,51 @@ const AdminDashboard: React.FC = () => {
 
   if (!isAuthenticated) {
     return (
-      <div className="min-h-screen bg-black flex items-center justify-center p-6">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-zinc-900/50 border border-zinc-800 p-8 rounded-[2rem] w-full max-w-md backdrop-blur-xl shadow-2xl"
-        >
+      <div className="min-h-screen bg-black flex items-center justify-center p-6 selection:bg-blue-500 selection:text-white">
+        <div className="max-w-md w-full bg-zinc-900/50 border border-zinc-800 p-8 rounded-3xl backdrop-blur-xl relative">
           <div className="flex flex-col items-center mb-8">
-            <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mb-4 shadow-xl shadow-blue-600/20">
-              <Lock className="w-8 h-8 text-white" />
+            <div className="w-16 h-16 bg-blue-600/10 border border-blue-500/20 rounded-2xl flex items-center justify-center text-blue-500 mb-4 shadow-xl shadow-blue-600/10">
+              <ShieldCheck className="w-8 h-8" />
             </div>
-            <h1 className="text-2xl font-black text-white italic tracking-tighter">ADMIN ACCESS v4</h1>
-            <p className="text-zinc-500 text-xs font-bold uppercase tracking-widest mt-2">Sound ANG Management System (Strict)</p>
+            <h1 className="text-2xl font-black text-white italic tracking-tighter uppercase">ANG CONTROL PANEL</h1>
+            <p className="text-xs text-zinc-500 font-bold uppercase tracking-widest mt-1">v4.0 Strict Authentication Mode</p>
           </div>
+
           <form onSubmit={handleLogin} className="space-y-4">
-            <input 
-              type="password" 
-              placeholder="Admin Password" 
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="w-full bg-black border border-zinc-800 rounded-xl px-5 py-4 text-white focus:border-blue-600 transition-colors outline-none font-bold"
-            />
-            <button className="w-full bg-blue-600 text-white font-black py-4 rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/10">
-              AUTHENTICATE
+            <div>
+              <input
+                type="password"
+                placeholder="Enter Passcode..."
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="w-full bg-black border border-zinc-800 rounded-xl px-5 py-4 text-center font-mono text-lg text-white font-bold tracking-widest focus:border-blue-600 outline-none transition-all"
+                autoFocus
+              />
+            </div>
+            <button
+              type="submit"
+              className="w-full bg-blue-600 hover:bg-blue-500 text-white font-black py-4 rounded-xl text-xs uppercase tracking-widest transition-all shadow-xl shadow-blue-600/20 active:scale-[0.98]"
+            >
+              Authenticate System
             </button>
           </form>
           
-          <div className="mt-8 pt-8 border-t border-zinc-800">
-            <button 
-              onClick={forceReset}
-              className="w-full text-zinc-600 hover:text-zinc-400 text-[10px] font-black uppercase tracking-widest transition-colors flex items-center justify-center gap-2"
-            >
-              <AlertCircle className="w-3 h-3" />
-              Force Logout & Clear Cache
-            </button>
+          <div className="mt-8 text-center">
+            <p className="text-[10px] text-zinc-600 font-mono">AUTHORIZED PERSONNEL ONLY. SYSTEM ACTIVITIES ARE MONITORED.</p>
           </div>
-        </motion.div>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-black text-zinc-100 font-sans">
+    <div className="min-h-screen bg-black text-white font-sans flex">
       {/* Sidebar */}
-      <aside className="fixed top-0 left-0 bottom-0 w-72 bg-zinc-900 border-r border-zinc-800 z-50 flex flex-col overflow-y-auto custom-scrollbar">
-        <div className="p-8 border-b border-zinc-800 shrink-0">
+      <aside className="w-72 bg-zinc-950 border-r border-zinc-800/80 flex flex-col fixed inset-y-0 z-50">
+        <div className="p-8 border-b border-zinc-800/80">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-600/20">
-              <Settings className="w-6 h-6 text-white" />
+            <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center font-black italic shadow-lg shadow-blue-600/20">
+              ANG
             </div>
             <div className="flex flex-col">
               <span className="font-black text-white text-lg tracking-tighter italic leading-none">ANG ADMIN v4</span>
@@ -185,11 +183,12 @@ const AdminDashboard: React.FC = () => {
           </div>
         </div>
 
-        <nav className="flex-grow p-4 space-y-1 mt-4">
+        <nav className="flex-grow p-4 space-y-1 mt-4 overflow-y-auto">
           <div className="px-4 mb-2 text-[10px] font-black text-zinc-600 uppercase tracking-widest">Main Products</div>
           <NavItem active={activeTab === 'vehicles'} onClick={() => setActiveTab('vehicles')} icon={Car} label="Vehicle Config" />
           <NavItem active={activeTab === 'security'} onClick={() => setActiveTab('security')} icon={ShieldCheck} label="Security Plans" />
           <NavItem active={activeTab === 'audio'} onClick={() => setActiveTab('audio')} icon={Music} label="Audio Menu" />
+          <NavItem active={activeTab === 'audition'} onClick={() => setActiveTab('audition')} icon={Volume2} label="Audition (常時試聴)" />
           <NavItem active={activeTab === 'others'} onClick={() => setActiveTab('others')} icon={Monitor} label="Peripherals" />
           
           <div className="px-4 mb-2 mt-6 text-[10px] font-black text-zinc-600 uppercase tracking-widest">Marketing</div>
@@ -255,6 +254,7 @@ const AdminDashboard: React.FC = () => {
           {activeTab === 'vehicles' && <VehicleManager search={searchTerm} />}
           {activeTab === 'security' && <SecurityPlanManager />}
           {activeTab === 'audio' && <AudioPlanManager />}
+          {activeTab === 'audition' && <AuditionSpeakerManager />}
           {activeTab === 'announcements' && <AnnouncementManager />}
           {activeTab === 'recruitment' && <RecruitmentManager />}
           {activeTab === 'events' && <EventManager />}
@@ -5132,6 +5132,130 @@ const AssetManager = () => {
                     <Input field="ワークスペース画像 (Workspace)" value={assets?.workspaceImage || ''} placeholder="例: /images/Top/workspace.webp" onChange={(v: string) => updateAssets({ workspaceImage: v })} />
                     <Input field="試聴室画像 (Audition Room)" value={assets?.auditionRoomImage || ''} placeholder="例: /images/Top/auditionRoom.webp" onChange={(v: string) => updateAssets({ auditionRoomImage: v })} />
                 </div>
+            </div>
+        </div>
+    );
+};
+
+const AuditionSpeakerManager = () => {
+    const { auditionSpeakers, setAuditionSpeakers } = usePrices();
+
+    const handleUpdateBrand = (index: number, updates: any) => {
+        const newList = [...auditionSpeakers];
+        newList[index] = { ...newList[index], ...updates };
+        setAuditionSpeakers(newList);
+    };
+
+    const handleAddBrand = () => {
+        const newBrand = {
+            brand: "NEW BRAND",
+            origin: "Japan",
+            image: "/images/Audio/Speaker/door-b.webp",
+            status: "Available",
+            units: [
+                { model: "モデル名", price: "30000", status: "Available", image: "/images/Top/speaker.webp" }
+            ]
+        };
+        setAuditionSpeakers([...auditionSpeakers, newBrand]);
+    };
+
+    const handleRemoveBrand = (index: number) => {
+        if (confirm('この試聴ブランドを削除しますか？')) {
+            const newList = auditionSpeakers.filter((_, i) => i !== index);
+            setAuditionSpeakers(newList);
+        }
+    };
+
+    const handleAddUnit = (bIdx: number) => {
+        const newList = [...auditionSpeakers];
+        const units = newList[bIdx].units ? [...newList[bIdx].units!] : [];
+        units.push({ model: "新モデル", price: "0", status: "Available", image: "/images/Top/speaker.webp" });
+        newList[bIdx] = { ...newList[bIdx], units };
+        setAuditionSpeakers(newList);
+    };
+
+    const handleRemoveUnit = (bIdx: number, uIdx: number) => {
+        const newList = [...auditionSpeakers];
+        const units = (newList[bIdx].units || []).filter((_, i) => i !== uIdx);
+        newList[bIdx] = { ...newList[bIdx], units };
+        setAuditionSpeakers(newList);
+    };
+
+    const handleUpdateUnit = (bIdx: number, uIdx: number, updates: any) => {
+        const newList = [...auditionSpeakers];
+        const units = [...(newList[bIdx].units || [])];
+        units[uIdx] = { ...units[uIdx], ...updates };
+        newList[bIdx] = { ...newList[bIdx], units };
+        setAuditionSpeakers(newList);
+    };
+
+    return (
+        <div className="space-y-8">
+            <div className="flex items-center justify-between">
+                <div>
+                    <h3 className="text-2xl font-black text-white italic tracking-tighter uppercase">AUDITION (常時試聴ユニット管理)</h3>
+                    <p className="text-xs text-zinc-400 font-bold mt-1">トップページの「AUDITION (SONIC EXPERIENCE CENTER)」に表示されるブランド・試聴可能ユニットを編集できます。</p>
+                </div>
+                <button 
+                    onClick={handleAddBrand}
+                    className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-xl font-black text-xs uppercase tracking-widest hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20"
+                >
+                    <Plus className="w-4 h-4" /> ブランドを追加
+                </button>
+            </div>
+
+            <div className="grid grid-cols-1 gap-8">
+                {auditionSpeakers.map((b, bIdx) => (
+                    <div key={bIdx} className="bg-zinc-900/40 border border-zinc-800 p-8 rounded-[2rem] space-y-6 relative group">
+                        <button 
+                            onClick={() => handleRemoveBrand(bIdx)}
+                            className="absolute top-6 right-6 p-2 text-zinc-600 hover:text-red-500 transition-all"
+                            title="ブランド削除"
+                        >
+                            <Trash2 className="w-5 h-5" />
+                        </button>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <Input field="ブランド名 (Brand)" value={b.brand || ''} onChange={(v: string) => handleUpdateBrand(bIdx, { brand: v })} />
+                            <Input field="原産国 / 説明 (Origin)" value={b.origin || ''} onChange={(v: string) => handleUpdateBrand(bIdx, { origin: v })} />
+                            <Input field="カード表示画像パス (Image)" value={b.image || ''} placeholder="例: /images/Audio/Speaker/door-b.webp" onChange={(v: string) => handleUpdateBrand(bIdx, { image: v })} />
+                        </div>
+
+                        {/* Units list */}
+                        <div className="space-y-4 pt-4 border-t border-zinc-800/80">
+                            <div className="flex items-center justify-between">
+                                <h4 className="text-xs font-black text-blue-400 uppercase tracking-widest">試聴可能ユニット・モデル一覧</h4>
+                                <button 
+                                    onClick={() => handleAddUnit(bIdx)}
+                                    className="px-3 py-1.5 bg-blue-600/10 text-blue-500 border border-blue-500/20 rounded-lg text-[10px] font-black uppercase hover:bg-blue-600 hover:text-white transition-all"
+                                >
+                                    + ユニット追加
+                                </button>
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                {(b.units || []).map((unit, uIdx) => (
+                                    <div key={uIdx} className="bg-black/40 border border-zinc-800 p-4 rounded-2xl space-y-3 relative">
+                                        <button 
+                                            onClick={() => handleRemoveUnit(bIdx, uIdx)}
+                                            className="absolute top-3 right-3 text-zinc-600 hover:text-red-500"
+                                        >
+                                            <X className="w-4 h-4" />
+                                        </button>
+                                        <div className="grid grid-cols-2 gap-3">
+                                            <Input field="モデル名" value={unit.model || unit.name || ''} onChange={(v: string) => handleUpdateUnit(bIdx, uIdx, { model: v, name: v })} />
+                                            <Input field="価格 (税込)" value={unit.price || ''} onChange={(v: string) => handleUpdateUnit(bIdx, uIdx, { price: v })} />
+                                        </div>
+                                        <div className="grid grid-cols-2 gap-3">
+                                            <Input field="ユニット画像パス" value={unit.image || ''} placeholder="例: /images/Top/speaker.webp" onChange={(v: string) => handleUpdateUnit(bIdx, uIdx, { image: v })} />
+                                            <Input field="YouTube URL" value={unit.youtube || ''} placeholder="https://..." onChange={(v: string) => handleUpdateUnit(bIdx, uIdx, { youtube: v })} />
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
     );

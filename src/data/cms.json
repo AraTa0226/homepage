@@ -105,7 +105,7 @@
           "id": "line_1778977596396",
           "name": "スピーカー交換・BASIC line （コアキシャル）",
           "badge": "スピーカー交換パッケージ",
-          "description": "純正スピーカーを交換するだけで、音が明るく、華やかに変わります。\nこのパッケージで使うのは「コアキシャル（同軸）スピーカー」。ツィーター（高音）と��ッドレンジ（中音）が一体になったタイプで、取り付けがシンプルなぶんコストも抑えられます。カーオーディオのシステムアップが初めての方に、まず試してほしいパッケージです。\n純正のフルレンジスピーカーから交換することで高音域がプラスされ、音の広がりがぐっとアップ。スピーカー本体から取り付け工賃まで含んだパッケージ価格でご提供しています。",
+          "description": "純正スピーカーを交換するだけで、音が明るく、華やかに変わります。\nこのパッケージで使うのは「コアキシャル（同軸）スピーカー」。ツィーター（高音）とミッドレンジ（中音）が一体になったタイプで、取り付けがシンプルなぶんコストも抑えられます。カーオーディオのシステムアップが初めての方に、まず試してほしいパッケージです。\n純正のフルレンジスピーカーから交換することで高音域がプラスされ、音の広がりがぐっとアップ。スピーカー本体から取り付け工賃まで含んだパッケージ価格でご提供しています。",
           "link": "/basiccoax",
           "features": [],
           "price": "39600",
@@ -191,7 +191,8 @@
         }
       ],
       "images": [],
-      "showFloatingCTA": false
+      "showFloatingCTA": false,
+      "image": "/images/Top/demoroom1.webp"
     },
     {
       "id": "bass_power",
@@ -254,7 +255,8 @@
           "price": "55000"
         }
       ],
-      "images": []
+      "images": [],
+      "image": "/images/Top/demoroom1.webp"
     },
     {
       "id": "digital_source",
@@ -317,7 +319,8 @@
           "price": "220000"
         }
       ],
-      "images": []
+      "images": [],
+      "image": "/images/Top/demoroom1.webp"
     },
     {
       "id": "install_tuning",
@@ -367,7 +370,8 @@
           "price": "25300"
         }
       ],
-      "images": []
+      "images": [],
+      "image": "/images/Top/demoroom1.webp"
     },
     {
       "id": "custom_install",
@@ -417,7 +421,8 @@
           "price": "ASK"
         }
       ],
-      "images": []
+      "images": [],
+      "image": "/images/Top/demoroom1.webp"
     },
     {
       "id": "security_panthera",
@@ -7610,7 +7615,7 @@
         "name": "X-171S",
         "image": "/images/Audio/Speaker/X-171S.webp",
         "standalonePrice": "40700",
-        "remarks": "パッシブあり ���ンライン",
+        "remarks": "パッシブあり �����ンライン",
         "mountingHoleSize": "137",
         "depthSize": "51",
         "hasGrille": "なし",
@@ -12319,7 +12324,7 @@
                 "hasTweeterMount": "",
                 "standalonePrice": "86000",
                 "fixedPriceOverride": "0",
-                "remarks": "高音質なAB級アンプを採用。\n24db/octのクロスや0～180°のバリアブルな位相設定��可��。",
+                "remarks": "高音質なAB級アンプを採用。\n24db/octのクロスや0～180°のバリアブルな��相設定��可��。",
                 "youtubeUrl": "",
                 "showCardSummary": true,
                 "cardSummaryItems": [
@@ -21648,7 +21653,7 @@
               "value": ""
             },
             {
-              "title": "・最大各ポート1TBのSSD、HDD、USB��モリに��応",
+              "title": "・最大各ポー��1TBのSSD、HDD、USB��モリに��応",
               "desc": "",
               "value": ""
             },
@@ -29614,7 +29619,7 @@
         "mainTitle": "タント専用プラン",
         "subTitle": "ベーシックライン",
         "badge": "スピーカー交換パッケージ",
-        "description": "コストを抑えながら、効果的に音質アップできるタント専用のスピーカー交換プランです。\nダイハ���　タント(LA650S/LA660S) (R1.7～) \nダイハツ　タント(LA600S/LA610S)　(H25.10～R1.7)"
+        "description": "コストを抑えながら、効果的に音質アップできるタント専用のスピーカー交換プランです。\nダイハ���　タント(LA650S/LA660S) (R1.7～) \nダイハツ　タント(LA600S/LA610S)　(H25.10��R1.7)"
       },
       "pricing": {
         "specialPrice": "81840",

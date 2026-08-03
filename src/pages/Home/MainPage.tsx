@@ -90,6 +90,33 @@ export const MainPage: React.FC<MainPageProps> = ({
         })
     }));
 
+    const defaultAuditionImages: Record<string, string> = {
+        'ALPINE': '/images/Audio/Speaker/door-b.webp',
+        'AUDISON': '/images/Audio/compact_amplifier_package.webp',
+        'BLAM': '/images/Audio/Speaker/baffle.webp',
+        'BLUEMOONAUDIO': '/images/Audio/Speaker/ang-cable.webp'
+    };
+
+    const formattedAuditionSpeakers = (Array.isArray(auditionSpeakers) ? auditionSpeakers : []).map((b: any) => {
+        const brandName = b.brand || b.name || 'AUDIO BRAND';
+        const firstUnit = Array.isArray(b.units) && b.units.length > 0 ? b.units[0] : null;
+        const unitName = b.name || firstUnit?.model || firstUnit?.name || `${brandName} 試聴ユニット`;
+        const unitImage = b.image || firstUnit?.image || defaultAuditionImages[brandName] || '/images/Top/speaker.webp';
+        const statusText = b.status || firstUnit?.status || 'ON DEMAND';
+        const youtube = b.youtubeId || b.youtube || firstUnit?.youtube;
+        const descText = b.desc || b.description || (b.origin ? `原産国: ${b.origin}` : '店内常時試聴可能ユニット');
+
+        return {
+            ...b,
+            brand: brandName,
+            name: unitName,
+            image: unitImage,
+            status: statusText,
+            youtubeId: youtube,
+            desc: descText
+        };
+    });
+
     const securityCategories = securityData?.menu?.categories || [];
 
     const categories = isSecurityDomain ? securityCategories : audioCategories;
@@ -417,34 +444,35 @@ export const MainPage: React.FC<MainPageProps> = ({
 
                             {/* Top 4 Spotlight */}
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-                                {auditionSpeakers.slice(0, 4).map((speaker, idx) => (
+                                {formattedAuditionSpeakers.slice(0, 4).map((speaker, idx) => (
                                     <motion.div
                                         key={idx}
                                         initial={{ opacity: 0, scale: 0.9 }}
                                         whileInView={{ opacity: 1, scale: 1 }}
                                         transition={{ delay: idx * 0.1 }}
-                                        className="group relative bg-white/5 backdrop-blur-sm rounded-[2rem] border border-white/10 overflow-hidden"
+                                        className="group relative bg-white/5 backdrop-blur-sm rounded-[2rem] border border-white/10 overflow-hidden flex flex-col justify-between"
                                     >
-                                        <div className="aspect-[4/3] relative overflow-hidden">
+                                        <div className="aspect-[4/3] relative overflow-hidden bg-zinc-800">
                                             <SafeImage
                                                 src={speaker.image}
-                                                alt={speaker.name}
-                                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                                alt={speaker.brand}
+                                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
                                             />
-                                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                                            <div className="absolute bottom-4 left-6">
-                                                <span className="text-[12px] font-black text-blue-400 uppercase tracking-widest">{speaker.brand}</span>
-                                                <h3 className="text-lg font-black text-white">{speaker.name}</h3>
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+                                            <div className="absolute bottom-4 left-6 right-6">
+                                                <span className="text-[12px] font-black text-blue-400 uppercase tracking-widest block mb-0.5">{speaker.brand}</span>
+                                                <h3 className="text-base md:text-lg font-black text-white truncate">{speaker.name}</h3>
                                             </div>
                                         </div>
-                                        <div className="p-6">
-                                            <p className="text-sm text-gray-400 font-bold mb-4 line-clamp-2">{speaker.desc}</p>
-                                            <div className="flex items-center justify-between">
-                                                <span className="text-[12px] font-black tracking-widest text-emerald-400">ON DEMAND</span>
+                                        <div className="p-6 flex-grow flex flex-col justify-between space-y-4">
+                                            <p className="text-xs text-gray-400 font-bold line-clamp-2">{speaker.desc}</p>
+                                            <div className="flex items-center justify-between pt-2 border-t border-white/10">
+                                                <span className="text-[11px] font-black tracking-widest text-emerald-400">{speaker.status}</span>
                                                 {speaker.youtubeId && (
                                                     <button
                                                         onClick={() => setActiveYoutubeId(speaker.youtubeId)}
-                                                        className="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 transition-transform"
+                                                        className="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 transition-transform shadow-lg shadow-red-600/30"
+                                                        title="試聴動画を見る"
                                                     >
                                                         <Youtube className="w-4 h-4 text-white" />
                                                     </button>
@@ -474,7 +502,7 @@ export const MainPage: React.FC<MainPageProps> = ({
                                         className="mt-16 overflow-hidden"
                                     >
                                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                                            {auditionSpeakers.slice(4).map((speaker, idx) => (
+                                            {formattedAuditionSpeakers.slice(4).map((speaker, idx) => (
                                                 <div key={idx} className="bg-white/5 p-6 rounded-2xl border border-white/5 flex items-center justify-between hover:bg-white/10 transition-colors">
                                                     <div className="flex flex-col">
                                                         <span className="text-[12px] font-black text-blue-400 uppercase tracking-widest">{speaker.brand}</span>
