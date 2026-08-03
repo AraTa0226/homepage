@@ -298,7 +298,7 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                         loading="eager"
                         fetchPriority="high"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/30 to-transparent"></div>
                     <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#10b981 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
                 </div>
 
