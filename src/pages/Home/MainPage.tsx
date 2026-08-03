@@ -323,22 +323,46 @@ export const MainPage: React.FC<MainPageProps> = ({
 
                 <div className="relative max-w-7xl mx-auto px-4 py-32 md:py-40">
                     <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }}>
-                        <h1 className="text-4xl md:text-7xl font-black text-white mb-8 leading-[1.25] tracking-tighter">
-                            <span className="text-blue-400 block text-xl md:text-4xl font-black tracking-wider mb-2">福岡のカーオーディオ専門店</span>
-                            <span className="text-white block text-4xl md:text-8xl font-black tracking-tight">サウンドエナジー</span>
-                        </h1>
+                        {isSecurityDomain ? (
+                            <>
+                                <h1 className="text-4xl md:text-7xl font-black text-white mb-8 leading-[1.25] tracking-tighter">
+                                    <span className="text-emerald-400 block text-xl md:text-4xl font-black tracking-wider mb-2">福岡のカーセキュリティー専門店</span>
+                                    <span className="text-white block text-4xl md:text-8xl font-black tracking-tight">オートセキュリティエナジー</span>
+                                </h1>
 
-                        <div className="space-y-3 mb-10 max-w-3xl">
-                            <div className="flex items-center gap-3">
-                                <div className="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.8)] shrink-0" />
-                                <p className="text-blue-400 text-lg md:text-2xl font-black tracking-tight">
-                                    パイオニア最高峰「TS-Z1GR」認定店
-                                </p>
-                            </div>
-                            <p className="text-gray-200 text-base md:text-xl font-bold leading-relaxed pl-5">
-                                創業30年以上。福岡でカーオーディオを専門にしています
-                            </p>
-                        </div>
+                                <div className="space-y-3 mb-10 max-w-3xl">
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.8)] shrink-0" />
+                                        <p className="text-emerald-400 text-lg md:text-2xl font-black tracking-tight">
+                                            SPS取得のPanthera / Grgo 正規認定店
+                                        </p>
+                                    </div>
+                                    <p className="text-gray-200 text-base md:text-xl font-bold leading-relaxed pl-5">
+                                        最新の盗難手口(ゲームボーイ・CANインベーダー等)にも対応<br />
+                                        30年以上の実績で、あなたの愛車を守ります
+                                    </p>
+                                </div>
+                            </>
+                        ) : (
+                            <>
+                                <h1 className="text-4xl md:text-7xl font-black text-white mb-8 leading-[1.25] tracking-tighter">
+                                    <span className="text-blue-400 block text-xl md:text-4xl font-black tracking-wider mb-2">福岡のカーオーディオ専門店</span>
+                                    <span className="text-white block text-4xl md:text-8xl font-black tracking-tight">サウンドエナジー</span>
+                                </h1>
+
+                                <div className="space-y-3 mb-10 max-w-3xl">
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.8)] shrink-0" />
+                                        <p className="text-blue-400 text-lg md:text-2xl font-black tracking-tight">
+                                            パイオニア最高峰「TS-Z1GR」認定店
+                                        </p>
+                                    </div>
+                                    <p className="text-gray-200 text-base md:text-xl font-bold leading-relaxed pl-5">
+                                        創業30年以上。福岡でカーオーディオを専門にしています
+                                    </p>
+                                </div>
+                            </>
+                        )}
                         <div className="flex flex-col gap-6 mt-8">
                             <div className="flex items-center gap-2 p-1.5 bg-white/5 backdrop-blur-2xl border border-white/10 rounded-2xl w-fit">
                                 <button
