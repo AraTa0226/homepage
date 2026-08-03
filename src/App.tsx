@@ -106,10 +106,10 @@ function AppContent() {
   const [showMegaMenu, setShowMegaMenu] = useState(false);
 
   const facilities = [
-    { title: "ショールーム", image: assets.showroomImage },
-    { title: "ピット", image: assets.pitImage },
-    { title: "ワークスペース", image: assets.workspaceImage },
-    { title: "試聴室", image: assets.auditionRoomImage }
+    { title: "ショールーム", image: assets?.showroomImage || '/images/Top/showroom.webp' },
+    { title: "ピット", image: assets?.pitImage || '/images/Top/pit.webp' },
+    { title: "ワークスペース", image: assets?.workspaceImage || '/images/Top/workspace.webp' },
+    { title: "試聴室", image: assets?.auditionRoomImage || '/images/Top/audition.webp' }
   ];
 
   useEffect(() => {

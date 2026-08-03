@@ -5102,11 +5102,24 @@ const KnowledgeManager = () => {
 const AssetManager = () => {
     const { assets, updateAssets } = useSite();
     return (
-        <div className="bg-zinc-900/40 border border-zinc-800 rounded-[2.5rem] p-10">
-            <h3 className="text-2xl font-black text-white italic tracking-tighter uppercase mb-8">Global Site Assets</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <Input field="Hero Main Image" value={assets?.heroImage || ''} onChange={(v: string) => updateAssets({ heroImage: v })} />
-                <Input field="Security Hero Image" value={assets?.securityHeroImage || ''} onChange={(v: string) => updateAssets({ securityHeroImage: v })} />
+        <div className="bg-zinc-900/40 border border-zinc-800 rounded-[2.5rem] p-10 space-y-10">
+            <div>
+                <h3 className="text-2xl font-black text-white italic tracking-tighter uppercase mb-6">Global Site Assets</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <Input field="Hero Main Image" value={assets?.heroImage || ''} onChange={(v: string) => updateAssets({ heroImage: v })} />
+                    <Input field="Security Hero Image" value={assets?.securityHeroImage || ''} onChange={(v: string) => updateAssets({ securityHeroImage: v })} />
+                </div>
+            </div>
+
+            <div className="pt-8 border-t border-zinc-800/80">
+                <h3 className="text-xl font-black text-white italic tracking-tighter uppercase mb-2">ショップ Info (店舗施設ギャラリー画像)</h3>
+                <p className="text-xs text-zinc-500 font-bold mb-6">トップページおよび各ページの「SHOP INFO」セクションに表示される店舗ギャラリー写真のパスを設定できます。</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <Input field="ショールーム画像 (Showroom)" value={assets?.showroomImage || ''} placeholder="例: /images/Top/showroom.webp" onChange={(v: string) => updateAssets({ showroomImage: v })} />
+                    <Input field="ピット画像 (Pit)" value={assets?.pitImage || ''} placeholder="例: /images/Top/pit.webp" onChange={(v: string) => updateAssets({ pitImage: v })} />
+                    <Input field="ワークスペース画像 (Workspace)" value={assets?.workspaceImage || ''} placeholder="例: /images/Top/workspace.webp" onChange={(v: string) => updateAssets({ workspaceImage: v })} />
+                    <Input field="試聴室画像 (Audition Room)" value={assets?.auditionRoomImage || ''} placeholder="例: /images/Top/auditionRoom.webp" onChange={(v: string) => updateAssets({ auditionRoomImage: v })} />
+                </div>
             </div>
         </div>
     );
