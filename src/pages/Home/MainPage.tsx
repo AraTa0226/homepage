@@ -117,6 +117,21 @@ export const MainPage: React.FC<MainPageProps> = ({
         };
     });
 
+    const handleYoutubeClick = (urlOrId: string) => {
+        if (!urlOrId) return;
+        let videoId = urlOrId.trim();
+        const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+        const match = videoId.match(regExp);
+
+        if (match && match[2] && match[2].length === 11) {
+            setActiveYoutubeId(match[2]);
+        } else if (urlOrId.startsWith('http://') || urlOrId.startsWith('https://')) {
+            window.open(urlOrId, '_blank', 'noopener,noreferrer');
+        } else {
+            setActiveYoutubeId(videoId);
+        }
+    };
+
     const securityCategories = securityData?.menu?.categories || [];
 
     const categories = isSecurityDomain ? securityCategories : audioCategories;
@@ -470,7 +485,7 @@ export const MainPage: React.FC<MainPageProps> = ({
                                                 <span className="text-[11px] font-black tracking-widest text-emerald-400">{speaker.status}</span>
                                                 {speaker.youtubeId && (
                                                     <button
-                                                        onClick={() => setActiveYoutubeId(speaker.youtubeId)}
+                                                        onClick={() => handleYoutubeClick(speaker.youtubeId)}
                                                         className="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 transition-transform shadow-lg shadow-red-600/30"
                                                         title="試聴動画を見る"
                                                     >
@@ -521,7 +536,7 @@ export const MainPage: React.FC<MainPageProps> = ({
                                                             <span className="text-[10px] font-black tracking-widest text-emerald-400">{speaker.status || 'Available'}</span>
                                                             {speaker.youtubeId && (
                                                                 <button
-                                                                    onClick={() => setActiveYoutubeId(speaker.youtubeId)}
+                                                                    onClick={() => handleYoutubeClick(speaker.youtubeId)}
                                                                     className="w-7 h-7 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 transition-transform shadow-md shadow-red-600/30 shrink-0"
                                                                     title="試聴動画を見る"
                                                                 >
