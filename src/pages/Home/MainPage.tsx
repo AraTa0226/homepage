@@ -15,6 +15,7 @@ import {
     Phone,
     Mail,
     MapPin,
+    ExternalLink,
     Facebook,
     Instagram,
     Loader2,
@@ -651,23 +652,37 @@ export const MainPage: React.FC<MainPageProps> = ({
                         <div className="space-y-8 lg:sticky lg:top-32">
                             <div className="relative aspect-square rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/10 hover:border-blue-500/30 transition-all duration-700">
                                 <iframe
-                                    src="https://maps.google.com/maps?q=%E7%A6%8F%E5%B2%A1%E7%9C%8C%E5%A4%A7%E9%87%8E%E5%9F%8E%E5%B8%82%E5%BE%A1%E7%AC%A0%E5%B7%9D5-4-14%20Sound%20ANG&t=&z=16&ie=UTF8&iwloc=B&output=embed"
-                                    className="w-full h-full"
+                                    src="https://maps.google.com/maps?q=%E7%A6%8F%E5%B2%A1%E7%9C%8C%E5%A4%A7%E9%87%8E%E5%9F%8E%E5%B8%82%E5%BE%A1%E7%AC%A0%E5%B7%9D5-4-14%20Sound%20ANG&t=&z=16&ie=UTF8&iwloc=near&output=embed"
+                                    className="w-full h-full border-0"
                                     loading="lazy"
+                                    title="Sound ANG Location Map"
                                 />
                             </div>
 
-                            <div className="p-8 rounded-[2.5rem] bg-white/5 shadow-2xl border border-white/10 backdrop-blur-sm">
-                                <h4 className="text-[12px] font-black tracking-widest text-blue-500 uppercase mb-4">Location Address</h4>
-                                <div className="flex gap-4">
-                                    <div className="w-12 h-12 rounded-2xl bg-blue-500/10 flex items-center justify-center shrink-0">
-                                        <MapPin className="w-6 h-6 text-blue-500" />
-                                    </div>
-                                    <div>
-                                        <p className="font-black text-white text-lg leading-tight tracking-tight">〒816-0912</p>
-                                        <p className="font-bold text-gray-400 text-[15px] mt-1">福岡県大野城市御笠川5-4-14</p>
+                            <div className="p-8 rounded-[2.5rem] bg-white/5 shadow-2xl border border-white/10 backdrop-blur-sm space-y-6">
+                                <div>
+                                    <h4 className="text-[12px] font-black tracking-widest text-blue-500 uppercase mb-4">Location Address</h4>
+                                    <div className="flex gap-4">
+                                        <div className="w-12 h-12 rounded-2xl bg-blue-500/10 flex items-center justify-center shrink-0">
+                                            <MapPin className="w-6 h-6 text-blue-500" />
+                                        </div>
+                                        <div>
+                                            <p className="font-black text-white text-lg leading-tight tracking-tight">〒816-0912</p>
+                                            <p className="font-bold text-gray-400 text-[15px] mt-1">福岡県大野城市御笠川5-4-14</p>
+                                        </div>
                                     </div>
                                 </div>
+
+                                <a
+                                    href="https://maps.google.com/?q=%E7%A6%8F%E5%B2%A1%E7%9C%8C%E5%A4%A7%E9%87%8E%E5%9F%8E%E5%B8%82%E5%BE%A1%E7%AC%A0%E5%B7%9D5-4-14%20Sound%20ANG"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center justify-center gap-3 w-full py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-2xl font-black text-sm tracking-wider uppercase transition-all shadow-lg shadow-blue-600/20 group"
+                                >
+                                    <MapPin className="w-4 h-4" />
+                                    Googleマップで開く
+                                    <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                                </a>
                             </div>
                         </div>
                     </div>
