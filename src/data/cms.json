@@ -474,7 +474,7 @@
         {
           "name": "ZVTⅡ",
           "price": "198000",
-          "badge": "最���位フルガード",
+          "badge": "最����位フルガード",
           "features": [
             "デジタル傾斜センサー標準装備",
             "トリプルセンサー標準装備",
@@ -3059,7 +3059,7 @@
           "taxExcluded": "100000",
           "status": "Available",
           "youtube": "https://youtu.be/_1M6N16o9no",
-          "image": "/images/Demo/D-DS-G400.webp"
+          "image": "/images/Demo/D-DS-G400.jpg"
         },
         {
           "model": "DS-SA1000",
@@ -3067,7 +3067,7 @@
           "taxExcluded": "670000",
           "status": "Available",
           "youtube": "https://youtu.be/SOdFw_Cx5Sw",
-          "image": "/images/Demo/D-SA1000.webp"
+          "image": "/images/Demo/D-SA1000.jpg"
         }
       ]
     },
@@ -3081,7 +3081,7 @@
           "taxExcluded": "55000",
           "status": "Available",
           "youtube": "https://youtu.be/W8YVl6QgaTw",
-          "image": "/images/Demo/ESOTAN202.webp"
+          "image": "/images/Demo/ESOTAN202.jpg"
         },
         {
           "model": "ESOTAN232",
@@ -3089,7 +3089,7 @@
           "taxExcluded": "70000",
           "status": "Available",
           "youtube": "https://youtu.be/byYM-uqoy2Q",
-          "image": "/images/Demo/ESOTAN232.webp"
+          "image": "/images/Demo/ESOTAN232.jpg"
         },
         {
           "model": "ESOTEC SYSTEM242",
@@ -3097,7 +3097,7 @@
           "taxExcluded": "200000",
           "status": "Available",
           "youtube": "https://youtu.be/KhNixYLyDKI",
-          "image": "/images/Demo/SYSTEM242.webp"
+          "image": "/images/Demo/SYSTEM242.jpg"
         }
       ]
     },
@@ -3111,7 +3111,7 @@
           "taxExcluded": "70000",
           "status": "Available",
           "youtube": "https://youtu.be/D49aol_HkKo",
-          "image": "/images/Demo/D-PS165FSE.webp"
+          "image": "/images/Demo/D-PS165FSE.jpg"
         },
         {
           "model": "ES165K2S",
@@ -3119,7 +3119,7 @@
           "taxExcluded": "114000",
           "status": "Available",
           "youtube": "https://youtu.be/0Yl4ozb6_Hc",
-          "image": "/images/Demo/D-ES165K2S.webp"
+          "image": "/images/Demo/D-ES165K2S.jpg"
         },
         {
           "model": "UTOPIA M 165W-XP",
@@ -3127,7 +3127,7 @@
           "taxExcluded": "260000",
           "status": "Available",
           "youtube": "https://youtu.be/U_ReOFJ06TI",
-          "image": "/images/Demo/D-165W-XP.webp"
+          "image": "/images/Demo/Utopia_165W-XP_Kit.jpg"
         }
       ]
     },
@@ -3140,7 +3140,8 @@
           "price": "37400",
           "taxExcluded": "34000",
           "status": "Available",
-          "youtube": "https://youtu.be/D_piASeBr2s"
+          "youtube": "https://youtu.be/D_piASeBr2s",
+          "image": "/images/Demo/D-GZIC650FX.jpg"
         }
       ]
     },
@@ -3154,7 +3155,7 @@
           "taxExcluded": "60000",
           "status": "Available",
           "youtube": "https://youtu.be/S7HEbCUv5ks",
-          "image": "/images/Demo/D-ci3k165.webp"
+          "image": "/images/Demo/ci3_k165.2fm_s3_mk2.jpg"
         }
       ]
     },
@@ -3168,7 +3169,7 @@
           "taxExcluded": "37000",
           "status": "Available",
           "youtube": "https://youtu.be/mAA9X8pXv7Q",
-          "image": "/images/Demo/D-CSS674.webp"
+          "image": "/images/Demo/D-CSS674.jpg"
         },
         {
           "model": "KSS6704",
@@ -3176,7 +3177,7 @@
           "taxExcluded": "56000",
           "status": "Available",
           "youtube": "https://youtu.be/rV2gX6VtX3o",
-          "image": "/images/Demo/KSS6704.webp"
+          "image": "/images/Demo/KSS6704.jpg"
         }
       ]
     },
@@ -3190,7 +3191,7 @@
           "taxExcluded": "288000",
           "status": "Available",
           "youtube": "https://youtu.be/K0cQ1HXSaZ0",
-          "image": "/images/Demo/D-7-16i.webp"
+          "image": "/images/Demo/D-7-16i.jpg"
         }
       ]
     },
@@ -3204,14 +3205,14 @@
           "taxExcluded": "73000",
           "status": "Available",
           "youtube": "https://youtu.be/ZJvuipxFFR8",
-          "image": "/images/Demo/D-MAXIMO-U.webp"
+          "image": "/images/Demo/MAXIMO ULTRA 602HE MkⅡ.jpg"
         },
         {
           "model": "ELATE CARBON PRO62",
           "price": "496100",
           "taxExcluded": "451000",
           "status": "Available",
-          "image": "/images/Demo/D-ELATECARBONPRO62A.webp",
+          "image": "/images/Demo/ELATE CARBON PRO62.jpg",
           "youtube": "https://youtu.be/Qc1Ph3d4b0U"
         }
       ]
@@ -3225,7 +3226,7 @@
           "price": "3586000",
           "taxExcluded": "3260000",
           "status": "Available",
-          "image": "/images/Demo/D-ZR.webp"
+          "image": "/images/Demo/ZR EXTRAVAGANCE LINE(3WAY).jpg"
         }
       ]
     }
