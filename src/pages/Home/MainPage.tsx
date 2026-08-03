@@ -97,7 +97,7 @@ export const MainPage: React.FC<MainPageProps> = ({
         'BLUEMOONAUDIO': '/images/Audio/Speaker/ang-cable.webp'
     };
 
-    const formattedAuditionSpeakers = (Array.isArray(auditionSpeakers) ? auditionSpeakers : []).flatMap((b: any) => {
+    const allAuditionUnits = (Array.isArray(auditionSpeakers) ? auditionSpeakers : []).flatMap((b: any) => {
         const brandName = b.brand || b.name || 'AUDIO BRAND';
         const originDesc = b.origin ? `原産国: ${b.origin}` : (b.desc || b.description || '店内常時試聴可能ユニット');
         const defaultImg = b.image || defaultAuditionImages[brandName] || '/images/Top/speaker.webp';
@@ -121,6 +121,36 @@ export const MainPage: React.FC<MainPageProps> = ({
             youtubeId: b.youtubeId || b.youtube,
             desc: b.desc || b.description || originDesc
         }];
+    });
+
+    const top4AuditionSpeakers = allAuditionUnits.slice(0, 4);
+
+    const brandGroupedAudition = (Array.isArray(auditionSpeakers) ? auditionSpeakers : []).map((b: any) => {
+        const brandName = b.brand || b.name || 'AUDIO BRAND';
+        const originText = b.origin ? `原産国: ${b.origin}` : '';
+        const defaultImg = b.image || defaultAuditionImages[brandName] || '/images/Top/speaker.webp';
+
+        const units = (Array.isArray(b.units) && b.units.length > 0)
+            ? b.units.map((unit: any) => ({
+                model: unit.model || unit.name || `${brandName} 試聴ユニット`,
+                image: unit.image || defaultImg,
+                status: unit.status || b.status || 'Available',
+                youtubeId: unit.youtube || unit.youtubeId || b.youtubeId || b.youtube,
+                desc: unit.desc || unit.description || (unit.price ? `税込価格: ¥${parseInt(unit.price).toLocaleString()}` : originText)
+            }))
+            : [{
+                model: b.name || b.model || `${brandName} 試聴ユニット`,
+                image: b.image || defaultImg,
+                status: b.status || 'Available',
+                youtubeId: b.youtubeId || b.youtube,
+                desc: b.desc || b.description || originText
+            }];
+
+        return {
+            brand: brandName,
+            origin: b.origin,
+            units
+        };
     });
 
     const handleYoutubeClick = (urlOrId: string) => {
@@ -459,14 +489,14 @@ export const MainPage: React.FC<MainPageProps> = ({
                                 </div>
                             </div>
 
-                            {/* All Audition Speakers Grid */}
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                                {formattedAuditionSpeakers.map((speaker, idx) => (
+                            {/* Top 4 Spotlight */}
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                                {top4AuditionSpeakers.map((speaker, idx) => (
                                     <motion.div
                                         key={idx}
-                                        initial={{ opacity: 0, y: 20 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: (idx % 8) * 0.05 }}
+                                        initial={{ opacity: 0, scale: 0.95 }}
+                                        whileInView={{ opacity: 1, scale: 1 }}
+                                        transition={{ delay: idx * 0.1 }}
                                         className="group relative bg-white/5 backdrop-blur-sm rounded-[2rem] border border-white/10 overflow-hidden flex flex-col justify-between hover:bg-white/10 hover:border-blue-500/40 transition-all duration-300 shadow-xl"
                                     >
                                         <div className="aspect-[4/3] relative overflow-hidden bg-zinc-800">
@@ -499,6 +529,81 @@ export const MainPage: React.FC<MainPageProps> = ({
                                     </motion.div>
                                 ))}
                             </div>
+
+                            {/* 展開・折りたたみボタン */}
+                            <div className="text-center">
+                                <button
+                                    onClick={() => setShowFullAuditionList(!showFullAuditionList)}
+                                    className="group inline-flex items-center gap-4 bg-white text-gray-900 px-10 py-5 rounded-2xl font-black text-[15px] tracking-[0.2em] hover:bg-blue-600 hover:text-white transition-all shadow-2xl"
+                                >
+                                    {showFullAuditionList ? 'CLOSE LIST' : 'VIEW ALL SPEAKERS'}
+                                    <ChevronRight className={`w-5 h-5 transition-transform ${showFullAuditionList ? 'rotate-90' : 'group-hover:translate-x-1'}`} />
+                                </button>
+                            </div>
+
+                            {/* 展開時：ブランドごとにグループ分けした全試聴ユニット一覧 */}
+                            <AnimatePresence>
+                                {showFullAuditionList && (
+                                    <motion.div
+                                        initial={{ opacity: 0, height: 0 }}
+                                        animate={{ opacity: 1, height: 'auto' }}
+                                        exit={{ opacity: 0, height: 0 }}
+                                        className="mt-16 overflow-hidden space-y-10"
+                                    >
+                                        {brandGroupedAudition.map((bGroup, bIdx) => (
+                                            <div key={bIdx} className="space-y-4 bg-white/5 border border-white/10 p-6 md:p-8 rounded-[2.5rem] backdrop-blur-md">
+                                                <div className="flex items-center justify-between border-b border-white/10 pb-4">
+                                                    <div className="flex items-center gap-3">
+                                                        <div className="w-2.5 h-2.5 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.8)]" />
+                                                        <h3 className="text-xl md:text-2xl font-black text-white uppercase tracking-wider">{bGroup.brand}</h3>
+                                                        {bGroup.origin && (
+                                                            <span className="text-xs font-bold text-gray-400 bg-white/10 px-3 py-1 rounded-full border border-white/10">
+                                                                {bGroup.origin}
+                                                            </span>
+                                                        )}
+                                                    </div>
+                                                    <span className="text-xs font-black text-blue-400 uppercase tracking-widest">
+                                                        {bGroup.units.length} UNITS
+                                                    </span>
+                                                </div>
+
+                                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 pt-2">
+                                                    {bGroup.units.map((unit, uIdx) => (
+                                                        <div key={uIdx} className="bg-black/40 p-4 md:p-5 rounded-2xl border border-white/10 flex items-center gap-4 hover:bg-white/10 transition-all group">
+                                                            <div className="w-20 h-20 md:w-24 md:h-24 rounded-xl overflow-hidden bg-zinc-800 shrink-0 relative">
+                                                                <SafeImage
+                                                                    src={unit.image}
+                                                                    alt={unit.model}
+                                                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100"
+                                                                />
+                                                            </div>
+                                                            <div className="flex-1 min-w-0 flex flex-col justify-between h-full py-0.5">
+                                                                <div>
+                                                                    <span className="text-[10px] font-black text-blue-400 uppercase tracking-widest block truncate">{bGroup.brand}</span>
+                                                                    <h4 className="font-black text-sm md:text-base text-white truncate mb-1">{unit.model}</h4>
+                                                                    <p className="text-[10px] text-gray-400 font-bold line-clamp-1">{unit.desc}</p>
+                                                                </div>
+                                                                <div className="flex items-center justify-between mt-2 pt-2 border-t border-white/10">
+                                                                    <span className="text-[10px] font-black tracking-widest text-emerald-400">{unit.status || 'Available'}</span>
+                                                                    {unit.youtubeId && (
+                                                                        <button
+                                                                            onClick={() => handleYoutubeClick(unit.youtubeId)}
+                                                                            className="w-7 h-7 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 transition-transform shadow-md shadow-red-600/30 shrink-0"
+                                                                            title="試聴動画を見る"
+                                                                        >
+                                                                            <Youtube className="w-3.5 h-3.5 text-white" />
+                                                                        </button>
+                                                                    )}
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
                         </div>
                     </section>
                 )
