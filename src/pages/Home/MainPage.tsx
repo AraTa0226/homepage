@@ -119,17 +119,13 @@ export const MainPage: React.FC<MainPageProps> = ({
 
     const handleYoutubeClick = (urlOrId: string) => {
         if (!urlOrId) return;
-        let videoId = urlOrId.trim();
-        const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-        const match = videoId.match(regExp);
+        let targetUrl = urlOrId.trim();
 
-        if (match && match[2] && match[2].length === 11) {
-            setActiveYoutubeId(match[2]);
-        } else if (urlOrId.startsWith('http://') || urlOrId.startsWith('https://')) {
-            window.open(urlOrId, '_blank', 'noopener,noreferrer');
-        } else {
-            setActiveYoutubeId(videoId);
+        if (!targetUrl.startsWith('http://') && !targetUrl.startsWith('https://')) {
+            targetUrl = `https://www.youtube.com/watch?v=${targetUrl}`;
         }
+
+        window.open(targetUrl, '_blank', 'noopener,noreferrer');
     };
 
     const securityCategories = securityData?.menu?.categories || [];
