@@ -298,7 +298,8 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                         loading="eager"
                         fetchPriority="high"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/30 to-transparent"></div>
+                    {/* 極薄ブラックオーバーレイ（左40-50%・写真は明るいまま） */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/20 to-transparent"></div>
                     <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#10b981 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
                 </div>
 
@@ -309,38 +310,41 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.5 }}
-                                    className="mb-8 p-1.5 bg-white/80 backdrop-blur-3xl rounded-2xl border border-gray-200/80 w-fit group cursor-pointer shadow-xl shadow-emerald-500/5 hover:shadow-emerald-500/10 transition-all"
+                                    className="mb-8 p-1.5 bg-white/10 backdrop-blur-3xl rounded-2xl border border-white/20 w-fit group cursor-pointer shadow-xl shadow-emerald-500/5 hover:shadow-emerald-500/10 transition-all"
                                     onClick={() => heroAlert.link && navigate(heroAlert.link)}
                                 >
                                     <div className="flex items-center gap-4 pr-6">
                                         <div className="bg-emerald-600 text-white text-[12px] font-black px-3 py-1 rounded-lg uppercase tracking-tighter shadow-lg shadow-emerald-500/20">
                                             {heroAlert.badge || 'NEW'}
                                         </div>
-                                        <span className="text-gray-900 font-bold text-sm md:text-[15px] tracking-tight">{heroAlert.text}</span>
-                                        <ArrowRight className="w-3.5 h-3.5 text-emerald-600 group-hover:translate-x-1 transition-transform" />
+                                        <span className="text-white font-bold text-sm md:text-[15px] tracking-tight [text-shadow:_0_2px_6px_rgba(0,0,0,0.7)]">{heroAlert.text}</span>
+                                        <ArrowRight className="w-3.5 h-3.5 text-emerald-400 group-hover:translate-x-1 transition-transform" />
                                     </div>
                                 </motion.div>
                             )}
 
-                        {/* メインコピー ＆ サブコピー（すりガラス可読性プレート） */}
-                        <div className="p-6 md:p-8 rounded-[2.5rem] bg-white/75 backdrop-blur-md border border-white/80 shadow-2xl w-fit mb-10 space-y-6">
-                            <h1 className="text-4xl md:text-7xl font-black leading-[1.25] tracking-tighter">
-                                <span className="text-emerald-600 block text-xl md:text-3xl font-black tracking-wider mb-2 not-italic">福岡のカーセキュリティー専門店</span>
-                                <span className="text-gray-900 block text-4xl md:text-7xl font-black tracking-tight not-italic">オートセキュリティーエナジー</span>
+                        {/* メインコピー ＆ ブランドグリーンバッジ */}
+                        <div className="mb-8 max-w-4xl space-y-4">
+                            <div className="inline-flex items-center px-4 py-2 bg-emerald-600 text-white rounded-xl shadow-lg shadow-emerald-600/30 text-sm md:text-base font-black tracking-wider">
+                                福岡のカーセキュリティー専門店
+                            </div>
+                            <h1 className="text-5xl md:text-8xl font-black text-white leading-[1.1] tracking-tight not-italic [text-shadow:_0_3px_12px_rgba(0,0,0,0.8),_0_0_20px_rgba(0,0,0,0.6)]">
+                                オートセキュリティーエナジー
                             </h1>
+                        </div>
 
-                            <div className="space-y-3 max-w-2xl border-t border-gray-200/60 pt-6">
-                                <div className="flex items-center gap-3">
-                                    <div className="w-2.5 h-2.5 rounded-full bg-emerald-600 shadow-[0_0_10px_rgba(16,185,129,0.8)] shrink-0" />
-                                    <p className="text-emerald-700 text-base md:text-xl font-black tracking-tight">
-                                        SPS取得のPanthera / Grgo 正規認定店
-                                    </p>
-                                </div>
-                                <p className="text-gray-700 text-sm md:text-base font-bold leading-relaxed pl-5">
-                                    最新の盗難手口(ゲームボーイ・CANインベーダー等)にも対応<br />
-                                    30年以上の実績で、あなたの愛車を守ります
+                        {/* サブテキスト（輪郭シャドウ補強でくっきり視認） */}
+                        <div className="space-y-3 mb-10 max-w-3xl">
+                            <div className="flex items-center gap-3">
+                                <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.9)] shrink-0" />
+                                <p className="text-emerald-300 text-lg md:text-2xl font-black tracking-tight [text-shadow:_0_2px_8px_rgba(0,0,0,0.8)]">
+                                    SPS取得のPanthera / Grgo 正規認定店
                                 </p>
                             </div>
+                            <p className="text-[#F0F0F0] text-base md:text-xl font-bold leading-relaxed pl-6 [text-shadow:_0_2px_8px_rgba(0,0,0,0.8)]">
+                                最新の盗難手口(ゲームボーイ・CANインベーダー等)にも対応<br />
+                                30年以上の実績で、あなたの愛車を守ります
+                            </p>
                         </div>
 
                         <div className="flex flex-col gap-6 mt-8">
