@@ -318,26 +318,30 @@ export const MainPage: React.FC<MainPageProps> = ({
                         loading="eager"
                         fetchPriority="high"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/20 to-transparent"></div>
                 </div>
 
                 <div className="relative max-w-7xl mx-auto px-4 py-32 md:py-40">
                     <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }}>
                         {isSecurityDomain ? (
                             <>
-                                <h1 className="text-4xl md:text-7xl font-black text-white mb-8 leading-[1.25] tracking-tighter">
-                                    <span className="text-emerald-400 block text-xl md:text-4xl font-black tracking-wider mb-2">福岡のカーセキュリティー専門店</span>
-                                    <span className="text-white block text-4xl md:text-8xl font-black tracking-tight">オートセキュリティーエナジー</span>
-                                </h1>
+                                <div className="mb-8 max-w-5xl space-y-2">
+                                    <p className="text-emerald-400 font-black text-xl md:text-3xl tracking-wider uppercase [text-shadow:_0_2px_8px_rgba(0,0,0,0.8)]">
+                                        福岡のカーセキュリティー専門店
+                                    </p>
+                                    <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight tracking-tight not-italic whitespace-nowrap [text-shadow:_0_3px_12px_rgba(0,0,0,0.8),_0_0_20px_rgba(0,0,0,0.6)]">
+                                        オートセキュリティーエナジー
+                                    </h1>
+                                </div>
 
                                 <div className="space-y-3 mb-10 max-w-3xl">
                                     <div className="flex items-center gap-3">
-                                        <div className="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.8)] shrink-0" />
-                                        <p className="text-emerald-400 text-lg md:text-2xl font-black tracking-tight">
+                                        <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.9)] shrink-0" />
+                                        <p className="text-emerald-300 text-lg md:text-2xl font-black tracking-tight [text-shadow:_0_2px_8px_rgba(0,0,0,0.8)]">
                                             SPS取得のPanthera / Grgo 正規認定店
                                         </p>
                                     </div>
-                                    <p className="text-gray-200 text-base md:text-xl font-bold leading-relaxed pl-5">
+                                    <p className="text-[#F0F0F0] text-base md:text-xl font-bold leading-relaxed pl-6 [text-shadow:_0_2px_8px_rgba(0,0,0,0.8)]">
                                         最新の盗難手口(ゲームボーイ・CANインベーダー等)にも対応<br />
                                         30年以上の実績で、あなたの愛車を守ります
                                     </p>
@@ -345,19 +349,23 @@ export const MainPage: React.FC<MainPageProps> = ({
                             </>
                         ) : (
                             <>
-                                <h1 className="text-4xl md:text-7xl font-black text-white mb-8 leading-[1.25] tracking-tighter">
-                                    <span className="text-blue-400 block text-xl md:text-4xl font-black tracking-wider mb-2">福岡のカーオーディオ専門店</span>
-                                    <span className="text-white block text-4xl md:text-8xl font-black tracking-tight">サウンドエナジー</span>
-                                </h1>
+                                <div className="mb-8 max-w-5xl space-y-2">
+                                    <p className="text-blue-400 font-black text-xl md:text-3xl tracking-wider uppercase [text-shadow:_0_2px_8px_rgba(0,0,0,0.8)]">
+                                        福岡のカーオーディオ専門店
+                                    </p>
+                                    <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight tracking-tight not-italic whitespace-nowrap [text-shadow:_0_3px_12px_rgba(0,0,0,0.8),_0_0_20px_rgba(0,0,0,0.6)]">
+                                        サウンドエナジー
+                                    </h1>
+                                </div>
 
                                 <div className="space-y-3 mb-10 max-w-3xl">
                                     <div className="flex items-center gap-3">
-                                        <div className="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.8)] shrink-0" />
-                                        <p className="text-blue-400 text-lg md:text-2xl font-black tracking-tight">
+                                        <div className="w-2.5 h-2.5 rounded-full bg-blue-400 shadow-[0_0_10px_rgba(96,165,250,0.9)] shrink-0" />
+                                        <p className="text-blue-300 text-lg md:text-2xl font-black tracking-tight [text-shadow:_0_2px_8px_rgba(0,0,0,0.8)]">
                                             パイオニア最高峰「TS-Z1GR」認定店
                                         </p>
                                     </div>
-                                    <p className="text-gray-200 text-base md:text-xl font-bold leading-relaxed pl-5">
+                                    <p className="text-[#F0F0F0] text-base md:text-xl font-bold leading-relaxed pl-6 [text-shadow:_0_2px_8px_rgba(0,0,0,0.8)]">
                                         創業30年以上。福岡でカーオーディオを専門にしています
                                     </p>
                                 </div>
