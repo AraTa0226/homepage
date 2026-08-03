@@ -323,47 +323,22 @@ export const MainPage: React.FC<MainPageProps> = ({
 
                 <div className="relative max-w-7xl mx-auto px-4 py-32 md:py-40">
                     <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }}>
-                        <div className="flex flex-col gap-4 mb-8">
-                            <div className="inline-flex items-center gap-2 md:gap-3 w-fit px-4 py-2 md:px-6 md:py-2.5 bg-blue-600 rounded-full shadow-lg shadow-blue-500/20">
-                                <span className="text-white text-[12px] md:text-[15px] font-black uppercase tracking-[0.15em] whitespace-nowrap">
-                                    福岡のカーオーディオ専門店
-                                </span>
-                            </div>
-                        </div>
-
-                        {heroAlert?.active && (
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                className="mb-8 p-1.5 bg-white/10 backdrop-blur-3xl rounded-2xl border border-white/20 w-fit group cursor-pointer shadow-xl hover:shadow-blue-500/10 transition-all"
-                                onClick={() => heroAlert.link && navigate(heroAlert.link)}
-                            >
-                                <div className="flex items-center gap-4 pr-6">
-                                    <div className="bg-blue-600 text-white text-[12px] font-black px-3 py-1 rounded-lg uppercase tracking-tighter shadow-lg shadow-blue-500/20">
-                                        {heroAlert.badge || 'NEW'}
-                                    </div>
-                                    <span className="text-white font-bold text-sm md:text-[15px] tracking-tight">{heroAlert.text}</span>
-                                    <ChevronRight className="w-3.5 h-3.5 text-blue-400 group-hover:translate-x-1 transition-transform" />
-                                </div>
-                            </motion.div>
-                        )}
-
-                        <h1 className="text-3xl md:text-7xl font-black text-white mb-8 leading-[1.2] md:leading-[1.1] tracking-tighter">
-                            <span className="block md:inline whitespace-nowrap">感性を揺さぶる至高の音、</span><br className="hidden md:block" />
-                            <span className="block md:inline whitespace-nowrap">サウンドエナジー</span>
+                        <h1 className="text-4xl md:text-7xl font-black text-white mb-8 leading-[1.25] tracking-tighter">
+                            <span className="text-blue-400 block text-xl md:text-4xl font-black tracking-wider mb-2">福岡のカーオーディオ専門店</span>
+                            <span className="text-white block text-4xl md:text-8xl font-black tracking-tight">サウンドエナジー</span>
                         </h1>
 
-                        <div className="flex flex-col gap-3 mb-10">
-                            <div className="flex items-center gap-2.5">
-                                <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
-                                <span className="text-blue-500 text-lg md:text-3xl font-black opacity-90 tracking-tight leading-none">パイオニア最高峰「TS-Z1GR」認定店</span>
+                        <div className="space-y-3 mb-10 max-w-3xl">
+                            <div className="flex items-center gap-3">
+                                <div className="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.8)] shrink-0" />
+                                <p className="text-blue-400 text-lg md:text-2xl font-black tracking-tight">
+                                    パイオニア最高峰「TS-Z1GR」認定店
+                                </p>
                             </div>
+                            <p className="text-gray-200 text-base md:text-xl font-bold leading-relaxed pl-5">
+                                創業30年以上。福岡でカーオーディオを専門にしています
+                            </p>
                         </div>
-                        <p className="text-base md:text-2xl text-gray-200 mb-8 font-bold leading-relaxed max-w-3xl">
-                            音を極め、音楽の真髄を届け続けて30年以上。<br className="hidden md:block" />
-                            国内屈指の技術を誇るハイエンド・オーディオの繊細な調音と施工。<br className="hidden md:block" />
-                            熟練の職人技で、あなたのカーライフに究極の感動を。
-                        </p>
                         <div className="flex flex-col gap-6 mt-8">
                             <div className="flex items-center gap-2 p-1.5 bg-white/5 backdrop-blur-2xl border border-white/10 rounded-2xl w-fit">
                                 <button
