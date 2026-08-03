@@ -115,8 +115,8 @@
         {
           "id": "line_1778978221406",
           "name": "スピーカー交換・BASIC line （セパレート） ",
-          "badge": "���ピーカー交換パッケージ",
-          "description": "ツィーター（高音）とミッドレンジ（中低音）が別々になったセパレートタイプのスピーカーに交換するパッケージです。カーオーディオのシステムアップが初めての方にもおすすめです。\nコスト��抑えながらセパレートの良さを体感していただけるよう、ネットワーク（音域を分離するユニット）はインラインタイプを中心にラインアップしています。ツィーターは純正位置またはダッシュボード上へのマウント取り付けが基本です。",
+          "badge": "スピーカー交換パッケージ",
+          "description": "ツィーター（高音）とミッドレンジ（中低音）が別々になったセパレートタイプのスピーカーに交換するパッケージです。カーオーディオのシステムアップが初めての方にもおすすめです。\nコストを抑えながらセパレートの良さを体感していただけるよう、ネットワーク（音域を分離するユニット）はインラインタイプを中心にラインアップしています。ツィーターは純正位置またはダッシュボード上へのマウント取り付けが基本です。",
           "link": "/basicsep",
           "features": [],
           "price": "64900",
@@ -138,7 +138,7 @@
           "id": "line_1778924085764",
           "name": "スピーカー交換・PREMIUM line（10万円以上）",
           "badge": "スピーカー交換パッケージ",
-          "description": "10万円以上のスピーカーの中から、お気に入りの1本を選べるパッケージです。ドアチューニングとスピーカーケーブルの交換もセットで、本格的なサウンドを追求したい方のためのラインです。\nこの価格帯になると、各ブランドが素材や構造にまで独自のこだわりを注ぎ込んだモデルが揃います。情報量の多さ、音の質感、フォーカスの精度、ステレオイメージの広がり——スタンダードラインとは明らかに違う、一段上の音の世界を体感できます。\n一方で、どのブランドも「音作り優先」で設計されているため、インナーバッフルの加工やツィーターのオンダッシュマウントな��、取り付けに工夫が必要なモデルも少なくありません。スピーカー単体ではなく、どう取り付けるかまで含めて一緒に選ぶことが、このラインでは特に重要です。",
+          "description": "10万円以上のスピーカーの中から、お気に入りの1本を選べるパッケージです。ドアチューニングとスピーカーケーブルの交換もセットで、本格的なサウンドを追求したい方のためのラインです。\nこの価格帯になると、各ブランドが素材や構造にまで独自のこだわりを注ぎ込んだモデルが揃います。情報量の多さ、音の質感、フォーカスの精度、ステレオイメージの広がり——スタンダードラインとは明らかに違う、一段上の音の世界を体感できます。\n一方で、どのブランドも「音作り優先」で設計されているため、インナーバッフルの加工やツィーターのオンダッシュマウントなど、取り付けに工夫が必要なモデルも少なくありません。スピーカー単体ではなく、どう取り付けるかまで含めて一緒に選ぶことが、このラインでは特に重要です。",
           "link": "/sp-premium",
           "features": [],
           "price": "162800",
@@ -474,7 +474,7 @@
         {
           "name": "ZVTⅡ",
           "price": "198000",
-          "badge": "最�����位フルガード",
+          "badge": "最上位フルガード",
           "features": [
             "デジタル傾斜センサー標準装備",
             "トリプルセンサー標準装備",
@@ -3497,7 +3497,7 @@
               ]
             }
           ],
-          "image": "/images/Top/pitroom.webp",
+          "image": "/images/Security/pit.jpg",
           "path": "/security/panthera"
         },
         {
@@ -3513,7 +3513,7 @@
             "Clifford (クリフォード)",
             "送迎バス 置き去り防止支援装置"
           ],
-          "image": "/images/Top/security.webp"
+          "image": "/images/Security/pit.jpg"
         },
         {
           "id": "security_options",
@@ -3525,7 +3525,7 @@
             "レーダー探知機",
             "デジタルインナーミラー"
           ],
-          "image": "/images/Top/dorareko.webp"
+          "image": "/images/Security/pit.jpg"
         },
         {
           "id": "maintenance",
@@ -3539,7 +3539,7 @@
             "セキュリティー診断サービス",
             "よくあるご質問 (FAQ)"
           ],
-          "image": "/images/Top/workroom.webp"
+          "image": "/images/Security/pit.jpg"
         },
         {
           "id": "mobile_solution",
@@ -7515,7 +7515,10 @@
           "title": "Speaker Lineup",
           "hideSubtitle": false,
           "subtitle": "右上の再生ボタンより音源試聴可能です。",
-          "fixedPrice": "41800"
+          "fixedPrice": "41800",
+          "subtitleFontSize": 18,
+          "borderSpacing": "narrow",
+          "subtitleFont": "oswald"
         }
       },
       {
@@ -7617,7 +7620,7 @@
         "name": "X-171S",
         "image": "/images/Audio/Speaker/X-171S.webp",
         "standalonePrice": "40700",
-        "remarks": "パッシブあり �����ンライン",
+        "remarks": "パッシブあり インライン",
         "mountingHoleSize": "137",
         "depthSize": "51",
         "hasGrille": "なし",
@@ -8005,7 +8008,10 @@
                 "hasGrille": "あり"
               }
             ],
-            "subtitle": "17cmスピーカー"
+            "subtitle": "17cmスピーカー",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald",
+            "subtitleFontSize": 20
           }
         },
         {
@@ -8075,7 +8081,10 @@
                 "remarks": "",
                 "youtubeUrl": ""
               }
-            ]
+            ],
+            "subtitleFontSize": 20,
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -8337,7 +8346,10 @@
                 "hasTweeterMount": "あり"
               }
             ],
-            "fixedPrice": "24200"
+            "fixedPrice": "24200",
+            "hideSubtitle": true,
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -8938,7 +8950,10 @@
             "title": "Speaker Lineup",
             "hideSubtitle": false,
             "subtitle": "右上の再生ボタンより音源試聴可能です。",
-            "fixedPrice": "41800"
+            "fixedPrice": "41800",
+            "subtitleFontSize": 18,
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -9040,7 +9055,7 @@
           "name": "X-171S",
           "image": "/images/Audio/Speaker/X-171S.webp",
           "standalonePrice": "40700",
-          "remarks": "パッシブあり �����ンライン",
+          "remarks": "パッシブあり インライン",
           "mountingHoleSize": "137",
           "depthSize": "51",
           "hasGrille": "なし",
@@ -9603,8 +9618,11 @@
             "title": "Speaker Lineup",
             "subtitle": "右上の再生ボタンより音源試聴可能です。",
             "fixedPrice": "52800",
-            "hideTitle": true,
-            "hideSubtitle": true
+            "hideTitle": false,
+            "hideSubtitle": false,
+            "subtitleFontSize": 18,
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -10025,7 +10043,9 @@
                 "fixedPriceOverride": "154000"
               }
             ],
-            "hideSubtitle": true
+            "hideSubtitle": true,
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -10157,7 +10177,7 @@
               },
               {
                 "title": "ツイーター",
-                "desc": "純正ツィーター非装着車の場合、別途純正部品が必要になる場合があります。（おおよそ15000円前後)",
+                "desc": "純正ツィーター非装着車���場合、別途純正部品が必要になる場合があります。（おおよそ15000円前後)",
                 "image": "/images/Audio/Speaker/bmw-tw2.webp"
               },
               {
@@ -23283,7 +23303,7 @@
             "subtitleFont": "oswald",
             "columns": 2,
             "subtitleColor": "#ea580c",
-            "content": "<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link href=\"https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap\" rel=\"stylesheet\">\n\n<style>\n  /* 親のラッパー要素（max-w-4xlのdiv）を中央寄せにする設定 */\n  div:has(> .pa-cn912b-section) {\n    margin-left: auto !important;\n    margin-right: auto !important;\n  }\n\n  .pa-cn912b-section{\n    --cb-bg:#ffffff;\n    --cb-panel:#f7f5f1;\n    --cb-line:#e3e0d9;\n    --cb-text:#26241f;\n    --cb-text-dim:#7a766c;\n    --cb-copper:#a8672f;\n    --cb-copper-dim:#c68a4e;\n    --cb-dark:#1c1a17;\n\n    box-sizing:border-box;\n    width:100%;\n    max-width:760px;\n    margin:0 auto;\n    padding:56px 24px 60px;\n    background:var(--cb-bg);\n    color:var(--cb-text);\n    font-family:'Noto Sans JP',sans-serif;\n    line-height:1.85;\n    -webkit-font-smoothing:antialiased;\n  }\n  .pa-cn912b-section *{\n    box-sizing:border-box;\n  }\n\n  /* ---- Photo ---- */\n  .pa-cn912b-section .cb-photo{\n    position:relative;\n    border-radius:8px;\n    overflow:hidden;\n    margin-bottom:24px;\n    background:var(--cb-dark);\n  }\n  .pa-cn912b-section .cb-photo img{\n    width:100%;\n    display:block;\n  }\n  .pa-cn912b-section .cb-photo-placeholder{\n    display:flex;\n    align-items:center;\n    justify-content:center;\n    width:100%;\n    height:180px;\n    color:#8a867c;\n    font-size:13px;\n  }\n\n  /* ---- Header band ---- */\n  .pa-cn912b-section .cb-band{\n    display:flex;\n    flex-wrap:wrap;\n    align-items:center;\n    gap:10px 16px;\n    background:var(--cb-dark);\n    border-radius:6px;\n    padding:16px 20px;\n    margin-bottom:28px;\n  }\n  .pa-cn912b-section .cb-band-model{\n    font-family:'Oswald',sans-serif;\n    font-weight:700;\n    font-size:clamp(17px,3.4vw,21px);\n    color:#ffffff;\n    letter-spacing:0.02em;\n  }\n  .pa-cn912b-section .cb-band-model span{\n    color:var(--cb-copper-dim);\n  }\n  .pa-cn912b-section .cb-band-tag{\n    margin-left:auto;\n    font-family:'Oswald',sans-serif;\n    font-size:11px;\n    letter-spacing:0.1em;\n    color:var(--cb-dark);\n    background:var(--cb-copper-dim);\n    border-radius:20px;\n    padding:5px 14px;\n  }\n  .pa-cn912b-section .cb-band-sub{\n    width:100%;\n    font-size:12.5px;\n    color:#c9c5bc;\n  }\n\n  /* ---- Size variants ---- */\n  .pa-cn912b-section .cb-sizes{\n    display:flex;\n    flex-wrap:wrap;\n    gap:8px;\n    justify-content:center;\n    margin-bottom:32px;\n  }\n  .pa-cn912b-section .cb-sizes span{\n    font-family:'Oswald',sans-serif;\n    font-size:12px;\n    letter-spacing:0.05em;\n    color:var(--cb-text-dim);\n    border:1px solid var(--cb-line);\n    border-radius:20px;\n    padding:6px 14px;\n  }\n\n  /* ---- Includes panel ---- */\n  .pa-cn912b-section .cb-includes{\n    background:var(--cb-panel);\n    border:1px solid var(--cb-line);\n    border-radius:6px;\n    padding:26px 28px;\n  }\n  .pa-cn912b-section .cb-includes-lead{\n    font-size:14px;\n    color:var(--cb-text-dim);\n    margin-bottom:18px;\n    text-align:left;\n  }\n  .pa-cn912b-section .cb-includes ul{\n    list-style:none;\n    margin:0;\n    padding:0;\n    display:flex;\n    flex-direction:column;\n  }\n  .pa-cn912b-section .cb-includes li{\n    display:flex;\n    align-items:flex-start;\n    gap:10px;\n    font-size:14.5px;\n    color:var(--cb-text);\n    text-align:left;\n    padding:12px 0;\n    border-top:1px solid var(--cb-line);\n  }\n  .pa-cn912b-section .cb-includes li:first-child{\n    border-top:none;\n  }\n  .pa-cn912b-section .cb-includes li::before{\n    content:\"\";\n    flex-shrink:0;\n    width:6px;\n    height:6px;\n    border-radius:50%;\n    background:var(--cb-copper);\n    margin-top:8px;\n  }\n  .pa-cn912b-section .cb-includes li b{\n    color:var(--cb-copper);\n    font-weight:600;\n  }\n\n  .pa-cn912b-section .cb-note{\n    margin-top:18px;\n    padding-top:16px;\n    border-top:1px dashed var(--cb-line);\n    font-size:12.5px;\n    color:var(--cb-text-dim);\n    text-align:left;\n  }\n\n  @media (max-width:520px){\n    .pa-cn912b-section{padding:44px 18px 48px;}\n    .pa-cn912b-section .cb-band-tag{margin-left:0;}\n    .pa-cn912b-section .cb-includes{padding:20px 20px;}\n  }\n</style>\n\n<div class=\"pa-cn912b-section\">\n\n  <div class=\"cb-photo\">\n    <img src=\"/images/Audio/912-4.webp\" alt=\"CYBER NAVI 912-Ⅳ Series\">\n  </div>\n\n  <div class=\"cb-band\">\n    <div class=\"cb-band-model\">CYBER NAVI <span>912-Ⅳ</span> Series</div>\n    <div class=\"cb-band-tag\">取付調整込</div>\n    <div class=\"cb-band-sub\">ネットワークスティックレスモデル</div>\n  </div>\n\n  <div class=\"cb-sizes\">\n    <span>9インチ</span>\n    <span>8インチ</span>\n    <span>7インチワイド</span>\n    <span>7インチ</span>\n  </div>\n\n  <div class=\"cb-includes\">\n    <div class=\"cb-includes-lead\">\n      サイバーナビ912Ⅳシリーズ（ネットワークスティックレスモデル）。ナビインストール費用とサイバーナビ調整費用が含まれています。\n    </div>\n    <ul>\n      <li><b>ナビ：</b>サイバーナビ 912-Ⅳ シリーズ</li>\n      <li>ナビ取り付け工賃</li>\n      <li>サイバーナビ調整込み</li>\n    </ul>\n    <div class=\"cb-note\">\n      車種ごとの取付金具・配線が別途必要です。ネットワークスティックは後で追加することも可能です。\n    </div>\n  </div>\n\n</div>"
+            "content": "<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link href=\"https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap\" rel=\"stylesheet\">\n\n<style>\n  /* 親のラッパー要素（max-w-4xlのdiv）を中央寄せにする設定 */\n  div:has(> .pa-cn912b-section) {\n    margin-left: auto !important;\n    margin-right: auto !important;\n  }\n\n  .pa-cn912b-section{\n    --cb-bg:#ffffff;\n    --cb-panel:#f7f5f1;\n    --cb-line:#e3e0d9;\n    --cb-text:#26241f;\n    --cb-text-dim:#7a766c;\n    --cb-copper:#a8672f;\n    --cb-copper-dim:#c68a4e;\n    --cb-dark:#1c1a17;\n\n    box-sizing:border-box;\n    width:100%;\n    max-width:760px;\n    margin:0 auto;\n    padding:56px 24px 60px;\n    background:var(--cb-bg);\n    color:var(--cb-text);\n    font-family:'Noto Sans JP',sans-serif;\n    line-height:1.85;\n    -webkit-font-smoothing:antialiased;\n  }\n  .pa-cn912b-section *{\n    box-sizing:border-box;\n  }\n\n  /* ---- Photo ---- */\n  .pa-cn912b-section .cb-photo{\n    position:relative;\n    border-radius:8px;\n    overflow:hidden;\n    margin-bottom:24px;\n    background:var(--cb-dark);\n  }\n  .pa-cn912b-section .cb-photo img{\n    width:100%;\n    display:block;\n  }\n  .pa-cn912b-section .cb-photo-placeholder{\n    display:flex;\n    align-items:center;\n    justify-content:center;\n    width:100%;\n    height:180px;\n    color:#8a867c;\n    font-size:13px;\n  }\n\n  /* ---- Header band ---- */\n  .pa-cn912b-section .cb-band{\n    display:flex;\n    flex-wrap:wrap;\n    align-items:center;\n    gap:10px 16px;\n    background:var(--cb-dark);\n    border-radius:6px;\n    padding:16px 20px;\n    margin-bottom:28px;\n  }\n  .pa-cn912b-section .cb-band-model{\n    font-family:'Oswald',sans-serif;\n    font-weight:700;\n    font-size:clamp(17px,3.4vw,21px);\n    color:#ffffff;\n    letter-spacing:0.02em;\n  }\n  .pa-cn912b-section .cb-band-model span{\n    color:var(--cb-copper-dim);\n  }\n  .pa-cn912b-section .cb-band-tag{\n    margin-left:auto;\n    font-family:'Oswald',sans-serif;\n    font-size:11px;\n    letter-spacing:0.1em;\n    color:var(--cb-dark);\n    background:var(--cb-copper-dim);\n    border-radius:20px;\n    padding:5px 14px;\n  }\n  .pa-cn912b-section .cb-band-sub{\n    width:100%;\n    font-size:12.5px;\n    color:#c9c5bc;\n  }\n\n  /* ---- Size variants ---- */\n  .pa-cn912b-section .cb-sizes{\n    display:flex;\n    flex-wrap:wrap;\n    gap:8px;\n    justify-content:center;\n    margin-bottom:32px;\n  }\n  .pa-cn912b-section .cb-sizes span{\n    font-family:'Oswald',sans-serif;\n    font-size:12px;\n    letter-spacing:0.05em;\n    color:var(--cb-text-dim);\n    border:1px solid var(--cb-line);\n    border-radius:20px;\n    padding:6px 14px;\n  }\n\n  /* ---- Includes panel ---- */\n  .pa-cn912b-section .cb-includes{\n    background:var(--cb-panel);\n    border:1px solid var(--cb-line);\n    border-radius:6px;\n    padding:26px 28px;\n  }\n  .pa-cn912b-section .cb-includes-lead{\n    font-size:14px;\n    color:var(--cb-text-dim);\n    margin-bottom:18px;\n    text-align:left;\n  }\n  .pa-cn912b-section .cb-includes ul{\n    list-style:none;\n    margin:0;\n    padding:0;\n    display:flex;\n    flex-direction:column;\n  }\n  .pa-cn912b-section .cb-includes li{\n    display:flex;\n    align-items:flex-start;\n    gap:10px;\n    font-size:14.5px;\n    color:var(--cb-text);\n    text-align:left;\n    padding:12px 0;\n    border-top:1px solid var(--cb-line);\n  }\n  .pa-cn912b-section .cb-includes li:first-child{\n    border-top:none;\n  }\n  .pa-cn912b-section .cb-includes li::before{\n    content:\"\";\n    flex-shrink:0;\n    width:6px;\n    height:6px;\n    border-radius:50%;\n    background:var(--cb-copper);\n    margin-top:8px;\n  }\n  .pa-cn912b-section .cb-includes li b{\n    color:var(--cb-copper);\n    font-weight:600;\n  }\n\n  .pa-cn912b-section .cb-note{\n    margin-top:18px;\n    padding-top:16px;\n    border-top:1px dashed var(--cb-line);\n    font-size:12.5px;\n    color:var(--cb-text-dim);\n    text-align:left;\n  }\n\n  @media (max-width:520px){\n    .pa-cn912b-section{padding:44px 18px 48px;}\n    .pa-cn912b-section .cb-band-tag{margin-left:0;}\n    .pa-cn912b-section .cb-includes{padding:20px 20px;}\n  }\n</style>\n\n<div class=\"pa-cn912b-section\">\n\n  <div class=\"cb-photo\">\n    <img src=\"/images/Audio/912-4.webp\" alt=\"CYBER NAVI 912-Ⅳ Series\">\n  </div>\n\n  <div class=\"cb-band\">\n    <div class=\"cb-band-model\">CYBER NAVI <span>912-Ⅳ</span> Series</div>\n    <div class=\"cb-band-tag\">取付調整込</div>\n    <div class=\"cb-band-sub\">ネットワークスティックレスモデル</div>\n  </div>\n\n  <div class=\"cb-sizes\">\n    <span>9インチ</span>\n    <span>8インチ</span>\n    <span>7インチワイド</span>\n    <span>7インチ</span>\n  </div>\n\n  <div class=\"cb-includes\">\n    <div class=\"cb-includes-lead\">\n      サイバーナビ912Ⅳシリーズ（ネットワークスティックレスモデル）。ナビインストール費用とサイバーナビ調整費用が含まれています。\n    </div>\n    <ul>\n      <li><b>ナビ：</b>サイバーナビ 912-��� シリーズ</li>\n      <li>ナビ取り付け工賃</li>\n      <li>サイバーナビ調整込み</li>\n    </ul>\n    <div class=\"cb-note\">\n      車種ごとの取付金具・配線が別途必要です。ネットワークスティックは後で追加することも可能です。\n    </div>\n  </div>\n\n</div>"
           }
         },
         {
@@ -27090,7 +27110,7 @@
           "showCardSummary": true,
           "cardSummaryItems": [
             {
-              "title": "スピーカー本体",
+              "title": "スピー��ー本体",
               "desc": "",
               "value": "40700"
             },
