@@ -322,24 +322,25 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                 </motion.div>
                             )}
 
-                        {/* メインコピー */}
-                        <h1 className="text-4xl md:text-7xl font-black mb-8 leading-[1.25] tracking-tighter">
-                            <span className="text-emerald-600 block text-xl md:text-4xl font-black tracking-wider mb-2 not-italic">福岡のカーセキュリティー専門店</span>
-                            <span className="text-emerald-600 block text-4xl md:text-8xl font-black tracking-tight not-italic">オートセキュリティーエナジー</span>
-                        </h1>
+                        {/* メインコピー ＆ サブコピー（すりガラス可読性プレート） */}
+                        <div className="p-6 md:p-8 rounded-[2.5rem] bg-white/75 backdrop-blur-md border border-white/80 shadow-2xl w-fit mb-10 space-y-6">
+                            <h1 className="text-4xl md:text-7xl font-black leading-[1.25] tracking-tighter">
+                                <span className="text-emerald-600 block text-xl md:text-3xl font-black tracking-wider mb-2 not-italic">福岡のカーセキュリティー専門店</span>
+                                <span className="text-gray-900 block text-4xl md:text-7xl font-black tracking-tight not-italic">オートセキュリティーエナジー</span>
+                            </h1>
 
-                        {/* サブコピー */}
-                        <div className="space-y-3 mb-10 max-w-3xl">
-                            <div className="flex items-center gap-3">
-                                <div className="w-2.5 h-2.5 rounded-full bg-emerald-600 shadow-[0_0_10px_rgba(16,185,129,0.8)] shrink-0" />
-                                <p className="text-emerald-600 text-lg md:text-2xl font-black tracking-tight">
-                                    SPS取得のPanthera / Grgo 正規認定店
+                            <div className="space-y-3 max-w-2xl border-t border-gray-200/60 pt-6">
+                                <div className="flex items-center gap-3">
+                                    <div className="w-2.5 h-2.5 rounded-full bg-emerald-600 shadow-[0_0_10px_rgba(16,185,129,0.8)] shrink-0" />
+                                    <p className="text-emerald-700 text-base md:text-xl font-black tracking-tight">
+                                        SPS取得のPanthera / Grgo 正規認定店
+                                    </p>
+                                </div>
+                                <p className="text-gray-700 text-sm md:text-base font-bold leading-relaxed pl-5">
+                                    最新の盗難手口(ゲームボーイ・CANインベーダー等)にも対応<br />
+                                    30年以上の実績で、あなたの愛車を守ります
                                 </p>
                             </div>
-                            <p className="text-gray-700 text-base md:text-xl font-bold leading-relaxed pl-5">
-                                最新の盗難手口(ゲームボーイ・CANインベーダー等)にも対応<br />
-                                30年以上の実績で、あなたの愛車を守ります
-                            </p>
                         </div>
 
                         <div className="flex flex-col gap-6 mt-8">
