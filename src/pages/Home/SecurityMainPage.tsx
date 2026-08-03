@@ -298,7 +298,7 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                         loading="eager"
                         fetchPriority="high"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-transparent"></div>
                     <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#10b981 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
                 </div>
 
@@ -309,34 +309,34 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.5 }}
-                                    className="mb-8 p-1.5 bg-white/10 backdrop-blur-3xl rounded-2xl border border-white/20 w-fit group cursor-pointer shadow-xl shadow-emerald-500/5 hover:shadow-emerald-500/10 transition-all"
+                                    className="mb-8 p-1.5 bg-white/80 backdrop-blur-3xl rounded-2xl border border-gray-200/80 w-fit group cursor-pointer shadow-xl shadow-emerald-500/5 hover:shadow-emerald-500/10 transition-all"
                                     onClick={() => heroAlert.link && navigate(heroAlert.link)}
                                 >
                                     <div className="flex items-center gap-4 pr-6">
-                                        <div className="bg-emerald-500 text-black text-[12px] font-black px-3 py-1 rounded-lg uppercase tracking-tighter shadow-lg shadow-emerald-500/20">
+                                        <div className="bg-emerald-600 text-white text-[12px] font-black px-3 py-1 rounded-lg uppercase tracking-tighter shadow-lg shadow-emerald-500/20">
                                             {heroAlert.badge || 'NEW'}
                                         </div>
-                                        <span className="text-white font-bold text-sm md:text-[15px] tracking-tight">{heroAlert.text}</span>
-                                        <ArrowRight className="w-3.5 h-3.5 text-emerald-400 group-hover:translate-x-1 transition-transform" />
+                                        <span className="text-gray-900 font-bold text-sm md:text-[15px] tracking-tight">{heroAlert.text}</span>
+                                        <ArrowRight className="w-3.5 h-3.5 text-emerald-600 group-hover:translate-x-1 transition-transform" />
                                     </div>
                                 </motion.div>
                             )}
 
                         {/* メインコピー */}
                         <h1 className="text-4xl md:text-7xl font-black mb-8 leading-[1.25] tracking-tighter">
-                            <span className="text-emerald-400 block text-xl md:text-4xl font-black tracking-wider mb-2 not-italic">福岡のカーセキュリティー専門店</span>
-                            <span className="text-white block text-4xl md:text-8xl font-black tracking-tight not-italic">オートセキュリティーエナジー</span>
+                            <span className="text-emerald-600 block text-xl md:text-4xl font-black tracking-wider mb-2 not-italic">福岡のカーセキュリティー専門店</span>
+                            <span className="text-gray-900 block text-4xl md:text-8xl font-black tracking-tight not-italic">オートセキュリティーエナジー</span>
                         </h1>
 
                         {/* サブコピー */}
                         <div className="space-y-3 mb-10 max-w-3xl">
                             <div className="flex items-center gap-3">
-                                <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.8)] shrink-0" />
-                                <p className="text-emerald-400 text-lg md:text-2xl font-black tracking-tight">
+                                <div className="w-2.5 h-2.5 rounded-full bg-emerald-600 shadow-[0_0_10px_rgba(16,185,129,0.8)] shrink-0" />
+                                <p className="text-emerald-600 text-lg md:text-2xl font-black tracking-tight">
                                     SPS取得のPanthera / Grgo 正規認定店
                                 </p>
                             </div>
-                            <p className="text-gray-200 text-base md:text-xl font-bold leading-relaxed pl-5">
+                            <p className="text-gray-700 text-base md:text-xl font-bold leading-relaxed pl-5">
                                 最新の盗難手口(ゲームボーイ・CANインベーダー等)にも対応<br />
                                 30年以上の実績で、あなたの愛車を守ります
                             </p>
