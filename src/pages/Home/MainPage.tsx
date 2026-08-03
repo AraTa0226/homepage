@@ -327,7 +327,7 @@ export const MainPage: React.FC<MainPageProps> = ({
                             <>
                                 <h1 className="text-4xl md:text-7xl font-black text-white mb-8 leading-[1.25] tracking-tighter">
                                     <span className="text-emerald-400 block text-xl md:text-4xl font-black tracking-wider mb-2">福岡のカーセキュリティー専門店</span>
-                                    <span className="text-white block text-4xl md:text-8xl font-black tracking-tight">オートセキュリティエナジー</span>
+                                    <span className="text-white block text-4xl md:text-8xl font-black tracking-tight">オートセキュリティーエナジー</span>
                                 </h1>
 
                                 <div className="space-y-3 mb-10 max-w-3xl">

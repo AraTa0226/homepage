@@ -323,9 +323,9 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                             )}
 
                         {/* メインコピー */}
-                        <h1 className="text-4xl md:text-7xl font-black text-gray-900 mb-8 leading-[1.25] tracking-tighter">
+                        <h1 className="text-4xl md:text-7xl font-black mb-8 leading-[1.25] tracking-tighter">
                             <span className="text-emerald-600 block text-xl md:text-4xl font-black tracking-wider mb-2 not-italic">福岡のカーセキュリティー専門店</span>
-                            <span className="text-gray-900 block text-4xl md:text-8xl font-black tracking-tight not-italic">オートセキュリティエナジー</span>
+                            <span className="bg-gradient-to-r from-gray-800 via-emerald-950 to-gray-800 bg-clip-text text-transparent block text-4xl md:text-8xl font-black tracking-tight not-italic">オートセキュリティーエナジー</span>
                         </h1>
 
                         {/* サブコピー */}
@@ -336,7 +336,7 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                                     SPS取得のPanthera / Grgo 正規認定店
                                 </p>
                             </div>
-                            <p className="text-gray-700 text-base md:text-xl font-bold leading-relaxed pl-5">
+                            <p className="text-gray-600 text-base md:text-xl font-bold leading-relaxed pl-5">
                                 最新の盗難手口(ゲームボーイ・CANインベーダー等)にも対応<br />
                                 30年以上の実績で、あなたの愛車を守ります
                             </p>
