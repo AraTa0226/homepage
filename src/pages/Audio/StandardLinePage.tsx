@@ -650,26 +650,64 @@ export const StandardLinePage: React.FC = () => {
                                       {!isCardPriceHidden && (
                                         <div className={hasTopContentInBody ? "pt-6 border-t border-gray-100" : ""}>
                                           {spk.prices && spk.prices.length > 0 ? (
-                                            <div className="space-y-4">
-                                              {spk.prices.map((pItem: any, pIdx: number) => {
-                                                const priceVal = parsePrice(pItem.price);
-                                                const taxExcluded = Math.round(priceVal / (1 + (data.pricing?.taxRate || 10) / 100));
-                                                return (
-                                                  <div key={pIdx} className="border-b border-gray-100 last:border-0 pb-3 last:pb-0">
-                                                    <div className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">{pItem.label || 'パッケージ合計 (税込)'}</div>
-                                                    <div className="flex justify-between items-end">
-                                                      <div className="flex items-baseline gap-2">
-                                                        <div className="text-2xl font-black text-blue-600 tracking-tighter">¥{priceVal.toLocaleString()}</div>
-                                                        <div className="text-xs text-gray-400 uppercase italic">incl. tax</div>
+                                            <div className="space-y-4 pt-1">
+                                              {(() => {
+                                                const grouped: { [key: string]: any[] } = {};
+                                                spk.prices.forEach((pItem: any) => {
+                                                  const cName = pItem.courseName || '';
+                                                  if (!grouped[cName]) grouped[cName] = [];
+                                                  grouped[cName].push(pItem);
+                                                });
+
+                                                return Object.entries(grouped).map(([courseName, items], gIdx) => (
+                                                  <div key={gIdx} className="space-y-2">
+                                                    {courseName && (
+                                                      <div className="text-[10px] font-black text-blue-600 uppercase tracking-wider bg-blue-50 px-2.5 py-0.5 rounded-md inline-block border border-blue-100">
+                                                        {courseName}
                                                       </div>
-                                                      <div className="text-right">
-                                                        <span className="text-xs text-gray-400 uppercase tracking-tighter mr-1">(税別)</span>
-                                                        <span className="text-base font-black text-gray-600 italic">¥{taxExcluded.toLocaleString()}</span>
-                                                      </div>
+                                                    )}
+                                                    <div className="space-y-3">
+                                                      {items.map((pItem: any, pIdx: number) => {
+                                                        const priceVal = parsePrice(pItem.price);
+                                                        const taxExcluded = Math.round(priceVal / (1 + (data.pricing?.taxRate || 10) / 100));
+                                                        const isSet = pItem.isSetDiscount || pItem.priceType === 'set';
+                                                        const isAdd = pItem.isAdd || pItem.priceType === 'add';
+
+                                                        let badgeEl = null;
+                                                        let priceColorClass = "text-blue-600";
+                                                        if (isSet) {
+                                                          badgeEl = <span className="bg-red-50 text-red-600 text-[10px] font-black px-2 py-0.5 rounded border border-red-200 shrink-0">セット割</span>;
+                                                          priceColorClass = "text-red-600";
+                                                        } else if (isAdd) {
+                                                          badgeEl = <span className="bg-emerald-50 text-emerald-600 text-[10px] font-black px-2 py-0.5 rounded border border-emerald-200 shrink-0">追加</span>;
+                                                          priceColorClass = "text-emerald-600";
+                                                        }
+
+                                                        return (
+                                                          <div key={pIdx} className="border-b border-gray-100 last:border-0 pb-3 last:pb-0">
+                                                            <div className="flex items-center justify-between gap-2 mb-1">
+                                                              <div className="text-xs font-bold text-gray-600 uppercase tracking-tight">
+                                                                {pItem.label || 'パッケージ合計 (税込)'}
+                                                              </div>
+                                                              {badgeEl}
+                                                            </div>
+                                                            <div className="flex justify-between items-end">
+                                                              <div className="flex items-baseline gap-1.5">
+                                                                <div className={`text-2xl font-black ${priceColorClass} tracking-tighter`}>¥{priceVal.toLocaleString()}</div>
+                                                                <div className="text-[10px] text-gray-400 uppercase italic font-bold">incl. tax</div>
+                                                              </div>
+                                                              <div className="text-right">
+                                                                <span className="text-[10px] text-gray-400 uppercase tracking-tighter mr-1">(税別)</span>
+                                                                <span className="text-sm font-black text-gray-600 italic">¥{taxExcluded.toLocaleString()}</span>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                        );
+                                                      })}
                                                     </div>
                                                   </div>
-                                                );
-                                              })}
+                                                ));
+                                              })()}
                                             </div>
                                           ) : (
                                             <div className="flex justify-between items-end">
