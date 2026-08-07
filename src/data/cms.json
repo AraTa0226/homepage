@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-08-07T16:33:00Z",
-  "cacheVersion": "84-bmw-encoding-fix",
+  "lastUpdated": "2026-08-07T16:47:00Z",
+  "cacheVersion": "85-bmw-final-fix",
   "heroAlert": {
     "active": true,
     "text": "【新商品案内】最新のレーザー探知機「Z1200」の取り扱いを開始しました。店舗にて展示中！",
@@ -10591,7 +10591,14 @@
                 "youtubeUrl": ""
               }
             ],
-            "fixedPrice": 33000
+            "fixedPrice": 33000,
+            "hideTitle": true,
+            "subtitleAlign": "center",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald",
+            "subtitleColor": "#ea580c",
+            "title": "Focal",
+            "subtitleFontSize": 22
           }
         },
         {
@@ -10639,7 +10646,13 @@
               }
             ],
             "fixedPrice": "33000",
-            "hideTitle": true
+            "hideTitle": true,
+            "title": "BLAM",
+            "subtitleAlign": "center",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald",
+            "subtitleColor": "#ea580c",
+            "subtitleFontSize": 29
           }
         },
         {
@@ -10728,7 +10741,13 @@
               }
             ],
             "fixedPrice": 33000,
-            "hideTitle": true
+            "hideTitle": true,
+            "subtitleColor": "#ea580c",
+            "title": "ETON",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald",
+            "subtitleFontSize": 22,
+            "subtitleAlign": "center"
           }
         },
         {
@@ -10775,7 +10794,13 @@
                 "youtubeUrl": ""
               }
             ],
-            "hideTitle": true
+            "hideTitle": true,
+            "title": "a/tack",
+            "subtitleAlign": "center",
+            "subtitleFontSize": 22,
+            "borderSpacing": "narrow",
+            "subtitleColor": "#ea580c",
+            "subtitleFont": "oswald"
           }
         }
       ],
@@ -17510,7 +17535,7 @@
             {
               "image": "/images/Audio/dsp/DIRECTOR.webp",
               "name": "DIRECTOR",
-              "text": "リモートコントローラーを装着することにより手元でポリュームをコントロールしたりプリセットメモリーを呼び出したり、ソース切り替え(入力切替)ができるようになります。",
+              "text": "リモートコントローラーを装着するこにより手元でポリュームをコントロールしたりプリセットメモリーを呼び出したり、ソース切り替え(入力切替)ができるようになります。",
               "price": "66000"
             },
             {
@@ -27076,7 +27101,7 @@
           "data": {
             "title": "施工に関する注意事項",
             "items": [
-              "作業は<strong>半日ー1日お車をお預かり</strong>します（無料代車をご用意可能です）。"
+              "作業は<strong>半日ー1日お車をお預り</strong>します（無料代車をご用意可能です）。"
             ]
           }
         }
@@ -29581,7 +29606,7 @@
                 "hasTweeterMount": "",
                 "standalonePrice": "78100",
                 "fixedPriceOverride": "18700",
-                "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。純正スピーカーは6x9インチサイズのオーバルスピーカーですのでそのメリットを活かすべくオーバルスピーカーをチョイスしています。取り付けにはフォレスター専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります",
+                "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。純正スピーカーは6x9インチサイズのオーバルスピーカーですのでそのメリットを活かすべくオーバルスピーカーをチョイスしています。取り付けにはフォレスター専用に設計されたパーを使うためローコストながら効果の高いオーディオグレードアップとなります",
                 "youtubeUrl": "",
                 "showCardSummary": true,
                 "cardSummaryItems": [
