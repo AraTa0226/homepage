@@ -777,9 +777,14 @@ export const StandardLinePage: React.FC = () => {
                         {section.data.subTitle && <div className="text-blue-400 font-black text-[15px] md:text-base tracking-[0.3em] uppercase mb-4 animate-fade-in drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{section.data.subTitle}</div>}
                         <h2 className="text-4xl md:text-7xl font-black text-white tracking-tighter italic uppercase leading-none drop-shadow-[0_4px_12px_rgba(0,0,0,0.85)]">{section.data.title}</h2>
                         {section.data.description && (
-                          <p className="text-gray-100 text-sm md:text-base font-bold mt-6 max-w-2xl mx-auto leading-relaxed animate-fade-in whitespace-pre-line drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
-                            {section.data.description}
-                          </p>
+                          <p 
+                            className="text-gray-100 text-sm md:text-base font-bold mt-6 max-w-2xl mx-auto leading-relaxed animate-fade-in whitespace-pre-line drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]"
+                            dangerouslySetInnerHTML={{ 
+                              __html: typeof section.data.description === 'string'
+                                ? section.data.description.replace(/\r\n/g, '<br />').replace(/\n/g, '<br />')
+                                : section.data.description 
+                            }}
+                          />
                         )}
                       </div>
                     </div>
