@@ -441,13 +441,14 @@ export const StandardLinePage: React.FC = () => {
                       {(() => {
                         const descriptionText = section.data?.description || section.data?.content || section.data?.desc;
                         if (!descriptionText) return null;
+                        const isHtml = typeof descriptionText === 'string' && /<[a-z][\s\S]*>/i.test(descriptionText);
                         return (
                           <div 
-                            className="text-gray-600 font-bold text-[16px] leading-relaxed mb-12 max-w-4xl mx-auto text-center whitespace-pre-line"
+                            className={isHtml ? "mb-12 max-w-4xl mx-auto" : "text-gray-600 font-bold text-[16px] leading-relaxed mb-12 max-w-4xl mx-auto text-center whitespace-pre-line"}
                             dangerouslySetInnerHTML={{ 
-                              __html: typeof descriptionText === 'string'
-                                ? descriptionText.replace(/\r\n/g, '<br />').replace(/\n/g, '<br />')
-                                : descriptionText 
+                              __html: isHtml 
+                                ? descriptionText 
+                                : (typeof descriptionText === 'string' ? descriptionText.replace(/\r\n/g, '<br />').replace(/\n/g, '<br />') : descriptionText)
                             }}
                           />
                         );
@@ -742,13 +743,23 @@ export const StandardLinePage: React.FC = () => {
                   </div>
                 );
               }
-              case 'text':
+              case 'text': {
+                const textContent = section.data.content || section.data.description || '';
+                const isHtml = typeof textContent === 'string' && /<[a-z][\s\S]*>/i.test(textContent);
                 return (
                   <div key={section.id} className="max-w-4xl mx-auto px-6 py-20">
                     {section.data.title && <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-10 tracking-tighter italic uppercase">{section.data.title}</h2>}
-                    <div className="prose prose-lg max-w-none text-gray-600 font-bold leading-relaxed" dangerouslySetInnerHTML={{ __html: section.data.content || '' }} />
+                    <div 
+                      className={isHtml ? "max-w-none" : "prose prose-lg max-w-none text-gray-600 font-bold leading-relaxed whitespace-pre-line"} 
+                      dangerouslySetInnerHTML={{ 
+                        __html: isHtml 
+                          ? textContent 
+                          : (typeof textContent === 'string' ? textContent.replace(/\r\n/g, '<br />').replace(/\n/g, '<br />') : textContent)
+                      }} 
+                    />
                   </div>
                 );
+              }
               case 'banner':
                 return (
                   <div 
@@ -776,16 +787,20 @@ export const StandardLinePage: React.FC = () => {
                         )}
                         {section.data.subTitle && <div className="text-blue-400 font-black text-[15px] md:text-base tracking-[0.3em] uppercase mb-4 animate-fade-in drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{section.data.subTitle}</div>}
                         <h2 className="text-4xl md:text-7xl font-black text-white tracking-tighter italic uppercase leading-none drop-shadow-[0_4px_12px_rgba(0,0,0,0.85)]">{section.data.title}</h2>
-                        {section.data.description && (
-                          <p 
-                            className="text-gray-100 text-sm md:text-base font-bold mt-6 max-w-2xl mx-auto leading-relaxed animate-fade-in whitespace-pre-line drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]"
-                            dangerouslySetInnerHTML={{ 
-                              __html: typeof section.data.description === 'string'
-                                ? section.data.description.replace(/\r\n/g, '<br />').replace(/\n/g, '<br />')
-                                : section.data.description 
-                            }}
-                          />
-                        )}
+                        {section.data.description && (() => {
+                          const desc = section.data.description;
+                          const isHtml = typeof desc === 'string' && /<[a-z][\s\S]*>/i.test(desc);
+                          return (
+                            <p 
+                              className={isHtml ? "mt-6 max-w-2xl mx-auto animate-fade-in" : "text-gray-100 text-sm md:text-base font-bold mt-6 max-w-2xl mx-auto leading-relaxed animate-fade-in whitespace-pre-line drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]"}
+                              dangerouslySetInnerHTML={{ 
+                                __html: isHtml 
+                                  ? desc 
+                                  : (typeof desc === 'string' ? desc.replace(/\r\n/g, '<br />').replace(/\n/g, '<br />') : desc)
+                              }}
+                            />
+                          );
+                        })()}
                       </div>
                     </div>
                   </div>
