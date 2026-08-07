@@ -18,7 +18,11 @@ const LS_MANAGED_KEYS = [
   try {
     const stored = localStorage.getItem(LS_VERSION_KEY);
     if (stored !== CMS_DATA_VERSION) {
-      LS_MANAGED_KEYS.forEach(k => localStorage.removeItem(k));
+      Object.keys(localStorage).forEach(k => {
+        if (k.startsWith('ang_') || k.includes('plans') || k.includes('audio') || k.includes('cms')) {
+          localStorage.removeItem(k);
+        }
+      });
       localStorage.setItem(LS_VERSION_KEY, CMS_DATA_VERSION);
     }
   } catch (_) { /* localStorage unavailable */ }

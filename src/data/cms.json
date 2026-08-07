@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-04-28T23:10:00Z",
-  "cacheVersion": "83",
+  "lastUpdated": "2026-08-07T16:33:00Z",
+  "cacheVersion": "84-bmw-encoding-fix",
   "heroAlert": {
     "active": true,
     "text": "【新商品案内】最新のレーザー探知機「Z1200」の取り扱いを開始しました。店舗にて展示中！",
@@ -476,7 +476,7 @@
           "price": "198000",
           "badge": "最上位フルガード",
           "features": [
-            "デジタル傾斜センサー標準装備",
+            "デジタル傾斜センサー標準装",
             "トリプルセンサー標準装備",
             "アンサーバック液晶リモコン",
             "1WAYスペアリモコン付属"
@@ -2318,7 +2318,7 @@
       "type": [
         "security"
       ],
-      "description": "<p>今なお狙われ続ける150系。スマートキー連動による最新の窃盗策、物的なCANガードなど、年式に応じた最適な対をご提案します。</p>",
+      "description": "<p>今なお狙われ続ける150。スマートキー連動による最新の窃盗策、物的なCANガードなど、年式に応じた最適な対をご提案します。</p>",
       "items": [
         {
           "fieldId": "item",
@@ -7214,7 +7214,8 @@
               "depthSize": "58.5",
               "hasGrille": "あり",
               "hasTweeterMount": "あり",
-              "youtubeUrl": "https://youtu.be/bLHw8SO10Bc"
+              "youtubeUrl": "https://youtu.be/bLHw8SO10Bc",
+              "brandLogo": "/images/Audio/logo/audison.webp"
             },
             {
               "id": "spk_1779091884255",
@@ -7227,7 +7228,8 @@
               "hasTweeterMount": "あり",
               "mountingHoleSize": "142",
               "depthSize": "61",
-              "youtubeUrl": "https://youtu.be/qe5WTXDNi6E"
+              "youtubeUrl": "https://youtu.be/qe5WTXDNi6E",
+              "brandLogo": "/images/Audio/logo/VIBE British Audio.webp"
             },
             {
               "id": "spk_1779091884894",
@@ -7240,7 +7242,8 @@
               "depthSize": "56.5",
               "hasGrille": "なし",
               "hasTweeterMount": "あり",
-              "youtubeUrl": "https://youtu.be/R0k8W8pN5is"
+              "youtubeUrl": "https://youtu.be/R0k8W8pN5is",
+              "brandLogo": "/images/Audio/logo/BLUEMOON AUDIO.webp"
             },
             {
               "id": "spk_1779091885974",
@@ -7254,7 +7257,8 @@
               "depthSize": "57",
               "hasGrille": "なし",
               "hasTweeterMount": "あり",
-              "youtubeUrl": "https://youtu.be/ToQVJV9jK-g"
+              "youtubeUrl": "https://youtu.be/ToQVJV9jK-g",
+              "brandLogo": "/images/Audio/logo/carrozzeria.webp"
             },
             {
               "id": "spk_1779091885462",
@@ -7267,7 +7271,8 @@
               "depthSize": "47",
               "hasGrille": "あり",
               "hasTweeterMount": "あり",
-              "youtubeUrl": "https://youtu.be/6FdEgXtALzY"
+              "youtubeUrl": "https://youtu.be/6FdEgXtALzY",
+              "brandLogo": "/images/Audio/logo/kicker.webp"
             },
             {
               "id": "spk_1779091886510",
@@ -7280,7 +7285,9 @@
               "depthSize": "51",
               "hasGrille": "なし",
               "hasTweeterMount": "あり",
-              "youtubeUrl": "https://youtu.be/9ftZzHhT5wM"
+              "youtubeUrl": "https://youtu.be/9ftZzHhT5wM",
+              "brandLogo": "/images/Audio/logo/alpine.webp",
+              "logoBg": "light"
             },
             {
               "id": "spk_1779091886982",
@@ -7292,7 +7299,8 @@
               "mountingHoleSize": "142.5",
               "depthSize": "68",
               "hasGrille": "あり",
-              "hasTweeterMount": "あり"
+              "hasTweeterMount": "あり",
+              "brandLogo": "/images/Audio/logo/groundzero.webp"
             },
             {
               "id": "spk_1779091887982",
@@ -7305,7 +7313,9 @@
               "mountingHoleSize": "143",
               "depthSize": "61.4",
               "hasGrille": "あり",
-              "hasTweeterMount": "あり"
+              "hasTweeterMount": "あり",
+              "brandLogo": "/images/Audio/logo/helix.webp",
+              "logoBg": "light"
             },
             {
               "id": "spk_1779091888582",
@@ -7318,7 +7328,8 @@
               "depthSize": "62.4",
               "hasGrille": "なし",
               "hasTweeterMount": "あり",
-              "youtubeUrl": "https://youtu.be/anRCVilehcI"
+              "youtubeUrl": "https://youtu.be/anRCVilehcI",
+              "brandLogo": "/images/Audio/logo/blam.webp"
             },
             {
               "id": "spk_1779091887502",
@@ -7331,7 +7342,8 @@
               "depthSize": "44",
               "hasGrille": "あり",
               "hasTweeterMount": "なし",
-              "youtubeUrl": "https://youtu.be/D_piASeBr2s"
+              "youtubeUrl": "https://youtu.be/D_piASeBr2s",
+              "brandLogo": "/images/Audio/logo/groundzero.webp"
             },
             {
               "id": "spk_1779091889047",
@@ -7344,7 +7356,9 @@
               "depthSize": "68.3",
               "hasGrille": "なし",
               "hasTweeterMount": "なし",
-              "youtubeUrl": "https://youtu.be/W8YVl6QgaTw"
+              "youtubeUrl": "https://youtu.be/W8YVl6QgaTw",
+              "brandLogo": "/images/Audio/logo/dynaudio.webp",
+              "logoBg": "light"
             },
             {
               "id": "spk_1779142935325",
@@ -7357,7 +7371,8 @@
               "depthSize": "46",
               "hasGrille": "あり",
               "hasTweeterMount": "あり",
-              "youtubeUrl": "https://youtu.be/rV2gX6VtX3o"
+              "youtubeUrl": "https://youtu.be/rV2gX6VtX3o",
+              "brandLogo": "/images/Audio/logo/kicker.webp"
             },
             {
               "id": "spk_1779091889566",
@@ -7370,7 +7385,8 @@
               "mountingHoleSize": "142.5",
               "depthSize": "68",
               "hasGrille": "あり",
-              "hasTweeterMount": "あり"
+              "hasTweeterMount": "あり",
+              "brandLogo": "/images/Audio/logo/groundzero.webp"
             },
             {
               "id": "spk_1779091890095",
@@ -7383,7 +7399,8 @@
               "depthSize": "61.7",
               "hasGrille": "なし",
               "hasTweeterMount": "あり",
-              "youtubeUrl": "https://youtu.be/9B-FkcMHI3w"
+              "youtubeUrl": "https://youtu.be/9B-FkcMHI3w",
+              "brandLogo": "/images/Audio/logo/blam.webp"
             },
             {
               "id": "spk_1779091890655",
@@ -7396,7 +7413,9 @@
               "depthSize": "61",
               "hasGrille": "あり",
               "hasTweeterMount": "あり",
-              "youtubeUrl": "https://youtu.be/S7HEbCUv5ks"
+              "youtubeUrl": "https://youtu.be/S7HEbCUv5ks",
+              "brandLogo": "/images/Audio/logo/helix.webp",
+              "logoBg": "light"
             },
             {
               "id": "spk_1779091891190",
@@ -7409,7 +7428,8 @@
               "depthSize": "54.5",
               "hasGrille": "なし",
               "hasTweeterMount": "あり",
-              "youtubeUrl": "https://youtu.be/D49aol_HkKo"
+              "youtubeUrl": "https://youtu.be/D49aol_HkKo",
+              "brandLogo": "/images/Audio/logo/focal.webp"
             },
             {
               "id": "spk_1779091891782",
@@ -7421,7 +7441,9 @@
               "mountingHoleSize": "145",
               "depthSize": "75",
               "hasGrille": "なし",
-              "hasTweeterMount": "あり"
+              "hasTweeterMount": "あり",
+              "brandLogo": "/images/Audio/logo/dls.webp",
+              "logoBg": "light"
             },
             {
               "id": "spk_1779091892358",
@@ -7434,7 +7456,9 @@
               "depthSize": "67",
               "hasGrille": "なし",
               "hasTweeterMount": "あり",
-              "youtubeUrl": "https://youtu.be/byYM-uqoy2Q"
+              "youtubeUrl": "https://youtu.be/byYM-uqoy2Q",
+              "brandLogo": "/images/Audio/logo/dynaudio.webp",
+              "logoBg": "light"
             },
             {
               "id": "spk_1779091892878",
@@ -7447,7 +7471,8 @@
               "depthSize": "61",
               "hasGrille": "なし",
               "hasTweeterMount": "あり",
-              "youtubeUrl": "https://youtu.be/XVG-UxCukkM"
+              "youtubeUrl": "https://youtu.be/XVG-UxCukkM",
+              "brandLogo": "/images/Audio/logo/carrozzeria.webp"
             },
             {
               "id": "spk_1779091893391",
@@ -7460,7 +7485,9 @@
               "mountingHoleSize": "143",
               "depthSize": "63",
               "hasGrille": "なし",
-              "hasTweeterMount": "あり"
+              "hasTweeterMount": "あり",
+              "brandLogo": "/images/Audio/logo/morel.webp",
+              "logoBg": "light"
             },
             {
               "id": "spk_1779091893927",
@@ -7472,7 +7499,8 @@
               "mountingHoleSize": "143",
               "depthSize": "77",
               "hasGrille": "なし",
-              "hasTweeterMount": "あり"
+              "hasTweeterMount": "あり",
+              "brandLogo": "/images/Audio/logo/focal.webp"
             },
             {
               "id": "spk_1779091894471",
@@ -7485,7 +7513,8 @@
               "depthSize": "76",
               "hasGrille": "なし",
               "hasTweeterMount": "あり",
-              "youtubeUrl": "https://youtu.be/KJmnktRp3-A"
+              "youtubeUrl": "https://youtu.be/KJmnktRp3-A",
+              "brandLogo": "/images/Audio/logo/focal.webp"
             },
             {
               "id": "spk_1779091895007",
@@ -7497,7 +7526,9 @@
               "mountingHoleSize": "143",
               "depthSize": "64",
               "hasGrille": "あり",
-              "hasTweeterMount": "あり"
+              "hasTweeterMount": "あり",
+              "brandLogo": "/images/Audio/logo/morel.webp",
+              "logoBg": "light"
             },
             {
               "id": "spk_1779091895543",
@@ -7509,16 +7540,21 @@
               "mountingHoleSize": "141.9",
               "depthSize": "73.5",
               "hasGrille": "なし",
-              "hasTweeterMount": "あり"
+              "hasTweeterMount": "あり",
+              "brandLogo": "/images/Audio/logo/blam.webp"
             }
           ],
           "title": "Speaker Lineup",
           "hideSubtitle": false,
-          "subtitle": "右上の再生ボタンより音源試聴可能です。",
+          "subtitle": "Speaker Lineup",
           "fixedPrice": "41800",
-          "subtitleFontSize": 18,
+          "subtitleFontSize": 22,
           "borderSpacing": "narrow",
-          "subtitleFont": "oswald"
+          "subtitleFont": "oswald",
+          "content": "右上の再生ボタンより音源試聴可能です。",
+          "hideTitle": true,
+          "subtitleColor": "#ea580c",
+          "subtitleAlign": "center"
         }
       },
       {
@@ -7559,7 +7595,8 @@
         "depthSize": "58.5",
         "hasGrille": "あり",
         "hasTweeterMount": "あり",
-        "youtubeUrl": "https://youtu.be/bLHw8SO10Bc"
+        "youtubeUrl": "https://youtu.be/bLHw8SO10Bc",
+        "brandLogo": "/images/Audio/logo/audison.webp"
       },
       {
         "id": "spk_1779091884255",
@@ -7572,7 +7609,8 @@
         "hasTweeterMount": "あり",
         "mountingHoleSize": "142",
         "depthSize": "61",
-        "youtubeUrl": "https://youtu.be/qe5WTXDNi6E"
+        "youtubeUrl": "https://youtu.be/qe5WTXDNi6E",
+        "brandLogo": "/images/Audio/logo/VIBE British Audio.webp"
       },
       {
         "id": "spk_1779091884894",
@@ -7585,7 +7623,8 @@
         "depthSize": "56.5",
         "hasGrille": "なし",
         "hasTweeterMount": "あり",
-        "youtubeUrl": "https://youtu.be/R0k8W8pN5is"
+        "youtubeUrl": "https://youtu.be/R0k8W8pN5is",
+        "brandLogo": "/images/Audio/logo/BLUEMOON AUDIO.webp"
       },
       {
         "id": "spk_1779091885974",
@@ -7599,7 +7638,8 @@
         "depthSize": "57",
         "hasGrille": "なし",
         "hasTweeterMount": "あり",
-        "youtubeUrl": "https://youtu.be/ToQVJV9jK-g"
+        "youtubeUrl": "https://youtu.be/ToQVJV9jK-g",
+        "brandLogo": "/images/Audio/logo/carrozzeria.webp"
       },
       {
         "id": "spk_1779091885462",
@@ -7612,7 +7652,8 @@
         "depthSize": "47",
         "hasGrille": "あり",
         "hasTweeterMount": "あり",
-        "youtubeUrl": "https://youtu.be/6FdEgXtALzY"
+        "youtubeUrl": "https://youtu.be/6FdEgXtALzY",
+        "brandLogo": "/images/Audio/logo/kicker.webp"
       },
       {
         "id": "spk_1779091886510",
@@ -7625,7 +7666,9 @@
         "depthSize": "51",
         "hasGrille": "なし",
         "hasTweeterMount": "あり",
-        "youtubeUrl": "https://youtu.be/9ftZzHhT5wM"
+        "youtubeUrl": "https://youtu.be/9ftZzHhT5wM",
+        "brandLogo": "/images/Audio/logo/alpine.webp",
+        "logoBg": "light"
       },
       {
         "id": "spk_1779091886982",
@@ -7637,7 +7680,8 @@
         "mountingHoleSize": "142.5",
         "depthSize": "68",
         "hasGrille": "あり",
-        "hasTweeterMount": "あり"
+        "hasTweeterMount": "あり",
+        "brandLogo": "/images/Audio/logo/groundzero.webp"
       },
       {
         "id": "spk_1779091887982",
@@ -7650,7 +7694,9 @@
         "mountingHoleSize": "143",
         "depthSize": "61.4",
         "hasGrille": "あり",
-        "hasTweeterMount": "あり"
+        "hasTweeterMount": "あり",
+        "brandLogo": "/images/Audio/logo/helix.webp",
+        "logoBg": "light"
       },
       {
         "id": "spk_1779091888582",
@@ -7663,7 +7709,8 @@
         "depthSize": "62.4",
         "hasGrille": "なし",
         "hasTweeterMount": "あり",
-        "youtubeUrl": "https://youtu.be/anRCVilehcI"
+        "youtubeUrl": "https://youtu.be/anRCVilehcI",
+        "brandLogo": "/images/Audio/logo/blam.webp"
       },
       {
         "id": "spk_1779091887502",
@@ -7676,7 +7723,8 @@
         "depthSize": "44",
         "hasGrille": "あり",
         "hasTweeterMount": "なし",
-        "youtubeUrl": "https://youtu.be/D_piASeBr2s"
+        "youtubeUrl": "https://youtu.be/D_piASeBr2s",
+        "brandLogo": "/images/Audio/logo/groundzero.webp"
       },
       {
         "id": "spk_1779091889047",
@@ -7689,7 +7737,9 @@
         "depthSize": "68.3",
         "hasGrille": "なし",
         "hasTweeterMount": "なし",
-        "youtubeUrl": "https://youtu.be/W8YVl6QgaTw"
+        "youtubeUrl": "https://youtu.be/W8YVl6QgaTw",
+        "brandLogo": "/images/Audio/logo/dynaudio.webp",
+        "logoBg": "light"
       },
       {
         "id": "spk_1779142935325",
@@ -7702,7 +7752,8 @@
         "depthSize": "46",
         "hasGrille": "あり",
         "hasTweeterMount": "あり",
-        "youtubeUrl": "https://youtu.be/rV2gX6VtX3o"
+        "youtubeUrl": "https://youtu.be/rV2gX6VtX3o",
+        "brandLogo": "/images/Audio/logo/kicker.webp"
       },
       {
         "id": "spk_1779091889566",
@@ -7715,7 +7766,8 @@
         "mountingHoleSize": "142.5",
         "depthSize": "68",
         "hasGrille": "あり",
-        "hasTweeterMount": "あり"
+        "hasTweeterMount": "あり",
+        "brandLogo": "/images/Audio/logo/groundzero.webp"
       },
       {
         "id": "spk_1779091890095",
@@ -7728,7 +7780,8 @@
         "depthSize": "61.7",
         "hasGrille": "なし",
         "hasTweeterMount": "あり",
-        "youtubeUrl": "https://youtu.be/9B-FkcMHI3w"
+        "youtubeUrl": "https://youtu.be/9B-FkcMHI3w",
+        "brandLogo": "/images/Audio/logo/blam.webp"
       },
       {
         "id": "spk_1779091890655",
@@ -7741,7 +7794,9 @@
         "depthSize": "61",
         "hasGrille": "あり",
         "hasTweeterMount": "あり",
-        "youtubeUrl": "https://youtu.be/S7HEbCUv5ks"
+        "youtubeUrl": "https://youtu.be/S7HEbCUv5ks",
+        "brandLogo": "/images/Audio/logo/helix.webp",
+        "logoBg": "light"
       },
       {
         "id": "spk_1779091891190",
@@ -7754,7 +7809,8 @@
         "depthSize": "54.5",
         "hasGrille": "なし",
         "hasTweeterMount": "あり",
-        "youtubeUrl": "https://youtu.be/D49aol_HkKo"
+        "youtubeUrl": "https://youtu.be/D49aol_HkKo",
+        "brandLogo": "/images/Audio/logo/focal.webp"
       },
       {
         "id": "spk_1779091891782",
@@ -7766,7 +7822,9 @@
         "mountingHoleSize": "145",
         "depthSize": "75",
         "hasGrille": "なし",
-        "hasTweeterMount": "あり"
+        "hasTweeterMount": "あり",
+        "brandLogo": "/images/Audio/logo/dls.webp",
+        "logoBg": "light"
       },
       {
         "id": "spk_1779091892358",
@@ -7779,7 +7837,9 @@
         "depthSize": "67",
         "hasGrille": "なし",
         "hasTweeterMount": "あり",
-        "youtubeUrl": "https://youtu.be/byYM-uqoy2Q"
+        "youtubeUrl": "https://youtu.be/byYM-uqoy2Q",
+        "brandLogo": "/images/Audio/logo/dynaudio.webp",
+        "logoBg": "light"
       },
       {
         "id": "spk_1779091892878",
@@ -7792,7 +7852,8 @@
         "depthSize": "61",
         "hasGrille": "なし",
         "hasTweeterMount": "あり",
-        "youtubeUrl": "https://youtu.be/XVG-UxCukkM"
+        "youtubeUrl": "https://youtu.be/XVG-UxCukkM",
+        "brandLogo": "/images/Audio/logo/carrozzeria.webp"
       },
       {
         "id": "spk_1779091893391",
@@ -7805,7 +7866,9 @@
         "mountingHoleSize": "143",
         "depthSize": "63",
         "hasGrille": "なし",
-        "hasTweeterMount": "あり"
+        "hasTweeterMount": "あり",
+        "brandLogo": "/images/Audio/logo/morel.webp",
+        "logoBg": "light"
       },
       {
         "id": "spk_1779091893927",
@@ -7817,7 +7880,8 @@
         "mountingHoleSize": "143",
         "depthSize": "77",
         "hasGrille": "なし",
-        "hasTweeterMount": "あり"
+        "hasTweeterMount": "あり",
+        "brandLogo": "/images/Audio/logo/focal.webp"
       },
       {
         "id": "spk_1779091894471",
@@ -7830,7 +7894,8 @@
         "depthSize": "76",
         "hasGrille": "なし",
         "hasTweeterMount": "あり",
-        "youtubeUrl": "https://youtu.be/KJmnktRp3-A"
+        "youtubeUrl": "https://youtu.be/KJmnktRp3-A",
+        "brandLogo": "/images/Audio/logo/focal.webp"
       },
       {
         "id": "spk_1779091895007",
@@ -7842,7 +7907,9 @@
         "mountingHoleSize": "143",
         "depthSize": "64",
         "hasGrille": "あり",
-        "hasTweeterMount": "あり"
+        "hasTweeterMount": "あり",
+        "brandLogo": "/images/Audio/logo/morel.webp",
+        "logoBg": "light"
       },
       {
         "id": "spk_1779091895543",
@@ -7854,7 +7921,8 @@
         "mountingHoleSize": "141.9",
         "depthSize": "73.5",
         "hasGrille": "なし",
-        "hasTweeterMount": "あり"
+        "hasTweeterMount": "あり",
+        "brandLogo": "/images/Audio/logo/blam.webp"
       }
     ],
     "subType": "package"
@@ -7938,7 +8006,7 @@
           "id": "sec_speakers",
           "type": "speakers",
           "data": {
-            "title": "Speaker Lineup",
+            "title": "17cmスピーカー",
             "fixedPrice": 17600,
             "speakers": [
               {
@@ -7950,7 +8018,9 @@
                 "remarks": "４Ω　バイアンプ可能",
                 "hasGrille": "あり",
                 "mountingHoleSize": "144",
-                "depthSize": "46"
+                "depthSize": "46",
+                "brandLogo": "/images/Audio/logo/dls.webp",
+                "logoBg": "light"
               },
               {
                 "id": "spk_1779081002394",
@@ -7961,7 +8031,9 @@
                 "remarks": "4Ω　3way",
                 "hasGrille": "あり",
                 "mountingHoleSize": "140",
-                "depthSize": "54.5"
+                "depthSize": "54.5",
+                "brandLogo": "/images/Audio/logo/ROCKFORD FOSGATE.webp",
+                "logoBg": "light"
               },
               {
                 "id": "spk_1779081588604",
@@ -7972,7 +8044,8 @@
                 "remarks": "エクストラフラット",
                 "hasGrille": "あり",
                 "mountingHoleSize": "142.5",
-                "depthSize": "44"
+                "depthSize": "44",
+                "brandLogo": "/images/Audio/logo/groundzero.webp"
               },
               {
                 "id": "spk_1779081589284",
@@ -7983,7 +8056,8 @@
                 "remarks": "ゼロツイーター",
                 "mountingHoleSize": "140",
                 "depthSize": "47",
-                "hasGrille": "あり"
+                "hasGrille": "あり",
+                "brandLogo": "/images/Audio/logo/kicker.webp"
               },
               {
                 "id": "spk_1779082153510",
@@ -7994,7 +8068,8 @@
                 "remarks": "グリル別売り",
                 "mountingHoleSize": "141",
                 "depthSize": "57",
-                "hasGrille": "あり"
+                "hasGrille": "あり",
+                "brandLogo": "/images/Audio/logo/audison.webp"
               },
               {
                 "id": "spk_1779082153813",
@@ -8005,24 +8080,28 @@
                 "remarks": "楕円スピーカー",
                 "mountingHoleSize": "151/222",
                 "depthSize": "81",
-                "hasGrille": "あり"
+                "hasGrille": "あり",
+                "brandLogo": "/images/Audio/logo/audison.webp"
               }
             ],
             "subtitle": "17cmスピーカー",
             "borderSpacing": "narrow",
             "subtitleFont": "oswald",
-            "subtitleFontSize": 20
+            "subtitleFontSize": 22,
+            "hideTitle": true,
+            "subtitleAlign": "center",
+            "subtitleColor": "#ea580c"
           }
         },
         {
           "id": "sec_speakers_1779248889945_t5wc",
           "type": "speakers",
           "data": {
-            "title": "Speaker Lineup",
+            "title": "10cmスピーカー",
             "subtitle": "10cmスピーカー",
             "hideTitle": true,
             "hideSubtitle": false,
-            "subtitleAlign": "right",
+            "subtitleAlign": "center",
             "fixedPrice": "7700",
             "speakers": [
               {
@@ -8037,7 +8116,8 @@
                 "standalonePrice": "14850",
                 "fixedPriceOverride": "",
                 "remarks": "",
-                "youtubeUrl": ""
+                "youtubeUrl": "",
+                "brandLogo": "/images/Audio/logo/kicker.webp"
               },
               {
                 "id": "spk_1779248979300_761e",
@@ -8051,7 +8131,9 @@
                 "standalonePrice": "45100",
                 "fixedPriceOverride": "6600",
                 "remarks": "",
-                "youtubeUrl": ""
+                "youtubeUrl": "",
+                "brandLogo": "/images/Audio/logo/morel.webp",
+                "logoBg": "light"
               },
               {
                 "id": "spk_1779249024241_nw80",
@@ -8065,7 +8147,8 @@
                 "standalonePrice": "15400",
                 "fixedPriceOverride": "",
                 "remarks": "",
-                "youtubeUrl": ""
+                "youtubeUrl": "",
+                "brandLogo": "/images/Audio/logo/audison.webp"
               },
               {
                 "id": "spk_1779249024968_u4n1",
@@ -8079,12 +8162,14 @@
                 "standalonePrice": "20900",
                 "fixedPriceOverride": "",
                 "remarks": "",
-                "youtubeUrl": ""
+                "youtubeUrl": "",
+                "brandLogo": "/images/Audio/logo/blam.webp"
               }
             ],
-            "subtitleFontSize": 20,
+            "subtitleFontSize": 22,
             "borderSpacing": "narrow",
-            "subtitleFont": "oswald"
+            "subtitleFont": "oswald",
+            "subtitleColor": "#ea580c"
           }
         },
         {
@@ -8127,7 +8212,9 @@
           "remarks": "４Ω　バイアンプ可能",
           "hasGrille": "あり",
           "mountingHoleSize": "144",
-          "depthSize": "46"
+          "depthSize": "46",
+          "brandLogo": "/images/Audio/logo/dls.webp",
+          "logoBg": "light"
         },
         {
           "id": "spk_1779081002394",
@@ -8138,7 +8225,9 @@
           "remarks": "4Ω　3way",
           "hasGrille": "あり",
           "mountingHoleSize": "140",
-          "depthSize": "54.5"
+          "depthSize": "54.5",
+          "brandLogo": "/images/Audio/logo/ROCKFORD FOSGATE.webp",
+          "logoBg": "light"
         },
         {
           "id": "spk_1779081588604",
@@ -8149,7 +8238,8 @@
           "remarks": "エクストラフラット",
           "hasGrille": "あり",
           "mountingHoleSize": "142.5",
-          "depthSize": "44"
+          "depthSize": "44",
+          "brandLogo": "/images/Audio/logo/groundzero.webp"
         },
         {
           "id": "spk_1779081589284",
@@ -8160,7 +8250,8 @@
           "remarks": "ゼロツイーター",
           "mountingHoleSize": "140",
           "depthSize": "47",
-          "hasGrille": "あり"
+          "hasGrille": "あり",
+          "brandLogo": "/images/Audio/logo/kicker.webp"
         },
         {
           "id": "spk_1779082153510",
@@ -8171,7 +8262,8 @@
           "remarks": "グリル別売り",
           "mountingHoleSize": "141",
           "depthSize": "57",
-          "hasGrille": "あり"
+          "hasGrille": "あり",
+          "brandLogo": "/images/Audio/logo/audison.webp"
         },
         {
           "id": "spk_1779082153813",
@@ -8182,7 +8274,8 @@
           "remarks": "楕円スピーカー",
           "mountingHoleSize": "151/222",
           "depthSize": "81",
-          "hasGrille": "あり"
+          "hasGrille": "あり",
+          "brandLogo": "/images/Audio/logo/audison.webp"
         }
       ],
       "subType": "package"
@@ -8283,7 +8376,9 @@
                 "hasGrille": "あり",
                 "hasTweeterMount": "あり",
                 "mountingHoleSize": "147.5",
-                "depthSize": "51.2"
+                "depthSize": "51.2",
+                "brandLogo": "/images/Audio/logo/ROCKFORD FOSGATE.webp",
+                "logoBg": "light"
               },
               {
                 "id": "spk_1779089430284",
@@ -8295,7 +8390,8 @@
                 "mountingHoleSize": "142.5",
                 "depthSize": "68",
                 "hasGrille": "あり",
-                "hasTweeterMount": "あり"
+                "hasTweeterMount": "あり",
+                "brandLogo": "/images/Audio/logo/groundzero.webp"
               },
               {
                 "id": "spk_1779089433628",
@@ -8307,7 +8403,8 @@
                 "hasGrille": "なし",
                 "hasTweeterMount": "あり",
                 "mountingHoleSize": "142",
-                "depthSize": "62.4"
+                "depthSize": "62.4",
+                "brandLogo": "/images/Audio/logo/blam.webp"
               },
               {
                 "id": "spk_1779089434476",
@@ -8319,7 +8416,8 @@
                 "mountingHoleSize": "141",
                 "depthSize": "58.5",
                 "hasGrille": "あり",
-                "hasTweeterMount": "なし"
+                "hasTweeterMount": "なし",
+                "brandLogo": "/images/Audio/logo/audison.webp"
               },
               {
                 "id": "spk_1779089435148",
@@ -8331,7 +8429,9 @@
                 "hasGrille": "なし",
                 "hasTweeterMount": "あり",
                 "mountingHoleSize": "143",
-                "depthSize": "61.4"
+                "depthSize": "61.4",
+                "brandLogo": "/images/Audio/logo/helix.webp",
+                "logoBg": "light"
               },
               {
                 "id": "spk_1779089435572",
@@ -8343,13 +8443,19 @@
                 "mountingHoleSize": "130",
                 "depthSize": "56.5",
                 "hasGrille": "なし",
-                "hasTweeterMount": "あり"
+                "hasTweeterMount": "あり",
+                "brandLogo": "/images/Audio/logo/BLUEMOON AUDIO.webp"
               }
             ],
             "fixedPrice": "24200",
-            "hideSubtitle": true,
+            "hideSubtitle": false,
             "borderSpacing": "narrow",
-            "subtitleFont": "oswald"
+            "subtitleFont": "oswald",
+            "hideTitle": true,
+            "subtitle": "Speaker Lineup",
+            "subtitleAlign": "center",
+            "subtitleFontSize": 22,
+            "subtitleColor": "#ea580c"
           }
         },
         {
@@ -8389,7 +8495,9 @@
           "hasGrille": "あり",
           "hasTweeterMount": "あり",
           "mountingHoleSize": "147.5",
-          "depthSize": "51.2"
+          "depthSize": "51.2",
+          "brandLogo": "/images/Audio/logo/ROCKFORD FOSGATE.webp",
+          "logoBg": "light"
         },
         {
           "id": "spk_1779089430284",
@@ -8401,7 +8509,8 @@
           "mountingHoleSize": "142.5",
           "depthSize": "68",
           "hasGrille": "あり",
-          "hasTweeterMount": "あり"
+          "hasTweeterMount": "あり",
+          "brandLogo": "/images/Audio/logo/groundzero.webp"
         },
         {
           "id": "spk_1779089433628",
@@ -8413,7 +8522,8 @@
           "hasGrille": "なし",
           "hasTweeterMount": "あり",
           "mountingHoleSize": "142",
-          "depthSize": "62.4"
+          "depthSize": "62.4",
+          "brandLogo": "/images/Audio/logo/blam.webp"
         },
         {
           "id": "spk_1779089434476",
@@ -8425,7 +8535,8 @@
           "mountingHoleSize": "141",
           "depthSize": "58.5",
           "hasGrille": "あり",
-          "hasTweeterMount": "なし"
+          "hasTweeterMount": "なし",
+          "brandLogo": "/images/Audio/logo/audison.webp"
         },
         {
           "id": "spk_1779089435148",
@@ -8437,7 +8548,9 @@
           "hasGrille": "なし",
           "hasTweeterMount": "あり",
           "mountingHoleSize": "143",
-          "depthSize": "61.4"
+          "depthSize": "61.4",
+          "brandLogo": "/images/Audio/logo/helix.webp",
+          "logoBg": "light"
         },
         {
           "id": "spk_1779089435572",
@@ -8449,7 +8562,8 @@
           "mountingHoleSize": "130",
           "depthSize": "56.5",
           "hasGrille": "なし",
-          "hasTweeterMount": "あり"
+          "hasTweeterMount": "あり",
+          "brandLogo": "/images/Audio/logo/BLUEMOON AUDIO.webp"
         }
       ],
       "subType": "package"
@@ -8649,7 +8763,8 @@
                 "depthSize": "58.5",
                 "hasGrille": "あり",
                 "hasTweeterMount": "あり",
-                "youtubeUrl": "https://youtu.be/bLHw8SO10Bc"
+                "youtubeUrl": "https://youtu.be/bLHw8SO10Bc",
+                "brandLogo": "/images/Audio/logo/audison.webp"
               },
               {
                 "id": "spk_1779091884255",
@@ -8662,7 +8777,8 @@
                 "hasTweeterMount": "あり",
                 "mountingHoleSize": "142",
                 "depthSize": "61",
-                "youtubeUrl": "https://youtu.be/qe5WTXDNi6E"
+                "youtubeUrl": "https://youtu.be/qe5WTXDNi6E",
+                "brandLogo": "/images/Audio/logo/VIBE British Audio.webp"
               },
               {
                 "id": "spk_1779091884894",
@@ -8675,7 +8791,8 @@
                 "depthSize": "56.5",
                 "hasGrille": "なし",
                 "hasTweeterMount": "あり",
-                "youtubeUrl": "https://youtu.be/R0k8W8pN5is"
+                "youtubeUrl": "https://youtu.be/R0k8W8pN5is",
+                "brandLogo": "/images/Audio/logo/BLUEMOON AUDIO.webp"
               },
               {
                 "id": "spk_1779091885974",
@@ -8689,7 +8806,8 @@
                 "depthSize": "57",
                 "hasGrille": "なし",
                 "hasTweeterMount": "あり",
-                "youtubeUrl": "https://youtu.be/ToQVJV9jK-g"
+                "youtubeUrl": "https://youtu.be/ToQVJV9jK-g",
+                "brandLogo": "/images/Audio/logo/carrozzeria.webp"
               },
               {
                 "id": "spk_1779091885462",
@@ -8702,7 +8820,8 @@
                 "depthSize": "47",
                 "hasGrille": "あり",
                 "hasTweeterMount": "あり",
-                "youtubeUrl": "https://youtu.be/6FdEgXtALzY"
+                "youtubeUrl": "https://youtu.be/6FdEgXtALzY",
+                "brandLogo": "/images/Audio/logo/kicker.webp"
               },
               {
                 "id": "spk_1779091886510",
@@ -8715,7 +8834,9 @@
                 "depthSize": "51",
                 "hasGrille": "なし",
                 "hasTweeterMount": "あり",
-                "youtubeUrl": "https://youtu.be/9ftZzHhT5wM"
+                "youtubeUrl": "https://youtu.be/9ftZzHhT5wM",
+                "brandLogo": "/images/Audio/logo/alpine.webp",
+                "logoBg": "light"
               },
               {
                 "id": "spk_1779091886982",
@@ -8727,7 +8848,8 @@
                 "mountingHoleSize": "142.5",
                 "depthSize": "68",
                 "hasGrille": "あり",
-                "hasTweeterMount": "あり"
+                "hasTweeterMount": "あり",
+                "brandLogo": "/images/Audio/logo/groundzero.webp"
               },
               {
                 "id": "spk_1779091887982",
@@ -8740,7 +8862,9 @@
                 "mountingHoleSize": "143",
                 "depthSize": "61.4",
                 "hasGrille": "あり",
-                "hasTweeterMount": "あり"
+                "hasTweeterMount": "あり",
+                "brandLogo": "/images/Audio/logo/helix.webp",
+                "logoBg": "light"
               },
               {
                 "id": "spk_1779091888582",
@@ -8753,7 +8877,8 @@
                 "depthSize": "62.4",
                 "hasGrille": "なし",
                 "hasTweeterMount": "あり",
-                "youtubeUrl": "https://youtu.be/anRCVilehcI"
+                "youtubeUrl": "https://youtu.be/anRCVilehcI",
+                "brandLogo": "/images/Audio/logo/blam.webp"
               },
               {
                 "id": "spk_1779091887502",
@@ -8766,7 +8891,8 @@
                 "depthSize": "44",
                 "hasGrille": "あり",
                 "hasTweeterMount": "なし",
-                "youtubeUrl": "https://youtu.be/D_piASeBr2s"
+                "youtubeUrl": "https://youtu.be/D_piASeBr2s",
+                "brandLogo": "/images/Audio/logo/groundzero.webp"
               },
               {
                 "id": "spk_1779091889047",
@@ -8779,7 +8905,9 @@
                 "depthSize": "68.3",
                 "hasGrille": "なし",
                 "hasTweeterMount": "なし",
-                "youtubeUrl": "https://youtu.be/W8YVl6QgaTw"
+                "youtubeUrl": "https://youtu.be/W8YVl6QgaTw",
+                "brandLogo": "/images/Audio/logo/dynaudio.webp",
+                "logoBg": "light"
               },
               {
                 "id": "spk_1779142935325",
@@ -8792,7 +8920,8 @@
                 "depthSize": "46",
                 "hasGrille": "あり",
                 "hasTweeterMount": "あり",
-                "youtubeUrl": "https://youtu.be/rV2gX6VtX3o"
+                "youtubeUrl": "https://youtu.be/rV2gX6VtX3o",
+                "brandLogo": "/images/Audio/logo/kicker.webp"
               },
               {
                 "id": "spk_1779091889566",
@@ -8805,7 +8934,8 @@
                 "mountingHoleSize": "142.5",
                 "depthSize": "68",
                 "hasGrille": "あり",
-                "hasTweeterMount": "あり"
+                "hasTweeterMount": "あり",
+                "brandLogo": "/images/Audio/logo/groundzero.webp"
               },
               {
                 "id": "spk_1779091890095",
@@ -8818,7 +8948,8 @@
                 "depthSize": "61.7",
                 "hasGrille": "なし",
                 "hasTweeterMount": "あり",
-                "youtubeUrl": "https://youtu.be/9B-FkcMHI3w"
+                "youtubeUrl": "https://youtu.be/9B-FkcMHI3w",
+                "brandLogo": "/images/Audio/logo/blam.webp"
               },
               {
                 "id": "spk_1779091890655",
@@ -8831,7 +8962,9 @@
                 "depthSize": "61",
                 "hasGrille": "あり",
                 "hasTweeterMount": "あり",
-                "youtubeUrl": "https://youtu.be/S7HEbCUv5ks"
+                "youtubeUrl": "https://youtu.be/S7HEbCUv5ks",
+                "brandLogo": "/images/Audio/logo/helix.webp",
+                "logoBg": "light"
               },
               {
                 "id": "spk_1779091891190",
@@ -8844,7 +8977,8 @@
                 "depthSize": "54.5",
                 "hasGrille": "なし",
                 "hasTweeterMount": "あり",
-                "youtubeUrl": "https://youtu.be/D49aol_HkKo"
+                "youtubeUrl": "https://youtu.be/D49aol_HkKo",
+                "brandLogo": "/images/Audio/logo/focal.webp"
               },
               {
                 "id": "spk_1779091891782",
@@ -8856,7 +8990,9 @@
                 "mountingHoleSize": "145",
                 "depthSize": "75",
                 "hasGrille": "なし",
-                "hasTweeterMount": "あり"
+                "hasTweeterMount": "あり",
+                "brandLogo": "/images/Audio/logo/dls.webp",
+                "logoBg": "light"
               },
               {
                 "id": "spk_1779091892358",
@@ -8869,7 +9005,9 @@
                 "depthSize": "67",
                 "hasGrille": "なし",
                 "hasTweeterMount": "あり",
-                "youtubeUrl": "https://youtu.be/byYM-uqoy2Q"
+                "youtubeUrl": "https://youtu.be/byYM-uqoy2Q",
+                "brandLogo": "/images/Audio/logo/dynaudio.webp",
+                "logoBg": "light"
               },
               {
                 "id": "spk_1779091892878",
@@ -8882,7 +9020,8 @@
                 "depthSize": "61",
                 "hasGrille": "なし",
                 "hasTweeterMount": "あり",
-                "youtubeUrl": "https://youtu.be/XVG-UxCukkM"
+                "youtubeUrl": "https://youtu.be/XVG-UxCukkM",
+                "brandLogo": "/images/Audio/logo/carrozzeria.webp"
               },
               {
                 "id": "spk_1779091893391",
@@ -8895,7 +9034,9 @@
                 "mountingHoleSize": "143",
                 "depthSize": "63",
                 "hasGrille": "なし",
-                "hasTweeterMount": "あり"
+                "hasTweeterMount": "あり",
+                "brandLogo": "/images/Audio/logo/morel.webp",
+                "logoBg": "light"
               },
               {
                 "id": "spk_1779091893927",
@@ -8907,7 +9048,8 @@
                 "mountingHoleSize": "143",
                 "depthSize": "77",
                 "hasGrille": "なし",
-                "hasTweeterMount": "あり"
+                "hasTweeterMount": "あり",
+                "brandLogo": "/images/Audio/logo/focal.webp"
               },
               {
                 "id": "spk_1779091894471",
@@ -8920,7 +9062,8 @@
                 "depthSize": "76",
                 "hasGrille": "なし",
                 "hasTweeterMount": "あり",
-                "youtubeUrl": "https://youtu.be/KJmnktRp3-A"
+                "youtubeUrl": "https://youtu.be/KJmnktRp3-A",
+                "brandLogo": "/images/Audio/logo/focal.webp"
               },
               {
                 "id": "spk_1779091895007",
@@ -8932,7 +9075,9 @@
                 "mountingHoleSize": "143",
                 "depthSize": "64",
                 "hasGrille": "あり",
-                "hasTweeterMount": "あり"
+                "hasTweeterMount": "あり",
+                "brandLogo": "/images/Audio/logo/morel.webp",
+                "logoBg": "light"
               },
               {
                 "id": "spk_1779091895543",
@@ -8944,16 +9089,21 @@
                 "mountingHoleSize": "141.9",
                 "depthSize": "73.5",
                 "hasGrille": "なし",
-                "hasTweeterMount": "あり"
+                "hasTweeterMount": "あり",
+                "brandLogo": "/images/Audio/logo/blam.webp"
               }
             ],
             "title": "Speaker Lineup",
             "hideSubtitle": false,
-            "subtitle": "右上の再生ボタンより音源試聴可能です。",
+            "subtitle": "Speaker Lineup",
             "fixedPrice": "41800",
-            "subtitleFontSize": 18,
+            "subtitleFontSize": 22,
             "borderSpacing": "narrow",
-            "subtitleFont": "oswald"
+            "subtitleFont": "oswald",
+            "content": "右上の再生ボタンより音源試聴可能です。",
+            "hideTitle": true,
+            "subtitleColor": "#ea580c",
+            "subtitleAlign": "center"
           }
         },
         {
@@ -8994,7 +9144,8 @@
           "depthSize": "58.5",
           "hasGrille": "あり",
           "hasTweeterMount": "あり",
-          "youtubeUrl": "https://youtu.be/bLHw8SO10Bc"
+          "youtubeUrl": "https://youtu.be/bLHw8SO10Bc",
+          "brandLogo": "/images/Audio/logo/audison.webp"
         },
         {
           "id": "spk_1779091884255",
@@ -9007,7 +9158,8 @@
           "hasTweeterMount": "あり",
           "mountingHoleSize": "142",
           "depthSize": "61",
-          "youtubeUrl": "https://youtu.be/qe5WTXDNi6E"
+          "youtubeUrl": "https://youtu.be/qe5WTXDNi6E",
+          "brandLogo": "/images/Audio/logo/VIBE British Audio.webp"
         },
         {
           "id": "spk_1779091884894",
@@ -9020,7 +9172,8 @@
           "depthSize": "56.5",
           "hasGrille": "なし",
           "hasTweeterMount": "あり",
-          "youtubeUrl": "https://youtu.be/R0k8W8pN5is"
+          "youtubeUrl": "https://youtu.be/R0k8W8pN5is",
+          "brandLogo": "/images/Audio/logo/BLUEMOON AUDIO.webp"
         },
         {
           "id": "spk_1779091885974",
@@ -9034,7 +9187,8 @@
           "depthSize": "57",
           "hasGrille": "なし",
           "hasTweeterMount": "あり",
-          "youtubeUrl": "https://youtu.be/ToQVJV9jK-g"
+          "youtubeUrl": "https://youtu.be/ToQVJV9jK-g",
+          "brandLogo": "/images/Audio/logo/carrozzeria.webp"
         },
         {
           "id": "spk_1779091885462",
@@ -9047,7 +9201,8 @@
           "depthSize": "47",
           "hasGrille": "あり",
           "hasTweeterMount": "あり",
-          "youtubeUrl": "https://youtu.be/6FdEgXtALzY"
+          "youtubeUrl": "https://youtu.be/6FdEgXtALzY",
+          "brandLogo": "/images/Audio/logo/kicker.webp"
         },
         {
           "id": "spk_1779091886510",
@@ -9060,7 +9215,9 @@
           "depthSize": "51",
           "hasGrille": "なし",
           "hasTweeterMount": "あり",
-          "youtubeUrl": "https://youtu.be/9ftZzHhT5wM"
+          "youtubeUrl": "https://youtu.be/9ftZzHhT5wM",
+          "brandLogo": "/images/Audio/logo/alpine.webp",
+          "logoBg": "light"
         },
         {
           "id": "spk_1779091886982",
@@ -9072,7 +9229,8 @@
           "mountingHoleSize": "142.5",
           "depthSize": "68",
           "hasGrille": "あり",
-          "hasTweeterMount": "あり"
+          "hasTweeterMount": "あり",
+          "brandLogo": "/images/Audio/logo/groundzero.webp"
         },
         {
           "id": "spk_1779091887982",
@@ -9085,7 +9243,9 @@
           "mountingHoleSize": "143",
           "depthSize": "61.4",
           "hasGrille": "あり",
-          "hasTweeterMount": "あり"
+          "hasTweeterMount": "あり",
+          "brandLogo": "/images/Audio/logo/helix.webp",
+          "logoBg": "light"
         },
         {
           "id": "spk_1779091888582",
@@ -9098,7 +9258,8 @@
           "depthSize": "62.4",
           "hasGrille": "なし",
           "hasTweeterMount": "あり",
-          "youtubeUrl": "https://youtu.be/anRCVilehcI"
+          "youtubeUrl": "https://youtu.be/anRCVilehcI",
+          "brandLogo": "/images/Audio/logo/blam.webp"
         },
         {
           "id": "spk_1779091887502",
@@ -9111,7 +9272,8 @@
           "depthSize": "44",
           "hasGrille": "あり",
           "hasTweeterMount": "なし",
-          "youtubeUrl": "https://youtu.be/D_piASeBr2s"
+          "youtubeUrl": "https://youtu.be/D_piASeBr2s",
+          "brandLogo": "/images/Audio/logo/groundzero.webp"
         },
         {
           "id": "spk_1779091889047",
@@ -9124,7 +9286,9 @@
           "depthSize": "68.3",
           "hasGrille": "なし",
           "hasTweeterMount": "なし",
-          "youtubeUrl": "https://youtu.be/W8YVl6QgaTw"
+          "youtubeUrl": "https://youtu.be/W8YVl6QgaTw",
+          "brandLogo": "/images/Audio/logo/dynaudio.webp",
+          "logoBg": "light"
         },
         {
           "id": "spk_1779142935325",
@@ -9137,7 +9301,8 @@
           "depthSize": "46",
           "hasGrille": "あり",
           "hasTweeterMount": "あり",
-          "youtubeUrl": "https://youtu.be/rV2gX6VtX3o"
+          "youtubeUrl": "https://youtu.be/rV2gX6VtX3o",
+          "brandLogo": "/images/Audio/logo/kicker.webp"
         },
         {
           "id": "spk_1779091889566",
@@ -9150,7 +9315,8 @@
           "mountingHoleSize": "142.5",
           "depthSize": "68",
           "hasGrille": "あり",
-          "hasTweeterMount": "あり"
+          "hasTweeterMount": "あり",
+          "brandLogo": "/images/Audio/logo/groundzero.webp"
         },
         {
           "id": "spk_1779091890095",
@@ -9163,7 +9329,8 @@
           "depthSize": "61.7",
           "hasGrille": "なし",
           "hasTweeterMount": "あり",
-          "youtubeUrl": "https://youtu.be/9B-FkcMHI3w"
+          "youtubeUrl": "https://youtu.be/9B-FkcMHI3w",
+          "brandLogo": "/images/Audio/logo/blam.webp"
         },
         {
           "id": "spk_1779091890655",
@@ -9176,7 +9343,9 @@
           "depthSize": "61",
           "hasGrille": "あり",
           "hasTweeterMount": "あり",
-          "youtubeUrl": "https://youtu.be/S7HEbCUv5ks"
+          "youtubeUrl": "https://youtu.be/S7HEbCUv5ks",
+          "brandLogo": "/images/Audio/logo/helix.webp",
+          "logoBg": "light"
         },
         {
           "id": "spk_1779091891190",
@@ -9189,7 +9358,8 @@
           "depthSize": "54.5",
           "hasGrille": "なし",
           "hasTweeterMount": "あり",
-          "youtubeUrl": "https://youtu.be/D49aol_HkKo"
+          "youtubeUrl": "https://youtu.be/D49aol_HkKo",
+          "brandLogo": "/images/Audio/logo/focal.webp"
         },
         {
           "id": "spk_1779091891782",
@@ -9201,7 +9371,9 @@
           "mountingHoleSize": "145",
           "depthSize": "75",
           "hasGrille": "なし",
-          "hasTweeterMount": "あり"
+          "hasTweeterMount": "あり",
+          "brandLogo": "/images/Audio/logo/dls.webp",
+          "logoBg": "light"
         },
         {
           "id": "spk_1779091892358",
@@ -9214,7 +9386,9 @@
           "depthSize": "67",
           "hasGrille": "なし",
           "hasTweeterMount": "あり",
-          "youtubeUrl": "https://youtu.be/byYM-uqoy2Q"
+          "youtubeUrl": "https://youtu.be/byYM-uqoy2Q",
+          "brandLogo": "/images/Audio/logo/dynaudio.webp",
+          "logoBg": "light"
         },
         {
           "id": "spk_1779091892878",
@@ -9227,7 +9401,8 @@
           "depthSize": "61",
           "hasGrille": "なし",
           "hasTweeterMount": "あり",
-          "youtubeUrl": "https://youtu.be/XVG-UxCukkM"
+          "youtubeUrl": "https://youtu.be/XVG-UxCukkM",
+          "brandLogo": "/images/Audio/logo/carrozzeria.webp"
         },
         {
           "id": "spk_1779091893391",
@@ -9240,7 +9415,9 @@
           "mountingHoleSize": "143",
           "depthSize": "63",
           "hasGrille": "なし",
-          "hasTweeterMount": "あり"
+          "hasTweeterMount": "あり",
+          "brandLogo": "/images/Audio/logo/morel.webp",
+          "logoBg": "light"
         },
         {
           "id": "spk_1779091893927",
@@ -9252,7 +9429,8 @@
           "mountingHoleSize": "143",
           "depthSize": "77",
           "hasGrille": "なし",
-          "hasTweeterMount": "あり"
+          "hasTweeterMount": "あり",
+          "brandLogo": "/images/Audio/logo/focal.webp"
         },
         {
           "id": "spk_1779091894471",
@@ -9265,7 +9443,8 @@
           "depthSize": "76",
           "hasGrille": "なし",
           "hasTweeterMount": "あり",
-          "youtubeUrl": "https://youtu.be/KJmnktRp3-A"
+          "youtubeUrl": "https://youtu.be/KJmnktRp3-A",
+          "brandLogo": "/images/Audio/logo/focal.webp"
         },
         {
           "id": "spk_1779091895007",
@@ -9277,7 +9456,9 @@
           "mountingHoleSize": "143",
           "depthSize": "64",
           "hasGrille": "あり",
-          "hasTweeterMount": "あり"
+          "hasTweeterMount": "あり",
+          "brandLogo": "/images/Audio/logo/morel.webp",
+          "logoBg": "light"
         },
         {
           "id": "spk_1779091895543",
@@ -9289,7 +9470,8 @@
           "mountingHoleSize": "141.9",
           "depthSize": "73.5",
           "hasGrille": "なし",
-          "hasTweeterMount": "あり"
+          "hasTweeterMount": "あり",
+          "brandLogo": "/images/Audio/logo/blam.webp"
         }
       ],
       "subType": "package"
@@ -9461,7 +9643,8 @@
                 "depthSize": "60",
                 "hasGrille": "なし",
                 "hasTweeterMount": "あり",
-                "youtubeUrl": "https://youtu.be/_1M6N16o9no"
+                "youtubeUrl": "https://youtu.be/_1M6N16o9no",
+                "brandLogo": "/images/Audio/logo/DIATONE.webp"
               },
               {
                 "id": "spk_1779143965695",
@@ -9473,7 +9656,8 @@
                 "mountingHoleSize": "142",
                 "depthSize": "79",
                 "hasGrille": "なし",
-                "hasTweeterMount": "あり"
+                "hasTweeterMount": "あり",
+                "brandLogo": "/images/Audio/logo/focal.webp"
               },
               {
                 "id": "spk_1779143966991",
@@ -9486,7 +9670,8 @@
                 "depthSize": "63.7",
                 "hasGrille": "なし",
                 "hasTweeterMount": "あり",
-                "youtubeUrl": "https://youtu.be/f0Uwc3Zz_Mk"
+                "youtubeUrl": "https://youtu.be/f0Uwc3Zz_Mk",
+                "brandLogo": "/images/Audio/logo/blam.webp"
               },
               {
                 "id": "spk_1779143967807",
@@ -9499,7 +9684,8 @@
                 "depthSize": "58",
                 "hasGrille": "なし",
                 "hasTweeterMount": "あり",
-                "youtubeUrl": "https://youtu.be/0Yl4ozb6_Hc"
+                "youtubeUrl": "https://youtu.be/0Yl4ozb6_Hc",
+                "brandLogo": "/images/Audio/logo/focal.webp"
               },
               {
                 "id": "spk_1779143968407",
@@ -9511,7 +9697,9 @@
                 "mountingHoleSize": "141",
                 "depthSize": "61",
                 "hasGrille": "あり",
-                "hasTweeterMount": "なし"
+                "hasTweeterMount": "なし",
+                "brandLogo": "/images/Audio/logo/morel.webp",
+                "logoBg": "light"
               },
               {
                 "id": "spk_1779143969055",
@@ -9524,7 +9712,8 @@
                 "depthSize": "76.2",
                 "hasGrille": "なし",
                 "hasTweeterMount": "なし",
-                "youtubeUrl": "https://youtu.be/gP5U6fNJ4jE"
+                "youtubeUrl": "https://youtu.be/gP5U6fNJ4jE",
+                "brandLogo": "/images/Audio/logo/blam.webp"
               },
               {
                 "id": "spk_1779143969583",
@@ -9537,7 +9726,8 @@
                 "depthSize": "58",
                 "hasGrille": "なし",
                 "hasTweeterMount": "あり",
-                "youtubeUrl": "https://youtu.be/FUUk22IfYdI"
+                "youtubeUrl": "https://youtu.be/FUUk22IfYdI",
+                "brandLogo": "/images/Audio/logo/carrozzeria.webp"
               },
               {
                 "id": "spk_1779143970127",
@@ -9550,7 +9740,8 @@
                 "depthSize": "66.7",
                 "hasGrille": "あり",
                 "hasTweeterMount": "なし",
-                "youtubeUrl": "https://youtu.be/1WssbN3bELQ"
+                "youtubeUrl": "https://youtu.be/1WssbN3bELQ",
+                "brandLogo": "/images/Audio/logo/BLUEMOON AUDIO.webp"
               },
               {
                 "id": "spk_1779143970679",
@@ -9562,7 +9753,8 @@
                 "mountingHoleSize": "138",
                 "depthSize": "63.5",
                 "hasGrille": "あり",
-                "hasTweeterMount": "なし"
+                "hasTweeterMount": "なし",
+                "brandLogo": "/images/Audio/logo/kicker.webp"
               },
               {
                 "id": "spk_1779143971367",
@@ -9574,7 +9766,8 @@
                 "mountingHoleSize": "142",
                 "depthSize": "76",
                 "hasGrille": "なし",
-                "hasTweeterMount": "あり"
+                "hasTweeterMount": "あり",
+                "brandLogo": "/images/Audio/logo/focal.webp"
               },
               {
                 "id": "spk_1779143971831",
@@ -9587,7 +9780,9 @@
                 "depthSize": "67",
                 "hasGrille": "あり",
                 "hasTweeterMount": "なし",
-                "youtubeUrl": "https://youtu.be/KhNixYLyDKI"
+                "youtubeUrl": "https://youtu.be/KhNixYLyDKI",
+                "brandLogo": "/images/Audio/logo/dynaudio.webp",
+                "logoBg": "light"
               },
               {
                 "id": "spk_1779143972343",
@@ -9599,7 +9794,9 @@
                 "mountingHoleSize": "141",
                 "depthSize": "61",
                 "hasGrille": "あり",
-                "hasTweeterMount": "あり"
+                "hasTweeterMount": "あり",
+                "brandLogo": "/images/Audio/logo/morel.webp",
+                "logoBg": "light"
               },
               {
                 "id": "spk_1779143972767",
@@ -9612,17 +9809,21 @@
                 "depthSize": "74",
                 "hasGrille": "なし",
                 "hasTweeterMount": "なし",
-                "youtubeUrl": "https://youtu.be/U_ReOFJ06TI"
+                "youtubeUrl": "https://youtu.be/U_ReOFJ06TI",
+                "brandLogo": "/images/Audio/logo/focal.webp"
               }
             ],
             "title": "Speaker Lineup",
-            "subtitle": "右上の再生ボタンより音源試聴可能です。",
+            "subtitle": "Speaker Lineup",
             "fixedPrice": "52800",
-            "hideTitle": false,
+            "hideTitle": true,
             "hideSubtitle": false,
-            "subtitleFontSize": 18,
+            "subtitleFontSize": 22,
             "borderSpacing": "narrow",
-            "subtitleFont": "oswald"
+            "subtitleFont": "oswald",
+            "content": "右上の再生ボタンより音源試聴可能です。",
+            "subtitleAlign": "center",
+            "subtitleColor": "#ea580c"
           }
         },
         {
@@ -9667,7 +9868,8 @@
           "depthSize": "60",
           "hasGrille": "なし",
           "hasTweeterMount": "あり",
-          "youtubeUrl": "https://youtu.be/_1M6N16o9no"
+          "youtubeUrl": "https://youtu.be/_1M6N16o9no",
+          "brandLogo": "/images/Audio/logo/DIATONE.webp"
         },
         {
           "id": "spk_1779143965695",
@@ -9679,7 +9881,8 @@
           "mountingHoleSize": "142",
           "depthSize": "79",
           "hasGrille": "なし",
-          "hasTweeterMount": "あり"
+          "hasTweeterMount": "あり",
+          "brandLogo": "/images/Audio/logo/focal.webp"
         },
         {
           "id": "spk_1779143966991",
@@ -9692,7 +9895,8 @@
           "depthSize": "63.7",
           "hasGrille": "なし",
           "hasTweeterMount": "あり",
-          "youtubeUrl": "https://youtu.be/f0Uwc3Zz_Mk"
+          "youtubeUrl": "https://youtu.be/f0Uwc3Zz_Mk",
+          "brandLogo": "/images/Audio/logo/blam.webp"
         },
         {
           "id": "spk_1779143967807",
@@ -9705,7 +9909,8 @@
           "depthSize": "58",
           "hasGrille": "なし",
           "hasTweeterMount": "あり",
-          "youtubeUrl": "https://youtu.be/0Yl4ozb6_Hc"
+          "youtubeUrl": "https://youtu.be/0Yl4ozb6_Hc",
+          "brandLogo": "/images/Audio/logo/focal.webp"
         },
         {
           "id": "spk_1779143968407",
@@ -9717,7 +9922,9 @@
           "mountingHoleSize": "141",
           "depthSize": "61",
           "hasGrille": "あり",
-          "hasTweeterMount": "なし"
+          "hasTweeterMount": "なし",
+          "brandLogo": "/images/Audio/logo/morel.webp",
+          "logoBg": "light"
         },
         {
           "id": "spk_1779143969055",
@@ -9730,7 +9937,8 @@
           "depthSize": "76.2",
           "hasGrille": "なし",
           "hasTweeterMount": "なし",
-          "youtubeUrl": "https://youtu.be/gP5U6fNJ4jE"
+          "youtubeUrl": "https://youtu.be/gP5U6fNJ4jE",
+          "brandLogo": "/images/Audio/logo/blam.webp"
         },
         {
           "id": "spk_1779143969583",
@@ -9743,7 +9951,8 @@
           "depthSize": "58",
           "hasGrille": "なし",
           "hasTweeterMount": "あり",
-          "youtubeUrl": "https://youtu.be/FUUk22IfYdI"
+          "youtubeUrl": "https://youtu.be/FUUk22IfYdI",
+          "brandLogo": "/images/Audio/logo/carrozzeria.webp"
         },
         {
           "id": "spk_1779143970127",
@@ -9756,7 +9965,8 @@
           "depthSize": "66.7",
           "hasGrille": "あり",
           "hasTweeterMount": "なし",
-          "youtubeUrl": "https://youtu.be/1WssbN3bELQ"
+          "youtubeUrl": "https://youtu.be/1WssbN3bELQ",
+          "brandLogo": "/images/Audio/logo/BLUEMOON AUDIO.webp"
         },
         {
           "id": "spk_1779143970679",
@@ -9768,7 +9978,8 @@
           "mountingHoleSize": "138",
           "depthSize": "63.5",
           "hasGrille": "あり",
-          "hasTweeterMount": "なし"
+          "hasTweeterMount": "なし",
+          "brandLogo": "/images/Audio/logo/kicker.webp"
         },
         {
           "id": "spk_1779143971367",
@@ -9780,7 +9991,8 @@
           "mountingHoleSize": "142",
           "depthSize": "76",
           "hasGrille": "なし",
-          "hasTweeterMount": "あり"
+          "hasTweeterMount": "あり",
+          "brandLogo": "/images/Audio/logo/focal.webp"
         },
         {
           "id": "spk_1779143971831",
@@ -9793,7 +10005,9 @@
           "depthSize": "67",
           "hasGrille": "あり",
           "hasTweeterMount": "なし",
-          "youtubeUrl": "https://youtu.be/KhNixYLyDKI"
+          "youtubeUrl": "https://youtu.be/KhNixYLyDKI",
+          "brandLogo": "/images/Audio/logo/dynaudio.webp",
+          "logoBg": "light"
         },
         {
           "id": "spk_1779143972343",
@@ -9805,7 +10019,9 @@
           "mountingHoleSize": "141",
           "depthSize": "61",
           "hasGrille": "あり",
-          "hasTweeterMount": "あり"
+          "hasTweeterMount": "あり",
+          "brandLogo": "/images/Audio/logo/morel.webp",
+          "logoBg": "light"
         },
         {
           "id": "spk_1779143972767",
@@ -9818,7 +10034,8 @@
           "depthSize": "74",
           "hasGrille": "なし",
           "hasTweeterMount": "なし",
-          "youtubeUrl": "https://youtu.be/U_ReOFJ06TI"
+          "youtubeUrl": "https://youtu.be/U_ReOFJ06TI",
+          "brandLogo": "/images/Audio/logo/focal.webp"
         }
       ],
       "subType": "package"
@@ -9979,7 +10196,7 @@
             "items": [
               "作業は<strong>3日お車をお預かり</strong>します（無料代車をご用意可能です）。",
               "バッフル適合がない車種は別途<strong>¥5,500</strong>の製作費が必要になります。",
-              "ドア通線に加工が必要な車両（ハーネスがカプラ等）は別途加工費用がかかる場合があります。",
+              "ドア通線に加工が必要な車両（ハーネスがカプラ等）は別途加工費用がかかる場合がありま。",
               "取り付け場所や方法は車両を確認しながら打ち合わせが必要な場合がありますので、ご来店をお願いすることがあります。また車種によっては追加費用が発生する場合があります。"
             ]
           }
@@ -9995,7 +10212,9 @@
                 "name": "MAXIMO ULTRA603 MK2",
                 "image": "/images/Audio/Speaker/MAXIMO_ULTRA603_Mk2.webp",
                 "standalonePrice": "121000",
-                "remarks": "スコーカー外径：63mm /ローレンジ奥行き：63mm"
+                "remarks": "スコーカー外径：63mm /ローレンジ奥行き：63mm",
+                "brandLogo": "/images/Audio/logo/morel.webp",
+                "logoBg": "light"
               },
               {
                 "id": "spk_1779192802067",
@@ -10004,7 +10223,8 @@
                 "image": "/images/Audio/Speaker/TS-Z900PRS.webp",
                 "standalonePrice": "140800",
                 "remarks": "スコーカー外径：73mm /ローレンジ奥行き：58mm",
-                "fixedPriceOverride": "103400"
+                "fixedPriceOverride": "103400",
+                "brandLogo": "/images/Audio/logo/carrozzeria.webp"
               },
               {
                 "id": "spk_1779192889252",
@@ -10013,7 +10233,8 @@
                 "image": "/images/Audio/Speaker/PS165F3E.webp",
                 "standalonePrice": "121000",
                 "remarks": "スコーカー外径：88mm /ローレンジ奥行き：77mm",
-                "fixedPriceOverride": "142200"
+                "fixedPriceOverride": "142200",
+                "brandLogo": "/images/Audio/logo/focal.webp"
               },
               {
                 "id": "spk_1779192976357",
@@ -10022,7 +10243,9 @@
                 "image": "/images/Audio/Speaker/SENSUS 63.webp",
                 "standalonePrice": "177100",
                 "remarks": "スコーカー外径：38mm /ローレンジ奥行き：61mm",
-                "fixedPriceOverride": "142200"
+                "fixedPriceOverride": "142200",
+                "brandLogo": "/images/Audio/logo/morel.webp",
+                "logoBg": "light"
               },
               {
                 "id": "spk_1779193029542",
@@ -10031,7 +10254,9 @@
                 "image": "/images/Audio/Speaker/ESOTAN372.webp",
                 "standalonePrice": "176000",
                 "remarks": "スコーカー外径：99mm /ローレンジ奥行き：67mm",
-                "fixedPriceOverride": "154000"
+                "fixedPriceOverride": "154000",
+                "brandLogo": "/images/Audio/logo/dynaudio.webp",
+                "logoBg": "light"
               },
               {
                 "id": "spk_1779193082168",
@@ -10040,7 +10265,8 @@
                 "image": "/images/Audio/Speaker/165 S300.webp",
                 "standalonePrice": "217800",
                 "remarks": "スコーカー外径：90.1mm /ローレンジ奥行き：80.2mm",
-                "fixedPriceOverride": "154000"
+                "fixedPriceOverride": "154000",
+                "brandLogo": "/images/Audio/logo/blam.webp"
               }
             ],
             "hideSubtitle": true,
@@ -10081,7 +10307,9 @@
           "name": "MAXIMO ULTRA603 MK2",
           "image": "/images/Audio/Speaker/MAXIMO_ULTRA603_Mk2.webp",
           "standalonePrice": "121000",
-          "remarks": "スコーカー外径：63mm /ローレンジ奥行き：63mm"
+          "remarks": "スコーカー外径：63mm /ローレンジ奥行き：63mm",
+          "brandLogo": "/images/Audio/logo/morel.webp",
+          "logoBg": "light"
         },
         {
           "id": "spk_1779192802067",
@@ -10090,7 +10318,8 @@
           "image": "/images/Audio/Speaker/TS-Z900PRS.webp",
           "standalonePrice": "140800",
           "remarks": "スコーカー外径：73mm /ローレンジ奥行き：58mm",
-          "fixedPriceOverride": "103400"
+          "fixedPriceOverride": "103400",
+          "brandLogo": "/images/Audio/logo/carrozzeria.webp"
         },
         {
           "id": "spk_1779192889252",
@@ -10099,7 +10328,8 @@
           "image": "/images/Audio/Speaker/PS165F3E.webp",
           "standalonePrice": "121000",
           "remarks": "スコーカー外径：88mm /ローレンジ奥行き：77mm",
-          "fixedPriceOverride": "142200"
+          "fixedPriceOverride": "142200",
+          "brandLogo": "/images/Audio/logo/focal.webp"
         },
         {
           "id": "spk_1779192976357",
@@ -10108,7 +10338,9 @@
           "image": "/images/Audio/Speaker/SENSUS 63.webp",
           "standalonePrice": "177100",
           "remarks": "スコーカー外径：38mm /ローレンジ奥行き：61mm",
-          "fixedPriceOverride": "142200"
+          "fixedPriceOverride": "142200",
+          "brandLogo": "/images/Audio/logo/morel.webp",
+          "logoBg": "light"
         },
         {
           "id": "spk_1779193029542",
@@ -10117,7 +10349,9 @@
           "image": "/images/Audio/Speaker/ESOTAN372.webp",
           "standalonePrice": "176000",
           "remarks": "スコーカー外径：99mm /ローレンジ奥行き：67mm",
-          "fixedPriceOverride": "154000"
+          "fixedPriceOverride": "154000",
+          "brandLogo": "/images/Audio/logo/dynaudio.webp",
+          "logoBg": "light"
         },
         {
           "id": "spk_1779193082168",
@@ -10126,7 +10360,8 @@
           "image": "/images/Audio/Speaker/165 S300.webp",
           "standalonePrice": "217800",
           "remarks": "スコーカー外径：90.1mm /ローレンジ奥行き：80.2mm",
-          "fixedPriceOverride": "154000"
+          "fixedPriceOverride": "154000",
+          "brandLogo": "/images/Audio/logo/blam.webp"
         }
       ],
       "subType": "package"
@@ -10187,7 +10422,20 @@
               }
             ],
             "title": "スピーカー交換例",
-            "description": "BMWの標準オーディオシステムはフロントに10cm程度のスピーカー、ツイーターなし、シート下のウーハーで低音を補うという構成がほとんどです。加工を抑えてコストを抑えた改善方法として、まずはフロントスピーカーの交換とツイーターの追加。さらに適合車種であればウーハーも交換することで、ハリのあるサウンドに生まれ変わります。このパッケージではトレードインで交換可能なスピーカーをご紹介しています。"
+            "description": "BMWの標準オーディオシステムはフロントに10cm程度のスピーカー、ツイーターなし、シート下のウーハーで低音を補うという構成がほとんどです。加工を抑えてコストを抑えた改善方法として、まずはフロントスピーカーの交換とツイーターの追加。さらに適合車種であればウーハーも交換することで、ハリのあるサウンドに生まれ変わります。このパッケージではトレードインで交換可能なスピーカーをご紹介しています。",
+            "doorTuning": {
+              "title": "ツイーター",
+              "desc": "純正ツィーター非装着車の場合、別途純正部品が必要になる場合があります。",
+              "image": "/images/Audio/Speaker/bmw-tw2.webp"
+            },
+            "baffle": {
+              "title": "ドアスピーカー",
+              "image": "/images/Audio/Speaker/bmw-door.webp"
+            },
+            "cable": {
+              "title": "シート下ウーハー",
+              "image": "/images/Audio/Speaker/bmw-woofer.webp"
+            }
           }
         },
         {
@@ -10717,7 +10965,7 @@
               }
             ],
             "title": "スピーカー交換例",
-            "description": "BMWの純正システムはフロントに10cm程度のスピーカー、ツィーターなし、シート下のウーハーで低音を補うという構成がほとんどです。 加工を抑えてコストを抑えた改善方法として、まずはフロントスピーカーの交換とツィーターの追加。さらに適合車種であればウーハーも交換することで、ハリのあるサウンドに生まれ変わります。このパッケージではトレードインで交換可能なスピーカーをご紹介しています。"
+            "description": "BMWの標準オーディオシステムはフロントに10cm程度のスピーカー、ツイーターなし、シート下のウーハーで低音を補うという構成がほとんどです。加工を抑えてコストを抑えた改善方法として、まずはフロントスピーカーの交換とツイーターの追加。さらに適合車種であればウーハーも交換することで、ハリのあるサウンドに生まれ変わります。このパッケージではトレードインで交換可能なスピーカーをご紹介しています。"
           }
         },
         {
@@ -29786,270 +30034,6 @@
         }
       ],
       "subType": "standalone"
-    },
-    {
-      "id": "line_1782886291847",
-      "name": "スピーカー交換・BASIC line （セパレート）  (コピー)",
-      "parentCategoryId": "speaker_package",
-      "isTemplate": false,
-      "header": {
-        "mainTitle": "BASIC LINE（セパレート）",
-        "subTitle": "ベーシックライン",
-        "badge": "スピーカー交換パッケージ",
-        "description": "ツィーター（高音）とミッドレンジ（中低音）が別々になったセパレートタイプのスピーカーに交換するパッケージです。カーオーディオのシステムアップが初めての方にもおすすめです。\nコストを抑えながらセパレートの良さを体感していただけるよう、ネットワーク（音域を分離するユニット）はインラインタイプを中心にラインアップしています。ツィーターは純正位置またはダッシュボード上へのマウント取り付けが基本です。"
-      },
-      "pricing": {
-        "specialPrice": "64900",
-        "fixedPrice": 24200,
-        "normalPriceText": "通常目安: 80,000円",
-        "savingsText": "約 15,000円 お得!",
-        "note": "※KICKER CSS674（40,700円）を選択した場合の例。",
-        "taxRate": 10
-      },
-      "sections": [
-        {
-          "id": "sec_banner_1782886291847_0",
-          "type": "banner",
-          "data": {
-            "title": "BASIC LINE（セパレート）",
-            "subTitle": "ベーシックライン",
-            "image": "",
-            "height": "400px",
-            "opacity": 0.5,
-            "badge": "スピーカー交換パッケージ",
-            "bgColor": "#1e3a8a",
-            "description": "ツィーター（高音）とミッドレンジ（中低音）が別々になったセパレートタイプのスピーカーに交換するパッケージです。カーオーディオのシステムアップが初めての方にもおすすめです。\nコストを抑えながらセパレートの良さを体感していただけるよう、ネットワーク（音域を分離するユニット）はインラインタイプを中心にラインアップしています。ツィーターは純正位置またはダッシュボード上へのマウント取り付けが基本です。"
-          }
-        },
-        {
-          "id": "sec_package_summary_1782886291847_1",
-          "type": "package_summary",
-          "data": {
-            "title": "パッケージ内容",
-            "items": [
-              {
-                "title": "スピーカー本体",
-                "desc": "17cmモデル 2wayスピーカー"
-              },
-              {
-                "title": "軽防振",
-                "desc": "制振・防音処理",
-                "value": ""
-              },
-              {
-                "title": "カスタムインナーバッフル",
-                "desc": "ジャストフィット（https://justfit.carrozzeria.pioneer/)の適合情報に合わせて製作",
-                "value": ""
-              },
-              {
-                "title": "スピーカー交換工賃",
-                "desc": "",
-                "value": ""
-              },
-              {
-                "title": "ツイータ取り付け",
-                "desc": "純正位置もしくはオンダッシュ取り付け",
-                "value": ""
-              }
-            ],
-            "subtitle": "下記の内容が含まれています。"
-          }
-        },
-        {
-          "id": "sec_notes_1782886291847_2",
-          "type": "notes",
-          "data": {
-            "title": "施工に関する注意事項",
-            "items": [
-              "作業は<strong>3～4時間お車をお預かり</strong>します（無料代車をご用意可能です）。",
-              "バッフル適合がない車種は別途<strong>¥5,500</strong>の製作費が必要になります。",
-              "ツィーター固定にマウント等が必要な車種は追加費用が発生する場合があります。"
-            ]
-          }
-        },
-        {
-          "id": "sec_speakers_1782886291847_3",
-          "type": "speakers",
-          "data": {
-            "title": "Speaker Lineup",
-            "speakers": [
-              {
-                "id": "spk_1779089013844",
-                "brand": "ROCKFORD FOSGATE",
-                "name": "R1675-S",
-                "image": "/images/Audio/Speaker/R1675-S.webp",
-                "standalonePrice": "35200",
-                "remarks": "TW内にハイパスフィルター内蔵",
-                "hasGrille": "あり",
-                "hasTweeterMount": "あり",
-                "mountingHoleSize": "147.5",
-                "depthSize": "51.2"
-              },
-              {
-                "id": "spk_1779089430284",
-                "brand": "GROUND ZERO",
-                "name": "GZIC165.2SPL",
-                "image": "/images/Audio/Speaker/GZIC165.2SPL.webp",
-                "standalonePrice": "27500",
-                "remarks": "TWのみプロテクション",
-                "mountingHoleSize": "142.5",
-                "depthSize": "68",
-                "hasGrille": "あり",
-                "hasTweeterMount": "あり"
-              },
-              {
-                "id": "spk_1779089433628",
-                "brand": "BLAM",
-                "name": "SR 165S",
-                "image": "/images/Audio/Speaker/SR 165S.webp",
-                "standalonePrice": "38500",
-                "remarks": "TWのみプロテクション　3Ω",
-                "hasGrille": "なし",
-                "hasTweeterMount": "あり",
-                "mountingHoleSize": "142",
-                "depthSize": "62.4"
-              },
-              {
-                "id": "spk_1779089434476",
-                "brand": "AUDISON",
-                "name": "APK 165",
-                "image": "/images/Audio/Speaker/APK 165.webp",
-                "standalonePrice": "30800",
-                "remarks": "TWのみプロテクション　4Ω",
-                "mountingHoleSize": "141",
-                "depthSize": "58.5",
-                "hasGrille": "あり",
-                "hasTweeterMount": "なし"
-              },
-              {
-                "id": "spk_1779089435148",
-                "brand": "HELIX",
-                "name": "CB K165.2-S3",
-                "image": "/images/Audio/Speaker/CB C165.2-S3.webp",
-                "standalonePrice": "44000",
-                "remarks": "TWのみプロテクション",
-                "hasGrille": "なし",
-                "hasTweeterMount": "あり",
-                "mountingHoleSize": "143",
-                "depthSize": "61.4"
-              },
-              {
-                "id": "spk_1779089435572",
-                "brand": "BLUE MOON AUDIO",
-                "name": "EX165",
-                "image": "/images/Audio/Speaker/EX165.webp",
-                "standalonePrice": "35200",
-                "remarks": "TW/MID インラインNW",
-                "mountingHoleSize": "130",
-                "depthSize": "56.5",
-                "hasGrille": "なし",
-                "hasTweeterMount": "あり"
-              }
-            ],
-            "fixedPrice": "24200"
-          }
-        },
-        {
-          "id": "sec_floating_cta_1782886291847_4",
-          "type": "floating_cta",
-          "data": {}
-        }
-      ],
-      "status": "published",
-      "slug": "basicsep-copy-870",
-      "features": {
-        "doorTuning": {
-          "image": "/images/Audio/Speaker/door-b.webp"
-        },
-        "baffle": {
-          "image": "/images/Audio/Speaker/baffle.webp"
-        },
-        "cable": {
-          "image": "/images/Audio/Speaker/ang-cable.webp"
-        }
-      },
-      "upgrades": {
-        "options": {
-          "metalBaffleImage": "/images/Audio/Speaker/metal.webp",
-          "tweeterMountImage": "/images/Audio/Speaker/tw-mount.webp"
-        }
-      },
-      "showInMenu": true,
-      "speakers": [
-        {
-          "id": "spk_1779089013844",
-          "brand": "ROCKFORD FOSGATE",
-          "name": "R1675-S",
-          "image": "/images/Audio/Speaker/R1675-S.webp",
-          "standalonePrice": "35200",
-          "remarks": "TW内にハイパスフィルター内蔵",
-          "hasGrille": "あり",
-          "hasTweeterMount": "あり",
-          "mountingHoleSize": "147.5",
-          "depthSize": "51.2"
-        },
-        {
-          "id": "spk_1779089430284",
-          "brand": "GROUND ZERO",
-          "name": "GZIC165.2SPL",
-          "image": "/images/Audio/Speaker/GZIC165.2SPL.webp",
-          "standalonePrice": "27500",
-          "remarks": "TWのみプロテクション",
-          "mountingHoleSize": "142.5",
-          "depthSize": "68",
-          "hasGrille": "あり",
-          "hasTweeterMount": "あり"
-        },
-        {
-          "id": "spk_1779089433628",
-          "brand": "BLAM",
-          "name": "SR 165S",
-          "image": "/images/Audio/Speaker/SR 165S.webp",
-          "standalonePrice": "38500",
-          "remarks": "TWのみプロテクション　3Ω",
-          "hasGrille": "なし",
-          "hasTweeterMount": "あり",
-          "mountingHoleSize": "142",
-          "depthSize": "62.4"
-        },
-        {
-          "id": "spk_1779089434476",
-          "brand": "AUDISON",
-          "name": "APK 165",
-          "image": "/images/Audio/Speaker/APK 165.webp",
-          "standalonePrice": "30800",
-          "remarks": "TWのみプロテクション　4Ω",
-          "mountingHoleSize": "141",
-          "depthSize": "58.5",
-          "hasGrille": "あり",
-          "hasTweeterMount": "なし"
-        },
-        {
-          "id": "spk_1779089435148",
-          "brand": "HELIX",
-          "name": "CB K165.2-S3",
-          "image": "/images/Audio/Speaker/CB C165.2-S3.webp",
-          "standalonePrice": "44000",
-          "remarks": "TWのみプロテクション",
-          "hasGrille": "なし",
-          "hasTweeterMount": "あり",
-          "mountingHoleSize": "143",
-          "depthSize": "61.4"
-        },
-        {
-          "id": "spk_1779089435572",
-          "brand": "BLUE MOON AUDIO",
-          "name": "EX165",
-          "image": "/images/Audio/Speaker/EX165.webp",
-          "standalonePrice": "35200",
-          "remarks": "TW/MID インラインNW",
-          "mountingHoleSize": "130",
-          "depthSize": "56.5",
-          "hasGrille": "なし",
-          "hasTweeterMount": "あり"
-        }
-      ],
-      "subType": "package"
     }
   ],
   "audioLPTemplates": [
