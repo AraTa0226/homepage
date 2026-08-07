@@ -443,10 +443,10 @@ export const StandardLinePage: React.FC = () => {
                         if (!descriptionText) return null;
                         return (
                           <div 
-                            className="text-gray-600 font-bold text-[16px] leading-relaxed mb-12 max-w-4xl mx-auto text-center"
+                            className="text-gray-600 font-bold text-[16px] leading-relaxed mb-12 max-w-4xl mx-auto text-center whitespace-pre-line"
                             dangerouslySetInnerHTML={{ 
-                              __html: descriptionText.includes('\n') 
-                                ? descriptionText.replace(/\n/g, '<br />') 
+                              __html: typeof descriptionText === 'string'
+                                ? descriptionText.replace(/\r\n/g, '<br />').replace(/\n/g, '<br />')
                                 : descriptionText 
                             }}
                           />

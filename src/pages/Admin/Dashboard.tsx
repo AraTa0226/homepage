@@ -2385,13 +2385,13 @@ const AudioPlanManager = () => {
                         </div>
 
                         <div className="space-y-1.5">
-                            <label className="block text-[10px] font-bold text-zinc-400">セクション説明文 (Description - 改行対応の複数行入力)</label>
+                            <label className="block text-[10px] font-bold text-zinc-400">セクション説明文 (Description - 改行・HTML対応の複数行入力)</label>
                             <textarea 
-                                value={section.data.content || ''}
-                                onChange={e => updateSectionData(sIdx, { content: e.target.value })}
+                                value={section.data.description !== undefined ? section.data.description : (section.data.content || '')}
+                                onChange={e => updateSectionData(sIdx, { description: e.target.value, content: e.target.value })}
                                 rows={3}
                                 className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-white text-xs font-bold focus:border-blue-500 outline-none"
-                                placeholder="スピーカーセクションの導入文や注釈などを入力してください（空欄時は非表示）"
+                                placeholder="スピーカーセクションの導入文や注釈などを入力してください（改行やHTMLタグも反映されます）"
                             />
                         </div>
 

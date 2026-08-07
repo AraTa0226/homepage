@@ -10196,7 +10196,7 @@
             "items": [
               "作業は<strong>3日お車をお預かり</strong>します（無料代車をご用意可能です）。",
               "バッフル適合がない車種は別途<strong>¥5,500</strong>の製作費が必要になります。",
-              "ドア通線に加工が必要な車両（ハーネスがカプラ等）は別途加工費用がかかる場合がありま。",
+              "ドア通線に加工が必要な車両（ハーネスがカプラ等）は別途加工費用がかかる場合がありま",
               "取り付け場所や方法は車両を確認しながら打ち合わせが必要な場合がありますので、ご来店をお願いすることがあります。また車種によっては追加費用が発生する場合があります。"
             ]
           }
@@ -11164,14 +11164,21 @@
             "fixedPrice": 33000,
             "sectionImage": "/images/Audio/Speaker/MB213KJ2.webp",
             "displayMode": "no_image",
-            "content": "<h3 class=\"text-center text-3xl md:text-4xl font-black text-gray-900 tracking-tight mb-3\">FOCAL K2 Power</h3>\n<div class=\"w-12 h-1 bg-blue-600 mx-auto mb-6 rounded-full\"></div>\n<p class=\"text-center mx-auto max-w-2xl text-gray-600 font-bold leading-relaxed mb-6\">\n  Wサンドウィッチ構造アラミドファイバー・コンポジットコーンによる<span class=\"text-blue-600 font-black\">80mm TMDウーファー</span>と、<span class=\"text-blue-600 font-black\">Mインバーテッド・ドームトゥイーター</span>を組み合わせた上位モデル。<br />\n  スムーズに伸びたクリアな高音、情報量あふれる艶やかな中低音がフォーカルらしい個性を生み出します。\n</p>"
+            "content": "<h3 class=\"text-center text-3xl md:text-4xl font-black text-gray-900 tracking-tight mb-3\">FOCAL K2 Power</h3>\n<div class=\"w-12 h-1 bg-blue-600 mx-auto mb-6 rounded-full\"></div>\n<p class=\"text-center mx-auto max-w-2xl text-gray-600 font-bold leading-relaxed mb-6\">\n  Wサンドウィッチ構造アラミドファイバー・コンポジットコーンによる<span class=\"text-blue-600 font-black\">80mm TMDウーファー</span>と、<span class=\"text-blue-600 font-black\">Mインバーテッド・ドームトゥイーター</span>を組み合わせた上位モデル。<br />\n  スムーズに伸びたクリアな高音、情報量あふれる艶やかな中低音がフォーカルらしい個性を生み出します。\n</p>",
+            "title": "Eクラス セダン/ステーションワゴン（W213/S213）対応モデル",
+            "hideTitle": true,
+            "subtitleAlign": "center",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald",
+            "subtitleColor": "#ea580c",
+            "subtitleFontSize": 22
           }
         },
         {
           "id": "sec_1778989911245",
           "type": "speakers",
           "data": {
-            "subtitle": "Cクラス セダン/ステーションワゴン（W205/S205）、GLC（X253）、GLCクーペ（C253）対応モデル",
+            "subtitle": "Cクラス セダン/ステーションワゴン（W205/S205）、\nGLC（X253）、GLCクーペ（C253）\n対応モデル",
             "speakers": [
               {
                 "id": "spk_1778989941366",
@@ -11257,7 +11264,13 @@
             "displayMode": "no_image",
             "content": "<h3 class=\"text-center text-3xl md:text-4xl font-black text-gray-900 tracking-tight mb-3\">FOCAL K2 Power</h3>\n<div class=\"w-12 h-1 bg-blue-600 mx-auto mb-6 rounded-full\"></div>\n<p class=\"text-center mx-auto max-w-2xl text-gray-600 font-bold leading-relaxed mb-6\">\n  Wサンドウィッチ構造アラミドファイバー・コンポジットコーンによる<span class=\"text-blue-600 font-black\">80mm TMDウーファー</span>と、<span class=\"text-blue-600 font-black\">Mインバーテッド・ドームトゥイーター</span>を組み合わせた上位モデル。<br />\n  スムーズに伸びたクリアな高音、情報量あふれる艶やかな中低音がフォーカルらしい個性を生み出します。\n</p>",
             "hideTitle": true,
-            "sectionImage": "/images/Audio/Speaker/MB213KJ2.webp"
+            "sectionImage": "/images/Audio/Speaker/MB213KJ2.webp",
+            "title": "Cクラス セダン/ステーションワゴン（W205/S205）、GLC（X253）、GLCクーペ（C253）対応モデル",
+            "subtitleAlign": "center",
+            "subtitleFontSize": 22,
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald",
+            "subtitleColor": "#ea580c"
           }
         },
         {
@@ -11304,7 +11317,13 @@
               }
             ],
             "fixedPrice": 33000,
-            "hideTitle": true
+            "hideTitle": true,
+            "subtitleColor": "#ea580c",
+            "title": "Focal 【FLAX EVO】",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald",
+            "subtitleFontSize": 22,
+            "subtitleAlign": "center"
           }
         },
         {
@@ -11352,18 +11371,24 @@
               }
             ],
             "content": "フランスのメーカー「BLAM」のトレードインスピーカーです。",
-            "hideTitle": true
+            "hideTitle": true,
+            "subtitleColor": "#ea580c",
+            "subtitleFontSize": 22,
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald",
+            "subtitleAlign": "center",
+            "title": "BLAM"
           }
         },
         {
           "id": "sec_speakers_1781413778819_vvjs",
           "type": "speakers",
           "data": {
-            "title": "",
+            "title": "BEWITH　",
             "subtitle": "BEWITH　",
             "hideTitle": true,
             "hideSubtitle": false,
-            "subtitleAlign": "right",
+            "subtitleAlign": "center",
             "fixedPrice": "30000",
             "speakers": [
               {
@@ -11381,18 +11406,22 @@
                 "youtubeUrl": ""
               }
             ],
-            "content": "日本のメーカー「BEWITH」のトレードインウーハーです。"
+            "content": "日本のメーカー「BEWITH」のトレードインウーハーです。",
+            "subtitleColor": "#ea580c",
+            "subtitleFontSize": 22,
+            "subtitleFont": "oswald",
+            "borderSpacing": "narrow"
           }
         },
         {
           "id": "sec_speakers_1781414234716_x9km",
           "type": "speakers",
           "data": {
-            "title": "",
+            "title": "MATCH　",
             "subtitle": "MATCH　",
             "hideTitle": true,
             "hideSubtitle": false,
-            "subtitleAlign": "right",
+            "subtitleAlign": "center",
             "fixedPrice": "33000",
             "speakers": [
               {
@@ -11452,18 +11481,23 @@
                 "youtubeUrl": ""
               }
             ],
-            "content": "ドイツのメーカー「MATCH」のトレードインスピーカーです。"
+            "content": "ドイツのメーカー「MATCH」のトレードインスピーカーです。",
+            "subtitleColor": "#ea580c",
+            "subtitleFontSize": 22,
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald",
+            "columns": 2
           }
         },
         {
           "id": "sec_speakers_1781415567990_mvl5",
           "type": "speakers",
           "data": {
-            "title": "",
+            "title": "ETON",
             "subtitle": "ETON",
             "hideTitle": true,
             "hideSubtitle": false,
-            "subtitleAlign": "right",
+            "subtitleAlign": "center",
             "fixedPrice": "33000",
             "speakers": [
               {
@@ -11523,7 +11557,12 @@
                 "youtubeUrl": ""
               }
             ],
-            "content": "ドイツのメーカー「ETON」のトレードインスピーカーです。"
+            "content": "ドイツのメーカー「ETON」のトレードインスピーカーです。",
+            "subtitleColor": "#ea580c",
+            "subtitleFontSize": 22,
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald",
+            "columns": 2
           }
         }
       ],
@@ -11975,7 +12014,10 @@
             "hideSubtitle": false,
             "hideTitle": true,
             "subtitleAlign": "center",
-            "subtitleFontSize": 20
+            "subtitleFontSize": 22,
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -26376,7 +26418,10 @@
             "hideTitle": true,
             "subtitleAlign": "center",
             "content": "",
-            "subtitleFontSize": 20
+            "subtitleFontSize": 22,
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -26467,7 +26512,10 @@
                 ]
               }
             ],
-            "subtitleFontSize": 20
+            "subtitleFontSize": 22,
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -26661,7 +26709,10 @@
             "hideTitle": true,
             "subtitleAlign": "center",
             "content": "",
-            "subtitleFontSize": 20
+            "subtitleFontSize": 22,
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald",
+            "subtitleColor": "#ea580c"
           }
         },
         {
@@ -26706,7 +26757,7 @@
           "name": "CSS674",
           "image": "/images/Audio/Speaker/CSS674.webp",
           "standalonePrice": "40700",
-          "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。このCSシリーズは純正ナビなどの内蔵アンプでも駆動しやすく、張りのある小気味良い音が出るスピーカーです。ツィーターは純正位置への取り付けとなります。",
+          "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。このCSシリーズは純正ナビなどの内蔵アンプでも駆動しやすく、張りのある小気味良い音が出るスピーーです。ツィーターは純正位置への取り付けとなります。",
           "fixedPriceOverride": "19250",
           "showCardSummary": true,
           "cardSummaryItems": [
@@ -26855,7 +26906,10 @@
             "hideTitle": true,
             "subtitleAlign": "center",
             "content": "",
-            "subtitleFontSize": 20
+            "subtitleFontSize": 22,
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -27087,7 +27141,10 @@
             "hideTitle": true,
             "subtitleAlign": "center",
             "content": "",
-            "subtitleFontSize": 20
+            "subtitleFontSize": 22,
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -27319,7 +27376,10 @@
             "hideTitle": true,
             "subtitleAlign": "center",
             "content": "",
-            "subtitleFontSize": 20
+            "subtitleFontSize": 22,
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -27364,13 +27424,13 @@
           "name": "CSS674",
           "image": "/images/Audio/Speaker/CSS674.webp",
           "standalonePrice": "40700",
-          "remarks": "フロントスピーカーをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。このCSシリーズは純正ナビなどの内蔵アンプでも駆動しやすく、張りのある小気味良い音が出るスピーカーです。ツィーターは純正位置への取り付けとなります。",
+          "remarks": "フロントスピーカをアメリカの有名ブランド「KICKER」の製品に交換し、再生能力をアップします。このCSシリーズは純正ナビなどの内蔵アンプでも駆動しやすく、張りのある小気味良い音が出るスピーカーです。ツィーターは純正位置への取り付けとなります。",
           "fixedPriceOverride": "20020",
           "brandLogo": "/images/Audio/logo/kicker.webp",
           "showCardSummary": true,
           "cardSummaryItems": [
             {
-              "title": "スピーー本体",
+              "title": "スピーカー本体",
               "desc": "",
               "value": "40700"
             },
@@ -27518,7 +27578,10 @@
             "hideTitle": true,
             "subtitleAlign": "center",
             "content": "",
-            "subtitleFontSize": 20
+            "subtitleFontSize": 22,
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -27684,7 +27747,10 @@
             "hideTitle": true,
             "subtitleAlign": "center",
             "content": "",
-            "subtitleFontSize": 20
+            "subtitleFontSize": 22,
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -27734,7 +27800,7 @@
           "hasTweeterMount": "",
           "standalonePrice": "62700",
           "fixedPriceOverride": "０",
-          "remarks": "フロントスピーカーをカロッツェリアの製品に交換し、再生能力をアップします。上位モデルの技術を受け継いだ高い解像度のサウドが楽しめます。純正ツィーターはダッシュボード上への設置となります。",
+          "remarks": "フロントスピーカーをカロッツェリアの製品に交換し、再生能力をアップします。上位モデルの技術を受け継いだ高い解像度のサウンドが楽しめます。純正ツィーターはダッシュボード上への設置となります。",
           "youtubeUrl": "",
           "brandLogo": "/images/Audio/logo/carrozzeria.webp",
           "showCardSummary": true,
@@ -27944,7 +28010,7 @@
             "hideTitle": true,
             "subtitleAlign": "center",
             "content": "",
-            "subtitleFontSize": 20,
+            "subtitleFontSize": 22,
             "sectionWidth": "full",
             "cardSummaryItems": [
               {
@@ -27963,7 +28029,10 @@
                 "value": ""
               }
             ],
-            "columns": 2
+            "columns": 2,
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -28112,7 +28181,7 @@
           "hasTweeterMount": "",
           "standalonePrice": "88000",
           "fixedPriceOverride": "15400",
-          "remarks": "フロントスピーカーを国産ブランド「BLUEMOON AUDIO」の製品に交換し、再生能力をアップします。このパッケージはジムニー専用キットとして開発されており、アルミ削り出しのバッフルや厳選されたパーツを使ったネットワークで、ジムニーのサウンドを激変させます。ツィーターはドアミラー裏のパネルへのネジ止め、またはオンダッシュ取り付けとなります",
+          "remarks": "フロントスピーカーを国産ブランド「BLUEMOON AUDIO」の製品に交換し、再生能力をアップます。このパッケージはジムニー専用キットとして開発されており、アルミ削り出しのバッフルや厳選されたパーツを使ったネットワークで、ジムニーのサウンドを激変させます。ツィーターはドアミラー裏のパネルへのネジ止め、またはオンダッシュ取り付けとなります",
           "youtubeUrl": "",
           "showCardSummary": true,
           "cardSummaryItems": [
@@ -28223,7 +28292,7 @@
                 "brandLogo": "/images/Audio/logo/kicker.webp"
               }
             ],
-            "subtitleFontSize": 20,
+            "subtitleFontSize": 22,
             "showPackageSummary": false,
             "packageSummaryTitle": "スピーカー本体　",
             "packageSummaryItems": [
@@ -28233,7 +28302,10 @@
                 "value": ""
               }
             ],
-            "sectionWidth": "half"
+            "sectionWidth": "half",
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -28287,7 +28359,7 @@
             "hideTitle": true,
             "subtitleAlign": "center",
             "content": "",
-            "subtitleFontSize": 20,
+            "subtitleFontSize": 22,
             "displayMode": "standard",
             "sectionImage": "",
             "sectionWidth": "half",
@@ -28303,7 +28375,10 @@
                 "desc": "",
                 "value": ""
               }
-            ]
+            ],
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -28470,10 +28545,13 @@
             "hideTitle": true,
             "subtitleAlign": "center",
             "content": "",
-            "subtitleFontSize": 20,
+            "subtitleFontSize": 22,
             "displayMode": "standard",
             "sectionImage": "",
-            "sectionWidth": "half"
+            "sectionWidth": "half",
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -28536,8 +28614,11 @@
                 ]
               }
             ],
-            "subtitleFontSize": 20,
-            "sectionWidth": "half"
+            "subtitleFontSize": 22,
+            "sectionWidth": "half",
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -28585,8 +28666,11 @@
                 ]
               }
             ],
-            "subtitleFontSize": 20,
-            "sectionWidth": "half"
+            "subtitleFontSize": 22,
+            "sectionWidth": "half",
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -28634,8 +28718,11 @@
                 ]
               }
             ],
-            "subtitleFontSize": 20,
-            "sectionWidth": "half"
+            "subtitleFontSize": 22,
+            "sectionWidth": "half",
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -28801,10 +28888,13 @@
             "hideTitle": true,
             "subtitleAlign": "center",
             "content": "",
-            "subtitleFontSize": 20,
+            "subtitleFontSize": 22,
             "displayMode": "standard",
             "sectionImage": "",
-            "sectionWidth": "half"
+            "sectionWidth": "half",
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -28857,8 +28947,11 @@
                 "brandLogo": "/images/Audio/logo/kicker.webp"
               }
             ],
-            "subtitleFontSize": 20,
-            "sectionWidth": "half"
+            "subtitleFontSize": 22,
+            "sectionWidth": "half",
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -29024,10 +29117,13 @@
             "hideTitle": true,
             "subtitleAlign": "center",
             "content": "",
-            "subtitleFontSize": 20,
+            "subtitleFontSize": 22,
             "displayMode": "standard",
             "sectionImage": "",
-            "sectionWidth": "full"
+            "sectionWidth": "full",
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -29193,10 +29289,13 @@
             "hideTitle": true,
             "subtitleAlign": "center",
             "content": "",
-            "subtitleFontSize": 20,
+            "subtitleFontSize": 22,
             "displayMode": "standard",
             "sectionImage": "",
-            "sectionWidth": "half"
+            "sectionWidth": "half",
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -29249,8 +29348,11 @@
                 "brandLogo": "/images/Audio/logo/kicker.webp"
               }
             ],
-            "subtitleFontSize": 20,
-            "sectionWidth": "half"
+            "subtitleFontSize": 22,
+            "sectionWidth": "half",
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -29300,7 +29402,7 @@
           "hasTweeterMount": "",
           "standalonePrice": "70620",
           "fixedPriceOverride": "18150",
-          "remarks": "フントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。取り付けにはプリウス専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。",
+          "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アッ。取り付けにはプリウス専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。",
           "youtubeUrl": "",
           "showCardSummary": true,
           "cardSummaryItems": [
@@ -29416,10 +29518,13 @@
             "hideTitle": true,
             "subtitleAlign": "center",
             "content": "",
-            "subtitleFontSize": 20,
+            "subtitleFontSize": 22,
             "displayMode": "standard",
             "sectionImage": "",
-            "sectionWidth": "half"
+            "sectionWidth": "half",
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -29473,7 +29578,10 @@
               }
             ],
             "sectionWidth": "half",
-            "subtitleFontSize": 20
+            "subtitleFontSize": 22,
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -29523,7 +29631,7 @@
           "hasTweeterMount": "",
           "standalonePrice": "78100",
           "fixedPriceOverride": "18700",
-          "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換て再生能力アップ。取り付けにはプリウス専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。",
+          "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。取り付けにはプリウス専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります。",
           "youtubeUrl": "",
           "showCardSummary": true,
           "cardSummaryItems": [
@@ -29639,10 +29747,13 @@
             "hideTitle": true,
             "subtitleAlign": "center",
             "content": "",
-            "subtitleFontSize": 20,
+            "subtitleFontSize": 22,
             "displayMode": "standard",
             "sectionImage": "",
-            "sectionWidth": "full"
+            "sectionWidth": "full",
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -29692,7 +29803,7 @@
           "hasTweeterMount": "",
           "standalonePrice": "78100",
           "fixedPriceOverride": "18700",
-          "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。純正スピーカーは6x9インチサイズのオーバルスピーカーですのでそのメリットを活かすべくオーバルスピーカーをチョイスしています。取り付けにはフォレスター専用に設計されたパーツを使うためローコストながら効果の高いオーディオグレードアップとなります",
+          "remarks": "フロントスピーカーをアメリカの有名ブランドKICKERへ交換して再生能力アップ。純正スピーカーは6x9インチサイズのオーバルスピーカーですのでそのメリットを活かすべくオーバルスピーカーをチョイスしています。取り付けにはフォレスター専用に設計されたパーを使うためローコストながら効果の高いオーディオグレードアップとなります",
           "youtubeUrl": "",
           "showCardSummary": true,
           "cardSummaryItems": [
@@ -29808,10 +29919,13 @@
             "hideTitle": true,
             "subtitleAlign": "center",
             "content": "",
-            "subtitleFontSize": 20,
+            "subtitleFontSize": 22,
             "displayMode": "standard",
             "sectionImage": "",
-            "sectionWidth": "full"
+            "sectionWidth": "full",
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
@@ -29861,7 +29975,7 @@
           "hasTweeterMount": "",
           "standalonePrice": "72600 ",
           "fixedPriceOverride": "18700",
-          "remarks": "フロトスピーカーをアメリカのブランドKICKERへ交換して再生能力アップ。純正スピーカーとのトレードイン交換取り付けで車両との親和性が高く、ダッシュに取り付けるスピーカーはワイドレンジなので情報量アップで音質の差は歴然！",
+          "remarks": "フロントスピーカーをアメリカのブランドKICKERへ交換して再生能力アップ。純正スピーカーとのトレードイン交換取り付けで車両との親和性が高く、ダッシュに取り付けるスピーカーはワイドレンジなので情報量アップで音質の差は歴然！",
           "youtubeUrl": "",
           "showCardSummary": true,
           "cardSummaryItems": [
@@ -29977,10 +30091,13 @@
             "hideTitle": true,
             "subtitleAlign": "center",
             "content": "",
-            "subtitleFontSize": 20,
+            "subtitleFontSize": 22,
             "displayMode": "standard",
             "sectionImage": "",
-            "sectionWidth": "full"
+            "sectionWidth": "full",
+            "subtitleColor": "#ea580c",
+            "borderSpacing": "narrow",
+            "subtitleFont": "oswald"
           }
         },
         {
