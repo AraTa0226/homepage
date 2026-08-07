@@ -652,61 +652,84 @@ export const StandardLinePage: React.FC = () => {
                                           {spk.prices && spk.prices.length > 0 ? (
                                             <div className="space-y-4 pt-1">
                                               {(() => {
-                                                const grouped: { [key: string]: any[] } = {};
+                                                const groupedMap: { [key: string]: any[] } = {};
+                                                
                                                 spk.prices.forEach((pItem: any) => {
-                                                  const cName = pItem.courseName || '';
-                                                  if (!grouped[cName]) grouped[cName] = [];
-                                                  grouped[cName].push(pItem);
+                                                  let cName = (pItem.courseName || '').trim();
+                                                  let displayLabel = (pItem.label || '').trim();
+                                                  
+                                                  if (!cName && displayLabel) {
+                                                    const match = displayLabel.match(/[（\(]([^）\)]+)[）\)]/);
+                                                    if (match && match[1]) {
+                                                      cName = match[1].trim();
+                                                    }
+                                                  }
+                                                  
+                                                  if (cName && displayLabel) {
+                                                    displayLabel = displayLabel.replace('（' + cName + '）', '').replace('(' + cName + ')', '').trim();
+                                                  }
+
+                                                  const groupKey = cName || '__default__';
+                                                  if (!groupedMap[groupKey]) groupedMap[groupKey] = [];
+                                                  groupedMap[groupKey].push({
+                                                    ...pItem,
+                                                    cleanLabel: displayLabel || pItem.label || 'パッケージ合計 (税込)',
+                                                    groupCourseName: cName
+                                                  });
                                                 });
 
-                                                return Object.entries(grouped).map(([courseName, items], gIdx) => (
-                                                  <div key={gIdx} className="space-y-2">
-                                                    {courseName && (
-                                                      <div className="text-[10px] font-black text-blue-600 uppercase tracking-wider bg-blue-50 px-2.5 py-0.5 rounded-md inline-block border border-blue-100">
-                                                        {courseName}
+                                                return Object.entries(groupedMap).map(([groupKey, items], gIdx) => {
+                                                  const courseTitle = items[0]?.groupCourseName || (groupKey !== '__default__' ? groupKey : '');
+                                                  return (
+                                                    <div key={gIdx} className="bg-gray-50/70 border border-gray-200/60 rounded-2xl p-4 md:p-5 space-y-3 text-left">
+                                                      {courseTitle && (
+                                                        <div className="flex items-center gap-2 pb-2 border-b border-gray-200/80">
+                                                          <div className="w-2.5 h-2.5 rounded-full bg-blue-600 shrink-0"></div>
+                                                          <span className="text-sm font-black text-gray-900 tracking-tight">{courseTitle}</span>
+                                                        </div>
+                                                      )}
+                                                      <div className="space-y-3">
+                                                        {items.map((pItem: any, pIdx: number) => {
+                                                          const priceVal = parsePrice(pItem.price);
+                                                          const taxExcluded = Math.round(priceVal / (1 + (data.pricing?.taxRate || 10) / 100));
+                                                          const isSet = pItem.isSetDiscount || pItem.priceType === 'set';
+                                                          const isAdd = pItem.isAdd || pItem.priceType === 'add';
+
+                                                          let badgeEl = null;
+                                                          let priceColorClass = "text-blue-600";
+                                                          if (isSet) {
+                                                            badgeEl = <span className="bg-red-50 text-red-600 text-[10px] font-black px-2 py-0.5 rounded-md border border-red-200 shrink-0">セット割</span>;
+                                                            priceColorClass = "text-red-600";
+                                                          } else if (isAdd) {
+                                                            badgeEl = <span className="bg-emerald-50 text-emerald-600 text-[10px] font-black px-2 py-0.5 rounded-md border border-emerald-200 shrink-0">追加</span>;
+                                                            priceColorClass = "text-emerald-600";
+                                                          }
+
+                                                          return (
+                                                            <div key={pIdx} className="border-b border-gray-200/40 last:border-0 pb-2.5 last:pb-0">
+                                                              <div className="flex items-center justify-between gap-2 mb-1">
+                                                                <div className="text-xs font-bold text-gray-700 tracking-tight">
+                                                                  {pItem.cleanLabel}
+                                                                </div>
+                                                                {badgeEl}
+                                                              </div>
+                                                              <div className="flex justify-between items-end">
+                                                                <div className="flex items-baseline gap-1.5">
+                                                                  <div className={`text-2xl font-black ${priceColorClass} tracking-tighter`}>¥{priceVal.toLocaleString()}</div>
+                                                                  <div className="text-[10px] text-gray-400 uppercase italic font-bold">incl. tax</div>
+                                                                </div>
+                                                                <div className="text-right">
+                                                                  <span className="text-[10px] text-gray-400 uppercase tracking-tighter mr-1">(税別)</span>
+                                                                  <span className="text-sm font-black text-gray-600 italic">¥{taxExcluded.toLocaleString()}</span>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          );
+                                                        })}
                                                       </div>
-                                                    )}
-                                                    <div className="space-y-3">
-                                                      {items.map((pItem: any, pIdx: number) => {
-                                                        const priceVal = parsePrice(pItem.price);
-                                                        const taxExcluded = Math.round(priceVal / (1 + (data.pricing?.taxRate || 10) / 100));
-                                                        const isSet = pItem.isSetDiscount || pItem.priceType === 'set';
-                                                        const isAdd = pItem.isAdd || pItem.priceType === 'add';
-
-                                                        let badgeEl = null;
-                                                        let priceColorClass = "text-blue-600";
-                                                        if (isSet) {
-                                                          badgeEl = <span className="bg-red-50 text-red-600 text-[10px] font-black px-2 py-0.5 rounded border border-red-200 shrink-0">セット割</span>;
-                                                          priceColorClass = "text-red-600";
-                                                        } else if (isAdd) {
-                                                          badgeEl = <span className="bg-emerald-50 text-emerald-600 text-[10px] font-black px-2 py-0.5 rounded border border-emerald-200 shrink-0">追加</span>;
-                                                          priceColorClass = "text-emerald-600";
-                                                        }
-
-                                                        return (
-                                                          <div key={pIdx} className="border-b border-gray-100 last:border-0 pb-3 last:pb-0">
-                                                            <div className="flex items-center justify-between gap-2 mb-1">
-                                                              <div className="text-xs font-bold text-gray-600 uppercase tracking-tight">
-                                                                {pItem.label || 'パッケージ合計 (税込)'}
-                                                              </div>
-                                                              {badgeEl}
-                                                            </div>
-                                                            <div className="flex justify-between items-end">
-                                                              <div className="flex items-baseline gap-1.5">
-                                                                <div className={`text-2xl font-black ${priceColorClass} tracking-tighter`}>¥{priceVal.toLocaleString()}</div>
-                                                                <div className="text-[10px] text-gray-400 uppercase italic font-bold">incl. tax</div>
-                                                              </div>
-                                                              <div className="text-right">
-                                                                <span className="text-[10px] text-gray-400 uppercase tracking-tighter mr-1">(税別)</span>
-                                                                <span className="text-sm font-black text-gray-600 italic">¥{taxExcluded.toLocaleString()}</span>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                                        );
-                                                      })}
                                                     </div>
-                                                  </div>
-                                                ));
+                                                  );
+                                                });
                                               })()}
                                             </div>
                                           ) : (
