@@ -1059,7 +1059,7 @@
         {
           "name": "純正交換タイプ 10型ドラレコミラー\n「車外用リアカメラ」",
           "price": "0",
-          "badge": "NEW 4月下旬発売",
+          "badge": "NEW 4月下旬",
           "image": "/images/Security/d-mirror/dvr-dm1000a2-oc.webp",
           "slug": "dvr-dm1000a2-oc",
           "features": [
@@ -2594,7 +2594,7 @@
         "車載専用設計"
       ],
       "image": "/images/Audio/media_player_lecture.png",
-      "description": "ナビやCDプレーヤーといったヘッドユニット交換が簡単にできたのは過去の話。最近は純正で装着されたナビゲーションは取り外すことができず、音の入口となるヘッドユニットの音質向上は困難になりました。\n\nそこで新しい選択肢となるのが「車載メディアプレーヤー」です。純正のディスプレイオーディオなどをメインソースとしてカーオーディオの拡張を進めてきた方におすすめで、基本的にはDSPとの組み合わせでシステムを構成します。\n\n光や同軸端子を使ってデジタルデータをそのままDSPへ入力することで、純正オーディオの制限を受けない圧倒的な高音質を実現。スマートフォンやDAPとは異なり、車両に設置して運転しながら楽しむことを前提に設計された、車のための新しい音楽ソースです。\n\n**製品ラインナップを見る**: [メディアプレーヤー製品一覧](#/prices/media_player)",
+      "description": "ナビやCDプレーヤーといったヘッドユニット交換が簡単にできたのは過去の話。最近は純正で装着されたナビゲーションは取り外すことができず、音の入口となるヘッドユニットの音質上困になりました。\n\nそこで新しい選択肢となるのが「車載メディアプレーヤー」です。純正のディスプレイオーディオなどをメインソースとしてカーオーディオの拡張を進めてきた方におすすめで、基本的にはDSPとの組み合わせでシステムを構成します。\n\n光や同軸端子を使ってデジタルデータをそのままDSPへ入力することで、純正オーディオの制限を受けない圧倒的な高音質を実現。スマートフォンやDAPとは異なり、車両に設置して運転しながら楽しむことを前提に設計された、車のための新しい音楽ソースです。\n\n**製品ラインナップを見る**: [メディアプレーヤー製品一覧](#/prices/media_player)",
       "category": "知識・ガイド",
       "packageDetails": {
         "standardPrice": "0",
@@ -3234,51 +3234,331 @@
   "brandPartners": [
     {
       "id": "b1",
-      "name": "Yupiteru",
-      "category": "Security / Dashcam",
-      "description": "Panthera・Grgoの正規販売店として、高度なセキュリティシステムを提供しています。",
+      "name": "ALPINE",
+      "category": "",
+      "description": "",
       "iconName": "ShieldCheck",
-      "url": "https://www.yupiteru.co.jp/"
+      "url": "http://www.alpine.co.jp/"
     },
     {
       "id": "b2",
-      "name": "Focal",
-      "category": "Car Audio",
-      "description": "フランスの名門ブランド。繊細で表現力豊かなサウンドを車内へ。",
+      "name": "ARC AUDIO\n（ジャンラインアンドパートナーズ）",
+      "category": "",
+      "description": "",
       "iconName": "Speaker",
-      "url": "https://www.focal-audio.jp/"
+      "url": "https://www.janline-and-partners.com/%e8%a3%bd%e5%93%81%e6%a1%88%e5%86%85/arc/"
     },
     {
       "id": "b3",
-      "name": "Alpine",
-      "category": "Navigation / Audio",
-      "description": "先進のテクノロジーで、快適なカーライフをサポートする国内トップブランド。",
+      "name": "BEWITH",
+      "category": "",
+      "description": "",
       "iconName": "Video",
-      "url": "https://www.alpine.co.jp/"
+      "url": "http://www.bewith.jp/ja/"
     },
     {
       "id": "b4",
-      "name": "Bewith",
-      "category": "High-End Audio",
-      "description": "妥協のない音質を追求する、日本発のハイエンドオーディオブランド。",
+      "name": "BLUE MOON AUDIO",
+      "category": "",
+      "description": "",
       "iconName": "Speaker",
-      "url": "https://www.bewith.jp/"
+      "url": "https://blue-moon.audio/"
     },
     {
       "id": "b5",
-      "name": "加藤電機",
-      "category": "Security",
-      "description": "VIPER・HORNETなど、世界基準のセキュリティシステムを展開。",
+      "name": "Clazzio（クラッツィオ/シートカバー）",
+      "category": "",
+      "description": "",
       "iconName": "ShieldCheck",
-      "url": "https://www.kato-denki.com/"
+      "url": "http://www.11i.co.jp/"
     },
     {
       "id": "b6",
-      "name": "Pioneer",
-      "category": "Carrozzeria",
-      "description": "カーナビゲーションからオーディオまで、業界をリードする革新性。",
+      "name": "DIATONE（ダイアトーン）",
+      "category": "",
+      "description": "",
       "iconName": "Video",
-      "url": "https://jpn.pioneer/ja/carrozzeria/"
+      "url": "http://www.mitsubishielectric.co.jp/carele/car_diatone/top.html"
+    },
+    {
+      "id": "1787451639686",
+      "name": "DLS",
+      "category": "",
+      "description": "",
+      "url": "https://www.felisoni.jp/p_dls/?ichiran",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787451640754",
+      "name": "DYNAUDIO",
+      "category": "",
+      "description": "",
+      "url": "http://dynaudio.jp/?page_id=910",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787451641074",
+      "name": "FOCAL",
+      "category": "",
+      "description": "",
+      "url": "https://www.focal-audio.jp/",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787451641274",
+      "name": "KICKER",
+      "category": "",
+      "description": "",
+      "url": "https://kicker-jpn.com/",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787451641463",
+      "name": "M＆M",
+      "category": "",
+      "description": "",
+      "url": "https://www.mandmdesign.net/",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787451641654",
+      "name": "MIRROR FUNCTION\n(インターフェース関連)",
+      "category": "",
+      "description": "",
+      "url": "https://www.mirror-function.com/",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787451641838",
+      "name": "MOREL\n（ジャンラインアンドパートナーズ）",
+      "category": "",
+      "description": "",
+      "url": "https://www.janline-and-partners.com/%e8%a3%bd%e5%93%81%e6%a1%88%e5%86%85/morel/",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787451642023",
+      "name": "MOSCONI",
+      "category": "",
+      "description": "",
+      "url": "http://www.jifuplace.com/mosconi/",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787451642191",
+      "name": "PIONEER（カロッツェリア）",
+      "category": "",
+      "description": "",
+      "url": "http://pioneer.jp/carrozzeria/",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787451642374",
+      "name": "PROJECTION\n（ODESSEYバッテリー）",
+      "category": "",
+      "description": "",
+      "url": "http://www.projection.co.jp/",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787451642543",
+      "name": "Sinfoni",
+      "category": "",
+      "description": "",
+      "url": "https://www.felisoni.jp/",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787457335948",
+      "name": "SmartDIVISION\n（HIDなど）",
+      "category": "",
+      "description": "",
+      "url": "http://minkara.carview.co.jp/userid/560861/profile/",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787457336196",
+      "name": "SPEC",
+      "category": "",
+      "description": "",
+      "url": "http://www.spec-corp.co.jp/index.html",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787457336461",
+      "name": "SoundSuspension\n（リバンプ...）",
+      "category": "",
+      "description": "",
+      "url": "https://mail22441.wixsite.com/my-site",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787457336677",
+      "name": "STEG",
+      "category": "",
+      "description": "",
+      "url": "https://www.studiogita.jp/p/00002",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787457336881",
+      "name": "TRUIMトライム(AUDISON/BLAM)",
+      "category": "",
+      "description": "",
+      "url": "http://www.truim.jp/",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787457337073",
+      "name": "UnitedSound\n（VEGA/DD/AURIX/ORTFON/ESX...）",
+      "category": "",
+      "description": "",
+      "url": "http://www.unitedsound.jp/",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787457337264",
+      "name": "Venture Audio",
+      "category": "",
+      "description": "",
+      "url": "https://ventureaudio.jp/index.html",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787457337465",
+      "name": "イースコーポレーション（Rockford/GroundZero/MTX/\nμDimenshion/MonsterCable...）",
+      "category": "",
+      "description": "",
+      "url": "http://www.escorp.jp/",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787457337665",
+      "name": "エーモン工業",
+      "category": "",
+      "description": "",
+      "url": "https://www.amon.jp/products2/list.php",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787457337848",
+      "name": "エイタック（BMW関連）",
+      "category": "",
+      "description": "",
+      "url": "http://www.a-tack.net/index2.htm",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787457338063",
+      "name": "エムズライン\n（BRAX/HELIX/MATCH/\nETON/BRAIMS/MACROM等）",
+      "category": "",
+      "description": "",
+      "url": "http://www.ms-line.co.jp/",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787457338253",
+      "name": "オーディオテクニカ",
+      "category": "",
+      "description": "",
+      "url": "https://www.audio-technica.co.jp/category/car-audio-accessorie/",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787457338446",
+      "name": "オスカーインターナショナル（QRINO等）",
+      "category": "",
+      "description": "",
+      "url": "http://www.oscar-i.co.jp/index.html",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787457338631",
+      "name": "カナック",
+      "category": "",
+      "description": "",
+      "url": "http://kanack.co.jp/",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787457338814",
+      "name": "クラリオン",
+      "category": "",
+      "description": "",
+      "url": "http://www.clarion.com/jp/ja/top.html",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787457752686",
+      "name": "ケンウッド",
+      "category": "",
+      "description": "",
+      "url": "https://www.kenwood.com/jp/",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787457753028",
+      "name": "デジタルワークス（BMW/欧州車関連）",
+      "category": "",
+      "description": "",
+      "url": "http://www.digital-works.info/",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787457753309",
+      "name": "パナソニック",
+      "category": "",
+      "description": "",
+      "url": "http://panasonic.jp/car/",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787457753517",
+      "name": "ビートソニック",
+      "category": "",
+      "description": "",
+      "url": "http://www.beatsonic.co.jp/",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787457753708",
+      "name": "フィールド（欧州車関連）",
+      "category": "",
+      "description": "",
+      "url": "http://www.field-coltd.com/",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787457753900",
+      "name": "フェリソニ",
+      "category": "",
+      "description": "",
+      "url": "https://www.felisoni.jp/",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787457754094",
+      "name": "DENSO TEN",
+      "category": "",
+      "description": "",
+      "url": "http://www.fujitsu-ten.co.jp/",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787457754263",
+      "name": "BELLOF（HID）",
+      "category": "",
+      "description": "",
+      "url": "http://www.bellof.co.jp/",
+      "iconName": "Speaker"
+    },
+    {
+      "id": "1787457754431",
+      "name": "蘇木自動車内張工場",
+      "category": "",
+      "description": "",
+      "url": "https://www.sonogi-jidousha.com/",
+      "iconName": "Speaker"
     }
   ],
   "partners": [
@@ -3287,63 +3567,63 @@
       "name": "オーディオファイル",
       "location": "千葉県",
       "url": "https://audiophile.co.jp/",
-      "description": "ハイエンドオーディオからカスタムまで、確かな技術で理想のサウンドを実現。"
+      "description": ""
     },
     {
       "id": "p2",
       "name": "尾林ファクトリー",
       "location": "東京都",
       "url": "http://www.obayashi-f.jp/",
-      "description": "独創的なカスタムオーディオと、妥協のない音質追求で知られる名門ショップ。"
+      "description": ""
     },
     {
       "id": "p3",
       "name": "キッズガレージ",
       "location": "愛知県",
       "url": "https://www.kidsgarage.jp/",
-      "description": "セキュリティとオーディオの両立。中部エリアを代表するプロショップ。"
+      "description": ""
     },
     {
       "id": "p4",
       "name": "ケンテック",
       "location": "佐賀県",
       "url": "http://www.03g.xyz/",
-      "description": "九州エリアの技術拠点。きめ細やかな施工 and アフターサポートが魅力。"
+      "description": ""
     },
     {
       "id": "p5",
       "name": "サウンドプログレス",
       "location": "千葉県",
       "url": "https://sound-progress.jp/",
-      "description": "音のプロフェッショナルが、お客様一人ひとりに最適なシステムを提案。"
+      "description": ""
     },
     {
       "id": "p6",
       "name": "シミズファクトリー",
       "location": "長野県",
       "url": "http://www.shimizu-factory.com/",
-      "description": "信州のカーオーディオシーンをリード。高い技術力と信頼の実績。"
+      "description": ""
     },
     {
       "id": "p7",
       "name": "ジム・インダストリー",
       "location": "栃木県",
       "url": "http://www.gymindustry.co.jp/",
-      "description": "北関東エリアをカバー。音質向上からドレスアップまで幅広く対応。"
+      "description": ""
     },
     {
       "id": "p8",
       "name": "ビクトリー",
       "location": "愛知県",
       "url": "http://www.victory1987.co.jp/",
-      "description": "カーオーディオとセキュリティの専門店。愛車に最高の価値をプラス。"
+      "description": ""
     },
     {
       "id": "p9",
       "name": "Sound ANG",
       "location": "福岡県",
       "url": "https://www.soundang.com/",
-      "description": "当ショップ。九州屈指の技術力で、お客様の理想を形にします。"
+      "description": ""
     }
   ],
   "assets": {
@@ -3404,11 +3684,12 @@
           },
           {
             "id": "03",
-            "title": "Snap-on Diagnostic Standard",
+            "title": "Snap-on Diagnostic ",
             "icon": "Settings2",
             "desc": "最旬車両の制御システムとセキュリティーの融合を成立させるため、最終診断には Snap-on社製車両診断テスターを使用しています。"
           }
-        ]
+        ],
+        "lead": "メーカー公認の技術と、確かなツール。当店が守り続ける、カーセキュリティーの「基準」です。"
       },
       "partners": [
         {
@@ -3568,11 +3849,11 @@
           "ANTI-ゲームボーイ"
         ],
         "feature1": {
-          "title": "DIGITAL IMMOBILIZE",
-          "description": "不正信号による engine 始動をデジタル的に徹底ブロック。"
+          "title": "イモビライザー",
+          "description": "不正信号によるエンジン始動を徹底ブロック。"
         },
         "feature2": {
-          "title": "SEAMLESS ARMING",
+          "title": "純正ロック連動で自動警戒",
           "description": "純正キーのロック操作に連動して、確実に警戒を開始。"
         }
       },
@@ -6977,6 +7258,21 @@
         ],
         "featuredPlanId": "can-invader-standard",
         "showV2Option": true
+      },
+      "-": {
+        "name": "ランドクルーザー プラド",
+        "year": "2024-",
+        "image": "/images/Security/vehicle/prado.webp",
+        "description": "",
+        "plans": [],
+        "featuredPlanId": "can-invader-standard"
+      },
+      "-type-r-fl5": {
+        "name": "シビック TYPE-R (FL5)",
+        "year": "2024-",
+        "image": "/images/Security/vehicle/default.webp",
+        "description": "",
+        "plans": []
       }
     },
     "featureSetTemplates": [
@@ -7050,7 +7346,7 @@
           "opacity": 0.5,
           "badge": "スピーカー交換パッケージ",
           "bgColor": "#1e3a8a",
-          "description": "10万円までのスピーカーの中から、お気に入りの1本を選べるパッケージです。ドアチューニングとスピーカーケーブルの交換もセットになっており、音にこだわりたい方の「最初の本格ステップ」としておすすめです。\nこの価格帯は各メーカーとも個性の強い人気モデルが揃っています。ただ、取り付けやすさを重視したモデルと、音質を最優先したモデルが混在している価格帯でもあります。見た目のスペックだけで選ぶと、いざ取り付けの段階で「このやり方はできない」となるケースも。商品選びの際は、ご希望のインストール方法と合っているかどうかも一緒に確認しながら進めることをおすすめします。\n埋め込み奥行きやツィーターマウントの有無も各モデルに記載していますので、参考にしてください。"
+          "description": "10万円までのスピーカーの中から、お気に入りの1本を選べるパッケージです。ドアチューニングとスピーカーケーブルの交換もセットになっており、音にこだわりたい方の「最初の本格ステップ」としておすすめです。\nこの価格帯は各メーカーとも個性の強い人気モデルが揃っています。ただ、取り付けやすさを重視したモデルと、音質を最優先したモデルが混在している価格帯でもあります。見た目のスペックだけで選ぶと、いざ取り付けの段階で「このやり方はできない」となるケースも。商品選びの際は、ご希望のインストール方法と合っているかどうかも一緒に確認しながら進めることをおすすめします。\n埋込み奥行きやツィーターマウントの有無も各モデルに記載していますので、参考にしてください。"
         }
       },
       {
@@ -10269,9 +10565,14 @@
                 "brandLogo": "/images/Audio/logo/blam.webp"
               }
             ],
-            "hideSubtitle": true,
+            "hideSubtitle": false,
             "borderSpacing": "narrow",
-            "subtitleFont": "oswald"
+            "subtitleFont": "oswald",
+            "subtitle": "Speaker Lineup",
+            "subtitleFontSize": 22,
+            "subtitleColor": "#ea580c",
+            "hideTitle": true,
+            "subtitleAlign": "center"
           }
         },
         {
@@ -10652,7 +10953,7 @@
             "borderSpacing": "narrow",
             "subtitleFont": "oswald",
             "subtitleColor": "#ea580c",
-            "subtitleFontSize": 29
+            "subtitleFontSize": 22
           }
         },
         {
@@ -24964,7 +25265,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "subtitle": ""
           }
         },
         {

@@ -339,6 +339,18 @@ const Input = ({ field, value, onChange }: any) => (
   </div>
 );
 
+const Textarea = ({ field, value, onChange, rows = 2 }: any) => (
+  <div className="space-y-2">
+    <label className="block text-[10px] font-black text-zinc-500 uppercase tracking-widest">{field}</label>
+    <textarea 
+      rows={rows}
+      value={value} 
+      onChange={e => onChange(e.target.value)}
+      className="w-full bg-black border border-zinc-800 rounded-xl px-5 py-3.5 text-white text-sm font-bold focus:border-blue-500 outline-none transition-all resize-y"
+    />
+  </div>
+);
+
 const ToggleButton = ({ active, onClick, label }: any) => (
   <div className="flex items-center gap-4 bg-black/40 px-5 py-3 rounded-2xl border border-zinc-800">
     <span className="text-[10px] font-black text-zinc-500 uppercase tracking-widest">{label}</span>
@@ -4765,6 +4777,59 @@ const PartnerManager = () => {
 
     const sPartners = securityData.home?.partners || [];
     const sTechPartners = securityData.home?.techPartners || [];
+    const sStandards = securityData.home?.standards || {
+        title: "THE STANDARDS.",
+        subtitle: "The Protocol of Trust",
+        lead: "メーカーの認めた技術と、確かなツール。当店が維持し続ける、カーセキュリティーの「正解」です。",
+        image: "/images/Security/snapon.webp",
+        points: []
+    };
+    const sPoints = sStandards.points || [];
+
+    const updateStandardsHeader = (updates: any) => {
+        updateSecurityHome({
+            standards: {
+                ...sStandards,
+                ...updates
+            }
+        });
+    };
+
+    const updateStandardPoint = (index: number, updates: any) => {
+        const newPoints = [...sPoints];
+        newPoints[index] = { ...newPoints[index], ...updates };
+        updateSecurityHome({
+            standards: {
+                ...sStandards,
+                points: newPoints
+            }
+        });
+    };
+
+    const addStandardPoint = () => {
+        const nextId = String(sPoints.length + 1).padStart(2, '0');
+        const newPoint = {
+            id: nextId,
+            title: 'New Standard Point',
+            icon: 'ShieldCheck',
+            desc: ''
+        };
+        updateSecurityHome({
+            standards: {
+                ...sStandards,
+                points: [...sPoints, newPoint]
+            }
+        });
+    };
+
+    const removeStandardPoint = (index: number) => {
+        updateSecurityHome({
+            standards: {
+                ...sStandards,
+                points: sPoints.filter((_, i) => i !== index)
+            }
+        });
+    };
 
     const updateSPartner = (index: number, updates: any) => {
         const newList = [...sPartners];
@@ -4827,6 +4892,9 @@ const PartnerManager = () => {
                                         <Input field="Name" value={p.name} onChange={v => updatePartner(p.id, { name: v })} />
                                         <Input field="Area" value={p.location} onChange={v => updatePartner(p.id, { location: v })} />
                                     </div>
+                                    <div className="mb-4">
+                                        <Textarea field="Description" value={p.description || ''} onChange={v => updatePartner(p.id, { description: v })} rows={3} />
+                                    </div>
                                     <Input field="URL" value={p.url} onChange={v => updatePartner(p.id, { url: v })} />
                                 </div>
                             ))}
@@ -4843,10 +4911,13 @@ const PartnerManager = () => {
                                 <div key={p.id} className="bg-zinc-900/40 border border-zinc-800 p-8 rounded-3xl relative group">
                                     <button onClick={() => removeBrandPartner(p.id)} className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 p-2 text-zinc-600 hover:text-red-500 transition-all"><X className="w-4 h-4" /></button>
                                     <div className="grid grid-cols-2 gap-4 mb-4">
-                                        <Input field="Brand Name" value={p.name} onChange={v => updateBrandPartner(p.id, { name: v })} />
+                                        <Textarea field="Brand Name (改行可)" value={p.name} onChange={v => updateBrandPartner(p.id, { name: v })} rows={2} />
                                         <Input field="Category" value={p.category} onChange={v => updateBrandPartner(p.id, { category: v })} />
                                     </div>
-                                    <Input field="Description" value={p.description} onChange={v => updateBrandPartner(p.id, { description: v })} />
+                                    <div className="mb-4">
+                                        <Textarea field="Description" value={p.description} onChange={v => updateBrandPartner(p.id, { description: v })} rows={3} />
+                                    </div>
+                                    <Input field="URL" value={p.url || ''} onChange={v => updateBrandPartner(p.id, { url: v })} />
                                 </div>
                             ))}
                         </div>
@@ -4887,6 +4958,76 @@ const PartnerManager = () => {
                                         <Input field="Description" value={p.desc} onChange={v => updateSTech(idx, { desc: v })} />
                                     </div>
                                     <Input field="URL" value={p.url} onChange={v => updateSTech(idx, { url: v })} />
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    <section className="border-t border-zinc-800 pt-12">
+                        <div className="flex items-center justify-between mb-8">
+                            <div>
+                                <h3 className="text-2xl font-black text-white italic tracking-tighter uppercase">THE STANDARDS (技術と品質の基準)</h3>
+                                <p className="text-xs text-zinc-500 font-bold mt-1">/security-home ページの「THE STANDARDS」セクションを編集します</p>
+                            </div>
+                        </div>
+
+                        {/* Standards Header & Lead */}
+                        <div className="bg-zinc-900/40 border border-zinc-800 p-8 rounded-3xl mb-8 space-y-6">
+                            <h4 className="text-xs font-black text-emerald-400 uppercase tracking-widest">Left Column (見出し・リード文・画像)</h4>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <Input 
+                                    field="Sub Title" 
+                                    value={sStandards.subtitle || 'The Protocol of Trust'} 
+                                    onChange={(v: string) => updateStandardsHeader({ subtitle: v })} 
+                                />
+                                <Input 
+                                    field="Title" 
+                                    value={sStandards.title || 'THE STANDARDS.'} 
+                                    onChange={(v: string) => updateStandardsHeader({ title: v })} 
+                                />
+                            </div>
+                            <Textarea 
+                                field="Lead Description (説明文)" 
+                                value={sStandards.lead || 'メーカーの認めた技術と、確かなツール。当店が維持し続ける、カーセキュリティーの「正解」です。'} 
+                                onChange={(v: string) => updateStandardsHeader({ lead: v })} 
+                                rows={2} 
+                            />
+                            <Input 
+                                field="Image Path" 
+                                value={sStandards.image || '/images/Security/snapon.webp'} 
+                                onChange={(v: string) => updateStandardsHeader({ image: v })} 
+                            />
+                        </div>
+
+                        {/* Points List */}
+                        <div className="flex items-center justify-between mb-6">
+                            <h4 className="text-xs font-black text-emerald-400 uppercase tracking-widest">Right Column Cards (認定基準カード一覧)</h4>
+                            <button onClick={addStandardPoint} className="px-4 py-2 bg-emerald-600/10 text-emerald-500 rounded-lg text-[10px] font-black uppercase hover:bg-emerald-600 hover:text-white transition-all">+ Add Standard</button>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {sPoints.map((p: any, idx: number) => (
+                                <div key={idx} className="bg-zinc-900/40 border border-zinc-800 p-8 rounded-3xl relative group space-y-4">
+                                    <button onClick={() => removeStandardPoint(idx)} className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 p-2 text-zinc-600 hover:text-red-500 transition-all"><X className="w-4 h-4" /></button>
+                                    <div className="grid grid-cols-3 gap-2">
+                                        <Input field="ID / 番号" value={p.id} onChange={(v: string) => updateStandardPoint(idx, { id: v })} />
+                                        <div className="col-span-2 space-y-2">
+                                            <label className="block text-[10px] font-black text-zinc-500 uppercase tracking-widest">Icon</label>
+                                            <select 
+                                                value={p.icon || 'ShieldCheck'} 
+                                                onChange={e => updateStandardPoint(idx, { icon: e.target.value })}
+                                                className="w-full bg-black border border-zinc-800 rounded-xl px-4 py-3.5 text-white text-sm font-bold focus:border-emerald-500 outline-none transition-all"
+                                            >
+                                                <option value="Award">Award (認定)</option>
+                                                <option value="ShieldCheck">ShieldCheck (防御・盾)</option>
+                                                <option value="Settings2">Settings2 (テスター・ツール)</option>
+                                                <option value="Eye">Eye (監視)</option>
+                                                <option value="Zap">Zap (電装)</option>
+                                                <option value="Lock">Lock (ロック)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <Textarea field="Title (タイトル・改行可)" value={p.title} onChange={(v: string) => updateStandardPoint(idx, { title: v })} rows={2} />
+                                    <Textarea field="Description (詳細説明)" value={p.desc} onChange={(v: string) => updateStandardPoint(idx, { desc: v })} rows={4} />
                                 </div>
                             ))}
                         </div>

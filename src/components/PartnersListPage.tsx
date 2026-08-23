@@ -1,19 +1,20 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowLeft, ExternalLink, ShieldCheck, Speaker, Video, Globe, MapPin, Phone } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Speaker, Globe, MapPin } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 import { useSite } from '../contexts/SiteContext';
 
-
-export const PartnersListPage: React.FC<{ onBack: () => void }> = ({ onBack }) => {
+export const PartnersListPage: React.FC<{ onBack?: () => void }> = ({ onBack }) => {
+  const navigate = useNavigate();
   const { partners, brandPartners } = useSite();
 
-  // Icon mapping for dynamic brands
-  const ICON_MAP = {
-    ShieldCheck,
-    Speaker,
-    Video,
-    Globe
+  const handleBack = () => {
+    if (onBack) {
+      onBack();
+    } else {
+      navigate('/');
+    }
   };
 
   return (
@@ -27,7 +28,7 @@ export const PartnersListPage: React.FC<{ onBack: () => void }> = ({ onBack }) =
       <div className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
           <button
-            onClick={onBack}
+            onClick={handleBack}
             className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors font-bold group"
           >
             <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
@@ -62,11 +63,11 @@ export const PartnersListPage: React.FC<{ onBack: () => void }> = ({ onBack }) =
                 <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
                   <MapPin className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors" />
                 </div>
-                <h3 className="text-xl font-black mb-2 text-gray-900">{shop.name}</h3>
+                <h3 className="text-xl font-black mb-2 text-gray-900 whitespace-pre-line">{shop.name}</h3>
                 <p className="text-gray-400 text-xs font-bold mb-4 flex items-center gap-1">
                   <Globe className="w-3 h-3" /> {shop.location}
                 </p>
-                <p className="text-gray-500 text-sm font-bold leading-relaxed mb-6">
+                <p className="text-gray-500 text-sm font-bold leading-relaxed mb-6 whitespace-pre-line">
                   {shop.description}
                 </p>
                 <div className="flex items-center gap-2 text-blue-600 text-xs font-black uppercase tracking-widest">
@@ -87,7 +88,6 @@ export const PartnersListPage: React.FC<{ onBack: () => void }> = ({ onBack }) =
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {brandPartners.map((partner, i) => {
-              const Icon = ICON_MAP[partner.iconName] || Globe;
               return (
                 <motion.a
                   key={partner.id}
@@ -100,9 +100,9 @@ export const PartnersListPage: React.FC<{ onBack: () => void }> = ({ onBack }) =
                   className="bg-white p-6 rounded-2xl border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all flex flex-col items-center text-center group"
                 >
                   <div className="w-10 h-10 bg-gray-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-blue-50 transition-colors">
-                    <Icon className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" />
+                    <Speaker className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" />
                   </div>
-                  <h3 className="text-sm font-black text-gray-900 mb-1">{partner.name}</h3>
+                  <h3 className="text-sm font-black text-gray-900 mb-1 whitespace-pre-line leading-tight">{partner.name}</h3>
                   <span className="text-[10px] font-bold text-gray-400 uppercase tracking-tighter">{partner.category}</span>
                 </motion.a>
               );
@@ -115,7 +115,7 @@ export const PartnersListPage: React.FC<{ onBack: () => void }> = ({ onBack }) =
             こちらに掲載のないメーカーについても、お気軽にお問い合わせください。
           </p>
           <button
-            onClick={onBack}
+            onClick={handleBack}
             className="bg-gray-900 text-white px-12 py-5 rounded-[2rem] font-black hover:bg-blue-600 transition-all shadow-xl shadow-blue-100"
           >
             トップページへ戻る

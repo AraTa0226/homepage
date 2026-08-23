@@ -384,17 +384,25 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
                         <div className="lg:col-span-5 lg:sticky lg:top-32">
                             <div className="space-y-8">
-                                <span className="text-emerald-600 font-black tracking-[0.5em] uppercase text-[12px] block">The Protocol of Trust</span>
-                                <h2 className="text-5xl md:text-6xl font-black text-gray-900 leading-[1.1] tracking-tighter italic">
-                                    THE <br />
-                                    <span className="text-emerald-600">STANDARDS.</span>
+                                <span className="text-emerald-600 font-black tracking-[0.5em] uppercase text-[12px] block">
+                                    {securityData.home?.standards?.subtitle || "The Protocol of Trust"}
+                                </span>
+                                <h2 className="text-5xl md:text-6xl font-black text-gray-900 leading-[1.1] tracking-tighter italic whitespace-pre-line">
+                                    {securityData.home?.standards?.title ? (
+                                        securityData.home.standards.title
+                                    ) : (
+                                        <>
+                                            THE <br />
+                                            <span className="text-emerald-600">STANDARDS.</span>
+                                        </>
+                                    )}
                                 </h2>
-                                <p className="text-gray-600 font-bold text-lg leading-relaxed max-w-sm">
-                                    メーカーの認めた技術と、確かなツール。当店が維持し続ける、カーセキュリティーの「正解」です。
+                                <p className="text-gray-600 font-bold text-lg leading-relaxed max-w-sm whitespace-pre-line">
+                                    {securityData.home?.standards?.lead || "メーカーの認めた技術と、確かなツール。当店が維持し続ける、カーセキュリティーの「正解」です。"}
                                 </p>
                                 <div className="relative rounded-[2.5rem] overflow-hidden border-4 border-white shadow-2xl group aspect-square lg:aspect-auto lg:h-[400px]">
                                     <SafeImage
-                                        src="/images/Security/snapon.webp"
+                                        src={securityData.home?.standards?.image || "/images/Security/snapon.webp"}
                                         alt="Professional Installation Tools"
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
@@ -403,19 +411,38 @@ const SecurityMainPage: React.FC<SecurityMainPageProps> = ({
                         </div>
 
                         <div className="lg:col-span-7 space-y-12">
-                            {securityData.home?.standards?.points?.map((point: any, idx: number) => {
+                            {(securityData.home?.standards?.points || [
+                                {
+                                    id: "01",
+                                    title: "Panthera / Grgo SPS認定店",
+                                    icon: "Award",
+                                    desc: "Super Pro Shop (SPS) は、最新のセキュリティーシステムを高度に解析し、マシンのポテンシャルを最大限に引き出す取付技術を有するとメーカーが正式に認定した店舗です。"
+                                },
+                                {
+                                    id: "02",
+                                    title: "VIPER プレミアムディーラー",
+                                    icon: "ShieldCheck",
+                                    desc: "VIPER製品の取り扱いに精通したマイスター店として、正規販売から、高度な取付技術が必要となる車両への施工、万全のアフターサポートまで対応。"
+                                },
+                                {
+                                    id: "03",
+                                    title: "Snap-on Diagnostic Standard",
+                                    icon: "Settings2",
+                                    desc: "最新車両の制御システムとセキュリティーの融合を成立させるため、最終診断には Snap-on社製車両診断テスターを使用しています。"
+                                }
+                            ]).map((point: any, idx: number) => {
                                 const IconComp = iconMap[point.icon] || ShieldCheck;
                                 return (
-                                    <div key={point.id} className="relative pl-8 md:pl-12 bg-white p-8 md:p-10 rounded-[2.5rem] shadow-xl border border-gray-100/80 transition-all hover:shadow-2xl hover:border-emerald-500/30">
+                                    <div key={point.id || idx} className="relative pl-8 md:pl-12 bg-white p-8 md:p-10 rounded-[2.5rem] shadow-xl border border-gray-100/80 transition-all hover:shadow-2xl hover:border-emerald-500/30">
                                         <div className="space-y-4">
                                             <div className="flex items-center gap-4">
                                                 <div className="w-12 h-12 rounded-2xl bg-emerald-50 flex items-center justify-center text-emerald-600">
                                                     <IconComp className="w-6 h-6" />
                                                 </div>
-                                                <span className="text-emerald-600 font-black text-[12px] tracking-widest uppercase italic">{point.id} / Standard</span>
+                                                <span className="text-emerald-600 font-black text-[12px] tracking-widest uppercase italic">{point.id || `0${idx + 1}`} / Standard</span>
                                             </div>
-                                            <h3 className="text-2xl md:text-3xl font-black text-gray-900 tracking-tight">{point.title}</h3>
-                                            <p className="text-gray-600 font-bold leading-relaxed text-[15px]">
+                                            <h3 className="text-2xl md:text-3xl font-black text-gray-900 tracking-tight whitespace-pre-line">{point.title}</h3>
+                                            <p className="text-gray-600 font-bold leading-relaxed text-[15px] whitespace-pre-line">
                                                 {point.desc}
                                             </p>
                                         </div>

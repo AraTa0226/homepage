@@ -61,7 +61,6 @@ export const PartnersSection: React.FC<{ onViewAll: () => void }> = ({ onViewAll
           className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 md:mb-12 overflow-x-auto md:overflow-x-visible pb-4 md:pb-0 snap-x snap-mandatory scrollbar-hide"
         >
           {brandPartners.slice(0, 3).map((partner, i) => {
-            const Icon = ICON_MAP[partner.iconName] || ShieldCheck;
             return (
               <motion.a
                 key={partner.id}
@@ -76,7 +75,7 @@ export const PartnersSection: React.FC<{ onViewAll: () => void }> = ({ onViewAll
               >
                 <div className="flex items-start justify-between mb-6">
                   <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-500">
-                    <Icon className="w-7 h-7 text-blue-600" />
+                    <Speaker className="w-7 h-7 text-blue-600" />
                   </div>
                   <ExternalLink className="w-5 h-5 text-gray-300 group-hover:text-blue-500 transition-colors" />
                 </div>
@@ -85,8 +84,8 @@ export const PartnersSection: React.FC<{ onViewAll: () => void }> = ({ onViewAll
                     {partner.category}
                   </span>
                 </div>
-                <h3 className="text-2xl font-black text-gray-900 mb-3 tracking-tight">{partner.name}</h3>
-                <p className="text-gray-500 text-sm font-bold leading-relaxed">
+                <h3 className="text-2xl font-black text-gray-900 mb-3 tracking-tight whitespace-pre-line">{partner.name}</h3>
+                <p className="text-gray-500 text-sm font-bold leading-relaxed whitespace-pre-line">
                   {partner.description}
                 </p>
               </motion.a>
